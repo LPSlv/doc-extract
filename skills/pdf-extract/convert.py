@@ -49,7 +49,10 @@ def _render_edge(page):
     """
     sizes = []
     try:
-        for b in page.get_text("dict")["blocks"]:
+        # Spans only: without this flag "dict" also decodes and base64-wraps
+        # every raster on the page. Same spans, ~2.7x faster (see harvest.py).
+        flags = fitz.TEXTFLAGS_DICT & ~fitz.TEXT_PRESERVE_IMAGES
+        for b in page.get_text("dict", flags=flags)["blocks"]:
             for ln in b.get("lines", []):
                 for sp in ln.get("spans", []):
                     if sp.get("text", "").strip() and sp["size"] >= 3.0:

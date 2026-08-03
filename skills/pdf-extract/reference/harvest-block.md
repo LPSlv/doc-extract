@@ -51,6 +51,11 @@ def page_geometry(pg):
     ink  = sum of areas of FILLED paths, excluding any path covering more than
            FULLPAGE_FRAC of the page (background tint), divided by page area.
            Unfilled/stroke-only paths contribute zero ink.
+
+    Reads get_cdrawings(), not get_drawings(): identical data, but as plain
+    tuples. The wrapper spends more time constructing Point/Rect objects than
+    MuPDF spends walking the page (measured 2.4x on 632 datasheet pages), and
+    this function only ever looks at coordinates.
     """
     pw, ph = pg.rect.width, pg.rect.height
     parea = max(1.0, pw * ph)
@@ -58,9 +63,10 @@ def page_geometry(pg):
     xs, ys, ink = [], [], 0.0
     sx0 = sy0 = float("inf"); sx1 = sy1 = float("-inf")   # stroke bounding box
 
-    for path in pg.get_drawings():
-        r = path["rect"]
-        is_background = r.width * r.height > parea * FULLPAGE_FRAC
+    for path in pg.get_cdrawings():
+        rx0, ry0, rx1, ry1 = path["rect"]
+        rw, rh = rx1 - rx0, ry1 - ry0
+        is_background = rw * rh > parea * FULLPAGE_FRAC
         has_stroke = False
         for it in path["items"]:
             kind = it[0]
@@ -69,11 +75,12 @@ def page_geometry(pg):
             elif kind == "re":
                 rects += 1
                 if not is_background:
-                    xs += [it[1].x0, it[1].x1]
-                    ys += [it[1].y0, it[1].y1]
+                    x0, y0, x1, y1 = it[1]
+                    xs += (x0, x1)
+                    ys += (y0, y1)
             elif kind == "l":
-                p1, p2 = it[1], it[2]
-                dx, dy = abs(p2.x - p1.x), abs(p2.y - p1.y)
+                (p1x, p1y), (p2x, p2y) = it[1], it[2]
+                dx, dy = abs(p2x - p1x), abs(p2y - p1y)
                 if dx > 1.0 and dy > 1.0:
                     diagonals += 1
                 elif dx >= dy:
@@ -82,10 +89,10 @@ def page_geometry(pg):
                     axis_v += 1
                 has_stroke = True
         if has_stroke and not is_background:
-            sx0 = min(sx0, r.x0); sy0 = min(sy0, r.y0)
-            sx1 = max(sx1, r.x1); sy1 = max(sy1, r.y1)
+            sx0 = min(sx0, rx0); sy0 = min(sy0, ry0)
+            sx1 = max(sx1, rx1); sy1 = max(sy1, ry1)
         if path.get("fill") and not is_background:
-            ink += r.width * r.height
+            ink += rw * rh
 
     if sx1 > sx0 and sy1 > sy0:
         sw, sh = sx1 - sx0, sy1 - sy0
@@ -156,6 +163,11 @@ MIN_EDGE_PX = 800        # below this small print starts to go
 TARGET_EM_PX = 8.0       # px of em-height needed to read a glyph reliably
 NO_TEXT_EDGE_PX = 1100   # scans carry no font info; handwriting needs more
 
+# Only span sizes are read below, but "dict" also decodes and base64-wraps
+# every raster on the page unless told otherwise. Dropping images returns the
+# exact same spans (verified on 632 pages) at ~2.7x the speed.
+SPAN_FLAGS = fitz.TEXTFLAGS_DICT & ~fitz.TEXT_PRESERVE_IMAGES
+
 
 def render_edge(pg):
     """Long edge in px this page needs, from the size of its smallest text.
@@ -165,7 +177,7 @@ def render_edge(pg):
     """
     sizes = []
     try:
-        for b in pg.get_text("dict")["blocks"]:
+        for b in pg.get_text("dict", flags=SPAN_FLAGS)["blocks"]:
             for ln in b.get("lines", []):
                 for sp in ln.get("spans", []):
                     if sp.get("text", "").strip() and sp["size"] >= 3.0:
@@ -234,7 +246,7 @@ def harvest(path):
         # No text. That is legitimate for a scan or a figure-only page -- but if
         # there is no visual content either, extraction genuinely failed and we
         # must NOT cache an empty artifact as a success.
-        has_visual = any(pg.get_images(full=True) or pg.get_drawings() for pg in doc)
+        has_visual = any(pg.get_images(full=True) or pg.get_cdrawings() for pg in doc)
         if not has_visual and not ocr_pages:
             doc.close()
             return {"status": "error", "error": "empty_extraction", "path": path}
@@ -262,12 +274,49 @@ def harvest(path):
             kept[xref] = e
 
     # -- filter 2: pixel-hash dedup (unproven; cheap insurance) --------------
+    # Hashing via doc.extract_image re-encodes every image (PNG) and dominated
+    # this filter's cost. Two cheap facts shrink the work with the same result:
+    # images whose pixel dimensions differ can never be byte-identical, and
+    # images whose raw streams plus image-dict entries are identical decode
+    # identically -- so only dimension-groups with MIXED raw streams still need
+    # the full decode-and-hash. Verified byte-identical dedup on every corpus.
+    def _img_hash(xref):
+        try:
+            return hashlib.sha256(doc.extract_image(xref)["image"]).hexdigest()
+        except Exception:
+            return f"xref{xref}"
+
+    def _raw_key(xref):
+        try:
+            meta = "|".join(str(doc.xref_get_key(xref, k)) for k in
+                            ("Filter", "DecodeParms", "ColorSpace",
+                             "BitsPerComponent", "SMask"))
+            return hashlib.sha256((doc.xref_stream_raw(xref) or b"")
+                                  + meta.encode()).hexdigest()
+        except Exception:
+            return None
+
+    by_dim = collections.defaultdict(list)
+    for xref, e in kept.items():
+        by_dim[(e["w"], e["h"])].append(xref)
+    ident = {}                     # xref -> dedup identity; absent means unique
+    for dim, group in by_dim.items():
+        if len(group) == 1:
+            continue
+        raws = [_raw_key(x) for x in group]
+        if None not in raws and len(set(raws)) == 1:
+            h = _img_hash(group[0])    # identical inputs decode identically...
+            if h == f"xref{group[0]}":
+                continue               # ...and fail identically: all unique
+            for x in group:
+                ident[x] = (dim, h)
+        else:
+            for x in group:
+                ident[x] = (dim, _img_hash(x))
+
     by_hash, uniq = {}, {}
     for xref, e in kept.items():
-        try:
-            h = hashlib.sha256(doc.extract_image(xref)["image"]).hexdigest()
-        except Exception:
-            h = f"xref{xref}"
+        h = ident.get(xref, ("uniq", xref))
         if h in by_hash:
             dropped.append({"xref": xref, "px": [e["w"], e["h"]],
                             "why": f"duplicate_of({by_hash[h]})"})
@@ -339,6 +388,22 @@ def harvest(path):
     }
 
 
+def _harvest_all(paths):
+    """One result per path, in input order. Documents are independent, so
+    multi-file runs fan out across processes; each result is deterministic and
+    map() preserves order, so output is byte-identical to the serial loop.
+    Falls back to serial if the platform refuses to fork."""
+    if len(paths) > 1:
+        try:
+            import os, concurrent.futures as cf
+            with cf.ProcessPoolExecutor(
+                    max_workers=min(len(paths), os.cpu_count() or 1)) as ex:
+                return list(ex.map(harvest, paths))
+        except Exception:
+            pass
+    return [harvest(p) for p in paths]
+
+
 if __name__ == "__main__":
     flags = {a for a in sys.argv[1:] if a.startswith("--")}
     args = [a for a in sys.argv[1:] if a not in flags]
@@ -346,8 +411,7 @@ if __name__ == "__main__":
         print("usage: uv run harvest.py <pdf> [...] [--json]", file=sys.stderr)
         raise SystemExit(2)
     bad = 0
-    for p in args:
-        r = harvest(p)
+    for p, r in zip(args, _harvest_all(args)):
         if r["status"] != "ok":
             bad += 1
         if "--json" in flags:
