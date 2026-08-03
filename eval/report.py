@@ -16,8 +16,15 @@ RES = ROOT / "docs" / "benchmarks" / "results"
 ORDER = ["tds", "datasheets", "papers", "arxiv", "pmc", "bills",
          "olmocr_multi_column", "olmocr_headers_footers", "olmocr_arxiv_math",
          "olmocr_tables", "olmocr_long_tiny_text", "olmocr_scans"]
-REASONS = ["standalone_raster", "no_text_layer", "curves", "diagonals",
-           "dense_grid", "stroke_grid"]
+KNOWN_REASONS = ["standalone_raster", "no_text_layer", "curves", "diagonals",
+                 "dense_grid", "stroke_grid"]          # canonical column order
+
+
+def reason_columns(ds):
+    seen = set()
+    for d in ds.values():
+        seen |= set(d["summary"].get("reasons", {}))
+    return [r for r in KNOWN_REASONS if r in seen] + sorted(seen - set(KNOWN_REASONS))
 
 
 def pct(vals, q):
@@ -79,11 +86,12 @@ def main():
 
     # ---- table 2: reasons --------------------------------------------------
     A("## What routing fired, by class\n")
-    A("| dataset | " + " | ".join(REASONS) + " | total |")
-    A("|---|" + "---|" * (len(REASONS) + 1))
+    cols = reason_columns(ds)
+    A("| dataset | " + " | ".join(cols) + " | total |")
+    A("|---|" + "---|" * (len(cols) + 1))
     for name, d in ds.items():
         r = d["summary"].get("reasons", {})
-        A(f"| {name} | " + " | ".join(str(r.get(k, 0)) for k in REASONS)
+        A(f"| {name} | " + " | ".join(str(r.get(k, 0)) for k in cols)
           + f" | {sum(r.values())} |")
     A("")
 
