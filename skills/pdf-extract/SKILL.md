@@ -60,6 +60,7 @@ How to write the description depends on `reason` — see
 | `standalone_raster`, `curves`, `diagonals` | Describe the figure: type, what it shows, axes and units, notable values, all legible text. |
 | `no_text_layer` | **Transcribe the page verbatim.** This is the OCR path; there is no text at all. |
 | `dense_grid`, `stroke_grid` | A table the extractor could not structure. Reproduce it as a Markdown table. |
+| `raster_grid` | A page tiled with many images — a composite figure, or one photo stored as strips. Describe what the panels show **together**, then anything notable per panel. |
 
 `describe.py` is safe to re-run — it replaces rather than duplicates, so a vision
 pass that dies halfway can just be resumed.
@@ -89,6 +90,7 @@ and failed on real documents:
 | Require strokes in **both** orientations | Underlines and rules are horizontal only. Counting all axis-aligned strokes fired on bibliography pages and on contracts with underlined headings. |
 | Exempt `diagonals` from the area floor | 4+ diagonal segments do not occur in body text, and the floor was vetoing charts placed in a page corner. |
 | Ink threshold on the dense-grid branch | Separates a shaded table the extractor missed from decorative section banners. |
+| Collapse pages with >6 rasters into one render | A 48-tile inpainting comparison is one figure, and one TI package photo arrives as 12 strips; per-tile calls cost ~2× the tokens and lose the composition. Pages with 5–6 rasters are sometimes distinct figures, so the line sits at 6. |
 
 `harvest.py` is the single source of truth for routing. Every number in the
 README and design spec is regenerated from it; never edit a number by hand. If

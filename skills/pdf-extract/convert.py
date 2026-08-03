@@ -25,48 +25,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitz
-from harvest import harvest, SCALE_GUARD
+# Vision cost scales with image AREA, so resolution is the dominant lever:
+# halving the long edge quarters the token bill. render_edge and the pixel
+# bounds live in harvest.py, which already computes a budget for every page it
+# routes to a render; this module holds no second copy of that arithmetic.
+from harvest import harvest, render_edge, MAX_EDGE_PX, SCALE_GUARD
 from artifact import splice, strip
 from cache import cache_dir, publish, sha256_file, ENGINE, SCHEMA
-
-# Vision cost scales with image AREA, so resolution is the dominant lever:
-# halving the long edge quarters the token bill. Rendering every page at a fixed
-# high dpi pays for detail most pages do not contain. These bounds were set by
-# rendering dense datasheet pages at each size and checking legibility, then
-# validated against olmOCR-bench ground truth (see eval/resolution.md).
-MAX_EDGE_PX = 1568        # above this the model downsamples anyway - never exceed
-MIN_EDGE_PX = 800         # below this small print starts to go
-TARGET_EM_PX = 8.0        # pixels of em-height needed to read a glyph reliably
-NO_TEXT_EDGE_PX = 1100    # scans carry no font info; handwriting needs more
-
-
-def _render_edge(page):
-    """Long edge in pixels for this page, from the size of its smallest text.
-
-    A page whose smallest meaningful glyph is 12pt needs far fewer pixels than
-    one set in 5pt. Pages with no text layer at all (scans) get a fixed budget
-    because there is no font size to measure.
-    """
-    sizes = []
-    try:
-        # Spans only: without this flag "dict" also decodes and base64-wraps
-        # every raster on the page. Same spans, ~2.7x faster (see harvest.py).
-        flags = fitz.TEXTFLAGS_DICT & ~fitz.TEXT_PRESERVE_IMAGES
-        for b in page.get_text("dict", flags=flags)["blocks"]:
-            for ln in b.get("lines", []):
-                for sp in ln.get("spans", []):
-                    if sp.get("text", "").strip() and sp["size"] >= 3.0:
-                        sizes.append(sp["size"])
-    except Exception:
-        pass
-    if not sizes:
-        return NO_TEXT_EDGE_PX
-    sizes.sort()
-    small = sizes[max(0, len(sizes) // 20)]        # 5th percentile, not the min:
-    # the absolute smallest glyph on a datasheet is usually legal boilerplate.
-    long_pt = max(page.rect.width, page.rect.height)
-    edge = long_pt * (TARGET_EM_PX / small)
-    return int(max(MIN_EDGE_PX, min(MAX_EDGE_PX, edge)))
 
 
 def _write_image(doc, item, images_dir, edge_override=None):
@@ -88,7 +53,7 @@ def _write_image(doc, item, images_dir, edge_override=None):
         except Exception:
             pass                       # fall through to a page render
     page = doc[item["page"] - 1]
-    edge = edge_override or item.get("edge") or _render_edge(page)
+    edge = edge_override or item.get("edge") or render_edge(page)
     scale = edge / max(page.rect.width, page.rect.height)
     page.get_pixmap(matrix=fitz.Matrix(scale, scale)).save(dest)
     return name

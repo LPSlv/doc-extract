@@ -27,6 +27,7 @@ UBIQUITY      = 0.50   # placed on more than this fraction of pages => furniture
 INK_MIN       = 0.15   # filled non-background area / page area
 STROKE_MIN_FRAC   = 0.02  # stroke bbox must cover this much of the page
 STROKE_MAX_ASPECT = 5.0   # ...and not be an edge-hugging sliver
+RASTER_GRID   = 6      # more rasters than this on one page: render the page
 SCALE_GUARD   = 15     # vision calls above which we stop and ask
 
 
@@ -196,6 +197,41 @@ def _is_blank(pg, thresh=0.999):
         return False
 
 
+def grid_pages(page_sets, renders):
+    """Pages tiled with more than RASTER_GRID rasters not already covered.
+
+    A composite figure -- an inpainting comparison, a 12-panel results grid, a
+    robot-rollout strip -- is often stored as one XObject per tile, and each
+    tile would otherwise cost its own vision call while only making sense as a
+    whole. Checked by rendering every page carrying >=7 standalone rasters in
+    corpus/papers + corpus/tds + 14 more datasheets: all were a single
+    composite figure, or worse, ONE photo stored as horizontal strips
+    (bq24074 p49: 12 "images" that are slices of one package render, nonsense
+    individually). ai_latent-diffusion alone wanted 301 calls for 45 pages --
+    one page holds 48 tiles -- where one ~849-token page render reads better.
+
+    The threshold is 6, not lower, because pages holding 5-6 rasters are
+    sometimes several genuinely distinct figures whose tiles carry more
+    resolution than a page render can (tps62840 p25: six oscilloscope shots,
+    each with fine on-screen text). Measured on papers+tds: collapsing at >6
+    cuts vision calls 1024 -> 533 and image tokens 21%; >4 saves only 2
+    points more while starting to eat those distinct-figure pages.
+
+    `page_sets` is an iterable of per-raster placement-page sets; `renders`
+    the pages already being rendered for another reason. Rasters every one of
+    whose pages is already rendered are ignored -- subsumption will drop them
+    regardless -- and placements on rendered pages do not count toward the
+    tile total of an unrendered one.
+    """
+    placed = collections.Counter()
+    for pages in page_sets:
+        if not all(p in renders for p in pages):
+            for p in pages:
+                if p not in renders:
+                    placed[p] += 1
+    return {p for p, n in placed.items() if n > RASTER_GRID}
+
+
 def furniture_reason(w, h, placements, npages):
     if npages > 2 and placements / npages > UBIQUITY:
         return f"ubiquitous({placements}/{npages}pp)"
@@ -267,7 +303,12 @@ def harvest(path):
         else:
             kept[xref] = e
 
-    # -- filter 2: pixel-hash dedup (unproven; cheap insurance) --------------
+    # -- filter 2: pixel-hash dedup ------------------------------------------
+    # Zero hits on the five design documents (spec 3.4 called it "unproven;
+    # insurance"), but wider corpora vindicated it: 132 duplicate drops across
+    # 11 of 277 documents (papers, datasheets, opendataloader), 40 in one
+    # Wurth datasheet alone -- each a vision call that would have re-described
+    # identical pixels.
     # Hashing via doc.extract_image re-encodes every image (PNG) and dominated
     # this filter's cost. Two cheap facts shrink the work with the same result:
     # images whose pixel dimensions differ can never be byte-identical, and
@@ -353,6 +394,11 @@ def harvest(path):
         if why:
             renders[i] = why
             edges[i] = render_edge(pg)
+
+    # -- raster grids: a page tiled with many images is one figure -----------
+    for p in grid_pages((e["pages"] for e in uniq.values()), renders):
+        renders[p] = "raster_grid"
+        edges[p] = render_edge(doc[p])
 
     # -- subsumption: a rendered page covers the rasters it contains ---------
     standalone = []
