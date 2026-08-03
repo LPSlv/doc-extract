@@ -6,7 +6,7 @@ by `tests/check_sync.py --fix`; do not edit by hand.
 ```python
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["pdf-inspector==0.2.6", "pymupdf"]
+# dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
 # ///
 """Canonical visual-harvest block for the pdf-extract skill.
 
@@ -175,15 +175,23 @@ def harvest(path):
         doc.close()
         return {"status": "error", "error": "encrypted", "path": path}
 
-    det = pi.detect_pdf(path)
-    pdf_type = str(getattr(det, "pdf_type", "unknown"))
-    ocr_pages = set(getattr(det, "pages_needing_ocr", []) or [])
+    # MuPDF opens .txt/.epub/.svg/images happily, so fitz.open() succeeding is
+    # not proof this is a PDF. pdf_inspector is stricter and raises; catch it
+    # here or one bad file in a folder aborts every remaining document.
+    try:
+        det = pi.detect_pdf(path)
+        pdf_type = str(getattr(det, "pdf_type", "unknown"))
+        ocr_pages = set(getattr(det, "pages_needing_ocr", []) or [])
 
-    # -- phase 2: authoritative text comes from process_pdf, NOT per-page ----
-    # (extract_pages_markdown scores 0.860 vs 0.875 and returns nothing at all
-    #  on some documents; it is used ONLY for the table cross-check below.)
-    res = pi.process_pdf(path)
-    doc_md = getattr(res, "markdown", None)
+        # -- phase 2: authoritative text from process_pdf, NOT per-page ------
+        # (extract_pages_markdown scores 0.860 vs 0.875 and returns nothing at
+        #  all on some documents; used ONLY for the table cross-check below.)
+        res = pi.process_pdf(path)
+        doc_md = getattr(res, "markdown", None)
+    except Exception as e:
+        doc.close()
+        return {"status": "error", "error": "unreadable",
+                "detail": f"{type(e).__name__}: {e}", "path": path}
     if not (doc_md or "").strip():
         # No text. That is legitimate for a scan or a figure-only page -- but if
         # there is no visual content either, extraction genuinely failed and we
@@ -254,7 +262,7 @@ def harvest(path):
             standalone.append((xref, e))
 
     items = [{"id": f"p{min(e['pages'])+1:03d}-x{xref}", "page": min(e["pages"]) + 1,
-              "kind": "raster", "reason": "standalone_raster",
+              "kind": "raster", "reason": "standalone_raster", "xref": xref,
               "px": [e["w"], e["h"]], "description": None}
              for xref, e in standalone]
     items += [{"id": f"p{i+1:03d}-render", "page": i + 1, "kind": "page_render",
@@ -264,6 +272,7 @@ def harvest(path):
 
     return {
         "status": "ok", "path": path, "pdf_type": pdf_type, "pages": npages,
+        "markdown": doc_md or "", "page_markdown": page_mds,
         "engine": "pdf-inspector==0.2.6",
         "text_chars": len((doc_md or "")),
         "vision_calls": len(items), "over_scale_guard": len(items) > SCALE_GUARD,
@@ -272,11 +281,20 @@ def harvest(path):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    flags = {a for a in sys.argv[1:] if a.startswith("--")}
+    args = [a for a in sys.argv[1:] if a not in flags]
+    if not args:
+        print("usage: uv run harvest.py <pdf> [...] [--json]", file=sys.stderr)
+        raise SystemExit(2)
+    bad = 0
     for p in args:
         r = harvest(p)
-        if "--json" in sys.argv:
-            print(json.dumps(r, indent=2))
+        if r["status"] != "ok":
+            bad += 1
+        if "--json" in flags:
+            # JSONL: one document per line, so many files stay parseable.
+            slim = {k: v for k, v in r.items() if k not in ("markdown", "page_markdown")}
+            print(json.dumps(slim))
         else:
             name = p.split("/")[-1][:44]
             if r["status"] != "ok":
@@ -285,4 +303,5 @@ if __name__ == "__main__":
                 kinds = collections.Counter(i["reason"] for i in r["items"])
                 print(f"{name:<46} {r['pdf_type']:<11} pp={r['pages']:<3} "
                       f"calls={r['vision_calls']:<3} {dict(kinds)}")
+    raise SystemExit(1 if bad else 0)
 ```

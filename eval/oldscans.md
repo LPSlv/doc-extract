@@ -1,21 +1,45 @@
 # olmOCR-bench old_scans — where the visual layer wins
 
 Corpus: https://huggingface.co/datasets/allenai/olmOCR-bench
-(`old_scans` 98 + `old_scans_math` 36 = 134 PDFs, 984 unit tests, ODC-BY).
+(`old_scans` 98 + `old_scans_math` 36 = 134 PDFs, ODC-BY).
+
+## Baseline
 
 Every sampled file classifies `scanned`, reports `pages_needing_ocr=[1]`, and
-yields **zero** extractable characters. pdf-inspector alone therefore scores ~0;
-the render-and-read path is the entire value.
+yields **zero** extractable characters. pdf-inspector alone cannot score.
 
-Confirmed end to end on a handwritten 1914 letter (cursive, which Tesseract also
-fails): rendered at 140 dpi and transcribed in full.
+## Measured, 16-PDF sample (11 completed)
 
-## Procedure
+Pages rendered at 130 dpi and transcribed by Claude Opus, then scored against
+the benchmark's own `present` / `absent` / `order` tests.
 
-1. Download `bench_data/pdfs/old_scans*`.
-2. Run the full pipeline; `no_text_layer` pages route to transcription.
-3. Score with olmOCR-bench's unit tests (text presence, absence, reading order,
-   table accuracy).
+| Test type | pdf-inspector alone | + pdf-extract |
+|---|---|---|
+| `present` | 0/39 — 0.0% | 24/39 — **61.5%** |
+| `order` | 0/32 — 0.0% | 19/32 — **59.4%** |
+| `absent` | 16/16 — 100.0% | 7/16 — 43.8% |
+| **TOTAL** | 16/87 — 18.4% | 50/87 — **57.5%** |
 
-Report the number against a text-only baseline of ~0. This is the only official
-benchmark that measures what this skill adds.
+The baseline's 18.4% is vacuous: it passes every `absent` test by producing no
+text at all, and scores zero wherever content is required.
+
+## The `absent` regression is real, and it found a bug
+
+100% → 43.8% is not noise. `reference/describing-visuals.md` originally told the
+agent to "preserve document furniture" — so letterheads, telephone numbers and
+page markers were transcribed inline, and olmOCR tests for their *absence*.
+
+Nine of the sixteen lost tests are that conflict. The rubric now requires body
+text first and furniture last under a plain label, which is also correct for
+retrieval: a repeated letterhead should not land in every chunk of a 40-page
+contract. **Not yet re-scored after that fix** — the number above is from the
+pre-fix rubric and should improve.
+
+## Limits of this measurement
+
+- n=11 of 134. Small.
+- Transcriptions were produced by the same agent that ran the scorer, though the
+  tests are exact-string checks against ground truth the agent never saw.
+- 5 of 16 could not be completed: the corpus includes an 1881 periodical whose
+  content is 19th-century eugenics advocacy, and reproducing it verbatim was
+  blocked by output filtering. Documents 64, 69, 70, 71, 74 are excluded.

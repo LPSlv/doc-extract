@@ -1,0 +1,16 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: unit tests
+        run: uv run --with pytest python -m pytest tests/ -q
+      - name: verbatim block in sync with harvest.py
+        run: python3 tests/check_sync.py
+      - name: routing on the committed sample
+        run: uv run skills/pdf-extract/harvest.py example/sample-report.pdf
+      - name: byte-identity gate, real pipeline
+        run: uv run eval/gate.py example/sample-report.pdf

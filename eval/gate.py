@@ -1,19 +1,31 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["pdf-inspector==0.2.6"]
+# dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
 # ///
 """Byte-identity gate: prove the skill cannot degrade text extraction.
 
-For each PDF, splice descriptions into the engine's Markdown (including a
-payload that quotes the close delimiter), re-splice to simulate a resumed run,
-then strip and require the residue to equal raw engine output exactly.
+Runs the REAL pipeline -- convert, then describe every pending item (including
+one payload that quotes the close delimiter, and one re-describe to simulate a
+resumed run) -- then strips the added blocks from the produced doc.md and
+requires the residue to equal raw pdf-inspector output exactly.
+
+An earlier version of this file spliced strings into engine markdown and
+compared the result to itself. That was a unit test of artifact.py wearing a
+benchmark's clothes: it never touched the pipeline, so it could not have caught
+a pipeline that edited text in place. This one can.
 
 Usage:  uv run eval/gate.py <pdf|dir> [...]
 """
-import sys, pathlib
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "pdf-extract"))
+import sys, shutil, tempfile, pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+SKILL = ROOT / "skills" / "pdf-extract"
+sys.path.insert(0, str(SKILL))
+
 import pdf_inspector as pi
-from artifact import splice, strip, OPEN, CLOSE
+from artifact import strip, CLOSE
+from convert import convert
+from describe import main as describe_main
 
 HOSTILE = f"Table shows {CLOSE} and a total of 40 000 EUR"
 
@@ -24,24 +36,53 @@ def targets(args):
         yield from (sorted(p.glob("*.pdf")) if p.is_dir() else [p])
 
 
+def check(pdf, cache_root):
+    raw = getattr(pi.process_pdf(str(pdf)), "markdown", None) or ""
+    r = convert(str(pdf), root=cache_root, force=True)
+    if r["status"] != "ok":
+        return None, f"convert failed: {r.get('error')}"
+
+    art = pathlib.Path(r["artifact"])
+    for n, item in enumerate(r["pending"]):
+        body = HOSTILE if n == 0 else f"**Figure.** Description of {item['id']}."
+        describe_main([str(art), item["id"], body])
+        if n == 0:                      # resumed-run replay
+            describe_main([str(art), item["id"], body])
+
+    produced = (art / "doc.md").read_text()
+    residue = strip(produced)
+    if residue != raw:
+        return False, f"residue {len(residue)} != engine {len(raw)}"
+    if r["pending"] and produced == raw:
+        return False, "descriptions were not written at all"
+    return True, f"{len(r['pending'])} described"
+
+
 def main(args):
     files = list(targets(args))
     if not files:
-        print("usage: uv run eval/gate.py <pdf|dir> [...]"); return 2
-    bad = 0
-    for p in files:
-        try:
-            raw = getattr(pi.process_pdf(str(p)), "markdown", None) or ""
-        except Exception as e:
-            print(f"SKIP {p.name}: {type(e).__name__}"); continue
-        adds = [(len(raw), "**Figure.** Stacked bar."), (max(0, len(raw) // 2), HOSTILE)]
-        out = splice(raw, adds)
-        again = splice(out, adds)
-        if strip(out) != raw or strip(again) != raw \
-                or out.count(OPEN) != 2 or out.count(CLOSE) != 2:
-            bad += 1
-            print(f"FAIL {p.name}")
-    print(f"\n{len(files) - bad}/{len(files)} documents round-trip to byte-identity")
+        print("usage: uv run eval/gate.py <pdf|dir> [...]", file=sys.stderr)
+        return 2
+    cache_root = pathlib.Path(tempfile.mkdtemp(prefix="pdfx-gate-"))
+    ok = bad = skip = 0
+    try:
+        for p in files:
+            try:
+                verdict, note = check(p, cache_root)
+            except Exception as e:
+                verdict, note = None, f"{type(e).__name__}: {e}"
+            if verdict is None:
+                skip += 1
+                print(f"SKIP {p.name}: {note}")
+            elif verdict:
+                ok += 1
+            else:
+                bad += 1
+                print(f"FAIL {p.name}: {note}")
+    finally:
+        shutil.rmtree(cache_root, ignore_errors=True)
+    print(f"\n{ok}/{ok + bad} documents round-trip to byte-identity"
+          f"{f' ({skip} skipped)' if skip else ''}")
     return 1 if bad else 0
 
 

@@ -1,17 +1,45 @@
 # pdf-extract
 
-An agent skill for reading PDFs properly: fast local text extraction, plus
-vision **only** on the parts text extraction provably missed — charts, scanned
-pages, and tables it failed to structure.
+An agent skill for reading PDFs properly. Fast local text extraction, plus
+vision **only** on what text extraction provably missed — charts, scanned pages,
+and tables it failed to structure.
 
 ```bash
 npx skills add LPSlv/pdf-extract@pdf-extract
 ```
 
-Requires [`uv`](https://docs.astral.sh/uv/). Nothing else — no API key, no Rust
-toolchain, no global installs. Dependencies resolve on first run.
+Then just ask your agent: *"read this PDF and tell me the Q3 variance."*
 
-## The problem
+Requires [`uv`](https://docs.astral.sh/uv/). No API key, no Rust toolchain, no
+global installs — dependencies resolve on first run.
+
+## Try it in 30 seconds
+
+A sample report is committed. Run the skill on it:
+
+```bash
+uv run skills/pdf-extract/convert.py example/sample-report.pdf
+```
+
+```json
+{"status":"ok","artifact":"~/.cache/pdf-inspect/0559ee3a…","cached":false,
+ "pending":[{"id":"p001-x5","page":1,"kind":"raster",
+             "reason":"standalone_raster","path":"…/images/p001-x5.png"}],
+ "dropped":0,"over_scale_guard":false}
+```
+
+All the text is already extracted — including the budget table, as real
+Markdown. Exactly **one** item needs eyes: the chart. Look at it, then:
+
+```bash
+uv run skills/pdf-extract/describe.py <artifact> p001-x5 "Line chart, two series…"
+```
+
+The finished output is committed at
+[`example/sample-report.expected.md`](example/sample-report.expected.md) so you
+can see what you get before installing anything.
+
+## The problem it solves
 
 "Extract the images from a PDF" is a well-defined operation that every tool
 performs correctly, and it does not do what people expect.
@@ -20,75 +48,95 @@ performs correctly, and it does not do what people expect.
 
 A PDF page is a program of drawing commands. Only *image XObjects* are stored
 bitmaps; a chart pasted from Excel is a few hundred rectangle-and-line
-operations with no image object to extract. On one ESA BIC funding document,
-naive extraction yields 69 images — 7 distinct objects, six of them logos, rules
-and a sidebar stripe. Meanwhile a sibling document returns **zero** images while
-containing several pages of drawn content.
+operations with no image object to extract. On one 14-page grant document, naive
+extraction yields 69 images — 7 distinct objects, six of them logos, rules and a
+sidebar stripe. A sibling document returns **zero** images while containing
+several pages of drawn content.
 
 So both mechanisms are needed, and both need filtering.
 
-## What it does
+## How it works
 
-1. **Classify** the PDF (~10–50 ms) — text-based, scanned, image-based or mixed.
+1. **Classify** (~10–50 ms) — text-based, scanned, image-based or mixed.
 2. **Extract** authoritative Markdown with [pdf-inspector](https://github.com/firecrawl/pdf-inspector).
-3. **Harvest** visuals: pull embedded images, drop furniture, detect pages whose
+3. **Harvest** visuals — pull embedded images, drop furniture, detect pages whose
    drawn content the extractor did not capture, render those.
-4. **Read** each survivor with the host agent's own vision — no separate API.
-5. **Answer** questions against the cached artifact with `[p12]` citations.
+4. **Read** each survivor with your agent's own vision. No separate API.
+5. **Answer** from the cached artifact with `[p12]` citations.
 
-Everything through step 3 is deterministic and free.
+Steps 1–3 are deterministic and free. Re-running a PDF is a cache hit.
 
 ![Vision calls before and after filtering, five documents](docs/img/vision-calls.svg)
 
-## Benchmark
+## Where it actually beats plain extraction
 
-The text path is delegated entirely to pdf-inspector, and everything this skill
-adds sits inside strippable delimiters. The gate strips them and asserts the
-residue is **byte-identical** to raw engine output — so the score below is
-inherited, and verified rather than assumed.
+**Scanned documents.** On a 16-PDF sample of olmOCR-bench `old_scans`,
+pdf-inspector alone extracts **zero characters** from every file:
 
-![Engine scores on opendataloader-bench across three metrics](docs/img/benchmark.svg)
+| olmOCR-bench test type | pdf-inspector alone | + pdf-extract |
+|---|---|---|
+| `present` — is the text there? | **0.0%** (0/39) | **61.5%** (24/39) |
+| `order` — correct reading order? | **0.0%** (0/32) | **59.4%** (19/32) |
+| overall | 18.4% | **57.5%** |
 
-**0.875 overall on opendataloader-bench** (200 PDFs), the top score in
-Firecrawl's published comparison against LiteParse, OpenDataLoader, PyMuPDF4LLM
-and MarkItDown.
+*n=11 documents, 87 tests, transcribed by Claude Opus. The baseline's 18.4% is
+hollow — it passes `absent` tests only by producing nothing at all.*
 
-This is not a claim that pdf-extract's own extraction beats anything. It is a
-claim that it does not degrade a strong engine while adding a visual layer —
-and that claim is enforced by a test that can fail.
+This is the honest headline: on documents with no text layer, plain extraction
+scores zero and this recovers most of it, including handwritten cursive that
+Tesseract also fails.
 
-Across the same 200 PDFs the visual layer costs **0.66 vision calls per
-document**: 95 of 200 need none at all.
+## Where it does not
 
-## What no benchmark measures
+**On native-text PDFs it scores exactly what pdf-inspector scores, by design.**
 
-opendataloader-bench, olmOCR-bench and OmniDocBench all score text fidelity —
-reading order, tables, headings. None scores whether a chart was understood.
-The feature this skill exists for is unmeasured by the available instruments,
-which is stated plainly rather than papered over.
+![Engine scores on opendataloader-bench](docs/img/benchmark.svg)
 
-The one place it can be shown: olmOCR-bench's `old_scans` (134 PDFs). Every
-sampled file classifies `scanned` with **zero extractable characters** —
-pdf-inspector alone scores ~0. Rendering and reading recovers them, including
-handwritten cursive that Tesseract also fails.
+Running the full pipeline through opendataloader-bench's official evaluator
+gives **0.875 overall / 0.915 NID / 0.814 TEDS** — identical to pdf-inspector,
+because all text is delegated to it and every addition sits inside strippable
+delimiters.
+
+Two things worth stating plainly:
+
+- **That 0.875 is pdf-inspector's number, not an improvement.** Against this
+  benchmark's *full* engine set it ranks **5th of 15** — `opendataloader-hybrid`
+  0.907, `nutrient` 0.885, `docling` 0.882 all score higher. Firecrawl's
+  published comparison omitted those.
+- The equality is **enforced, not asserted**: `eval/gate.py` runs the real
+  pipeline, describes every item (including a payload that quotes the block
+  delimiter, plus a re-describe to simulate a resumed run), strips the additions
+  and requires the residue to equal raw engine output byte for byte. 14/14 on
+  grant PDFs, scans and charts.
+
+## Cost
+
+On opendataloader-bench: 0.66 vision calls per document, 95 of 200 needing none.
+But that corpus is **all single-page**. On real multipage documents it is higher
+— 13 calls for a 46-page thesis, 38 for a 31-page hardware manual whose images
+are mostly genuine screenshots. `over_scale_guard` fires above 15 so the agent
+asks before spending.
 
 ## Known limitations
 
-- Thresholds are fitted to a small sample: nine numbers tuned on five real
+- Thresholds are fitted to a small sample: ~21 numbers tuned on five real
   documents plus ~20 synthetic controls, then exercised for regression across
-  200 more.
+  200 more. They are not learned, and they will misfire on layouts unlike those.
 - A table with no rules and no shading is invisible to every branch. If the
   extractor also drops it, the content is lost silently.
-- `stroke_grid` conflates marker-based plots with ruled tables. One label, two
-  causes — deliberate, but it makes that manifest `reason` less diagnostic.
+- `stroke_grid` conflates marker-based plots with ruled tables — one label, two
+  causes.
 - Text quality is bounded by pdf-inspector. If it misreads a page, so does this.
+- The furniture filter is size-based, so a full-bleed decorative cover image
+  survives it and costs one call.
 
 ## Development
 
 ```bash
-uv run --with pytest python -m pytest tests/ -q   # splice/strip and cache contracts
+uv run --with pytest python -m pytest tests/ -q   # splice/strip + cache contracts
 python3 tests/check_sync.py                       # verbatim block matches harvest.py
-uv run skills/pdf-extract/harvest.py FILE.pdf     # routing decisions for one file
+uv run eval/gate.py example/                      # byte-identity, real pipeline
+uv run skills/pdf-extract/harvest.py FILE.pdf     # routing decisions only
 ```
 
 `harvest.py` is the single source of truth for routing. Every number in this

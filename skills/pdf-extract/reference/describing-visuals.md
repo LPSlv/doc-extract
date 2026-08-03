@@ -39,8 +39,32 @@ paraphrase, summarise, correct spelling, or modernise. For handwriting,
 transcribe what is written; mark genuinely unreadable words `[illegible]` rather
 than guessing.
 
-Preserve document furniture that carries meaning — reference numbers, dates,
-stamps, signature blocks, marginal annotations.
+### Body first. Furniture last, and separately.
+
+**Start with the document's actual content.** Running heads, footers, page
+numbers, letterhead blocks, archival stamps and marginal annotations are *not*
+body text. Put them last, under a plain label:
+
+```
+<body text, in reading order>
+
+Page furniture: letterhead "BUTLER & VALE, Attorneys at Law, Southern
+Building, Washington D.C."; telephone Main 3928; archival note "ack 5/26/14";
+page number 10.
+```
+
+Do **not** write `<!-- pdf-extract:add -->` markers yourself. `describe.py`
+adds them, and it escapes any that appear in your text — writing them by hand
+turns them into visible `&lt;!--` garbage in `doc.md`.
+
+This is not cosmetic. Interleaving furniture with body text means a repeated
+letterhead lands in every chunk of a 40-page contract, poisoning retrieval and
+burying the sentence that actually answers the question. Keep it, but keep it
+out of the way — and inside delimiters, so it strips cleanly.
+
+Signature blocks *are* body content: keep them inline. So are dates and
+reference numbers that appear in the body of a letter rather than in its
+letterhead.
 
 ## Tables (`reason: "dense_grid"` or `"stroke_grid"`)
 
