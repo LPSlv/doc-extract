@@ -87,6 +87,27 @@ This is the honest headline: on documents with no text layer, plain extraction
 scores zero and this recovers most of it, including handwritten cursive that
 Tesseract also fails.
 
+## What it costs: 14 real datasheets, 668 pages
+
+Datasheets are the hard case — pinout diagrams and characteristic curves text
+extraction cannot touch, mixed with parameter tables it handles perfectly.
+
+![Cumulative tokens: reading every page each time versus a cached artifact](docs/img/datasheet-cost.svg)
+
+| | read every page as an image | pdf-extract |
+|---|---|---|
+| first question | 1,626,152 tok | 1,084,905 tok — 33% less |
+| each one after | 1,626,152 tok | **13,126 tok — 99% less** |
+| 10 questions | 16,261,520 tok | 1,203,039 tok — **13.5× cheaper** |
+
+Stated plainly: **the first pass is only 33% cheaper**, one datasheet comes out
+1% *worse*, and first-pass wall time is higher (19.0 s vs 6.7 s) because
+extraction runs. The win is the cache — a median datasheet page is **478 tokens
+of extracted text but ~2,400 tokens to look at as an image**, and the naive
+approach pays that again every session.
+
+Full per-document table and the token model: [`eval/datasheets.md`](eval/datasheets.md).
+
 ## Where it does not
 
 **On native-text PDFs it scores exactly what pdf-inspector scores, by design.**
