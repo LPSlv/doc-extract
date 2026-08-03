@@ -250,6 +250,53 @@ def furniture_reason(w, h, placements, npages):
     return None
 
 
+def batch_furniture(results, min_docs=3, frac=0.5):
+    """Signatures that recur across DIFFERENT documents are template emblems.
+
+    The intra-document ubiquity rule cannot see these: a US bill is 2-4 pages
+    and the GPO seal sits on page 1 only, so it never reaches 50% *within* one
+    file -- but it is byte-identical across all 230 bills. Geometry cannot tell
+    an emblem from a small chart (max-path, fill-ratio and spatial-cluster
+    measures were all tested and all failed: the 4N25 disclaimer page scores
+    higher than a real ina226 chart page on every one). Recurrence across
+    documents is the signal that actually works.
+    """
+    import collections as _c
+    docs = _c.defaultdict(set)
+    for r in results:
+        if r.get("status") != "ok":
+            continue
+        for sig in (r.get("page_sigs") or {}).values():
+            docs[tuple(sig)].add(r["path"])
+    n = len({r["path"] for r in results if r.get("status") == "ok"})
+    if n < min_docs:
+        return set()
+    return {sig for sig, seen in docs.items() if len(seen) / n > frac}
+
+
+def drop_batch_furniture(results, template):
+    """Remove items whose page signature is a cross-document emblem."""
+    if not template:
+        return results
+    for r in results:
+        if r.get("status") != "ok":
+            continue
+        sigs = r.get("page_sigs") or {}
+        keep, removed = [], 0
+        for it in r["items"]:
+            sig = sigs.get(str(it["page"])) or sigs.get(it["page"])
+            if it["kind"] == "page_render" and sig and tuple(sig) in template:
+                r["dropped"].append({"page": it["page"], "why": "batch_furniture"})
+                removed += 1
+            else:
+                keep.append(it)
+        if removed:
+            r["items"] = keep
+            r["vision_calls"] = len(keep)
+            r["over_scale_guard"] = len(keep) > SCALE_GUARD
+    return results
+
+
 def harvest(path):
     # -- phase 1: classify, and refuse to cache a silent failure -------------
     try:
@@ -376,7 +423,7 @@ def harvest(path):
     template = {k for k, n in counts.items()
                 if npages > 2 and n / npages > UBIQUITY}
 
-    renders, edges = {}, {}
+    renders, edges, page_sigs = {}, {}, {}
     for i, pg in enumerate(doc):
         if (i + 1) in ocr_pages:
             if _is_blank(pg):
@@ -400,6 +447,7 @@ def harvest(path):
         if why:
             renders[i] = why
             edges[i] = render_edge(pg)
+            page_sigs[str(i + 1)] = sig(g)
 
     # -- raster grids: a page tiled with many images is one figure -----------
     for p in grid_pages((e["pages"] for e in uniq.values()), renders):
@@ -427,6 +475,7 @@ def harvest(path):
     return {
         "status": "ok", "path": path, "pdf_type": pdf_type, "pages": npages,
         "markdown": doc_md or "", "page_markdown": page_mds,
+        "page_sigs": page_sigs,
         "engine": "pdf-inspector==0.2.6",
         "text_chars": len((doc_md or "")),
         "vision_calls": len(items), "over_scale_guard": len(items) > SCALE_GUARD,
@@ -457,12 +506,17 @@ if __name__ == "__main__":
         print("usage: uv run harvest.py <pdf> [...] [--json]", file=sys.stderr)
         raise SystemExit(2)
     bad = 0
-    for p, r in zip(args, _harvest_all(args)):
+    results = _harvest_all(args)
+    # Batch pass: an emblem repeated across documents (GPO seal, publisher mark)
+    # is furniture the per-document rule cannot see. Only applies to a batch.
+    results = drop_batch_furniture(results, batch_furniture(results))
+    for p, r in zip(args, results):
         if r["status"] != "ok":
             bad += 1
         if "--json" in flags:
             # JSONL: one document per line, so many files stay parseable.
-            slim = {k: v for k, v in r.items() if k not in ("markdown", "page_markdown")}
+            slim = {k: v for k, v in r.items()
+                    if k not in ("markdown", "page_markdown", "page_sigs")}
             print(json.dumps(slim))
         else:
             name = p.split("/")[-1][:44]

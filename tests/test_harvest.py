@@ -222,3 +222,50 @@ def test_duplicate_images_are_deduped(tmp_path):
     assert r["status"] == "ok"
     rasters = [i for i in r["items"] if i["kind"] == "raster"]
     assert len(rasters) <= 1
+
+
+# --- batch-scoped furniture -------------------------------------------------
+# A US bill is 2-4 pages with the GPO seal on page 1 only, so it never reaches
+# the 50% intra-document ubiquity bar -- but the seal is byte-identical across
+# all 230 bills. Geometry cannot separate an emblem from a small chart:
+# max-single-path, fill-ratio and spatial-cluster measures were each measured
+# and each failed (the 4N25 disclaimer page scores HIGHER than a real ina226
+# chart page on every one). Recurrence across documents is the signal that works.
+
+def _doc(path, sigs, pages):
+    return {"status": "ok", "path": path,
+            "page_sigs": {str(p): s for p, s in sigs.items()},
+            "items": [{"id": f"p{p:03d}-render", "page": p, "kind": "page_render",
+                       "reason": "curves", "description": None} for p in pages],
+            "dropped": [], "vision_calls": len(pages), "over_scale_guard": False}
+
+
+def test_signature_repeated_across_documents_is_furniture():
+    from harvest import batch_furniture
+    seal = (449, 27, 168, 219)
+    docs = [_doc(f"b{i}.pdf", {1: seal}, [1]) for i in range(5)]
+    assert seal in batch_furniture(docs)
+
+
+def test_signature_unique_to_one_document_is_not_furniture():
+    from harvest import batch_furniture
+    docs = [_doc(f"b{i}.pdf", {1: (449, 27, 168, 219)}, [1]) for i in range(5)]
+    docs.append(_doc("chart.pdf", {1: (12, 40, 3, 3)}, [1]))
+    assert (12, 40, 3, 3) not in batch_furniture(docs)
+
+
+def test_batch_rule_needs_several_documents():
+    """One or two files cannot establish a template; a lone bill still fires."""
+    from harvest import batch_furniture
+    seal = (449, 27, 168, 219)
+    assert batch_furniture([_doc("b0.pdf", {1: seal}, [1])]) == set()
+
+
+def test_dropping_furniture_updates_counts_and_records_reason():
+    from harvest import batch_furniture, drop_batch_furniture
+    seal = (449, 27, 168, 219)
+    docs = [_doc(f"b{i}.pdf", {1: seal}, [1]) for i in range(4)]
+    drop_batch_furniture(docs, batch_furniture(docs))
+    assert docs[0]["items"] == []
+    assert docs[0]["vision_calls"] == 0
+    assert docs[0]["dropped"][0]["why"] == "batch_furniture"
