@@ -4,3 +4,4 @@ __pycache__/
 opendataloader-bench/
 oldscans/
 docs/img/*.png
+corpus/

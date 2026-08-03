@@ -120,9 +120,18 @@ def render_reason(g):
     Ordered most- to least-specific. Each branch carries its own minimum so a
     near-empty page (e.g. a tinted cover with 2 drawing ops) cannot trip any.
     """
-    if g["curves"] >= 8 and g["stroke_aspect"] <= STROKE_MAX_ASPECT:
+    # Vendor logos are bezier artwork too. A real figure occupies a meaningful
+    # part of the page; a logo is a fraction of a percent and repeats on every
+    # page of the document. Measured on 23 datasheets: 176 curve-pages sit at
+    # >=5% stroke area, 10 at <2%, nothing between -- and all 10 were logos on
+    # otherwise text-only pages (one verified by eye as a legal disclaimer).
+    if g["curves"] >= 8 and _plot_shaped(g):
         return "curves"                      # bezier artwork: real vector figure
-    if g["diagonals"] >= 4 and g["stroke_aspect"] <= STROKE_MAX_ASPECT:
+    # The area floor was originally lifted here so a chart tucked into a page
+    # corner would still fire. Measured: a corner chart covers ~3.3% of the page
+    # and a vendor logo 0.4-0.6%, so the 2% floor separates them cleanly and the
+    # corner case is kept. Verified by the synthetic corner-chart fixture.
+    if g["diagonals"] >= 4 and _plot_shaped(g):
         return "diagonals"                   # line chart / connected series
     # Axis-aligned strokes alone are ambiguous: plot spines and ticks look like
     # underlined headings. A plot has strokes in BOTH orientations; underlines
@@ -266,6 +275,17 @@ def harvest(path):
             by_hash[h] = xref; uniq[xref] = e
 
     # -- filters 3 + 4: which pages need eyes --------------------------------
+    # Vector page furniture: a vendor logo is bezier artwork that repeats with
+    # an identical signature on every page, exactly as a raster logo does. The
+    # raster filter already drops those by ubiquity; do the same for drawings,
+    # or a logo on a text page reads as a figure. Measured on 23 datasheets:
+    # ti_ucc27517 carries the same 143-curve/20-diagonal signature on 6 pages.
+    geoms = [page_geometry(pg) for pg in doc]
+    sig = lambda g: (g["curves"], g["diagonals"], g["axis_h"], g["axis_v"])
+    counts = collections.Counter(sig(g) for g in geoms)
+    template = {k for k, n in counts.items()
+                if npages > 2 and n / npages > UBIQUITY}
+
     renders, edges = {}, {}
     for i, pg in enumerate(doc):
         if (i + 1) in ocr_pages:
@@ -278,7 +298,15 @@ def harvest(path):
         pm = page_mds[i] if i < len(page_mds) else ""
         if pm.count("\n|") >= 3:
             continue                              # filter 3: extractor won
-        why = render_reason(page_geometry(pg))
+        g = geoms[i]
+        # ...but only when the page carries nothing else. A shaded table has
+        # filled rects and no strokes at all, so it matches the empty-stroke
+        # template by accident; the ink test keeps those.
+        if (sig(g) in template and g["stroke_frac"] < STROKE_MIN_FRAC
+                and g["ink"] < INK_MIN and g["rects"] < 8):
+            dropped.append({"page": i + 1, "why": "vector_furniture"})
+            continue
+        why = render_reason(g)
         if why:
             renders[i] = why
             edges[i] = render_edge(pg)
