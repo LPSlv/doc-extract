@@ -77,7 +77,8 @@ pdf-inspector alone extracts **zero characters** from every file:
 |---|---|---|
 | `present` — is the text there? | **0.0%** (0/39) | **61.5%** (24/39) |
 | `order` — correct reading order? | **0.0%** (0/32) | **59.4%** (19/32) |
-| overall | 18.4% | **57.5%** |
+| `absent` — furniture excluded? | 100% (vacuously) | 62.5% (10/16) |
+| **overall** | **18.4%** | **60.9%** |
 
 *n=11 documents, 87 tests, transcribed by Claude Opus. The baseline's 18.4% is
 hollow — it passes `absent` tests only by producing nothing at all.*

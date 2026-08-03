@@ -13,12 +13,12 @@ yields **zero** extractable characters. pdf-inspector alone cannot score.
 Pages rendered at 130 dpi and transcribed by Claude Opus, then scored against
 the benchmark's own `present` / `absent` / `order` tests.
 
-| Test type | pdf-inspector alone | + pdf-extract |
-|---|---|---|
-| `present` | 0/39 — 0.0% | 24/39 — **61.5%** |
-| `order` | 0/32 — 0.0% | 19/32 — **59.4%** |
-| `absent` | 16/16 — 100.0% | 7/16 — 43.8% |
-| **TOTAL** | 16/87 — 18.4% | 50/87 — **57.5%** |
+| Test type | pdf-inspector alone | + pdf-extract | (pre-rubric-fix) |
+|---|---|---|---|
+| `present` | 0/39 — 0.0% | 24/39 — **61.5%** | 61.5% |
+| `order` | 0/32 — 0.0% | 19/32 — **59.4%** | 59.4% |
+| `absent` | 16/16 — 100.0% | 10/16 — **62.5%** | 43.8% |
+| **TOTAL** | 16/87 — 18.4% | 53/87 — **60.9%** | 57.5% |
 
 The baseline's 18.4% is vacuous: it passes every `absent` test by producing no
 text at all, and scores zero wherever content is required.
@@ -32,8 +32,8 @@ page markers were transcribed inline, and olmOCR tests for their *absence*.
 Nine of the sixteen lost tests are that conflict. The rubric now requires body
 text first and furniture last under a plain label, which is also correct for
 retrieval: a repeated letterhead should not land in every chunk of a 40-page
-contract. **Not yet re-scored after that fix** — the number above is from the
-pre-fix rubric and should improve.
+contract. Re-scored after the fix: `absent` 43.8% → **62.5%**, total 57.5% →
+**60.9%**, with no regression on `present` or `order`.
 
 ## Limits of this measurement
 
