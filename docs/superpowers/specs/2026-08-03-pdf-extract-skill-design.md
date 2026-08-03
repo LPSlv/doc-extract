@@ -73,10 +73,21 @@ documents. They are different plots. Retained as cheap insurance, explicitly **u
 **"Curves or grid+ink" missed stroke-based charts.** A matplotlib line plot without a
 legend has `curves=0` and non-white ink `0.000`; a scatter with square markers has
 `curves=0, diagonals=0`. Both were invisible to the original rule. The thesis figures
-passed only because legend boxes have rounded corners emitting bezier ops. Fixed by two
-added signals (§4, Phase 3) — diagonal segments, and sparse-rect-with-many-strokes —
-each gated by a stroke-bounding-box test so that margin wallpaper (guidelines p13) does
-not read as a scatter plot.
+passed only because legend boxes have rounded corners emitting bezier ops.
+
+**The first fix for that overcorrected.** Counting axis-aligned strokes made any page of
+underlined text look like a plot: a generated page of 14 underlined links fired, and so
+did **thesis pages 39–42 (the bibliography)** and **page 12 of the author's own ESA BIC
+incubation contract**. Underlined headings and hyperlinks are endemic in docx-converted
+EU documents, so this was a standing junk-call tax on the target corpus. Resolved by
+splitting strokes by orientation: **underlines and rules are horizontal only; a plot has
+strokes in both orientations** (spines and ticks). Requiring `axis_h ≥ 3 AND axis_v ≥ 3`
+removes the bibliography pages while keeping marker-based scatter plots.
+
+A second correction in the same area: the stroke-bounding-box floor (5% of page) vetoed a
+real line chart sitting in the corner of a text page — a common paper layout. Since 4+
+diagonal segments essentially never occur in text or decoration, the `diagonals` branch
+is now exempt from the area floor and the floor is 2% elsewhere.
 
 ### 3.5 Filter results, regenerated from `harvest.py`
 
@@ -85,14 +96,18 @@ not read as a scatter plot.
 | guidelines | 7 | **1** | 1 raster |
 | Metodika_v3 | 5 | **0** | — |
 | MTR_Optonics | 20 | **10** | 8 rasters + 2 dense_grid (p9, p11) |
-| Thesis | 33 | **17** | 7 rasters + 5 curves + 5 sparse_plot |
+| Thesis | 33 | **13** | 7 rasters + 6 curves |
 | housing (CAD) | 3 | **1** | 1 no_text_layer |
 
-68 → 29. Synthetic controls: `chart_line` fires `diagonals`, `chart_scatter` fires
-`sparse_plot`, both previously missed.
+68 → 25. The thesis fell from 17 to 13 when the orientation rule landed; the four
+removed calls were bibliography pages, so this is a correctness gain, not a regression.
 
-Across `opendataloader-bench` (200 PDFs): **0 errors, 106 documents touched, 133 calls**
-— `standalone_raster` 109, `curves` 13, `dense_grid` 7, `sparse_plot` 3, `no_text_layer` 1.
+Synthetic controls: `chart_line` and a corner-placed chart fire `diagonals`,
+`chart_scatter` fires `stroke_grid`, the underline page fires **nothing**, a corrupt file
+returns a structured error without aborting the batch.
+
+Across `opendataloader-bench` (200 PDFs): **0 errors, 105 documents touched, 132 calls**
+— `standalone_raster` 107, `curves` 16, `dense_grid` 7, `stroke_grid` 1, `no_text_layer` 1.
 
 ## 4. Architecture
 
@@ -123,6 +138,14 @@ arrive encrypted. Phase 1 checks `needs_pass`/`is_encrypted` and fails loudly.
 Empty extraction is an error **only if there is also no visual content**; a figure-only
 page legitimately has no text and must still be processed.
 
+Corrupt or unreadable files return a structured `{"status":"error","error":"unreadable"}`
+rather than raising — an uncaught exception in a batch aborts every remaining document,
+which contradicts "one or many PDFs".
+
+Blank pages are skipped even when flagged `pages_needing_ocr`. A scanned contract's
+separator sheets are literally empty, and each would otherwise burn a vision call; a
+20-dpi greyscale pixmap check is enough to catch them.
+
 ### Phase 2 — Text
 
 `process_pdf().markdown` is authoritative. This is not interchangeable with
@@ -147,21 +170,29 @@ respectively.
 
 1. **Furniture** — drop if on >50% of pages (doc >2pp), or <120px per side, or aspect
    >8:1, or area <40 000px².
-2. **Pixel-hash dedup** — sha256 of decompressed bytes. Unproven; insurance.
+2. **Pixel-hash dedup** — sha256 of the *stored* image stream as returned by
+   `extract_image()`. Unproven; insurance.
 3. **Table cross-check** — page already yields ≥3 Markdown table rows → skip.
 4. **Render if any branch fires**, each self-gated so a near-empty page cannot trip it:
    - `curves ≥ 8` — bezier artwork
-   - `diagonals ≥ 4` — line chart / connected series
-   - `axis_lines + diagonals ≥ 10 AND rects ≤ 20` — sparse plot (axes, ticks, markers)
+   - `diagonals ≥ 4` — line chart / connected series. **Exempt from the area floor**:
+     diagonal segments essentially never occur in body text or decoration, and the floor
+     was vetoing real charts placed in a page corner.
+   - `axis_h ≥ 3 AND axis_v ≥ 3 AND axis_lines + diagonals ≥ 10 AND rects ≤ 20` plus
+     stroke bbox ≥2% of page and aspect ≤5:1 — `stroke_grid`. Both orientations are
+     required because underlines and rules are horizontal only (§3.4).
    - `x_edges ≥ 4 AND y_edges ≥ 4 AND rects ≥ 8 AND ink ≥ 0.15` — shaded grid the
      extractor missed
-   - the first three additionally require **plot-shaped strokes**: stroke bounding box
-     ≥5% of page area and aspect ≤5:1
 
    Pages in `pages_needing_ocr` bypass all of this — there is no text to regress.
 
    The per-branch minimums matter: a tinted cover page with 2–6 drawing ops reaches
    ink 1.0 and would otherwise render under a bare `ink ≥ 0.15` rule.
+
+   `stroke_grid` deliberately covers two cases with one label — a marker/tick-based plot
+   and a ruled table the extractor failed to convert. They trigger the identical action,
+   and separating them reliably proved to cost more precision than it bought: the split
+   mislabelled a square-marker scatter as a table.
 
 Then **subsumption** (a rendered page replaces the rasters it contains), then the
 **scale guard** at >15 calls.
@@ -210,6 +241,24 @@ The benchmark harness runs the **full** pipeline, strips delimited blocks, and a
 the residue is byte-identical to raw engine output. That converts §8.1 from an assertion
 into a test that can fail. Without it the gate would benchmark the dependency and prove
 nothing about the skill.
+
+**The convention must be pinned exactly, or the gate fails on whitespace.** Crossing
+three plausible insertion styles with three plausible strip regexes, only **one of nine
+pairs** round-trips to byte-identity; the rest leave stray newlines and would be misread
+as a real regression. Therefore:
+
+- **Insertion** — every added block is exactly, with no other surrounding edit:
+  `"\n" + "<!-- pdf-extract:add -->" + "\n" + body + "\n" + "<!-- /pdf-extract:add -->" + "\n"`
+- **Strip** — `re.sub(r"\n<!-- pdf-extract:add -->\n.*?\n<!-- /pdf-extract:add -->\n", "", text, flags=re.DOTALL)`
+- **Escaping** — before insertion, every `<!--` and `-->` in `body` is replaced with
+  `&lt;!--` and `--&gt;`. Without this a description that quotes the delimiter (a vision
+  transcription of a page about HTML, or a hostile PDF) terminates the block early and
+  leaves fragments in the residue — verified to break byte-identity.
+
+Note the scope limit: `harvest.py` is canonical for **routing only**. Splicing and
+`doc.md` assembly — the code the byte-identity property actually rests on — has no
+canonical implementation yet, so the gate currently tests something unwritten. Writing it
+is the first task in the implementation plan.
 
 ## 6. Output contract
 
@@ -288,7 +337,7 @@ result:
   not from misses; neither is addressable by a visual layer.
 - Of the 2 genuine misses, no render branch fires.
 - The corpus is 200 pages across 200 PDFs — all single-page — and 199/200 `text_based`.
-- The skill nonetheless fires on 106/200 documents. With no upside available, that is
+- The skill nonetheless fires on 105/200 documents. With no upside available, that is
   pure regression risk, which is exactly what the strip-and-compare gate contains.
 
 Gate: strip delimited blocks, assert byte-identity with raw `process_pdf` output, and
@@ -310,18 +359,24 @@ contain Optonics budget figures, named individuals and contract detail.
 
 ## 9. Known limitations
 
-- **Thresholds are fitted to a small sample.** Seven numbers tuned on five documents plus
-  synthetic controls, three verified by eye. §8.1 exercises them on 200 more, but only
+- **Thresholds are fitted to a small sample.** Nine numbers tuned on five documents plus
+  ~20 synthetic controls, five verified by eye. §8.1 exercises them on 200 more, but only
   for regression, not routing correctness.
-- **Unshaded merged-header tables remain a blind spot.** Low ink skips them; if the
-  extractor also dropped them, the content is lost silently.
+- **Borderless tables remain a blind spot.** The unshaded-but-ruled case is now caught by
+  `stroke_grid` (confirmed on the author's own incubation contract, p12, where a
+  "TOTAL / Maximum 40 000 EUR" table was extracted as prose but not as a table). A table
+  with *no* rules and no shading is still invisible to every branch, and if the extractor
+  also drops it the content is lost silently.
+- **`stroke_grid` conflates plots and ruled tables.** One label, two causes; the manifest
+  cannot tell you which. Deliberate (§4), but it makes `reason` less diagnostic than the
+  other branches.
 - **Quality is bounded by pdf-inspector** for all text.
 - **No benchmark scores figure comprehension.** opendataloader-bench, olmOCR-bench and
   OmniDocBench all measure text fidelity. The core value-add is unmeasured; §8.3 is the
   only check on it.
 - **OmniDocBench is unusable** — it ships rendered JPGs plus JSON, not PDFs, so the
   vector discriminator cannot run.
-- **Vision cost is real.** 0.67 calls/document on the benchmark corpus, but 17 on a
+- **Vision cost is real.** 0.66 calls/document on the benchmark corpus, but 13 on a
   46-page thesis. Hence the scale guard.
 - **The scale guard conflicts with large scanned documents.** An 84-page scan needs 84
   mandatory renders and will always trip it. Behaviour on override, and what half-state

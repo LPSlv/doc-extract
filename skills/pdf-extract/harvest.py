@@ -25,7 +25,7 @@ MAX_ASPECT    = 8.0    # w:h beyond this => rule/stripe, not a figure
 MIN_AREA      = 40_000 # px^2
 UBIQUITY      = 0.50   # placed on more than this fraction of pages => furniture
 INK_MIN       = 0.15   # filled non-background area / page area
-STROKE_MIN_FRAC   = 0.05  # stroke bbox must cover this much of the page
+STROKE_MIN_FRAC   = 0.02  # stroke bbox must cover this much of the page
 STROKE_MAX_ASPECT = 5.0   # ...and not be an edge-hugging sliver
 SCALE_GUARD   = 15     # vision calls above which we stop and ask
 
@@ -48,7 +48,7 @@ def page_geometry(pg):
     """
     pw, ph = pg.rect.width, pg.rect.height
     parea = max(1.0, pw * ph)
-    curves = diagonals = axis_lines = rects = 0
+    curves = diagonals = axis_h = axis_v = rects = 0
     xs, ys, ink = [], [], 0.0
     sx0 = sy0 = float("inf"); sx1 = sy1 = float("-inf")   # stroke bounding box
 
@@ -67,10 +67,13 @@ def page_geometry(pg):
                     ys += [it[1].y0, it[1].y1]
             elif kind == "l":
                 p1, p2 = it[1], it[2]
-                if abs(p2.x - p1.x) > 1.0 and abs(p2.y - p1.y) > 1.0:
+                dx, dy = abs(p2.x - p1.x), abs(p2.y - p1.y)
+                if dx > 1.0 and dy > 1.0:
                     diagonals += 1
+                elif dx >= dy:
+                    axis_h += 1
                 else:
-                    axis_lines += 1
+                    axis_v += 1
                 has_stroke = True
         if has_stroke and not is_background:
             sx0 = min(sx0, r.x0); sy0 = min(sy0, r.y0)
@@ -86,7 +89,8 @@ def page_geometry(pg):
         stroke_frac, stroke_aspect = 0.0, 99.0
 
     return {
-        "curves": curves, "diagonals": diagonals, "axis_lines": axis_lines,
+        "curves": curves, "diagonals": diagonals,
+        "axis_h": axis_h, "axis_v": axis_v, "axis_lines": axis_h + axis_v,
         "rects": rects, "x_edges": len(_cluster(xs)), "y_edges": len(_cluster(ys)),
         "ink": round(ink / parea, 4),
         "stroke_frac": round(stroke_frac, 4), "stroke_aspect": round(stroke_aspect, 2),
@@ -110,17 +114,36 @@ def render_reason(g):
     Ordered most- to least-specific. Each branch carries its own minimum so a
     near-empty page (e.g. a tinted cover with 2 drawing ops) cannot trip any.
     """
-    if g["curves"] >= 8 and _plot_shaped(g):
+    if g["curves"] >= 8 and g["stroke_aspect"] <= STROKE_MAX_ASPECT:
         return "curves"                      # bezier artwork: real vector figure
-    if g["diagonals"] >= 4 and _plot_shaped(g):
+    if g["diagonals"] >= 4 and g["stroke_aspect"] <= STROKE_MAX_ASPECT:
         return "diagonals"                   # line chart / connected series
-    if g["axis_lines"] + g["diagonals"] >= 10 and g["rects"] <= 20 \
+    # Axis-aligned strokes alone are ambiguous: plot spines and ticks look like
+    # underlined headings. A plot has strokes in BOTH orientations; underlines
+    # and rules are horizontal only. Requiring both kills the false positive
+    # without losing marker-based scatter plots.
+    if g["axis_h"] >= 3 and g["axis_v"] >= 3 \
+            and g["axis_lines"] + g["diagonals"] >= 10 and g["rects"] <= 20 \
             and _plot_shaped(g):
-        return "sparse_plot"                 # axes+ticks+markers, few rects
+        # Both orientations present: either a marker/tick-based plot or a ruled
+        # table the extractor failed to turn into Markdown (filter 3 already
+        # removed the ones it handled). One label -- the action is identical and
+        # distinguishing them reliably is not worth false precision.
+        return "stroke_grid"
     if g["x_edges"] >= 4 and g["y_edges"] >= 4 and g["rects"] >= 8 \
             and g["ink"] >= INK_MIN:
         return "dense_grid"                  # shaded table the extractor missed
     return None
+
+
+def _is_blank(pg, thresh=0.999):
+    """Near-uniform white page: a scanned separator sheet, not content."""
+    try:
+        pm = pg.get_pixmap(dpi=20, colorspace=fitz.csGRAY)
+        data = pm.samples
+        return sum(1 for b in data if b >= 250) / max(1, len(data)) >= thresh
+    except Exception:
+        return False
 
 
 def furniture_reason(w, h, placements, npages):
@@ -137,7 +160,11 @@ def furniture_reason(w, h, placements, npages):
 
 def harvest(path):
     # -- phase 1: classify, and refuse to cache a silent failure -------------
-    doc = fitz.open(path)
+    try:
+        doc = fitz.open(path)
+    except Exception as e:                      # corrupt/unreadable: structured
+        return {"status": "error", "error": "unreadable",
+                "detail": type(e).__name__, "path": path}
     if doc.needs_pass or doc.is_encrypted:
         doc.close()
         return {"status": "error", "error": "encrypted", "path": path}
@@ -199,7 +226,10 @@ def harvest(path):
     renders = {}
     for i, pg in enumerate(doc):
         if (i + 1) in ocr_pages:
-            renders[i] = "no_text_layer"          # unambiguous: nothing to lose
+            if _is_blank(pg):
+                dropped.append({"page": i + 1, "why": "blank_page"})
+            else:
+                renders[i] = "no_text_layer"      # unambiguous: nothing to lose
             continue
         pm = page_mds[i] if i < len(page_mds) else ""
         if pm.count("\n|") >= 3:
