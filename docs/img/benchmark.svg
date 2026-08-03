@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 690 306" width="690" height="306" role="img" aria-label="Small multiples: engine scores on opendataloader-bench across overall, reading order and tables">
+  <style>
+    .lab  { font: 12px Charter, Georgia, serif; fill: #1a1a1a; }
+    .val  { font: 10px "SF Mono", ui-monospace, monospace; fill: #1a1a1a; }
+    .head { font: 9px "SF Mono", ui-monospace, monospace; fill: #6b665d; letter-spacing: .09em; }
+    .tick { font: 9px "SF Mono", ui-monospace, monospace; fill: #8a857c; }
+    .ttl  { font: 13px Charter, Georgia, serif; fill: #1a1a1a; }
+    .sub  { font: 11px Charter, Georgia, serif; fill: #8a857c; }
+    .lead { stroke: #e4e0d8; stroke-width: 1; }
+    .base { stroke: #c8c2b5; stroke-width: .5; }
+  </style>
+  <rect width="690" height="306" fill="#fafaf7"/>
+
+  <text x="24" y="30" class="ttl">opendataloader-bench · 200 PDFs · identical scale across all three panels</text>
+  <text x="24" y="47" class="sub">Engines are near-identical on reading order. Tables is where they separate.</text>
+
+  <text x="150" y="76" class="head">OVERALL</text>
+  <text x="310" y="76" class="head">READING ORDER</text>
+  <text x="470" y="76" class="head">TABLES</text>
+
+  <!-- pdf-inspector : accent -->
+  <text x="142" y="98" class="lab" text-anchor="end" fill="#b3261e">pdf-inspector</text>
+  <line x1="150" y1="94" x2="263.8" y2="94" class="lead"/><circle cx="263.8" cy="94" r="3.2" fill="#b3261e"/>
+  <text x="272" y="97" class="val" fill="#b3261e">.875</text>
+  <line x1="310" y1="94" x2="429.0" y2="94" class="lead"/><circle cx="429.0" cy="94" r="3.2" fill="#b3261e"/>
+  <text x="437" y="97" class="val" fill="#b3261e">.915</text>
+  <line x1="470" y1="94" x2="575.8" y2="94" class="lead"/><circle cx="575.8" cy="94" r="3.2" fill="#b3261e"/>
+  <text x="584" y="97" class="val" fill="#b3261e">.814</text>
+
+  <!-- LiteParse -->
+  <text x="142" y="124" class="lab" text-anchor="end">LiteParse</text>
+  <line x1="150" y1="120" x2="263.1" y2="120" class="lead"/><circle cx="263.1" cy="120" r="2.8" fill="#1a1a1a"/>
+  <text x="272" y="123" class="val">.870</text>
+  <line x1="310" y1="120" x2="428.0" y2="120" class="lead"/><circle cx="428.0" cy="120" r="2.8" fill="#1a1a1a"/>
+  <text x="437" y="123" class="val">.908</text>
+  <line x1="470" y1="120" x2="560.1" y2="120" class="lead"/><circle cx="560.1" cy="120" r="2.8" fill="#1a1a1a"/>
+  <text x="568" y="123" class="val">.693</text>
+
+  <!-- OpenDataLoader -->
+  <text x="142" y="150" class="lab" text-anchor="end">OpenDataLoader</text>
+  <line x1="150" y1="146" x2="259.6" y2="146" class="lead"/><circle cx="259.6" cy="146" r="2.8" fill="#1a1a1a"/>
+  <text x="272" y="149" class="val">.843</text>
+  <line x1="310" y1="146" x2="428.6" y2="146" class="lead"/><circle cx="428.6" cy="146" r="2.8" fill="#1a1a1a"/>
+  <text x="437" y="149" class="val">.912</text>
+  <line x1="470" y1="146" x2="533.6" y2="146" class="lead"/><circle cx="533.6" cy="146" r="2.8" fill="#1a1a1a"/>
+  <text x="542" y="149" class="val">.489</text>
+
+  <!-- PyMuPDF4LLM -->
+  <text x="142" y="176" class="lab" text-anchor="end">PyMuPDF4LLM</text>
+  <line x1="150" y1="172" x2="245.6" y2="172" class="lead"/><circle cx="245.6" cy="172" r="2.8" fill="#1a1a1a"/>
+  <text x="272" y="175" class="val">.735</text>
+  <line x1="310" y1="172" x2="425.2" y2="172" class="lead"/><circle cx="425.2" cy="172" r="2.8" fill="#1a1a1a"/>
+  <text x="437" y="175" class="val">.886</text>
+  <line x1="470" y1="172" x2="522.1" y2="172" class="lead"/><circle cx="522.1" cy="172" r="2.8" fill="#1a1a1a"/>
+  <text x="531" y="175" class="val">.401</text>
+
+  <!-- MarkItDown -->
+  <text x="142" y="202" class="lab" text-anchor="end">MarkItDown</text>
+  <line x1="150" y1="198" x2="225.8" y2="198" class="lead"/><circle cx="225.8" cy="198" r="2.8" fill="#1a1a1a"/>
+  <text x="272" y="201" class="val">.583</text>
+  <line x1="310" y1="198" x2="424.3" y2="198" class="lead"/><circle cx="424.3" cy="198" r="2.8" fill="#1a1a1a"/>
+  <text x="437" y="201" class="val">.879</text>
+  <circle cx="470" cy="198" r="2.8" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="479" y="201" class="val">.000</text>
+
+  <!-- baselines at zero -->
+  <line x1="150" y1="86" x2="150" y2="210" class="base"/>
+  <line x1="310" y1="86" x2="310" y2="210" class="base"/>
+  <line x1="470" y1="86" x2="470" y2="210" class="base"/>
+  <text x="150" y="224" class="tick" text-anchor="middle">0</text>
+  <text x="310" y="224" class="tick" text-anchor="middle">0</text>
+  <text x="470" y="224" class="tick" text-anchor="middle">0</text>
+  <text x="280" y="224" class="tick" text-anchor="middle">1.0</text>
+  <text x="440" y="224" class="tick" text-anchor="middle">1.0</text>
+  <text x="600" y="224" class="tick" text-anchor="middle">1.0</text>
+
+  <line x1="24" y1="248" x2="666" y2="248" stroke="#d8d4cc" stroke-width=".5"/>
+  <text x="24" y="264" class="sub">pdf-extract delegates all text to pdf-inspector and adds only delimited blocks, so it scores the top row</text>
+  <text x="24" y="280" class="sub">by construction. Scores published by Firecrawl, 16 Jul 2026 — not a claim about pdf-extract’s own quality.</text>
+</svg>

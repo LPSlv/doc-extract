@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 400" width="660" height="400" role="img" aria-label="Slopegraph: vision calls before and after filtering, five documents">
+  <style>
+    .lab   { font: 12px Charter, Georgia, serif; fill: #1a1a1a; }
+    .val   { font: 11px "SF Mono", ui-monospace, monospace; fill: #1a1a1a; font-weight: 600; }
+    .head  { font: 9px "SF Mono", ui-monospace, monospace; fill: #6b665d; letter-spacing: .09em; }
+    .ttl   { font: 13px Charter, Georgia, serif; fill: #1a1a1a; }
+    .sub   { font: 11px Charter, Georgia, serif; fill: #8a857c; }
+    .slope { stroke: #c8c2b5; stroke-width: 1; fill: none; }
+    .focus { stroke: #b3261e; stroke-width: 1.4; }
+  </style>
+  <rect width="660" height="400" fill="#fafaf7"/>
+
+  <text x="24" y="30" class="ttl">Pages and images sent to a vision model, per document</text>
+  <text x="24" y="47" class="sub">Every extractable image and every page carrying drawing operators, versus what survives four filters.</text>
+
+  <text x="266" y="70" class="head" text-anchor="end">UNFILTERED</text>
+  <text x="394" y="70" class="head">FILTERED</text>
+
+  <!-- MSc thesis 33 -> 17 -->
+  <line x1="274" y1="84.3" x2="386" y2="198.6" class="slope focus"/>
+  <circle cx="274" cy="84.3" r="2.6" fill="#b3261e"/><circle cx="386" cy="198.6" r="2.6" fill="#b3261e"/>
+  <text x="240" y="88.3" class="lab" text-anchor="end" fill="#b3261e">MSc thesis, 46pp</text>
+  <text x="266" y="88.3" class="val" text-anchor="end" fill="#b3261e">33</text>
+  <text x="394" y="202.6" class="val" fill="#b3261e">17</text>
+
+  <!-- mid-term report 20 -> 10 -->
+  <line x1="274" y1="177.1" x2="386" y2="248.6" class="slope"/>
+  <circle cx="274" cy="177.1" r="2.6" fill="#1a1a1a"/><circle cx="386" cy="248.6" r="2.6" fill="#1a1a1a"/>
+  <text x="240" y="181.1" class="lab" text-anchor="end">ESA BIC mid-term report, 16pp</text>
+  <text x="266" y="181.1" class="val" text-anchor="end">20</text>
+  <text x="394" y="252.6" class="val">10</text>
+
+  <!-- funding guidelines 7 -> 1 -->
+  <line x1="274" y1="270" x2="386" y2="312.9" class="slope"/>
+  <circle cx="274" cy="270" r="2.6" fill="#1a1a1a"/><circle cx="386" cy="312.9" r="2.6" fill="#1a1a1a"/>
+  <text x="240" y="274" class="lab" text-anchor="end">ESA BIC funding guidelines, 14pp</text>
+  <text x="266" y="274" class="val" text-anchor="end">7</text>
+
+  <!-- ERAF methodology 5 -> 0 -->
+  <line x1="274" y1="284.3" x2="386" y2="320" class="slope"/>
+  <circle cx="274" cy="284.3" r="2.6" fill="#1a1a1a"/><circle cx="386" cy="320" r="2.6" fill="#1a1a1a"/>
+  <text x="240" y="288.3" class="lab" text-anchor="end">ERAF methodology, 9pp</text>
+  <text x="266" y="288.3" class="val" text-anchor="end">5</text>
+
+  <!-- CAD drawing 3 -> 1 -->
+  <line x1="274" y1="298.6" x2="386" y2="312.9" class="slope"/>
+  <circle cx="274" cy="298.6" r="2.6" fill="#1a1a1a"/>
+  <text x="240" y="302.6" class="lab" text-anchor="end">CAD drawing, 1pp</text>
+  <text x="266" y="302.6" class="val" text-anchor="end">3</text>
+
+  <text x="394" y="309" class="val">1</text>
+  <text x="408" y="309" class="lab">guidelines, CAD</text>
+  <text x="394" y="329" class="val">0</text>
+  <text x="408" y="329" class="lab">methodology</text>
+
+  <line x1="24" y1="358" x2="636" y2="358" stroke="#d8d4cc" stroke-width=".5"/>
+  <text x="24" y="374" class="sub">68 calls become 29. The methodology document falls to zero: its 237 drawing operators are</text>
+  <text x="24" y="389" class="sub">entirely section banners and table rules, and its tables are already extracted as text.</text>
+</svg>

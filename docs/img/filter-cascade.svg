@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 260" width="620" height="260" role="img" aria-label="Funnel: 69 image placements reduce to 1 image worth reading">
+  <style>
+    .lab  { font: 12px Charter, Georgia, serif; fill: #1a1a1a; }
+    .val  { font: 13px "SF Mono", ui-monospace, monospace; fill: #1a1a1a; font-weight: 600; }
+    .note { font: 11px Charter, Georgia, serif; fill: #8a857c; }
+    .ttl  { font: 13px Charter, Georgia, serif; fill: #1a1a1a; }
+    .sub  { font: 11px Charter, Georgia, serif; fill: #8a857c; }
+    .tick { font: 10px "SF Mono", ui-monospace, monospace; fill: #6b665d; }
+  </style>
+  <rect width="620" height="260" fill="#fafaf7"/>
+
+  <text x="24" y="30" class="ttl">What “extract all the images” actually yields</text>
+  <text x="24" y="47" class="sub">ESA BIC funding guidelines, 14 pages. Photoshop’s “open images separately” returns the first row.</text>
+
+  <!-- stage 1: 69 -->
+  <rect x="150" y="74" width="420" height="13" fill="#c8c2b5"/>
+  <text x="142" y="84" class="lab" text-anchor="end">placements</text>
+  <text x="578" y="85" class="val">69</text>
+  <text x="150" y="103" class="note">every image drawn on every page</text>
+
+  <!-- stage 2: 7 -->
+  <rect x="150" y="126" width="42.6" height="13" fill="#c8c2b5"/>
+  <text x="142" y="136" class="lab" text-anchor="end">distinct objects</text>
+  <text x="200" y="137" class="val">7</text>
+  <text x="150" y="155" class="note">deduplicated by object id, then by pixel hash</text>
+
+  <!-- stage 3: 1 -->
+  <rect x="150" y="178" width="6.1" height="13" fill="#b3261e"/>
+  <text x="142" y="188" class="lab" text-anchor="end">worth reading</text>
+  <text x="164" y="189" class="val" fill="#b3261e">1</text>
+  <text x="150" y="207" class="note">3 logos, 1 sidebar stripe and 2 rules dropped as furniture</text>
+
+  <line x1="24" y1="230" x2="596" y2="230" stroke="#d8d4cc" stroke-width=".5"/>
+  <text x="24" y="244" class="sub">The survivor is a single 1347×758 graphic. The other six repeat on every page.</text>
+</svg>
