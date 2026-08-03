@@ -40,7 +40,11 @@ def main(folder):
             pm = pg.get_pixmap(dpi=140); opt_tok += tok(pm.width, pm.height)
         d.close()
         # --- B: pdf-inspector only -------------------------------------
-        t_txt, res = med(lambda: pi.process_pdf(p))
+        try:
+            t_txt, res = med(lambda: pi.process_pdf(p))
+        except Exception as e:
+            print(f"SKIP {f.name}: {type(e).__name__}"); d.close() if not d.is_closed else None
+            continue
         md = getattr(res, "markdown", None) or ""
         txt_tok = int(len(md) / 3.5)
         # --- C: pdf-extract --------------------------------------------

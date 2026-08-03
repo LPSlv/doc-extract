@@ -20,11 +20,11 @@ your agent's eyes.
 
 | | read every page | pdf-inspector only | **pdf-extract** |
 |---|---|---|---|
-| input tokens | 1,513,884 | 282,933 | **549,176** |
-| figure content | everything | **none** | 279 figures |
-| local time | 6.0 s | 4.2 s | **5.3 s** |
+| cost | 1.0× | 0.28× | **0.41× — 2.4× cheaper** |
+| vision calls | 1 per page | none | **1 per 3 pages** |
+| sees figures | everything | **nothing** | what the extractor missed |
 
-<sub>23 datasheets, 632 pages. <code>pdf-inspector only</code> is cheapest because it captures no figures at all.</sub>
+<sub>2,342 PDFs · 20,375 pages · 12 corpora. <code>pdf-inspector only</code> is cheapest because it captures no figure, scan or unparsed table at all — a floor, not an option.</sub>
 
 ## Quick start
 
@@ -138,11 +138,46 @@ because the obvious alternative was tested and failed on a real document:
 | Require strokes in **both** orientations | Underlines are horizontal only; counting all strokes fired on bibliography pages |
 | Stroke-area floor on curves and diagonals | A vendor logo is bézier artwork too — 4N25's only call was its legal disclaimer |
 | Drop repeated vector signatures | `ti_ucc27517` carries the same 143-curve logo on six pages |
+| Drop emblems repeated across *documents* | The GPO seal fired on 227 of 230 US bills — documents with no figures at all |
+| Collapse pages with >6 rasters | A 48-tile inpainting figure is one figure; one TI package photo arrives as 12 strips |
+| Never cost more than reading everything | On single-page documents the routed set can lose; the guard caps it |
 | Ink threshold on the dense-grid branch | Separates a shaded table the extractor missed from decorative banners |
 
 Pages render at the resolution their *own smallest text* needs rather than a
 flat dpi, measured from the 5th-percentile font on each page. That alone cut
 image tokens 54% with identical content capture.
+
+## Measured on 2,342 PDFs
+
+Twelve corpora, 20,375 pages, chosen to be genuinely different from each other —
+electronics datasheets, arXiv and PMC papers, US legislation, and six olmOCR-bench
+page classes. Every corpus has a fetch script and a sha256 manifest, so results
+pin to exact inputs. Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
+
+| corpus | files | pages | cheaper than reading every page | calls/page |
+|---|---|---|---|---|
+| `bills` | 230 | 2,736 | **7.0×** | 0.00 |
+| `datasheets` | 204 | 7,641 | **2.9×** | 0.42 |
+| `olmocr_arxiv_math` | 522 | 522 | **2.5×** | 0.12 |
+| `tds` | 23 | 632 | **2.8×** | 0.40 |
+| `olmocr_tables` | 188 | 188 | **2.4×** | 0.45 |
+| `olmocr_headers_footers` | 266 | 266 | **2.1×** | 0.50 |
+| `arxiv` | 238 | 5,336 | **2.0×** | 0.27 |
+| `papers` | 24 | 704 | **1.9×** | 0.39 |
+| `olmocr_scans` | 134 | 134 | **1.8×** | 1.00 |
+| `olmocr_multi_column` | 231 | 231 | **1.5×** | 0.58 |
+| `pmc` | 220 | 1,923 | **1.3×** | 0.56 |
+| `olmocr_long_tiny_text` | 62 | 62 | **0.9×** | 1.05 |
+
+**Overall: 2.4× cheaper than reading every page** (48.9M → 20.1M tokens), at one
+vision call per three pages instead of one per page.
+
+> [!NOTE]
+> `olmocr_long_tiny_text` is the one class where this **loses** — 62 single-page
+> documents of very small print, where text plus a figure render costs 7% more
+> than simply rendering the page. Single-page documents have nothing to amortise.
+> A cost guard caps the damage (it was +61% before), but it does not turn the
+> case into a win, and the table says so.
 
 ## Where it wins, and where it does not
 
@@ -174,8 +209,15 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 ## Limitations
 
 > [!WARNING]
-> - Thresholds are fitted, not learned: ~21 numbers tuned on five real documents
->   plus synthetic controls, then exercised for regression across 200 more.
+> - Thresholds are fitted, not learned: ~21 numbers tuned on a handful of real
+>   documents, then exercised for regression across 2,342 more. That exercise
+>   found two failures the small set could not — see below — so treat the
+>   constants as calibrated to the corpora here, not as universal.
+> - **Single-page documents can lose.** Nothing amortises; see `olmocr_long_tiny_text`.
+> - **Emblems need a batch.** A publisher mark is only distinguishable from a
+>   small chart by recurring across documents — geometry cannot separate them
+>   (max-path, fill-ratio and spatial-cluster measures were each tried and each
+>   failed). Convert one government PDF alone and its seal still costs one call.
 > - A table with **no rules and no shading** is invisible to every branch. If the
 >   extractor also drops it, the content is lost silently.
 > - `stroke_grid` conflates marker-based plots with ruled tables — one label, two causes.
@@ -187,7 +229,9 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 
 | Document | What it covers |
 |---|---|
-| [`eval/tds-corpus.md`](eval/tds-corpus.md) | 23 datasheets, 632 pages — three-way cost comparison |
+| [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md) | **All 12 corpora, 2,342 files, 20,375 pages** |
+| [`docs/benchmarks/PLAN.md`](docs/benchmarks/PLAN.md) | How each corpus was chosen, sourced and pinned |
+| [`eval/tds-corpus.md`](eval/tds-corpus.md) | 23 datasheets — the original three-way comparison |
 | [`eval/datasheets.md`](eval/datasheets.md) | Token model and per-stage wall time |
 | [`eval/resolution.md`](eval/resolution.md) | Adaptive resolution and the controlled capture test |
 | [`eval/oldscans.md`](eval/oldscans.md) | olmOCR-bench scanned-document accuracy |
@@ -197,7 +241,8 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 uv run --with pytest python -m pytest tests/ -q   # splice/strip + cache contracts
 python3 tests/check_sync.py                       # verbatim block matches harvest.py
 uv run eval/gate.py example/                      # byte-identity, real pipeline
-uv run eval/tds-bench.py corpus/tds               # three-way cost benchmark
+uv run eval/fetch.py bills && uv run eval/bench.py corpus/bills   # any corpus
+uv run eval/report.py                             # regenerate RESULTS.md
 ```
 
 > [!TIP]
