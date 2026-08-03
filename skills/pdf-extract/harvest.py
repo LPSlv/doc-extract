@@ -291,6 +291,58 @@ def drop_batch_furniture(results, template):
     return results
 
 
+def _tok(w, h, cap=MAX_EDGE_PX):
+    s = min(1.0, cap / max(w, h))
+    return int((w * s) * (h * s) / 750)
+
+
+def cost_guard(items, doc, edges):
+    """Never cost more than just looking at the whole document.
+
+    On short documents the routed set can exceed the price of rendering every
+    page: measured on olmOCR single-page corpora, 99 files cost MORE than full
+    optical (long_tiny_text as a class was +61%). When that happens the routed
+    set is not a saving, so fall back to one render per page -- which also
+    captures strictly more.
+    """
+    if not items:
+        return items, None
+    ours = 0
+    for it in items:
+        if it["kind"] == "raster":
+            ours += _tok(*it["px"])
+        else:
+            pg = doc[it["page"] - 1]
+            e = it.get("edge") or edges.get(it["page"] - 1) or NO_TEXT_EDGE_PX
+            sc = e / max(pg.rect.width, pg.rect.height)
+            ours += _tok(int(pg.rect.width * sc), int(pg.rect.height * sc))
+    whole = 0
+    for i, pg in enumerate(doc):
+        e = render_edge(pg)
+        sc = e / max(pg.rect.width, pg.rect.height)
+        whole += _tok(int(pg.rect.width * sc), int(pg.rect.height * sc))
+    if ours <= whole:
+        return items, None
+    out = []
+    for i, pg in enumerate(doc):
+        out.append({"id": f"p{i+1:03d}-render", "page": i + 1,
+                    "kind": "page_render", "reason": "whole_document",
+                    "edge": render_edge(pg), "description": None})
+    return out, {"why": "cost_guard", "routed_tokens": ours, "whole_tokens": whole}
+
+
+def harvest_batch(paths):
+    """Harvest several documents and apply the cross-document furniture rule.
+
+    Use this rather than mapping harvest() yourself: an emblem repeated across
+    documents is only visible at batch scope, and callers that skip this step
+    pay a vision call per document for a publisher mark (230 US bills = 227
+    wasted calls before this existed).
+    """
+    results = [harvest(p) for p in paths]
+    return drop_batch_furniture(results, batch_furniture(results))
+
+
 def harvest(path):
     # -- phase 1: classify, and refuse to cache a silent failure -------------
     try:
@@ -464,6 +516,9 @@ def harvest(path):
     items += [{"id": f"p{i+1:03d}-render", "page": i + 1, "kind": "page_render",
                "reason": why, "edge": edges.get(i), "description": None}
               for i, why in sorted(renders.items())]
+    items, guard = cost_guard(items, doc, edges)
+    if guard:
+        dropped.append(guard)
     doc.close()
 
     return {
@@ -501,8 +556,7 @@ if __name__ == "__main__":
         raise SystemExit(2)
     bad = 0
     results = _harvest_all(args)
-    # Batch pass: an emblem repeated across documents (GPO seal, publisher mark)
-    # is furniture the per-document rule cannot see. Only applies to a batch.
+    # Cross-document furniture: only visible at batch scope (see harvest_batch).
     results = drop_batch_furniture(results, batch_furniture(results))
     for p, r in zip(args, results):
         if r["status"] != "ok":

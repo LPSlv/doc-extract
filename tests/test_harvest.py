@@ -269,3 +269,42 @@ def test_dropping_furniture_updates_counts_and_records_reason():
     assert docs[0]["items"] == []
     assert docs[0]["vision_calls"] == 0
     assert docs[0]["dropped"][0]["why"] == "batch_furniture"
+
+
+# --- cost guard -------------------------------------------------------------
+# On short documents the routed set can cost more than rendering every page.
+# Measured on the olmOCR single-page corpora before this guard existed: 99
+# files cost MORE than full optical, and long_tiny_text as a class was +61%.
+
+def test_routed_set_cheaper_than_whole_document_is_kept():
+    from harvest import cost_guard
+
+    class _Pg:
+        def __init__(s): s.rect = type("R", (), {"width": 612.0, "height": 792.0})()
+    doc = [_Pg() for _ in range(10)]
+    items = [{"id": "p001-x1", "page": 1, "kind": "raster", "px": [200, 200]}]
+    out, guard = cost_guard(items, doc, {})
+    assert guard is None and out == items
+
+
+def test_routed_set_pricier_than_whole_document_falls_back_to_pages():
+    from harvest import cost_guard
+
+    class _Pg:
+        def __init__(s): s.rect = type("R", (), {"width": 612.0, "height": 792.0})()
+    doc = [_Pg()]                                  # one page
+    # four big rasters on that single page cost far more than rendering it once
+    items = [{"id": f"p001-x{i}", "page": 1, "kind": "raster", "px": [1500, 1500]}
+             for i in range(4)]
+    out, guard = cost_guard(items, doc, {})
+    assert guard is not None
+    assert guard["why"] == "cost_guard"
+    assert guard["routed_tokens"] > guard["whole_tokens"]
+    assert [i["reason"] for i in out] == ["whole_document"]
+    assert len(out) == 1                            # one render per page
+
+
+def test_cost_guard_is_a_no_op_when_nothing_was_routed():
+    from harvest import cost_guard
+    out, guard = cost_guard([], [], {})
+    assert out == [] and guard is None

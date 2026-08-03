@@ -24,7 +24,7 @@ import collections, datetime, hashlib, json, pathlib, sys, time
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "skills" / "pdf-extract"))
 import fitz, pdf_inspector as pi
-from harvest import harvest
+from harvest import harvest, batch_furniture, drop_batch_furniture
 
 MAXPX = 1568
 OPT_DPI = 140
@@ -77,23 +77,61 @@ def bench_file(path: pathlib.Path):
     row["over_scale_guard"] = h["over_scale_guard"]
     row["reasons"] = dict(collections.Counter(it["reason"] for it in h["items"]))
     row["dropped"] = len(h["dropped"])
+    row["_sigs"] = {str(k): tuple(v) for k, v in (h.get("page_sigs") or {}).items()}
+    row["_items"] = []
 
     t0 = time.perf_counter()
     ours_img = 0
     with fitz.open(str(path)) as d2:
         for it in h["items"]:
             if it["kind"] == "raster":
-                ours_img += tok(*it["px"])
+                t = tok(*it["px"])
             else:
                 pg = d2[it["page"] - 1]
                 e = it.get("edge") or 1100
                 s = e / max(pg.rect.width, pg.rect.height)
                 pm = pg.get_pixmap(matrix=fitz.Matrix(s, s))
-                ours_img += tok(pm.width, pm.height)
+                t = tok(pm.width, pm.height)
+            ours_img += t
+            row["_items"].append({"page": it["page"], "kind": it["kind"],
+                                  "reason": it["reason"], "tok": t})
     row["t_render"] = time.perf_counter() - t0
     row["ours_tok"] = row["txt_tok"] + ours_img
     return row
 
+
+
+def apply_batch_furniture(rows):
+    """Cross-document emblem removal, mirroring harvest.batch_furniture.
+
+    bench.py harvests file-by-file, so the batch rule has to be re-applied here
+    or the benchmark reports false positives the shipped CLI does not make.
+    """
+    ok = [r for r in rows if not r.get("skip")]
+    if len(ok) < 3:
+        return rows
+    seen = collections.defaultdict(set)
+    for r in ok:
+        for sig in (r.get("_sigs") or {}).values():
+            seen[sig].add(r.get("file") or r.get("name") or r.get("path") or id(r))
+    template = {sig for sig, files in seen.items() if len(files) / len(ok) > 0.5}
+    if not template:
+        return rows
+    for r in ok:
+        sigs = r.get("_sigs") or {}
+        keep, freed = [], 0
+        for it in r.get("_items", []):
+            if it["kind"] == "page_render" and sigs.get(str(it["page"])) in template:
+                freed += it["tok"]; r["dropped"] += 1
+            else:
+                keep.append(it)
+        if freed:
+            r["_items"] = keep
+            r["ours_tok"] -= freed
+            r["calls"] = len(keep)
+            r["reasons"] = dict(collections.Counter(i["reason"] for i in keep))
+            r["over_scale_guard"] = len(keep) > 15
+    return rows
 
 def main(argv):
     folder = pathlib.Path(argv[1]).resolve()
@@ -104,6 +142,8 @@ def main(argv):
     if "--limit" in argv:
         limit = int(argv[argv.index("--limit") + 1])
     files = sorted(folder.glob("*.pdf"))[:limit]
+    if not files:
+        sys.exit(f"no PDFs in {folder} — fetch the corpus first")
     rows, skips = [], []
     t_start = time.perf_counter()
     for i, f in enumerate(files, 1):
@@ -117,6 +157,9 @@ def main(argv):
                   + (f"  SKIP {row['skip']}" if "skip" in row else ""),
                   file=sys.stderr)
 
+    rows = apply_batch_furniture(rows)
+    for r in rows:                       # drop bookkeeping before serialising
+        r.pop("_sigs", None); r.pop("_items", None)
     P = sum(r["pages"] for r in rows)
     summary = {
         "files": len(rows), "skipped": len(skips), "pages": P,

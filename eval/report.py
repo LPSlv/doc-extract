@@ -77,7 +77,7 @@ def main():
         save = 1 - s["ours_tok"] / s["opt_tok"] if s["opt_tok"] else 0
         A(f"| {name} | {s['files']} | {s['pages']:,} | "
           f"{s['bytes']/1e6:.0f} | {s['opt_tok']:,} | {s['txt_tok']:,} | "
-          f"**{s['ours_tok']:,}** | −{save:.0%} | {s['calls']:,} | "
+          f"**{s['ours_tok']:,}** | {save:+.0%} | {s['calls']:,} | "
           f"{s['t_ours']:.0f} |")
     A("")
     A("`text only` is always cheapest and always misses every figure, scan "
