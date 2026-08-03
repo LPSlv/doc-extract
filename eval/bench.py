@@ -20,7 +20,7 @@ tds-bench.py): image = (w*h)/750 after fitting inside 1568 px long edge,
 from actual rendered pixels; text = chars/3.5. Timings are single-run wall
 times of the deterministic local pipeline; model inference is excluded.
 """
-import collections, datetime, json, pathlib, sys, time
+import collections, datetime, hashlib, json, pathlib, sys, time
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "skills" / "pdf-extract"))
 import fitz, pdf_inspector as pi
@@ -133,7 +133,9 @@ def main(argv):
                             for r in rows), 2),
         "wall_total": round(time.perf_counter() - t_start, 2),
     }
+    harvest_src = (ROOT / "skills" / "pdf-extract" / "harvest.py").read_bytes()
     out = {"dataset": name, "generated": datetime.date.today().isoformat(),
+           "harvest_sha256": hashlib.sha256(harvest_src).hexdigest()[:16],
            "token_model": {"image": "(w*h)/750 fit 1568px", "text": "chars/3.5",
                            "optical_dpi": OPT_DPI},
            "summary": summary, "rows": rows, "skips": skips}
