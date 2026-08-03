@@ -1,72 +1,52 @@
 # /// script
-# requires-python = ">=3.10"
 # dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
 # ///
-"""Cost to UNDERSTAND a datasheet: read every page as an image, vs pdf-extract.
-
-Token model follows Anthropic's documented rule: an image costs about
-(width x height)/750 tokens after being fitted inside 1568px on the long edge.
-Text is charged at chars/3.5, which is conservative for dense technical English.
-Both numbers are computed from the actual rendered pixels, not guessed.
-"""
-import sys, time, json, pathlib, io
-sys.path.insert(0, "/home/lps/pdf-extract/skills/pdf-extract")
+"""Cost with adaptive resolution vs the previous fixed 140dpi render."""
+import sys, time, json, pathlib, statistics
+sys.path.insert(0,"/home/lps/pdf-extract/skills/pdf-extract")
 import fitz
-import pdf_inspector as pi
 from harvest import harvest
+from convert import _render_edge, MAX_EDGE_PX
 
-MAXPX, DPI = 1568, 140
+def tok(w,h,cap=MAX_EDGE_PX):
+    s=min(1.0,cap/max(w,h)); return int((w*s)*(h*s)/750)
 
-def img_tokens(w, h):
-    scale = min(1.0, MAXPX / max(w, h))
-    return int((w * scale) * (h * scale) / 750)
-
-rows = []
+rows=[]
 for f in sorted(pathlib.Path("datasheets").glob("*.pdf")):
-    doc = fitz.open(str(f)); n = len(doc)
-
-    # --- naive: render EVERY page and look at it -------------------------
-    t0 = time.perf_counter()
-    naive_tok = 0
-    for pg in doc:
-        pm = pg.get_pixmap(dpi=DPI)
-        naive_tok += img_tokens(pm.width, pm.height)
-    naive_s = time.perf_counter() - t0
+    doc=fitz.open(str(f)); n=len(doc)
+    naive=sum(tok(*(lambda pm:(pm.width,pm.height))(pg.get_pixmap(dpi=140))) for pg in doc)
     doc.close()
-
-    # --- pdf-extract: text + only the flagged images ---------------------
-    t0 = time.perf_counter()
-    h = harvest(str(f))
-    if h["status"] != "ok":
-        print(f"SKIP {f.name}: {h['error']}"); continue
-    text_tok = int(len(h["markdown"]) / 3.5)
-    d2 = fitz.open(str(f)); vis_tok = 0
+    t0=time.perf_counter()
+    h=harvest(str(f))
+    if h["status"]!="ok": continue
+    text=int(len(h["markdown"])/3.5)
+    d=fitz.open(str(f)); old=new=0
     for it in h["items"]:
-        if it["kind"] == "raster":
-            vis_tok += img_tokens(*it["px"])
+        if it["kind"]=="raster":
+            w,hh=it["px"]; old+=tok(w,hh); new+=tok(w,hh)
         else:
-            pm = d2[it["page"] - 1].get_pixmap(dpi=DPI)
-            vis_tok += img_tokens(pm.width, pm.height)
-    d2.close()
-    skill_s = time.perf_counter() - t0
-    skill_tok = text_tok + vis_tok
+            pg=d[it["page"]-1]
+            pm=pg.get_pixmap(dpi=140); old+=tok(pm.width,pm.height)
+            e=_render_edge(pg); s=e/max(pg.rect.width,pg.rect.height)
+            pm2=pg.get_pixmap(matrix=fitz.Matrix(s,s)); new+=tok(pm2.width,pm2.height)
+    d.close(); el=time.perf_counter()-t0
+    rows.append(dict(name=f.stem,pages=n,calls=h["vision_calls"],naive=naive,
+                     text=text,old=text+old,new=text+new,s=el))
 
-    rows.append(dict(name=f.stem, pages=n, calls=h["vision_calls"],
-                     naive_tok=naive_tok, text_tok=text_tok, vis_tok=vis_tok,
-                     skill_tok=skill_tok, naive_s=naive_s, skill_s=skill_s,
-                     ratio=naive_tok / max(1, skill_tok)))
-
-rows.sort(key=lambda r: -r["pages"])
-print(f"{'datasheet':<20}{'pp':>4}{'calls':>6}{'naive tok':>11}{'skill tok':>11}{'saving':>9}{'naive s':>9}{'skill s':>9}")
-print("-" * 79)
+rows.sort(key=lambda r:-r["pages"])
+print(f"{'datasheet':<18}{'pp':>4}{'calls':>6}{'read-all':>10}{'was':>10}{'now':>10}{'vs read-all':>12}")
+print("-"*70)
 for r in rows:
-    print(f"{r['name'][:19]:<20}{r['pages']:>4}{r['calls']:>6}{r['naive_tok']:>11,}{r['skill_tok']:>11,}"
-          f"{1 - r['skill_tok']/r['naive_tok']:>8.0%}{r['naive_s']:>9.1f}{r['skill_s']:>9.1f}")
-tn = sum(r["naive_tok"] for r in rows); ts = sum(r["skill_tok"] for r in rows)
-pp = sum(r["pages"] for r in rows); cc = sum(r["calls"] for r in rows)
-print("-" * 79)
-print(f"{'TOTAL':<20}{pp:>4}{cc:>6}{tn:>11,}{ts:>11,}{1-ts/tn:>8.0%}"
-      f"{sum(r['naive_s'] for r in rows):>9.1f}{sum(r['skill_s'] for r in rows):>9.1f}")
-print(f"\nmedian per-doc saving: {sorted(1-r['skill_tok']/r['naive_tok'] for r in rows)[len(rows)//2]:.0%}")
-print(f"text tokens are {sum(r['text_tok'] for r in rows)/ts:.0%} of the skill's total; images {sum(r['vis_tok'] for r in rows)/ts:.0%}")
-json.dump(rows, open("costbench.json","w"), indent=1)
+    print(f"{r['name'][:17]:<18}{r['pages']:>4}{r['calls']:>6}{r['naive']:>10,}{r['old']:>10,}{r['new']:>10,}"
+          f"{1-r['new']/r['naive']:>11.0%}")
+N=sum(r['naive'] for r in rows); O=sum(r['old'] for r in rows); W=sum(r['new'] for r in rows)
+print("-"*70)
+print(f"{'TOTAL':<18}{sum(r['pages'] for r in rows):>4}{sum(r['calls'] for r in rows):>6}{N:>10,}{O:>10,}{W:>10,}{1-W/N:>11.0%}")
+print()
+print(f"first question : {N:,} -> {W:,}  ({1-W/N:.0%} less; was {1-O/N:.0%})")
+print(f"images alone   : {O-sum(r['text'] for r in rows):,} -> {W-sum(r['text'] for r in rows):,} "
+      f"({1-(W-sum(r['text'] for r in rows))/(O-sum(r['text'] for r in rows)):.0%} less)")
+follow=int(sum(r['text']/r['pages']*2 for r in rows))
+for q in (1,3,10):
+    print(f"  {q:>2} q: read-all {N*q:>11,}   pdf-extract {W+follow*(q-1):>9,}   {N*q/(W+follow*(q-1)):>5.1f}x")
+json.dump(rows, open("costbench2.json","w"), indent=1)

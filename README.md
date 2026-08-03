@@ -96,17 +96,19 @@ extraction cannot touch, mixed with parameter tables it handles perfectly.
 
 | | read every page as an image | pdf-extract |
 |---|---|---|
-| first question | 1,626,152 tok | 1,084,905 tok — 33% less |
+| first question | 1,626,152 tok | 668,054 tok — **59% less** |
 | each one after | 1,626,152 tok | **13,126 tok — 99% less** |
-| 10 questions | 16,261,520 tok | 1,203,039 tok — **13.5× cheaper** |
+| 10 questions | 16,261,520 tok | 786,242 tok — **20.7× cheaper** |
 
-Stated plainly: **the first pass is only 33% cheaper**, one datasheet comes out
-1% *worse*, and first-pass wall time is higher (19.0 s vs 6.7 s) because
-extraction runs. The win is the cache — a median datasheet page is **478 tokens
-of extracted text but ~2,400 tokens to look at as an image**, and the naive
-approach pays that again every session.
+Two things do the work. **Pages render at the resolution their smallest text
+actually needs** rather than a flat dpi — measured from the 5th-percentile font
+on each page, which cut image tokens 54% with *identical* content capture on a
+controlled ground-truth test ([`eval/resolution.md`](eval/resolution.md)). And
+the artifact is **cached**, so follow-up questions read text instead of pixels:
+a median datasheet page is 478 tokens as text and ~2,400 as an image.
 
-Full per-document table and the token model: [`eval/datasheets.md`](eval/datasheets.md).
+First-pass wall time is still higher (19.0 s vs 6.7 s) because extraction runs.
+Full per-document table: [`eval/datasheets.md`](eval/datasheets.md).
 
 ## Where it does not
 

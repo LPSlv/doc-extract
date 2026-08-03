@@ -4,7 +4,7 @@
 # ///
 """Turn PDFs into a cached, citable artifact. The orchestrator.
 
-    uv run convert.py <pdf> [...] [--out DIR] [--force] [--dpi 140]
+    uv run convert.py <pdf> [...] [--out DIR] [--force] [--edge PX]
 
 Runs everything deterministic and writes a complete artifact, then prints one
 JSON object per document telling the agent exactly which image files still need
@@ -29,31 +29,69 @@ from harvest import harvest, SCALE_GUARD
 from artifact import splice, strip
 from cache import cache_dir, publish, sha256_file, ENGINE, SCHEMA
 
-RENDER_DPI = 140          # enough for handwriting; 3-5x cheaper than 300
+# Vision cost scales with image AREA, so resolution is the dominant lever:
+# halving the long edge quarters the token bill. Rendering every page at a fixed
+# high dpi pays for detail most pages do not contain. These bounds were set by
+# rendering dense datasheet pages at each size and checking legibility, then
+# validated against olmOCR-bench ground truth (see eval/resolution.md).
+MAX_EDGE_PX = 1568        # above this the model downsamples anyway - never exceed
+MIN_EDGE_PX = 800         # below this small print starts to go
+TARGET_EM_PX = 8.0        # pixels of em-height needed to read a glyph reliably
+NO_TEXT_EDGE_PX = 1100    # scans carry no font info; handwriting needs more
 
 
-def _write_image(doc, item, images_dir, dpi):
+def _render_edge(page):
+    """Long edge in pixels for this page, from the size of its smallest text.
+
+    A page whose smallest meaningful glyph is 12pt needs far fewer pixels than
+    one set in 5pt. Pages with no text layer at all (scans) get a fixed budget
+    because there is no font size to measure.
+    """
+    sizes = []
+    try:
+        for b in page.get_text("dict")["blocks"]:
+            for ln in b.get("lines", []):
+                for sp in ln.get("spans", []):
+                    if sp.get("text", "").strip() and sp["size"] >= 3.0:
+                        sizes.append(sp["size"])
+    except Exception:
+        pass
+    if not sizes:
+        return NO_TEXT_EDGE_PX
+    sizes.sort()
+    small = sizes[max(0, len(sizes) // 20)]        # 5th percentile, not the min:
+    # the absolute smallest glyph on a datasheet is usually legal boilerplate.
+    long_pt = max(page.rect.width, page.rect.height)
+    edge = long_pt * (TARGET_EM_PX / small)
+    return int(max(MIN_EDGE_PX, min(MAX_EDGE_PX, edge)))
+
+
+def _write_image(doc, item, images_dir, edge_override=None):
     """Materialise one manifest item to a PNG. Returns the filename."""
     name = f"{item['id']}.png"
     dest = images_dir / name
     if item["kind"] == "raster":
         try:
-            blob = doc.extract_image(item["xref"])
-            # Re-encode through Pixmap so the file is always a readable PNG,
-            # whatever the stored codec was (JPX/CCITT/JBIG2 are common).
             pix = fitz.Pixmap(doc, item["xref"])
             if pix.n - pix.alpha >= 4:
                 pix = fitz.Pixmap(fitz.csRGB, pix)
+            # Downscale oversized rasters: a 3000px screenshot costs 4x a
+            # 1500px one and carries no more readable detail. shrink(n) halves
+            # each dimension n times, which is all the precision needed here.
+            while max(pix.width, pix.height) > MAX_EDGE_PX * 2:
+                pix.shrink(1)
             pix.save(dest)
             return name
         except Exception:
             pass                       # fall through to a page render
     page = doc[item["page"] - 1]
-    page.get_pixmap(dpi=dpi).save(dest)
+    edge = edge_override or _render_edge(page)
+    scale = edge / max(page.rect.width, page.rect.height)
+    page.get_pixmap(matrix=fitz.Matrix(scale, scale)).save(dest)
     return name
 
 
-def convert(path, out=None, dpi=RENDER_DPI, force=False, root=None):
+def convert(path, out=None, edge=None, force=False, root=None):
     src = Path(path)
     dest = cache_dir(src, root=root)
 
@@ -72,7 +110,7 @@ def convert(path, out=None, dpi=RENDER_DPI, force=False, root=None):
         doc = fitz.open(str(src))
         try:
             for item in h["items"]:
-                item["path"] = f"images/{_write_image(doc, item, staging / 'images', dpi)}"
+                item["path"] = f"images/{_write_image(doc, item, staging / 'images', edge)}"
         finally:
             doc.close()
 
@@ -116,7 +154,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="Convert PDFs to a citable artifact")
     ap.add_argument("pdfs", nargs="+")
     ap.add_argument("--out", help="also copy doc.md and images here")
-    ap.add_argument("--dpi", type=int, default=RENDER_DPI)
+    ap.add_argument("--edge", type=int, default=None,
+                    help="force a long-edge pixel budget instead of the adaptive one")
     ap.add_argument("--force", action="store_true", help="ignore any cached artifact")
     ap.add_argument("--cache-root", default=None)
     a = ap.parse_args(argv)
@@ -124,7 +163,7 @@ def main(argv=None):
     bad = 0
     for p in a.pdfs:
         try:
-            r = convert(p, out=a.out, dpi=a.dpi, force=a.force, root=a.cache_root)
+            r = convert(p, out=a.out, edge=a.edge, force=a.force, root=a.cache_root)
         except Exception as e:
             r = {"status": "error", "error": "convert_failed",
                  "detail": f"{type(e).__name__}: {e}", "path": p}
