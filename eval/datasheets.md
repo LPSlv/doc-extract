@@ -59,6 +59,33 @@ The underlying reason is per-page: the median datasheet page is **478 tokens**
 of extracted text but about **2,400 tokens** to look at as an image. If you only
 need the text and not the figures, the whole corpus is 81% cheaper.
 
+## Wall time, per stage
+
+Median of 3 runs, 14 datasheets, 668 pages. `uv run eval/datasheet-time.py`.
+
+| stage | total | per page |
+|---|---|---|
+| classify (`detect_pdf`) | 0.36 s | 0.5 ms |
+| extract text (`process_pdf`) | 4.66 s | 7 ms |
+| route (`harvest`, incl. page sizing) | **18.22 s** | 27 ms |
+| render the selected images | 3.11 s | 4.7 ms |
+| **pdf-extract total** | **26.4 s** | **39 ms** |
+| naive: render every page | 6.74 s | 10 ms |
+
+**Routing is the expensive stage**, not rendering — `get_drawings()` on every
+page dominates. And the honest comparison: the skill spends about **20 s more
+local CPU** across 668 pages than simply rasterising everything.
+
+That 20 s of CPU removes 958,098 tokens of model input (1,626,152 → 668,054) and
+292 round trips (668 page reads → 376 image reads, then zero on follow-ups). At
+any plausible prefill rate that is a large net time win, but the local pipeline
+itself is slower and it would be dishonest to imply otherwise.
+
+Moving the page-sizing computation into `harvest` — where the page is already
+parsed — was worth doing: computing it separately in `convert` made rendering
+54% slower. Rendering is now 3.11 s against 3.74 s for the old fixed-dpi path,
+17% faster *and* producing images that cost 54% fewer tokens.
+
 ## What this does not measure
 
 Whether the figure descriptions are *correct*. This is a cost measurement, not

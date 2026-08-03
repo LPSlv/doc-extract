@@ -107,8 +107,13 @@ controlled ground-truth test ([`eval/resolution.md`](eval/resolution.md)). And
 the artifact is **cached**, so follow-up questions read text instead of pixels:
 a median datasheet page is 478 tokens as text and ~2,400 as an image.
 
-First-pass wall time is still higher (19.0 s vs 6.7 s) because extraction runs.
-Full per-document table: [`eval/datasheets.md`](eval/datasheets.md).
+**Time, measured per stage** (median of 3, 668 pages): classify 0.36 s, extract
+4.66 s, route 18.22 s, render 3.11 s — **26.4 s total, 39 ms/page**. Rasterising
+every page instead takes 6.7 s, so the skill spends ~20 s *more* local CPU. It
+buys back 958,098 tokens of model input and 292 round trips. Routing is the
+expensive stage, not rendering.
+
+Full per-document tables: [`eval/datasheets.md`](eval/datasheets.md).
 
 ## Where it does not
 

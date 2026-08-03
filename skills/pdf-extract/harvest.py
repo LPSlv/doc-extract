@@ -136,6 +136,35 @@ def render_reason(g):
     return None
 
 
+MAX_EDGE_PX = 1568       # above this the model downsamples anyway
+MIN_EDGE_PX = 800        # below this small print starts to go
+TARGET_EM_PX = 8.0       # px of em-height needed to read a glyph reliably
+NO_TEXT_EDGE_PX = 1100   # scans carry no font info; handwriting needs more
+
+
+def render_edge(pg):
+    """Long edge in px this page needs, from the size of its smallest text.
+
+    Computed here rather than in convert.py because this function already has
+    the page open and parsed; doing it separately doubled render wall-time.
+    """
+    sizes = []
+    try:
+        for b in pg.get_text("dict")["blocks"]:
+            for ln in b.get("lines", []):
+                for sp in ln.get("spans", []):
+                    if sp.get("text", "").strip() and sp["size"] >= 3.0:
+                        sizes.append(sp["size"])
+    except Exception:
+        pass
+    if not sizes:
+        return NO_TEXT_EDGE_PX
+    sizes.sort()
+    small = sizes[max(0, len(sizes) // 20)]   # 5th pct: the true min is usually
+    long_pt = max(pg.rect.width, pg.rect.height)   # legal boilerplate, not content
+    return int(max(MIN_EDGE_PX, min(MAX_EDGE_PX, long_pt * (TARGET_EM_PX / small))))
+
+
 def _is_blank(pg, thresh=0.999):
     """Near-uniform white page: a scanned separator sheet, not content."""
     try:
@@ -231,13 +260,14 @@ def harvest(path):
             by_hash[h] = xref; uniq[xref] = e
 
     # -- filters 3 + 4: which pages need eyes --------------------------------
-    renders = {}
+    renders, edges = {}, {}
     for i, pg in enumerate(doc):
         if (i + 1) in ocr_pages:
             if _is_blank(pg):
                 dropped.append({"page": i + 1, "why": "blank_page"})
             else:
                 renders[i] = "no_text_layer"      # unambiguous: nothing to lose
+                edges[i] = render_edge(pg)
             continue
         pm = page_mds[i] if i < len(page_mds) else ""
         if pm.count("\n|") >= 3:
@@ -245,6 +275,7 @@ def harvest(path):
         why = render_reason(page_geometry(pg))
         if why:
             renders[i] = why
+            edges[i] = render_edge(pg)
 
     # -- subsumption: a rendered page covers the rasters it contains ---------
     standalone = []
@@ -260,7 +291,7 @@ def harvest(path):
               "px": [e["w"], e["h"]], "description": None}
              for xref, e in standalone]
     items += [{"id": f"p{i+1:03d}-render", "page": i + 1, "kind": "page_render",
-               "reason": why, "description": None}
+               "reason": why, "edge": edges.get(i), "description": None}
               for i, why in sorted(renders.items())]
     doc.close()
 

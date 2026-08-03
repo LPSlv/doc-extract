@@ -85,7 +85,7 @@ def _write_image(doc, item, images_dir, edge_override=None):
         except Exception:
             pass                       # fall through to a page render
     page = doc[item["page"] - 1]
-    edge = edge_override or _render_edge(page)
+    edge = edge_override or item.get("edge") or _render_edge(page)
     scale = edge / max(page.rect.width, page.rect.height)
     page.get_pixmap(matrix=fitz.Matrix(scale, scale)).save(dest)
     return name
