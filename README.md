@@ -11,20 +11,21 @@
 </div>
 
 Text extraction handles most PDFs on its own — and silently drops every chart,
-pinout diagram, scanned page and merged-header table. Reading every page as an
-image catches all of it and costs 20× more.
+pinout diagram, scanned page and merged-header table. Looking at every page
+instead catches all of it, and costs 2.4× more.
 
 `pdf-extract` does neither. It extracts text with [pdf-inspector](https://github.com/firecrawl/pdf-inspector),
 works out which pages the extractor actually failed on, and sends only those to
 your agent's eyes.
 
-| | read every page | pdf-inspector only | **pdf-extract** |
-|---|---|---|---|
-| cost | 1.0× | 0.28× | **0.41× — 2.4× cheaper** |
-| vision calls | 1 per page | none | **1 per 3 pages** |
-| sees figures | everything | **nothing** | what the extractor missed |
+| across 2,342 PDFs, 20,375 pages | read every page | text only | **pdf-extract** |
+|---|--:|--:|--:|
+| input tokens | 48.9M | 13.6M | **20.1M** |
+| vision calls per page | 1.00 | 0 | **0.34** |
+| figures it can see | all | **none** | the ones text missed |
 
-<sub>2,342 PDFs · 20,375 pages · 12 corpora. <code>pdf-inspector only</code> is cheapest because it captures no figure, scan or unparsed table at all — a floor, not an option.</sub>
+<sub>Text alone is cheapest because it is blind — a floor, not an option. Once
+converted, follow-up questions read the cached text and cost 99% less again.</sub>
 
 ## Quick start
 
@@ -115,7 +116,7 @@ pages a question touches. Cite as `[p12]`, or `[report.pdf:p12]` across document
 > which wraps it in strippable delimiters. That is what lets the benchmark strip
 > the additions and prove the skill does not degrade text extraction.
 
-## Why it only looks at some pages
+## Extracting the images does not give you the figures
 
 "Extract the images from a PDF" is a well-defined operation that every tool
 performs correctly, and it does not do what people expect.
@@ -141,47 +142,46 @@ because the obvious alternative was tested and failed on a real document:
 | Drop emblems repeated across *documents* | The GPO seal fired on 227 of 230 US bills — documents with no figures at all |
 | Collapse pages with >6 rasters | A 48-tile inpainting figure is one figure; one TI package photo arrives as 12 strips |
 | Never cost more than reading everything | On single-page documents the routed set can lose; the guard caps it |
+| Twelve signals tried for branding, one kept | Mastheads and logos are separable from charts only by reading them ([`eval/tds-corpus.md`](eval/tds-corpus.md)) |
 | Ink threshold on the dense-grid branch | Separates a shaded table the extractor missed from decorative banners |
 
 Pages render at the resolution their *own smallest text* needs rather than a
 flat dpi, measured from the 5th-percentile font on each page. That alone cut
 image tokens 54% with identical content capture.
 
-## Measured on 2,342 PDFs
+## Reading 20,375 pages costs 2.4× less than looking at them
 
-Twelve corpora, 20,375 pages, chosen to be genuinely different from each other —
-electronics datasheets, arXiv and PMC papers, US legislation, and six olmOCR-bench
-page classes. Every corpus has a fetch script and a sha256 manifest, so results
-pin to exact inputs. Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
+Twelve corpora, chosen to be unlike each other: electronics datasheets, arXiv and
+PMC papers, US legislation, and six olmOCR-bench page classes. Each has a fetch
+script and a sha256 manifest, so a result pins to exact inputs.
+Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
 
-| corpus | files | pages | cheaper than reading every page | calls/page |
-|---|---|---|---|---|
+<!-- benchmarks:begin -->
+Reading every page of these 2,342 PDFs costs 48.9M input tokens. pdf-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,834 vision calls over 20,375 pages) instead of all of them.
+
+Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan or unparsed table whatsoever. It is the floor, not an option.
+
+| corpus | files | pages | cheaper by | vision calls per page |
+|---|--:|--:|--:|--:|
 | `bills` | 230 | 2,736 | **7.0×** | 0.00 |
-| `datasheets` | 204 | 7,641 | **2.9×** | 0.42 |
-| `olmocr_arxiv_math` | 522 | 522 | **2.5×** | 0.12 |
-| `tds` | 23 | 632 | **2.8×** | 0.40 |
-| `olmocr_tables` | 188 | 188 | **2.4×** | 0.45 |
-| `olmocr_headers_footers` | 266 | 266 | **2.1×** | 0.50 |
-| `arxiv` | 238 | 5,336 | **2.0×** | 0.27 |
-| `papers` | 24 | 704 | **1.9×** | 0.39 |
-| `olmocr_scans` | 134 | 134 | **1.8×** | 1.00 |
-| `olmocr_multi_column` | 231 | 231 | **1.5×** | 0.58 |
-| `pmc` | 220 | 1,923 | **1.3×** | 0.56 |
-| `olmocr_long_tiny_text` | 62 | 62 | **0.9×** | 1.05 |
+| `datasheets` | 204 | 7,641 | 2.9× | 0.42 |
+| `tds` | 23 | 632 | 2.8× | 0.40 |
+| `olmocr_arxiv_math` | 522 | 522 | 2.5× | 0.12 |
+| `olmocr_tables` | 188 | 188 | 2.4× | 0.45 |
+| `olmocr_headers_footers` | 266 | 266 | 2.1× | 0.50 |
+| `arxiv` | 238 | 5,336 | 2.0× | 0.27 |
+| `papers` | 24 | 704 | 1.9× | 0.39 |
+| `olmocr_scans` | 134 | 134 | 1.8× | 1.00 |
+| `olmocr_multi_column` | 231 | 231 | 1.5× | 0.58 |
+| `pmc` | 220 | 1,923 | 1.3× | 0.56 |
+| `olmocr_long_tiny_text` | 62 | 62 | 0.9× | 1.05 |
 
-**Overall: 2.4× cheaper than reading every page** (48.9M → 20.1M tokens), at one
-vision call per three pages instead of one per page.
+`olmocr_long_tiny_text` sits last because it **loses**: 62 single-page documents where text plus one figure render costs more than the page itself. Single pages have nothing to amortise. It stays in the table.
+<!-- benchmarks:end -->
 
-> [!NOTE]
-> `olmocr_long_tiny_text` is the one class where this **loses** — 62 single-page
-> documents of very small print, where text plus a figure render costs 7% more
-> than simply rendering the page. Single-page documents have nothing to amortise.
-> A cost guard caps the damage (it was +61% before), but it does not turn the
-> case into a win, and the table says so.
+## On scans it recovers what text extraction cannot reach
 
-## Where it wins, and where it does not
-
-**Scanned documents.** pdf-inspector extracts zero characters; this recovers most of it.
+pdf-inspector extracts **zero characters** from these pages. The vision pass recovers most of the content:
 
 | olmOCR-bench `old_scans` | pdf-inspector | pdf-extract |
 |---|---|---|
@@ -191,9 +191,11 @@ vision call per three pages instead of one per page.
 
 <sub>n=11 documents, 87 tests. The baseline's 18.4% is hollow — it passes <code>absent</code> tests by producing nothing at all.</sub>
 
-**Native-text PDFs.** It scores exactly what pdf-inspector scores, by design.
-Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
-0.814 TEDS**, identical to the engine it delegates to.
+### On native-text PDFs it changes nothing, deliberately
+
+Through opendataloader-bench's official evaluator it scores **0.875 overall /
+0.915 NID / 0.814 TEDS** — identical to the engine it delegates to, because the
+text path is byte-identical and every addition is strippable.
 
 > [!NOTE]
 > That 0.875 is pdf-inspector's number, not an improvement. Against the
@@ -202,7 +204,9 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 > enforced, not asserted: `eval/gate.py` runs the real pipeline and requires the
 > stripped output to equal raw engine output byte for byte.
 
-**Repeated questions.** The artifact is cached, so only the first one pays.
+### Only the first question pays
+
+The artifact is cached, so follow-ups read text instead of pixels.
 
 ![Cumulative tokens across repeated questions](docs/img/datasheet-cost.svg)
 
@@ -215,14 +219,22 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 >   constants as calibrated to the corpora here, not as universal.
 > - **Single-page documents can lose.** Nothing amortises; see `olmocr_long_tiny_text`.
 > - **Emblems need a batch.** A publisher mark is only distinguishable from a
->   small chart by recurring across documents — six signals were measured and
->   five rejected ([`eval/tds-corpus.md`](eval/tds-corpus.md)). Convert one
+>   small chart by recurring across documents — twelve signals were measured and
+>   eleven rejected ([`eval/tds-corpus.md`](eval/tds-corpus.md)). Convert one
 >   government PDF alone and its seal still costs one call.
-> - **Branding still costs calls.** Journal mastheads, conference banners, QR
->   codes and cover art fire as figures; in a sampled audit that was 7 of 18
->   raster firings on journal-page corpora. Extending the recurrence rule to
->   individual images was implemented, then reverted — it discarded a reused TI
->   application schematic, so it trades content for cost.
+> - **Branding still costs calls, and zero false positives is not reachable.**
+>   Journal mastheads, society logos, conference banners and cover art fire as
+>   figures. On a 382-item labelled set ([`tests/raster-labels.tsv`](tests/raster-labels.tsv),
+>   every raster firing across four journal corpora, classified by eye) that is
+>   **49 cases — 12.8% of raster firings, 3.4% of vision calls, 2.8% of raster
+>   tokens**. Twelve signals have been measured and none removes them safely:
+>   branding is separable from a figure only by reading what it says, which is
+>   the call being avoided. The two best candidates were flawless on the set they
+>   were fitted to and then lost real content on the corpora they had not seen —
+>   a top-of-page rule dropped a tile of arXiv 2607.29107 Figure 1, and a QR
+>   detector dropped robot-manipulation photographs. Cheap handling, not
+>   detection, is the mitigation: a branding image costs a median 140 tokens
+>   against 878 for a figure, and the describe rubric dismisses one in a line.
 > - A table with **no rules and no shading** is invisible to every branch. If the
 >   extractor also drops it, the content is lost silently.
 > - `stroke_grid` conflates marker-based plots with ruled tables — one label, two causes.
@@ -241,6 +253,7 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 | [`eval/resolution.md`](eval/resolution.md) | Adaptive resolution and the controlled capture test |
 | [`eval/oldscans.md`](eval/oldscans.md) | olmOCR-bench scanned-document accuracy |
 | [`eval/opendataloader.md`](eval/opendataloader.md) | Regression gate procedure |
+| [`tests/raster-labels.tsv`](tests/raster-labels.tsv) | 382 raster firings labelled by eye — content, branding or portrait |
 
 ```bash
 uv run --with pytest python -m pytest tests/ -q   # splice/strip + cache contracts
@@ -248,6 +261,7 @@ python3 tests/check_sync.py                       # verbatim block matches harve
 uv run eval/gate.py example/                      # byte-identity, real pipeline
 uv run eval/fetch.py bills && uv run eval/bench.py corpus/bills   # any corpus
 uv run eval/report.py                             # regenerate RESULTS.md
+python3 eval/readme_tables.py --write             # regenerate this README's tables
 ```
 
 > [!TIP]

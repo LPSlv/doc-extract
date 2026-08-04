@@ -30,6 +30,27 @@ Do not:
 - Summarise a table as prose. Reproduce it (below).
 - Describe styling — colours matter only when they encode a variable.
 
+### Publisher branding: one line, then move on
+
+Some routed rasters are not figures. Journal mastheads, society and university
+logos, conference banners, book covers and decorative section icons fire as
+figures because nothing short of reading them can tell them apart from a small
+chart — six geometric signals were measured against that and five failed
+(`eval/tds-corpus.md`). They are 3.4% of vision calls, and the cheap handling
+below is the fix, because the detection is not available.
+
+When the image turns out to be branding, name it and stop:
+
+```
+**Masthead (p1).** *Circulation: Cardiovascular Interventions*, Journal of the
+American Heart Association.
+```
+
+Do not describe the typography, the crest, the colour of the rule beneath it, or
+the ribbon the emblem sits on. One line. The exception is a mark that carries a
+fact the text does not state — an ISSN, a version number, a date stamp, a
+certification number inside the logo — which goes in the line.
+
 ## Page transcriptions (`reason: "no_text_layer"`)
 
 The page has no text layer at all. You are the OCR.

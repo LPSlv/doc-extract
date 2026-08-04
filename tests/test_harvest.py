@@ -308,3 +308,50 @@ def test_cost_guard_is_a_no_op_when_nothing_was_routed():
     from harvest import cost_guard
     out, guard = cost_guard([], [], {})
     assert out == [] and guard is None
+
+
+# --- the labelled set -------------------------------------------------------
+# tests/raster-labels.tsv is the evidence base every false-positive proposal is
+# scored against: 382 raster firings across four journal corpora, each rendered
+# and classified by eye. Its counts are quoted in README.md and
+# eval/tds-corpus.md, so they must not drift silently -- the numbers are the
+# argument for why zero false positives is unreachable.
+
+def _labels():
+    p = pathlib.Path(__file__).resolve().parent / "raster-labels.tsv"
+    rows = []
+    for line in p.read_text(encoding="utf-8").splitlines():
+        if line.startswith("#") or not line.strip():
+            continue
+        parts = line.split("\t")
+        if parts[0] == "corpus":
+            continue
+        rows.append(parts)
+    return rows
+
+
+def test_labelled_set_has_the_size_the_docs_claim():
+    """382 firings: 49 branding, 5 portrait, 328 content."""
+    import collections as _c
+    rows = _labels()
+    assert len(rows) == 382, len(rows)
+    counts = _c.Counter(r[4] for r in rows)
+    assert counts == {"content": 328, "branding": 49, "portrait": 5}, counts
+
+
+def test_every_branding_row_says_which_case_it_is():
+    """A bare 'branding' verdict is unreviewable; each names the mark seen."""
+    for r in _labels():
+        if r[4] == "branding":
+            assert r[5].strip(), r
+
+
+def test_labelled_rows_are_well_formed():
+    """corpus, pdf, page, xref, label, note -- page and xref must be integers
+    so a proposal can be scored against the set programmatically."""
+    for r in _labels():
+        assert len(r) == 6, r
+        assert r[1].endswith(".pdf"), r
+        assert r[2].isdigit() and int(r[2]) >= 1, r
+        assert r[3].isdigit(), r
+        assert r[4] in ("branding", "portrait", "content"), r

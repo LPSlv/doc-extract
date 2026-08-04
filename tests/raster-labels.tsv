@@ -1,0 +1,397 @@
+# Labelled raster firings — is this call worth making?
+#
+# Every standalone_raster the router fired on across four journal/paper
+# corpora, classified by rendering the image and looking at it.
+#   branding = publisher furniture: masthead, society logo, conference
+#              banner, QR code, cover art, decorative icon. A false positive:
+#              carries nothing the extracted text lacks.
+#   portrait = author/staff headshot. Debatable, scored separately, never
+#              counted as branding in headline numbers.
+#   content  = a figure, chart, photo, scan, diagram or table image.
+#
+# 382 firings: 49 branding, 5 portrait, 328 content.
+# Built by eval/../scratch tooling; the verdict column is human, by eye.
+#
+corpus	pdf	page	xref	label	note
+olmocr_headers_footers	headers_footers__0678963a20825044fed5401fedb69bc7a3e54de6_page_2_processed.pdf	1	36	branding	Midwifery journal cover
+olmocr_headers_footers	headers_footers__0678963a20825044fed5401fedb69bc7a3e54de6_page_2_processed.pdf	1	38	branding	Elsevier tree logo
+olmocr_headers_footers	headers_footers__06a6973243b924972db1acee857c1ce6a19c7844_page_6_processed.pdf	1	15	branding	JET-LUBE vendor logo
+olmocr_headers_footers	headers_footers__06c19ee3727ac306cd018bb1c43f71b551673420_page_1_processed.pdf	1	7	content	
+olmocr_headers_footers	headers_footers__08f3aeec1eda1a569d0c9ef7bb892b5cb6a81b5b_page_1.pdf	1	20	branding	Medix Biochemica / MedixMAB logos
+olmocr_headers_footers	headers_footers__0b09e4c7b49b3b4a4451ac9de5609db2d53feb8e_page_4_processed.pdf	1	91	content	
+olmocr_headers_footers	headers_footers__0b09e4c7b49b3b4a4451ac9de5609db2d53feb8e_page_4_processed.pdf	1	93	content	
+olmocr_headers_footers	headers_footers__0b09e4c7b49b3b4a4451ac9de5609db2d53feb8e_page_4_processed.pdf	1	95	content	
+olmocr_headers_footers	headers_footers__0c2450d33684a6c2f9beed7160a1b56372eff6ef_page_1.pdf	1	9	content	
+olmocr_headers_footers	headers_footers__0f692b1bde8c3e04d1ec47ae43d616fc5c2ff2a9_page_23_processed.pdf	1	130	portrait	author bio headshot
+olmocr_headers_footers	headers_footers__0f802dfe01644934363d1db3cf8bc60e45e506da_page_13_processed.pdf	1	9	branding	Financial Stability Board logo
+olmocr_headers_footers	headers_footers__138610e542a26fff250aae7fb5ebdbd2d2da17c2_page_2.pdf	1	21	content	
+olmocr_headers_footers	headers_footers__14cd43ae9b6ad4d5a839bf1c7c1a7cf84046657b_page_7.pdf	1	22	content	
+olmocr_headers_footers	headers_footers__2cb8b9fbe5aaac3d7f95d110a3b08132ee09d103_page_2.pdf	1	48	content	
+olmocr_headers_footers	headers_footers__3084ea7341eaa1765f6676cd8da5e322851bb1d1_page_4.pdf	1	11	portrait	Stanford profile headshot
+olmocr_headers_footers	headers_footers__3754542bf828b42b268defe21db8526945928834_page_4.pdf	1	47	branding	Alcoholics Anonymous letterhead footer
+olmocr_headers_footers	headers_footers__38981f2077cc53dbc70b3942cde9eddc58836e03_page_11.pdf	1	42	branding	APC Ecology decorative banner
+olmocr_headers_footers	headers_footers__4e4acb6f199c0dd76e128ced73fcfebe9b7e1102_page_1.pdf	1	10	portrait	Stanford profile headshot
+olmocr_headers_footers	headers_footers__4f4c20ab94dda3045bedc9bbcd3f4f41d3ff237a_page_1.pdf	1	15	branding	heraldic crown emblem
+olmocr_headers_footers	headers_footers__62989d7ee556e5ef4919dd5b3f925535c5f9f108_page_12.pdf	1	14	content	
+olmocr_headers_footers	headers_footers__68adea4d76e152a7abebfb39dc0d851fe5695a84_page_4.pdf	1	53	content	
+olmocr_headers_footers	headers_footers__70f622a0028d161fa39aa351f0e67b70b655db75_page_1.pdf	1	21	content	
+olmocr_headers_footers	headers_footers__74094decfc2f4504fb7e14a3969e2abe71d5eaf9_page_3.pdf	1	68	content	
+olmocr_headers_footers	headers_footers__74094decfc2f4504fb7e14a3969e2abe71d5eaf9_page_3.pdf	1	69	content	
+olmocr_headers_footers	headers_footers__7901d119ed91a89f8fbabf0eef7174d75a7656e3_page_1.pdf	1	47	content	
+olmocr_headers_footers	headers_footers__7901d119ed91a89f8fbabf0eef7174d75a7656e3_page_1.pdf	1	48	content	
+olmocr_headers_footers	headers_footers__7901d119ed91a89f8fbabf0eef7174d75a7656e3_page_1.pdf	1	49	content	
+olmocr_headers_footers	headers_footers__7f1e2bb730f139f2f56c09f6e2fbdbafba2ac454_page_1.pdf	1	19	content	
+olmocr_headers_footers	headers_footers__8dd368bdc21fd4e5a9839303508aa451f18a0c06_page_1.pdf	1	40	branding	BASF logo
+olmocr_headers_footers	headers_footers__9530001da9e19b67bb7cb784a1ab109c233685cc_page_1.pdf	1	33	content	
+olmocr_headers_footers	headers_footers__9530001da9e19b67bb7cb784a1ab109c233685cc_page_1.pdf	1	37	content	
+olmocr_headers_footers	headers_footers__af288944a7ad0244ca6055e3786cc15e71c3f968_page_4.pdf	1	23	content	
+olmocr_headers_footers	headers_footers__b79ccdcb9871dce02d3873bdf9690d9f6dd58cb4_page_19.pdf	1	50	content	
+olmocr_headers_footers	headers_footers__b79ccdcb9871dce02d3873bdf9690d9f6dd58cb4_page_19.pdf	1	51	content	
+olmocr_headers_footers	headers_footers__ba6aebad479086f039aa97daa8208472439af6ec_page_1.pdf	1	32	content	
+olmocr_headers_footers	headers_footers__c0d59815ea7ffafa34fb1ba2bc0d2ec6a976f6dd_page_1.pdf	1	14	branding	Agenda for Humanity icon strip
+olmocr_headers_footers	headers_footers__c637044e100f992dca35ef32f58bdc3ee726b0f5_page_8.pdf	1	10	portrait	Stanford profile headshot
+olmocr_headers_footers	headers_footers__d93aa3ed6cf33401e7427cff9f1feada5bae46e7_page_4.pdf	1	66	content	
+olmocr_headers_footers	headers_footers__d93aa3ed6cf33401e7427cff9f1feada5bae46e7_page_4.pdf	1	67	content	
+olmocr_headers_footers	headers_footers__e99fc5946d09541cc7d1b887c328cfe15740cdb9_page_1.pdf	1	23	branding	Univerzita Tomase Bati logo
+olmocr_headers_footers	headers_footers__ed107236f9863d65c41f29cd8e8091ba76cc61d8_page_2.pdf	1	11	branding	Sino Biological logo
+olmocr_headers_footers	headers_footers__ed107236f9863d65c41f29cd8e8091ba76cc61d8_page_2.pdf	1	13	content	
+olmocr_headers_footers	headers_footers__ee9d425ceb208aed7d1e2220145e315487706d09_page_1.pdf	1	23	branding	University of Amsterdam logo
+olmocr_headers_footers	headers_footers__f3dc69b44af3519770366dc8e0be86ab6f0bd30f_page_4.pdf	1	11	portrait	Stanford profile headshot
+olmocr_multi_column	multi_column__0083fb2109e58be50aec2eca07fcbfe1230b_page_1_pg1.pdf	1	12	branding	IRS masthead year graphic '1995'
+olmocr_multi_column	multi_column__00945e98ea0970dcffb8f548336df3a0137f_page_3_pg1.pdf	1	76	content	
+olmocr_multi_column	multi_column__00945e98ea0970dcffb8f548336df3a0137f_page_3_pg1.pdf	1	77	content	
+olmocr_multi_column	multi_column__00945e98ea0970dcffb8f548336df3a0137f_page_5_pg1.pdf	1	60	content	
+olmocr_multi_column	multi_column__027880a87e3c2ad4cf8c05f477597c0c6da7_page_6_pg1.pdf	1	8	content	
+olmocr_multi_column	multi_column__027880a87e3c2ad4cf8c05f477597c0c6da7_page_7_pg1.pdf	1	8	content	
+olmocr_multi_column	multi_column__029803ab2f7f83ba727beb70e137fbaad682_page_2_pg1.pdf	1	34	content	
+olmocr_multi_column	multi_column__02ef468d6658a2cc7878397e68640fe0357f_page_5_pg1.pdf	1	7	content	
+olmocr_multi_column	multi_column__02ef468d6658a2cc7878397e68640fe0357f_page_5_pg1.pdf	1	9	content	
+olmocr_multi_column	multi_column__03b953c18a4f7d2bbe390940dec839395cdd_page_18_pg1.pdf	1	7	content	
+olmocr_multi_column	multi_column__03ccfe8bb1096e76dd5c186c3ae24d5fe8ec_pg1.pdf	1	78	branding	Symposia Medicus logo
+olmocr_multi_column	multi_column__055c2edec4677b71f7bb6a759ebacc701bb1_page_4_pg1.pdf	1	28	content	
+olmocr_multi_column	multi_column__05aa71fa77e07bccb443ef4fd28dde3ecfd6_page_7_pg1.pdf	1	29	content	
+olmocr_multi_column	multi_column__0621a0090414e4681e90a4e1ea543acca910_page_4_pg1.pdf	1	50	content	
+olmocr_multi_column	multi_column__06dda119744c1212fbb39a789dc34f023f6c_page_4_pg1.pdf	1	34	branding	SCITEPRESS banner
+olmocr_multi_column	multi_column__07619750fcfe3caff8ec82642ac2449b490a_page_1_pg1.pdf	1	13	content	
+olmocr_multi_column	multi_column__07f4d706dd1736e247163f0128702c65bdd8_page_1_pg1.pdf	1	49	branding	Circulation/AHA masthead
+olmocr_multi_column	multi_column__07f4d706dd1736e247163f0128702c65bdd8_page_2_pg1.pdf	1	45	branding	Circulation/AHA masthead
+olmocr_multi_column	multi_column__07f4d706dd1736e247163f0128702c65bdd8_page_7_pg1.pdf	1	46	branding	Circulation/AHA masthead
+olmocr_multi_column	multi_column__081875a1035e34dee439b9a2a3a55e319405_page_16_pg1.pdf	1	6	content	
+olmocr_multi_column	multi_column__081875a1035e34dee439b9a2a3a55e319405_page_22_pg1.pdf	1	6	content	
+olmocr_multi_column	multi_column__081875a1035e34dee439b9a2a3a55e319405_page_4_pg1.pdf	1	6	content	
+olmocr_multi_column	multi_column__081875a1035e34dee439b9a2a3a55e319405_page_4_pg1.pdf	1	7	content	
+olmocr_multi_column	multi_column__0845863d27c84b14011e17a388821525e783_page_12_pg1.pdf	1	402	content	
+olmocr_multi_column	multi_column__08c9eac4149a44cf8eed7cf1466ce8afa6b7_page_1_pg1.pdf	1	28	content	
+olmocr_multi_column	multi_column__08c9eac4149a44cf8eed7cf1466ce8afa6b7_page_1_pg1.pdf	1	26	branding	Olympic Peaks Photo News masthead
+olmocr_multi_column	multi_column__0a7e813e2010ecd8239725c32c859fe00c92_page_2_pg1.pdf	1	24	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_12_pg1.pdf	1	71	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_12_pg1.pdf	1	74	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_18_pg1.pdf	1	75	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_18_pg1.pdf	1	78	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_20_pg1.pdf	1	75	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_26_pg1.pdf	1	67	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_26_pg1.pdf	1	70	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_27_pg1.pdf	1	62	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_27_pg1.pdf	1	64	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_30_pg1.pdf	1	67	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_30_pg1.pdf	1	70	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_32_pg1.pdf	1	71	content	
+olmocr_multi_column	multi_column__0b045ab838c05c4ff1ac844caf826f8f368d_page_32_pg1.pdf	1	74	content	
+olmocr_multi_column	multi_column__0dd31f954c25db440baccc3245daf51b4b55_page_1_pg1.pdf	1	112	branding	ISARS society logo
+olmocr_multi_column	multi_column__0dd31f954c25db440baccc3245daf51b4b55_page_2_pg1.pdf	1	46	branding	ISARS society logo
+olmocr_tables	tables__11d982c1d2faa79c3ea4c05c707b84a72b8e_pg3_pg1.pdf	1	41	content	
+olmocr_tables	tables__11d982c1d2faa79c3ea4c05c707b84a72b8e_pg3_pg1.pdf	1	42	content	
+olmocr_tables	tables__1801ca1db8bc496d17aeb2ea9e21c685443c_pg5_pg1.pdf	1	45	content	
+olmocr_tables	tables__23dc9c0db39d1b6c519a8fa31c672ff41aac_pg3_pg1.pdf	1	23	content	
+olmocr_tables	tables__2ad3ead4f2ead0eabe58d10674f3c1bfef6b_pg27.pdf	1	8	branding	Behavioural Science Institute / Radboud banner
+olmocr_tables	tables__2d932ac96ad0d8ccf81a56bd105fa18fdcbb_pg7.pdf	1	81	branding	UPC Barcelona banner
+olmocr_tables	tables__46274c2c7e7e925edf6541914f1841fbb4f0_pg139.pdf	1	25	content	
+olmocr_tables	tables__4db371aebdbbfa28531a816f9bf26ed0a028_pg52_pg1.pdf	1	6	content	
+olmocr_tables	tables__587a1f5a89db9e04752baea0b4f94a364b7a_pg7_pg1.pdf	1	18	branding	VASSCAA-7 conference strip
+olmocr_tables	tables__587a1f5a89db9e04752baea0b4f94a364b7a_pg7_pg1.pdf	1	19	content	
+olmocr_tables	tables__5f20b8b654a2a30ed308fb87d69a636fec2a_pg4_pg1.pdf	1	31	content	
+olmocr_tables	tables__8160caa0f0e21fbd0ef674de8759df133ccf_pg12_pg1.pdf	1	19	branding	4MOST project logo art
+olmocr_tables	tables__92f758debb936f4c750694f03bc41db861ad_pg1_pg1.pdf	1	12	branding	book cover art (Wiley catalogue page)
+olmocr_tables	tables__92f758debb936f4c750694f03bc41db861ad_pg1_pg1.pdf	1	19	branding	decorative section icon
+olmocr_tables	tables__92f758debb936f4c750694f03bc41db861ad_pg1_pg1.pdf	1	20	branding	decorative section icon
+olmocr_tables	tables__937a90b27de5c5cf8b06cf47f139c9349e48_pg7.pdf	1	30	branding	University of Liverpool logo
+olmocr_tables	tables__a534e72afcecc225a6b2896ddf7290003c9c_pg6.pdf	1	5	content	
+olmocr_tables	tables__a534e72afcecc225a6b2896ddf7290003c9c_pg6.pdf	1	6	content	
+olmocr_tables	tables__b74ef859a1584b4900e3d9daca7f536100e9_pg4_pg1.pdf	1	28	content	
+olmocr_tables	tables__b74ef859a1584b4900e3d9daca7f536100e9_pg4_pg1.pdf	1	29	content	
+olmocr_tables	tables__b8d3ad0f337b930aee20025916106fc3ba10_pg4.pdf	1	36	content	
+olmocr_tables	tables__d22cfda9b7cf678a7996008fb8faa82209fe_pg10.pdf	1	54	branding	Advanced Materials masthead
+olmocr_tables	tables__db0e321589308f619361cd10ea9dbfbe2832_pg1.pdf	1	5	branding	Compassionate Mind Foundation logo
+olmocr_tables	tables__fa18a15c1dbbfcb71b1f1ea1b8f116e24b8a_pg2_pg1.pdf	1	6	content	
+olmocr_tables	tables__fd6cb6dfe3a918390855052669d9a194231a_pg3.pdf	1	27	content	
+pmc	04435117-60-Suppl2-S110.PMC10627501.pdf	4	7	content	
+pmc	04435117-60-Suppl2-S110.PMC10627501.pdf	5	12	content	
+pmc	04435117-60-Suppl2-S110.PMC10627501.pdf	6	15	content	
+pmc	04435117-60-Suppl2-S110.PMC10627501.pdf	7	18	content	
+pmc	04435117-60-Suppl2-S110.PMC10627501.pdf	8	30	content	
+pmc	10-1055-s-0042-1758149.PMC10480014.pdf	3	37	content	
+pmc	10.1177_1877718X241300295.PMC13347414.pdf	4	13	content	
+pmc	10.1177_1877718X241300295.PMC13347414.pdf	8	26	content	
+pmc	10.1177_1877718X241300295.PMC13347414.pdf	11	44	content	
+pmc	10.1177_2042018819825541.PMC6378481.pdf	3	11	content	
+pmc	10.1177_2042018819825541.PMC6378481.pdf	3	13	content	
+pmc	10.1177_2042018819825541.PMC6378481.pdf	4	20	content	
+pmc	10.1177_2042018819825541.PMC6378481.pdf	6	32	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	3	196	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	4	199	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	6	158	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	7	161	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	8	164	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	10	169	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	12	44	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	13	47	content	
+pmc	10.1177_26330040241292645.PMC11555743.pdf	16	55	content	
+pmc	1052071.PMC7395265.pdf	3	5	content	
+pmc	1052071.PMC7395265.pdf	4	8	content	
+pmc	1052071.PMC7395265.pdf	5	15	content	
+pmc	1052071.PMC7395265.pdf	6	18	content	
+pmc	1052071.PMC7395265.pdf	8	23	content	
+pmc	1052071.PMC7395265.pdf	9	26	content	
+pmc	1052071.PMC7395265.pdf	10	29	content	
+pmc	12325_2024_Article_2818.PMC11052875.pdf	10	273	content	
+pmc	12325_2024_Article_2818.PMC11052875.pdf	11	302	content	
+pmc	12325_2024_Article_2818.PMC11052875.pdf	12	308	content	
+pmc	12874_2026_Article_2817.PMC13093937.pdf	4	164	content	
+pmc	12874_2026_Article_2817.PMC13093937.pdf	6	228	content	
+pmc	12874_2026_Article_2817.PMC13093937.pdf	11	320	content	
+pmc	12886_2025_Article_4471.PMC12560472.pdf	5	97	content	
+pmc	12886_2025_Article_4471.PMC12560472.pdf	6	116	content	
+pmc	12886_2025_Article_4471.PMC12560472.pdf	7	138	content	
+pmc	12886_2025_Article_4471.PMC12560472.pdf	7	139	content	
+pmc	12886_2025_Article_4471.PMC12560472.pdf	8	163	content	
+pmc	12916_2025_Article_4515.PMC12729390.pdf	4	93	content	
+pmc	12916_2025_Article_4515.PMC12729390.pdf	6	130	content	
+pmc	12916_2025_Article_4515.PMC12729390.pdf	7	144	content	
+pmc	12916_2025_Article_4515.PMC12729390.pdf	7	145	content	
+pmc	13049_2025_Article_1479.PMC12495821.pdf	4	59	content	
+pmc	13049_2025_Article_1479.PMC12495821.pdf	10	148	content	
+pmc	13300_2023_Article_1514.PMC10951162.pdf	6	75	content	
+pmc	13300_2023_Article_1514.PMC10951162.pdf	8	89	content	
+pmc	13300_2023_Article_1514.PMC10951162.pdf	10	119	content	
+pmc	1589.PMC8594466.pdf	5	80	content	
+pmc	1589.PMC8594466.pdf	5	81	content	
+pmc	1589.PMC8594466.pdf	5	82	content	
+pmc	1589.PMC8594466.pdf	7	115	content	
+pmc	1589.PMC8594466.pdf	7	122	content	
+pmc	1809-4406-aob-30-spe1-e245692.PMC9270044.pdf	2	4	content	
+pmc	1809-4406-aob-30-spe1-e245692.PMC9270044.pdf	2	6	content	
+pmc	1809-4406-aob-30-spe1-e245692.PMC9270044.pdf	3	21	content	
+pmc	1809-4406-aob-30-spe1-e245692.PMC9270044.pdf	3	23	content	
+pmc	1853.PMC2518358.pdf	3	13	content	
+pmc	2188-4226-9-0083.PMC9119690.pdf	3	16	content	
+pmc	2188-4226-9-0083.PMC9119690.pdf	4	30	content	
+pmc	40268_2017_Article_213.PMC5694426.pdf	4	34	content	
+pmc	40268_2017_Article_213.PMC5694426.pdf	5	40	content	
+pmc	40900_2026_Article_913.PMC13202972.pdf	3	38	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	3	128	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	5	192	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	6	205	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	8	257	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	10	336	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	12	425	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	14	496	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	16	552	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	18	607	content	
+pmc	41467_2025_Article_65996.PMC12678810.pdf	20	708	content	
+pmc	41586_2025_Article_9767.PMC12657213.pdf	3	127	content	
+pmc	41586_2025_Article_9767.PMC12657213.pdf	3	134	content	
+pmc	41586_2025_Article_9767.PMC12657213.pdf	3	140	content	
+pmc	41586_2025_Article_9767.PMC12657213.pdf	3	146	content	
+pmc	41598_2024_Article_73788.PMC11466948.pdf	8	122	content	
+pmc	41598_2025_Article_25720.PMC12647569.pdf	3	69	content	
+pmc	41598_2025_Article_28505.PMC12756295.pdf	3	53	content	
+pmc	41598_2025_Article_28505.PMC12756295.pdf	4	77	content	
+pmc	41598_2025_Article_28505.PMC12756295.pdf	14	698	content	
+pmc	aair-5-113.PMC3579091.pdf	2	11	content	
+pmc	aair-5-113.PMC3579091.pdf	2	13	content	
+pmc	ACN3-13-1020.PMC13161867.pdf	3	30	content	
+pmc	ACN3-13-1020.PMC13161867.pdf	4	46	content	
+pmc	aids-28-s533.PMC4251911.pdf	2	19	content	
+pmc	AJPS-20-243.PMC10450116.pdf	1	235	branding	QR code
+pmc	AJPS-20-243.PMC10450116.pdf	2	4	content	
+pmc	AJPS-20-243.PMC10450116.pdf	2	6	content	
+pmc	amjcaserep-25-e941806.PMC10773620.pdf	1	423	branding	Am J Case Reports masthead
+pmc	amjcaserep-25-e941806.PMC10773620.pdf	1	424	branding	Am J Case Reports masthead
+pmc	amjcaserep-25-e941806.PMC10773620.pdf	2	4	content	
+pmc	amjcaserep-25-e941806.PMC10773620.pdf	5	22	content	
+pmc	CASE22310.PMC9552559.pdf	2	8	content	
+pmc	CASE22310.PMC9552559.pdf	3	27	content	
+pmc	CASE22310.PMC9552559.pdf	4	64	content	
+pmc	CASE22310.PMC9552559.pdf	4	65	content	
+pmc	CASE23704.PMC10971071.pdf	2	23	content	
+pmc	CASE23704.PMC10971071.pdf	4	90	content	
+pmc	CASE23704.PMC10971071.pdf	5	96	content	
+pmc	cia-15-673.PMC7244746.pdf	5	454	content	
+pmc	cia-15-673.PMC7244746.pdf	6	541	content	
+pmc	cm9-135-2294.PMC9771337.pdf	3	115	content	
+pmc	cm-96-392.PMC10642746.pdf	3	6	content	
+pmc	edinbmedsurgj72032-0103.PMC5845349.pdf	3	12	content	
+pmc	ejtm-33-4-12037.PMC10811632.pdf	2	3	content	
+pmc	ejtm-33-4-12037.PMC10811632.pdf	3	6	content	
+pmc	ejtm-33-4-12037.PMC10811632.pdf	4	9	content	
+pmc	ejtm-33-4-12037.PMC10811632.pdf	14	33	content	
+pmc	ENE-28-1716.PMC8248354.pdf	3	6	content	
+pmc	ENE-28-1716.PMC8248354.pdf	5	12	content	
+pmc	ENE-28-1716.PMC8248354.pdf	6	14	content	
+pmc	enm-31-284.PMC4923413.pdf	2	4	content	
+pmc	ETJ-23-0255.PMC11466274.pdf	5	26	content	
+pmc	ETJ-23-0255.PMC11466274.pdf	5	28	content	
+pmc	ETJ-24-0302.PMC12053916.pdf	5	75	content	
+pmc	etm-17-05-3580.PMC6447806.pdf	3	6	content	
+pmc	etm-17-05-3580.PMC6447806.pdf	4	10	content	
+pmc	etm-17-05-3580.PMC6447806.pdf	5	14	content	
+pmc	etm-17-05-3580.PMC6447806.pdf	6	21	content	
+pmc	etm-17-05-3580.PMC6447806.pdf	6	23	content	
+pmc	etm-20-05-09154.PMC7471863.pdf	3	7	content	
+pmc	ezad118.PMC10320095.pdf	2	39	content	
+pmc	ezad118.PMC10320095.pdf	5	95	content	
+pmc	ezad118.PMC10320095.pdf	6	122	content	
+pmc	ezad118.PMC10320095.pdf	6	123	content	
+pmc	ezad118.PMC10320095.pdf	6	124	content	
+pmc	fncel-06-00025.PMC3357636.pdf	3	144	content	
+pmc	fncel-06-00025.PMC3357636.pdf	4	174	content	
+pmc	fncel-06-00025.PMC3357636.pdf	6	314	content	
+pmc	gox-2-e159.PMC4174088.pdf	4	15	content	
+pmc	gox-2-e159.PMC4174088.pdf	5	20	content	
+pmc	goz061.PMC7034232.pdf	3	51	content	
+pmc	hmer-8-039.PMC4847598.pdf	3	13	content	
+pmc	hs9-7-e5507229.PMC10428471.pdf	1	36	branding	HemaSphere / EHA masthead
+pmc	IJBMS-20-880.PMC5651473.pdf	3	102	content	
+pmc	IJBMS-20-880.PMC5651473.pdf	3	105	content	
+pmc	IJCM-45-199.PMC7467180.pdf	1	21	branding	QR code
+pmc	ijmm-46-06-2280.PMC7595667.pdf	2	18	content	
+pmc	ijmm-46-06-2280.PMC7595667.pdf	2	20	content	
+pmc	IJO-67-1080.PMC6611248.pdf	1	23	branding	QR code
+pmc	ijp-26-04-3975.PMC5045561.pdf	3	67	content	
+pmc	imas-11-02-08.PMC7044535.pdf	3	21	content	
+pmc	in-17-110.PMC5407982.pdf	3	38	content	
+pmc	in-17-110.PMC5407982.pdf	4	45	content	
+pmc	in-17-110.PMC5407982.pdf	4	46	content	
+pmc	in-17-110.PMC5407982.pdf	4	47	content	
+pmc	iope-25-1546879.PMC6444199.pdf	2	4	content	
+pmc	iope-25-1546879.PMC6444199.pdf	6	19	content	
+pmc	jast-63-3-666.PMC8204003.pdf	2	3	content	
+pmc	jcav08p3774.PMC5688931.pdf	1	141	branding	journal logo art
+pmc	jcav08p3774.PMC5688931.pdf	4	7	content	
+pmc	jcav08p3774.PMC5688931.pdf	5	10	content	
+pmc	jcav08p3774.PMC5688931.pdf	6	13	content	
+pmc	jcav08p3774.PMC5688931.pdf	7	16	content	
+pmc	jcav08p3774.PMC5688931.pdf	8	19	content	
+pmc	JEM_20131560.PMC3949572.pdf	2	64	content	
+pmc	JEM_20131560.PMC3949572.pdf	3	162	content	
+pmc	JEM_20131560.PMC3949572.pdf	4	267	content	
+pmc	JEM_20131560.PMC3949572.pdf	5	249	content	
+pmc	JEM_20131560.PMC3949572.pdf	6	46	content	
+pmc	JEM_20131560.PMC3949572.pdf	7	204	content	
+pmc	JEM_20131560.PMC3949572.pdf	8	283	content	
+pmc	JEM_20131560.PMC3949572.pdf	9	65	content	
+pmc	JEM_20131560.PMC3949572.pdf	10	287	content	
+pmc	jes20161a.PMC4913168.pdf	2	5	content	
+pmc	jes20161a.PMC4913168.pdf	4	46	content	
+pmc	JHM-20-120.PMC11797535.pdf	3	23	content	
+pmc	jls373.PMC3183543.pdf	1	13	branding	JSLS masthead
+pmc	jls373.PMC3183543.pdf	2	20	content	
+pmc	JMAS-19-540.PMC10695309.pdf	3	6	content	
+pmc	JNRP-5-231.PMC4078606.pdf	4	141	content	
+pmc	JNRP-5-231.PMC4078606.pdf	5	150	content	
+pmc	JNRP-5-231.PMC4078606.pdf	5	151	content	
+pmc	JNRP-5-231.PMC4078606.pdf	5	152	content	
+pmc	JNRP-5-231.PMC4078606.pdf	5	153	content	
+pmc	JNRP-5-231.PMC4078606.pdf	6	169	content	
+pmc	JNRP-5-231.PMC4078606.pdf	6	170	content	
+pmc	JNRP-5-231.PMC4078606.pdf	6	171	content	
+pmc	JNRP-5-231.PMC4078606.pdf	7	180	content	
+pmc	kjim-14-1-95-16.PMC4531902.pdf	2	12	content	
+pmc	kjim-14-1-95-16.PMC4531902.pdf	2	14	content	
+pmc	kjim-14-1-95-16.PMC4531902.pdf	2	16	content	
+pmc	kosfa-36-29.PMC4973946.pdf	5	16	content	
+pmc	main.PMC10973653.pdf	3	12	content	
+pmc	main.PMC10973653.pdf	3	15	content	
+pmc	main.PMC11782883.pdf	3	41	content	
+pmc	main.PMC11782883.pdf	4	59	content	
+pmc	main.PMC11782883.pdf	4	61	content	
+pmc	main.PMC11782883.pdf	8	153	content	
+pmc	main.PMC11782883.pdf	9	173	content	
+pmc	main.PMC5454177.pdf	3	35	content	
+pmc	main.PMC5454177.pdf	3	36	content	
+pmc	main.PMC5454177.pdf	4	45	content	
+pmc	main.PMC5454177.pdf	5	102	content	
+pmc	main.PMC6319195.pdf	1	496	branding	King Saud University logo
+pmc	main.PMC6319195.pdf	1	497	branding	Saudi Biological Society logo
+pmc	main.PMC6319195.pdf	4	76	content	
+pmc	main.PMC6353764.pdf	3	45	content	
+pmc	main.PMC6353764.pdf	3	46	content	
+pmc	main.PMC6353764.pdf	6	128	content	
+pmc	main.PMC7350134.pdf	1	223	branding	Elsevier tree logo
+pmc	main.PMC7350134.pdf	1	224	branding	IDCases cover masthead
+pmc	main.PMC7350134.pdf	2	34	content	
+pmc	main.PMC7501458.pdf	7	134	content	
+pmc	main.PMC7501458.pdf	8	164	content	
+pmc	main.PMC9827375.pdf	3	38	content	
+pmc	main.PMC9827375.pdf	7	86	content	
+pmc	mds526.PMC3574550.pdf	6	58	content	
+pmc	mds526.PMC3574550.pdf	6	63	content	
+pmc	medi-95-e2883.PMC4779022.pdf	2	15	content	
+pmc	medi-95-e2883.PMC4779022.pdf	5	46	content	
+pmc	medi-98-e14852.PMC6709163.pdf	3	28	content	
+pmc	medi-98-e14852.PMC6709163.pdf	4	34	content	
+pmc	medi-98-e14852.PMC6709163.pdf	4	35	content	
+pmc	mjab026.PMC8436688.pdf	2	7	content	
+pmc	NAJMS-2-193.PMC3354409.pdf	2	3	content	
+pmc	NAJMS-2-193.PMC3354409.pdf	2	4	content	
+pmc	nihms-1527189.PMC6719696.pdf	2	93	content	
+pmc	nihms-1527189.PMC6719696.pdf	20	548	content	
+pmc	nihms-1527189.PMC6719696.pdf	21	568	content	
+pmc	nihms-1527189.PMC6719696.pdf	22	588	content	
+pmc	nihms-1527189.PMC6719696.pdf	23	609	content	
+pmc	nihms-1527189.PMC6719696.pdf	24	630	content	
+pmc	nihms-1527189.PMC6719696.pdf	26	660	content	
+pmc	nihms-1527189.PMC6719696.pdf	28	690	content	
+pmc	nihms-2116746.PMC12700659.pdf	2	106	content	
+pmc	nihms-2116746.PMC12700659.pdf	30	852	content	
+pmc	nihms-2116746.PMC12700659.pdf	32	881	content	
+pmc	nihms-2116746.PMC12700659.pdf	34	916	content	
+pmc	nihms-2116746.PMC12700659.pdf	36	951	content	
+pmc	nihms-2116746.PMC12700659.pdf	38	986	content	
+pmc	nihms-2116746.PMC12700659.pdf	40	1021	content	
+pmc	nihpp-2024.05.23.590306v3.PMC11142187.pdf	5	41	content	
+pmc	nihpp-2024.05.23.590306v3.PMC11142187.pdf	8	60	content	
+pmc	nihpp-2024.05.23.590306v3.PMC11142187.pdf	9	75	content	
+pmc	nihpp-2024.05.23.590306v3.PMC11142187.pdf	13	84	content	
+pmc	nihpp-2024.05.23.590306v3.PMC11142187.pdf	15	89	content	
+pmc	nihpp-2024.05.23.590306v3.PMC11142187.pdf	16	92	content	
+pmc	nmc-43-1121.PMC9575570.pdf	4	12	content	
+pmc	nmc-43-1121.PMC9575570.pdf	5	16	content	
+pmc	ns-2449354-677.PMC12242748.pdf	7	33	content	
+pmc	ns-2449354-677.PMC12242748.pdf	8	37	content	
+pmc	ofaf684.PMC13037372.pdf	4	6	content	
+pmc	ol-15-06-8545.PMC5950526.pdf	4	33	content	
+pmc	ol-15-06-8545.PMC5950526.pdf	5	37	content	
+pmc	ol-15-06-8545.PMC5950526.pdf	6	41	content	
+pmc	ol-15-06-8545.PMC5950526.pdf	9	49	content	
+pmc	pnas.202212220.PMC9894184.pdf	2	8	content	
+pmc	pnas.202212220.PMC9894184.pdf	4	68	content	
+pmc	pnas.202212220.PMC9894184.pdf	5	77	content	
+pmc	pnas.202212220.PMC9894184.pdf	7	110	content	
+pmc	pnas.202212220.PMC9894184.pdf	8	117	content	
+pmc	pnas.202307082.PMC11745321.pdf	7	25	content	
+pmc	policy-13-006.PMC5863865.pdf	4	17	branding	Law & Governance masthead
+pmc	PSYG-20-469.PMC7496584.pdf	3	21	content	
+pmc	SNI-7-1031.PMC5234294.pdf	5	166	content	
+pmc	SNI-7-1031.PMC5234294.pdf	6	175	content	
+pmc	SNI-7-1031.PMC5234294.pdf	7	191	content	
+pmc	srep03292.PMC3836038.pdf	1	195	branding	Scientific Reports masthead
+pmc	srep03292.PMC3836038.pdf	3	10	content	
+pmc	WJCC-9-9711.PMC8610919.pdf	2	144	branding	QR code
+pmc	WJCC-9-9711.PMC8610919.pdf	3	180	content	
+pmc	WJCC-9-9711.PMC8610919.pdf	12	704	branding	Baishideng publisher logo
+pmc	WJCC-9-9711.PMC8610919.pdf	12	705	branding	QR code
+pmc	ZEPT_16_2599612.PMC12713222.pdf	6	1251	content	
+pmc	ZEPT_16_2599612.PMC12713222.pdf	7	1252	content	
+pmc	ZEPT_16_2599612.PMC12713222.pdf	8	1253	content	
+pmc	zpag013.PMC13000462.pdf	5	21	content	
