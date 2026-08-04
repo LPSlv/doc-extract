@@ -215,9 +215,14 @@ Through opendataloader-bench's official evaluator: **0.875 overall / 0.915 NID /
 >   constants as calibrated to the corpora here, not as universal.
 > - **Single-page documents can lose.** Nothing amortises; see `olmocr_long_tiny_text`.
 > - **Emblems need a batch.** A publisher mark is only distinguishable from a
->   small chart by recurring across documents — geometry cannot separate them
->   (max-path, fill-ratio and spatial-cluster measures were each tried and each
->   failed). Convert one government PDF alone and its seal still costs one call.
+>   small chart by recurring across documents — six signals were measured and
+>   five rejected ([`eval/tds-corpus.md`](eval/tds-corpus.md)). Convert one
+>   government PDF alone and its seal still costs one call.
+> - **Branding still costs calls.** Journal mastheads, conference banners, QR
+>   codes and cover art fire as figures; in a sampled audit that was 7 of 18
+>   raster firings on journal-page corpora. Extending the recurrence rule to
+>   individual images was implemented, then reverted — it discarded a reused TI
+>   application schematic, so it trades content for cost.
 > - A table with **no rules and no shading** is invisible to every branch. If the
 >   extractor also drops it, the content is lost silently.
 > - `stroke_grid` conflates marker-based plots with ruled tables — one label, two causes.

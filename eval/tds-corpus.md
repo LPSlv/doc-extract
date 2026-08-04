@@ -81,3 +81,29 @@ missed — a tempting saving. Both ways of using it would have lost real content
 
 The 31% is not safely reachable with these signals. Recorded here so it is not
 re-attempted blind.
+
+## False positives: what is and is not reachable
+
+Six signals were implemented and measured against pages whose correct verdict
+was established by rendering and looking at them. Recorded here so none is
+re-attempted blind.
+
+| signal | outcome |
+|---|---|
+| max single stroke-path area | rejected — GPO seal 0.0014 vs a real chart 0.0028 |
+| stroke fill-ratio | rejected — seal 0.0078 *above* a real chart page 0.0050 |
+| largest spatial stroke cluster | rejected — 4N25 disclaimer 0.0056 *above* a real chart 0.0045 |
+| image colour complexity | rejected — a masthead and a multi-panel plot both score 0.003 |
+| image position in page margins | rejected — catches 2 of 7 branding cases, and flags a real spectrogram |
+| **page signature recurring across documents** | **shipped** — 227 → 9 false positives on US bills |
+| image recurring across documents | **rejected after implementation** — it dropped the LM2576 typical-application schematic, which TI reuses across variants. Reused reference figures are byte-identical across documents exactly as logos are. Caught only by rendering what the rule discarded. |
+
+The conclusion is that a *single image or page*, viewed in isolation, does not
+carry enough signal to separate publisher branding from a content figure. What
+works is recurrence — but only of whole-page signatures, where a false drop
+costs one page render rather than a figure. Applying the same idea to individual
+images silently loses content, so it is not shipped.
+
+Residual, unfixed: journal mastheads, conference banners, QR codes and cover art
+in single-document conversions still cost one vision call each. In the sampled
+audit that was 7 of 18 raster firings on the olmOCR/PMC page corpora.
