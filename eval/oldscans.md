@@ -10,7 +10,8 @@ yields **zero** extractable characters. pdf-inspector alone cannot score.
 
 ## Measured, 16-PDF sample (11 completed)
 
-Pages rendered at 130 dpi and transcribed by Claude Opus, then scored against
+Pages rendered at 130 dpi and transcribed by the host agent's vision pass,
+then scored against
 the benchmark's own `present` / `absent` / `order` tests.
 
 | Test type | pdf-inspector alone | + pdf-extract | (pre-rubric-fix) |

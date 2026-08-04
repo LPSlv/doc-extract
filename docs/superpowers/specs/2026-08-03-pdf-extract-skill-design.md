@@ -14,7 +14,7 @@ artifact cheaply.
 1. **Convert** — Markdown + extracted images + manifest, cached by content hash.
 2. **Answer** — questions against the cached artifact, with `[p12]` page citations.
 
-Must work identically under Claude Code and Codex, need no API key, and need no
+Must work identically across agent harnesses, need no API key, and need no
 installation step beyond `uv`.
 
 ## 2. Non-goals
@@ -200,7 +200,7 @@ Then **subsumption** (a rendered page replaces the rasters it contains), then th
 ### Phase 4 — Vision pass (the agent)
 
 The agent iterates manifest entries with `description: null`, reads each image with its
-own native capability, and writes back. No API key; identical in Claude Code and Codex.
+own native capability, and writes back. No API key; identical across harnesses.
 
 Modes per `reference/describing-visuals.md`: **figure** (type, what it shows, axes and
 units, notable values, legible text) and **page transcription** (verbatim, tables as
@@ -308,7 +308,7 @@ LPSlv/pdf-extract
 ```
 
 Install: `npx skills add LPSlv/pdf-extract@pdf-extract`. Locally, symlink
-`~/.agents/skills/pdf-extract` → repo, preserving the existing Claude/Codex pattern.
+`~/.agents/skills/pdf-extract` → repo, preserving the existing harness symlink pattern.
 
 Runtime requirement is **`uv` only** — deps are declared inline (PEP 723), resolved on
 first run, nothing installed globally. `pdftoppm` is used for rendering with PyMuPDF as
