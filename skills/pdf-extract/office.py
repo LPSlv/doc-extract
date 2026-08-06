@@ -124,7 +124,12 @@ def _pptx(data):
                                       {"data": a.data, "media": a.media_type,
                                        "units": set()})
             e["units"].add(label)
-    return units, placements, failed, []
+    # The concatenation IS the engine output for a deck: it is byte-identical
+    # to a whole-deck conversion (tests/test_anydoc_invariants.py), and it is
+    # what this pipeline actually produced, so it is what the gate must hold
+    # the artifact against.
+    raw = "\n\n".join(b for _, b in units if b)
+    return units, placements, failed, [], raw
 
 
 def _docx(data):
@@ -174,7 +179,7 @@ def _docx(data):
                                       {"data": a.data, "media": a.media_type,
                                        "units": set()})
             e["units"].add(current)
-    return units, placements, [], []
+    return units, placements, [], [], md
 
 
 def _xlsx(data):
@@ -224,7 +229,7 @@ def _xlsx(data):
             "reason": "native_chart", "px": [0, 0],
             "description": _chart_markdown(ch),
         })
-    return units, placements, dropped, chart_items
+    return units, placements, dropped, chart_items, md
 
 
 def _chart_markdown(ch):
@@ -258,7 +263,7 @@ def harvest_office(path):
         return {"status": "error", "error": "unsupported", "path": str(path),
                 "detail": "not a docx, xlsx or pptx package"}
     try:
-        units, placements, dropped, extra = {
+        units, placements, dropped, extra, raw_md = {
             "pptx": _pptx, "docx": _docx, "xlsx": _xlsx}[fmt](data)
     except anydoc.EncryptedError:
         return {"status": "error", "error": "encrypted", "path": str(path)}
@@ -307,7 +312,15 @@ def harvest_office(path):
     items.sort(key=lambda i: (order.get(i["page"], len(order)), _natural(i["id"])))
 
     pending = [i for i in items if i.get("description") is None]
-    doc_md = "\n\n".join(b for _, b in units if b).strip()
+    # Verbatim engine output, exactly as the PDF path uses process_pdf's. The
+    # unit split is a separate, lossy view for citation and cheap grepping --
+    # reassembling doc.md from it would drop the heading lines the split
+    # consumed, and the byte-identity gate would fail for the right reason.
+    # NOT stripped. anydoc ends its output with a newline and the PDF path
+    # writes process_pdf's text verbatim, so stripping here would put the
+    # artifact one byte away from the engine and fail the gate for a reason
+    # that has nothing to do with what the skill added.
+    doc_md = raw_md
     return {
         "status": "ok", "path": str(path), "pdf_type": None, "pages": len(units),
         "markdown": doc_md,
