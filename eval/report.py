@@ -70,7 +70,7 @@ def main():
     # ---- table 1: cost -----------------------------------------------------
     A("## Cost: three ways to read each corpus\n")
     A("| dataset | files | pages | MB | full optical | text only | "
-      "**pdf-extract** | vs optical | vision calls | local s |")
+      "**doc-extract** | vs optical | vision calls | local s |")
     A("|---|---|---|---|---|---|---|---|---|---|")
     for name, d in ds.items():
         s = d["summary"]
@@ -82,7 +82,7 @@ def main():
     A("")
     A("`text only` is always cheapest and always misses every figure, scan "
       "and unparsed table; it is a floor, not an option. `vs optical` is "
-      "pdf-extract's token saving against rendering every page.\n")
+      "doc-extract's token saving against rendering every page.\n")
 
     # ---- table 2: reasons --------------------------------------------------
     A("## What routing fired, by class\n")
@@ -135,7 +135,7 @@ def main():
               + ", ".join(f"`{r['name']}`" for r in zero_big[:10])
               + (" …" if len(zero_big) > 10 else ""))
         if costlier:
-            A(f"\n**pdf-extract costs MORE than full optical** "
+            A(f"\n**doc-extract costs MORE than full optical** "
               f"({len(costlier)} files): "
               + ", ".join(f"`{r['name']}` (+{r['ours_tok']-r['opt_tok']:,})"
                           for r in costlier[:10])

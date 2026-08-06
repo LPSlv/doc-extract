@@ -5,7 +5,7 @@ or thresholds change (§4 Phase 0), and a second agent observing a half-written
 cache directory (§11).
 """
 import sys, pathlib, json
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "pdf-extract"))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "doc-extract"))
 
 import pytest
 from cache import cache_dir, publish, SCHEMA

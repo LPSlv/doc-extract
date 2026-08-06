@@ -6,12 +6,12 @@ Corpus: https://github.com/opendataloader-project/opendataloader-bench
 ## Procedure
 
 1. Register an engine in `src/engine_registry.py` plus a `pdf_parser_*.py` that
-   runs the full pdf-extract pipeline.
+   runs the full doc-extract pipeline.
 2. **Strip** delimited blocks from the output (`artifact.strip`) before writing
    the prediction.
 3. Assert the stripped prediction is byte-identical to raw
    `pdf_inspector.process_pdf(path).markdown`.
-4. `uv run src/evaluator.py --engine pdf-extract`.
+4. `uv run src/evaluator.py --engine doc-extract`.
 
 ## Gate
 

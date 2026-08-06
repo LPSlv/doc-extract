@@ -5,7 +5,7 @@
 """Tests for harvest.py's routing decisions -- the single source of truth.
 
 Every case here encodes a documented failure from the design spec (docs/
-superpowers/specs/2026-08-03-pdf-extract-skill-design.md) or git history, so a
+superpowers/specs/2026-08-03-doc-extract-skill-design.md) or git history, so a
 "simplification" that re-breaks one fails with the original incident named.
 
 render_reason, furniture_reason, grid_pages and _cluster are pure functions of
@@ -16,7 +16,7 @@ the real dependencies are installed.
 """
 import sys, types, pathlib
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "pdf-extract"))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "doc-extract"))
 
 import pytest
 

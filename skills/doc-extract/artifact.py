@@ -1,4 +1,4 @@
-"""Splice and strip for pdf-extract artifacts.
+"""Splice and strip for doc-extract artifacts.
 
 The design spec's byte-identity guarantee (§5) lives here. Everything the skill
 adds to pdf-inspector's output sits inside a delimited block; the benchmark gate
@@ -11,8 +11,8 @@ tests/test_artifact.py.
 """
 import re
 
-OPEN = "<!-- pdf-extract:add -->"
-CLOSE = "<!-- /pdf-extract:add -->"
+OPEN = "<!-- doc-extract:add -->"
+CLOSE = "<!-- /doc-extract:add -->"
 
 _BLOCK = re.compile(
     "\n" + re.escape(OPEN) + "\n.*?\n" + re.escape(CLOSE) + "\n",

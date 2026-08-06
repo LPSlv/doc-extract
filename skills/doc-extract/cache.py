@@ -13,7 +13,7 @@ from pathlib import Path
 
 SCHEMA = 1
 ENGINE = "pdf-inspector==0.2.6"
-DEFAULT_ROOT = Path.home() / ".cache" / "pdf-inspect"
+DEFAULT_ROOT = Path.home() / ".cache" / "doc-extract"
 
 
 def sha256_file(path, _chunk=1 << 20):

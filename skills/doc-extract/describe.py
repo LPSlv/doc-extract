@@ -26,20 +26,44 @@ from artifact import splice, strip
 HEADING = "## Figures and scanned pages"
 
 
+def _label(unit):
+    """`p12` for a PDF page; an Office unit is already its own label.
+
+    PDF pages MUST keep the bare `p{n}` form: example/sample-report.expected.md
+    and every gate corpus artifact carry it, and the byte-identity gate strips
+    the block rather than reading it, so a change here would go unnoticed.
+    """
+    return f"p{unit}" if isinstance(unit, int) else str(unit)
+
+
+def _order(pair):
+    """Numeric for PDF pages, manifest order for Office units.
+
+    Sorting Office units as strings would put a sheet named "10" before "2",
+    and sorting mixed types raises outright. The manifest is already in
+    reading order for those, so position is the honest key.
+    """
+    n, i = pair
+    unit = i["page"]
+    if isinstance(unit, int):
+        return (0, unit, 0, i["id"])
+    return (1, 0, n, "")
+
+
 def rebuild(artifact):
     """Regenerate doc.md from the engine text plus every described item."""
     artifact = Path(artifact)
     man = json.loads((artifact / "manifest.json").read_text())
     base = strip((artifact / "doc.md").read_text())
 
-    described = [i for i in man["items"] if i.get("description")]
+    described = [(n, i) for n, i in enumerate(man["items"]) if i.get("description")]
     if not described:
         (artifact / "doc.md").write_text(base)
         return 0
 
     lines = [HEADING, ""]
-    for i in sorted(described, key=lambda x: (x["page"], x["id"])):
-        lines.append(f"**[p{i['page']}] {i['id']}** ({i['reason']}) — {i['description']}")
+    for _, i in sorted(described, key=_order):
+        lines.append(f"**[{_label(i['page'])}] {i['id']}** ({i['reason']}) — {i['description']}")
         lines.append("")
     body = "\n".join(lines).rstrip()
 

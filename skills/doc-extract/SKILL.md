@@ -1,25 +1,28 @@
 ---
-name: pdf-extract
-description: Use when given one or more PDFs to read, summarise, extract from, or answer questions about - converts them to citable Markdown and visually reads the charts, diagrams, scanned pages and ruled tables that text extraction silently drops. Triggers on "read this PDF", "extract from these PDFs", "what does this report say", "parse this scan", "pull the figures out of", "summarise this contract".
+name: doc-extract
+description: Use when given one or more documents to read, summarise, extract from, or answer questions about - PDFs, Word, Excel, PowerPoint or images. Converts them to citable Markdown and visually reads the charts, diagrams, scanned pages and ruled tables that text extraction silently drops. Triggers on "read this PDF", "extract from these documents", "what does this report say", "parse this scan", "pull the figures out of", "summarise this contract", "read this deck", "what's in this spreadsheet".
 ---
 
-# pdf-extract
+# doc-extract
 
-Text extraction handles most PDFs on its own. This skill uses a fast local
-engine for that, then spends vision calls **only** on what it provably missed —
+Text extraction handles most documents on its own. This skill uses fast local
+engines for that, then spends vision calls **only** on what it provably missed —
 figures, scanned pages, and tables it failed to structure.
+
+Reads `.pdf`, `.docx`, `.xlsx`, `.pptx`, and image files. Format is decided by
+content, not by extension.
 
 ## When NOT to use this
 
 - Merging, splitting, form filling, encryption → `anthropics/skills@pdf`.
-- A PDF you need one number from and already know the page of → just read it.
+- A document you need one number from and already know the page of → just read it.
 
 Requires `uv`. Nothing else; dependencies resolve on first run.
 
 ## 1. Convert
 
 ```bash
-uv run <skill-dir>/convert.py FILE.pdf [MORE.pdf ...]
+uv run <skill-dir>/convert.py FILE [MORE ...]
 ```
 
 One JSON object per document, on stdout. Everything deterministic is now done:
@@ -34,12 +37,13 @@ document failed.
  "dropped":6,"over_scale_guard":false,"scale_guard":15}
 ```
 
-Check `status` first. `encrypted` and `unreadable` are terminal — report and
-move on; the batch continues. Re-running the same PDF returns `cached: true`
-instantly and costs nothing.
+Check `status` first. `encrypted`, `unreadable` and `unsupported` are terminal —
+report and move on; the batch continues. Re-running the same file returns
+`cached: true` instantly and costs nothing.
 
 **If `over_scale_guard` is true**, tell the user how many calls it wants and get
-agreement before continuing. An 84-page scan is 84 calls.
+agreement before continuing. An 84-page scan is 84 calls, and so is a 40-image
+slide deck.
 
 ## 2. Look at each pending item
 
@@ -65,11 +69,28 @@ How to write the description depends on `reason` — see
 `describe.py` is safe to re-run — it replaces rather than duplicates, so a vision
 pass that dies halfway can just be resumed.
 
+Items with `kind: "native_chart"` never appear in `pending`. Those are
+spreadsheet charts whose series were read from the chart definition, so their
+numbers are exact rather than estimated from pixels.
+
 ## 3. Answer
 
 - Whole document: `doc.md`.
-- A specific question: grep `pages/pNNN.md` and read only the pages you need.
-- Cite as `[p12]`, or `[report.pdf:p12]` across several documents.
+- A specific question: grep the per-unit files and read only the ones you need.
+- Cite by unit, or prefix the filename across several documents
+  (`[report.pdf:p12]`).
+
+| Format | Unit | Cite as | Per-unit file |
+|---|---|---|---|
+| PDF | page | `[p12]` | `pages/p012.md` |
+| PowerPoint | slide | `[s07]` | `pages/u007.md` |
+| Excel | sheet | `[Sheet2]` | `pages/u002.md` |
+| Word | level-1 heading | `[Budget assumptions]` | `pages/u003.md` |
+| image | whole file | `[img]` | `pages/u001.md` |
+
+Office unit files are numbered rather than named, because a sheet called
+`Q1 P&L / draft` is not a filename. `manifest.json` carries a `units` list
+mapping each file to its label, in order.
 
 ## The one rule
 
@@ -85,14 +106,24 @@ and failed on real documents:
 
 | Filter | Why |
 |---|---|
-| Drop images on >50% of pages, <120px, aspect >8:1 | One 14-page grant PDF had 69 image placements: 7 distinct objects, six of them logos, rules and a sidebar stripe. |
+| Drop images on >50% of units, <120px, aspect >8:1 | One 14-page grant PDF had 69 image placements: 7 distinct objects, six of them logos, rules and a sidebar stripe. |
 | Skip pages that already yielded a Markdown table | The extractor is better at tables it can parse than vision is. Only intervene where it produced nothing. |
 | Require strokes in **both** orientations | Underlines and rules are horizontal only. Counting all axis-aligned strokes fired on bibliography pages and on contracts with underlined headings. |
 | Exempt `diagonals` from the area floor | 4+ diagonal segments do not occur in body text, and the floor was vetoing charts placed in a page corner. |
 | Ink threshold on the dense-grid branch | Separates a shaded table the extractor missed from decorative section banners. |
 | Collapse pages with >6 rasters into one render | A 48-tile inpainting comparison is one figure, and one TI package photo arrives as 12 strips; per-tile calls cost ~2× the tokens and lose the composition. Pages with 5–6 rasters are sometimes distinct figures, so the line sits at 6. |
+| Drop EMF, WMF and OLE payloads | Retained faithfully by the text engine, and unreadable without a rasterizer — routing one to `pending` would create an item no agent can complete. Counted in `dropped`, never silently discarded. |
 
-`harvest.py` is the single source of truth for routing. Every number in the
-README and design spec is regenerated from it; never edit a number by hand. If
-you cannot execute a file, `reference/harvest-block.md` is a verbatim copy to
-paste and run.
+`harvest.py` is the single source of truth for PDF routing, and `filters.py` for
+the parts that apply to every format. Every number in the README and design spec
+is regenerated from them; never edit a number by hand. If you cannot execute a
+file, `reference/harvest-block.md` is a self-contained copy to paste and run.
+
+## Office routing is deliberately thinner, and that is honest
+
+A PDF page is a program of drawing commands that hides its figures, which is why
+`harvest.py` infers them from vector geometry. OOXML declares its images in the
+package, so there is nothing to infer. Office documents get the furniture
+filters, the citation and cache contract, and this rubric — but no
+`render_reason`, no `raster_grid` and no `cost_guard`, because without a
+rendering engine there is no slide or sheet to render.

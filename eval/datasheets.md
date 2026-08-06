@@ -15,7 +15,7 @@ pixels**. Text is charged at `chars/3.5`, conservative for technical English.
 
 ## Per document
 
-| datasheet | pages | vision calls | read-every-page | pdf-extract | saving |
+| datasheet | pages | vision calls | read-every-page | doc-extract | saving |
 |---|---|---|---|---|---|
 | tl072_ti | 89 | 48 | 216,453 | 122,158 | 44% |
 | lm358_ti | 68 | 31 | 164,902 | 108,198 | 34% |
@@ -43,12 +43,12 @@ pass — 19.0 s versus 6.7 s — because extraction runs.
 
 ## The cache is where it wins
 
-| | read every page | pdf-extract |
+| | read every page | doc-extract |
 |---|---|---|
 | first question | 1,626,152 | 1,084,905 (33% less) |
 | each one after | 1,626,152 | **13,126 (99% less)** |
 
-| questions | naive | pdf-extract | ratio |
+| questions | naive | doc-extract | ratio |
 |---|---|---|---|
 | 1 | 1,626,152 | 1,084,905 | 1.5x |
 | 3 | 4,878,456 | 1,111,157 | 4.4x |
@@ -69,7 +69,7 @@ Median of 3 runs, 14 datasheets, 668 pages. `uv run eval/datasheet-time.py`.
 | extract text (`process_pdf`) | 4.66 s | 7 ms |
 | route (`harvest`, incl. page sizing) | **18.22 s** | 27 ms |
 | render the selected images | 3.11 s | 4.7 ms |
-| **pdf-extract total** | **26.4 s** | **39 ms** |
+| **doc-extract total** | **26.4 s** | **39 ms** |
 | naive: render every page | 6.74 s | 10 ms |
 
 **Routing is the expensive stage**, not rendering — `get_drawings()` on every

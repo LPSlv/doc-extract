@@ -93,7 +93,7 @@ workflow) and keeps its token model unchanged:
 
 Per file, recorded to JSON: pages, bytes, vision calls, calls-per-page,
 reason histogram, `over_scale_guard`, tokens for (a) full optical,
-(b) pdf-inspector text only, (c) pdf-extract, wall time per stage (optical
+(b) pdf-inspector text only, (c) doc-extract, wall time per stage (optical
 render / text extraction / routing / routed-page render), and an
 independent raster proxy (count of image placements ≥300 px min-dim, for
 the zero-call cross-check below). Per dataset: totals, medians, and the
@@ -124,7 +124,7 @@ one human-readable Markdown report, both committed.
    equations-misrouted-as-charts failure.
 5. **Scans** — olmocr_scans: fraction of files routed `no_text_layer`
    (should be ~100%); any file NOT routed is a named false negative.
-6. **Cost regression at scale** — files where pdf-extract costs *more* than
+6. **Cost regression at scale** — files where doc-extract costs *more* than
    full optical (`ours_tok > opt_tok`, like `lm2596` at −1%), counted and
    named per dataset.
 

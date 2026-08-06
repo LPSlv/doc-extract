@@ -29,10 +29,10 @@ for that reason, not by choice.
 |---|---|---|---|---|
 | **full optical** (read every page) | 1,513,884 | — | 5.9 s | 632 |
 | **pdf-inspector only** (text) | 282,933 | **81% less** | 4.0 s | 0 |
-| **pdf-extract** (text + routed figures) | 549,176 | **64% less** | 21.5 s | 279 |
+| **doc-extract** (text + routed figures) | 549,176 | **64% less** | 21.5 s | 279 |
 
 Wall time is the deterministic local pipeline only — it excludes model inference,
-which is where the token difference is actually paid. pdf-extract is the slowest
+which is where the token difference is actually paid. doc-extract is the slowest
 locally (routing calls `get_drawings()` on every page) and removes 964,708
 tokens and 353 round trips relative to full optical.
 
@@ -45,7 +45,7 @@ three approaches are not interchangeable:
 - **pdf-inspector** captures text and tables well (0.875 on opendataloader-bench)
   and captures **nothing** from a characteristic curve, pinout diagram or
   schematic. On the 632 pages here it produced no figure content at all.
-- **pdf-extract** is pdf-inspector's text plus 279 routed figures — 44% of the
+- **doc-extract** is pdf-inspector's text plus 279 routed figures — 44% of the
   pages optical would read.
 
 The one place figure comprehension is measured against public ground truth is

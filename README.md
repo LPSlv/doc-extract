@@ -1,24 +1,27 @@
 <div align="center">
 
-# pdf-extract
+# doc-extract
 
-**Read PDFs properly. Fast local text extraction, plus vision only on what text extraction provably missed.**
+**Read documents properly. Fast local text extraction, plus vision only on what text extraction provably missed.**
 
-[![CI](https://github.com/LPSlv/pdf-extract/actions/workflows/ci.yml/badge.svg)](https://github.com/LPSlv/pdf-extract/actions/workflows/ci.yml)
+[![CI](https://github.com/LPSlv/doc-extract/actions/workflows/ci.yml/badge.svg)](https://github.com/LPSlv/doc-extract/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 [![Agent skill](https://img.shields.io/badge/agent-skill-b3261e.svg)](https://skills.sh/)
 
 </div>
 
-Text extraction handles most PDFs on its own — and silently drops every chart,
-pinout diagram, scanned page and merged-header table. Looking at every page
-instead catches all of it, and costs 2.4× more.
+Text extraction handles most documents on its own — and silently drops every
+chart, pinout diagram, scanned page and merged-header table. Looking at every
+page instead catches all of it, and costs 2.4× more.
 
-`pdf-extract` does neither. It extracts text with [pdf-inspector](https://github.com/firecrawl/pdf-inspector),
-works out which pages the extractor actually failed on, and sends only those to
-your agent's eyes.
+`doc-extract` does neither. It extracts text with [pdf-inspector](https://github.com/firecrawl/pdf-inspector)
+and [anydoc](https://github.com/firecrawl/anydoc), works out which pages the
+extractor actually failed on, and sends only those to your agent's eyes.
 
-| across 2,342 PDFs, 20,375 pages | read every page | text only | **pdf-extract** |
+Reads **PDF, Word, Excel, PowerPoint and images**. No API key, no per-page bill,
+no upload — the vision is the subscription you already pay for.
+
+| across 2,342 PDFs, 20,375 pages | read every page | text only | **doc-extract** |
 |---|--:|--:|--:|
 | input tokens | 48.9M | 13.6M | **20.1M** |
 | vision calls per page | 1.00 | 0 | **0.34** |
@@ -30,10 +33,11 @@ converted, follow-up questions read the cached text and cost 99% less again.</su
 ## Quick start
 
 ```bash
-npx skills add LPSlv/pdf-extract@pdf-extract
+npx skills add LPSlv/doc-extract@doc-extract
 ```
 
 Then ask your agent: *"read this datasheet and tell me the Q3 variance."*
+Or point it at a folder of mixed `.pdf`, `.docx`, `.xlsx` and `.pptx`.
 
 Requires [`uv`](https://docs.astral.sh/uv/). No API key, no Rust toolchain, no
 global installs — dependencies resolve on first run.
@@ -41,12 +45,12 @@ global installs — dependencies resolve on first run.
 ### Try it without installing
 
 ```bash
-git clone https://github.com/LPSlv/pdf-extract && cd pdf-extract
-uv run skills/pdf-extract/convert.py example/sample-report.pdf
+git clone https://github.com/LPSlv/doc-extract && cd doc-extract
+uv run skills/doc-extract/convert.py example/sample-report.pdf
 ```
 
 ```json
-{"status":"ok","artifact":"~/.cache/pdf-inspect/0559ee3a…","cached":false,
+{"status":"ok","artifact":"~/.cache/doc-extract/0559ee3a…","cached":false,
  "pending":[{"id":"p001-x5","page":1,"kind":"raster","reason":"standalone_raster",
              "path":"…/images/p001-x5.png"}],
  "dropped":0,"over_scale_guard":false,"scale_guard":15}
@@ -60,9 +64,9 @@ can see what you get before installing anything.
 ## How it works
 
 ```
-PDF ──► classify ──► extract text ──► route visuals ──► agent looks ──► answer
-        10-50 ms     pdf-inspector    the interesting   describe.py     [p12]
-                                      part                              citations
+file ──► classify ──► extract text ─────► route visuals ──► agent looks ──► answer
+         by content   pdf-inspector/      the interesting   describe.py    [p12]
+         10-50 ms     anydoc              part                             citations
 ```
 
 ### 1. Convert
@@ -70,7 +74,7 @@ PDF ──► classify ──► extract text ──► route visuals ──► 
 Everything deterministic happens in one command:
 
 ```bash
-uv run skills/pdf-extract/convert.py FILE.pdf [MORE.pdf ...]
+uv run skills/doc-extract/convert.py FILE [MORE ...]
 ```
 
 Prints one JSON object per document. Exit code is non-zero if any document
@@ -82,8 +86,8 @@ failed, and a bad file never aborts the batch. Re-running returns
 For each entry in `pending`, read the image file and write back what you saw:
 
 ```bash
-uv run skills/pdf-extract/describe.py <artifact> <id> "Line chart, two series…"
-uv run skills/pdf-extract/describe.py <artifact> <id> -   # long text from stdin
+uv run skills/doc-extract/describe.py <artifact> <id> "Line chart, two series…"
+uv run skills/doc-extract/describe.py <artifact> <id> -   # long text from stdin
 ```
 
 Safe to re-run — it replaces rather than duplicates, so a vision pass that dies
@@ -103,7 +107,7 @@ pages a question touches. Cite as `[p12]`, or `[report.pdf:p12]` across document
 ### Artifact layout
 
 ```
-~/.cache/pdf-inspect/<sha256>-<engine+schema>/
+~/.cache/doc-extract/<sha256>-<engine+schema>/
   source.json     provenance and status
   doc.md          authoritative text, plus delimited descriptions
   pages/p001.md   per-page text, for citation and cheap answering
@@ -157,7 +161,7 @@ script and a sha256 manifest, so a result pins to exact inputs.
 Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
 
 <!-- benchmarks:begin -->
-Reading every page of these 2,342 PDFs costs 48.9M input tokens. pdf-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,834 vision calls over 20,375 pages) instead of all of them.
+Reading every page of these 2,342 PDFs costs 48.9M input tokens. doc-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,834 vision calls over 20,375 pages) instead of all of them.
 
 Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan or unparsed table whatsoever. It is the floor, not an option.
 
@@ -183,7 +187,7 @@ Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan o
 
 pdf-inspector extracts **zero characters** from these pages. The vision pass recovers most of the content:
 
-| olmOCR-bench `old_scans` | pdf-inspector | pdf-extract |
+| olmOCR-bench `old_scans` | pdf-inspector | doc-extract |
 |---|---|---|
 | `present` — is the text there? | 0.0% | **61.5%** |
 | `order` — correct reading order? | 0.0% | **59.4%** |
@@ -209,6 +213,73 @@ text path is byte-identical and every addition is strippable.
 The artifact is cached, so follow-ups read text instead of pixels.
 
 ![Cumulative tokens across repeated questions](docs/img/datasheet-cost.svg)
+
+## On Office documents the routing barely helps, and the numbers say so
+
+Word, Excel and PowerPoint go through [anydoc](https://github.com/firecrawl/anydoc)
+for text and through the same furniture filters, citation contract, cache and
+describe rubric as PDFs. Measured on 236 government and NASA documents
+(govdocs1 and NTRS, pinned in `eval/manifests/office.urls.tsv`):
+
+<!-- office:begin -->
+Across 236 documents (1,335 units), the filters cut 1,647 embedded images down to **1,316** worth looking at — 0.986 vision calls per unit. 19 spreadsheet charts were recovered as exact tables at no vision cost at all.
+
+| format | files | units | images found | sent to vision | calls per unit |
+|---|--:|--:|--:|--:|--:|
+| Word (headings) | 162 | 484 | 415 | 331 | 0.684 |
+| Excel (sheets) | 35 | 77 | 26 | 1 | 0.013 |
+| PowerPoint (slides) | 39 | 774 | 1,206 | 984 | 1.271 |
+
+<sub>Baseline is describe every extracted asset, before furniture filters and dedup — not a page render, which Office documents do not have. Residue, counted not hidden: 1 chart unreadable, 108 assets in formats no agent can view.</sub>
+<!-- office:end -->
+
+**The 2.4× does not transfer, and it was never going to.** PDF routing wins by
+avoiding page renders — the expensive baseline it beats is looking at every
+page optically. An Office document has no render to avoid, so the only lever
+left is filtering embedded images, and most embedded images in a real deck are
+content. The filters drop a fifth of the assets but under two percent of the
+tokens, because what they catch is small by definition: logos, icons, rules.
+
+So a slide deck costs roughly one vision call per slide. A 79-slide NASA deck
+is 86 calls, and `over_scale_guard` will fire and ask you first. That is the
+honest shape of it.
+
+What Office documents genuinely gain:
+
+| | |
+|---|---|
+| **Spreadsheet charts** | Read from the chart definition — **exact numbers, zero vision calls**. 19 of 20 recovered across 35 workbooks |
+| Citations and cache | `[s07]`, `[Sheet2]`, `[Budget assumptions]`; follow-up questions read text, not pixels |
+| Byte-identity | Stripped output equals raw anydoc output, enforced by `eval/gate.py` on every format |
+| No per-page bill | The vision is your own agent's, not a metered service |
+
+Excel is the outlier that pays: anydoc's spreadsheet path is pure cell
+extraction, returning zero assets and no chart for a workbook that plainly
+contains both, so everything visual there is recovered here or nowhere. It
+reads Word and PowerPoint charts perfectly well, and those are left alone —
+extracting them twice was the largest error caught during design.
+
+## Not a reimplementation of Firecrawl Parse
+
+Firecrawl's hosted Parse routes on the same open-source `pdf-inspector`
+classifier this skill already calls, and bills 1 credit per page whether or not
+a page needed OCR. Two differences matter:
+
+- **It routes on text presence alone.** A chart on a page full of text passes
+  straight through as text, and the figure is gone. This skill also routes on
+  vector geometry, which is what catches those.
+- **The vision is yours.** Parse's OCR layer is [GLM-OCR](https://github.com/THUDM), MIT-licensed and
+  not Firecrawl's own model, served on their GPUs and billed per page. Here it
+  is the agent's own eyes, inside the seat you already pay for.
+
+Selective routing is what makes that practical rather than merely possible: at
+1.00 vision calls per page a subscription-funded agent exhausts its budget on
+the first document; at the measured 0.34 it does not.
+
+> [!IMPORTANT]
+> This is a billing-model comparison, not a quality one. Parse's OCR on a
+> scanned page may well read better than a general agent's — that is unmeasured
+> here and is not claimed either way.
 
 ## Limitations
 
@@ -241,6 +312,30 @@ The artifact is cached, so follow-ups read text instead of pixels.
 > - Text quality is bounded by pdf-inspector. If it misreads a page, so does this.
 > - Figure description *accuracy* is unmeasured in text-bearing PDFs. No public
 >   benchmark scores it; `eval/oldscans.md` is the only place it is measured at all.
+> - **On Office documents the routing saves very little.** 1.9% of vision
+>   tokens across the 236-document corpus, against 2.4× on PDFs. There is no
+>   page render to avoid, so the only lever is filtering embedded images, and
+>   most of those are content. Slide decks cost more than one call per slide.
+>   The cache, citations and chart extraction are the reasons to use it there —
+>   not the routing.
+> - **Office figure counts come from one corpus.** 236 government and NASA
+>   documents, skewed to what those bodies publish. A corporate deck template
+>   with a logo on every master would behave differently, and inherited
+>   furniture is invisible to the text engine entirely, so the ubiquity filter
+>   has less to catch than it does on PDFs.
+> - **EMF, WMF and embedded OLE objects cannot be read.** The text engine
+>   retains them faithfully and there is no rasterizer here, so they are dropped
+>   and counted rather than sent to an agent that cannot open them. Pasted Excel
+>   charts and clipart in older decks are frequently EMF, so on legacy documents
+>   this content is neither extracted nor viewable. Frequency unmeasured.
+> - **Spreadsheet charts can be unreadable.** Scatter and bubble series use a
+>   different XML shape than the extractor reads, and a chart referencing an
+>   external workbook resolves to nothing. An OOXML chart has no rendered image,
+>   so unlike a PDF figure there is no vision fallback — the content is simply
+>   unavailable. Counted in `dropped` as `native_chart_unread`.
+> - **Word citations need Word headings.** A contract written as numbered prose
+>   rather than Heading styles yields one whole-document unit, so `pages/` greps
+>   degrade to reading everything.
 
 ## Benchmarks
 
@@ -254,12 +349,15 @@ The artifact is cached, so follow-ups read text instead of pixels.
 | [`eval/oldscans.md`](eval/oldscans.md) | olmOCR-bench scanned-document accuracy |
 | [`eval/opendataloader.md`](eval/opendataloader.md) | Regression gate procedure |
 | [`tests/raster-labels.tsv`](tests/raster-labels.tsv) | 382 raster firings labelled by eye — content, branding or portrait |
+| [`docs/benchmarks/results/office.json`](docs/benchmarks/results/office.json) | **236 Office documents** — govdocs1 and NASA NTRS, per-file rows |
 
 ```bash
-uv run --with pytest python -m pytest tests/ -q   # splice/strip + cache contracts
+uv run --with pytest --with firecrawl-anydoc==0.1.6 \
+  python -m pytest tests/ -q                      # splice/strip, cache, anydoc invariants
 python3 tests/check_sync.py                       # verbatim block matches harvest.py
 uv run eval/gate.py example/                      # byte-identity, real pipeline
-uv run eval/fetch.py bills && uv run eval/bench.py corpus/bills   # any corpus
+uv run eval/fetch.py bills && uv run eval/bench.py corpus/bills   # any PDF corpus
+uv run eval/fetch.py office && uv run eval/office_bench.py corpus/office
 uv run eval/report.py                             # regenerate RESULTS.md
 python3 eval/readme_tables.py --write             # regenerate this README's tables
 ```
@@ -268,4 +366,4 @@ python3 eval/readme_tables.py --write             # regenerate this README's tab
 > `harvest.py` is the single source of truth for every routing decision, and
 > every number in this README is regenerated from it — none is hand-carried. To
 > see routing on your own file without converting anything:
-> `uv run skills/pdf-extract/harvest.py FILE.pdf`
+> `uv run skills/doc-extract/harvest.py FILE.pdf`

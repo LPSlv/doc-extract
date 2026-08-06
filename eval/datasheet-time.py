@@ -3,7 +3,7 @@
 # ///
 """Wall-clock, per stage, on 14 datasheets. Median of 3 runs per document."""
 import sys, time, json, pathlib, statistics
-sys.path.insert(0,"/home/lps/pdf-extract/skills/pdf-extract")
+sys.path.insert(0,"/home/lps/doc-extract/skills/doc-extract")
 import fitz, pdf_inspector as pi
 from harvest import harvest
 from convert import _render_edge
@@ -60,7 +60,7 @@ print("-"*68)
 print(f"{'TOTAL (s)':<16}{sum(r['pages'] for r in rows):>4}{S('cls'):>8.2f} {S('txt'):>8.2f} "
       f"{S('har'):>7.2f} {S('sel_render'):>9.2f}  {S('naive_render'):>9.2f}")
 print()
-print(f"pdf-extract deterministic total : {S('cls')+S('txt')+S('har')+S('sel_render'):.1f}s "
+print(f"doc-extract deterministic total : {S('cls')+S('txt')+S('har')+S('sel_render'):.1f}s "
       f"for {sum(r['pages'] for r in rows)} pages "
       f"({(S('cls')+S('txt')+S('har')+S('sel_render'))/sum(r['pages'] for r in rows)*1000:.0f} ms/page)")
 print(f"naive render-every-page only    : {S('naive_render'):.1f}s")

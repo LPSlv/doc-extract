@@ -14,7 +14,7 @@ Pages rendered at 130 dpi and transcribed by the host agent's vision pass,
 then scored against
 the benchmark's own `present` / `absent` / `order` tests.
 
-| Test type | pdf-inspector alone | + pdf-extract | (pre-rubric-fix) |
+| Test type | pdf-inspector alone | + doc-extract | (pre-rubric-fix) |
 |---|---|---|---|
 | `present` | 0/39 — 0.0% | 24/39 — **61.5%** | 61.5% |
 | `order` | 0/32 — 0.0% | 19/32 — **59.4%** | 59.4% |

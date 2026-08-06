@@ -2,18 +2,18 @@
 # requires-python = ">=3.10"
 # dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
 # ///
-"""Three-way benchmark on the TDS corpus: full optical, pdf-inspector, pdf-extract.
+"""Three-way benchmark on the TDS corpus: full optical, pdf-inspector, doc-extract.
 
   full optical    every page rendered and read as an image
   pdf-inspector   text extraction only, no vision at all
-  pdf-extract     text + only the pages/images routing flags
+  doc-extract     text + only the pages/images routing flags
 
 Reports dataset size, wall time per stage, and input-token cost.
 Usage: uv run eval/tds-bench.py corpus/tds
 """
 import sys, time, json, statistics, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "skills" / "pdf-extract"))
+sys.path.insert(0, str(ROOT / "skills" / "doc-extract"))
 import fitz, pdf_inspector as pi
 from harvest import harvest
 
@@ -47,7 +47,7 @@ def main(folder):
             continue
         md = getattr(res, "markdown", None) or ""
         txt_tok = int(len(md) / 3.5)
-        # --- C: pdf-extract --------------------------------------------
+        # --- C: doc-extract --------------------------------------------
         t_har, h = med(lambda: harvest(p), n=1)
         if h["status"] != "ok":
             print(f"SKIP {f.name}: {h['error']}"); continue
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     for label, tk, tm, calls in (
         ("full optical",  sum(r["opt_tok"] for r in rows),  sum(r["t_opt"] for r in rows),  P),
         ("pdf-inspector", sum(r["txt_tok"] for r in rows),  sum(r["t_txt"] for r in rows),  0),
-        ("pdf-extract",   sum(r["ours_tok"] for r in rows), sum(r["t_ours"] for r in rows), sum(r["calls"] for r in rows)),
+        ("doc-extract",   sum(r["ours_tok"] for r in rows), sum(r["t_ours"] for r in rows), sum(r["calls"] for r in rows)),
     ):
         base = sum(r["opt_tok"] for r in rows)
         print(f"{label:<18}{tk:>14,}{1-tk/base:>11.0%}{tm:>11.1f}{calls:>14,}")

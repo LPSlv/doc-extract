@@ -1,14 +1,8 @@
-# harvest-block
-
-Verbatim copy of `harvest.py`, for agents that cannot execute a file. Generated
-by `tests/check_sync.py --fix`; do not edit by hand.
-
-```python
 # /// script
 # requires-python = ">=3.10"
 # dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
 # ///
-"""Canonical visual-harvest block for the pdf-extract skill.
+"""Canonical visual-harvest block for the doc-extract skill.
 
 This is the single source of truth for every routing decision. The numbers in
 the design spec and README are regenerated from THIS file; never the reverse.
@@ -22,14 +16,11 @@ including what was dropped, since false negatives are the dangerous direction.
 import sys, json, hashlib, collections
 import fitz
 import pdf_inspector as pi
+from filters import MIN_DIM, MAX_ASPECT, MIN_AREA, UBIQUITY, MAX_EDGE_PX, furniture_reason, _tok
 
 # ---------------------------------------------------------------- definitions
 EDGE_TOL      = 3.0    # pt; two rect edges within this are the "same" gridline
 FULLPAGE_FRAC = 0.90   # a rect covering more than this is background, not ink
-MIN_DIM       = 120    # px; smaller on either side => furniture
-MAX_ASPECT    = 8.0    # w:h beyond this => rule/stripe, not a figure
-MIN_AREA      = 40_000 # px^2
-UBIQUITY      = 0.50   # placed on more than this fraction of pages => furniture
 INK_MIN       = 0.15   # filled non-background area / page area
 STROKE_MIN_FRAC   = 0.02  # stroke bbox must cover this much of the page
 STROKE_MAX_ASPECT = 5.0   # ...and not be an edge-hugging sliver
@@ -159,7 +150,6 @@ def render_reason(g):
     return None
 
 
-MAX_EDGE_PX = 1568       # above this the model downsamples anyway
 MIN_EDGE_PX = 800        # below this small print starts to go
 TARGET_EM_PX = 8.0       # px of em-height needed to read a glyph reliably
 NO_TEXT_EDGE_PX = 1100   # scans carry no font info; handwriting needs more
@@ -238,18 +228,6 @@ def grid_pages(page_sets, renders):
     return {p for p, n in placed.items() if n > RASTER_GRID}
 
 
-def furniture_reason(w, h, placements, npages):
-    if npages > 2 and placements / npages > UBIQUITY:
-        return f"ubiquitous({placements}/{npages}pp)"
-    if w < MIN_DIM or h < MIN_DIM:
-        return f"small({w}x{h})"
-    if max(w, h) / max(1, min(w, h)) > MAX_ASPECT:
-        return "sliver"
-    if w * h < MIN_AREA:
-        return "low_area"
-    return None
-
-
 def batch_furniture(results, min_docs=3, frac=0.5):
     """Signatures that recur across DIFFERENT documents are template emblems.
 
@@ -295,11 +273,6 @@ def drop_batch_furniture(results, template):
             r["vision_calls"] = len(keep)
             r["over_scale_guard"] = len(keep) > SCALE_GUARD
     return results
-
-
-def _tok(w, h, cap=MAX_EDGE_PX):
-    s = min(1.0, cap / max(w, h))
-    return int((w * s) * (h * s) / 750)
 
 
 def cost_guard(items, doc, edges):
@@ -581,4 +554,3 @@ if __name__ == "__main__":
                 print(f"{name:<46} {r['pdf_type']:<11} pp={r['pages']:<3} "
                       f"calls={r['vision_calls']:<3} {dict(kinds)}")
     raise SystemExit(1 if bad else 0)
-```
