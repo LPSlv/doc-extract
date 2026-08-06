@@ -214,39 +214,50 @@ The artifact is cached, so follow-ups read text instead of pixels.
 
 ![Cumulative tokens across repeated questions](docs/img/datasheet-cost.svg)
 
-## Office documents get the contract, not the routing
+## On Office documents the routing barely helps, and the numbers say so
 
 Word, Excel and PowerPoint go through [anydoc](https://github.com/firecrawl/anydoc)
 for text and through the same furniture filters, citation contract, cache and
-describe rubric as PDFs. What they do **not** get is the routing intelligence,
-and the reason is worth stating plainly rather than glossing.
+describe rubric as PDFs. Measured on 236 government and NASA documents
+(govdocs1 and NTRS, pinned in `eval/manifests/office.urls.tsv`):
 
-A PDF page is a program of drawing commands, so a chart is a few hundred
-rectangles with nothing to extract — `render_reason()` exists to infer figures
-from vector geometry. OOXML declares its images in the package. There is nothing
-to infer, and without a rendering engine there is no slide or sheet to render, so
-`render_reason`, `raster_grid` and `cost_guard` have no Office analogue.
+<!-- office:begin -->
+Across 236 documents (1,335 units), the filters cut 1,647 embedded images down to **1,316** worth looking at — 0.986 vision calls per unit. 19 spreadsheet charts were recovered as exact tables at no vision cost at all.
 
-Three things do carry over, and one is new:
+| format | files | units | images found | sent to vision | calls per unit |
+|---|--:|--:|--:|--:|--:|
+| Word (headings) | 162 | 484 | 415 | 331 | 0.684 |
+| Excel (sheets) | 35 | 77 | 26 | 1 | 0.013 |
+| PowerPoint (slides) | 39 | 774 | 1,206 | 984 | 1.271 |
+
+<sub>Baseline is describe every extracted asset, before furniture filters and dedup — not a page render, which Office documents do not have. Residue, counted not hidden: 1 chart unreadable, 108 assets in formats no agent can view.</sub>
+<!-- office:end -->
+
+**The 2.4× does not transfer, and it was never going to.** PDF routing wins by
+avoiding page renders — the expensive baseline it beats is looking at every
+page optically. An Office document has no render to avoid, so the only lever
+left is filtering embedded images, and most embedded images in a real deck are
+content. The filters drop a fifth of the assets but under two percent of the
+tokens, because what they catch is small by definition: logos, icons, rules.
+
+So a slide deck costs roughly one vision call per slide. A 79-slide NASA deck
+is 86 calls, and `over_scale_guard` will fire and ask you first. That is the
+honest shape of it.
+
+What Office documents genuinely gain:
 
 | | |
 |---|---|
-| Furniture filters | A logo on every slide is dropped by ubiquity exactly as a logo on every page is |
-| Citations | `[s07]` for a slide, `[Sheet2]`, `[Budget assumptions]` for a Word heading |
-| Byte-identity | Stripped output equals raw anydoc output, enforced by `eval/gate.py` |
-| **Spreadsheet charts** | Read from the chart definition, so the numbers are **exact** rather than estimated from pixels — and cost no vision call at all |
+| **Spreadsheet charts** | Read from the chart definition — **exact numbers, zero vision calls**. 19 of 20 recovered across 35 workbooks |
+| Citations and cache | `[s07]`, `[Sheet2]`, `[Budget assumptions]`; follow-up questions read text, not pixels |
+| Byte-identity | Stripped output equals raw anydoc output, enforced by `eval/gate.py` on every format |
+| No per-page bill | The vision is your own agent's, not a metered service |
 
-That last one exists because anydoc's spreadsheet path is pure cell extraction:
-it returns zero assets and no chart for a workbook that demonstrably contains
-both. It reads Word and PowerPoint charts perfectly well, so those are left
-alone — extracting them twice was the largest error caught during design.
-
-> [!NOTE]
-> **No "cheaper by N×" figure is claimed for Office, and none appears in the
-> table above.** That column divides by the cost of rendering every page at 140
-> dpi. Office has no render, so the denominator would silently mean something
-> different in the same table. Office measurements get their own table with
-> their own stated baseline, once the corpus exists.
+Excel is the outlier that pays: anydoc's spreadsheet path is pure cell
+extraction, returning zero assets and no chart for a workbook that plainly
+contains both, so everything visual there is recovered here or nowhere. It
+reads Word and PowerPoint charts perfectly well, and those are left alone —
+extracting them twice was the largest error caught during design.
 
 ## Not a reimplementation of Firecrawl Parse
 
@@ -301,10 +312,17 @@ the first document; at the measured 0.34 it does not.
 > - Text quality is bounded by pdf-inspector. If it misreads a page, so does this.
 > - Figure description *accuracy* is unmeasured in text-bearing PDFs. No public
 >   benchmark scores it; `eval/oldscans.md` is the only place it is measured at all.
-> - **Office numbers are unmeasured.** There is no pinned Office corpus yet, so
->   no vision-calls-per-unit or filter-cascade figure is published. The
->   correctness guarantees hold — byte-identity is enforced by `eval/gate.py` on
->   every format — but nothing quantitative is claimed.
+> - **On Office documents the routing saves very little.** 1.9% of vision
+>   tokens across the 236-document corpus, against 2.4× on PDFs. There is no
+>   page render to avoid, so the only lever is filtering embedded images, and
+>   most of those are content. Slide decks cost more than one call per slide.
+>   The cache, citations and chart extraction are the reasons to use it there —
+>   not the routing.
+> - **Office figure counts come from one corpus.** 236 government and NASA
+>   documents, skewed to what those bodies publish. A corporate deck template
+>   with a logo on every master would behave differently, and inherited
+>   furniture is invisible to the text engine entirely, so the ubiquity filter
+>   has less to catch than it does on PDFs.
 > - **EMF, WMF and embedded OLE objects cannot be read.** The text engine
 >   retains them faithfully and there is no rasterizer here, so they are dropped
 >   and counted rather than sent to an agent that cannot open them. Pasted Excel
@@ -331,13 +349,15 @@ the first document; at the measured 0.34 it does not.
 | [`eval/oldscans.md`](eval/oldscans.md) | olmOCR-bench scanned-document accuracy |
 | [`eval/opendataloader.md`](eval/opendataloader.md) | Regression gate procedure |
 | [`tests/raster-labels.tsv`](tests/raster-labels.tsv) | 382 raster firings labelled by eye — content, branding or portrait |
+| [`docs/benchmarks/results/office.json`](docs/benchmarks/results/office.json) | **236 Office documents** — govdocs1 and NASA NTRS, per-file rows |
 
 ```bash
 uv run --with pytest --with firecrawl-anydoc==0.1.6 \
   python -m pytest tests/ -q                      # splice/strip, cache, anydoc invariants
 python3 tests/check_sync.py                       # verbatim block matches harvest.py
 uv run eval/gate.py example/                      # byte-identity, real pipeline
-uv run eval/fetch.py bills && uv run eval/bench.py corpus/bills   # any corpus
+uv run eval/fetch.py bills && uv run eval/bench.py corpus/bills   # any PDF corpus
+uv run eval/fetch.py office && uv run eval/office_bench.py corpus/office
 uv run eval/report.py                             # regenerate RESULTS.md
 python3 eval/readme_tables.py --write             # regenerate this README's tables
 ```
