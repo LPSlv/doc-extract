@@ -4,7 +4,10 @@ Extends `pdf-extract` to Office formats and standalone images. Supersedes
 nothing: the PDF path in `2026-08-03-pdf-extract-skill-design.md` is unchanged,
 and every claim it makes still holds byte-for-byte.
 
-Status: design approved, not implemented.
+Status: design approved, not implemented. Revision 2 — §3 and §4 were rewritten
+after running the pinned wheel refuted three claims of revision 1. Those
+refutations are kept in place rather than edited out, because a design that
+hides what it got wrong teaches nothing.
 
 ## 1. Purpose
 
@@ -13,129 +16,175 @@ skill reads `report.pdf` and refuses `report.docx`, `model.xlsx`, `deck.pptx`
 and `scan.png` — formats that arrive in the same email as the PDF.
 
 The pitch stays what it was: extract text cheaply and locally, then spend vision
-calls only on what text extraction provably missed.
+calls only on what text extraction provably missed. The vision is the host
+agent's own — see §8.
 
 ## 2. Non-goals
 
-- **Not a rewrite of the PDF path.** `harvest.py` is untouched. All 12 corpora,
-  the byte-identity gate and every fitted threshold keep their current meaning.
-- **No LibreOffice, no pandoc, no system packages.** `uv` and nothing else,
-  as advertised.
-- **No layout model and no OCR model of our own.** The agent's own eyes are the
-  vision layer, as they already are for PDFs.
-- **Not HTML, EPUB, RTF, CSV, ODF, email or archives.** `anydoc` handles several
-  of these and adding them later is cheap, but none is measured here and this
-  project does not ship unmeasured claims.
-- **Not a `raster_grid`, `cost_guard` or page-render analogue for Office.**
-  See §4.3 — those solve a problem OOXML does not have.
+- **Not a rewrite of the PDF path.** `harvest.py`'s routing is untouched. All
+  12 corpora and every fitted threshold keep their current meaning, and the
+  benchmark numbers must be bit-identical after the refactor in §4.1.
+- **No LibreOffice, no pandoc, no system packages at runtime.** `uv` and
+  nothing else. Both are installed on the author's machine and both are
+  legitimate *fixture-generation* tools; neither may enter the skill's
+  dependency set.
+- **No layout model and no OCR model of our own.**
+- **Not HTML, EPUB, RTF, CSV, ODF, email or archives.** Dispatch whitelists
+  exactly `{pdf, docx, xlsx, pptx}` plus image types and returns `unsupported`
+  otherwise. `anydoc.format_from_bytes` also returns `doc`, `ppt`, `xls`, `odt`
+  and more, and anydoc converts several of them — but `ooxml.py` uses `zipfile`
+  and cannot read the legacy OLE containers, so citations and assets would
+  degrade silently. The whitelist is what keeps this non-goal from leaking.
+- **No page-render analogue for Office.** See §4.3.
 
 ## 3. Evidence base
 
-Everything in this section was verified against `firecrawl/anydoc` at commit
-depth 1 on 2026-08-06 and against `firecrawl_anydoc==0.1.6` on PyPI. Source
-line references are to the cloned repository.
+Everything here was verified against `firecrawl_anydoc==0.1.6` — the wheel
+actually depended on — by executing it, not by reading the design. Source
+citations are to the anydoc clone; where source and wheel could disagree, the
+wheel wins and is marked **[run]**.
 
-### 3.1 anydoc is the right text engine, and its PDF path proves it
+### 3.1 anydoc is the right text engine
 
-`anydoc` (MIT, Rust, ~5.7k stars, created 2026-08-03) converts Word,
-PowerPoint, Excel, OpenDocument, RTF, EPUB and CSV to GFM. Its own PDF path
-delegates to `pdf-inspector` — the exact engine `harvest.py` already uses. The
-two projects are already in the same family; this makes the relationship
-explicit.
+MIT, Rust, converts Word/PowerPoint/Excel/ODF/RTF/EPUB/CSV to GFM. Prebuilt
+`abi3` wheels for manylinux, musllinux, macOS and Windows at
+`requires-python >=3.10`, matching `convert.py`'s existing floor. **[run]**
+`uv run --with firecrawl-anydoc==0.1.6 python -c "import anydoc"` succeeds and
+`format_from_bytes` detects by content. No Rust toolchain, no system
+dependency.
 
-Prebuilt `abi3` wheels exist for manylinux, musllinux, macOS and Windows at
-`requires-python >=3.10`, matching `convert.py`'s existing floor. Verified on
-this machine:
+The alternatives lose on merit, not effort. `python-docx`/`openpyxl`/
+`python-pptx` are object-model libraries, not converters — choosing them means
+owning list numbering, style cascades, merged-cell grids, footnotes and the
+pptx layout→master text cascade, with no benchmark to prove parity. They remain
+the right tools for generating fixtures. `markitdown` converts but exposes no
+document model, no asset bytes and no typed errors, so the package reader would
+still be needed and the text engine would be a second unpinned quality surface.
 
-```
-uv run --with firecrawl-anydoc==0.1.6 python -c "import anydoc"   # OK
-anydoc.format_from_bytes(pdf_header)                              # -> 'pdf'
-```
-
-No Rust toolchain, no system dependency. The packaging promise survives.
+One watch item: anydoc's Rust `pdf-inspector` is 0.1.7 while this skill's Python
+path pins 0.2.6. Irrelevant while anydoc's PDF path is never used, and §2 keeps
+it that way.
 
 ### 3.2 anydoc has no visual layer, deliberately
 
-Quoting the README: images "render as their alt text in the Markdown, and the
-raw bytes stay available on the document model." Confirmed in
-`src/render/markdown/inline.rs`: `ImageSource::Asset(_) | Unavailable` emits
-alt text as plain text, and nothing at all when alt is empty. Scanned PDFs
-raise `UnsupportedError` with "OCR is required".
+`src/render/markdown/inline.rs` emits alt text for `ImageSource::Asset(_) |
+Unavailable` and nothing when alt is empty. Scanned PDFs raise
+`UnsupportedError`. That capability is reserved for Firecrawl's paid hosted
+Parse, so the gap anydoc leaves open is exactly what this skill already fills.
 
-That capability is reserved for Firecrawl's paid hosted Parse. The gap anydoc
-leaves open is precisely what this skill already does, so the two compose
-without overlap.
+### 3.3 Placement counts, and where they actually come from
 
-### 3.3 anydoc's document model cannot carry citations or furniture filtering
+`src/shared/assets.rs:16,33` dedups assets by package part — repeated
+placements of one part collapse to a single `Asset`. Revision 1 concluded from
+this that a custom rels-walking reader was required to restore `UBIQUITY`. That
+conclusion was wrong in both directions:
 
-Three findings, each verified in source, each of which would have broken an
-implementation that assumed otherwise:
+- **pptx** — the per-slide repack of §3.4 is run anyway for unit boundaries,
+  and each repacked package gets a fresh asset sink. **[run]** the shared logo
+  in a 3-slide fixture appears in all three slides' asset lists as
+  `ppt/media/image1.png`. So `UBIQUITY` is `len(units containing part) /
+  len(units)` with no rels walking at all. A useful side effect: the 128 MiB
+  asset cap applies per slide rather than per deck.
+- **docx** — dedup collapses `Asset` entries, not `Inline::Image` references.
+  Every placement produces its own image inline carrying the shared `asset_id`.
+  **[run]** `handmade-rich.docx` → `assets=2, image inlines=2, asset_ids=[0,1]`.
+- **xlsx** — see §3.5. anydoc surfaces no assets at all, so `ooxml.py` owns
+  extraction outright.
 
-| Finding | Source | Consequence |
-|---|---|---|
-| Slide anchors are emitted only on slides another slide links to | `src/formats/pptx/mod.rs:165` — `if targeted.contains(slide_path)` | `slide-N` anchors are absent from a typical deck; slide boundaries are not recoverable from the model |
-| Sheet headings are gated on a multi-sheet workbook | `src/formats/sheet/mod.rs:28,108` — `multi_sheet = sheet_names.len() > 1` | A single-sheet workbook carries no sheet marker |
-| Assets are deduplicated by package part | `src/shared/assets.rs:33` — `by_part`, "repeated origin parts share one asset" | Placement counts are collapsed, so `UBIQUITY` has nothing to count |
+**Inherited furniture never enters the count, in either direction.** anydoc's
+`load_layout`/`load_master` read placeholders and `txStyles` only, never
+`p:pic`; the docx frontend reads no header or footer parts. A master logo or a
+letterhead is therefore invisible to anydoc and costs zero vision calls by
+omission. This matters for §4.3: if asset extraction is ever moved into
+`ooxml.py` for a format, it must count only unit-level parts, or every
+inherited logo enters with placement count 1, sails under the `UBIQUITY`
+threshold, and buys a vision call each — precisely the failure the filter
+exists to prevent.
 
-The third is the load-bearing one. `UBIQUITY` — drop an image placed on more
-than 50% of units — is the filter that kills logos, and the original design
-measured it as the difference between 69 image placements and 1 worth reading.
-`anydoc` reports one asset with one `origin_part`, so placement counts must
-come from elsewhere.
+### 3.4 Slide boundaries by repacking — verified end to end
 
-**Conclusion: `anydoc` supplies text and asset bytes. Structure comes from our
-own OOXML package reader.** That reader is `zipfile` + `xml.etree`, both
-standard library, so it costs no dependency — and it is the same reader that
-yields chart XML in §4.4.
+`src/formats/pptx/mod.rs:73` derives `slide_paths` from `sldIdLst` in the
+presentation part. Rewriting that part to hold one `sldId` and re-zipping in
+memory yields a package anydoc reads as a one-slide deck, with every layout,
+master, notes and media part intact so the text cascade still resolves.
 
-### 3.4 Slide boundaries are recoverable by repacking
+**[run]** across anydoc's own fixtures, per-slide output concatenated with
+`"\n\n"` is **byte-identical** to whole-deck output for `handmade-order.pptx`,
+`handmade-inherit.pptx` and `pres.pptx`. **[run]** reversing `sldIdLst` in
+`pres.pptx` reverses anydoc's output, confirming it follows the list and not
+part names, so repacking by `rId` is correct.
 
-`src/formats/pptx/mod.rs:73` derives `slide_paths` from `sldIdLst` in
-`ppt/presentation.xml`. Rewriting that single part to hold one `sldId` and
-re-zipping in memory therefore yields a package `anydoc` reads as a one-slide
-deck. Every layout, master, notes and media part stays in place, so the
-slide → layout → master → presentation-default text cascade still resolves and
-the extraction quality is exactly `anydoc`'s.
+Two hazards, both found by running it:
 
-Cost is one `anydoc` call per slide at a ~4.7 ms median, so a 50-slide deck
-costs ~240 ms. This is the mechanism for pptx unit boundaries.
+- The surgery must be **textual and prefix-agnostic**, handling both
+  self-closing and element forms of `sldId`. Round-tripping through
+  `xml.etree` rewrites prefixes and perturbs anydoc's input.
+- The presentation part path must come from `_rels/.rels`' `officeDocument`
+  relationship, as `pptx/mod.rs:61-66` does, not a hardcoded
+  `ppt/presentation.xml`.
 
-### 3.5 xlsx needs no repacking
+One known divergence class: decks with internal slide-to-slide links.
+**[run]** `handmade-links.pptx` full-deck emits a resolved anchor where a
+repacked slide emits the raw relative path `slides/slide2.xml`, because
+`slide_anchors` holds one entry. Text content is identical; only link rendering
+differs. Cross-slide link targets are therefore rewritten to `[sNN]` citations
+using the `sldIdLst` index map — which suits our citation scheme better than
+anydoc's anchors would.
+
+Cost is O(slides × package bytes), not the trivial figure revision 1 implied:
+a 30 MB 150-slide deck copies ~4.5 GB. Entries are copied raw and other slides'
+parts pruned via the rels walk to contain it.
+
+### 3.5 xlsx: names from headings, never positional
 
 `src/formats/sheet/mod.rs:104-111` pushes `Block::heading(2, name)` — when
-multi-sheet — then exactly one `Block::Table` per sheet, in `sheet_names`
-order. Sheets therefore split by walking the block list and taking each `Table`
-block in order, which is reliable in the single-sheet case too. Sheet names
-come from the package reader, not from the conditional headings.
+multi-sheet — then one `Block::Table` per sheet. Revision 1 specified zipping
+package-reader `sheet_names` against `Table` blocks positionally. **That
+produces confidently wrong citations**, the one sin this project defines itself
+against.
 
-### 3.6 docx needs no repacking either
+Empty sheets (`:42`), unreadable sheets (`:36-40`) and empty grids (`:104-106`)
+all emit nothing. **[run]** a workbook `[Data, Empty, Summary]` yields exactly
+`heading(Data), table, heading(Summary), table` — positional zipping would cite
+Summary's table as `[Empty]`.
 
-Headings are unconditional `Block.kind == "heading"` entries carrying `level`.
-Only the `anchor` field is conditional, and citations are built from heading
-text and level rather than anchors.
+The rule is therefore inverted: **take names from the emitted heading blocks**,
+which pair 1:1 with tables after every skip path. Use the package reader's name
+only in the single-sheet case, where no heading exists. Excel enforces unique
+sheet names and forbids `[ ] : * ? / \`, so the citation syntax is safe. If
+heading count ever fails to match table count, fall back to whole-document
+citation rather than emit a misaligned one.
+
+### 3.6 docx needs no repacking
+
+Headings are unconditional `Block.kind == "heading"` entries carrying `level`;
+only `anchor` is conditional. **[run]** `doc.docx` → `# Intro` / `# Results`
+with the body image captured as an asset.
 
 ### 3.7 Parse adds nothing this skill needs
 
 Firecrawl's hosted Parse is `pdf-inspector` classification, a layout model and
-GLM-OCR — Zhipu's MIT-licensed 0.9B model, not a Firecrawl model. Its
-selectivity claim ("only the scanned ones reach a GPU") is `harvest.py`'s
-`no_text_layer` branch, routed on the same `pdf_inspector` classifier this
-skill already calls at `harvest.py:363`.
+GLM-OCR — Zhipu's MIT 0.9B model, not a Firecrawl model. Its selectivity claim
+("only the scanned ones reach a GPU") is `harvest.py`'s `no_text_layer` branch,
+routed on the same classifier this skill already calls at `harvest.py:363`.
 
 Parse routes on text presence alone. `render_reason()` also routes on vector
-geometry, so it catches pages that carry plenty of text but whose *content* is
-visual — charts, pinout diagrams, unstructured tables. Parse passes those
-through as text and drops the figure silently.
+geometry, catching pages that carry plenty of text but whose *content* is
+visual. Parse passes those through and drops the figure silently.
 
-One idea is worth taking: Parse assigns task-specific prompts and budgets per
-layout region, including LaTeX-specific prompting for formulas. The describe
-rubric has no formula guidance at all, which §4.5 fixes. Region-level prompting
-and a `fast|auto|ocr` mode switch are logged as follow-up work, not built here.
+anydoc ships its own agent skill, which is text-only and points scanned files at
+paid Parse. That is the competing baseline, and it sharpens the positioning in
+§8: everything they route to a paid API, this routes to the seat already paid
+for.
+
+The one idea worth taking is per-region prompting, including LaTeX for
+formulas — §4.5. Region-level prompting generally, and a `fast|auto|ocr` mode
+switch, are logged as follow-up work.
 
 ## 4. Architecture
 
 ```
-                   ┌─ pdf ──────────────► harvest.py            UNCHANGED
+                   ┌─ pdf ──────────────► harvest.py         routing UNCHANGED
                    │                       pdf-inspector + PyMuPDF geometry
 input ─► detect ───┼─ docx / xlsx / pptx ─► office.py + ooxml.py
    format_from_    │                       text, units, assets, charts
@@ -144,96 +193,119 @@ input ─► detect ───┼─ docx / xlsx / pptx ─► office.py + ooxml.
                              all paths converge ────┴──► filters.py
                                                           furniture · dedup
                                                                 │
-                                          artifact.py · cache.py · describe.py
-                                                          UNCHANGED
+                                                artifact.py · cache.py
+                                                     describe.py (labels)
 ```
 
 ### 4.1 Module boundaries
 
 | Module | Responsibility | Depends on |
 |---|---|---|
-| `harvest.py` | PDF routing. **No change** beyond having shared filters imported rather than defined | `pdf-inspector`, `pymupdf`, `filters` |
-| `filters.py` | **New.** `furniture_reason`, pixel-hash dedup, `_tok`. Format-agnostic, lifted verbatim from `harvest.py` | stdlib only |
-| `ooxml.py` | **New.** Package reader: unit boundaries, asset→unit placement counts, chart series, slide repacking | stdlib only (`zipfile`, `xml.etree`) |
-| `office.py` | **New.** Orchestrates `anydoc` + `ooxml`, emits the `harvest()` contract | `firecrawl-anydoc`, `ooxml`, `filters` |
-| `image.py` | **New.** One image → one item, no text layer | stdlib only |
+| `harvest.py` | PDF routing. Behaviour unchanged; imports shared filters instead of defining them | `pdf-inspector`, `pymupdf`, `filters` |
+| `filters.py` | **New.** `furniture_reason`, `_tok`, and the constants they read. Nothing else | stdlib only |
+| `ooxml.py` | **New.** pptx: presentation-part discovery, `sldIdLst` surgery, re-zip. xlsx: sheet names, charts, media. Nothing for docx | stdlib only |
+| `office.py` | **New.** Orchestrates anydoc + `ooxml`, emits the `harvest()` contract | `firecrawl-anydoc`, `ooxml`, `filters` |
+| `image.py` | **New.** One image → one item | stdlib only |
 | `convert.py` | Format dispatch, then unchanged | all adapters |
-| `artifact.py`, `cache.py`, `describe.py` | **No change** except `ENGINE` | — |
+| `describe.py` | **Changed** — unit labels, see below | `artifact` |
+| `artifact.py`, `cache.py` | Unchanged except a second engine constant (§5) | — |
 
-Lifting the shared filters out of `harvest.py` is the one change to existing
-code. They are format-agnostic today but entangled with PyMuPDF calls; both
-paths need them, and `harvest.py` is 577 lines and does not need to grow.
+**The pixel-hash dedup does not move.** Revision 1 proposed lifting it into
+`filters.py`. `harvest.py:417-449` is deliberately entangled with xref and
+raw-stream shortcuts that exist to avoid re-encoding every image, and moving it
+risks perturbing measured routing for no gain. The Office analogue is three
+lines of `sha256(asset.data)` and lives in `office.py` with a comment saying
+exactly why it is not shared.
 
-That lift has a consequence worth naming, because it is easy to miss.
-`reference/harvest-block.md` is a verbatim copy of `harvest.py` whose stated
-promise is that an agent unable to execute a file can paste the block and get
-identical routing. Once `harvest.py` imports from `filters.py`, a pasted block
-fails on the import and the promise is false. `tests/check_sync.py` must
-therefore render the block as `filters.py` followed by `harvest.py` with the
-import line elided, and keep asserting the two stay in step. The alternative —
-duplicating the filters into `office.py` — is rejected: the README states
-`harvest.py` is the single source of truth for routing, and two copies of a
-fitted threshold is exactly the drift that claim exists to prevent.
+**`describe.py` does change, and carefully.** `describe.py:41-42` sorts by
+`(x["page"], x["id"])` and formats `**[p{i['page']}] …**`. Office units are
+strings, so a mixed batch raises `TypeError` and a sheet renders as
+`[pSheet2]`. It needs a unit-label-aware line that keeps `[p{n}]` byte-exact
+for integer pages — `example/sample-report.expected.md` and the gate corpus
+depend on it — and a sort key tolerant of both. The gate compares stripped
+text, so it would not catch a label regression; an expected-output assertion
+must.
+
+**The `filters.py` lift breaks a promise that must be repaired in the same
+commit.** `reference/harvest-block.md` is a verbatim copy of `harvest.py` whose
+stated purpose is that an agent unable to execute a file can paste it and get
+identical routing. Once `harvest.py` imports from `filters.py`, the pasted
+block fails. `tests/check_sync.py` must render the block as `filters.py`
+followed by `harvest.py` with the import line elided, and assert that import
+line matches an exact literal so the elision cannot silently drift. Its HEADER
+text and `SKILL.md`'s repetition of the promise both change with it.
 
 ### 4.2 The adapter contract
 
-Every adapter returns the dict `harvest()` already returns. `convert.py` and
+Every adapter returns the dict `harvest()` returns, so `convert.py` and
 everything downstream stay ignorant of format. Office and image adapters return
-`pdf_type: null` and set `kind` to `"raster"` on every item, since no adapter
-but the PDF one can render a unit.
+`pdf_type: null`, and `page` carries a unit label rather than an integer.
 
 ### 4.3 Routing is thin for Office, and that is the honest outcome
 
-`render_reason`, `grid_pages` and `cost_guard` are PDF-only and get no
-analogue. All three exist because a PDF page is a program of drawing commands
-that hides its figures; OOXML declares its images in the package. There is also
-no slide or sheet render to fall back to without LibreOffice, which §2 rules
-out.
+`render_reason`, `grid_pages` and `cost_guard` are PDF-only. All three exist
+because a PDF page is a program of drawing commands that hides its figures;
+OOXML declares its images in the package. There is also no slide or sheet render
+to fall back to without LibreOffice, which §2 rules out.
 
-Office routing is therefore: extract assets → `furniture_reason` → pixel-hash
-dedup → describe. Placement counts for `UBIQUITY` come from `ooxml.py` walking
-per-unit relationship parts.
+Office routing is: extract assets → `furniture_reason` → byte-hash dedup →
+describe. This asymmetry belongs in the README plainly. The selective-routing
+advantage is a PDF phenomenon; what Office inherits is the furniture filters,
+the artifact and citation contract, and the describe rubric.
 
-This asymmetry must be stated plainly in the README rather than glossed. The
-selective-routing advantage is a PDF phenomenon; what Office formats inherit is
-the furniture filters, the artifact and citation contract, and the describe
-rubric.
+`UBIQUITY` is close to vestigial here — §3.3 shows inherited furniture never
+enters the count, and a genuinely repeated pasted image is already collapsed by
+dedup. It stays because it costs nothing and the residual case is real, but no
+claim rests on it.
 
-### 4.4 Native charts
+### 4.4 Native charts — xlsx only
 
-A chart in pptx/xlsx/docx is `<c:chart>` XML, not an image. `anydoc` drops it
-entirely — not even alt text, because it is not an image inline. That is silent
-content loss, the exact failure mode this project exists to catch.
+Revision 1 claimed anydoc drops charts in all three formats. **That was wrong**,
+and running the wheel caught it. `shared/drawingml.rs:11-70` implements
+`chart_blocks()`, emitting a bold title plus a categories × series table from
+`c:numCache`/`c:strCache`, called from `pptx/mod.rs:584` and
+`docx/content.rs:527`. Implementing our own for those formats would have emitted
+every chart **twice** — once in anydoc's base text, once in a delimited block.
 
-Chart XML carries `<c:numCache>` and `<c:strCache>` holding the plotted series
-values, so `ooxml.py` extracts them as a Markdown table. Extraction is
-deterministic, so `convert.py` writes it during the build rather than leaving
-it pending for the agent — but it goes in through `artifact.splice()`, inside
-the same delimiters every addition uses. That placement is required, not
-stylistic: `anydoc` emits no chart content at all, so a chart table outside the
-delimiters would fail the byte-identity gate in §6.1.
+It is **not** called from the sheet path, and the gap there is wider than
+charts. **[run]** on a workbook containing `xl/media/image1.png` and
+`xl/drawings/drawing1.xml`:
 
 ```
-**Chart (bar, slide 4).** Revenue and cost by quarter. Series from c:numCache.
-
-| Quarter | Revenue | Cost |
-|---|--:|--:|
-| Q1 | 1240 | 890 |
-| Q2 | 1310 | 902 |
+anydoc assets for xlsx: 0 []
+markdown: '| value |\n| --- |\n| 7 |'
 ```
 
-This is strictly better than a vision call: the numbers are exact rather than
-read from pixels, and it costs nothing. Charts whose caches are absent or
-unparseable are recorded in `dropped` with `why: "native_chart_unread"` and
-counted, so the residue is visible rather than silent.
+The xlsx path is pure calamine cell extraction — drawings, images, charts and
+chart sheets are dropped with no trace. So `ooxml.py` owns images and charts for
+xlsx alone, and neither for docx or pptx.
+
+**Caches are producer-dependent, so extraction must not depend on them.**
+**[run]** python-pptx writes caches; openpyxl writes none. For xlsx this is
+recoverable by construction: the referenced ranges are in the same workbook, so
+the extractor resolves `c:f` ranges against sheet data when caches are absent.
+Coverage is therefore cache-hit ∪ reference-resolution.
+
+Two residues to count in `dropped`, never to paper over:
+
+- Scatter and bubble charts. `drawingml.rs:36-46` reads `c:cat`/`c:val` only, so
+  `c:xVal`/`c:yVal` series yield a title and no data *even on the paths anydoc
+  handles*. Detect and count as `native_chart_unread`; do not out-extract
+  anydoc inside the delimited region for pptx/docx, which would break §6.1.
+- Charts recoverable by neither cache nor reference. An OOXML chart has no
+  rendered image, so there is no vision fallback and the content is simply
+  unavailable. Limitations, not a promise.
+
+`numCache` being "stale" relative to live data is not a defect here: the cache
+is what the chart *displays*, so matching it is document fidelity.
 
 ### 4.5 Formula guidance in the describe rubric
 
-`reference/describing-visuals.md` gains a Formulas section: transcribe as
-LaTeX, preserve equation numbering, mark unreadable subscripts rather than
-guessing. Parse budgets formulas separately for this reason, and the
-`olmocr_arxiv_math` corpus is 522 of the 2,342 benchmarked files. Applies to
-both paths — it is a rubric change, not a routing change.
+`reference/describing-visuals.md` gains a Formulas section: transcribe as LaTeX,
+preserve equation numbering, mark unreadable subscripts rather than guessing.
+Parse budgets formulas separately for this reason, and `olmocr_arxiv_math` is
+522 of the 2,342 benchmarked files. A rubric change, not a routing change,
+applying to both paths.
 
 ### 4.6 Citations
 
@@ -241,18 +313,25 @@ both paths — it is a rubric change, not a routing change.
 |---|---|---|---|
 | pdf | page | `[p12]` | unchanged |
 | pptx | slide | `[s07]` | `sldIdLst` order, via repacking |
-| xlsx | sheet | `[Sheet2]` | `sheet_names` zipped with `Table` blocks |
-| docx | heading | `[§3.2]` | heading blocks and levels |
+| xlsx | sheet | `[Sheet2]` | emitted heading blocks (§3.5) |
+| docx | heading | `[§Budget assumptions]` | the document's own label |
 | image | whole | `[img]` | — |
 
-The `pages/` directory keeps its name and holds these units. Renaming it to
-`units/` would force a schema bump that invalidates every cached artifact and
-buy nothing functional.
+**docx citations use the document's own heading label, never a synthesized
+number.** Revision 1 proposed deriving `[§3.2]` by counting heading levels.
+Real documents have unnumbered headings, appendices and restarts, so a counted
+number would not match what the user sees in Word — which defeats the point of a
+citation. anydoc already prepends the visible number of a numbered heading
+(`docx/content.rs:86-92`); use that verbatim when present, fall back to heading
+text, then to positional `[h07]`. Duplicate heading texts get positional
+disambiguation.
+
+`pages/` keeps its name and holds units under positional filenames
+(`u001.md`), because sheet names and heading text contain characters hostile to
+filenames. The human label goes in the file's first line and in the manifest;
+citations use the label, greps find either.
 
 ### 4.7 Errors
-
-`anydoc`'s typed taxonomy maps onto the existing terminal statuses, so a bad
-file still never aborts a batch:
 
 | anydoc | status |
 |---|---|
@@ -260,69 +339,149 @@ file still never aborts a batch:
 | `MalformedError`, `MissingPartError` | `unreadable` |
 | `UnsupportedError` | `unsupported` (new; terminal, reported, batch continues) |
 | `ResourceLimitError` | `unreadable`, with `limit` in `detail` |
+| `OSError` | `unreadable` — the binding raises this, not `ConvertError`, for a file it cannot read |
 
-`ResourceLimitError` on `max_asset_total_bytes` is a live risk for image-heavy
-decks. The Python binding does not expose the limit — §7 resolves this.
+**Unit-level failures must not be document-terminal.** Whole-deck conversion
+skips a corrupt slide (`pptx/mod.rs:120-127`); a repacked single slide instead
+hits `failed == len(slide_paths)` and raises `MalformedError`
+(`pptx/mod.rs:210-212`). Mapped naively that kills a 60-slide deck for one bad
+slide. A per-unit failure is recorded in `dropped` and the remaining 59 units
+are produced.
+
+`ResourceLimitError` is **not** an image-count ceiling. **[run]** it fires as
+`max_entry_bytes` — `word/media/image1.png declares 201326592 decompressed
+bytes` — a zip-bomb guard at a deliberately non-configurable 128 MiB
+(`package/limits.rs:35`). Ordinary image-heavy documents do not trip it, and
+crafted bombs should. Per-slide repacking makes the cap per slide for pptx.
+
+### 4.8 Unviewable media
+
+anydoc retains `image/emf`, `image/wmf` and OLE payloads
+(`application/vnd.ms-ole-object`). Without a rasterizer the host agent cannot
+view them, so routing one to `pending` creates an item no agent can complete.
+Assets are filtered to media types the agent can actually read; SVG is passed as
+text; everything else is dropped as `unviewable_media(<type>)` and **counted**.
+
+This is a real content-loss path — for EMF content the material is neither
+extracted nor viewable — and legacy-era documents are full of WMF. It belongs
+in Limitations with a measured frequency, not a footnote.
 
 ## 5. Cache and versioning
 
-`ENGINE` becomes `"pdf-inspector==0.2.6+anydoc==0.1.6"`. The cache key already
-hashes `ENGINE` and `SCHEMA`, so the version bump invalidates stale artifacts
-through machinery that exists. `SCHEMA` stays at 1: the artifact layout does
-not change.
+**Engine strings are per format.** `cache.py:31` hashes the engine into every
+artifact key, so a single combined `ENGINE` would invalidate every cached *PDF*
+artifact the moment Office support ships — re-billing every vision call already
+paid for, on a path §2 promises is unchanged. `cache_dir()` already accepts
+`engine=`: PDF keeps `"pdf-inspector==0.2.6"`, Office passes
+`"anydoc==0.1.6"`. Future anydoc bumps then cost nothing on the PDF side.
 
-`anydoc` is three days old and its API stability is unproven, which the exact
-pin and the cache key together contain.
+`SCHEMA` stays at 1; the artifact layout does not change.
+
+anydoc is days old and its API stability is unproven. The exact pin and the
+cache key contain the correctness risk, but not the maintenance risk: this
+design couples to several undocumented internals — `sldIdLst` driving
+`slide_paths`, per-slide concat equalling whole-deck, one table block per
+non-empty sheet, asset dedup by part, chart table shape. `tests/test_anydoc_
+invariants.py` asserts each against committed fixtures, so an upgrade that
+breaks one fails loudly instead of corrupting output quietly.
 
 ## 6. Validation
 
+**No Office ground-truth extraction benchmark exists.** OmniDocBench,
+olmOCR-bench and the rest are PDF/page-image based; VLM-SlideEval measures VLM
+comprehension of slides, not extraction fidelity. Validation is therefore
+self-referential and construction-based.
+
 ### 6.1 Byte-identity gate, extended
 
-`eval/gate.py` currently proves stripped `doc.md` equals raw
-`pi.process_pdf()` output exactly. The Office analogue substitutes
-`anydoc.to_markdown_bytes()` as the reference, including the hostile payload
-that quotes the close delimiter and the re-describe that simulates a resumed
-run.
+`eval/gate.py` proves stripped `doc.md` equals raw engine output exactly. For
+docx and xlsx the reference is `anydoc.to_markdown_bytes(file)`; for pptx it is
+the per-slide repack concatenation, because repacking is part of the pipeline
+under test and comparing against a whole-deck run would test anydoc instead.
+The hostile-payload and re-describe legs port unchanged.
 
-For pptx the reference is the concatenation of per-slide repacked conversions,
-not a whole-deck conversion — repacking is part of the pipeline under test, so
-comparing against a whole-deck run would test `anydoc` rather than this skill.
-Whether the two agree is itself worth recording.
+The concat-vs-whole-deck agreement rate is recorded as a corpus statistic. The
+one divergence class is source-understood (§3.4), so any *other* divergence is a
+bug detector.
 
-### 6.2 Office corpus
+xlsx chart tables and unit labels are the two things the gate cannot see —
+chart output is inside delimiters and labels are stripped — so both need
+expected-output assertions of their own.
 
-A 13th corpus, pinned exactly as the existing 12 are: `eval/fetch.py office`
-reading `eval/manifests/office.urls.tsv` as `filename<TAB>url<TAB>sha256`, with
-magic-byte validation. Candidate sources must be stably hosted and
-redistributable by URL; government and institutional publications are the
-likeliest fit, as they were for `bills`. Selection is part of implementation,
-not settled here.
+### 6.2 Chart validation is unusually strong
 
-`eval/bench.py` needs Office token accounting: no page renders exist, so the
-"read every page" baseline has no meaning. The comparison is instead against
-describing every extracted asset, before furniture filtering and dedup.
+Ground truth is in the XML being parsed. Three tests, all exact string
+equality, no judge and no tolerance: a hand-built zip fixture with caches, where
+output must equal the table the test wrote; an openpyxl fixture without caches,
+where the extractor must resolve `c:f` ranges to the values the test wrote; and
+a corpus-level self-consistency check re-deriving each chart's table from the
+workbook's own sheet data.
 
-### 6.3 What the README may claim
+### 6.3 Office corpus
 
-Nothing until §6.2 produces numbers. The existing table gains a row when it is
-measured, and not before. The Office asymmetry from §4.3 and the chart residue
-from §4.4 both belong in Limitations.
+A 13th corpus pinned as the existing 12 are. Sources verified reachable:
 
-## 7. Open questions, to resolve in the first implementation task
+- **xlsx — SEC EDGAR `Financial_Report.xlsx`**, per-filing stable URLs, public
+  domain. `fetch.py` needs a per-host User-Agent override — SEC returns an HTML
+  block page to a bare UA and the file to a contact-bearing one — plus their
+  10 req/s limit alongside the existing `SLOW_HOSTS` mechanism.
+- **pptx — NASA NTRS**, per-file stable URLs, public domain.
+- **docx and legacy-era all three — Digital Corpora govdocs1**, explicitly
+  redistributable. Distributed as per-type zips rather than per-file URLs, so
+  manifests gain a member form pinning both zip and member sha256, and the
+  magic-byte check becomes format-aware (`PK\x03\x04` plus
+  `[Content_Types].xml`) instead of `%PDF-`. Its own documentation warns that
+  extensions lie — validate by content and expect malformed members, which are
+  good input for the error taxonomy.
 
-1. **`max_asset_total_bytes`.** The Python binding exposes no configuration.
-   If image-heavy decks trip `ResourceLimitError`, either assets come from
-   `ooxml.py` instead of `anydoc` — which the package reader can already do —
-   or the limit needs raising upstream.
-2. **Repacking robustness.** §3.4 is verified by reading `anydoc`'s source, not
-   by running it. Needs validation against real decks, including a deck whose
-   `sldIdLst` order differs from part-name order, and one with `.pptm` macros.
-3. **docx unit granularity.** Heading-level citations are only useful if a
-   document has headings. The fallback for a heading-less docx is undecided;
-   whole-document citation is the likely answer.
-4. **Chart coverage.** Which chart types carry usable caches, and how often
-   `numCache` is absent in real files. Determines whether §4.4 is a feature or
-   a footnote.
+**Paired-format documents are the only external quality signal available.**
+Institutions often publish the same document as both docx and PDF. On such
+pairs the already-benchmarked PDF path is a trusted reference: convert both and
+compare content coverage. The two paths' failure modes are independent, so
+divergences localize bugs. Worth 20–30 pairs even if collected by hand.
+
+### 6.4 What may and may not be claimed
+
+**"Cheaper by N×" cannot be claimed for Office and must not appear in the
+existing table.** That column is `opt_tok / ours_tok` where `opt_tok` is a
+140-dpi page render (`bench.py:42-57`). Office has no render, so the
+denominator would silently mean something different in the same table — exactly
+the unmeasured claim §2 forbids. Office gets its own table with its baseline
+stated, and "vision calls per page" becomes per *unit*, labelled as such.
+
+`office_bench.py` can honestly measure: text tokens; assets extracted versus
+sent to vision, which is the Office descendant of "69 placements → 1"; vision
+calls per unit; chart tables recovered at zero vision cost with residue counts;
+and unviewable-media counts.
+
+May be claimed on measurement: those numbers, and byte-identity with anydoc's
+text — stated as the opendataloader note states pdf-inspector equality,
+"anydoc's number, enforced not asserted". May **not** be claimed: any Office
+"cheaper by" ratio, any OCR-quality comparison with Parse, any figure-description
+accuracy, or EMF/WMF coverage.
+
+Limitations gains: the §4.3 routing asymmetry, unviewable legacy media with
+measured frequency, the scatter and cacheless chart residue, and heading-less
+docx citation granularity.
+
+## 7. Open questions
+
+Revision 1 listed four. Two are retired by measurement, recorded in §4.7 and
+§3.4. The remainder, plus what running the wheel raised:
+
+1. **docx heading-less fallback.** Decision rule: measure the fraction of
+   corpus docx with zero headings. Above 20%, whole-document citation is a
+   first-class path in SKILL.md rather than a footnote. Contracts structured as
+   numbered lists rather than Heading styles are the population at risk.
+2. **Repack robustness on real decks.** §3.4 is verified on anydoc's fixtures
+   and constructed decks, not on a corpus. Falsified if any deck converts
+   whole-deck but fails per-slide, if element-form or exotic-prefix `sldIdLst`
+   breaks the surgery, or if `.pptm` fails.
+3. **Unviewable-media frequency.** §4.8's handling is decided; its cost is not
+   measured. Determines whether it is a Limitations line or a headline caveat.
+4. **Unit-file naming.** §4.6 chooses positional `u001.md`. This is the one
+   decision that would force `SCHEMA = 2` if it turns out wrong, so it is
+   settled before implementation, not after.
 
 ## 8. Positioning
 
@@ -331,28 +490,26 @@ argument, and it is why this is a skill rather than a library or a service.
 
 Firecrawl Parse bills 1 credit per page, flat, whether or not a page needed
 OCR — roughly $0.83–3.20 per 1,000 pages depending on plan, on top of an
-account, an API key and a 50 MB-per-file upload of documents to a third party.
-This skill spends the subscription the user already pays for. There is no
-second bill, no key to manage, and no document leaves the machine.
+account, an API key and an upload of the documents to a third party. This skill
+spends the subscription the user already pays for. No second bill, no key, and
+no document leaves the machine.
 
 Selective routing is what makes that practical rather than merely possible. At
 1.00 vision calls per page a subscription-funded agent burns its budget on the
-first document; at the measured 0.34 it does not. The routing is not only a
-cost optimisation — it is the thing that lets the vision layer live inside a
-seat licence at all.
+first document; at the measured 0.34 it does not. The routing is not only a cost
+optimisation — it is what lets the vision layer live inside a seat licence at
+all. `SCALE_GUARD` continues to work for Office unchanged, because it gates on
+`len(pending)` regardless of format.
 
-Two consequences follow for the Office work:
+Two honesty constraints:
 
-- The comparison the README should draw against a per-page service is
-  **honest and favourable**, but it must be stated as what it is: a different
-  billing model, not a quality claim. Parse's OCR on a scanned page may well
-  read better than a general agent's; that has not been measured here and must
-  not be implied.
-- **Local execution is a feature to state, not to overclaim.** Documents stay
-  on the machine because nothing in the pipeline makes a network call —
-  `anydoc`, `pdf-inspector` and PyMuPDF are all local. Whether the agent's own
-  vision calls leave the machine depends on the host, which this skill does not
-  control and must not make promises about.
+- The comparison against a per-page service is **a billing-model claim, not a
+  quality claim.** Parse's OCR on a scanned page may well read better than a
+  general agent's. That is unmeasured here and must not be implied.
+- **Local execution is a feature to state, not to overclaim.** Nothing in the
+  pipeline makes a network call — anydoc, pdf-inspector and PyMuPDF are all
+  local. Whether the agent's own vision calls leave the machine depends on the
+  host, which this skill does not control and must not make promises about.
 
 ### Public claim
 
