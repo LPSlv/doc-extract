@@ -1,10 +1,18 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
+# dependencies = [
+#   "pdf-inspector==0.2.6",
+#   "pymupdf==1.28.0",
+#   "firecrawl-anydoc==0.1.6",
+# ]
 # ///
-"""Turn PDFs into a cached, citable artifact. The orchestrator.
+"""Turn documents into a cached, citable artifact. The orchestrator.
 
-    uv run convert.py <pdf> [...] [--out DIR] [--force] [--edge PX]
+    uv run convert.py <file> [...] [--out DIR] [--force] [--edge PX]
+
+PDFs, Word, Excel, PowerPoint and standalone images. Format is decided by
+content rather than by extension, because a .doc that is really a .docx is
+common enough to matter and mis-dispatching it produces confident nonsense.
 
 Runs everything deterministic and writes a complete artifact, then prints one
 JSON object per document telling the agent exactly which image files still need
@@ -32,6 +40,30 @@ import fitz
 from harvest import harvest, render_edge, MAX_EDGE_PX, SCALE_GUARD
 from artifact import splice, strip
 from cache import cache_dir, publish, sha256_file, ENGINE, SCHEMA
+import image as image_adapter
+
+
+def route(src):
+    """(harvester, engine) for this file, decided by content.
+
+    Engines are per format on purpose. The cache key hashes the engine string,
+    so a single combined one would invalidate every cached PDF artifact the
+    moment Office support shipped -- re-billing vision calls already paid for,
+    on a path whose behaviour is guaranteed unchanged.
+    """
+    with open(src, "rb") as fh:
+        head = fh.read(64)
+    if head[:5] == b"%PDF-":
+        return harvest, ENGINE
+    if image_adapter.media_type(head):
+        return image_adapter.harvest_image, image_adapter.ENGINE
+    # Office packages are zips, and a zip's directory lives at the END of the
+    # file, so detection needs the whole thing rather than a prefix.
+    import office
+    with open(src, "rb") as fh:
+        if office.detect(fh.read()):
+            return office.harvest_office, office.ENGINE
+    return harvest, ENGINE          # let the PDF path report why it is not one
 
 
 def _write_image(doc, item, images_dir, edge_override=None):
@@ -61,42 +93,76 @@ def _write_image(doc, item, images_dir, edge_override=None):
 
 def convert(path, out=None, edge=None, force=False, root=None):
     src = Path(path)
-    dest = cache_dir(src, root=root)
+    harvester, engine = route(src)
+    dest = cache_dir(src, root=root, engine=engine)
 
     if dest.exists() and not force:
         man = json.loads((dest / "manifest.json").read_text())
         return _report(src, dest, man, cached=True, out=out)
 
-    h = harvest(str(src))
+    h = harvester(str(src))
     if h["status"] != "ok":
         return {"status": "error", "error": h["error"], "path": str(src),
                 "detail": h.get("detail")}
 
+    is_pdf = harvester is harvest
+
     def build(staging):
         (staging / "images").mkdir()
         (staging / "pages").mkdir()
-        doc = fitz.open(str(src))
-        try:
+        if is_pdf:
+            doc = fitz.open(str(src))
+            try:
+                for item in h["items"]:
+                    item["path"] = f"images/{_write_image(doc, item, staging / 'images', edge)}"
+            finally:
+                doc.close()
+        else:
+            # Office and image adapters carry the decoded bytes on the item,
+            # because there is no document handle to re-read them from. The
+            # key is stripped before the manifest is written: it is transport,
+            # not a record.
             for item in h["items"]:
-                item["path"] = f"images/{_write_image(doc, item, staging / 'images', edge)}"
-        finally:
-            doc.close()
+                blob = item.pop("_bytes", None)
+                if blob is None:
+                    continue
+                name = f"{item['id']}.png" if item.get("media_type") == "image/png" \
+                    else f"{item['id']}{_suffix(item.get('media_type'))}"
+                (staging / "images" / name).write_bytes(blob)
+                item["path"] = f"images/{name}"
 
         (staging / "doc.md").write_text(h["markdown"])
+        labels = h.get("unit_labels")
         for i, pm in enumerate(h.get("page_markdown") or [], start=1):
-            (staging / "pages" / f"p{i:03d}.md").write_text(pm or "")
+            # PDF units are pages and keep their p001.md names, which the
+            # example artifact and the gate corpus depend on. Office units are
+            # named things, and a sheet called "Q1 P&L / draft" is not a
+            # filename -- so those are positional, with the label in the
+            # manifest where a citation can find it.
+            stem = f"p{i:03d}" if is_pdf else f"u{i:03d}"
+            (staging / "pages" / f"{stem}.md").write_text(pm or "")
         (staging / "manifest.json").write_text(json.dumps(
-            {"items": h["items"], "dropped": h["dropped"]}, indent=2))
+            {"items": h["items"], "dropped": h["dropped"],
+             **({"units": labels} if labels else {})}, indent=2))
         (staging / "source.json").write_text(json.dumps({
             "path": str(src.resolve()), "sha256": sha256_file(src),
             "bytes": src.stat().st_size, "pdf_type": h["pdf_type"],
-            "pages": h["pages"], "engine": ENGINE, "schema": SCHEMA,
+            "pages": h["pages"], "engine": engine, "schema": SCHEMA,
             "status": "ok",
         }, indent=2))
 
     publish(dest, build)
     man = json.loads((dest / "manifest.json").read_text())
     return _report(src, dest, man, cached=False, out=out)
+
+
+_SUFFIX = {"image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif",
+           "image/webp": ".webp", "image/bmp": ".bmp", "image/tiff": ".tif"}
+
+
+def _suffix(media):
+    """Keep the real extension: an agent reading the file needs to decode it."""
+    return _SUFFIX.get(media, ".bin")
 
 
 def _report(src, dest, man, cached, out):

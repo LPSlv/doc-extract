@@ -353,6 +353,26 @@ def charts(zf):
     return out
 
 
+CHART_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart"
+
+
+def chart_sheets(zf):
+    """{chart-part: sheet-name} for charts anchored in a worksheet.
+
+    A citation that names the wrong sheet is worse than no citation, and a
+    workbook's charts are rarely all on its first sheet.
+    """
+    out = {}
+    for sheet, part in _sheet_part_map(zf).items():
+        for _, target in rels_for(zf, part).items():
+            if not target[1].startswith("xl/drawings/"):
+                continue
+            for dtyp, dtarget in rels_for(zf, target[1]).values():
+                if dtyp == CHART_REL:
+                    out[dtarget] = sheet
+    return out
+
+
 def images(zf):
     """[(media-part, sheet-name)] for every image anchored in a worksheet.
 
