@@ -74,7 +74,7 @@ Building, Washington D.C."; telephone Main 3928; archival note "ack 5/26/14";
 page number 10.
 ```
 
-Do **not** write `<!-- pdf-extract:add -->` markers yourself. `describe.py`
+Do **not** write `<!-- doc-extract:add -->` markers yourself. `describe.py`
 adds them, and it escapes any that appear in your text — writing them by hand
 turns them into visible `&lt;!--` garbage in `doc.md`.
 

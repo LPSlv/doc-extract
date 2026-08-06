@@ -16,7 +16,7 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "skills" / "pdf-extract"))
+sys.path.insert(0, str(ROOT / "skills" / "doc-extract"))
 FIX = Path(__file__).resolve().parent / "fixtures"
 
 import ooxml

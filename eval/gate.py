@@ -28,7 +28,7 @@ Usage:  uv run eval/gate.py <pdf|dir> [...]
 import sys, shutil, tempfile, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "pdf-extract"
+SKILL = ROOT / "skills" / "doc-extract"
 sys.path.insert(0, str(SKILL))
 
 import pdf_inspector as pi
@@ -108,7 +108,7 @@ def main(args):
     if not files:
         print("usage: uv run eval/gate.py <file|dir> [...]", file=sys.stderr)
         return 2
-    cache_root = pathlib.Path(tempfile.mkdtemp(prefix="pdfx-gate-"))
+    cache_root = pathlib.Path(tempfile.mkdtemp(prefix="docx-gate-"))
     ok = bad = skip = 0
     try:
         for p in files:

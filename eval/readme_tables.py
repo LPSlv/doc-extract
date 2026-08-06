@@ -41,7 +41,7 @@ def main(write=False):
 
     L = []
     L.append(f"Reading every page of these {F:,} PDFs costs {O/1e6:.1f}M input tokens. "
-             f"pdf-extract reads the same {P:,} pages for {U/1e6:.1f}M — "
+             f"doc-extract reads the same {P:,} pages for {U/1e6:.1f}M — "
              f"**{O/U:.1f}× less** — because it looks at one page in three "
              f"({C:,} vision calls over {P:,} pages) instead of all of them.")
     L.append("")

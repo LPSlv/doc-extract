@@ -17,7 +17,7 @@ import hashlib, json, pathlib, sys, threading, time, urllib.request, urllib.pars
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MANI = ROOT / "eval" / "manifests"
-UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) pdf-extract-bench/1.0"}
+UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) doc-extract-bench/1.0"}
 SLOW_HOSTS = {"export.arxiv.org": 3.0}          # host -> min seconds between hits
 _locks: dict[str, threading.Lock] = {}
 _last: dict[str, float] = {}

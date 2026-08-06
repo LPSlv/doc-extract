@@ -1,10 +1,10 @@
 <div align="center">
 
-# pdf-extract
+# doc-extract
 
 **Read documents properly. Fast local text extraction, plus vision only on what text extraction provably missed.**
 
-[![CI](https://github.com/LPSlv/pdf-extract/actions/workflows/ci.yml/badge.svg)](https://github.com/LPSlv/pdf-extract/actions/workflows/ci.yml)
+[![CI](https://github.com/LPSlv/doc-extract/actions/workflows/ci.yml/badge.svg)](https://github.com/LPSlv/doc-extract/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 [![Agent skill](https://img.shields.io/badge/agent-skill-b3261e.svg)](https://skills.sh/)
 
@@ -14,14 +14,14 @@ Text extraction handles most documents on its own — and silently drops every
 chart, pinout diagram, scanned page and merged-header table. Looking at every
 page instead catches all of it, and costs 2.4× more.
 
-`pdf-extract` does neither. It extracts text with [pdf-inspector](https://github.com/firecrawl/pdf-inspector)
+`doc-extract` does neither. It extracts text with [pdf-inspector](https://github.com/firecrawl/pdf-inspector)
 and [anydoc](https://github.com/firecrawl/anydoc), works out which pages the
 extractor actually failed on, and sends only those to your agent's eyes.
 
 Reads **PDF, Word, Excel, PowerPoint and images**. No API key, no per-page bill,
 no upload — the vision is the subscription you already pay for.
 
-| across 2,342 PDFs, 20,375 pages | read every page | text only | **pdf-extract** |
+| across 2,342 PDFs, 20,375 pages | read every page | text only | **doc-extract** |
 |---|--:|--:|--:|
 | input tokens | 48.9M | 13.6M | **20.1M** |
 | vision calls per page | 1.00 | 0 | **0.34** |
@@ -33,7 +33,7 @@ converted, follow-up questions read the cached text and cost 99% less again.</su
 ## Quick start
 
 ```bash
-npx skills add LPSlv/pdf-extract@pdf-extract
+npx skills add LPSlv/doc-extract@doc-extract
 ```
 
 Then ask your agent: *"read this datasheet and tell me the Q3 variance."*
@@ -45,12 +45,12 @@ global installs — dependencies resolve on first run.
 ### Try it without installing
 
 ```bash
-git clone https://github.com/LPSlv/pdf-extract && cd pdf-extract
-uv run skills/pdf-extract/convert.py example/sample-report.pdf
+git clone https://github.com/LPSlv/doc-extract && cd doc-extract
+uv run skills/doc-extract/convert.py example/sample-report.pdf
 ```
 
 ```json
-{"status":"ok","artifact":"~/.cache/pdf-inspect/0559ee3a…","cached":false,
+{"status":"ok","artifact":"~/.cache/doc-extract/0559ee3a…","cached":false,
  "pending":[{"id":"p001-x5","page":1,"kind":"raster","reason":"standalone_raster",
              "path":"…/images/p001-x5.png"}],
  "dropped":0,"over_scale_guard":false,"scale_guard":15}
@@ -74,7 +74,7 @@ file ──► classify ──► extract text ─────► route visuals 
 Everything deterministic happens in one command:
 
 ```bash
-uv run skills/pdf-extract/convert.py FILE [MORE ...]
+uv run skills/doc-extract/convert.py FILE [MORE ...]
 ```
 
 Prints one JSON object per document. Exit code is non-zero if any document
@@ -86,8 +86,8 @@ failed, and a bad file never aborts the batch. Re-running returns
 For each entry in `pending`, read the image file and write back what you saw:
 
 ```bash
-uv run skills/pdf-extract/describe.py <artifact> <id> "Line chart, two series…"
-uv run skills/pdf-extract/describe.py <artifact> <id> -   # long text from stdin
+uv run skills/doc-extract/describe.py <artifact> <id> "Line chart, two series…"
+uv run skills/doc-extract/describe.py <artifact> <id> -   # long text from stdin
 ```
 
 Safe to re-run — it replaces rather than duplicates, so a vision pass that dies
@@ -107,7 +107,7 @@ pages a question touches. Cite as `[p12]`, or `[report.pdf:p12]` across document
 ### Artifact layout
 
 ```
-~/.cache/pdf-inspect/<sha256>-<engine+schema>/
+~/.cache/doc-extract/<sha256>-<engine+schema>/
   source.json     provenance and status
   doc.md          authoritative text, plus delimited descriptions
   pages/p001.md   per-page text, for citation and cheap answering
@@ -161,7 +161,7 @@ script and a sha256 manifest, so a result pins to exact inputs.
 Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
 
 <!-- benchmarks:begin -->
-Reading every page of these 2,342 PDFs costs 48.9M input tokens. pdf-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,834 vision calls over 20,375 pages) instead of all of them.
+Reading every page of these 2,342 PDFs costs 48.9M input tokens. doc-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,834 vision calls over 20,375 pages) instead of all of them.
 
 Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan or unparsed table whatsoever. It is the floor, not an option.
 
@@ -187,7 +187,7 @@ Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan o
 
 pdf-inspector extracts **zero characters** from these pages. The vision pass recovers most of the content:
 
-| olmOCR-bench `old_scans` | pdf-inspector | pdf-extract |
+| olmOCR-bench `old_scans` | pdf-inspector | doc-extract |
 |---|---|---|
 | `present` — is the text there? | 0.0% | **61.5%** |
 | `order` — correct reading order? | 0.0% | **59.4%** |
@@ -346,4 +346,4 @@ python3 eval/readme_tables.py --write             # regenerate this README's tab
 > `harvest.py` is the single source of truth for every routing decision, and
 > every number in this README is regenerated from it — none is hand-carried. To
 > see routing on your own file without converting anything:
-> `uv run skills/pdf-extract/harvest.py FILE.pdf`
+> `uv run skills/doc-extract/harvest.py FILE.pdf`

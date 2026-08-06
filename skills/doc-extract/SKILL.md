@@ -1,9 +1,9 @@
 ---
-name: pdf-extract
+name: doc-extract
 description: Use when given one or more documents to read, summarise, extract from, or answer questions about - PDFs, Word, Excel, PowerPoint or images. Converts them to citable Markdown and visually reads the charts, diagrams, scanned pages and ruled tables that text extraction silently drops. Triggers on "read this PDF", "extract from these documents", "what does this report say", "parse this scan", "pull the figures out of", "summarise this contract", "read this deck", "what's in this spreadsheet".
 ---
 
-# pdf-extract
+# doc-extract
 
 Text extraction handles most documents on its own. This skill uses fast local
 engines for that, then spends vision calls **only** on what it provably missed —

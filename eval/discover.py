@@ -22,7 +22,7 @@ import json, pathlib, re, sys, time, urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
 MANI = HERE / "manifests"
-UA = {"User-Agent": "pdf-extract-bench/1.0 (mailto:lenards@optonics.eu)"}
+UA = {"User-Agent": "doc-extract-bench/1.0 (mailto:lenards@optonics.eu)"}
 
 
 def get(url, timeout=60, accept=None):

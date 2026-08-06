@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "pdf-extract"
+SKILL = ROOT / "skills" / "doc-extract"
 SRC = SKILL / "harvest.py"
 FILTERS = SKILL / "filters.py"
 DOC = SKILL / "reference" / "harvest-block.md"

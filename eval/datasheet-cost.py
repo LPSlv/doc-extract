@@ -3,7 +3,7 @@
 # ///
 """Cost with adaptive resolution vs the previous fixed 140dpi render."""
 import sys, time, json, pathlib, statistics
-sys.path.insert(0,"/home/lps/pdf-extract/skills/pdf-extract")
+sys.path.insert(0,"/home/lps/doc-extract/skills/doc-extract")
 import fitz
 from harvest import harvest
 from convert import _render_edge, MAX_EDGE_PX
@@ -48,5 +48,5 @@ print(f"images alone   : {O-sum(r['text'] for r in rows):,} -> {W-sum(r['text'] 
       f"({1-(W-sum(r['text'] for r in rows))/(O-sum(r['text'] for r in rows)):.0%} less)")
 follow=int(sum(r['text']/r['pages']*2 for r in rows))
 for q in (1,3,10):
-    print(f"  {q:>2} q: read-all {N*q:>11,}   pdf-extract {W+follow*(q-1):>9,}   {N*q/(W+follow*(q-1)):>5.1f}x")
+    print(f"  {q:>2} q: read-all {N*q:>11,}   doc-extract {W+follow*(q-1):>9,}   {N*q/(W+follow*(q-1)):>5.1f}x")
 json.dump(rows, open("costbench2.json","w"), indent=1)

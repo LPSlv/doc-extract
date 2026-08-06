@@ -4,7 +4,7 @@ Expected routing for the five documents the thresholds were derived from.
 The PDFs are **not** committed: they contain Optonics budget figures, named
 individuals and contract detail. Regenerate with:
 
-    uv run skills/pdf-extract/harvest.py <file>
+    uv run skills/doc-extract/harvest.py <file>
 
 | Document | Pages | Unfiltered | Expected | Composition |
 |---|---|---|---|---|

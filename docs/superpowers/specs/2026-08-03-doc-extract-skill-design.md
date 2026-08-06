@@ -1,8 +1,8 @@
-# pdf-extract — design
+# doc-extract — design
 
 **Date:** 2026-08-03 (rev 2, after adversarial review)
 **Status:** approved design, pending implementation plan
-**Repo:** `LPSlv/pdf-extract` (MIT)
+**Repo:** `LPSlv/doc-extract` (MIT)
 
 ## 1. Purpose
 
@@ -28,7 +28,7 @@ installation step beyond `uv`.
 ## 3. Evidence base
 
 Every threshold was measured. All numbers in this document are regenerated from
-`skills/pdf-extract/harvest.py`, which is the single source of truth; the SKILL.md
+`skills/doc-extract/harvest.py`, which is the single source of truth; the SKILL.md
 prose embeds that file verbatim (§7). **Numbers are never hand-carried into the spec.**
 
 Corpora: five real local documents (ESA BIC grant paperwork, an MSc thesis, a CAD
@@ -232,9 +232,9 @@ So the rule needs a mechanism, not a promise. **Every byte the skill adds — pa
 anchors, placeholders, descriptions — sits inside machine-strippable delimiters:**
 
 ```
-<!-- pdf-extract:add -->
+<!-- doc-extract:add -->
 **Figure (chart, p7).** Stacked bar, 2024–2026, WP1–WP4 spend…
-<!-- /pdf-extract:add -->
+<!-- /doc-extract:add -->
 ```
 
 The benchmark harness runs the **full** pipeline, strips delimited blocks, and asserts
@@ -248,8 +248,8 @@ pairs** round-trips to byte-identity; the rest leave stray newlines and would be
 as a real regression. Therefore:
 
 - **Insertion** — every added block is exactly, with no other surrounding edit:
-  `"\n" + "<!-- pdf-extract:add -->" + "\n" + body + "\n" + "<!-- /pdf-extract:add -->" + "\n"`
-- **Strip** — `re.sub(r"\n<!-- pdf-extract:add -->\n.*?\n<!-- /pdf-extract:add -->\n", "", text, flags=re.DOTALL)`
+  `"\n" + "<!-- doc-extract:add -->" + "\n" + body + "\n" + "<!-- /doc-extract:add -->" + "\n"`
+- **Strip** — `re.sub(r"\n<!-- doc-extract:add -->\n.*?\n<!-- /doc-extract:add -->\n", "", text, flags=re.DOTALL)`
 - **Escaping** — before insertion, every `<!--` and `-->` in `body` is replaced with
   `&lt;!--` and `--&gt;`. Without this a description that quotes the delimiter (a vision
   transcription of a page about HTML, or a hostile PDF) terminates the block early and
@@ -263,7 +263,7 @@ is the first task in the implementation plan.
 ## 6. Output contract
 
 ```
-~/.cache/pdf-inspect/<sha256>-<engine>-<schema>/
+~/.cache/doc-extract/<sha256>-<engine>-<schema>/
   source.json      {path, sha256, bytes, converted_at, pdf_type, pages, engine, schema, status}
   doc.md           authoritative text + delimited additions
   pages/p001.md    per-page, for navigation and citation
@@ -300,15 +300,15 @@ Robustness measures that survive the prose form:
   a paste finds out immediately.
 
 ```
-LPSlv/pdf-extract
+LPSlv/doc-extract
   README.md · LICENSE (MIT)
-  skills/pdf-extract/SKILL.md · harvest.py · reference/describing-visuals.md
+  skills/doc-extract/SKILL.md · harvest.py · reference/describing-visuals.md
   eval/opendataloader.md · eval/oldscans.md · eval/local-fixtures.md
   docs/img/*.svg
 ```
 
-Install: `npx skills add LPSlv/pdf-extract@pdf-extract`. Locally, symlink
-`~/.agents/skills/pdf-extract` → repo, preserving the existing harness symlink pattern.
+Install: `npx skills add LPSlv/doc-extract@doc-extract`. Locally, symlink
+`~/.agents/skills/doc-extract` → repo, preserving the existing harness symlink pattern.
 
 Runtime requirement is **`uv` only** — deps are declared inline (PEP 723), resolved on
 first run, nothing installed globally. `pdftoppm` is used for rendering with PyMuPDF as
@@ -393,7 +393,7 @@ Defensible, and to be worded this way:
 
 Not: "SOTA" (this is Firecrawl's own benchmark, on a 200-single-page corpus; rankings
 differ on OmniDocBench). Not "zero setup" (`uv` is required). Not a claim that
-pdf-extract's own extraction beats anything.
+doc-extract's own extraction beats anything.
 
 ## 11. Open questions
 

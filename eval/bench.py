@@ -6,7 +6,7 @@
 
   full optical    every page rendered at 140 dpi and read as an image
   pdf-inspector   text extraction only, no vision at all
-  pdf-extract     text + only the pages/images harvest.py routes
+  doc-extract     text + only the pages/images harvest.py routes
 
 Generalises eval/tds-bench.py (kept for the README workflow) to arbitrary
 corpora and records everything needed for the routing-generalisation
@@ -22,7 +22,7 @@ times of the deterministic local pipeline; model inference is excluded.
 """
 import collections, datetime, hashlib, json, pathlib, sys, time
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "skills" / "pdf-extract"))
+sys.path.insert(0, str(ROOT / "skills" / "doc-extract"))
 import fitz, pdf_inspector as pi
 from harvest import harvest, batch_furniture, drop_batch_furniture
 
@@ -65,7 +65,7 @@ def bench_file(path: pathlib.Path):
     row["txt_chars"] = len(md)
     row["txt_tok"] = int(len(md) / 3.5)
 
-    # --- C: pdf-extract -----------------------------------------------------
+    # --- C: doc-extract -----------------------------------------------------
     t0 = time.perf_counter()
     h = harvest(str(path))
     row["t_har"] = time.perf_counter() - t0
@@ -176,7 +176,7 @@ def main(argv):
                             for r in rows), 2),
         "wall_total": round(time.perf_counter() - t_start, 2),
     }
-    harvest_src = (ROOT / "skills" / "pdf-extract" / "harvest.py").read_bytes()
+    harvest_src = (ROOT / "skills" / "doc-extract" / "harvest.py").read_bytes()
     out = {"dataset": name, "generated": datetime.date.today().isoformat(),
            "harvest_sha256": hashlib.sha256(harvest_src).hexdigest()[:16],
            "token_model": {"image": "(w*h)/750 fit 1568px", "text": "chars/3.5",

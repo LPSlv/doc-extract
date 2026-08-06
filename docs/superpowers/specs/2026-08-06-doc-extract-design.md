@@ -1,7 +1,7 @@
 # doc-extract — design
 
-Extends `pdf-extract` to Office formats and standalone images. Supersedes
-nothing: the PDF path in `2026-08-03-pdf-extract-skill-design.md` is unchanged,
+Extends `doc-extract` to Office formats and standalone images. Supersedes
+nothing: the PDF path in `2026-08-03-doc-extract-skill-design.md` is unchanged,
 and every claim it makes still holds byte-for-byte.
 
 Status: design approved, not implemented. Revision 2 — §3 and §4 were rewritten

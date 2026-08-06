@@ -2,7 +2,7 @@
 # requires-python = ">=3.10"
 # dependencies = ["pdf-inspector==0.2.6", "pymupdf==1.28.0"]
 # ///
-"""Canonical visual-harvest block for the pdf-extract skill.
+"""Canonical visual-harvest block for the doc-extract skill.
 
 This is the single source of truth for every routing decision. The numbers in
 the design spec and README are regenerated from THIS file; never the reverse.

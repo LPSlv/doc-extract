@@ -7,10 +7,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
       - name: unit tests
-        run: uv run --with pytest python -m pytest tests/ -q
+        run: >
+          uv run --with pytest --with firecrawl-anydoc==0.1.6
+          python -m pytest tests/ -q
       - name: verbatim block in sync with harvest.py
         run: python3 tests/check_sync.py
       - name: routing on the committed sample
-        run: uv run skills/pdf-extract/harvest.py example/sample-report.pdf
-      - name: byte-identity gate, real pipeline
-        run: uv run eval/gate.py example/sample-report.pdf
+        run: uv run skills/doc-extract/harvest.py example/sample-report.pdf
+      - name: byte-identity gate, every format
+        run: uv run eval/gate.py example/ tests/fixtures/

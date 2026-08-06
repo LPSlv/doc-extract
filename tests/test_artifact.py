@@ -9,7 +9,7 @@ module: the benchmark gate strips added blocks and asserts the residue equals
 raw engine output. If any of these fail, the published 0.875 is unearned.
 """
 import sys, pathlib
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "pdf-extract"))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "skills" / "doc-extract"))
 
 import pytest
 from artifact import splice, strip, OPEN, CLOSE
