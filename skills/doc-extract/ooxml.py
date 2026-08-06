@@ -122,20 +122,67 @@ def slide_rids(data):
     return out
 
 
-def repack_single(data, rid):
-    """The package with sldIdLst reduced to `rid` alone.
+def _rels_name(part):
+    if "/" in part:
+        head, tail = part.rsplit("/", 1)
+        return f"{head}/_rels/{tail}.rels"
+    return f"_rels/{part}.rels"
 
-    Every layout, master, notes and media part stays, so anydoc's
-    slide -> layout -> master -> presentation-default text cascade still
-    resolves and the extraction is exactly what a whole-deck run would give
-    for that slide. Verified byte-identical on the committed fixtures; see
-    tests/test_anydoc_invariants.py.
+
+def _rels_from(parts, part):
+    """{rId: (type, target)} read out of an in-memory parts map."""
+    raw = parts.get(_rels_name(part))
+    if raw is None:
+        return {}
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError:
+        return {}
+    out = {}
+    for r in root.findall(_q("pkg", "Relationship")):
+        if r.get("TargetMode") == "External":
+            continue
+        out[r.get("Id")] = (r.get("Type", ""), _resolve(part, r.get("Target", "")))
+    return out
+
+
+def _reachable(parts, roots):
+    """Every part reachable from `roots` through relationships, plus their rels."""
+    seen, stack = set(), list(roots)
+    while stack:
+        p = stack.pop()
+        if p in seen or p not in parts:
+            continue
+        seen.add(p)
+        rn = _rels_name(p)
+        if rn in parts:
+            seen.add(rn)
+        for _, target in _rels_from(parts, p).values():
+            if target not in seen:
+                stack.append(target)
+    return seen
+
+
+def repack_single(data, rid):
+    """The package reduced to the one slide `rid` names.
+
+    sldIdLst is cut to that slide, and every part no longer reachable from it
+    is dropped. The slide keeps its layout, master, theme, notes and media
+    through the relationship graph, so anydoc's slide -> layout -> master ->
+    presentation-default text cascade still resolves and the text is exactly
+    what a whole-deck run gives for that slide.
+
+    Pruning is not an optimisation, it is what makes this usable. Copying the
+    whole package once per slide is O(slides x package bytes): measured on a
+    real 350 MB NASA deck of 79 slides, that is 7.8 s per slide and ten
+    minutes for the document. Real decks carry their weight in media that
+    belongs to other slides, so following the rels graph collapses it.
     """
     with zipfile.ZipFile(io.BytesIO(data)) as zf:
-        names = zf.namelist()
-        parts = {n: zf.read(n) for n in names}
+        infos = {i.filename: i for i in zf.infolist() if not i.is_dir()}
+        parts = {n: zf.read(n) for n in infos}
     part = _main_part_name(parts) or "ppt/presentation.xml"
-    pres = parts[part].decode("utf8", "replace")
+    pres = parts.get(part, b"").decode("utf8", "replace")
     lst = _SLDIDLST.search(pres)
     if not lst:
         return data
@@ -143,10 +190,23 @@ def repack_single(data, rid):
             if (m := _RID.search(e)) and m.group(1) == rid]
     parts[part] = pres.replace(lst.group(1), "".join(keep), 1).encode("utf8")
 
+    target = _rels_from(parts, part).get(rid, (None, None))[1]
+    if target and target in parts:
+        # Traverse from the SLIDE only. The presentation part is kept but not
+        # walked: its relationships name every slide in the deck, so following
+        # them drags the whole package back in and prunes nothing -- measured,
+        # 345.9 MB of 350.3 MB "kept" before this was fixed. Its rels file
+        # stays whole so the surviving sldId still resolves; entries pointing
+        # at pruned slides dangle harmlessly, never being followed once those
+        # slides have left sldIdLst.
+        keepset = _reachable(parts, [target])
+        keepset.update(n for n in ("[Content_Types].xml", "_rels/.rels",
+                                   part, _rels_name(part)) if n in parts)
+        names = [n for n in infos if n in keepset]
+    else:
+        names = list(infos)
+
     buf = io.BytesIO()
-    # Deflate rather than store: the repack happens once per slide and the
-    # bytes are handed straight to anydoc, so size matters more than the
-    # microseconds compression costs.
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as out:
         for n in names:
             out.writestr(n, parts[n])

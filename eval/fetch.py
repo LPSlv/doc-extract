@@ -7,8 +7,14 @@
     uv run eval/fetch.py --verify <dataset>     # also check eval/manifests/<ds>.json
 
 Reads eval/manifests/<dataset>.urls.tsv (filename<TAB>url[<TAB>sha256]) and
-downloads into corpus/<dataset>/. Anything that is not a real PDF (magic
-bytes) or fails a pinned sha256 is deleted and reported, never kept.
+downloads into corpus/<dataset>/. Anything that is not a real document of the
+kind its name claims (magic bytes, and the content-types part for OOXML) or
+fails a pinned sha256 is deleted and reported, never kept.
+
+A URL of the form <zip-url>!<member-path> takes one member out of an archive.
+Some corpora are only published as per-type zips -- govdocs1's docx and xlsx
+are 163 and 37 documents in two files -- and fetching the archive once beats
+200 requests. The archive is cached under corpus/_archives/ and reused.
 Idempotent: existing valid files are skipped. arXiv is fetched serially at
 one request per 3 s per their robots policy; other hosts get 6 workers.
 """
@@ -18,7 +24,13 @@ import hashlib, json, pathlib, sys, threading, time, urllib.request, urllib.pars
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MANI = ROOT / "eval" / "manifests"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) doc-extract-bench/1.0"}
-SLOW_HOSTS = {"export.arxiv.org": 3.0}          # host -> min seconds between hits
+# Some hosts refuse a generic agent and serve an HTML block page instead of the
+# file. SEC's fair-access policy asks for a contact address in the agent, and a
+# bare one gets HTML that would otherwise be written to disk as a .xlsx.
+HOST_UA = {
+    "www.sec.gov": "doc-extract-bench/1.0 (contact: lenards@optonics.eu)",
+}
+SLOW_HOSTS = {"export.arxiv.org": 3.0, "www.sec.gov": 0.15}   # host -> min seconds between hits
 _locks: dict[str, threading.Lock] = {}
 _last: dict[str, float] = {}
 
@@ -42,14 +54,56 @@ def sha256(p: pathlib.Path):
     return h.hexdigest()
 
 
+ARCHIVES = ROOT / "corpus" / "_archives"
+_arch_lock = threading.Lock()
+
+
+def _archive(url: str):
+    """Download an archive once and hand back its path. Thread-safe."""
+    ARCHIVES.mkdir(parents=True, exist_ok=True)
+    dest = ARCHIVES / urllib.parse.urlparse(url).path.rsplit("/", 1)[-1]
+    with _arch_lock:
+        if dest.exists() and dest.stat().st_size > 1000:
+            return dest
+        req = urllib.request.Request(url, headers=UA)
+        with urllib.request.urlopen(req, timeout=600) as r, open(dest, "wb") as f:
+            while chunk := r.read(1 << 20):
+                f.write(chunk)
+    return dest
+
+
+def fetch_member(dest: pathlib.Path, url: str, pin: str | None):
+    import zipfile
+    zip_url, member = url.split("!", 1)
+    try:
+        arch = _archive(zip_url)
+        with zipfile.ZipFile(arch) as z:
+            dest.write_bytes(z.read(member))
+    except Exception as e:
+        dest.unlink(missing_ok=True)
+        return f"error {type(e).__name__}"
+    if not _valid(dest):
+        dest.unlink()
+        return "not-a-document"
+    if pin and sha256(dest) != pin:
+        dest.unlink()
+        return "sha256-mismatch"
+    return "new"
+
+
 def fetch_one(dest: pathlib.Path, url: str, pin: str | None):
     if dest.exists() and dest.stat().st_size > 1000:
         return "have"
+    if "!" in url:
+        return fetch_member(dest, url, pin)
     host = urllib.parse.urlparse(url).netloc
     for attempt in (1, 2):
         polite(host)
         try:
-            req = urllib.request.Request(url, headers=UA)
+            headers = dict(UA)
+            if host in HOST_UA:
+                headers["User-Agent"] = HOST_UA[host]
+            req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=120) as r, open(dest, "wb") as f:
                 while chunk := r.read(1 << 20):
                     f.write(chunk)
@@ -59,14 +113,37 @@ def fetch_one(dest: pathlib.Path, url: str, pin: str | None):
                 dest.unlink(missing_ok=True)
                 return f"error {type(e).__name__}"
             time.sleep(2)
-    head = dest.open("rb").read(5)
-    if head != b"%PDF-" or dest.stat().st_size < 1000:
+    if not _valid(dest):
         dest.unlink()
-        return "not-pdf"
+        return "not-a-document"
     if pin and sha256(dest) != pin:
         dest.unlink()
         return "sha256-mismatch"
     return "new"
+
+
+def _valid(dest: pathlib.Path):
+    """A real document of the kind this filename claims, by content.
+
+    Extension-based checks would pass an HTML block page renamed .xlsx, which
+    is exactly what a rate-limiting host serves. OOXML packages are zips whose
+    content-types part must be present, so the check is cheap and specific.
+    """
+    if dest.stat().st_size < 1000:
+        return False
+    head = dest.open("rb").read(4)
+    if dest.suffix.lower() == ".pdf":
+        return head[:4] == b"%PDF"
+    if dest.suffix.lower() in (".docx", ".xlsx", ".pptx"):
+        if head != b"PK\x03\x04":
+            return False
+        try:
+            import zipfile
+            with zipfile.ZipFile(dest) as z:
+                return "[Content_Types].xml" in z.namelist()
+        except Exception:
+            return False
+    return True
 
 
 def run(dataset: str, verify: bool):

@@ -29,18 +29,35 @@ def test_slide_rids_in_presentation_order():
     assert len(set(rids)) == 3           # distinct: not the same slide thrice
 
 
-def test_repack_keeps_one_slide_and_every_other_part():
+def test_repack_keeps_the_named_slide_and_its_cascade():
+    """What must survive is everything the slide reaches: its layout, master,
+    theme, notes and its own media. Everything else is dead weight -- copying
+    whole packages cost 8.3 s per slide on a real 350 MB NASA deck."""
+    import io
+
     data = (FIX / "deck.pptx").read_bytes()
     rids = ooxml.slide_rids(data)
-    before = set(zipfile.ZipFile(__import__("io").BytesIO(data)).namelist())
-
     one = ooxml.repack_single(data, rids[1])
-    after = set(zipfile.ZipFile(__import__("io").BytesIO(one)).namelist())
+    kept = set(zipfile.ZipFile(io.BytesIO(one)).namelist())
 
-    # Only the presentation part changes; media, layouts and masters survive,
-    # which is what keeps anydoc's text cascade resolvable.
-    assert before == after
     assert ooxml.slide_rids(one) == [rids[1]]
+    assert "[Content_Types].xml" in kept and "_rels/.rels" in kept
+    assert "ppt/presentation.xml" in kept
+    assert "ppt/slides/slide2.xml" in kept
+    assert any(n.startswith("ppt/slideLayouts/") for n in kept)
+    assert any(n.startswith("ppt/slideMasters/") for n in kept)
+    assert any(n.startswith("ppt/media/") for n in kept)
+
+
+def test_repack_prunes_the_other_slides():
+    """The whole point: slide 2's package must not carry slides 1 and 3."""
+    import io
+
+    data = (FIX / "deck.pptx").read_bytes()
+    rids = ooxml.slide_rids(data)
+    kept = set(zipfile.ZipFile(io.BytesIO(ooxml.repack_single(data, rids[1]))).namelist())
+    assert "ppt/slides/slide1.xml" not in kept
+    assert "ppt/slides/slide3.xml" not in kept
 
 
 def test_repack_is_idempotent_on_an_already_single_slide_package():
