@@ -107,6 +107,31 @@ If part of the table is genuinely unreadable, reproduce what you can and mark th
 gap. A partial table with a stated gap is useful; a silently incomplete one is
 worse than none.
 
+## Formulas
+
+Transcribe mathematics as LaTeX, inline with `$…$` and displayed with `$$…$$`.
+Prose descriptions of an equation are not recoverable — "the gradient of the
+loss with respect to theta" could be any of a dozen expressions, and a reader
+answering from the Markdown alone cannot reconstruct which.
+
+```
+$$\mathcal{L}(\theta) = -\frac{1}{N}\sum_{i=1}^{N} y_i \log \hat{y}_i \quad (3)$$
+```
+
+- **Keep the equation number** exactly as printed, in the form the document
+  uses — `(3)`, `(3.1)`, `(A.2)`. Later text refers back to it by that number.
+- **Preserve the symbols the author chose.** Do not normalise `σ` to `s`, or
+  rewrite a summation as a loop. Distinguish visually similar characters where
+  you can: `\ell` and `1`, `\nu` and `v`, `\epsilon` and `\in`.
+- **Mark what you cannot read** as `[illegible]` inside the expression rather
+  than guessing a plausible subscript. A wrong subscript is worse than a gap,
+  because it looks correct.
+- **Inline maths stays inline.** Do not promote every symbol in running prose
+  to a display equation; it destroys the paragraph.
+
+Where an equation is part of a page transcription (`no_text_layer`), it goes in
+reading order with the rest of the body, not collected at the end.
+
 ## Length
 
 Match the content. A logo needs a line. A dense financial table needs however
