@@ -1,0 +1,12 @@
+[
+  {"id": "v11", "choice": "D", "grounded": true, "evidence": "Fig. 1 PRISMA, 'Records excluded: n = 983' box lists 'Wrong outcome (n=282)'. (142 is Wrong setting, 29 Wrong study design, 71 Abstracts/editorials/case reports.)"},
+  {"id": "v12", "choice": "A", "grounded": true, "evidence": "Fig. 1 PRISMA box 'Reports not retrieved (n = 0)', to the right of 'Reports sought for retrieval (n = 18)'."},
+  {"id": "v13", "choice": "D", "grounded": true, "evidence": "Figure 3 legend: Ice = orange, No-ice = blue. Moderate row: orange bar labelled '28 (57.1%)', blue bar '7 (14.0%)'. Ice-group Moderate = 28."},
+  {"id": "v14", "choice": "C", "grounded": true, "evidence": "Figure 3 x-axis 'Frequency' ticks: 0, 10, 20, 30, 40, 50; largest is 50."},
+  {"id": "v15", "choice": "C", "grounded": true, "evidence": "Figure 2 y-axis 'Mean pain score' ticks: 0, 2, 4, 6, 8, 10, 12; highest is 12."},
+  {"id": "v16", "choice": "D", "grounded": true, "evidence": "FIG. 1(a) Ion lab: fiber beam splitter next to the 854 nm out-coupler labelled '99:1'. (The 50:50 splitter is in the TBE lab analyzer, not the Ion lab.)"},
+  {"id": "v17", "choice": "B", "grounded": true, "evidence": "FIG. 1(a) Ion lab: the blue arm reflected off the dichroic toward the fibre coupler feeding the PMT is labelled '397 nm' (393 nm labels the excitation laser pulses input)."},
+  {"id": "v18", "choice": "C", "grounded": true, "evidence": "FIG. 1(a): '~100 m' labels the fibre from Ion lab to QFC 1, the QFC lab-to-TBE lab link, and the return path via QFC 2 back to the Ion lab."},
+  {"id": "v19", "choice": "B", "grounded": true, "evidence": "Fig. 9(a) and 9(b) y-axis 'Target Domain Accuracy(%)' ticks run 40, 50, 60, 70, 80, 90, 100 in both panels; lowest is 40. (Panel (c) differs, starting at 55.)"},
+  {"id": "v20", "choice": "B", "grounded": true, "evidence": "Fig. 9(c) x-axis labelled 'm' with ticks 16, 18, 20, 22, 24, 26, 28, 30, 32; first data point and leftmost tick at 16."}
+]

@@ -1,0 +1,12 @@
+[
+  {"id": "v01", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "v02", "choice": "D", "grounded": false, "evidence": "x-tick run present but point count not stated: \"0.4 0.5 0.6 0.7 0.8 0.9 1.0\\nC l i p M u l t i p l i e r ( *C**s c a l i n g)\""},
+  {"id": "v03", "choice": "C", "grounded": false, "evidence": "only y-tick run recoverable for panel (b): \"1.5\\n1.0\\nMSE\\n0.5\\n0.0\""},
+  {"id": "v04", "choice": "B", "grounded": false, "evidence": ""},
+  {"id": "v05", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "v06", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "v07", "choice": "B", "grounded": false, "evidence": ""},
+  {"id": "v08", "choice": "D", "grounded": false, "evidence": ""},
+  {"id": "v09", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "v10", "choice": "D", "grounded": false, "evidence": ""}
+]

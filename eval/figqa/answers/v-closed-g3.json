@@ -1,0 +1,12 @@
+[
+  {"id": "v21", "choice": "B", "confident": false, "reasoning": "No access to Fig. 9; 5 is the modal legend size for method-comparison plots"},
+  {"id": "v22", "choice": "C", "confident": false, "reasoning": "Guess that early panel b is a mid-magnification view (25 um)"},
+  {"id": "v23", "choice": "B", "confident": false, "reasoning": "Guess that later panel g is higher magnification (5 um) than panel b"},
+  {"id": "v24", "choice": "B", "confident": false, "reasoning": "Panel g exists so at least 7; a-h (8 panels) is the most common layout"},
+  {"id": "v25", "choice": "C", "confident": true, "reasoning": "BI[4:0] is a 5-bit bus, so the slash is annotated 5"},
+  {"id": "v26", "choice": "A", "confident": true, "reasoning": "Gate-driver block diagrams conventionally feed the pre-drive stage from the charge pump VCP and gate-drive regulator VGD"},
+  {"id": "v27", "choice": "B", "confident": false, "reasoning": "Pure guess; 4 time slices is a common switched-circuit illustration"},
+  {"id": "v28", "choice": "C", "confident": false, "reasoning": "A resistor in series from the source into the noninverting input is usually the input resistor RIN"},
+  {"id": "v29", "choice": "C", "confident": false, "reasoning": "Typical Spanish clinical-pathway ordering puts diagnostico y tratamiento after risk factors and screening"},
+  {"id": "v30", "choice": "B", "confident": false, "reasoning": "Guess; 526 nm is a typical quoted gold-nanoparticle SPR peak"}
+]

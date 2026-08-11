@@ -1,0 +1,62 @@
+[
+  {
+    "id": "v21",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Proposed Proposed w/o PCL ... DANN JSCC MDAN ... KJDM ... Deep JSCC (garbled legend run preceding 'Fig. 9: The target domain classification accuracy for different schemes trained in AWGN channel with fixed CSNR.') -> six distinct methods: Proposed, Proposed w/o PCL, DANN JSCC, MDAN, KJDM, Deep JSCC"
+  },
+  {
+    "id": "v22",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Figure 2. ... b, Micrograph of the EMC device with IDT connected to two probe pads (scale bar 50µm)."
+  },
+  {
+    "id": "v23",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "g, False-color SEM of small section of the microwave resonator (scale bar 1µm)."
+  },
+  {
+    "id": "v24",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Figure 2 caption enumerates panels a through i: 'a, Independent EMC device ... b, Micrograph ... c, False-color SEM ... d, Cross section ... e, Coupled system ... f, Micrograph ... g, False-color SEM ... h, False-color SEM ... i, Cross section of coupled system with materials indicated.'"
+  },
+  {
+    "id": "v25",
+    "choice": "C",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v26",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v27",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "'A B C D A B C D A B C D' (extracted marker row above the three circuits) and TABLE II caption: 'EC schedule 1 has erasure checks at all time slices A, B, C, and D.'"
+  },
+  {
+    "id": "v28",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "RIN VIN + VOUT / RG RF / **Figure 7-5. Operational Amplifier Schematic for Noninverting Configuration**"
+  },
+  {
+    "id": "v29",
+    "choice": "B",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v30",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "'This was due to the SPR of AuNPs with a maximum absorption peak at 526 nm (Fig. 4a). ... There was no significant change in the position of the absorption peak or the maximum peak in the UV-vis spectrum (Fig. 4b)'"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {"id": "v01", "choice": "B", "confident": false, "reasoning": "No access to figure; larger n implies lower MSE, mid-low option guessed"},
+  {"id": "v02", "choice": "B", "confident": false, "reasoning": "5 sweep points is the most common count for a clip-multiplier sweep, but pure convention"},
+  {"id": "v03", "choice": "C", "confident": false, "reasoning": "Guess among unlabelled magnitudes with no figure access"},
+  {"id": "v04", "choice": "C", "confident": false, "reasoning": "140 C is a typical top tick for power-electronics thermal plots, but unverified"},
+  {"id": "v05", "choice": "C", "confident": true, "reasoning": "Copper TCR ~0.393%/C gives ~1.45x normalised voltage over a ~115 C rise from room temperature"},
+  {"id": "v06", "choice": "C", "confident": false, "reasoning": "Curves normalised to 1.0 usually leave one tick of headroom below, i.e. 0.8"},
+  {"id": "v07", "choice": "B", "confident": false, "reasoning": "Non-round tick values imply auto-scaled axis; guessed the negative mid value"},
+  {"id": "v08", "choice": "C", "confident": false, "reasoning": "Guess among near-unity auto-generated tick values"},
+  {"id": "v09", "choice": "C", "confident": false, "reasoning": "80 steps is a common round rollout length, but no figure access"},
+  {"id": "v10", "choice": "C", "confident": false, "reasoning": "Arbitrary database count that cannot be inferred without the PRISMA diagram"}
+]

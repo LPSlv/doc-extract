@@ -1,0 +1,12 @@
+[
+  {"id": "v11", "choice": "B", "confident": false, "reasoning": "No knowledge of this specific PRISMA diagram; mid-range count guessed"},
+  {"id": "v12", "choice": "A", "confident": false, "reasoning": "Most PRISMA diagrams report 0 reports not retrieved, but unverifiable here"},
+  {"id": "v13", "choice": "C", "confident": false, "reasoning": "Pure guess at a mid-high bar count for the Ice group"},
+  {"id": "v14", "choice": "A", "confident": false, "reasoning": "Guess: trial arm sizes ~30 suggest a frequency axis topping at 30"},
+  {"id": "v15", "choice": "B", "confident": true, "reasoning": "Pain scores are conventionally 0-10 VAS/NRS, so the axis tops at 10"},
+  {"id": "v16", "choice": "A", "confident": false, "reasoning": "Guess; 50:50 is the most common labelled splitting ratio"},
+  {"id": "v17", "choice": "B", "confident": false, "reasoning": "397 nm is the standard Ca+ fluorescence-detection line read by a PMT"},
+  {"id": "v18", "choice": "C", "confident": false, "reasoning": "Guess; ~100 m is a typical inter-lab fibre link length"},
+  {"id": "v19", "choice": "D", "confident": false, "reasoning": "Guess; domain-adaptation accuracy plots usually start high"},
+  {"id": "v20", "choice": "A", "confident": false, "reasoning": "Option spacing of 8 suggests the sweep starts at 8"}
+]

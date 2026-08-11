@@ -1,0 +1,44 @@
+[
+  {
+    "id": "v13",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Figure 3 table: \"| Moderate | 28 (57.1%) | 7 (14.0%) |\" with columns \"| Satisfaction | Ice (orange) | No-ice (blue) |\""
+  },
+  {
+    "id": "v14",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "\"X axis title: \\\"Frequency\\\". Range 0-50, labelled ticks at 0, 10, 20, 30, 40, 50, with vertical gridlines at each tick.\""
+  },
+  {
+    "id": "v15",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "\"Y axis title: \\\"Mean pain score\\\". Y range 0-12 (a little headroom above 12), labelled ticks at 0, 2, 4, 6, 8, 10, 12\""
+  },
+  {
+    "id": "v25",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "\"Bus input BI[4:0] into the DAC, with the diagonal bus tick annotated 4 (as printed; the A-channel equivalent tick is annotated 5).\""
+  },
+  {
+    "id": "v29",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "\"### Panel 3 - red (number 3) / Header: FACTORES DE RIESGO\""
+  },
+  {
+    "id": "v30",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Fig. 4: \"a blue curve labelled a ... and a red curve labelled b\"; \"Annotation block at the upper right, two lines, colour-matched to the curves: SPR: 526 nm in blue, SPR: 530 nm in red.\""
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {"id": "v01", "choice": "B", "confident": false, "reasoning": "Guess; larger n should give lower MSE but exact value unknown."},
+  {"id": "v02", "choice": "D", "confident": false, "reasoning": "Guess; 5 clip-multiplier settings is a common sweep size."},
+  {"id": "v03", "choice": "A", "confident": false, "reasoning": "Pure guess at an unseen subplot value."},
+  {"id": "v04", "choice": "C", "confident": false, "reasoning": "Guess; 120 C is a common upper limit for resistor temperature plots."},
+  {"id": "v05", "choice": "D", "confident": false, "reasoning": "Copper TCR ~0.393%/K gives roughly 1.45x over a ~120 K rise, but plot normalisation unknown."},
+  {"id": "v06", "choice": "B", "confident": false, "reasoning": "Guess; normalised curves likely start at 1.0."},
+  {"id": "v07", "choice": "D", "confident": false, "reasoning": "Pure guess among arbitrary auto-generated tick values."},
+  {"id": "v08", "choice": "D", "confident": false, "reasoning": "Pure guess among arbitrary auto-generated tick values."},
+  {"id": "v09", "choice": "B", "confident": false, "reasoning": "Pure guess at an unseen axis extent."},
+  {"id": "v10", "choice": "C", "confident": false, "reasoning": "Guess; Scopus typically yields the largest record count in PRISMA searches."}
+]

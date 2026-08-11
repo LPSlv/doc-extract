@@ -1,0 +1,175 @@
+{
+ "screening": "optical correct AND NOT(closed1 AND closed2) AND text wrong",
+ "n_candidates": 30,
+ "n_admitted": 12,
+ "admitted": [
+  {
+   "id": "v01",
+   "src": "q07",
+   "doc": "corpus/arxiv/2607.29675v1.pdf",
+   "page": 84,
+   "q": "In Figure 15 panel (a), the n=2000 curve at clip multiplier 1.0 sits at approximately what MSE?",
+   "options": [
+    "0.06",
+    "0.08",
+    "0.10",
+    "0.14"
+   ],
+   "answer": "0.10"
+  },
+  {
+   "id": "v03",
+   "src": "q07",
+   "doc": "corpus/arxiv/2607.29675v1.pdf",
+   "page": 84,
+   "q": "In Figure 15 panel (b), the n=700 subplot's leftmost point sits at approximately what MSE?",
+   "options": [
+    "0.5",
+    "0.9",
+    "1.35",
+    "1.5"
+   ],
+   "answer": "1.35"
+  },
+  {
+   "id": "v04",
+   "src": "q08",
+   "doc": "corpus/datasheets/diodes_zxct1009.pdf",
+   "page": 6,
+   "q": "In the sense-resistor temperature graph, what is the highest temperature tick on the x-axis?",
+   "options": [
+    "100",
+    "120",
+    "140",
+    "160"
+   ],
+   "answer": "140"
+  },
+  {
+   "id": "v06",
+   "src": "q08",
+   "doc": "corpus/datasheets/diodes_zxct1009.pdf",
+   "page": 6,
+   "q": "In the sense-resistor temperature graph, what is the lowest normalised-voltage label printed on the y-axis?",
+   "options": [
+    "0.4",
+    "0.6",
+    "0.8",
+    "1.0"
+   ],
+   "answer": "0.8"
+  },
+  {
+   "id": "v07",
+   "src": "q15",
+   "doc": "corpus/arxiv/2607.29613v1.pdf",
+   "page": 22,
+   "q": "In Figure 13 panel (b), the left-hand (successful) plot's lowest y-axis tick is:",
+   "options": [
+    "-1.0",
+    "-0.52",
+    "-0.14",
+    "0.24"
+   ],
+   "answer": "-0.52"
+  },
+  {
+   "id": "v10",
+   "src": "q17",
+   "doc": "corpus/pmc/12886_2025_Article_4471.PMC12560472.pdf",
+   "page": 5,
+   "q": "In the PRISMA flow diagram, how many records were identified from Scopus?",
+   "options": [
+    "112",
+    "200",
+    "557",
+    "772"
+   ],
+   "answer": "772"
+  },
+  {
+   "id": "v13",
+   "src": "q19",
+   "doc": "corpus/pmc/TJEM-20-81.PMC7305669.pdf",
+   "page": 4,
+   "q": "In Figure 3, how many Ice-group patients reported Moderate satisfaction?",
+   "options": [
+    "2",
+    "7",
+    "19",
+    "28"
+   ],
+   "answer": "28"
+  },
+  {
+   "id": "v14",
+   "src": "q19",
+   "doc": "corpus/pmc/TJEM-20-81.PMC7305669.pdf",
+   "page": 4,
+   "q": "In Figure 3, what is the largest Frequency tick on the x-axis?",
+   "options": [
+    "30",
+    "40",
+    "50",
+    "60"
+   ],
+   "answer": "50"
+  },
+  {
+   "id": "v15",
+   "src": "q19",
+   "doc": "corpus/pmc/TJEM-20-81.PMC7305669.pdf",
+   "page": 4,
+   "q": "In Figure 2, what is the highest mean-pain-score tick on the y-axis?",
+   "options": [
+    "8",
+    "10",
+    "12",
+    "14"
+   ],
+   "answer": "12"
+  },
+  {
+   "id": "v25",
+   "src": "q14",
+   "doc": "corpus/datasheets/ti_drv8825.pdf",
+   "page": 11,
+   "q": "In Figure 6, the bus running from BI[4:0] into the B-channel DAC carries a slash annotated with which number?",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "answer": "4"
+  },
+  {
+   "id": "v29",
+   "src": "q23",
+   "doc": "corpus/pmc/04435117-60-Suppl2-S110.PMC10627501.pdf",
+   "page": 8,
+   "q": "In Figura 5, what is the title of stage 3?",
+   "options": [
+    "Tamizaje y estratificacion",
+    "Factores de riesgo",
+    "Diagnostico y tratamiento",
+    "Atencion medica"
+   ],
+   "answer": "Factores de riesgo"
+  },
+  {
+   "id": "v30",
+   "src": "q16",
+   "doc": "corpus/pmc/RA-011-D1RA02678J.PMC9036547.pdf",
+   "page": 4,
+   "q": "In Fig. 4, the red curve (b) is annotated with which SPR wavelength?",
+   "options": [
+    "520 nm",
+    "526 nm",
+    "530 nm",
+    "535 nm"
+   ],
+   "answer": "530 nm"
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "v11",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Of these, 983 articles were excluded based on predefined criteria, including irrelevant population (*n*= 459), wrong setting (*n*= 142), wrong outcome (*n*= 282), and ineligible study designs (*n*= 29), as well as abstracts, editorials, and case reports (*n*= 71)."
+  },
+  {
+    "id": "v12",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v13",
+    "choice": "D",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v14",
+    "choice": "B",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v15",
+    "choice": "B",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "v16",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "HALO ~100 m MEMSD switch +5/2 Analyzer Encoder +3/2 397 nm FM +1/2 -1/2 PM fiber Paul trap 854 nm PMT -3/2 *ΔL*= 9 m -5/2- *ΔL*=18 m 393 nm FM PPS -pol. Ca 99:1 50:50 FPBS FPBS SNSPD"
+  },
+  {
+    "id": "v17",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Fluorescence photons at 397 nm are coupled into a multi-mode fiber and detected using a pho- tomultiplier tube (PMT)."
+  },
+  {
+    "id": "v18",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "*∼*100 m of fiber to a polarization-maintaining quantum frequency converter (QFC) [27] in a separate lab. The resulting 1550-nm photons are guided through an addi- tional*∼*100 m of fiber to a third lab"
+  },
+  {
+    "id": "v19",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Target Domain Accuracy(%) 50 KJDM Target Domain Accuracy(%) 50 KJDM Target Domain Accuracy(%) KJDM Deep JSCC Deep JSCC 60 Deep JSCC 40 5 0 5 10 15 20 40 5 0 5 10 15 20 55 16 18 20 22 24 26 28 30 32 CSNR(dB) CSNR(dB) m"
+  },
+  {
+    "id": "v20",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "40 5 0 5 10 15 20 55 16 18 20 22 24 26 28 30 32 CSNR(dB) CSNR(dB) m"
+  }
+]

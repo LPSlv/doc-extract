@@ -177,9 +177,87 @@ roughly a third survive, so ~30 candidates yields ~10 admitted questions.
 Question style: arbitrary readings with near-miss distractors drawn from the
 same figure.
 
+---
+
+# v2 — the screened set, and the number
+
+30 candidates, all arbitrary-value readings with near-miss distractors drawn
+from the same figure, over the 15 figures v1 identified. Screened by code, not
+judgement (`eval/figqa_v2_screen.py`):
+
+| filter | dropped |
+|---|--:|
+| ground truth unsound (full optical got it wrong) | **0** |
+| reachable by convention (closed-book correct under *both* orderings) | 10 |
+| recoverable from the extracted markdown | 12 |
+| **admitted** | **12** |
+
+Full optical scored 30/30 on the candidates, so no question died from a bad
+answer key; every drop is a real leakage path.
+
+## Result
+
+On the 12 admitted questions — visual-only by construction:
+
+| arm | correct | grounded |
+|---|--:|--:|
+| closed-book, both orderings | 0/12 | — |
+| text only | 7/12 | **0** |
+| **doc-extract** | **12/12** | 12 |
+| full optical | **12/12** | 12 |
+
+**Describing what the router selects recovers the same answers as rendering the
+page.** Not approximately: the same twelve.
+
+Text-only's 7/12 is not recovery. Eleven of its twelve answers were ungrounded
+guesses and the one it claimed to ground was wrong, so its genuine recovery
+here is zero. The 58% is an artifact of the answer key (below).
+
+The clearest single case is v30. `text.md` states 526 nm for curve *a* of Fig. 4
+and nothing for curve *b*; a text-only reader is not merely uninformed but
+actively misled toward the wrong option. The description carried curve *b*'s own
+annotation, 530 nm.
+
+## What this does and does not license
+
+It licenses: on a page the router selects, describing what it routes loses
+nothing measurable against rendering that page.
+
+It does not license a claim about the whole document. For most of these figures
+the routed item *is* a whole-page render, so on those pages doc-extract and
+full optical see nearly the same thing at nearly the same cost. The saving is
+in the two-thirds of pages never rendered — and v1 measured that saving's
+price: 11 routed pages in 30 with no figure at all, plus the vector figure
+`standalone_raster` masked on q21.
+
+## Two artifacts that nearly produced a wrong answer
+
+**Answer-position bias.** Of 30 candidates I placed the correct option at C in
+14. A guessing arm picks middle options, so closed-book "scored" 8/10 on the
+group whose key was 7xC. Defeated by re-running closed-book under a second
+deterministic permutation (`v2-perm.json`) and treating a question as
+convention-reachable only if it is answered correctly under both. That rescued
+10 questions that a single pass would have disqualified.
+
+**Guessing counted as recovery.** The same bias inflated the text arm: its
+ungrounded answers ran 11/17 correct against ~4.2 expected. Scoring "in the
+text" as *correct **and** grounded* — the arm quotes a snippet — moved the
+admitted set from 5 to 12. Grounded claims are trustworthy at 12/13.
+
+Both artifacts pushed in the same direction: throwing away good questions. Had
+they gone unnoticed the reported set would have been 5 questions instead of 12,
+with no sign anything was wrong.
+
 ## Limits of this measurement
 
-- n=30 pages, 15 questions. Small.
+- n=30 pages; 15 questions in v1, 12 admitted in v2. Small, and 12 questions
+  cannot separate a good visual layer from a very good one — only from an
+  absent one.
+- The admitted set is drawn from 8 figures, so questions are not independent:
+  three come from one page's two bar charts.
+- doc-extract scoring 12/12 means it did not lose to full optical *on pages the
+  router selected*. Pages the router skips are out of frame here by
+  construction, and that is where its risk lives.
 - Ground truth was authored by the same agent that designed the eval, though
   the arms were run by agents with no access to it and grading is a letter
   match with no judgement at scoring time.

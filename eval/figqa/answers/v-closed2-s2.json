@@ -1,0 +1,12 @@
+[
+  {"id": "v11", "choice": "D", "confident": false, "reasoning": "No knowledge of this PRISMA diagram; 142 is a plausible mid-range wrong-outcome exclusion count."},
+  {"id": "v12", "choice": "B", "confident": false, "reasoning": "Guessing the common case where all sought reports were retrieved (0 not retrieved)."},
+  {"id": "v13", "choice": "C", "confident": false, "reasoning": "Pure guess at a bar value consistent with a moderate-size group."},
+  {"id": "v14", "choice": "C", "confident": false, "reasoning": "Guessing an axis max of 30 for per-group frequency counts in a small trial."},
+  {"id": "v15", "choice": "D", "confident": true, "reasoning": "Pain is conventionally scored 0-10 (VAS/NRS), so the top tick is 10."},
+  {"id": "v16", "choice": "D", "confident": false, "reasoning": "Guess; 90:10 is a common beamsplitter tap ratio in ion-trap setups."},
+  {"id": "v17", "choice": "D", "confident": true, "reasoning": "In Ca+ ion systems the PMT detects state-readout fluorescence at 397 nm."},
+  {"id": "v18", "choice": "A", "confident": false, "reasoning": "Guess; ~100 m is the typical inter-lab fibre link length quoted in such experiments."},
+  {"id": "v19", "choice": "A", "confident": false, "reasoning": "Guess at a 40-start accuracy axis for domain-adaptation plots."},
+  {"id": "v20", "choice": "B", "confident": false, "reasoning": "Guess; sweeps over m usually begin at the smallest power of two shown, 8."}
+]

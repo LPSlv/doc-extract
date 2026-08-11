@@ -1,0 +1,62 @@
+[
+  {
+    "id": "v21",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Zoomed the legend box in Fig. 9 panel (a): six entries stacked - Proposed (red), Proposed w/o PCL (blue), DANN JSCC (orange), MDAN (magenta), KJDM (cyan), Deep JSCC (green). Same six appear in panels (b) and (c)."
+  },
+  {
+    "id": "v22",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Figure 2 caption, zoomed: 'b, Micrograph of the EMC device with IDT connected to two probe pads (scale bar 50 um).' The bar itself in panel b is unlabelled white; the value is only given in the caption on the same page."
+  },
+  {
+    "id": "v23",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Figure 2 caption, zoomed: 'g, False-color SEM of small section of the microwave resonator (scale bar 1 um).' Again the value is printed in the caption, not on the bar."
+  },
+  {
+    "id": "v24",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Bold panel letters visible on the figure: a, b, c, d in the top row and e, f, g, h, i in the bottom row = 9 lettered panels. Caption enumerates the same a through i."
+  },
+  {
+    "id": "v25",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Zoomed the lower (B-channel) DAC input: the bus from BI[4:0] carries a slash annotated '4' - clearly a 4, distinct from the '5' on the corresponding AI[4:0] bus in the upper channel. (The datasheet itself is inconsistent here; the printed digit on the B bus is 4.)"
+  },
+  {
+    "id": "v26",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Zoomed the Pre-drive block on both channels: an arrow enters its left edge labelled 'VCP, VGD'. OCP enters from the right side, not the left."
+  },
+  {
+    "id": "v27",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "In Table II each of the three circuits (static, walking, moonwalking) has four blue dashed vertical lines labelled A, B, C, D across the top. Caption confirms 'time slices A, B, C, and D'."
+  },
+  {
+    "id": "v28",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Zoomed Figure 7-5: VIN goes through a resistor labelled RIN to the + (noninverting) input; RG sits from ground to the - input and RF is the feedback resistor."
+  },
+  {
+    "id": "v29",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Figura 5, third numbered column header reads 'FACTORES DE RIESGO' (red banner, circled 3). Stage 2 is 'TAMIZAJE Y ESTRATIFICACION', stage 4 'DIAGNOSTICO Y TRATAMIENTO', stage 5 'ATENCION MEDICA'."
+  },
+  {
+    "id": "v30",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Zoomed Fig. 4: two annotations, 'SPR: 526 nm' in blue and 'SPR: 530 nm' in red; the curve labelled 'b' at the left edge is the red one, so red (b) = 530 nm."
+  }
+]

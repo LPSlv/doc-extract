@@ -1,0 +1,12 @@
+[
+  {"id": "v21", "choice": "B", "confident": false, "reasoning": "No knowledge of this figure; 5 is a common legend size"},
+  {"id": "v22", "choice": "B", "confident": false, "reasoning": "Guessing panel b is a lower-magnification overview with a 50 um bar"},
+  {"id": "v23", "choice": "B", "confident": false, "reasoning": "Guessing later panel g is higher magnification with a 5 um bar"},
+  {"id": "v24", "choice": "C", "confident": false, "reasoning": "Panel g exists so at least 7; 8 is a plausible full grid"},
+  {"id": "v25", "choice": "B", "confident": true, "reasoning": "BI[4:0] is a 5-bit bus, so the slash is annotated 5"},
+  {"id": "v26", "choice": "B", "confident": true, "reasoning": "Pre-driver stages are fed by charge-pump VCP and gate-drive VGD rails"},
+  {"id": "v27", "choice": "A", "confident": false, "reasoning": "Guessing four labelled time slices per circuit"},
+  {"id": "v28", "choice": "A", "confident": false, "reasoning": "A series resistor from VIN to the noninverting input is conventionally RIN"},
+  {"id": "v29", "choice": "B", "confident": false, "reasoning": "Typical Spanish care-pathway order puts diagnosis/treatment third after risk factors and screening"},
+  {"id": "v30", "choice": "A", "confident": false, "reasoning": "Gold-nanoparticle SPR peaks cluster near 520-530 nm; 526 nm is a plausible specific annotation"}
+]
