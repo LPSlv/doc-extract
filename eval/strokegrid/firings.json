@@ -1,0 +1,1024 @@
+{
+ "firings": [
+  {
+   "doc": "corpus/datasheets/led_wurth.pdf",
+   "name": "led_wurth.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/datasheets/led_wurth.pdf",
+   "name": "led_wurth.pdf",
+   "page": 8,
+   "id": "p008-render"
+  },
+  {
+   "doc": "corpus/datasheets/led_wurth.pdf",
+   "name": "led_wurth.pdf",
+   "page": 9,
+   "id": "p009-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT00.pdf",
+   "name": "nexperia_74HC_HCT00.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT04.pdf",
+   "name": "nexperia_74HC_HCT04.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT08.pdf",
+   "name": "nexperia_74HC_HCT08.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT125.pdf",
+   "name": "nexperia_74HC_HCT125.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT138.pdf",
+   "name": "nexperia_74HC_HCT138.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT14.pdf",
+   "name": "nexperia_74HC_HCT14.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT164.pdf",
+   "name": "nexperia_74HC_HCT164.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT245.pdf",
+   "name": "nexperia_74HC_HCT245.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT32.pdf",
+   "name": "nexperia_74HC_HCT32.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT595.pdf",
+   "name": "nexperia_74HC_HCT595.pdf",
+   "page": 20,
+   "id": "p020-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74HC_HCT74.pdf",
+   "name": "nexperia_74HC_HCT74.pdf",
+   "page": 18,
+   "id": "p018-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74LVC1G04.pdf",
+   "name": "nexperia_74LVC1G04.pdf",
+   "page": 18,
+   "id": "p018-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74LVC1G08.pdf",
+   "name": "nexperia_74LVC1G08.pdf",
+   "page": 16,
+   "id": "p016-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74LVC1G125.pdf",
+   "name": "nexperia_74LVC1G125.pdf",
+   "page": 18,
+   "id": "p018-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74LVC1G14.pdf",
+   "name": "nexperia_74LVC1G14.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_74LVC1G17.pdf",
+   "name": "nexperia_74LVC1G17.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_BC817_SER.pdf",
+   "name": "nexperia_BC817_SER.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_PESD5V0X1BL.pdf",
+   "name": "nexperia_PESD5V0X1BL.pdf",
+   "page": 10,
+   "id": "p010-render"
+  },
+  {
+   "doc": "corpus/datasheets/nexperia_PMBT2222A.pdf",
+   "name": "nexperia_PMBT2222A.pdf",
+   "page": 9,
+   "id": "p009-render"
+  },
+  {
+   "doc": "corpus/datasheets/wurth_7447709100.pdf",
+   "name": "wurth_7447709100.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/datasheets/wurth_7447709100.pdf",
+   "name": "wurth_7447709100.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/datasheets/wurth_7447709100.pdf",
+   "name": "wurth_7447709100.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/pmc/10-1055-s-0042-1758149.PMC10480014.pdf",
+   "name": "10-1055-s-0042-1758149.PMC10480014.pdf",
+   "page": 4,
+   "id": "p004-render"
+  },
+  {
+   "doc": "corpus/pmc/10-1055-s-0042-1758149.PMC10480014.pdf",
+   "name": "10-1055-s-0042-1758149.PMC10480014.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/pmc/10.1177_23333936211073116.PMC8793380.pdf",
+   "name": "10.1177_23333936211073116.PMC8793380.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/pmc/1008-9292-2025-54-2-154.PMC12062944.pdf",
+   "name": "1008-9292-2025-54-2-154.PMC12062944.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/1052071.PMC7395265.pdf",
+   "name": "1052071.PMC7395265.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/207.PMC4523731.pdf",
+   "name": "207.PMC4523731.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/207.PMC4523731.pdf",
+   "name": "207.PMC4523731.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/pmc/IPJ-24-129.PMC4866338.pdf",
+   "name": "IPJ-24-129.PMC4866338.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/JCD-16-532.PMC3842722.pdf",
+   "name": "JCD-16-532.PMC3842722.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/JEHP-11-107.PMC9093652.pdf",
+   "name": "JEHP-11-107.PMC9093652.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/JMAS-19-540.PMC10695309.pdf",
+   "name": "JMAS-19-540.PMC10695309.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/JNRP-5-231.PMC4078606.pdf",
+   "name": "JNRP-5-231.PMC4078606.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/MGR-10-30.PMC7871936.pdf",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/pmc/MGR-10-30.PMC7871936.pdf",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 3,
+   "id": "p003-render"
+  },
+  {
+   "doc": "corpus/pmc/MGR-10-30.PMC7871936.pdf",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 4,
+   "id": "p004-render"
+  },
+  {
+   "doc": "corpus/pmc/MGR-10-30.PMC7871936.pdf",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/pmc/MGR-10-30.PMC7871936.pdf",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/pmc/MGR-10-30.PMC7871936.pdf",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/pmc/SMJ-63-753.PMC9875870.pdf",
+   "name": "SMJ-63-753.PMC9875870.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/pmc/WJCC-9-9711.PMC8610919.pdf",
+   "name": "WJCC-9-9711.PMC8610919.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/cm9-135-2294.PMC9771337.pdf",
+   "name": "cm9-135-2294.PMC9771337.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/pmc/euac217.PMC9935049.pdf",
+   "name": "euac217.PMC9935049.pdf",
+   "page": 4,
+   "id": "p004-render"
+  },
+  {
+   "doc": "corpus/pmc/euac217.PMC9935049.pdf",
+   "name": "euac217.PMC9935049.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/pmc/jpmph-50-5-303.PMC5637059.pdf",
+   "name": "jpmph-50-5-303.PMC5637059.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC10973653.pdf",
+   "name": "main.PMC10973653.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC10973653.pdf",
+   "name": "main.PMC10973653.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC11782883.pdf",
+   "name": "main.PMC11782883.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC11782883.pdf",
+   "name": "main.PMC11782883.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC11782883.pdf",
+   "name": "main.PMC11782883.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC12198628.pdf",
+   "name": "main.PMC12198628.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC12198628.pdf",
+   "name": "main.PMC12198628.pdf",
+   "page": 3,
+   "id": "p003-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC12198628.pdf",
+   "name": "main.PMC12198628.pdf",
+   "page": 4,
+   "id": "p004-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC13157034.pdf",
+   "name": "main.PMC13157034.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC9827375.pdf",
+   "name": "main.PMC9827375.pdf",
+   "page": 4,
+   "id": "p004-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC9827375.pdf",
+   "name": "main.PMC9827375.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC9932557.pdf",
+   "name": "main.PMC9932557.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC9932557.pdf",
+   "name": "main.PMC9932557.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/pmc/main.PMC9937890.pdf",
+   "name": "main.PMC9937890.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/pi-13-473.PMC5067340.pdf",
+   "name": "pi-13-473.PMC5067340.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/pmc/pi-13-473.PMC5067340.pdf",
+   "name": "pi-13-473.PMC5067340.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/pmc/policy-13-006.PMC5863865.pdf",
+   "name": "policy-13-006.PMC5863865.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.22097v1.pdf",
+   "name": "2607.22097v1.pdf",
+   "page": 21,
+   "id": "p021-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.24285v1.pdf",
+   "name": "2607.24285v1.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.24638v1.pdf",
+   "name": "2607.24638v1.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.25573v1.pdf",
+   "name": "2607.25573v1.pdf",
+   "page": 21,
+   "id": "p021-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.27137v1.pdf",
+   "name": "2607.27137v1.pdf",
+   "page": 27,
+   "id": "p027-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.27137v1.pdf",
+   "name": "2607.27137v1.pdf",
+   "page": 30,
+   "id": "p030-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.27137v1.pdf",
+   "name": "2607.27137v1.pdf",
+   "page": 31,
+   "id": "p031-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28219v1.pdf",
+   "name": "2607.28219v1.pdf",
+   "page": 9,
+   "id": "p009-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28715v1.pdf",
+   "name": "2607.28715v1.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28729v1.pdf",
+   "name": "2607.28729v1.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28732v1.pdf",
+   "name": "2607.28732v1.pdf",
+   "page": 10,
+   "id": "p010-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28732v1.pdf",
+   "name": "2607.28732v1.pdf",
+   "page": 11,
+   "id": "p011-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28739v1.pdf",
+   "name": "2607.28739v1.pdf",
+   "page": 8,
+   "id": "p008-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28739v1.pdf",
+   "name": "2607.28739v1.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28875v1.pdf",
+   "name": "2607.28875v1.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28948v1.pdf",
+   "name": "2607.28948v1.pdf",
+   "page": 10,
+   "id": "p010-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28992v1.pdf",
+   "name": "2607.28992v1.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29003v1.pdf",
+   "name": "2607.29003v1.pdf",
+   "page": 16,
+   "id": "p016-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29020v1.pdf",
+   "name": "2607.29020v1.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29020v1.pdf",
+   "name": "2607.29020v1.pdf",
+   "page": 17,
+   "id": "p017-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29020v1.pdf",
+   "name": "2607.29020v1.pdf",
+   "page": 18,
+   "id": "p018-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29137v1.pdf",
+   "name": "2607.29137v1.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29196v1.pdf",
+   "name": "2607.29196v1.pdf",
+   "page": 32,
+   "id": "p032-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29203v1.pdf",
+   "name": "2607.29203v1.pdf",
+   "page": 11,
+   "id": "p011-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29203v1.pdf",
+   "name": "2607.29203v1.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29211v1.pdf",
+   "name": "2607.29211v1.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29248v1.pdf",
+   "name": "2607.29248v1.pdf",
+   "page": 11,
+   "id": "p011-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29250v1.pdf",
+   "name": "2607.29250v1.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29250v1.pdf",
+   "name": "2607.29250v1.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29287v1.pdf",
+   "name": "2607.29287v1.pdf",
+   "page": 26,
+   "id": "p026-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29378v1.pdf",
+   "name": "2607.29378v1.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29406v1.pdf",
+   "name": "2607.29406v1.pdf",
+   "page": 16,
+   "id": "p016-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29423v1.pdf",
+   "name": "2607.29423v1.pdf",
+   "page": 23,
+   "id": "p023-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29423v1.pdf",
+   "name": "2607.29423v1.pdf",
+   "page": 30,
+   "id": "p030-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29433v1.pdf",
+   "name": "2607.29433v1.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29453v1.pdf",
+   "name": "2607.29453v1.pdf",
+   "page": 39,
+   "id": "p039-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29454v1.pdf",
+   "name": "2607.29454v1.pdf",
+   "page": 4,
+   "id": "p004-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29487v1.pdf",
+   "name": "2607.29487v1.pdf",
+   "page": 55,
+   "id": "p055-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29495v1.pdf",
+   "name": "2607.29495v1.pdf",
+   "page": 28,
+   "id": "p028-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29495v1.pdf",
+   "name": "2607.29495v1.pdf",
+   "page": 34,
+   "id": "p034-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29530v1.pdf",
+   "name": "2607.29530v1.pdf",
+   "page": 8,
+   "id": "p008-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29539v1.pdf",
+   "name": "2607.29539v1.pdf",
+   "page": 28,
+   "id": "p028-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29541v1.pdf",
+   "name": "2607.29541v1.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29551v1.pdf",
+   "name": "2607.29551v1.pdf",
+   "page": 16,
+   "id": "p016-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29551v1.pdf",
+   "name": "2607.29551v1.pdf",
+   "page": 17,
+   "id": "p017-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29560v1.pdf",
+   "name": "2607.29560v1.pdf",
+   "page": 42,
+   "id": "p042-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29560v1.pdf",
+   "name": "2607.29560v1.pdf",
+   "page": 47,
+   "id": "p047-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29565v1.pdf",
+   "name": "2607.29565v1.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29586v1.pdf",
+   "name": "2607.29586v1.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29592v1.pdf",
+   "name": "2607.29592v1.pdf",
+   "page": 10,
+   "id": "p010-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29603v1.pdf",
+   "name": "2607.29603v1.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29603v1.pdf",
+   "name": "2607.29603v1.pdf",
+   "page": 22,
+   "id": "p022-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29606v1.pdf",
+   "name": "2607.29606v1.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29609v1.pdf",
+   "name": "2607.29609v1.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29621v1.pdf",
+   "name": "2607.29621v1.pdf",
+   "page": 23,
+   "id": "p023-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29622v1.pdf",
+   "name": "2607.29622v1.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29622v1.pdf",
+   "name": "2607.29622v1.pdf",
+   "page": 16,
+   "id": "p016-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29622v1.pdf",
+   "name": "2607.29622v1.pdf",
+   "page": 17,
+   "id": "p017-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29627v1.pdf",
+   "name": "2607.29627v1.pdf",
+   "page": 28,
+   "id": "p028-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29638v1.pdf",
+   "name": "2607.29638v1.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29638v1.pdf",
+   "name": "2607.29638v1.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29638v1.pdf",
+   "name": "2607.29638v1.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29670v1.pdf",
+   "name": "2607.29670v1.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29675v1.pdf",
+   "name": "2607.29675v1.pdf",
+   "page": 96,
+   "id": "p096-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29679v1.pdf",
+   "name": "2607.29679v1.pdf",
+   "page": 2,
+   "id": "p002-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29679v1.pdf",
+   "name": "2607.29679v1.pdf",
+   "page": 45,
+   "id": "p045-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29679v1.pdf",
+   "name": "2607.29679v1.pdf",
+   "page": 46,
+   "id": "p046-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29679v1.pdf",
+   "name": "2607.29679v1.pdf",
+   "page": 47,
+   "id": "p047-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29679v1.pdf",
+   "name": "2607.29679v1.pdf",
+   "page": 48,
+   "id": "p048-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29679v1.pdf",
+   "name": "2607.29679v1.pdf",
+   "page": 51,
+   "id": "p051-render"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29686v1.pdf",
+   "name": "2607.29686v1.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/papers/ai_instructgpt.pdf",
+   "name": "ai_instructgpt.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/papers/ai_instructgpt.pdf",
+   "name": "ai_instructgpt.pdf",
+   "page": 13,
+   "id": "p013-render"
+  },
+  {
+   "doc": "corpus/papers/ai_instructgpt.pdf",
+   "name": "ai_instructgpt.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/papers/ai_instructgpt.pdf",
+   "name": "ai_instructgpt.pdf",
+   "page": 37,
+   "id": "p037-render"
+  },
+  {
+   "doc": "corpus/papers/ai_instructgpt.pdf",
+   "name": "ai_instructgpt.pdf",
+   "page": 38,
+   "id": "p038-render"
+  },
+  {
+   "doc": "corpus/papers/bio_drug-discovery.pdf",
+   "name": "bio_drug-discovery.pdf",
+   "page": 1,
+   "id": "p001-render"
+  },
+  {
+   "doc": "corpus/papers/bio_drug-discovery.pdf",
+   "name": "bio_drug-discovery.pdf",
+   "page": 8,
+   "id": "p008-render"
+  },
+  {
+   "doc": "corpus/papers/bio_drug-discovery.pdf",
+   "name": "bio_drug-discovery.pdf",
+   "page": 24,
+   "id": "p024-render"
+  },
+  {
+   "doc": "corpus/papers/bio_drug-discovery.pdf",
+   "name": "bio_drug-discovery.pdf",
+   "page": 37,
+   "id": "p037-render"
+  },
+  {
+   "doc": "corpus/papers/bio_protein-lm.pdf",
+   "name": "bio_protein-lm.pdf",
+   "page": 40,
+   "id": "p040-render"
+  },
+  {
+   "doc": "corpus/papers/bio_protein-lm.pdf",
+   "name": "bio_protein-lm.pdf",
+   "page": 46,
+   "id": "p046-render"
+  },
+  {
+   "doc": "corpus/papers/bio_protein-lm.pdf",
+   "name": "bio_protein-lm.pdf",
+   "page": 54,
+   "id": "p054-render"
+  },
+  {
+   "doc": "corpus/papers/cs_lora.pdf",
+   "name": "cs_lora.pdf",
+   "page": 10,
+   "id": "p010-render"
+  },
+  {
+   "doc": "corpus/papers/cs_lora.pdf",
+   "name": "cs_lora.pdf",
+   "page": 17,
+   "id": "p017-render"
+  },
+  {
+   "doc": "corpus/papers/cs_lora.pdf",
+   "name": "cs_lora.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/papers/cs_neural-mt-attention.pdf",
+   "name": "cs_neural-mt-attention.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/papers/cs_neural-mt-attention.pdf",
+   "name": "cs_neural-mt-attention.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/papers/cs_neural-mt-attention.pdf",
+   "name": "cs_neural-mt-attention.pdf",
+   "page": 15,
+   "id": "p015-render"
+  },
+  {
+   "doc": "corpus/papers/cs_prompt-tuning.pdf",
+   "name": "cs_prompt-tuning.pdf",
+   "page": 14,
+   "id": "p014-render"
+  },
+  {
+   "doc": "corpus/papers/cs_resnet.pdf",
+   "name": "cs_resnet.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/papers/cs_umap.pdf",
+   "name": "cs_umap.pdf",
+   "page": 31,
+   "id": "p031-render"
+  },
+  {
+   "doc": "corpus/papers/cs_umap.pdf",
+   "name": "cs_umap.pdf",
+   "page": 32,
+   "id": "p032-render"
+  },
+  {
+   "doc": "corpus/papers/rob_rt1.pdf",
+   "name": "rob_rt1.pdf",
+   "page": 25,
+   "id": "p025-render"
+  },
+  {
+   "doc": "corpus/tds/74hc595_nexperia.pdf",
+   "name": "74hc595_nexperia.pdf",
+   "page": 20,
+   "id": "p020-render"
+  },
+  {
+   "doc": "corpus/tds/led_wurth.pdf",
+   "name": "led_wurth.pdf",
+   "page": 7,
+   "id": "p007-render"
+  },
+  {
+   "doc": "corpus/tds/led_wurth.pdf",
+   "name": "led_wurth.pdf",
+   "page": 8,
+   "id": "p008-render"
+  },
+  {
+   "doc": "corpus/tds/led_wurth.pdf",
+   "name": "led_wurth.pdf",
+   "page": 9,
+   "id": "p009-render"
+  },
+  {
+   "doc": "corpus/tds/nexperia_74LVC1G14.pdf",
+   "name": "nexperia_74LVC1G14.pdf",
+   "page": 19,
+   "id": "p019-render"
+  },
+  {
+   "doc": "corpus/tds/nexperia_BC817_SER.pdf",
+   "name": "nexperia_BC817_SER.pdf",
+   "page": 12,
+   "id": "p012-render"
+  },
+  {
+   "doc": "corpus/tds/nexperia_PESD5V0X1BL.pdf",
+   "name": "nexperia_PESD5V0X1BL.pdf",
+   "page": 10,
+   "id": "p010-render"
+  },
+  {
+   "doc": "corpus/tds/wurth_7447709100.pdf",
+   "name": "wurth_7447709100.pdf",
+   "page": 5,
+   "id": "p005-render"
+  },
+  {
+   "doc": "corpus/tds/wurth_7447709100.pdf",
+   "name": "wurth_7447709100.pdf",
+   "page": 6,
+   "id": "p006-render"
+  },
+  {
+   "doc": "corpus/tds/wurth_7447709100.pdf",
+   "name": "wurth_7447709100.pdf",
+   "page": 7,
+   "id": "p007-render"
+  }
+ ]
+}

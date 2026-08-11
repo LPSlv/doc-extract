@@ -1,0 +1,30 @@
+tag	label	note
+s030	none	Journal front matter, banner bars, publisher logo only
+s031	none	Title page, header bar and horizontal rules only
+s032	none	References and author bios, one hairline rule
+s033	none	Front matter with QR code box
+s034	none	Front matter with QR code box
+s035	none	Front matter with QR code box
+s036	none	Front matter with QR code box
+s037	none	Front matter with QR code box
+s038	none	Plain prose, header/footer bars only
+s039	none	Plain prose, header/footer bars only
+s040	none	Prose plus shaded statements box, no figure
+s041	none	References only
+s042	none	References only
+s043	none	References only
+s044	none	References plus QR code box
+s045	none	Journal masthead, boxed logo letters
+s046	plot	Two forest plots with CI whiskers
+s047	table	Full-page ruled Table 1, unparsed
+s048	table	Rotated full-page ruled Table 3
+s049	none	Front matter, rules and colored corner wedges
+s050	table	Ruled Table 1 plus bordered Box 1
+s051	table	Large ruled Table 2 spanning page
+s052	table	Ruled Table A.1 in left column
+s053	none	Prose with display equations, no figure
+s054	table	Ruled Table A.3 in left column
+s055	plot	Ladder timing diagram with markers, gridded ECG
+s056	plot	Two gridded ECG strips; arguably line traces
+s057	figure	Three angiographic photographs
+s058	table	Banded ruled Table 1 at page top

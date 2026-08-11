@@ -18,20 +18,25 @@ green, 85 tests, `eval/gate.py` 7/7 byte-identical.
 
 ## Next, in the order I would do it
 
-### 1. Label `stroke_grid`'s firings — the one branch that may be net-negative
+### 1. ~~Label `stroke_grid`~~ — DONE, see [`eval/strokegrid.md`](../eval/strokegrid.md)
 
-It fired 3 times in the v1 sample and was wrong 3 times: boxed display
-equations, Elsevier front matter, a references page whose only graphic is a QR
-box. Three observations cannot justify retuning, and tuning on the measurement
-set would invalidate it.
+All 170 firings labelled. **42% waste**, not the 100% the three-observation v1
+sample implied, and the waste has three distinct causes rather than one.
 
-The job is to build the artifact, not to change the threshold: enumerate every
-`stroke_grid` firing across the corpora, render each, classify by eye, and
-commit the labels the way `tests/raster-labels.tsv` holds the 382 raster
-labels. Then decide with evidence.
+What is left from it, in order:
 
-Start from `eval/figqa_select.py`, which already enumerates routed items with
-their reasons.
+- **A free win, unimplemented.** Dropping a `stroke_grid` page whose signature
+  covers more than the existing `UBIQUITY` (0.50) share of its document removes
+  6 wasted calls and loses nothing — 100% precision on the labelled set, and no
+  new constant. Small (8% of the waste) but strictly positive.
+- **Do not ship the 0.20 threshold** from that table. It is read off the set it
+  would be validated against. It needs a held-out corpus first.
+- **The real target** is the ~half of the waste from LaTeX math furniture and
+  framed verbatim/prompt boxes. Both share a property the geometry misses: the
+  strokes enclose *text* rather than bounding a data region. That is a new
+  signal to build against `eval/strokegrid/labels.tsv`, then validate elsewhere.
+- Worth knowing: the branch's second stated purpose, marker-based plots, fired
+  **10 times in 170**. Do not defend the threshold on that basis.
 
 ### 2. Routed pages carrying no figure — 11 of 30
 

@@ -1,0 +1,30 @@
+tag	label	note
+s117	table	Two ruled tables (Table II, Table III) unparsed
+s118	none	Prose, proofs and numbered equations only
+s119	figure	Line chart of expected probes vs recall
+s120	figure	Histogram with Gaussian fit overlay
+s121	table	Gridded p-value heatmap matrices; torn table/figure, chose table
+s122	table	Two ruled task-metric tables (Table 7)
+s123	table	Ruled hyperparameter table (Table 8)
+s124	table	Ruled hyperparameter table (Table 9)
+s125	table	Ruled user-study table (Table S1)
+s126	none	Boxed verbatim prompt listing only
+s127	none	Boxed verbatim prompt listing only
+s128	none	Boxed verbatim prompt listing only
+s129	none	Equations and proofs only
+s130	none	Algorithm pseudocode block with rules
+s131	figure	Grid of generated photos and edit examples
+s132	none	Framed prompt text blocks only
+s133	none	Framed prompt text blocks only
+s134	none	Framed prompt text blocks only
+s135	none	Framed prompt text blocks only
+s136	none	Prose plus framed prompt listing
+s137	none	Lemmas, proofs, equations only
+s138	plot	Bar charts with error bars, Figures 4 and 5
+s139	plot	Bar chart with error bars (Figure 6)
+s140	plot	Grouped bars with error bars (Figure 7)
+s141	none	Boxed labeling-instruction text, no data figure
+s142	none	Boxed labeling-instruction text, no data figure
+s143	figure	Title page with field-rollout colormap figure
+s144	plot	Log-scale bar charts with small error bars
+s145	plot	Log-scale bar charts with visible error bars

@@ -1,0 +1,26 @@
+tag	label	note
+s146	figure	Grouped bar chart grid, not marker/tick plot
+s147	none	Code listing box and display equations only
+s148	none	Full-page code listing box only
+s149	table	Framed sample-text tabular; torn table vs none, chose table
+s150	table	Tables 5 and 6, booktabs ruled
+s151	table	Table 8 ruled; also a heatmap figure
+s152	table	Large Table 9 hyperparameter grid
+s153	figure	Four attention alignment heatmaps
+s154	table	Table 1 BLEU scores, ruled
+s155	table	Table 3 translations, fully ruled
+s156	table	Tables 4 and 5, ruled
+s157	table	Table 6 plus small architecture table
+s158	table	Table 1 kNN accuracy, ruled
+s159	table	Table 2 kNN accuracy, ruled
+s160	table	Table 8 single-column boxed instruction list
+s161	table	Boilerplate legal page but real Data sheet status table
+s162	none	Prose warnings plus drawing title block footer
+s163	none	Prose only plus title block footer
+s164	none	Prose only plus title block footer
+s165	table	Boilerplate legal page with Data sheet status table
+s166	table	Boilerplate legal page with Data sheet status table
+s167	table	Boilerplate legal page with Data sheet status table
+s168	none	Download links, file icons, title block footer
+s169	none	Prose warnings plus title block footer
+s170	none	Prose notes plus title block footer

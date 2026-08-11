@@ -1,0 +1,30 @@
+tag	label	note
+s059	table	Full-page ruled Table 1, unparsed
+s060	table	Ruled Table 2 plus forest plot below
+s061	none	Elsevier front matter, cover thumbnail only
+s062	table	Ruled Table 1 demographics
+s063	none	Elsevier front matter, cover thumbnail only
+s064	none	Journal first page, shaded abstract box only
+s065	table	Ruled Table 2, GEE results
+s066	none	Editorial text plus house advertisement graphic
+s067	none	Algorithm pseudocode block with rules
+s068	table	Fully gridded Table 1; also two line plots
+s069	none	Prose with boxed inline equations
+s070	none	Prose with displayed equations only
+s071	table	Gridded Table 7 of SINDy equations
+s072	table	Continuation of gridded Table 7
+s073	table	Continuation of gridded Table 7
+s074	figure	Four heatmap panels with colorbars
+s075	figure	Multi-panel spectral line plots
+s076	table	Ruled Table 7 abundance data
+s077	figure	Six-panel spectrum line plots
+s078	figure	Two-panel spectrum line plots
+s079	figure	Three stacked step histograms
+s080	figure	Two step histograms in appendices
+s081	table	Fully gridded Table 2 of galaxies
+s082	figure	Two-panel line chart, many curves
+s083	figure	Heatmap schematic of permuton density
+s084	none	Two columns of proofs and equations
+s085	none	Lemmas and displayed equations only
+s086	none	Theorem proof, numbered equations only
+s087	none	Corollary and lemma proofs, no graphics

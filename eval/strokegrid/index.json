@@ -1,0 +1,1535 @@
+{
+ "dpi": 130,
+ "rows": [
+  {
+   "tag": "s001",
+   "name": "led_wurth.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 7342
+  },
+  {
+   "tag": "s002",
+   "name": "led_wurth.pdf",
+   "page": 8,
+   "id": "p008-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 3341
+  },
+  {
+   "tag": "s003",
+   "name": "led_wurth.pdf",
+   "page": 9,
+   "id": "p009-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 6169
+  },
+  {
+   "tag": "s004",
+   "name": "nexperia_74HC_HCT00.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8945
+  },
+  {
+   "tag": "s005",
+   "name": "nexperia_74HC_HCT04.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8938
+  },
+  {
+   "tag": "s006",
+   "name": "nexperia_74HC_HCT08.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8946
+  },
+  {
+   "tag": "s007",
+   "name": "nexperia_74HC_HCT125.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8960
+  },
+  {
+   "tag": "s008",
+   "name": "nexperia_74HC_HCT138.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8973
+  },
+  {
+   "tag": "s009",
+   "name": "nexperia_74HC_HCT14.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8955
+  },
+  {
+   "tag": "s010",
+   "name": "nexperia_74HC_HCT164.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8968
+  },
+  {
+   "tag": "s011",
+   "name": "nexperia_74HC_HCT245.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8952
+  },
+  {
+   "tag": "s012",
+   "name": "nexperia_74HC_HCT32.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8943
+  },
+  {
+   "tag": "s013",
+   "name": "nexperia_74HC_HCT595.pdf",
+   "page": 20,
+   "id": "p020-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 9009
+  },
+  {
+   "tag": "s014",
+   "name": "nexperia_74HC_HCT74.pdf",
+   "page": 18,
+   "id": "p018-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8984
+  },
+  {
+   "tag": "s015",
+   "name": "nexperia_74LVC1G04.pdf",
+   "page": 18,
+   "id": "p018-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8936
+  },
+  {
+   "tag": "s016",
+   "name": "nexperia_74LVC1G08.pdf",
+   "page": 16,
+   "id": "p016-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8944
+  },
+  {
+   "tag": "s017",
+   "name": "nexperia_74LVC1G125.pdf",
+   "page": 18,
+   "id": "p018-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8954
+  },
+  {
+   "tag": "s018",
+   "name": "nexperia_74LVC1G14.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8952
+  },
+  {
+   "tag": "s019",
+   "name": "nexperia_74LVC1G17.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8950
+  },
+  {
+   "tag": "s020",
+   "name": "nexperia_BC817_SER.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8960
+  },
+  {
+   "tag": "s021",
+   "name": "nexperia_PESD5V0X1BL.pdf",
+   "page": 10,
+   "id": "p010-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 8963
+  },
+  {
+   "tag": "s022",
+   "name": "nexperia_PMBT2222A.pdf",
+   "page": 9,
+   "id": "p009-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 846
+  },
+  {
+   "tag": "s023",
+   "name": "wurth_7447709100.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 1871
+  },
+  {
+   "tag": "s024",
+   "name": "wurth_7447709100.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 6143
+  },
+  {
+   "tag": "s025",
+   "name": "wurth_7447709100.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "datasheets",
+   "has_md_table": false,
+   "page_chars": 6107
+  },
+  {
+   "tag": "s026",
+   "name": "10-1055-s-0042-1758149.PMC10480014.pdf",
+   "page": 4,
+   "id": "p004-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 2227
+  },
+  {
+   "tag": "s027",
+   "name": "10-1055-s-0042-1758149.PMC10480014.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4744
+  },
+  {
+   "tag": "s028",
+   "name": "10.1177_23333936211073116.PMC8793380.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3944
+  },
+  {
+   "tag": "s029",
+   "name": "1008-9292-2025-54-2-154.PMC12062944.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": true,
+   "page_chars": 1543
+  },
+  {
+   "tag": "s030",
+   "name": "1052071.PMC7395265.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 5031
+  },
+  {
+   "tag": "s031",
+   "name": "207.PMC4523731.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3656
+  },
+  {
+   "tag": "s032",
+   "name": "207.PMC4523731.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3869
+  },
+  {
+   "tag": "s033",
+   "name": "IPJ-24-129.PMC4866338.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4386
+  },
+  {
+   "tag": "s034",
+   "name": "JCD-16-532.PMC3842722.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4072
+  },
+  {
+   "tag": "s035",
+   "name": "JEHP-11-107.PMC9093652.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4766
+  },
+  {
+   "tag": "s036",
+   "name": "JMAS-19-540.PMC10695309.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3725
+  },
+  {
+   "tag": "s037",
+   "name": "JNRP-5-231.PMC4078606.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4283
+  },
+  {
+   "tag": "s038",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 7072
+  },
+  {
+   "tag": "s039",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 3,
+   "id": "p003-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 6612
+  },
+  {
+   "tag": "s040",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 4,
+   "id": "p004-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 6690
+  },
+  {
+   "tag": "s041",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 7105
+  },
+  {
+   "tag": "s042",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 7268
+  },
+  {
+   "tag": "s043",
+   "name": "MGR-10-30.PMC7871936.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 5726
+  },
+  {
+   "tag": "s044",
+   "name": "SMJ-63-753.PMC9875870.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 6997
+  },
+  {
+   "tag": "s045",
+   "name": "WJCC-9-9711.PMC8610919.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3538
+  },
+  {
+   "tag": "s046",
+   "name": "cm9-135-2294.PMC9771337.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 920
+  },
+  {
+   "tag": "s047",
+   "name": "euac217.PMC9935049.pdf",
+   "page": 4,
+   "id": "p004-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3370
+  },
+  {
+   "tag": "s048",
+   "name": "euac217.PMC9935049.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3085
+  },
+  {
+   "tag": "s049",
+   "name": "jpmph-50-5-303.PMC5637059.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3363
+  },
+  {
+   "tag": "s050",
+   "name": "main.PMC10973653.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 6512
+  },
+  {
+   "tag": "s051",
+   "name": "main.PMC10973653.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 6501
+  },
+  {
+   "tag": "s052",
+   "name": "main.PMC11782883.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 9163
+  },
+  {
+   "tag": "s053",
+   "name": "main.PMC11782883.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 7981
+  },
+  {
+   "tag": "s054",
+   "name": "main.PMC11782883.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 7952
+  },
+  {
+   "tag": "s055",
+   "name": "main.PMC12198628.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 2539
+  },
+  {
+   "tag": "s056",
+   "name": "main.PMC12198628.pdf",
+   "page": 3,
+   "id": "p003-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 2606
+  },
+  {
+   "tag": "s057",
+   "name": "main.PMC12198628.pdf",
+   "page": 4,
+   "id": "p004-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 2602
+  },
+  {
+   "tag": "s058",
+   "name": "main.PMC13157034.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3478
+  },
+  {
+   "tag": "s059",
+   "name": "main.PMC9827375.pdf",
+   "page": 4,
+   "id": "p004-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4647
+  },
+  {
+   "tag": "s060",
+   "name": "main.PMC9827375.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 2116
+  },
+  {
+   "tag": "s061",
+   "name": "main.PMC9932557.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 5709
+  },
+  {
+   "tag": "s062",
+   "name": "main.PMC9932557.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3738
+  },
+  {
+   "tag": "s063",
+   "name": "main.PMC9937890.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4974
+  },
+  {
+   "tag": "s064",
+   "name": "pi-13-473.PMC5067340.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 4525
+  },
+  {
+   "tag": "s065",
+   "name": "pi-13-473.PMC5067340.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 3264
+  },
+  {
+   "tag": "s066",
+   "name": "policy-13-006.PMC5863865.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "pmc",
+   "has_md_table": false,
+   "page_chars": 685
+  },
+  {
+   "tag": "s067",
+   "name": "2607.22097v1.pdf",
+   "page": 21,
+   "id": "p021-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1754
+  },
+  {
+   "tag": "s068",
+   "name": "2607.24285v1.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1149
+  },
+  {
+   "tag": "s069",
+   "name": "2607.24638v1.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 5516
+  },
+  {
+   "tag": "s070",
+   "name": "2607.25573v1.pdf",
+   "page": 21,
+   "id": "p021-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2078
+  },
+  {
+   "tag": "s071",
+   "name": "2607.27137v1.pdf",
+   "page": 27,
+   "id": "p027-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3556
+  },
+  {
+   "tag": "s072",
+   "name": "2607.27137v1.pdf",
+   "page": 30,
+   "id": "p030-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3676
+  },
+  {
+   "tag": "s073",
+   "name": "2607.27137v1.pdf",
+   "page": 31,
+   "id": "p031-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3103
+  },
+  {
+   "tag": "s074",
+   "name": "2607.28219v1.pdf",
+   "page": 9,
+   "id": "p009-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3068
+  },
+  {
+   "tag": "s075",
+   "name": "2607.28715v1.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 6298
+  },
+  {
+   "tag": "s076",
+   "name": "2607.28729v1.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4537
+  },
+  {
+   "tag": "s077",
+   "name": "2607.28732v1.pdf",
+   "page": 10,
+   "id": "p010-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3164
+  },
+  {
+   "tag": "s078",
+   "name": "2607.28732v1.pdf",
+   "page": 11,
+   "id": "p011-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4512
+  },
+  {
+   "tag": "s079",
+   "name": "2607.28739v1.pdf",
+   "page": 8,
+   "id": "p008-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 6026
+  },
+  {
+   "tag": "s080",
+   "name": "2607.28739v1.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 944
+  },
+  {
+   "tag": "s081",
+   "name": "2607.28875v1.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4503
+  },
+  {
+   "tag": "s082",
+   "name": "2607.28948v1.pdf",
+   "page": 10,
+   "id": "p010-render",
+   "corpus": "arxiv",
+   "has_md_table": true,
+   "page_chars": 2796
+  },
+  {
+   "tag": "s083",
+   "name": "2607.28992v1.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2890
+  },
+  {
+   "tag": "s084",
+   "name": "2607.29003v1.pdf",
+   "page": 16,
+   "id": "p016-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3524
+  },
+  {
+   "tag": "s085",
+   "name": "2607.29020v1.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2085
+  },
+  {
+   "tag": "s086",
+   "name": "2607.29020v1.pdf",
+   "page": 17,
+   "id": "p017-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2328
+  },
+  {
+   "tag": "s087",
+   "name": "2607.29020v1.pdf",
+   "page": 18,
+   "id": "p018-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2335
+  },
+  {
+   "tag": "s088",
+   "name": "2607.29137v1.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4010
+  },
+  {
+   "tag": "s089",
+   "name": "2607.29196v1.pdf",
+   "page": 32,
+   "id": "p032-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2679
+  },
+  {
+   "tag": "s090",
+   "name": "2607.29203v1.pdf",
+   "page": 11,
+   "id": "p011-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4869
+  },
+  {
+   "tag": "s091",
+   "name": "2607.29203v1.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2110
+  },
+  {
+   "tag": "s092",
+   "name": "2607.29211v1.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3113
+  },
+  {
+   "tag": "s093",
+   "name": "2607.29248v1.pdf",
+   "page": 11,
+   "id": "p011-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1191
+  },
+  {
+   "tag": "s094",
+   "name": "2607.29250v1.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2388
+  },
+  {
+   "tag": "s095",
+   "name": "2607.29250v1.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3192
+  },
+  {
+   "tag": "s096",
+   "name": "2607.29287v1.pdf",
+   "page": 26,
+   "id": "p026-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2764
+  },
+  {
+   "tag": "s097",
+   "name": "2607.29378v1.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3441
+  },
+  {
+   "tag": "s098",
+   "name": "2607.29406v1.pdf",
+   "page": 16,
+   "id": "p016-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4322
+  },
+  {
+   "tag": "s099",
+   "name": "2607.29423v1.pdf",
+   "page": 23,
+   "id": "p023-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1395
+  },
+  {
+   "tag": "s100",
+   "name": "2607.29423v1.pdf",
+   "page": 30,
+   "id": "p030-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1437
+  },
+  {
+   "tag": "s101",
+   "name": "2607.29433v1.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4323
+  },
+  {
+   "tag": "s102",
+   "name": "2607.29453v1.pdf",
+   "page": 39,
+   "id": "p039-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1267
+  },
+  {
+   "tag": "s103",
+   "name": "2607.29454v1.pdf",
+   "page": 4,
+   "id": "p004-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 6615
+  },
+  {
+   "tag": "s104",
+   "name": "2607.29487v1.pdf",
+   "page": 55,
+   "id": "p055-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2408
+  },
+  {
+   "tag": "s105",
+   "name": "2607.29495v1.pdf",
+   "page": 28,
+   "id": "p028-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2829
+  },
+  {
+   "tag": "s106",
+   "name": "2607.29495v1.pdf",
+   "page": 34,
+   "id": "p034-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2757
+  },
+  {
+   "tag": "s107",
+   "name": "2607.29530v1.pdf",
+   "page": 8,
+   "id": "p008-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3099
+  },
+  {
+   "tag": "s108",
+   "name": "2607.29539v1.pdf",
+   "page": 28,
+   "id": "p028-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1360
+  },
+  {
+   "tag": "s109",
+   "name": "2607.29541v1.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 6098
+  },
+  {
+   "tag": "s110",
+   "name": "2607.29551v1.pdf",
+   "page": 16,
+   "id": "p016-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1771
+  },
+  {
+   "tag": "s111",
+   "name": "2607.29551v1.pdf",
+   "page": 17,
+   "id": "p017-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1499
+  },
+  {
+   "tag": "s112",
+   "name": "2607.29560v1.pdf",
+   "page": 42,
+   "id": "p042-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2001
+  },
+  {
+   "tag": "s113",
+   "name": "2607.29560v1.pdf",
+   "page": 47,
+   "id": "p047-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1911
+  },
+  {
+   "tag": "s114",
+   "name": "2607.29565v1.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2289
+  },
+  {
+   "tag": "s115",
+   "name": "2607.29586v1.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4561
+  },
+  {
+   "tag": "s116",
+   "name": "2607.29592v1.pdf",
+   "page": 10,
+   "id": "p010-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3187
+  },
+  {
+   "tag": "s117",
+   "name": "2607.29603v1.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4497
+  },
+  {
+   "tag": "s118",
+   "name": "2607.29603v1.pdf",
+   "page": 22,
+   "id": "p022-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4323
+  },
+  {
+   "tag": "s119",
+   "name": "2607.29606v1.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4672
+  },
+  {
+   "tag": "s120",
+   "name": "2607.29609v1.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3562
+  },
+  {
+   "tag": "s121",
+   "name": "2607.29621v1.pdf",
+   "page": 23,
+   "id": "p023-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3098
+  },
+  {
+   "tag": "s122",
+   "name": "2607.29622v1.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3017
+  },
+  {
+   "tag": "s123",
+   "name": "2607.29622v1.pdf",
+   "page": 16,
+   "id": "p016-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1033
+  },
+  {
+   "tag": "s124",
+   "name": "2607.29622v1.pdf",
+   "page": 17,
+   "id": "p017-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 380
+  },
+  {
+   "tag": "s125",
+   "name": "2607.29627v1.pdf",
+   "page": 28,
+   "id": "p028-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2488
+  },
+  {
+   "tag": "s126",
+   "name": "2607.29638v1.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1030
+  },
+  {
+   "tag": "s127",
+   "name": "2607.29638v1.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2233
+  },
+  {
+   "tag": "s128",
+   "name": "2607.29638v1.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1416
+  },
+  {
+   "tag": "s129",
+   "name": "2607.29670v1.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1809
+  },
+  {
+   "tag": "s130",
+   "name": "2607.29675v1.pdf",
+   "page": 96,
+   "id": "p096-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 2080
+  },
+  {
+   "tag": "s131",
+   "name": "2607.29679v1.pdf",
+   "page": 2,
+   "id": "p002-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 1407
+  },
+  {
+   "tag": "s132",
+   "name": "2607.29679v1.pdf",
+   "page": 45,
+   "id": "p045-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4745
+  },
+  {
+   "tag": "s133",
+   "name": "2607.29679v1.pdf",
+   "page": 46,
+   "id": "p046-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4651
+  },
+  {
+   "tag": "s134",
+   "name": "2607.29679v1.pdf",
+   "page": 47,
+   "id": "p047-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 4480
+  },
+  {
+   "tag": "s135",
+   "name": "2607.29679v1.pdf",
+   "page": 48,
+   "id": "p048-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3621
+  },
+  {
+   "tag": "s136",
+   "name": "2607.29679v1.pdf",
+   "page": 51,
+   "id": "p051-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 5213
+  },
+  {
+   "tag": "s137",
+   "name": "2607.29686v1.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "arxiv",
+   "has_md_table": false,
+   "page_chars": 3145
+  },
+  {
+   "tag": "s138",
+   "name": "ai_instructgpt.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2719
+  },
+  {
+   "tag": "s139",
+   "name": "ai_instructgpt.pdf",
+   "page": 13,
+   "id": "p013-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3084
+  },
+  {
+   "tag": "s140",
+   "name": "ai_instructgpt.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3519
+  },
+  {
+   "tag": "s141",
+   "name": "ai_instructgpt.pdf",
+   "page": 37,
+   "id": "p037-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 4844
+  },
+  {
+   "tag": "s142",
+   "name": "ai_instructgpt.pdf",
+   "page": 38,
+   "id": "p038-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3702
+  },
+  {
+   "tag": "s143",
+   "name": "bio_drug-discovery.pdf",
+   "page": 1,
+   "id": "p001-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3413
+  },
+  {
+   "tag": "s144",
+   "name": "bio_drug-discovery.pdf",
+   "page": 8,
+   "id": "p008-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3171
+  },
+  {
+   "tag": "s145",
+   "name": "bio_drug-discovery.pdf",
+   "page": 24,
+   "id": "p024-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 1604
+  },
+  {
+   "tag": "s146",
+   "name": "bio_drug-discovery.pdf",
+   "page": 37,
+   "id": "p037-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 884
+  },
+  {
+   "tag": "s147",
+   "name": "bio_protein-lm.pdf",
+   "page": 40,
+   "id": "p040-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2468
+  },
+  {
+   "tag": "s148",
+   "name": "bio_protein-lm.pdf",
+   "page": 46,
+   "id": "p046-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2021
+  },
+  {
+   "tag": "s149",
+   "name": "bio_protein-lm.pdf",
+   "page": 54,
+   "id": "p054-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3468
+  },
+  {
+   "tag": "s150",
+   "name": "cs_lora.pdf",
+   "page": 10,
+   "id": "p010-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3380
+  },
+  {
+   "tag": "s151",
+   "name": "cs_lora.pdf",
+   "page": 17,
+   "id": "p017-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2507
+  },
+  {
+   "tag": "s152",
+   "name": "cs_lora.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2170
+  },
+  {
+   "tag": "s153",
+   "name": "cs_neural-mt-attention.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2014
+  },
+  {
+   "tag": "s154",
+   "name": "cs_neural-mt-attention.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 3738
+  },
+  {
+   "tag": "s155",
+   "name": "cs_neural-mt-attention.pdf",
+   "page": 15,
+   "id": "p015-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 4581
+  },
+  {
+   "tag": "s156",
+   "name": "cs_prompt-tuning.pdf",
+   "page": 14,
+   "id": "p014-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2753
+  },
+  {
+   "tag": "s157",
+   "name": "cs_resnet.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 5074
+  },
+  {
+   "tag": "s158",
+   "name": "cs_umap.pdf",
+   "page": 31,
+   "id": "p031-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2414
+  },
+  {
+   "tag": "s159",
+   "name": "cs_umap.pdf",
+   "page": 32,
+   "id": "p032-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 1852
+  },
+  {
+   "tag": "s160",
+   "name": "rob_rt1.pdf",
+   "page": 25,
+   "id": "p025-render",
+   "corpus": "papers",
+   "has_md_table": false,
+   "page_chars": 2282
+  },
+  {
+   "tag": "s161",
+   "name": "74hc595_nexperia.pdf",
+   "page": 20,
+   "id": "p020-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 9009
+  },
+  {
+   "tag": "s162",
+   "name": "led_wurth.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 7342
+  },
+  {
+   "tag": "s163",
+   "name": "led_wurth.pdf",
+   "page": 8,
+   "id": "p008-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 3341
+  },
+  {
+   "tag": "s164",
+   "name": "led_wurth.pdf",
+   "page": 9,
+   "id": "p009-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 6169
+  },
+  {
+   "tag": "s165",
+   "name": "nexperia_74LVC1G14.pdf",
+   "page": 19,
+   "id": "p019-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 8952
+  },
+  {
+   "tag": "s166",
+   "name": "nexperia_BC817_SER.pdf",
+   "page": 12,
+   "id": "p012-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 8960
+  },
+  {
+   "tag": "s167",
+   "name": "nexperia_PESD5V0X1BL.pdf",
+   "page": 10,
+   "id": "p010-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 8963
+  },
+  {
+   "tag": "s168",
+   "name": "wurth_7447709100.pdf",
+   "page": 5,
+   "id": "p005-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 1871
+  },
+  {
+   "tag": "s169",
+   "name": "wurth_7447709100.pdf",
+   "page": 6,
+   "id": "p006-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 6143
+  },
+  {
+   "tag": "s170",
+   "name": "wurth_7447709100.pdf",
+   "page": 7,
+   "id": "p007-render",
+   "corpus": "tds",
+   "has_md_table": false,
+   "page_chars": 6107
+  }
+ ]
+}

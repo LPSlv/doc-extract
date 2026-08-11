@@ -1,0 +1,30 @@
+tag	label	note
+s088	table	Ruled TABLE I system parameters plus MUSIC line plots
+s089	figure	Spearman correlation heatmap, not ruled table
+s090	figure	Bar chart of success rate; rest references
+s091	figure	Two line time-series plots and a photograph
+s092	none	Boxed reasoning text with boxed equations only
+s093	none	Theorem/proof prose, QED boxes only
+s094	table	Two ruled qualitative tables (Tables 5, 6)
+s095	table	Ruled multi-column Table 7 transcript comparison
+s096	none	Rounded box of example text, no figure
+s097	table	Booktabs Table 2 plus shaded example text box
+s098	plot	Violin plots with percentile tick marks
+s099	none	Lemmas and displayed equations only
+s100	none	Proofs and equations only
+s101	none	Shaded prompt/code boxes, no figure
+s102	none	Proofs and equations only
+s103	figure	Stacked histogram of density slope
+s104	none	Proofs, underbrace, QED squares only
+s105	none	Lemmas and equations only
+s106	none	Lemmas and equations only
+s107	plot	Horizontal bar charts with error bars
+s108	figure	AUROC heatmap panels, not ruled tables
+s109	figure	Two similarity-matrix heatmaps
+s110	none	Proofs plus one inline parenthesized matrix
+s111	none	Proofs and equations only
+s112	none	Proofs and equations only
+s113	none	Proofs and equations only
+s114	figure	False-color spectral intensity image panels
+s115	figure	Title page with ARC grid schematic figure
+s116	table	Booktabs Table 2 plus marker line plots
