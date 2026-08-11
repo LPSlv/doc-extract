@@ -1,0 +1,122 @@
+[
+  {
+    "id": "w11a",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Zoomed the data matrix in the left flowchart's 'Non-leave Node Data' box: header row x1 x2 x3 x4 x5 delta T; row n reads 0, 65, 110, 4.9, 1, 0, 12. So x3 = 110."
+  },
+  {
+    "id": "w11b",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "In the dashed-outline (Proposed ORSF) flowchart the left diamond is LASSO and its dashed arrow drops into the left LCIV box reading 'η = β3x3 + β5x5'. The right box (fed by MRMR, CARS) reads 'η = β1x1 + β2x2 + β5x5'."
+  },
+  {
+    "id": "w12a",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Figure 34 (Start-Up Zoomed In) bottom readout: 'Timebase 0.00 ms / 2.00 ms/div / 100 kS 5 MS/s'. (Figure 33 by contrast shows 20.0 ms/div.)"
+  },
+  {
+    "id": "w12b",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Trigger readout box in both captures shows 'C4 DC ... 750 mA ... Edge Positive' (left: Norm 750 mA; right: Stop 750 mA)."
+  },
+  {
+    "id": "w13a",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Panel A: green solid X→Y edge labelled in green 'true effect +0.55'. (+0.56 appears elsewhere as ratio_true; -0.76 is the red 'obs: corr -0.76' label.)"
+  },
+  {
+    "id": "w13b",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Panel B top row: the obs+probes context strip arrow feeds a black-outlined box reading 'C1 (25M)', which then arrows out to the red 'obs wins' text."
+  },
+  {
+    "id": "w14a",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Figure 6-2 PSRR vs Frequency: curves labelled top-to-bottom C7 = 50µF (leftmost, rises earliest), 10µF, 1µF, 0.5µF, and NO BYPASS CAPACITOR."
+  },
+  {
+    "id": "w14b",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Figure 6-5 THD vs Frequency in-plot condition block: VS = 6V, RL = 8Ω, POUT = 125 mW, AV = 26 dB (C1,8 = 0)."
+  },
+  {
+    "id": "w15a",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Middle panel: the tuple printed above the arrow leaving the globe reads (s, a, s′)."
+  },
+  {
+    "id": "w15b",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Orange cylinder at centre-right of the middle panel is labelled 'Shared Replay Buffer' in three lines."
+  },
+  {
+    "id": "w16a",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Fig. 1 item 3 (ARS: 0-8): 'Need help from someone else (3) / Unconsciousness (2) / Disorientation (2) / Weakness (1)'."
+  },
+  {
+    "id": "w16b",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Fig. 1 item 8 (ARS: 0-4): 'Never (4) / Rarely (3) / Sometimes (2) / Often (1) / Always (0)'."
+  },
+  {
+    "id": "w17a",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Fig. 1 subtitle under 'Overall SAE among SPRINT participants, by statin use at baseline' reads '3,471 participants without baseline clinical CVD, randomized to standard arm'."
+  },
+  {
+    "id": "w17b",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "X axis 'Days of trial' labelled 0, 100 … 1500, 1600; 1600 is the last labelled tick (axis line extends slightly beyond it, unlabelled)."
+  },
+  {
+    "id": "w18a",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Fig. 3 axes: x arrow points straight up, z arrow points to the upper right (past 'receiver array'), y arrow points to the lower right."
+  },
+  {
+    "id": "w18b",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Fig. 4: the vertical double-headed arrow at the left edge of the BS array is labelled w_BS; ℓ_BS labels the diagonal double-headed arrow along the array's top edge."
+  },
+  {
+    "id": "w19a",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Bar chart: bars at 0≈80, 1≈100, 10≈150, 50≈250 (top sits at the 250 midpoint between the 200 and 300 gridlines), 100≈300, 100+GW9662≈35."
+  },
+  {
+    "id": "w19b",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Y axis 'Number of migration cells/field' ticks: 0, 100, 200, 300, 400; topmost label is 400."
+  },
+  {
+    "id": "w20a",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Figure 1 (left gel) right-side annotations: '456 bp (control band)', '313 bp (C allele)', '194 bp (T allele)'."
+  },
+  {
+    "id": "w20b",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Left gel lane headers after M: T/C, T/T, C/C, T/T, T/C — the third sample lane is C/C."
+  }
+]

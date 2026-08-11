@@ -1,0 +1,122 @@
+[
+  {
+    "id": "w01a",
+    "choice": "B",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w01b",
+    "choice": "B",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w02a",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Fig. D.1 grid, rightmost (colour-bar) column, top row: \"1.0\" / \"0.8 0.6\" / \"0.5\" / ... / \"0.0\" (the bottom-row/completeness bar instead reads \"1.0\" / \"0.7 0.6\" / \"0.5\" / \"0.4\")"
+  },
+  {
+    "id": "w02b",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "Fig. D.1 bottom axis row: \"...0.2 0.4 0.6 0.8 F d i s t u r b e d | 0.2 0.4 0.6 0.8 F d i s t u r b e d | 0.0 0.0 | 0.0 0.4 0.6 0.8 1.0 F n o n m e r g e r\" - third panel x-axis is F nonmerger"
+  },
+  {
+    "id": "w03a",
+    "choice": "C",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w03b",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w04a",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "\"60 100\" printed immediately above the Figure 21/22 pair (60 = top of left y-axis), with \"|Overshoot (%)||G = 5|-|1|0.1%|\" and \"Figure 21. Small-Signal Overshoot vs Load Capacitance\""
+  },
+  {
+    "id": "w04b",
+    "choice": "B",
+    "grounded": true,
+    "evidence": "\"0.01%\" and \"|Overshoot (%)||G = 5|-|1|0.1%|\" ... \"|||||Settling Time (||\" ... \"Figure 22. Settling Time vs Closed-Loop Gain\""
+  },
+  {
+    "id": "w05a",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "\"Load = 10 mA (V) 2.800 OUT V 2.775 2.750 -40degC 90degC 2.725 25degC 2.700 3.0 3.5 4.0 4.5 5.0 5.5 V (V) IN SVA-30180568 Figure 5-8. Line Regulation\""
+  },
+  {
+    "id": "w05b",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Figure 5-9 Inrush Current cell \"V OUT V V IN = EN I IN 2 ms/DIV\" with adjacent per-division labels \"2V/DIV2V/DIV ... 1A/DIV\" (1A/DIV is the current-trace scale)"
+  },
+  {
+    "id": "w06a",
+    "choice": "D",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w06b",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w07a",
+    "choice": "D",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w07b",
+    "choice": "D",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w08a",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w08b",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Figure 1 axis columns: panel (b) reads \"3 / 2 / 1 / 0 / -1\" (\"|population 1|||population 0|||population 1|||\" and \"|0|||-1|||0|||\"), while (a) and (c) run 5..0"
+  },
+  {
+    "id": "w09a",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "\"|Basal|0.5 1 Time after bronchoprovocation of levofloxacin (hr)|1.5 2|3 3.5 3.75|5 6 7|\""
+  },
+  {
+    "id": "w09b",
+    "choice": "B",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w10a",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "w10b",
+    "choice": "A",
+    "grounded": false,
+    "evidence": ""
+  }
+]

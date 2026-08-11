@@ -1,0 +1,22 @@
+[
+  {"id": "w11a", "choice": "D", "confident": false, "reasoning": "No knowledge of the matrix; 120 picked as the roundest plausible value"},
+  {"id": "w11b", "choice": "A", "confident": false, "reasoning": "LASSO implies a selected subset, and A is the typical 3-of-5 selection shown"},
+  {"id": "w12a", "choice": "D", "confident": false, "reasoning": "A 'zoomed in' start-up capture implies the fastest timebase offered"},
+  {"id": "w12b", "choice": "A", "confident": false, "reasoning": "500 mA is the most conventional round trigger level for a current-probe capture"},
+  {"id": "w13a", "choice": "B", "confident": false, "reasoning": "Guess among simulated true-effect values; +0.56 is the typical non-round simulated coefficient"},
+  {"id": "w13b", "choice": "D", "confident": false, "reasoning": "Box likely labelled C1 with a token count; 25M is the common corpus-size annotation"},
+  {"id": "w14a", "choice": "D", "confident": false, "reasoning": "LM386-style PSRR curves are annotated with a 10 uF bypass capacitor"},
+  {"id": "w14b", "choice": "D", "confident": true, "reasoning": "LM386-class THD-vs-frequency plots specify Po = 125 mW"},
+  {"id": "w15a", "choice": "D", "confident": true, "reasoning": "Environment-to-buffer arrows in RL diagrams carry the transition tuple (s, a, r, s')"},
+  {"id": "w15b", "choice": "C", "confident": true, "reasoning": "A cylinder fed by transition tuples in multi-agent RL is a shared replay buffer"},
+  {"id": "w16a", "choice": "B", "confident": false, "reasoning": "Severe item 'need help from someone else' plausibly weighted 3 in a symptom score"},
+  {"id": "w16b", "choice": "D", "confident": true, "reasoning": "'Never' anchors frequency scales at 0 points by convention"},
+  {"id": "w17a", "choice": "B", "confident": false, "reasoning": "Pure guess among four participant counts"},
+  {"id": "w17b", "choice": "D", "confident": false, "reasoning": "Day axes usually end on a round 200-day multiple, i.e. 1600"},
+  {"id": "w18a", "choice": "C", "confident": false, "reasoning": "In standard 3D perspective with z up, the axis drawn toward lower right is x"},
+  {"id": "w18b", "choice": "A", "confident": false, "reasoning": "A vertical double arrow spanning the BS array denotes its aperture length"},
+  {"id": "w19a", "choice": "B", "confident": false, "reasoning": "Highest dose usually gives the lowest migration count on such bar charts"},
+  {"id": "w19b", "choice": "C", "confident": false, "reasoning": "400 is the most common axis top for migration counts peaking near 300"},
+  {"id": "w20a", "choice": "B", "confident": false, "reasoning": "RFLP digestion products commonly split as 281/194 bp; C allele band taken as 281"},
+  {"id": "w20b", "choice": "A", "confident": false, "reasoning": "Lanes are usually ordered homozygote, heterozygote, other homozygote, giving T/T third"}
+]

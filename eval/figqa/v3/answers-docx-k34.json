@@ -1,0 +1,142 @@
+[
+  {
+    "id": "w11a",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Matrix table in description: row 'n | 0 | 65 | 110 | 4.9 | 1 | 0 | 12' — column x3 = 110 in the last row."
+  },
+  {
+    "id": "w11b",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Right panel equations: $$\\eta = \\beta_3 x_3 + \\beta_5 x_5$$' ... 'the proposed \"LASSO\" branch keeps two (x3, x5)'."
+  },
+  {
+    "id": "w12a",
+    "choice": "C",
+    "grounded": false,
+    "source": "description.md",
+    "evidence": "description.md covers only ONE scope capture and never says whether it is the left or right panel: 'Timebase box: \"Timebase 0.00 ms / 2.00 ms/div / 100 kS 5 MS/s\"'. Chose 2.00 ms/div on the inference that the described capture is the zoomed-in one (VIN shows no plug-in transition anywhere in the 20 ms window, and text.md Eq. 12 gives tstart ≈ 3.85 ms, which fills only a few divisions here) — but the panel identity is not established by the material."
+  },
+  {
+    "id": "w12b",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Trigger box: \"Trigger C4 DC / Stop 750 mA / Edge Positive\".'"
+  },
+  {
+    "id": "w13a",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Below the DAG, in bold green: \"true effect +0.55\"'."
+  },
+  {
+    "id": "w13b",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'A black arrow runs right from the box to a black-outlined rectangle labelled \"C1 (25M)\"'."
+  },
+  {
+    "id": "w14a",
+    "choice": "A",
+    "grounded": false,
+    "source": "none",
+    "evidence": "description.md describes a different figure (Figure 6-1, Supply Current vs Supply Voltage) — no PSRR curve data. text.md only lists the figure title ('Figure 6-2. Power Supply Rejection vs Frequency') and the spec condition 'VS = 6 V, f = 1 kHz, CBYPASS = 10 μF PSRR Power Supply Rejection Ratio 50 dB', which is not the curve label. Guessed 10 µF."
+  },
+  {
+    "id": "w14b",
+    "choice": "C",
+    "grounded": false,
+    "source": "none",
+    "evidence": "The routed figure described is Figure 6-1, not the THD vs Frequency plot, so the in-plot test-condition block is unavailable. Inferred from the datasheet spec line in text.md ('VS = 6 V, RL = 8 Ω, POUT = 125 mW ... THD Total Harmonic Distortion 0.2% f = 1 kHz'), which is a table entry rather than the figure's annotation."
+  },
+  {
+    "id": "w15a",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'A solid arrow leaves the globe to the right, annotated with the transition tuple (s, a, s′) in bold.'"
+  },
+  {
+    "id": "w15b",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Shared Replay Buffer — an orange cylinder (database symbol) in the middle right, labelled on three lines: \"Shared Replay Buffer\"'."
+  },
+  {
+    "id": "w16a",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Item 3: 'Options: ☐ Need help from someone else (3) ☐ Unconsciousness (2) ☐ Disorientation (2) ☐ Weakness (1).'"
+  },
+  {
+    "id": "w16b",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Item 8: 'Options: ☐ Never (4) ☐ Rarely (3) ☐ Sometimes (2) ☐ Often (1) ☐ Always (0). This is the only item whose scoring runs in reverse, highest score for \"Never\".'"
+  },
+  {
+    "id": "w17a",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Subtitle (black): \"3,471 participants without baseline clinical CVD, randomized to standard arm\".'"
+  },
+  {
+    "id": "w17b",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'X: \"Days of trial\", 0 to 1600 with a labelled tick every 100 (0, 100, ... 1500, 1600)'."
+  },
+  {
+    "id": "w18a",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'x pointing straight up (top of the figure), y pointing to the lower right, z pointing to the upper right.'"
+  },
+  {
+    "id": "w18b",
+    "choice": "B",
+    "grounded": false,
+    "source": "none",
+    "evidence": "description.md covers only the upper perspective figure (Fig. 3), not the uplink MU-MIMO drawing (Fig. 4). text.md establishes both symbols exist as the BS aperture dimensions — 'aperture dimensions of w_BS = ℓ_BS = 4.5λ' — but does not say which arrow is vertical. Guessed ℓ_BS on the usual width-horizontal / length-vertical convention."
+  },
+  {
+    "id": "w19a",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Bar heights read from the axis: 0 → ~80; 1 → ~100; 10 → ~150; 50 → ~250; 100 → ~300; 100+5 µmol/l GW9662 → ~32.'"
+  },
+  {
+    "id": "w19b",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Y axis: \"Number of migration cells/field\", 0 to 400, labelled ticks every 100 (0, 100, 200, 300, 400).'"
+  },
+  {
+    "id": "w20a",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'\"313 bp (C allele)\" — the middle labelled row, just above the ladder's 300 marker.'"
+  },
+  {
+    "id": "w20b",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Lane headings (printed above the wells, left to right): \"M\", \"T/C\", \"T/T\", \"C/C\", \"T/T\", \"T/C\".' — third lane right of M is C/C."
+  }
+]

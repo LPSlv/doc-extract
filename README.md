@@ -235,54 +235,51 @@ The artifact is cached, so follow-ups read text instead of pixels.
 
 ![Cumulative tokens across repeated questions](docs/img/datasheet-cost.svg)
 
-## On figures, a description recovers what rendering the page recovers
+## On figures, a description recovers most of what the page shows — not all
 
 Cost is easy to measure and easy to game. The claim that matters is whether the
-description actually carries the figure's content — so it is now measured, on
-questions built so that **only** the visual can answer them.
+description carries the figure's content, so it is measured on questions built
+so that **only** the visual can answer them.
 
-Questions are admitted by a gate rather than by judgement. A candidate survives
-only if reading the page answers it, a closed-book agent fails it under **two**
-option orderings, and a text-only agent cannot ground it in the markdown. 30
-candidates in, **11 admitted**, none lost to a bad answer key.
+| 23 visual-only questions | correct |
+|---|--:|
+| no document at all | 0/23 |
+| text extraction only | 0/23 grounded *(9 lucky guesses)* |
+| **doc-extract** | **20/23** |
+| read the whole page | 23/23 |
 
-**The result: descriptions written before these questions existed contained and
-correctly grounded 11 of 11 answers**, each quoting the line it came from.
+**doc-extract recovers 87% of what reading the page recovers.** Three misses,
+one cause: `standalone_raster` emits a single bitmap from a page carrying
+several figures, and the question was about a different one — the PSRR curve
+when the crop was the supply-current curve, the lower drawing when the crop was
+the upper.
 
-> [!IMPORTANT]
-> Three of the four arms score exactly what the gate forces them to, so only one
-> row is a measurement:
->
-> | arm | letter score | what it means |
-> |---|--:|---|
-> | read the whole page | 11/11 | **forced** — admission requires it |
-> | closed-book, per ordering | 4/12, 1/12 | **forced** — admission requires failing both |
-> | text extraction only | 7/12 | ungrounded guessing; 0 grounded-correct is **forced** |
-> | **doc-extract** | **11/11** | the only arm the gate does not constrain |
->
-> "Matches reading the whole page" would be circular — that arm could not have
-> scored anything else. What is real is that the descriptions carried every
-> admitted answer.
+Questions are admitted by a gate rather than judgement: reading the page must
+answer it, a closed-book agent must fail it under **two** option orderings, and
+a text-only agent must be unable to ground it in the markdown. 40 candidates
+in, 23 out. The oracle arm answered **40/40** with every answer grounded, so
+none was lost to a bad answer key.
 
-Two further discounts, both material. For **9 of the 11** the routed item is
-itself a whole-page render, so the describer looked at nearly the same pixels
-as the page-render arm; the sharp test — describing a *cropped* figure — is
-n=2. And 11 questions from 8 pages is enough to rule out a describer that
-misses things, not enough to bound how much it misses.
+> [!NOTE]
+> Read the two rows above doc-extract as gate calibration, not competition:
+> admission *requires* the page-render arm to succeed and the other two to
+> fail. doc-extract is the only arm free to fail, and it did.
 
-Where text extraction is worse than blind: on Fig. 4 of one paper the markdown
+The questions were written by two agents that saw only the rendered pages —
+no descriptions, no repo files. That matters: an earlier round was authored by
+someone who had already read what the describers produced, and one question had
+to be withdrawn because its answer had been volunteered to the author before it
+was written.
+
+Where text extraction is worse than blind: on one paper's Fig. 4 the markdown
 gives 526 nm for curve *a* and nothing for curve *b*, walking a text-only reader
 into the wrong option, while the description carries curve *b*'s own 530 nm.
 
 > [!NOTE]
-> A twelfth question was withdrawn after the fact: its answer — a bus tick
-> printed `4` where the datasheet's own convention says `5` — had been
-> volunteered to the question author in a describer's status report before the
-> question was written. The author therefore learned it from the arm under
-> test. The wider risk this exposes (questions authored by someone who had
-> already seen what the describers produced) is unresolved and is why a blind
-> re-authoring is in progress.
-> Method, per-question results and the artifacts that nearly broke it:
+> A separate round on pages the router renders *whole* scored 11/11 — but there
+> the describer and the page-render arm see nearly the same pixels, so that
+> number says little. The 87% above is the one that tests something.
+> Method, per-question results and the artifacts that nearly broke both rounds:
 > [`eval/figqa.md`](eval/figqa.md).
 
 ## On Office documents the routing barely helps, and the numbers say so
@@ -393,9 +390,12 @@ the first document; at the measured 0.34 it does not.
 >   extractor also drops it, the content is lost silently.
 > - `stroke_grid` conflates marker-based plots with ruled tables — one label, two causes.
 > - Text quality is bounded by pdf-inspector. If it misreads a page, so does this.
-> - Figure-description accuracy rests on **11 questions from 8 pages**, of which
->   only 2 test a cropped figure rather than a whole-page render, and which are
->   not independent (three share one page). Enough
+> - **One routed bitmap per page, even when the page has several figures.**
+>   `standalone_raster` emits the image it fired on and suppresses the page
+>   render that would have caught the others, so a question about a neighbouring
+>   figure is unanswerable. Measured: **3 of 23** visual-only questions lost this
+>   way. Same mechanism as the vector figure it masked on a physics paper.
+> - Figure-description accuracy rests on **23 questions from 16 pages**. Enough
 >   to separate a working visual layer from an absent one, not enough to
 >   separate a good one from a better one. No public benchmark scores this task,
 >   so the set is built here and its construction is the thing to audit

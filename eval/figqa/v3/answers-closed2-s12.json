@@ -1,0 +1,22 @@
+[
+  {"id": "w01a", "choice": "B", "confident": false, "reasoning": "No knowledge of this locus map; 6.6kb is a typical BamHI fragment size quoted in knockin Southern schematics."},
+  {"id": "w01b", "choice": "D", "confident": false, "reasoning": "Pure guess among plausible MFI values."},
+  {"id": "w02a", "choice": "B", "confident": true, "reasoning": "Colour bars spanning 0.0-1.0 conventionally tick at 0.2/0.4/0.6/0.8."},
+  {"id": "w02b", "choice": "D", "confident": false, "reasoning": "Guess; F_disturbed is the most commonly plotted morphology fraction."},
+  {"id": "w03a", "choice": "D", "confident": false, "reasoning": "Implant NFC links at 13.56 MHz commonly cite ISO 15693 vicinity coupling."},
+  {"id": "w03b", "choice": "A", "confident": false, "reasoning": "SRAM plus FLASH is the standard on-chip memory pair in an MCU block diagram."},
+  {"id": "w04a", "choice": "B", "confident": false, "reasoning": "Op-amp small-signal overshoot curves usually top out around 50%."},
+  {"id": "w04b", "choice": "C", "confident": true, "reasoning": "Settling-time curves are conventionally annotated 0.01% and 0.1%."},
+  {"id": "w05a", "choice": "B", "confident": false, "reasoning": "-40/25/125 C is the standard three-temperature set in regulator datasheets."},
+  {"id": "w05b", "choice": "A", "confident": false, "reasoning": "A current trace scale in the mA range fits inrush capture; 200 mA/DIV most likely."},
+  {"id": "w06a", "choice": "C", "confident": false, "reasoning": "Guess; four sampling blocks is a common depiction."},
+  {"id": "w06b", "choice": "A", "confident": false, "reasoning": "Bottom trace usually escalates the middle Normal Mode to a higher ODR."},
+  {"id": "w07a", "choice": "A", "confident": false, "reasoning": "The longest arrow should carry the largest speedup factor."},
+  {"id": "w07b", "choice": "C", "confident": false, "reasoning": "Percentage axes conventionally start at 0."},
+  {"id": "w08a", "choice": "D", "confident": false, "reasoning": "Stability-region maps are usually axed by model parameters such as phi(w)."},
+  {"id": "w08b", "choice": "A", "confident": false, "reasoning": "Population cannot be negative, so the axis should start at 0."},
+  {"id": "w09a", "choice": "B", "confident": false, "reasoning": "Half-hour ticks make 2.5 hr the most plausible printed label."},
+  {"id": "w09b", "choice": "A", "confident": false, "reasoning": "Guess; a partial PEFR recovery around 71% fits a 4-hr post-challenge point."},
+  {"id": "w10a", "choice": "B", "confident": false, "reasoning": "Guess; ID is often dropped when the second chart reports only OOD results."},
+  {"id": "w10b", "choice": "A", "confident": false, "reasoning": "Pure guess among the offered bar heights."}
+]

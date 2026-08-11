@@ -1,0 +1,22 @@
+[
+  {"id": "w11a", "choice": "B", "grounded": false, "evidence": ""},
+  {"id": "w11b", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w12a", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "w12b", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "w13a", "choice": "D", "grounded": false, "evidence": ""},
+  {"id": "w13b", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w14a", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w14b", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "w15a", "choice": "D", "grounded": false, "evidence": ""},
+  {"id": "w15b", "choice": "D", "grounded": false, "evidence": ""},
+  {"id": "w16a", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w16b", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w17a", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "w17b", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w18a", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w18b", "choice": "B", "grounded": false, "evidence": ""},
+  {"id": "w19a", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "w19b", "choice": "B", "grounded": false, "evidence": ""},
+  {"id": "w20a", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "w20b", "choice": "B", "grounded": false, "evidence": ""}
+]

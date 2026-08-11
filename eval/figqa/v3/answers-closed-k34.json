@@ -1,0 +1,22 @@
+[
+  {"id": "w11a", "choice": "B", "confident": false, "reasoning": "No knowledge of the matrix; picked a round illustrative value"},
+  {"id": "w11b", "choice": "A", "confident": false, "reasoning": "LASSO implies a selected subset, so the full-model option D is unlikely; guessed a 3-term subset"},
+  {"id": "w12a", "choice": "B", "confident": false, "reasoning": "A 'zoomed in' start-up capture should use the fastest timebase offered"},
+  {"id": "w12b", "choice": "C", "confident": false, "reasoning": "Round 1.00 A current trigger is the most conventional setting"},
+  {"id": "w13a", "choice": "D", "confident": false, "reasoning": "Green positive 'true effect' likely a modest simulated value; coin-flip between +0.55 and +0.56"},
+  {"id": "w13b", "choice": "A", "confident": false, "reasoning": "First context block conventionally labelled C1 with the smaller size"},
+  {"id": "w14a", "choice": "A", "confident": false, "reasoning": "LM386-style PSRR curves are conventionally annotated with a 10 µF bypass capacitor"},
+  {"id": "w14b", "choice": "C", "confident": true, "reasoning": "LM386 distortion-vs-frequency curves are specified at Po = 125 mW"},
+  {"id": "w15a", "choice": "C", "confident": true, "reasoning": "Environment-to-agent arrows carry the standard RL transition tuple (s, a, r, s′)"},
+  {"id": "w15b", "choice": "D", "confident": true, "reasoning": "A cylinder store in a multi-agent RL framework is conventionally a shared replay buffer"},
+  {"id": "w16a", "choice": "A", "confident": false, "reasoning": "Needing third-party help denotes severe hypoglycaemia, so the highest of the small scores"},
+  {"id": "w16b", "choice": "A", "confident": true, "reasoning": "'Never' is scored 0 in standard frequency-response Likert scoring"},
+  {"id": "w17a", "choice": "D", "confident": true, "reasoning": "9,361 is the SPRINT trial enrolment, the recognisable figure among the options"},
+  {"id": "w17b", "choice": "A", "confident": false, "reasoning": "Day axes usually tick in 500-day steps, ending at 1500"},
+  {"id": "w18a", "choice": "A", "confident": false, "reasoning": "In standard 3D perspective panels z is up and x points toward the lower right"},
+  {"id": "w18b", "choice": "B", "confident": false, "reasoning": "A vertical extent of the BS array reads as a length ℓ_BS rather than width"},
+  {"id": "w19a", "choice": "A", "confident": false, "reasoning": "Dose-dependent inhibition means the highest concentration bar is the lowest value"},
+  {"id": "w19b", "choice": "B", "confident": false, "reasoning": "Axis top conventionally rounds one step above the tallest bar"},
+  {"id": "w20a", "choice": "B", "confident": false, "reasoning": "In PCR-RFLP the allele-specific digested fragment is the smaller band"},
+  {"id": "w20b", "choice": "B", "confident": false, "reasoning": "Genotype lanes are usually ordered homozygote, heterozygote, opposite homozygote"}
+]

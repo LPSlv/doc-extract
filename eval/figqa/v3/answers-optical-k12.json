@@ -1,0 +1,22 @@
+[
+  {"id": "w01a", "choice": "C", "grounded": true, "evidence": "Panel A line (1): bracket between the two 'B' marks over the STOP-codon region is labelled '8kb'. (6.3kb and 6.6kb appear on line (3), not line (1).)"},
+  {"id": "w01b", "choice": "A", "grounded": true, "evidence": "Under the left (Eomes) histogram in panel D: 'het MFI:1800' (blue), 'hom MFI:2100' (red), 'wt MFI:2400' (green)."},
+  {"id": "w02a", "choice": "D", "grounded": true, "evidence": "Top-row 'Purity (weighted by voxel counts)' colour bar ticks read, top to bottom: 1.0, 0.8, 0.6, 0.5, 0.0 — intermediates are 0.5, 0.6 and 0.8."},
+  {"id": "w02b", "choice": "B", "grounded": true, "evidence": "Third column x-axis label is F_nonmerger (columns 1 and 2 use F_disturbed); y-axis there is F_tail."},
+  {"id": "w03a", "choice": "C", "grounded": true, "evidence": "Fig. 2 block diagram: 'NFC ISO 15693' printed above the blue double-headed arrow between the external and implanted dashed boxes."},
+  {"id": "w03b", "choice": "A", "grounded": true, "evidence": "Inner dashed box on the implanted side contains a blue 'SRAM' block above a green 'EEPROM' block."},
+  {"id": "w04a", "choice": "C", "grounded": true, "evidence": "Figure 21 (Small-Signal Overshoot vs Load Capacitance): y-axis Overshoot (%) ticks 0,10,20,30,40,50,60 — top label is 60."},
+  {"id": "w04b", "choice": "B", "grounded": true, "evidence": "Figure 22 (Settling Time vs Closed-Loop Gain): the two curves are annotated '0.01%' (upper arrow) and '0.1%' (lower arrow)."},
+  {"id": "w05a", "choice": "D", "grounded": true, "evidence": "Figure 5-8 Line Regulation in-plot legend, top to bottom: black -40°C, blue 90°C, green 25°C."},
+  {"id": "w05b", "choice": "A", "grounded": true, "evidence": "Figure 5-9 Inrush Current: the magenta I_IN trace is labelled '1A/DIV' at the right edge (V_OUT and V_IN are 2V/DIV)."},
+  {"id": "w06a", "choice": "B", "grounded": true, "evidence": "Middle 'Normal Mode' time axis of Figure 2 carries exactly 4 blue vertical 'sampling' bars (top Low Power Mode also has 4 blue bars plus grey settling bars; bottom row has ~17)."},
+  {"id": "w06b", "choice": "D", "grounded": true, "evidence": "Bottom trace label reads 'Normal Mode – higher ODR' on two lines."},
+  {"id": "w07a", "choice": "D", "grounded": true, "evidence": "Fig. 1: the topmost/longest double-headed arrow at the 100% level is labelled '4.3 X' (shorter ones read 1.8 X and 1.3 X)."},
+  {"id": "w07b", "choice": "C", "grounded": true, "evidence": "Queries (%) axis ticks run 60, 70, 80, 90, 100 — lowest is 60."},
+  {"id": "w08a", "choice": "B", "grounded": true, "evidence": "Figure 2 stability-region map: rotated y-axis label reads 'function' (x-axis is phi(w)); ticks 0 to 0.5."},
+  {"id": "w08b", "choice": "A", "grounded": true, "evidence": "Figure 1 panel (b): population axis ticks are -1, 0, 1, 2, 3 — lowest is -1 (panels a and c start at 0)."},
+  {"id": "w09a", "choice": "C", "grounded": true, "evidence": "X-axis tick labels: Basal, 0.5, 1, 1.5, 2, 3, 3.5, 3.75, 4, 5, 6, 7 — 3.75 is present; 2.5, 3.25 and 4.5 are not."},
+  {"id": "w09b", "choice": "B", "grounded": true, "evidence": "At the '4' tick the open-circle PEFR point sits at 50 on the y-axis (28 is at 3, 71 at 5, 100 at 6 and 7)."},
+  {"id": "w10a", "choice": "A", "grounded": true, "evidence": "Left chart legend lists Total (blue), ID (green), OOD (orange); right chart legend lists only ID and OOD."},
+  {"id": "w10b", "choice": "D", "grounded": true, "evidence": "Right chart (Wrong container rate %): Cov4 OOD bar tops out just above the midpoint between 30 and 40, ~36%."}
+]

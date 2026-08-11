@@ -1,0 +1,305 @@
+{
+ "n_candidates": 40,
+ "n_admitted": 23,
+ "admitted": [
+  {
+   "id": "w01a",
+   "page_img": "w01",
+   "q": "In panel A of the knockin schematic, what fragment length is printed on the bracket spanning the two BamHI (B) sites of the unmodified locus, line (1)?",
+   "options": [
+    "6.3kb",
+    "6.6kb",
+    "8kb",
+    "10kb"
+   ],
+   "answer": "8kb",
+   "why_arbitrary": "the measured restriction-fragment length of this particular locus could have been any value"
+  },
+  {
+   "id": "w01b",
+   "page_img": "w01",
+   "q": "Under the left histogram of panel D (Eomes), which MFI value is printed for the wt sample?",
+   "options": [
+    "2400",
+    "2100",
+    "2000",
+    "1800"
+   ],
+   "answer": "2400",
+   "why_arbitrary": "a measured fluorescence intensity printed on the panel, not derivable by convention"
+  },
+  {
+   "id": "w03b",
+   "page_img": "w03",
+   "q": "Which two memory blocks are drawn inside the inner dashed box on the implanted side of the block diagram?",
+   "options": [
+    "SRAM and EEPROM",
+    "SRAM and FLASH",
+    "EEPROM and FRAM",
+    "SRAM and ROM"
+   ],
+   "answer": "SRAM and EEPROM",
+   "why_arbitrary": "the particular memory blocks drawn in that box are a design choice shown only in the diagram"
+  },
+  {
+   "id": "w07b",
+   "page_img": "w07",
+   "q": "What is the lowest tick label on the vertical Queries (%) axis of the query-satisfaction plot?",
+   "options": [
+    "0",
+    "50",
+    "60",
+    "70"
+   ],
+   "answer": "60",
+   "why_arbitrary": "the axis was truncated at an arbitrary lower limit"
+  },
+  {
+   "id": "w08a",
+   "page_img": "w08",
+   "q": "In the coloured stability-region map, what word is printed as the vertical axis label?",
+   "options": [
+    "phi(w)",
+    "function",
+    "population",
+    "stability"
+   ],
+   "answer": "function",
+   "why_arbitrary": "an idiosyncratic axis-label word the authors typed into the plot"
+  },
+  {
+   "id": "w09b",
+   "page_img": "w09",
+   "q": "At the 4-hr tick of the FEV1/PEFR plot, what value does the open-circle PEFR series show?",
+   "options": [
+    "28%",
+    "50%",
+    "71%",
+    "88%"
+   ],
+   "answer": "50%",
+   "why_arbitrary": "a plotted measurement at one time point"
+  },
+  {
+   "id": "w10a",
+   "page_img": "w10",
+   "q": "Which series appears in the legend of the left-hand bar chart but not in the legend of the right-hand bar chart?",
+   "options": [
+    "Total",
+    "ID",
+    "OOD",
+    "Full"
+   ],
+   "answer": "Total",
+   "why_arbitrary": "which series the authors omitted from the second panel is a presentation choice"
+  },
+  {
+   "id": "w10b",
+   "page_img": "w10",
+   "q": "In the right-hand bar chart, roughly what value does the OOD bar for the Cov4 group reach?",
+   "options": [
+    "about 45%",
+    "about 27%",
+    "about 17%",
+    "about 36%"
+   ],
+   "answer": "about 36%",
+   "why_arbitrary": "a measured bar height read off the axis"
+  },
+  {
+   "id": "w11a",
+   "page_img": "w11",
+   "q": "In the data matrix drawn inside the 'Non-leave Node Data' box of the flowchart, what value is shown in the last row (row n) under column x3?",
+   "options": [
+    "110",
+    "120",
+    "125",
+    "130"
+   ],
+   "answer": "110",
+   "why_arbitrary": "the toy matrix entries are invented illustration numbers that could have been any values"
+  },
+  {
+   "id": "w11b",
+   "page_img": "w11",
+   "q": "In the right-hand (dashed-outline) flowchart, which linear combination is shown in the LCIV box fed by the LASSO diamond?",
+   "options": [
+    "\u03b7 = \u03b21x1 + \u03b22x2 + \u03b25x5",
+    "\u03b7 = \u03b23x3 + \u03b25x5",
+    "\u03b7 = \u03b22x2 + \u03b24x4 + \u03b25x5",
+    "\u03b7 = \u03b21x1 + \u03b22x2 + \u03b23x3 + \u03b24x4 + \u03b25x5"
+   ],
+   "answer": "\u03b7 = \u03b23x3 + \u03b25x5",
+   "why_arbitrary": "which subset of variables the illustrative LASSO branch happens to retain is an authoring choice, and all four equations appear in the same figure"
+  },
+  {
+   "id": "w12a",
+   "page_img": "w12",
+   "q": "In the right-hand oscilloscope capture (Start-Up, Zoomed In), what horizontal timebase is shown in the Timebase readout at the bottom of the screen?",
+   "options": [
+    "20.0 ms/div",
+    "200 \u00b5s/div",
+    "2.00 ms/div",
+    "5.00 ms/div"
+   ],
+   "answer": "2.00 ms/div",
+   "why_arbitrary": "the sweep speed chosen for that particular capture is a instrument setting, not derivable from the circuit"
+  },
+  {
+   "id": "w12b",
+   "page_img": "w12",
+   "q": "What trigger level is displayed in the Trigger readout box of both oscilloscope captures?",
+   "options": [
+    "250 mA",
+    "500 mA",
+    "1.00 A",
+    "750 mA"
+   ],
+   "answer": "750 mA",
+   "why_arbitrary": "the trigger threshold the engineer dialled in is an arbitrary instrument setting printed only in the screenshot"
+  },
+  {
+   "id": "w13a",
+   "page_img": "w13",
+   "q": "In panel A of the schematic, what number is printed in green with the 'true effect' label on the X\u2192Y edge?",
+   "options": [
+    "-0.76",
+    "+0.56",
+    "+0.90",
+    "+0.55"
+   ],
+   "answer": "+0.55",
+   "why_arbitrary": "the effect size of the sampled example world is a specific plotted number that could have been otherwise"
+  },
+  {
+   "id": "w14a",
+   "page_img": "w14",
+   "q": "In the Power Supply Rejection vs Frequency graph, which bypass-capacitor value labels the leftmost (highest-rejection-at-low-frequency) curve?",
+   "options": [
+    "C7 = 10 \u00b5F",
+    "C7 = 50 \u00b5F",
+    "C7 = 1 \u00b5F",
+    "C7 = 0.5 \u00b5F"
+   ],
+   "answer": "C7 = 50 \u00b5F",
+   "why_arbitrary": "the set of capacitor values swept in this characterization plot is an arbitrary measurement choice"
+  },
+  {
+   "id": "w15a",
+   "page_img": "w15",
+   "q": "In the middle panel of the framework diagram, what tuple is printed on the arrow leaving the globe icon?",
+   "options": [
+    "(s, a)",
+    "(s, a, r)",
+    "(s, a, r, s\u2032)",
+    "(s, a, s\u2032)"
+   ],
+   "answer": "(s, a, s\u2032)",
+   "why_arbitrary": "which elements of the transition the authors chose to draw on that arrow is a diagram choice, and the standard RL tuple includes r"
+  },
+  {
+   "id": "w16b",
+   "page_img": "w16",
+   "q": "In the questionnaire figure, item 8 asks how often symptoms occurred when blood glucose was low. How many points does the 'Never' response carry?",
+   "options": [
+    "0",
+    "4",
+    "2",
+    "3"
+   ],
+   "answer": "4",
+   "why_arbitrary": "item 8's scale is reverse-scored, so the value attached to 'Never' is a printed choice rather than an inferable one"
+  },
+  {
+   "id": "w17a",
+   "page_img": "w17",
+   "q": "The cumulative-hazard chart carries a subtitle line under its title. How many participants does that subtitle state?",
+   "options": [
+    "4,731",
+    "2,647",
+    "3,471",
+    "9,361"
+   ],
+   "answer": "3,471",
+   "why_arbitrary": "the analytic sample size printed in the chart subtitle is a specific number that could have been otherwise"
+  },
+  {
+   "id": "w17b",
+   "page_img": "w17",
+   "q": "On the cumulative-hazard chart, what is the largest labelled tick on the horizontal (Days of trial) axis?",
+   "options": [
+    "1500",
+    "1600",
+    "1700",
+    "1400"
+   ],
+   "answer": "1600",
+   "why_arbitrary": "the axis extent chosen for this plot is an arbitrary tick extreme"
+  },
+  {
+   "id": "w18a",
+   "page_img": "w18",
+   "q": "In the perspective drawing of the metasurface (upper figure), which letter labels the axis arrow that points toward the lower right of the panel?",
+   "options": [
+    "x",
+    "z",
+    "y",
+    "r"
+   ],
+   "answer": "y",
+   "why_arbitrary": "which coordinate letter the authors assigned to each drawn axis direction is an arbitrary convention of this figure"
+  },
+  {
+   "id": "w18b",
+   "page_img": "w18",
+   "q": "In the uplink MU-MIMO system drawing (lower figure), which symbol labels the vertical double-headed dimension arrow at the left edge of the BS array?",
+   "options": [
+    "w_BS",
+    "\u2113_BS",
+    "r_n",
+    "d_k"
+   ],
+   "answer": "w_BS",
+   "why_arbitrary": "which of the two array dimensions was named w and which \u2113 is an arbitrary labelling choice shown only in the drawing"
+  },
+  {
+   "id": "w19a",
+   "page_img": "w19",
+   "q": "In the bar chart beneath the micrographs, approximately how many migration cells/field are plotted for the 50 \u00b5mol/l bar?",
+   "options": [
+    "100",
+    "150",
+    "250",
+    "300"
+   ],
+   "answer": "250",
+   "why_arbitrary": "it is a measured plotted bar height, readable only from the chart"
+  },
+  {
+   "id": "w20a",
+   "page_img": "w20",
+   "q": "In the left-hand gel image, what fragment size is annotated at the right of the gel for the C allele band?",
+   "options": [
+    "313 bp",
+    "194 bp",
+    "281 bp",
+    "456 bp"
+   ],
+   "answer": "313 bp",
+   "why_arbitrary": "the assay's fragment sizes are printed annotations specific to this genotyping design"
+  },
+  {
+   "id": "w20b",
+   "page_img": "w20",
+   "q": "In the left-hand gel image, which genotype is written above the third sample lane (counting the lanes to the right of the marker lane M)?",
+   "options": [
+    "T/C",
+    "T/T",
+    "G/T",
+    "C/C"
+   ],
+   "answer": "C/C",
+   "why_arbitrary": "the order in which the five sampled genotypes were loaded is arbitrary and shown only above the lanes"
+  }
+ ]
+}

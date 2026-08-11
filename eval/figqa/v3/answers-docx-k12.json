@@ -1,0 +1,142 @@
+[
+  {
+    "id": "w01a",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Row (1), wild-type locus ... 'A horizontal bracket spanning the two `B` ticks is labelled `8kb`.' (the 6.3kb/6.6kb brackets belong to row (3), the targeted allele)"
+  },
+  {
+    "id": "w01b",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Left histogram, x-axis caption `Eomes` ... 'Text below the plot: `het MFI:1800` (blue), `hom MFI:2100` (red), `wt MFI:2400` (green).'"
+  },
+  {
+    "id": "w02a",
+    "choice": "D",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "Fig. D.1 layout table, right-most (colour-bar) column of the top row reads down: '1.0' / '0.8 0.6' / '0.5' / ... / '0.0' — panel 3's own y-axis (1.0/0.8/0.6/0.4/0.2/0.0) is already in the preceding column, so the bar's intermediate labels are 0.5, 0.6, 0.8. (The bottom-row bar's column instead reads 1.0 / 0.7 0.6 / 0.5 / 0.4 / 0.0.) description.md is a bare cropped heatmap with no colour bar."
+  },
+  {
+    "id": "w02b",
+    "choice": "B",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "x-axis row of the Fig. D.1 table: '... 0.2 0.4 0.6 0.8 1.0 0.0 F d i s t u r b e d | 0.2 0.4 0.6 0.8 F d i s t u r b e d | 0.0 0.0 | 0.0 0.4 0.6 0.8 1.0 F n o n m e r g e r' — third column's x-axis is F_nonmerger"
+  },
+  {
+    "id": "w03a",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Top of figure, centred above the gap between the two enclosures: the label `NFC ISO 15693`, with a blue double-headed horizontal arrow directly beneath it'"
+  },
+  {
+    "id": "w03b",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'A dashed-outline rectangle grouping two stacked memory blocks: a blue block labelled `SRAM` (upper) and a green block labelled `EEPROM` (lower).'"
+  },
+  {
+    "id": "w04a",
+    "choice": "C",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "Between Figures 19/20 and the Figure 21/22 block the extracted axis labels read '60 100' (top tick of the left plot's Overshoot (%) axis and of the right plot's Settling Time axis), with 'Overshoot (%)' and 'Load Capacitance (pF)' as the Figure 21 axes. description.md is an unrelated scope screenshot with no text."
+  },
+  {
+    "id": "w04b",
+    "choice": "B",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "Figure 22 block: '0.01%' and '|Overshoot (%)||G = 5|-|1|0.1%|' with 'Settling Time (' and 'Closed-Loop Gain (V/V)' — the two curves are 0.01% and 0.1%"
+  },
+  {
+    "id": "w05a",
+    "choice": "D",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "'Load = 10 mA (V) 2.800 OUT V 2.775 2.750 -40°C 90°C 2.725 25°C 2.700 3.0 3.5 4.0 4.5 5.0 5.5 V (V) IN ... Figure 5-8. Line Regulation'"
+  },
+  {
+    "id": "w05b",
+    "choice": "A",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "Figure 5-9 Inrush Current cell plus adjacent per-division labels: 'V OUT V V IN = EN I IN 2 ms/DIV ... Figure 5-9. Inrush Current' / '2V/DIV 2V/DIV ... 1A/DIV' — VOUT and VEN at 2V/DIV, I_IN at 1A/DIV"
+  },
+  {
+    "id": "w06a",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Panel 2 (middle) — row label \"Normal Mode\" ... There are four blue \"sampling\" blocks, at the same four horizontal positions ... No grey \"settling\" blocks appear in this panel.'"
+  },
+  {
+    "id": "w06b",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Panel 3 (bottom) — row label \"Normal Mode – higher ODR\" (two lines).'"
+  },
+  {
+    "id": "w07a",
+    "choice": "D",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'\"4.3 X\" (label above the arrow, near the top of the plot): dots at ~52 MB (QASP) and ~223 MB (Fixed nprobe)' — the longest span of the three annotated arrows"
+  },
+  {
+    "id": "w07b",
+    "choice": "C",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Y: \"Queries (%)\", range 60 to 100 (axis truncated at 60, not 0); labelled ticks and horizontal gridlines at 60, 70, 80, 90, 100.'"
+  },
+  {
+    "id": "w08a",
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "'Axes. X: `φ(w)` ... Y: \"function\", labelled ticks at 0, 0.05, 0.1, ... 0.5' — the five colour-filled regions R1–R5 match text.md's stability-region description of Fig. 2"
+  },
+  {
+    "id": "w08b",
+    "choice": "A",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "Figure 1 (a)(b)(c) axis table: middle (panel b) column reads '3 / 2 / 1 / population 0 / -1' — lowest tick label is -1"
+  },
+  {
+    "id": "w09a",
+    "choice": "C",
+    "grounded": true,
+    "source": "text.md",
+    "evidence": "Fig. 1 axis row: '|Basal|0.5 1 Time after bronchoprovocation of levofloxacin (hr)|1.5 2|3 3.5 3.75|5 6 7|' — 3.75 is a printed tick"
+  },
+  {
+    "id": "w09b",
+    "choice": "B",
+    "grounded": false,
+    "source": "none",
+    "evidence": "description.md is the panel-B skin-rash photograph, not the FEV1/PEFR plot; text.md gives only the nadir ('PEFR dropped to as low as 28% of the baseline value after 3 hr') and no 4-hr value. Guessed a partially recovered value."
+  },
+  {
+    "id": "w10a",
+    "choice": "A",
+    "grounded": true,
+    "source": "description.md + text.md",
+    "evidence": "description.md (left/performance chart): 'Legend, upper right, three entries: Total (blue), ID (green), OOD (orange).'; text.md defines the right-hand chart's metric only per ID/OOD ('the same-container violation rate as the probability that the policy places o1 into c2 ... fewer observed pairs yield ... a lower ID same-container violation rate'), so Total is the series absent from the right legend."
+  },
+  {
+    "id": "w10b",
+    "choice": "A",
+    "grounded": false,
+    "source": "none",
+    "evidence": "description.md covers only the left success-rate chart (Cov4 OOD ~1%); no values for the right-hand same-container-violation chart appear in either file. text.md says only that 'broader dependent-pair coverage ... reduces same-container violations', so Cov4 should be the largest — guessed the largest option."
+  }
+]

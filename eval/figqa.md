@@ -279,6 +279,77 @@ Both artifacts pushed in the same direction: throwing away good questions. Had
 they gone unnoticed the reported set would have been 5 questions instead of 12,
 with no sign anything was wrong.
 
+---
+
+# v3 — blind authoring, cropped rasters only, and the first arm free to fail
+
+v2's number was 11/11, but three things kept it from meaning much: the question
+author had already read the describers' status reports, 9 of 11 routed items
+were whole-page renders (so the describer and the page-render arm saw nearly
+the same pixels), and the answer key put the correct option at C fourteen times
+in thirty. v3 removes all three.
+
+| | v2 | v3 |
+|---|---|---|
+| question authors | had seen describer output | saw only page renders, nothing else in the repo |
+| routed item | 9 of 11 whole-page renders | **20 of 20 cropped rasters** |
+| answer key | C in 14 of 30 | **10/10/10/10** |
+| candidates | 30 | 40 |
+
+Selection is mechanical: one large cropped-raster item per document, page must
+carry ≥400 characters of text, seeded sample of 20 from a pool of 257 across
+arxiv, pmc and datasheets.
+
+## Result
+
+| arm | correct | grounded | forced by the gate? |
+|---|--:|--:|---|
+| closed-book, both orderings | 0/23 | — | yes |
+| text only | 9/23 | **0** | grounded-0 is forced; the 9 are guesses |
+| **doc-extract** | **20/23** | 18 | **no** |
+| full optical | 23/23 | 23 | yes |
+
+Full optical answered **40/40** of the candidates and every one was grounded, so
+no question in this round was malformed — the strongest ground-truth
+confirmation of the three, and this time the ground truth was authored by
+someone other than the person who ran the gate.
+
+**doc-extract loses 3 of 23.** That is the first honest measurement of the
+visual layer's cost in this repo: on cropped rasters it recovers 87% of what
+reading the page recovers, not 100%.
+
+## Every miss has the same cause
+
+| id | the crop is | the question is about |
+|---|---|---|
+| w14a | Figure 6-1, supply current vs supply voltage | Figure 6-2, the PSRR curves |
+| w18b | the upper metasurface perspective drawing | the lower MU-MIMO drawing |
+| w10b | the left panel of a two-panel bar figure | the right panel |
+
+`standalone_raster` emits **one** bitmap from a page that carries several
+figures, and the page render that would have caught the rest is suppressed
+precisely because a raster fired. This is the same mechanism as the q21 vector
+false negative in v1, now with a measured rate rather than a single anecdote.
+
+Two near-misses that did not cost a point but share the cause: w09b's crop is a
+clinical photograph rather than the spirometry plot, and w12a's crop is one of
+two oscilloscope captures with nothing to say which. Both were answered from
+`text.md` or by inference instead.
+
+## What the crop does and does not lose
+
+The obvious worry — a crop excludes the axes, so a chart's numbers are
+unrecoverable — turned out to be **half right and mostly harmless**. On w02, w04
+and w05 the extracted bitmap contains no legible text at all: axes, ticks,
+colour bars and annotations are vector text on the page, outside the image. But
+that same vector text survives extraction into `text.md` as scrambled runs, and
+the doc-extract arm has both files. Those questions were answered from the text
+layer and the gate dropped them anyway.
+
+The crop only costs you something when the page holds **several figures** and
+the router picks the wrong one. Missing axes are recoverable; a missing figure
+is not.
+
 ## Limits of this measurement
 
 - n=30 pages; 15 questions in v1, 12 admitted in v2. Small, and 12 questions

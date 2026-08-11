@@ -1,0 +1,22 @@
+[
+  {"id": "w01a", "choice": "B", "confident": false, "reasoning": "No knowledge of this locus; 6.6kb is a plausible Southern-blot wild-type fragment size."},
+  {"id": "w01b", "choice": "C", "confident": false, "reasoning": "Pure guess among MFI values; 2000 is the roundest plausible printed value."},
+  {"id": "w02a", "choice": "A", "confident": true, "reasoning": "Standard 0-1 colour bars are ticked at 0.2/0.4/0.6/0.8 by convention."},
+  {"id": "w02b", "choice": "C", "confident": false, "reasoning": "Guess; F_tail is a plausible third merger-diagnostic axis alongside F_disturbed."},
+  {"id": "w03a", "choice": "C", "confident": false, "reasoning": "Implant NFC links commonly use the 13.56 MHz vicinity standard ISO 15693, but ISO 14443/18092 are equally plausible."},
+  {"id": "w03b", "choice": "A", "confident": false, "reasoning": "SRAM plus EEPROM is the usual volatile/non-volatile pair in implant SoC block diagrams."},
+  {"id": "w04a", "choice": "C", "confident": false, "reasoning": "Op-amp small-signal overshoot plots commonly top out near 60%, but 50 or 100 are possible."},
+  {"id": "w04b", "choice": "B", "confident": true, "reasoning": "Settling-time-vs-gain curves are almost always annotated 0.01% and 0.1%."},
+  {"id": "w05a", "choice": "A", "confident": false, "reasoning": "-40/25/125 C is the most common automotive-grade temperature triple in regulator datasheets."},
+  {"id": "w05b", "choice": "C", "confident": false, "reasoning": "Only current scales fit an I_IN trace; 200 mA/DIV guessed over 1 A/DIV for a small regulator."},
+  {"id": "w06a", "choice": "B", "confident": false, "reasoning": "Guess; timing diagrams typically show about four sampling bursts on the middle axis."},
+  {"id": "w06b", "choice": "D", "confident": false, "reasoning": "If the middle trace is Normal Mode, the bottom is likely the higher-ODR normal-mode variant."},
+  {"id": "w07a", "choice": "D", "confident": false, "reasoning": "The longest arrow should carry the largest factor, so 4.3X."},
+  {"id": "w07b", "choice": "A", "confident": false, "reasoning": "Percentage-of-queries axes usually start at 0, though truncated axes are common in such plots."},
+  {"id": "w08a", "choice": "A", "confident": false, "reasoning": "A parameter-space stability map more likely uses phi(w) than a plain word."},
+  {"id": "w08b", "choice": "C", "confident": false, "reasoning": "Population quantities are non-negative, so 0 is the natural lowest tick."},
+  {"id": "w09a", "choice": "A", "confident": false, "reasoning": "Guess; 2.5 hr is the most conventional half-hour tick among the options."},
+  {"id": "w09b", "choice": "C", "confident": false, "reasoning": "Pure guess at a mid-recovery PEFR percentage at 4 hours."},
+  {"id": "w10a", "choice": "A", "confident": false, "reasoning": "An aggregate 'Total' series is the one most often dropped when a chart splits into ID/OOD."},
+  {"id": "w10b", "choice": "C", "confident": false, "reasoning": "Unseen bar height; guessed the low-mid value about 17%."}
+]
