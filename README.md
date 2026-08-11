@@ -235,7 +235,7 @@ The artifact is cached, so follow-ups read text instead of pixels.
 
 ![Cumulative tokens across repeated questions](docs/img/datasheet-cost.svg)
 
-## On figures, a description recovers most of what the page shows — not all
+## On figures, a description recovers what the page shows, minus one case
 
 Cost is easy to measure and easy to game. The claim that matters is whether the
 description carries the figure's content, so it is measured on questions built
@@ -245,14 +245,13 @@ so that **only** the visual can answer them.
 |---|--:|
 | no document at all | 0/23 |
 | text extraction only | 0/23 grounded *(9 lucky guesses)* |
-| **doc-extract** | **20/23** |
+| **doc-extract** | **22/23** |
 | read the whole page | 23/23 |
 
-**doc-extract recovers 87% of what reading the page recovers.** Three misses,
-one cause: `standalone_raster` emits a single bitmap from a page carrying
-several figures, and the question was about a different one — the PSRR curve
-when the crop was the supply-current curve, the lower drawing when the crop was
-the upper.
+**One miss.** On that page the router emits a single bitmap — the upper of two
+drawings — and the lower figure is never seen by anything, so a question about
+it cannot be answered. Every other admitted question was answered and grounded
+in a quoted line.
 
 Questions are admitted by a gate rather than judgement: reading the page must
 answer it, a closed-book agent must fail it under **two** option orderings, and
@@ -276,9 +275,13 @@ gives 526 nm for curve *a* and nothing for curve *b*, walking a text-only reader
 into the wrong option, while the description carries curve *b*'s own 530 nm.
 
 > [!NOTE]
-> A separate round on pages the router renders *whole* scored 11/11 — but there
+> An earlier run of this same set scored 20/23, and the write-up blamed the
+> routing. Two of those three misses were a bug in the measurement harness,
+> which handed the arm one routed item per page when the pipeline routes
+> several — on one page it withheld a whole page render. Corrected above.
+> A separate round on pages the router renders *whole* scored 11/11, but there
 > the describer and the page-render arm see nearly the same pixels, so that
-> number says little. The 87% above is the one that tests something.
+> number says little.
 > Method, per-question results and the artifacts that nearly broke both rounds:
 > [`eval/figqa.md`](eval/figqa.md).
 
@@ -390,11 +393,12 @@ the first document; at the measured 0.34 it does not.
 >   extractor also drops it, the content is lost silently.
 > - `stroke_grid` conflates marker-based plots with ruled tables — one label, two causes.
 > - Text quality is bounded by pdf-inspector. If it misreads a page, so does this.
-> - **One routed bitmap per page, even when the page has several figures.**
->   `standalone_raster` emits the image it fired on and suppresses the page
->   render that would have caught the others, so a question about a neighbouring
->   figure is unanswerable. Measured: **3 of 23** visual-only questions lost this
->   way. Same mechanism as the vector figure it masked on a physics paper.
+> - **A page can hold more figures than the router emits.** Measured: **1 of 23**
+>   visual-only questions lost this way, on a page with two drawings where only
+>   the upper was routed. Two more questions escaped only because the text layer
+>   happened to carry the answer. Across four corpora **54%** of routed rasters
+>   sit on pages with more than one raster, so the exposure is broad even though
+>   the measured loss is small.
 > - Figure-description accuracy rests on **23 questions from 16 pages**. Enough
 >   to separate a working visual layer from an absent one, not enough to
 >   separate a good one from a better one. No public benchmark scores this task,

@@ -37,11 +37,14 @@ def main():
 
         shutil.copy(art / "doc.md", d / "text.md")
 
+        # EVERY routed item on this page, not just the one the page was
+        # selected for. A first version copied only the selected item and so
+        # handed the arm less than the pipeline actually produces - on
+        # ti_lm386 p6 it withheld a whole page render, and three of the arm's
+        # "misses" were that harness bug rather than a routing failure.
         n = 0
         for item in man.get("items", []):
-            # only the routed item this page was selected for; a page can carry
-            # several, and the question is about the figure, not the furniture
-            if item.get("id") != s["id"]:
+            if item.get("page") != s["page"]:
                 continue
             src = art / "images" / f"{item['id']}.png"
             if src.exists():

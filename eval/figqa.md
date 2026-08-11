@@ -300,13 +300,33 @@ Selection is mechanical: one large cropped-raster item per document, page must
 carry ≥400 characters of text, seeded sample of 20 from a pool of 257 across
 arxiv, pmc and datasheets.
 
+## A harness bug, and the number it cost
+
+The first run of this arm scored 20/23 and the write-up blamed the routing.
+That was wrong, and the fault was in `figqa_v3_artifacts.py`: it copied only
+the item the page had been *selected* for, while the pipeline routes every
+item on the page. On 9 of 20 pages it withheld material, and on `ti_lm386` p6
+what it withheld was an entire **page render** that `raster_grid` had produced.
+
+Two of the three "misses" were that bug. Corrected and re-run:
+
+| miss under the buggy harness | withheld | verdict |
+|---|---|---|
+| w14a | `p006-render`, the whole page | harness artifact — now a hit |
+| w10b | `p008-x664`, the second bar chart | harness artifact — now a hit |
+| w18b | nothing; that page routes one item | **genuine** |
+
+The irony is exact: this round was built to avoid pages the router renders
+whole, and then discarded a page render the router did produce and counted its
+absence against the router.
+
 ## Result
 
 | arm | correct | grounded | forced by the gate? |
 |---|--:|--:|---|
 | closed-book, both orderings | 0/23 | — | yes |
 | text only | 9/23 | **0** | grounded-0 is forced; the 9 are guesses |
-| **doc-extract** | **20/23** | 18 | **no** |
+| **doc-extract** | **22/23** | 21 | **no** |
 | full optical | 23/23 | 23 | yes |
 
 Full optical answered **40/40** of the candidates and every one was grounded, so
@@ -314,27 +334,22 @@ no question in this round was malformed — the strongest ground-truth
 confirmation of the three, and this time the ground truth was authored by
 someone other than the person who ran the gate.
 
-**doc-extract loses 3 of 23.** That is the first honest measurement of the
-visual layer's cost in this repo: on cropped rasters it recovers 87% of what
-reading the page recovers, not 100%.
+**doc-extract loses 1 of 23**, on questions built so only the visual can answer
+them, on pages where the router crops rather than renders.
 
-## Every miss has the same cause
+## The one genuine miss
 
-| id | the crop is | the question is about |
-|---|---|---|
-| w14a | Figure 6-1, supply current vs supply voltage | Figure 6-2, the PSRR curves |
-| w18b | the upper metasurface perspective drawing | the lower MU-MIMO drawing |
-| w10b | the left panel of a two-panel bar figure | the right panel |
+**w18b.** The page carries two figures — an upper metasurface perspective
+drawing and a lower uplink MU-MIMO drawing — and routes exactly one item, the
+upper. The lower figure is never seen by anything, so the question about its
+axis symbol is unanswerable from the artifact. Same family as the vector
+schematic `standalone_raster` masked in v1: a page holding more figures than
+the router emits.
 
-`standalone_raster` emits **one** bitmap from a page that carries several
-figures, and the page render that would have caught the rest is suppressed
-precisely because a raster fired. This is the same mechanism as the q21 vector
-false negative in v1, now with a measured rate rather than a single anecdote.
-
-Two near-misses that did not cost a point but share the cause: w09b's crop is a
-clinical photograph rather than the spirometry plot, and w12a's crop is one of
-two oscilloscope captures with nothing to say which. Both were answered from
-`text.md` or by inference instead.
+Two near-misses did not cost a point but share the shape. w09's page routes two
+clinical photographs and no chart at all, so the spirometry plot the question
+targets is invisible; it was answered from `text.md`. w12's crop is one of two
+oscilloscope captures, and only the caption in `text.md` distinguishes them.
 
 ## What the crop does and does not lose
 

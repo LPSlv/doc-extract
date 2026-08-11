@@ -4,70 +4,70 @@
     "choice": "A",
     "grounded": true,
     "source": "description.md",
-    "evidence": "Matrix table in description: row 'n | 0 | 65 | 110 | 4.9 | 1 | 0 | 12' — column x3 = 110 in the last row."
+    "evidence": "Matrix table in the 'Non-leave Node Data' top block: '| n | 0 | 65 | 110 | 4.9 | 1 | 0 | 12 |' — column x3 in row n is 110."
   },
   {
     "id": "w11b",
     "choice": "B",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'Right panel equations: $$\\eta = \\beta_3 x_3 + \\beta_5 x_5$$' ... 'the proposed \"LASSO\" branch keeps two (x3, x5)'."
+    "evidence": "'Right panel, diamonds are blue-filled: left diamond: \"LASSO\"' and 'Right panel equations: $$\\eta = \\beta_3 x_3 + \\beta_5 x_5$$ ... the proposed \"LASSO\" branch keeps two (x3, x5)'."
   },
   {
     "id": "w12a",
     "choice": "C",
-    "grounded": false,
-    "source": "description.md",
-    "evidence": "description.md covers only ONE scope capture and never says whether it is the left or right panel: 'Timebase box: \"Timebase 0.00 ms / 2.00 ms/div / 100 kS 5 MS/s\"'. Chose 2.00 ms/div on the inference that the described capture is the zoomed-in one (VIN shows no plug-in transition anywhere in the 20 ms window, and text.md Eq. 12 gives tstart ≈ 3.85 ms, which fills only a few divisions here) — but the panel identity is not established by the material."
+    "grounded": true,
+    "source": "description.md + text.md",
+    "evidence": "text.md: 'Figure 33. Start-Up Figure 34. Start-Up (Zoomed In)'; description.md for the fine-timebase capture p025-x1133: '**Timebase**: 0.00 ms; **2.00 ms/div**; 100 kS; 5 MS/s.' (the other capture is 20.0 ms/div, i.e. the un-zoomed Start-Up)."
   },
   {
     "id": "w12b",
     "choice": "D",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'Trigger box: \"Trigger C4 DC / Stop 750 mA / Edge Positive\".'"
+    "evidence": "Both captures: '**Trigger**: C4, DC; **Stop**; Edge; Positive; **750 mA**.' and '**Trigger**: C4, DC; **Norm.**; Edge; Positive; **750 mA**.'"
   },
   {
     "id": "w13a",
     "choice": "D",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'Below the DAG, in bold green: \"true effect +0.55\"'."
+    "evidence": "Panel A: 'Below the DAG, in bold green: \"true effect +0.55\"'."
   },
   {
     "id": "w13b",
     "choice": "A",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'A black arrow runs right from the box to a black-outlined rectangle labelled \"C1 (25M)\"'."
+    "evidence": "Panel B top row: 'A black arrow runs right from the box to a black-outlined rectangle labelled \"C1 (25M)\"'."
   },
   {
     "id": "w14a",
-    "choice": "A",
-    "grounded": false,
-    "source": "none",
-    "evidence": "description.md describes a different figure (Figure 6-1, Supply Current vs Supply Voltage) — no PSRR curve data. text.md only lists the figure title ('Figure 6-2. Power Supply Rejection vs Frequency') and the spec condition 'VS = 6 V, f = 1 kHz, CBYPASS = 10 μF PSRR Power Supply Rejection Ratio 50 dB', which is not the curve label. Guessed 10 µF."
+    "choice": "B",
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Figure 6-2 Power Supply Rejection vs Frequency: '**C_B = 50 µF** — starts ≈35 dB at 10 Hz, rises to the **50 dB** plateau by ≈60–70 Hz' — the highest-rejection/leftmost curve is the 50 µF one."
   },
   {
     "id": "w14b",
     "choice": "C",
-    "grounded": false,
-    "source": "none",
-    "evidence": "The routed figure described is Figure 6-1, not the THD vs Frequency plot, so the in-plot test-condition block is unavailable. Inferred from the datasheet spec line in text.md ('VS = 6 V, RL = 8 Ω, POUT = 125 mW ... THD Total Harmonic Distortion 0.2% f = 1 kHz'), which is a table entry rather than the figure's annotation."
+    "grounded": true,
+    "source": "description.md",
+    "evidence": "Figure 6-5 in-plot conditions block: '**V_S = 6V**, **R_L = 8 Ω**, **P_OUT = 125 mW**, **A_V = 26 dB (C_1–8 = 0)**'."
   },
   {
     "id": "w15a",
     "choice": "D",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'A solid arrow leaves the globe to the right, annotated with the transition tuple (s, a, s′) in bold.'"
+    "evidence": "'A solid arrow leaves the globe to the right, annotated with the transition tuple **(s, a, s′)** in bold.'"
   },
   {
     "id": "w15b",
     "choice": "D",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'Shared Replay Buffer — an orange cylinder (database symbol) in the middle right, labelled on three lines: \"Shared Replay Buffer\"'."
+    "evidence": "'**Shared Replay Buffer** — an orange cylinder (database symbol) in the middle right, labelled on three lines: \"Shared Replay Buffer\".'"
   },
   {
     "id": "w16a",
@@ -102,21 +102,21 @@
     "choice": "C",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'x pointing straight up (top of the figure), y pointing to the lower right, z pointing to the upper right.'"
+    "evidence": "'x pointing straight up (top of the figure), **y** pointing to the lower right, **z** pointing to the upper right.'"
   },
   {
     "id": "w18b",
     "choice": "B",
     "grounded": false,
     "source": "none",
-    "evidence": "description.md covers only the upper perspective figure (Fig. 3), not the uplink MU-MIMO drawing (Fig. 4). text.md establishes both symbols exist as the BS aperture dimensions — 'aperture dimensions of w_BS = ℓ_BS = 4.5λ' — but does not say which arrow is vertical. Guessed ℓ_BS on the usual width-horizontal / length-vertical convention."
+    "evidence": "description.md describes only the metasurface perspective figure (Fig. 3); the uplink MU-MIMO drawing (Fig. 4) is not described. text.md only states 'aperture dimensions of w_BS = ℓ_BS = 4.5λ', which does not say which symbol labels the vertical arrow. Guessed ℓ_BS."
   },
   {
     "id": "w19a",
     "choice": "C",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'Bar heights read from the axis: 0 → ~80; 1 → ~100; 10 → ~150; 50 → ~250; 100 → ~300; 100+5 µmol/l GW9662 → ~32.'"
+    "evidence": "'Bar heights read from the axis: 0 → ~80; 1 → ~100; 10 → ~150; 50 → ~250; 100 → ~300'."
   },
   {
     "id": "w19b",
@@ -130,13 +130,13 @@
     "choice": "A",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'\"313 bp (C allele)\" — the middle labelled row, just above the ladder's 300 marker.'"
+    "evidence": "Gel p003-x102 (the T/C gel), band identity labels at the right edge: '**313 bp (C allele)** — aligned just above the 300 marker.'"
   },
   {
     "id": "w20b",
     "choice": "D",
     "grounded": true,
     "source": "description.md",
-    "evidence": "'Lane headings (printed above the wells, left to right): \"M\", \"T/C\", \"T/T\", \"C/C\", \"T/T\", \"T/C\".' — third lane right of M is C/C."
+    "evidence": "'Lane headings, left to right: **M**, **T/C**, **T/T**, **C/C**, **T/T**, **T/C**' — third lane right of M is C/C."
   }
 ]
