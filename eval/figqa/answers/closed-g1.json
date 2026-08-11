@@ -1,0 +1,7 @@
+[
+  {"id": "q03", "choice": "B", "confident": true, "reasoning": "In standard 3-lead transistor packages (SOT-23 etc.) the lone pin opposite the other two is the collector"},
+  {"id": "q04", "choice": "A", "confident": false, "reasoning": "Guess: thin-film LN photonic chips are typically on a Si handle substrate"},
+  {"id": "q06", "choice": "B", "confident": false, "reasoning": "50 pF is the most common CL in datasheet AC load-circuit figures, but unverified"},
+  {"id": "q07", "choice": "B", "confident": false, "reasoning": "Pure guess; no knowledge of this figure"},
+  {"id": "q08", "choice": "C", "confident": true, "reasoning": "Temperature-coefficient curves are conventionally normalised to 1.0 at 25 degC room temperature"}
+]

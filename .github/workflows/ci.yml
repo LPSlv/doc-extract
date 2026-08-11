@@ -9,6 +9,7 @@ jobs:
       - name: unit tests
         run: >
           uv run --with pytest --with firecrawl-anydoc==0.1.6
+          --with pymupdf==1.28.0 --with pdf-inspector==0.2.6
           python -m pytest tests/ -q
       - name: verbatim block in sync with harvest.py
         run: python3 tests/check_sync.py

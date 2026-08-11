@@ -1,0 +1,7 @@
+[
+  {"id": "q19", "choice": "D", "grounded": true, "evidence": "Figure 3 horizontal bar chart: legend Ice (orange) / No-ice (blue). In the Low satisfaction row the blue (No-ice) bar extends to 43 (86.0%), while the orange Ice bar is 2 (4.1%). Text also confirms ice group high = 38.8% matching the orange series."},
+  {"id": "q21", "choice": "A", "grounded": true, "evidence": "FIG. 1(a), TBE lab: the box labelled 'Analyzer' contains a coiled fiber marked 'dL=9 m' (with FM, PPS, 50:50), whereas the adjacent 'Encoder' box is marked 'dL=18 m'."},
+  {"id": "q22", "choice": "D", "grounded": true, "evidence": "Figure 7-6 board layout: left-side pins top to bottom read OUT1, IN1-, IN1+, VCC-; VCC- is the bottom-most left pin (right side: VCC+, OUT2, IN2-, IN2+)."},
+  {"id": "q23", "choice": "C", "grounded": true, "evidence": "Figura 5 shows five numbered circles 1-5 across the top: 1 Caracterizacion epidemiologica y registro nacional, 2 Tamizaje y estratificacion, 3 Factores de riesgo, 4 Diagnostico y tratamiento, 5 Atencion medica."},
+  {"id": "q28", "choice": "C", "grounded": true, "evidence": "Fig. 10 panel (c) 'Trained CSNR = 10 dB' (Rayleigh): x-axis labelled m with ticks 24, 26, 28, 30, 32, 34, 36, 38, 40; largest is 40."}
+]

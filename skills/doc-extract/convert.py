@@ -66,13 +66,43 @@ def route(src):
     return harvest, ENGINE          # let the PDF path report why it is not one
 
 
+def _raster_pixmap(doc, item):
+    """The routed raster, oriented the way the page draws it.
+
+    fitz.Pixmap(doc, xref) decodes the image XObject's own samples and applies
+    nothing else. When a PDF draws that image flipped - and TI datasheets do;
+    ti_drv8825.pdf p11 ships its motor-control block diagram upside down - the
+    PNG handed to the vision model is upside down too, silently, and every
+    label in it is unreadable. Nothing in the suite looks at image pixels, so
+    CI never saw it.
+
+    Rendering the image's own rectangle off the page applies the placement
+    matrix by construction, whatever the mechanism (flipped CTM, /Decode
+    array, bottom-up sample order). Scale is chosen to keep the image's native
+    detail rather than the page's.
+    """
+    page = doc[item["page"] - 1]
+    places = [i for i in page.get_image_info(xrefs=True)
+              if i.get("xref") == item["xref"]]
+    if places:
+        # An xref can be drawn more than once on a page; the largest placement
+        # is the one worth reading.
+        info = max(places, key=lambda i: fitz.Rect(i["bbox"]).get_area())
+        bbox = fitz.Rect(info["bbox"]) & page.rect
+        if not bbox.is_empty and bbox.width >= 4 and bbox.height >= 4:
+            s = max(info["width"] / bbox.width, info["height"] / bbox.height)
+            s = max(1.0, min(s, 8.0))       # never upsample past 8x
+            return page.get_pixmap(matrix=fitz.Matrix(s, s), clip=bbox)
+    return fitz.Pixmap(doc, item["xref"])   # unplaced xref: nothing better to do
+
+
 def _write_image(doc, item, images_dir, edge_override=None):
     """Materialise one manifest item to a PNG. Returns the filename."""
     name = f"{item['id']}.png"
     dest = images_dir / name
     if item["kind"] == "raster":
         try:
-            pix = fitz.Pixmap(doc, item["xref"])
+            pix = _raster_pixmap(doc, item)
             if pix.n - pix.alpha >= 4:
                 pix = fitz.Pixmap(fitz.csRGB, pix)
             # Downscale oversized rasters: a 3000px screenshot costs 4x a

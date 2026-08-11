@@ -1,0 +1,7 @@
+[
+  {"id": "q19", "choice": "C", "confident": false, "reasoning": "Pure guess; no-ice arm plausibly has a larger Low-satisfaction count than the small distractors."},
+  {"id": "q21", "choice": "B", "confident": false, "reasoning": "Guess; interferometer delay-line lengths of tens of metres are typical but the exact label is unknowable without the figure."},
+  {"id": "q22", "choice": "D", "confident": true, "reasoning": "Standard dual op-amp pinout: left side top-to-bottom is OUT1, IN1-, IN1+, V- (VCC-), so VCC- is at the bottom."},
+  {"id": "q23", "choice": "B", "confident": false, "reasoning": "Guess; four numbered stages is the most common process-diagram layout."},
+  {"id": "q28", "choice": "A", "confident": false, "reasoning": "Guess; axis limits at powers of two (32) are common for an index m."}
+]

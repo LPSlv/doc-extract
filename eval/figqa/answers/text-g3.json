@@ -1,0 +1,32 @@
+[
+  {
+    "id": "q19",
+    "choice": "D",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "q21",
+    "choice": "A",
+    "grounded": true,
+    "evidence": "Figure-1 label text: \"Analyzer Encoder ... *ΔL*= 9 m -5/2- *ΔL*=18 m\"; the encoder is separately stated as \"an unbalanced Mach-Zehnder fiber interferometer with a path length difference of ∆*L≈*18 m\", leaving ΔL = 9 m for the analyzer."
+  },
+  {
+    "id": "q22",
+    "choice": "D",
+    "grounded": true,
+    "evidence": "Figure 7-6 label text runs \"RF OUT1 VCC+ RG GND ✁ IN1 OUT2 / VIN IN1+ ✂ IN2 GND / RIN VCC IN2+\", i.e. left column top-to-bottom OUT1, IN1-, IN1+, VCC(-); Pin Functions table lists \"VCC– | 4 | — | Negative supply\"."
+  },
+  {
+    "id": "q23",
+    "choice": "C",
+    "grounded": false,
+    "evidence": ""
+  },
+  {
+    "id": "q28",
+    "choice": "C",
+    "grounded": true,
+    "evidence": "Fig. 10 panel (c) axis tick text: \"24 26 28 30 m 32 34 36 38 40\" (Fig. 10: The target domain classification accuracy for different schemes trained in Rayleigh channel with fixed CSNR)."
+  }
+]

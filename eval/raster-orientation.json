@@ -1,0 +1,366 @@
+{
+ "checked": 563,
+ "upright": 402,
+ "vflip": 51,
+ "hflip": 0,
+ "skipped": 110,
+ "cases": [
+  {
+   "file": "diodes_ap2112.pdf",
+   "id": "p011-x47",
+   "kind": "vflip",
+   "mse_as_is": 4668.2,
+   "mse_flipped": 3285.2
+  },
+  {
+   "file": "diodes_pam8403.pdf",
+   "id": "p005-x14",
+   "kind": "vflip",
+   "mse_as_is": 1142.8,
+   "mse_flipped": 770.7
+  },
+  {
+   "file": "diodes_pam8403.pdf",
+   "id": "p006-x18",
+   "kind": "vflip",
+   "mse_as_is": 960.3,
+   "mse_flipped": 472.9
+  },
+  {
+   "file": "diodes_pam8403.pdf",
+   "id": "p007-x23",
+   "kind": "vflip",
+   "mse_as_is": 671.2,
+   "mse_flipped": 491.7
+  },
+  {
+   "file": "diodes_pam8403.pdf",
+   "id": "p009-x31",
+   "kind": "vflip",
+   "mse_as_is": 1232.1,
+   "mse_flipped": 820.9
+  },
+  {
+   "file": "ti_dac8562.pdf",
+   "id": "p020-x934",
+   "kind": "vflip",
+   "mse_as_is": 1525.7,
+   "mse_flipped": 927.6
+  },
+  {
+   "file": "ti_drv8825.pdf",
+   "id": "p001-x10",
+   "kind": "vflip",
+   "mse_as_is": 749.3,
+   "mse_flipped": 504.4
+  },
+  {
+   "file": "ti_drv8825.pdf",
+   "id": "p007-x179",
+   "kind": "vflip",
+   "mse_as_is": 1027.9,
+   "mse_flipped": 681.1
+  },
+  {
+   "file": "ti_drv8825.pdf",
+   "id": "p020-x382",
+   "kind": "vflip",
+   "mse_as_is": 1358.1,
+   "mse_flipped": 967.6
+  },
+  {
+   "file": "ti_drv8825.pdf",
+   "id": "p020-x387",
+   "kind": "vflip",
+   "mse_as_is": 901.2,
+   "mse_flipped": 613.7
+  },
+  {
+   "file": "ti_drv8825.pdf",
+   "id": "p020-x392",
+   "kind": "vflip",
+   "mse_as_is": 903.9,
+   "mse_flipped": 638.3
+  },
+  {
+   "file": "ti_iso1050.pdf",
+   "id": "p005-x239",
+   "kind": "vflip",
+   "mse_as_is": 6043.7,
+   "mse_flipped": 3620.6
+  },
+  {
+   "file": "ti_lm317.pdf",
+   "id": "p009-x251",
+   "kind": "vflip",
+   "mse_as_is": 4096.0,
+   "mse_flipped": 2832.8
+  },
+  {
+   "file": "ti_lm317.pdf",
+   "id": "p012-x446",
+   "kind": "vflip",
+   "mse_as_is": 4400.9,
+   "mse_flipped": 3182.4
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p025-x1133",
+   "kind": "vflip",
+   "mse_as_is": 3125.5,
+   "mse_flipped": 891.1
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p025-x1139",
+   "kind": "vflip",
+   "mse_as_is": 3035.7,
+   "mse_flipped": 907.9
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p026-x1155",
+   "kind": "vflip",
+   "mse_as_is": 3213.1,
+   "mse_flipped": 727.0
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p026-x1161",
+   "kind": "vflip",
+   "mse_as_is": 3172.4,
+   "mse_flipped": 752.4
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p026-x1167",
+   "kind": "vflip",
+   "mse_as_is": 3098.8,
+   "mse_flipped": 701.9
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p026-x1173",
+   "kind": "vflip",
+   "mse_as_is": 3245.4,
+   "mse_flipped": 834.3
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p026-x1179",
+   "kind": "vflip",
+   "mse_as_is": 3107.0,
+   "mse_flipped": 735.6
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p026-x1185",
+   "kind": "vflip",
+   "mse_as_is": 3201.0,
+   "mse_flipped": 673.0
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p027-x1196",
+   "kind": "vflip",
+   "mse_as_is": 3217.6,
+   "mse_flipped": 769.9
+  },
+  {
+   "file": "ti_lm5069.pdf",
+   "id": "p027-x1202",
+   "kind": "vflip",
+   "mse_as_is": 3169.9,
+   "mse_flipped": 753.4
+  },
+  {
+   "file": "ti_lmt84.pdf",
+   "id": "p008-x280",
+   "kind": "vflip",
+   "mse_as_is": 2795.9,
+   "mse_flipped": 1846.9
+  },
+  {
+   "file": "ti_lmt84.pdf",
+   "id": "p008-x292",
+   "kind": "vflip",
+   "mse_as_is": 2847.3,
+   "mse_flipped": 2071.0
+  },
+  {
+   "file": "ti_lmt84.pdf",
+   "id": "p015-x463",
+   "kind": "vflip",
+   "mse_as_is": 1408.6,
+   "mse_flipped": 447.2
+  },
+  {
+   "file": "ti_lmt84.pdf",
+   "id": "p015-x470",
+   "kind": "vflip",
+   "mse_as_is": 1068.5,
+   "mse_flipped": 300.5
+  },
+  {
+   "file": "ti_lp5907.pdf",
+   "id": "p008-x292",
+   "kind": "vflip",
+   "mse_as_is": 704.5,
+   "mse_flipped": 414.8
+  },
+  {
+   "file": "ti_sn6501.pdf",
+   "id": "p001-x15",
+   "kind": "vflip",
+   "mse_as_is": 2717.1,
+   "mse_flipped": 1400.6
+  },
+  {
+   "file": "ti_sn6501.pdf",
+   "id": "p009-x384",
+   "kind": "vflip",
+   "mse_as_is": 1312.9,
+   "mse_flipped": 925.0
+  },
+  {
+   "file": "ti_sn65hvd230.pdf",
+   "id": "p028-x765",
+   "kind": "vflip",
+   "mse_as_is": 4370.3,
+   "mse_flipped": 2541.0
+  },
+  {
+   "file": "ti_sn65hvd230.pdf",
+   "id": "p030-x793",
+   "kind": "vflip",
+   "mse_as_is": 894.1,
+   "mse_flipped": 628.8
+  },
+  {
+   "file": "ti_sn74ls00.pdf",
+   "id": "p008-x270",
+   "kind": "vflip",
+   "mse_as_is": 2279.3,
+   "mse_flipped": 1623.9
+  },
+  {
+   "file": "ti_sn75176b.pdf",
+   "id": "p015-x505",
+   "kind": "vflip",
+   "mse_as_is": 1936.8,
+   "mse_flipped": 1168.1
+  },
+  {
+   "file": "ti_tpa3116d2.pdf",
+   "id": "p015-x510",
+   "kind": "vflip",
+   "mse_as_is": 3580.5,
+   "mse_flipped": 2523.6
+  },
+  {
+   "file": "ti_tpa3116d2.pdf",
+   "id": "p022-x653",
+   "kind": "vflip",
+   "mse_as_is": 4061.6,
+   "mse_flipped": 1206.9
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x650",
+   "kind": "vflip",
+   "mse_as_is": 1298.6,
+   "mse_flipped": 279.0
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x677",
+   "kind": "vflip",
+   "mse_as_is": 1168.0,
+   "mse_flipped": 217.8
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x695",
+   "kind": "vflip",
+   "mse_as_is": 1310.4,
+   "mse_flipped": 280.7
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x709",
+   "kind": "vflip",
+   "mse_as_is": 1200.4,
+   "mse_flipped": 250.2
+  },
+  {
+   "file": "ti_tps54560.pdf",
+   "id": "p033-x1523",
+   "kind": "vflip",
+   "mse_as_is": 2422.9,
+   "mse_flipped": 1129.2
+  },
+  {
+   "file": "ti_tps54560.pdf",
+   "id": "p034-x1570",
+   "kind": "vflip",
+   "mse_as_is": 1728.3,
+   "mse_flipped": 1151.4
+  },
+  {
+   "file": "ti_tps54560.pdf",
+   "id": "p034-x1584",
+   "kind": "vflip",
+   "mse_as_is": 5014.1,
+   "mse_flipped": 1346.9
+  },
+  {
+   "file": "ti_tps54560.pdf",
+   "id": "p034-x1600",
+   "kind": "vflip",
+   "mse_as_is": 1267.1,
+   "mse_flipped": 757.5
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "id": "p016-x581",
+   "kind": "vflip",
+   "mse_as_is": 928.0,
+   "mse_flipped": 617.4
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x650",
+   "kind": "vflip",
+   "mse_as_is": 1298.6,
+   "mse_flipped": 279.0
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x677",
+   "kind": "vflip",
+   "mse_as_is": 1168.0,
+   "mse_flipped": 217.8
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x695",
+   "kind": "vflip",
+   "mse_as_is": 1310.4,
+   "mse_flipped": 280.7
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "id": "p024-x709",
+   "kind": "vflip",
+   "mse_as_is": 1200.4,
+   "mse_flipped": 250.2
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "id": "p016-x581",
+   "kind": "vflip",
+   "mse_as_is": 928.0,
+   "mse_flipped": 617.4
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+[
+  {"id": "q14", "choice": "B", "grounded": true, "evidence": "Figure 6 block diagram: the triangle amplifier feeding the comparator on the AISEN path (and the mirrored BISEN path) is labelled 'A = 5'."},
+  {"id": "q15", "choice": "D", "grounded": true, "evidence": "Panel (b) Cloth Folding, left (successful) plot: y-axis ticks are 1.01/0.63/0.24/-0.14/-0.52; the curve rises steadily and ends at the top tick ~1.01 just under 400 steps."},
+  {"id": "q16", "choice": "A", "grounded": true, "evidence": "Fig. 3 strip labels top-to-bottom: Absorbent pad, Control line, Test line, NC membrane, Conjugate pad, Sample pad — the control line's red band is drawn above (nearer) the absorbent pad."},
+  {"id": "q17", "choice": "B", "grounded": true, "evidence": "PRISMA Fig. 1 identification box: 'Records removed before screening: Duplicate records removed (n = 640)'; 1641 was records identified and 983 records excluded at screening."},
+  {"id": "q18", "choice": "C", "grounded": true, "evidence": "Table II (Static) surface code: the ancilla wire a (rz ... mz) carries four ⊕ targets, controlled by qubits 1, 2, 3 and 4."}
+]

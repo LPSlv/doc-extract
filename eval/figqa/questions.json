@@ -1,0 +1,98 @@
+{
+  "about": "Figure-QA ground truth. Authored from 200-dpi renders of the 30 mechanically-selected candidate pages in candidates.json, cross-checked against view/<id>.txt so that every question is answerable ONLY from the visual. Four-option multiple choice: short free-text answers were rejected because stray tokens in the extracted text (e.g. the bare letters 'C E B' on q03) would falsely credit the text-only arm on a string match. Random baseline is 25%.",
+  "authored_by": "the same agent that runs the arms; see eval/figqa.md 'Limits of this measurement'",
+  "outcome_counts": {"authored": 15, "unproductive": 15},
+  "questions": [
+    {"id": "q03", "doc": "corpus/datasheets/diodes_mmbt3904.pdf", "page": 1, "reason": "standalone_raster",
+     "q": "In the 'Top View Pinout' package drawing, one terminal sits alone on one side of the package, opposite the other two. Which terminal is it?",
+     "options": ["B", "C", "E", "NC"], "answer": "C",
+     "figure_only_because": "the page text leaks the bare letters 'C E B' with no geometry; their arrangement exists only in the drawing"},
+
+    {"id": "q04", "doc": "corpus/arxiv/2607.29666v1.pdf", "page": 3, "reason": "curves",
+     "q": "In Figure 2, panel d shows a cross-section of the bare EMC chip. Which substrate is labelled in that panel?",
+     "options": ["Si", "Si/Al2O3", "LN", "NbTiN"], "answer": "Si/Al2O3",
+     "figure_only_because": "the caption says 'with materials indicated' but never names the substrate; panel i is the Si one"},
+
+    {"id": "q06", "doc": "corpus/datasheets/ti_sn74hc174.pdf", "page": 7, "reason": "curves",
+     "q": "In Figure 7-1 (Load Circuit), what is the value of the load capacitance CL?",
+     "options": ["15 pF", "50 pF", "100 pF", "1 nF"], "answer": "50 pF",
+     "figure_only_because": "the whole page extracts to three lines; every waveform and circuit label is vector art"},
+
+    {"id": "q07", "doc": "corpus/arxiv/2607.29675v1.pdf", "page": 84, "reason": "curves",
+     "q": "In Figure 15 panel (a), what is the approximate MSE for n=700 at a clip multiplier of 1.0?",
+     "options": ["0.1", "0.2", "0.35", "0.5"], "answer": "0.5",
+     "figure_only_because": "the caption lists the n values but no plotted magnitudes"},
+
+    {"id": "q08", "doc": "corpus/datasheets/diodes_zxct1009.pdf", "page": 6, "reason": "dense_grid",
+     "q": "In the 'Effect of Sense Resistor Material on Temperature Performance' graph, at approximately what temperature do all three curves intersect at a normalised voltage of 1.0?",
+     "options": ["-20 degC", "0 degC", "25 degC", "100 degC"], "answer": "25 degC",
+     "figure_only_because": "the prose describes the effect qualitatively; the crossing point is only readable off the plot"},
+
+    {"id": "q14", "doc": "corpus/datasheets/ti_drv8825.pdf", "page": 11, "reason": "standalone_raster",
+     "q": "In Figure 6 (Motor Control Circuitry), what gain is labelled on the current-sense amplifier feeding the comparator?",
+     "options": ["A = 1", "A = 5", "A = 10", "A = 20"], "answer": "A = 5",
+     "figure_only_because": "the page text is the section heading, one sentence and the caption"},
+
+    {"id": "q15", "doc": "corpus/arxiv/2607.29613v1.pdf", "page": 22, "reason": "whole_document",
+     "q": "In Figure 13 panel (b) Cloth Folding, the successful trajectory's value curve ends at approximately what value after ~400 steps?",
+     "options": ["-0.14", "0.24", "0.63", "1.01"], "answer": "1.01",
+     "figure_only_because": "sub-captions extract but axis tick values do not"},
+
+    {"id": "q16", "doc": "corpus/pmc/RA-011-D1RA02678J.PMC9036547.pdf", "page": 4, "reason": "whole_document",
+     "q": "In Fig. 3 (the test-strip schematic), which is drawn nearer the absorbent pad at the top of the strip?",
+     "options": ["The control line", "The test line", "They are level", "Neither is shown"], "answer": "The control line",
+     "figure_only_because": "the text explains what the two lines mean but never their order along the strip"},
+
+    {"id": "q17", "doc": "corpus/pmc/12886_2025_Article_4471.PMC12560472.pdf", "page": 5, "reason": "standalone_raster",
+     "q": "In the PRISMA flow diagram (Fig. 1), how many duplicate records were removed before screening?",
+     "options": ["18", "640", "983", "1641"], "answer": "640",
+     "figure_only_because": "the flow-diagram box contents are raster; the page prose covers prevalence results instead"},
+
+    {"id": "q18", "doc": "corpus/arxiv/2607.29443v1.pdf", "page": 3, "reason": "curves",
+     "q": "In the (Static) surface code circuit of Table II, how many CX gates are applied to the ancilla qubit a?",
+     "options": ["2", "3", "4", "5"], "answer": "4",
+     "figure_only_because": "the caption describes the gate types and schedules but gives no CX count"},
+
+    {"id": "q19", "doc": "corpus/pmc/TJEM-20-81.PMC7305669.pdf", "page": 4, "reason": "whole_document",
+     "q": "In Figure 3, how many no-ice patients reported Low satisfaction?",
+     "options": ["2", "7", "28", "43"], "answer": "43",
+     "figure_only_because": "the prose quotes only the High-satisfaction figures (38.8% vs 0%)"},
+
+    {"id": "q21", "doc": "corpus/arxiv/2607.29609v1.pdf", "page": 3, "reason": "standalone_raster",
+     "q": "In FIG. 1(a), what path-length difference is labelled inside the Analyzer box?",
+     "options": ["dL = 9 m", "dL = 18 m", "dL = 90 m", "dL = 100 m"], "answer": "dL = 9 m",
+     "figure_only_because": "the body text gives the encoder's 18 m but never the analyzer's 9 m"},
+
+    {"id": "q22", "doc": "corpus/datasheets/ti_ne5532.pdf", "page": 10, "reason": "curves",
+     "q": "In Figure 7-6 (board layout), which pin is shown at the bottom of the left-hand side of the device?",
+     "options": ["OUT1", "IN1-", "IN1+", "VCC-"], "answer": "VCC-",
+     "figure_only_because": "pin order around the package is drawn, not written"},
+
+    {"id": "q23", "doc": "corpus/pmc/04435117-60-Suppl2-S110.PMC10627501.pdf", "page": 8, "reason": "standalone_raster",
+     "q": "In Figura 5, how many numbered stages are shown across the top of the diagram?",
+     "options": ["3", "4", "5", "6"], "answer": "5",
+     "figure_only_because": "the figure is a single raster; only its one-line caption extracts"},
+
+    {"id": "q28", "doc": "corpus/arxiv/2607.28907v1.pdf", "page": 9, "reason": "curves",
+     "q": "In Fig. 10 panel (c), what is the largest value of m on the x-axis?",
+     "options": ["32", "36", "40", "44"], "answer": "40",
+     "figure_only_because": "the body text fixes m=32 for Fig. 9 and never states Fig. 10(c)'s sweep range"}
+  ],
+  "unproductive": [
+    {"id": "q01", "doc": "corpus/pmc/edinbmedj75066-0001.PMC5306817.pdf", "page": 16, "reason": "whole_document", "why": "caption_only", "note": "halftone X-ray; the caption 'X-ray of humerus showing area of rarefaction in the head of the bone' already states what the image shows"},
+    {"id": "q02", "doc": "corpus/pmc/PSYG-20-469.PMC7496584.pdf", "page": 1, "reason": "curves", "why": "no_figure", "note": "journal masthead only - publisher branding"},
+    {"id": "q05", "doc": "corpus/pmc/RA-013-D3RA02180G.PMC10167492.pdf", "page": 10, "reason": "whole_document", "why": "no_figure", "note": "references page"},
+    {"id": "q09", "doc": "corpus/papers/rob_diffusion-policy.pdf", "page": 14, "reason": "whole_document", "why": "no_figure", "note": "two-column prose appendix"},
+    {"id": "q10", "doc": "corpus/datasheets/ti_lm339.pdf", "page": 8, "reason": "curves", "why": "text_duplicate", "note": "electrical characteristics table extracts completely as text; the render adds nothing"},
+    {"id": "q11", "doc": "corpus/arxiv/2607.29482v1.pdf", "page": 2, "reason": "whole_document", "why": "caption_only", "note": "conceptual trajectory diagram; the caption enumerates all three paths and their properties"},
+    {"id": "q12", "doc": "corpus/datasheets/ti_lmv358.pdf", "page": 22, "reason": "curves", "why": "no_figure", "note": "documentation-support page; only graphic is the ESD warning icon"},
+    {"id": "q13", "doc": "corpus/arxiv/2607.28965v1.pdf", "page": 7, "reason": "whole_document", "why": "no_figure", "note": "two-column prose"},
+    {"id": "q20", "doc": "corpus/arxiv/2607.24638v1.pdf", "page": 6, "reason": "stroke_grid", "why": "no_figure", "note": "boxed display equations tripped the stroke-grid branch"},
+    {"id": "q24", "doc": "corpus/pmc/main.PMC9937890.pdf", "page": 1, "reason": "stroke_grid", "why": "no_figure", "note": "Elsevier front matter: publisher logo and cover thumbnail"},
+    {"id": "q25", "doc": "corpus/arxiv/2607.29374v1.pdf", "page": 4, "reason": "standalone_raster", "why": "caption_only", "note": "pipeline flowchart; the caption names every stage and the branching structure"},
+    {"id": "q26", "doc": "corpus/pmc/jast-63-3-666.PMC8204003.pdf", "page": 1, "reason": "curves", "why": "no_figure", "note": "journal first page: JAST wordmark and a Check-for-updates badge"},
+    {"id": "q27", "doc": "corpus/pmc/SMJ-63-753.PMC9875870.pdf", "page": 6, "reason": "stroke_grid", "why": "no_figure", "note": "references page plus an 'Access this article online' QR box"},
+    {"id": "q29", "doc": "corpus/arxiv/2607.29426v1.pdf", "page": 4, "reason": "whole_document", "why": "no_figure", "note": "two-column prose"},
+    {"id": "q30", "doc": "corpus/datasheets/ti_tlv757p.pdf", "page": 15, "reason": "curves", "why": "no_figure", "note": "prose page; curves fired on rule lines and the Note box"}
+  ]
+}

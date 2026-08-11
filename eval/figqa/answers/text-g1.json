@@ -1,0 +1,7 @@
+[
+  {"id": "q03", "choice": "B", "grounded": false, "evidence": ""},
+  {"id": "q04", "choice": "B", "grounded": true, "evidence": "**d**LN Si/Al₂O₃ ... d, Cross section of bare EMC chip with materials indicated."},
+  {"id": "q06", "choice": "B", "grounded": true, "evidence": "over recommended operating free-air temperature range, C |L||= 50 pF (unless otherwise noted) (see|Section 7)| ... A. CL includes probe and jig capacitance."},
+  {"id": "q07", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "q08", "choice": "C", "grounded": false, "evidence": ""}
+]

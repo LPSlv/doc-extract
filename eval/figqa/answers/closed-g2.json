@@ -1,0 +1,7 @@
+[
+  {"id": "q14", "choice": "C", "confident": false, "reasoning": "A=10 is a common current-sense amp gain, but pure guess without the figure"},
+  {"id": "q15", "choice": "D", "confident": false, "reasoning": "A successful trajectory's value should converge near 1, but the exact endpoint is unknowable here"},
+  {"id": "q16", "choice": "A", "confident": true, "reasoning": "In a lateral-flow strip the order is sample pad, conjugate, test line, control line, absorbent pad, so the control line sits nearer the absorbent pad"},
+  {"id": "q17", "choice": "B", "confident": false, "reasoning": "No knowledge of this PRISMA diagram; guessing a mid-range duplicate count"},
+  {"id": "q18", "choice": "C", "confident": true, "reasoning": "A standard surface-code weight-4 stabilizer measurement applies four CX gates between the ancilla and its four data qubits"}
+]

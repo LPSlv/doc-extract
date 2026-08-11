@@ -1,0 +1,7 @@
+[
+  {"id": "q14", "choice": "B", "grounded": true, "evidence": "AISENSE 6 | Current sense amplifier gain ... 5 V/V; \"The PWM chopping current is set by a comparator which compares the voltage across a current sense resistor connected to the xISEN pins, multiplied by a factor of 5, with a reference voltage.\" (Figure 6 internals themselves are not in the extracted text)"},
+  {"id": "q15", "choice": "C", "grounded": false, "evidence": ""},
+  {"id": "q16", "choice": "A", "grounded": false, "evidence": ""},
+  {"id": "q17", "choice": "B", "grounded": true, "evidence": "\"A total of 1,641 records were identified from database searches (Fig. 1). After removing 640 duplicates, 1,001 unique records were screened by title and abstract.\""},
+  {"id": "q18", "choice": "C", "grounded": true, "evidence": "\"The static surface code uses the standard circuit in which CX gates are applied between an ancilla initialized in |0> (|+>) and the data qubits of a Z (X) plaquette and then the ancilla is measured\"; Table II row labels list data qubits 1-4 plus ancilla a, and EC schedules are defined \"after the second and fourth two-qubit gates of a syndrome-extraction circuit\""}
+]

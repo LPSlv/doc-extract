@@ -1,0 +1,7 @@
+[
+  {"id": "q03", "choice": "B", "grounded": true, "evidence": "Top View Pinout drawing of the SOT23 MMBT3904 shows a single terminal labelled C on the upper side of the package body, with B and E as the two terminals on the opposite (lower) side."},
+  {"id": "q04", "choice": "B", "grounded": true, "evidence": "Figure 2 panel d shows a cross-section with a green LN layer and Al electrodes sitting on a grey substrate block labelled 'Si/Al2O3'; the panel i cross-section below it is the one labelled 'Si' with NbTiN."},
+  {"id": "q06", "choice": "B", "grounded": true, "evidence": "Figure 7-1 Load Circuit shows the test point capacitor annotated 'CL = 50 pF (see Note A)'."},
+  {"id": "q07", "choice": "D", "grounded": true, "evidence": "In Figure 15(a) the green n=700 curve rises to its highest point at clip multiplier 1.0, sitting just below the 0.5 gridline (~0.49) with an error bar spanning roughly 0.46-0.53."},
+  {"id": "q08", "choice": "C", "grounded": true, "evidence": "In the 'Effect of Sense Resistor Material on Temperature Performance' graph, all three curves (voltage across copper sense resistor, VOUT with copper, VOUT with ideal) cross at normalised voltage 1.0 at roughly 25 degC, just right of the 20 degC gridline."}
+]

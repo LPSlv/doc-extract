@@ -5,3 +5,7 @@ opendataloader-bench/
 oldscans/
 docs/img/*.png
 corpus/
+eval/figqa/pages/
+eval/figqa/arms/
+eval/figqa/text/
+eval/figqa/view/
