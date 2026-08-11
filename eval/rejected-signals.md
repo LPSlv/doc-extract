@@ -50,6 +50,44 @@ arxiv and papers (1 of 826).
 
 ---
 
+## cost_guard's token model drifts from what ships — measured, tolerated
+
+`cost_guard()` decides whether the routed set is cheaper than rendering every
+page, and prices a raster with `_tok(*it["px"])` — the xref's **native**
+dimensions. Since `_raster_pixmap()` began clip-rendering the placement, that
+is no longer what `convert.py` emits: the render targets the native pixel
+count but scales isotropically, so an anisotropic placement comes out larger.
+
+Measured over 892 routed rasters (datasheets, pmc, papers), mirroring
+`_write_image`'s shrink loop:
+
+| | tokens |
+|---|--:|
+| `cost_guard` predicts | 858,616 |
+| `convert.py` emits | 863,763 |
+| **error** | **+0.60%** |
+
+Per item the disagreement reaches **58%** — `ti_tps54331.pdf` p24 predicts 583
+tokens and ships 920, four times over.
+
+**Tolerated, not fixed.** `cost_guard` is a threshold, so a 0.6% aggregate
+under-estimate only changes an outcome for a document sitting within 0.6% of
+the boundary. Pricing the true output would mean a `get_image_info()` pass per
+raster inside `harvest()`, which is the same ~40 ms/document overhead that
+sank soft-mask suppression above — and this repo should not pay that twice for
+sub-percent corrections.
+
+Two consequences worth stating plainly rather than burying:
+
+- the token figures in `docs/benchmarks/results/*.json` describe the **modelled**
+  raster path, not the shipped one, and are ~0.6% low on rasters (rasters are a
+  minority of calls, so the effect on the headline 20.1M is far smaller);
+- a document within a hair of the `cost_guard` boundary can route the wrong way.
+  No such document has been observed; nothing looks for one.
+
+Revisit if `_raster_pixmap` ever changes scale policy again, since the error is
+entirely a function of that policy.
+
 ## Multi-figure pages — measured, not yet actioned
 
 Not a rejected signal; an open one, recorded because the measurement exists.
