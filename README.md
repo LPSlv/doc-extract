@@ -50,9 +50,9 @@ uv run skills/doc-extract/convert.py example/sample-report.pdf
 ```
 
 ```json
-{"status":"ok","artifact":"~/.cache/doc-extract/0559ee3a…","cached":false,
- "pending":[{"id":"p001-x5","page":1,"kind":"raster","reason":"standalone_raster",
-             "path":"…/images/p001-x5.png"}],
+{"status":"ok","artifact":"~/.cache/doc-extract/d2176c41…","cached":false,
+ "pending":[{"id":"p001-x38","page":1,"kind":"raster","reason":"standalone_raster",
+             "path":"…/images/p001-x38.png"}],
  "dropped":0,"over_scale_guard":false,"scale_guard":15}
 ```
 
@@ -67,7 +67,7 @@ Ask *"how big is the Q4 gap?"* of that page:
 
 | text extraction alone | with doc-extract |
 |---|---|
-| `***Figure 1: spend against plan***` <br><br> `Actual spend tracked plan closely` <br> `through Q2 but diverged in Q3 as` <br> `equipment procurement slipped.` | `**[p1] p001-x5** — Line chart, two series.` <br> `X: Quarter 2026 (Q1–Q4). Y: Spend (k EUR).` <br> `Planned: Q1 12, Q2 19, Q3 24, Q4 31.` <br> `Actual: Q1 11, Q2 17, Q3 18, Q4 22.` <br> `…the Q4 gap is about 9k EUR.` |
+| `***Figure 1: spend against plan***` <br><br> `Actual spend tracked plan closely` <br> `through Q2 but diverged in Q3 as` <br> `equipment procurement slipped.` | `**[p1] p001-x38** — Line chart, two series.` <br> `X: Quarter 2026 (Q1–Q4). Y: Spend (k EUR).` <br> `Planned: Q1 12, Q2 19, Q3 24, Q4 31.` <br> `Actual: Q1 11, Q2 17, Q3 18, Q4 22.` <br> `…the Q4 gap is about 9k EUR.` |
 | **no answer** — the chart is a vector drawing, so there is nothing to extract | **≈ 9k EUR**, with a `[p1]` citation |
 
 The text path is untouched: strip the added block and you get pdf-inspector's

@@ -1,8 +1,8 @@
 # Sample Project Report
 
-## Work package 3 — quarterly summary
+## Work package 3 - quarterly summary
 
-This is a synthetic document used as the runnable example for the doc-extract skill. It contains ordinary body text, a table that a text extractor can parse on its own, and a vector chart that it cannot. Running the skill over it should extract all the text, skip the table (already handled), and send exactly one image to a vision pass.
+This is a synthetic document used as the runnable example for the doc-extract skill. It contains ordinary body text, a table that a text extractor can parse on its own, and a chart that it cannot. Running the skill over it should extract all the text, skip the table (already handled), and send exactly one image to a vision pass.
 
 ### Budget by category
 
@@ -20,5 +20,5 @@ Actual spend tracked plan closely through Q2 but diverged in Q3 as equipment pro
 <!-- doc-extract:add -->
 ## Figures and scanned pages
 
-**[p1] p001-x5** (standalone_raster) — Line chart, two series, spend against plan. X: Quarter 2026 (Q1-Q4). Y: Spend (k EUR), 10 to just over 31. Planned (blue, circles): Q1 12, Q2 19, Q3 24, Q4 31. Actual (orange, squares): Q1 11, Q2 17, Q3 18, Q4 22. The two series track closely at Q1-Q2 then diverge from Q3 onward, with Actual flattening while Planned continues to rise; the Q4 gap is about 9k EUR.
+**[p1] p001-x38** (standalone_raster) — Line chart, two series, spend against plan. X: Quarter 2026 (Q1-Q4). Y: Spend (k EUR), 10 to just over 31. Planned (blue, circles): Q1 12, Q2 19, Q3 24, Q4 31. Actual (orange, squares): Q1 11, Q2 17, Q3 18, Q4 22. The two series track closely at Q1-Q2 then diverge from Q3 onward, with Actual flattening while Planned continues to rise; the Q4 gap is about 9k EUR.
 <!-- /doc-extract:add -->
