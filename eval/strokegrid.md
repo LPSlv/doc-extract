@@ -109,6 +109,86 @@ The 0.50 variant is a different case: strictly free, no content lost, and it
 needs no new constant because `UBIQUITY` already exists. That one is worth
 implementing if anyone wants a small, safe win. It fixes 8% of the problem.
 
+## So how do you make it work? A rule that measures well, and what it still needs
+
+The branch asks *are there strokes in both orientations?* A ruled table, a box
+around a prompt listing, and a page of fraction bars all answer yes. What
+separates them is whether the strokes form a **lattice**.
+
+Counting *distinct* vertical stroke positions (clustered at 2 pt) instead of
+counting strokes:
+
+| distinct vertical positions | table | plot | figure | none |
+|---|--:|--:|--:|--:|
+| 0–1 | 16 | 1 | 0 | 3 |
+| **exactly 2** | 8 | 1 | 4 | **41** |
+| 3–4 | 29 | 1 | 2 | 10 |
+| 5–9 | 7 | 0 | 5 | 14 |
+| 10+ | 4 | 7 | 13 | 4 |
+
+**Exactly two is the box signature** — a frame has a left edge and a right edge
+and nothing between. Tables sit at 0–1 (booktabs, no verticals at all) or 3–4
+(ruled columns); plots and figures at 10+.
+
+Alone it is not good enough: 41 cut, **13 real items lost**, 76% precision.
+Dropping a table costs content silently while a wasted call only costs tokens,
+so this codebase should not take that trade — it has already reverted two
+signals that lost content out-of-sample.
+
+Composing it with the repetition finding fixes that. A real table appears once;
+a box template repeats.
+
+| rule | cut | lost | precision | recall |
+|---|--:|--:|--:|--:|
+| `vx == 2` | 41 | 13 | 76% | 57% |
+| `vx == 2` and fingerprint on ≥1 other page | 37 | 5 | 88% | 51% |
+| **`vx == 2` and fingerprint on ≥2 other pages** | **35** | **2** | **95%** | **49%** |
+| `vx == 2` and on ≥3 other pages | 24 | 2 | 92% | 33% |
+
+where *fingerprint* is the tuple of rounded distinct vertical positions, so
+"the same box in the same place on another page".
+
+**Half the waste, 95% precision, and it is stable.** A document-level split
+gives 92% on one fold and 96% on the other, and the 35 drops come from 18
+distinct documents rather than one pathological file.
+
+### What it does not do
+
+Recall is entirely corpus-dependent:
+
+| corpus | cut | lost | precision | recall |
+|---|--:|--:|--:|--:|
+| arxiv | 26 | 1 | 96% | 79% |
+| pmc | 7 | 1 | 88% | 30% |
+| papers | 2 | 0 | 100% | 50% |
+| datasheets | 0 | 0 | — | **0%** |
+| tds | 0 | 0 | — | **0%** |
+
+It solves the LaTeX families — prompt boxes, pseudocode frames, proof pages —
+and is completely blind to the vendor-boilerplate family, because a Würth title
+block or a Nexperia legal table is a real multi-column grid with more than two
+vertical positions. Those need the recurrence rule instead, and the free
+`UBIQUITY = 0.50` variant above is the start of it.
+
+### The validation this still needs, and why it is not done
+
+**A true out-of-sample corpus.** The rule was designed by looking at these
+labels, so its numbers are in-sample and the document split only shows
+stability, not generalisation.
+
+The obvious holdout is not available here: `bills` and the six olmOCR corpora
+were deliberately left unlabelled, but they produce only **17** `stroke_grid`
+firings between them and the rule fires on **none** of them — olmOCR extracts
+are single pages and bills are short, so no page template can recur. Validating
+this needs a fresh corpus of multi-page LaTeX papers that this repo does not
+currently contain.
+
+Until that exists, the honest status is: **the best candidate found, measured
+at 95% precision in-sample and stable under a document split, not shipped.**
+Two of this repo's rejected signals were flawless on the set they were fitted
+to and then lost real content elsewhere; that is exactly the failure this rule
+is still exposed to.
+
 ## What would actually move the number
 
 Families 2 and 3 — math furniture and framed verbatim — are together roughly

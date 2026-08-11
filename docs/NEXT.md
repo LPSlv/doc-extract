@@ -31,10 +31,20 @@ What is left from it, in order:
   new constant. Small (8% of the waste) but strictly positive.
 - **Do not ship the 0.20 threshold** from that table. It is read off the set it
   would be validated against. It needs a held-out corpus first.
-- **The real target** is the ~half of the waste from LaTeX math furniture and
-  framed verbatim/prompt boxes. Both share a property the geometry misses: the
-  strokes enclose *text* rather than bounding a data region. That is a new
-  signal to build against `eval/strokegrid/labels.tsv`, then validate elsewhere.
+- **A rule for the LaTeX half now exists and measures well**: count *distinct*
+  vertical stroke positions instead of strokes, and drop a firing where there
+  are exactly 2 (the box signature — left edge, right edge, nothing between)
+  AND the same fingerprint appears on ≥2 other pages of the document. 35 of 72
+  wasted calls removed, 2 real items lost, **95% precision**, stable under a
+  document-level split (92% / 96%).
+  **Not shipped — it needs a true holdout**, and this repo cannot supply one:
+  `bills` and the olmOCR corpora yield 17 `stroke_grid` firings total and the
+  rule fires on none. The validation step is to fetch a fresh corpus of
+  multi-page LaTeX papers and label the rule's drops there. Do that before
+  implementing.
+- It is blind to the vendor-boilerplate half (Würth title blocks, Nexperia
+  legal pages) — those are real multi-column grids. Recurrence, not lattice
+  shape, is the lever there.
 - Worth knowing: the branch's second stated purpose, marker-based plots, fired
   **10 times in 170**. Do not defend the threshold on that basis.
 

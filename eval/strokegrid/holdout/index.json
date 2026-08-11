@@ -1,0 +1,4 @@
+{
+ "rule": "vx==2 and fingerprint on >=2 other pages",
+ "candidates": []
+}
