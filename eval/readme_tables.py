@@ -109,10 +109,22 @@ def main(write=False):
              f"itself. Single pages have nothing to amortise. It stays in the table.")
     print("\n".join(L))
 
+    office = office_block()
+    if office:
+        print("\n" + "-" * 60 + "\n")
+        print(office)
+
     if write:
         p = ROOT / "README.md"; s = p.read_text()
         a, b = s.index(BEGIN) + len(BEGIN), s.index(END)
-        p.write_text(s[:a] + "\n" + "\n".join(L) + "\n" + s[b:])
+        s = s[:a] + "\n" + "\n".join(L) + "\n" + s[b:]
+        # The Office table lives behind its own markers and was previously
+        # built by a function --write never called, so the README's claim that
+        # its tables are regenerated was false for that block.
+        if office and OBEGIN in s and OEND in s:
+            a, b = s.index(OBEGIN) + len(OBEGIN), s.index(OEND)
+            s = s[:a] + "\n" + office + "\n" + s[b:]
+        p.write_text(s)
         print("\n-- written to README.md", file=sys.stderr)
 
 

@@ -12,7 +12,7 @@
 
 Text extraction handles most documents on its own — and silently drops every
 chart, pinout diagram, scanned page and merged-header table. Looking at every
-page instead catches all of it, and costs 2.4× more.
+page instead catches all of it, and costs 3.6× what text extraction does.
 
 `doc-extract` does neither. It extracts text with [pdf-inspector](https://github.com/firecrawl/pdf-inspector)
 and [anydoc](https://github.com/firecrawl/anydoc), works out which pages the
@@ -68,7 +68,7 @@ Ask *"how big is the Q4 gap?"* of that page:
 | text extraction alone | with doc-extract |
 |---|---|
 | `***Figure 1: spend against plan***` <br><br> `Actual spend tracked plan closely` <br> `through Q2 but diverged in Q3 as` <br> `equipment procurement slipped.` | `**[p1] p001-x38** — Line chart, two series.` <br> `X: Quarter 2026 (Q1–Q4). Y: Spend (k EUR).` <br> `Planned: Q1 12, Q2 19, Q3 24, Q4 31.` <br> `Actual: Q1 11, Q2 17, Q3 18, Q4 22.` <br> `…the Q4 gap is about 9k EUR.` |
-| **no answer** — the chart is a vector drawing, so there is nothing to extract | **≈ 9k EUR**, with a `[p1]` citation |
+| **no answer** — the chart is an embedded bitmap, so extraction returns the caption and stops | **≈ 9k EUR**, with a `[p1]` citation |
 
 The text path is untouched: strip the added block and you get pdf-inspector's
 output back byte for byte. The visual layer only ever adds.
@@ -168,8 +168,14 @@ image tokens 54% with identical content capture.
 ## Reading 20,375 pages costs 2.4× less than looking at them
 
 Twelve corpora, chosen to be unlike each other: electronics datasheets, arXiv and
-PMC papers, US legislation, and six olmOCR-bench page classes. Each has a fetch
-script and a sha256 manifest, so a result pins to exact inputs.
+PMC papers, US legislation, and six olmOCR-bench page classes. Each has a URL
+manifest under [`eval/manifests/`](eval/manifests/) and a fetch script.
+
+> [!NOTE]
+> Pinning is uneven. The six olmOCR corpora are sha256-pinned per file, so those
+> results reproduce exactly. `arxiv`, `bills`, `datasheets` and `pmc` ship URLs
+> without hashes, and `papers` has no manifest — re-fetching those may not give
+> you byte-identical inputs.
 Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
 
 <!-- benchmarks:begin -->
@@ -216,7 +222,10 @@ text path is byte-identical and every addition is strippable.
 > [!NOTE]
 > That 0.875 is pdf-inspector's number, not an improvement. Against the
 > benchmark's *full* engine set it ranks 5th of 15 — `opendataloader-hybrid`
-> 0.907, `nutrient` 0.885 and `docling` 0.882 all score higher. The equality is
+> 0.907, `nutrient` 0.885 and `docling` 0.882 all score higher. Those competitor
+> figures come from [opendataloader-bench's published
+> leaderboard](https://github.com/opendataloader-project/opendataloader-bench),
+> not from a run in this repo; only the 0.875 was measured here. The equality is
 > enforced, not asserted: `eval/gate.py` runs the real pipeline and requires the
 > stripped output to equal raw engine output byte for byte.
 
@@ -232,34 +241,48 @@ Cost is easy to measure and easy to game. The claim that matters is whether the
 description actually carries the figure's content — so it is now measured, on
 questions built so that **only** the visual can answer them.
 
-| 12 visual-only questions | correct |
-|---|--:|
-| no document at all | 0/12 |
-| text extraction only | 0/12 |
-| **doc-extract** | **12/12** |
-| read the whole page | **12/12** |
+Questions are admitted by a gate rather than by judgement. A candidate survives
+only if reading the page answers it, a closed-book agent fails it under **two**
+option orderings, and a text-only agent cannot ground it in the markdown. 30
+candidates in, **11 admitted**, none lost to a bad answer key.
 
-Questions are admitted by a gate, not by judgement: a candidate survives only if
-reading the page answers it (ground truth is sound), a closed-book agent fails
-it under **two** option orderings (it isn't reachable by convention), and a
-text-only agent cannot ground it in the markdown. 30 candidates in, 12 out,
-none lost to a bad answer key. Four agents ran the arms, none of them able to
-see the ground truth or each other.
+**The result: descriptions written before these questions existed contained and
+correctly grounded 11 of 11 answers**, each quoting the line it came from.
 
-Text extraction's raw score on the same set is 7/12, and all of it is guessing:
-eleven of its twelve answers were ungrounded, and the one it claimed to ground
-was wrong. On Fig. 4 of one paper it is worse than blind — the markdown gives
-526 nm for curve *a* and nothing for curve *b*, walking a text-only reader
-straight into the wrong answer, while the description carries curve *b*'s own
-530 nm.
+> [!IMPORTANT]
+> Three of the four arms score exactly what the gate forces them to, so only one
+> row is a measurement:
+>
+> | arm | letter score | what it means |
+> |---|--:|---|
+> | read the whole page | 11/11 | **forced** — admission requires it |
+> | closed-book, per ordering | 4/12, 1/12 | **forced** — admission requires failing both |
+> | text extraction only | 7/12 | ungrounded guessing; 0 grounded-correct is **forced** |
+> | **doc-extract** | **11/11** | the only arm the gate does not constrain |
+>
+> "Matches reading the whole page" would be circular — that arm could not have
+> scored anything else. What is real is that the descriptions carried every
+> admitted answer.
+
+Two further discounts, both material. For **9 of the 11** the routed item is
+itself a whole-page render, so the describer looked at nearly the same pixels
+as the page-render arm; the sharp test — describing a *cropped* figure — is
+n=2. And 11 questions from 8 pages is enough to rule out a describer that
+misses things, not enough to bound how much it misses.
+
+Where text extraction is worse than blind: on Fig. 4 of one paper the markdown
+gives 526 nm for curve *a* and nothing for curve *b*, walking a text-only reader
+into the wrong option, while the description carries curve *b*'s own 530 nm.
 
 > [!NOTE]
-> This says the routing loses nothing **on pages it selects**. It says nothing
-> about pages it skips, and for most of these figures the routed item is a
-> whole-page render — so on that page doc-extract and full optical are looking
-> at much the same thing. The 2.4× comes from the two-thirds of pages never
-> rendered, and the price of that is in Limitations.
-> Method, per-question results and the two artifacts that nearly broke it:
+> A twelfth question was withdrawn after the fact: its answer — a bus tick
+> printed `4` where the datasheet's own convention says `5` — had been
+> volunteered to the question author in a describer's status report before the
+> question was written. The author therefore learned it from the arm under
+> test. The wider risk this exposes (questions authored by someone who had
+> already seen what the describers produced) is unresolved and is why a blind
+> re-authoring is in progress.
+> Method, per-question results and the artifacts that nearly broke it:
 > [`eval/figqa.md`](eval/figqa.md).
 
 ## On Office documents the routing barely helps, and the numbers say so
@@ -370,7 +393,9 @@ the first document; at the measured 0.34 it does not.
 >   extractor also drops it, the content is lost silently.
 > - `stroke_grid` conflates marker-based plots with ruled tables — one label, two causes.
 > - Text quality is bounded by pdf-inspector. If it misreads a page, so does this.
-> - Figure-description accuracy rests on **12 questions from 8 figures** — enough
+> - Figure-description accuracy rests on **11 questions from 8 pages**, of which
+>   only 2 test a cropped figure rather than a whole-page render, and which are
+>   not independent (three share one page). Enough
 >   to separate a working visual layer from an absent one, not enough to
 >   separate a good one from a better one. No public benchmark scores this task,
 >   so the set is built here and its construction is the thing to audit
@@ -426,7 +451,10 @@ python3 eval/readme_tables.py --write             # regenerate this README's tab
 ```
 
 > [!TIP]
-> `harvest.py` is the single source of truth for every routing decision, and
-> every number in this README is regenerated from it — none is hand-carried. To
-> see routing on your own file without converting anything:
+> `harvest.py` is the single source of truth for every routing decision. The
+> cost tables between the `benchmarks:` and `office:` markers are regenerated by
+> `eval/readme_tables.py --write` and never hand-edited; the accuracy figures
+> (olmOCR, opendataloader, figure-QA) and the branding percentages are prose,
+> carried by hand from the documents they link to. To see routing on your own
+> file without converting anything:
 > `uv run skills/doc-extract/harvest.py FILE.pdf`

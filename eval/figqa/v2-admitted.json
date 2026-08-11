@@ -1,7 +1,11 @@
 {
- "screening": "optical correct AND NOT(closed1 AND closed2) AND text wrong",
+ "screening": "optical correct AND NOT(closed1 AND closed2) AND NOT(text correct AND grounded) AND not withdrawn",
  "n_candidates": 30,
- "n_admitted": 12,
+ "n_admitted": 11,
+ "overlap_note": "10 conventional and 12 in-text overlap on 4 candidates; the filters are not a cascade",
+ "withdrawn": {
+  "v25": "author contamination: the answer (a bus tick printed 4 where the datasheet's own convention says 5) was volunteered to the question author in a describer's status report before the question was written, so it was learned from the arm under test"
+ },
  "admitted": [
   {
    "id": "v01",
@@ -128,20 +132,6 @@
     "14"
    ],
    "answer": "12"
-  },
-  {
-   "id": "v25",
-   "src": "q14",
-   "doc": "corpus/datasheets/ti_drv8825.pdf",
-   "page": 11,
-   "q": "In Figure 6, the bus running from BI[4:0] into the B-channel DAC carries a slash annotated with which number?",
-   "options": [
-    "3",
-    "4",
-    "5",
-    "6"
-   ],
-   "answer": "4"
   },
   {
    "id": "v29",

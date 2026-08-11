@@ -24,6 +24,15 @@ import json, pathlib, collections
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "eval" / "figqa"
 
+# Withdrawn after the fact, with the reason, because a silently shorter set is
+# indistinguishable from one that never had the question.
+WITHDRAWN = {
+    "v25": "author contamination: the answer (a bus tick printed 4 where the "
+           "datasheet's own convention says 5) was volunteered to the question "
+           "author in a describer's status report before the question was "
+           "written, so it was learned from the arm under test",
+}
+
 
 def load(prefix, groups):
     got = {}
@@ -74,7 +83,7 @@ def main():
         t = choice_text(c, tr.get("choice")) == c["answer"] and bool(tr.get("grounded"))
 
         conventional = c1 and c2
-        ok = o and not conventional and not t
+        ok = o and not conventional and not t and i not in WITHDRAWN
         rows.append((i, c["src"], o, c1, c2, t, ok))
         if ok:
             admitted.append(c)
@@ -91,16 +100,27 @@ def main():
               f"{('YES' if ok else ''):>10}")
 
     n = len(rows)
+    bad = sum(1 for r in rows if not r[2])
+    conv = sum(1 for r in rows if r[3] and r[4])
+    intext = sum(1 for r in rows if r[5])
+    both = sum(1 for r in rows if r[3] and r[4] and r[5])
     print()
-    print(f"candidates              : {n}")
-    print(f"  optical wrong (bad Q) : {sum(1 for r in rows if not r[2])}")
-    print(f"  conventional          : {sum(1 for r in rows if r[3] and r[4])}")
-    print(f"  in the extracted text : {sum(1 for r in rows if r[5])}")
-    print(f"  ADMITTED              : {len(admitted)}")
+    print(f"candidates                    : {n}")
+    print(f"  ground truth unsound        : {bad}")
+    print(f"  reachable by convention     : {conv}")
+    print(f"  recoverable from the text   : {intext}")
+    print(f"    (failing both of the above: {both} - the filters OVERLAP, so")
+    print(f"     these do not subtract as a cascade)")
+    print(f"  withdrawn for contamination : {len(WITHDRAWN)}")
+    print(f"  ADMITTED                    : {len(admitted)}")
 
     (OUT / "v2-admitted.json").write_text(json.dumps(
-        {"screening": "optical correct AND NOT(closed1 AND closed2) AND text wrong",
+        {"screening": "optical correct AND NOT(closed1 AND closed2) "
+                      "AND NOT(text correct AND grounded) AND not withdrawn",
          "n_candidates": n, "n_admitted": len(admitted),
+         "overlap_note": f"{conv} conventional and {intext} in-text overlap on "
+                         f"{both} candidates; the filters are not a cascade",
+         "withdrawn": WITHDRAWN,
          "admitted": admitted}, indent=1))
 
 

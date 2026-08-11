@@ -6,6 +6,8 @@ oldscans/
 docs/img/*.png
 corpus/
 eval/figqa/pages/
-eval/figqa/arms/
+eval/figqa/arms/*/text.md
+eval/figqa/arms/*/optical.png
+eval/figqa/arms/*/visual/
 eval/figqa/text/
 eval/figqa/view/

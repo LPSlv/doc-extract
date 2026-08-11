@@ -185,33 +185,64 @@ same figure.
 from the same figure, over the 15 figures v1 identified. Screened by code, not
 judgement (`eval/figqa_v2_screen.py`):
 
-| filter | dropped |
+| filter | candidates failing it |
 |---|--:|
 | ground truth unsound (full optical got it wrong) | **0** |
 | reachable by convention (closed-book correct under *both* orderings) | 10 |
 | recoverable from the extracted markdown | 12 |
-| **admitted** | **12** |
+| *(overlap: candidates failing both of the above)* | *4* |
+| withdrawn for author contamination | 1 |
+| **admitted** | **11** |
+
+These are **not a cascade** — 30 − 10 − 12 ≠ 11, because four candidates fail
+both filters. An earlier version of this table implied subtraction and was
+wrong.
 
 Full optical scored 30/30 on the candidates, so no question died from a bad
 answer key; every drop is a real leakage path.
 
+**v25 was withdrawn after scoring.** Its answer — a bus tick printed `4` where
+the datasheet's own convention says `5` — had been volunteered to the question
+author in a describer's status report *before* the question was written. The
+author learned it from the arm under test. It is recorded in
+`figqa_v2_screen.py` with its reason rather than quietly deleted.
+
 ## Result
 
-On the 12 admitted questions — visual-only by construction:
+**Descriptions written before these questions existed contained and correctly
+grounded 11 of 11 admitted answers**, each quoting the line it came from.
 
-| arm | correct | grounded |
-|---|--:|--:|
-| closed-book, both orderings | 0/12 | — |
-| text only | 7/12 | **0** |
-| **doc-extract** | **12/12** | 12 |
-| full optical | **12/12** | 12 |
+That is the finding. The arm table below is mostly *not*:
 
-**Describing what the router selects recovers the same answers as rendering the
-page.** Not approximately: the same twelve.
+| arm | letter score | status |
+|---|--:|---|
+| full optical | 11/11 | **forced** — admission requires it |
+| closed-book, per ordering | 4/12 and 1/12 | **forced** — admission requires failing both |
+| text only | 7/12, 0 grounded-correct | grounded-correct is **forced**; the 7 is guessing |
+| **doc-extract** | **11/11**, all grounded | the only unconstrained arm |
 
-Text-only's 7/12 is not recovery. Eleven of its twelve answers were ungrounded
-guesses and the one it claimed to ground was wrong, so its genuine recovery
-here is zero. The 58% is an artifact of the answer key (below).
+An earlier draft of this file said doc-extract "matches rendering the page."
+That claim is circular: the page-render arm could not have scored anything but
+11/11, because scoring 11/11 is how a question got in. Three of four rows
+calibrate the gate; one measures something.
+
+Text-only's 7/12 is not recovery either. Eleven of its twelve answers were
+ungrounded guesses and the one it claimed to ground was wrong. The 58% is an
+artifact of the answer key (below).
+
+### Two discounts on the one real number
+
+**For 9 of the 11, the routed item is a whole-page render** (`p*-render.png`),
+so the describer looked at nearly the same pixels as the full-optical arm. The
+sharp test — whether describing a *cropped* raster captures the figure — is
+n=2 (v10, v29). A blind re-run targeting cropped rasters specifically is the
+obvious next step.
+
+**Eleven questions from 8 pages are not 11 independent trials.** v04 and v06
+read the x-tick and the y-label of the *same graph*; v13–v15 all come from one
+page. Five of eleven are axis-tick or label reads, which one describer habit
+answers at once. Effective independent units ≈ 8. That rules out a describer
+that misses things; it cannot bound how much a good one misses.
 
 The clearest single case is v30. `text.md` states 526 nm for curve *a* of Fig. 4
 and nothing for curve *b*; a text-only reader is not merely uninformed but
@@ -255,9 +286,20 @@ with no sign anything was wrong.
   absent one.
 - The admitted set is drawn from 8 figures, so questions are not independent:
   three come from one page's two bar charts.
-- doc-extract scoring 12/12 means it did not lose to full optical *on pages the
-  router selected*. Pages the router skips are out of frame here by
+- doc-extract scoring 11/11 means the descriptions held every admitted answer
+  *on pages the router selected*. Pages the router skips are out of frame by
   construction, and that is where its risk lives.
+- **The question author had already seen the describers' output.** v25 was
+  withdrawn for a demonstrable instance, but the general risk is unresolved:
+  the same agent designed the eval, read the describers' status reports, and
+  then wrote the candidates. The question genre — printed ticks, axis labels,
+  annotations — is exactly what a systematic describer transcribes, so the set
+  may be selected toward what this describer happens to capture. Only a
+  re-authoring by an agent that has seen the page renders and nothing else
+  settles it. That is running.
+- The descriptions are committed (`eval/figqa/arms/*/description.md`) so the
+  headline's key input is auditable; the page renders and per-arm text are not,
+  being regenerable from `eval/figqa_select.py` and `eval/figqa_artifacts.py`.
 - Ground truth was authored by the same agent that designed the eval, though
   the arms were run by agents with no access to it and grading is a letter
   match with no judgement at scoring time.
