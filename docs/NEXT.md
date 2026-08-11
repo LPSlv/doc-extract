@@ -37,11 +37,35 @@ What is left from it, in order:
   AND the same fingerprint appears on ≥2 other pages of the document. 35 of 72
   wasted calls removed, 2 real items lost, **95% precision**, stable under a
   document-level split (92% / 96%).
-  **Not shipped — it needs a true holdout**, and this repo cannot supply one:
-  `bills` and the olmOCR corpora yield 17 `stroke_grid` firings total and the
-  rule fires on none. The validation step is to fetch a fresh corpus of
-  multi-page LaTeX papers and label the rule's drops there. Do that before
-  implementing.
+  **Not shipped — it needs a true holdout, and the holdout now exists.**
+
+  `corpus/arxiv_holdout` was fetched for exactly this: 348 papers from `2608.*`,
+  disjoint from `corpus/arxiv` (`2607.*`), sha256-pinned in
+  `eval/manifests/arxiv_holdout.urls.tsv`. Rebuild with
+  `uv run eval/fetch.py arxiv_holdout` (arXiv allows one request per 3 s, so
+  budget ~20 minutes).
+
+  **RESUME HERE — three steps, in order:**
+
+  1. `uv run eval/strokegrid_validate.py corpus/arxiv_holdout`
+     Applies the rule and renders every page it would drop to
+     `eval/strokegrid/holdout/pages/`. On the first 59 papers this was 19
+     firings and 4 drops, so expect roughly 100 firings and 25 drops at full
+     size — enough to test 95% precision, not enough to refine it.
+  2. Label those drops **blind**, the way `eval/strokegrid/labels.tsv` was built:
+     one agent per batch, sees only the PNGs, assigns
+     `table` / `plot` / `figure` / `none`. Anything not `none` is a real item
+     the rule would have destroyed.
+  3. Decide on the number. If precision holds near 95%, implement in
+     `harvest.py` (and update `reference/harvest-block.md`, which
+     `tests/check_sync.py` enforces), add a test naming this incident, re-run
+     `eval/bench.py` over the affected corpora, and regenerate the README block
+     with `uv run eval/readme_tables.py --write`. If precision drops below
+     ~90%, record it in `eval/rejected-signals.md` and stop — that is a result,
+     not a failure.
+
+  Do not skip step 2 in favour of eyeballing a few. The whole reason this rule
+  is unshipped is that its numbers came from the set that designed it.
 - It is blind to the vendor-boilerplate half (Würth title blocks, Nexperia
   legal pages) — those are real multi-column grids. Recurrence, not lattice
   shape, is the lever there.

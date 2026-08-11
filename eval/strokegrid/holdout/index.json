@@ -1,4 +1,28 @@
 {
- "rule": "vx==2 and fingerprint on >=2 other pages",
- "candidates": []
+ "rule": "vx==2 and same fingerprint on >=2 other pages",
+ "corpus": "arxiv_holdout",
+ "n_docs": 59,
+ "n_firings": 19,
+ "candidates": [
+  {
+   "tag": "h001",
+   "file": "2608.01320v1.pdf",
+   "page": 42
+  },
+  {
+   "tag": "h002",
+   "file": "2608.01409v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "h003",
+   "file": "2608.01409v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "h004",
+   "file": "2608.01409v1.pdf",
+   "page": 17
+  }
+ ]
 }

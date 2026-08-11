@@ -12,3 +12,4 @@ eval/figqa/arms/*/visual/
 eval/figqa/text/
 eval/figqa/view/
 eval/strokegrid/pages/
+eval/strokegrid/holdout/pages/
