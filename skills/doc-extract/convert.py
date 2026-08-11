@@ -88,12 +88,28 @@ def _raster_pixmap(doc, item):
         # An xref can be drawn more than once on a page; the largest placement
         # is the one worth reading.
         info = max(places, key=lambda i: fitz.Rect(i["bbox"]).get_area())
-        bbox = fitz.Rect(info["bbox"]) & page.rect
+
+        # get_image_info() reports bbox in UNROTATED page space, while clip=
+        # and page.rect live in rotated space. Skipping this on a /Rotate 270
+        # page turns a full-width figure into a wrong square crop, and on some
+        # pages into pure white - worse than the flip this function exists to
+        # fix. arxiv 2607.29183v1 pp.4,6 are the corpus cases.
+        bbox = (fitz.Rect(info["bbox"]) * page.rotation_matrix) & page.rect
         if not bbox.is_empty and bbox.width >= 4 and bbox.height >= 4:
+            # Preserve the image's own resolution: scale so the rendered region
+            # is about its native pixel count. Capping this at a fixed multiple
+            # of the *placement* silently degrades a high-resolution image that
+            # happens to be placed small, which is common for schematics and
+            # scope captures.
             s = max(info["width"] / bbox.width, info["height"] / bbox.height)
-            s = max(1.0, min(s, 8.0))       # never upsample past 8x
-            return page.get_pixmap(matrix=fitz.Matrix(s, s), clip=bbox)
-    return fitz.Pixmap(doc, item["xref"])   # unplaced xref: nothing better to do
+            s = min(s, (MAX_EDGE_PX * 2) / max(bbox.width, bbox.height))
+            pix = page.get_pixmap(matrix=fitz.Matrix(s, s), clip=bbox)
+            # Rendering the region captures whatever the page draws there, so
+            # an image fully covered by an opaque overlay comes out blank. That
+            # is a silent total loss; the stored samples are worth more.
+            if not pix.is_unicolor:
+                return pix
+    return fitz.Pixmap(doc, item["xref"])   # unplaced, degenerate, or occluded
 
 
 def _write_image(doc, item, images_dir, edge_override=None):

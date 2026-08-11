@@ -1,0 +1,227 @@
+{
+ "seed": 7,
+ "rule": "one large cropped-raster item per document, page has >=400 chars of text",
+ "n_pool": 257,
+ "selected": [
+  {
+   "doc": "corpus/pmc/JEM_20131560.PMC3949572.pdf",
+   "name": "JEM_20131560.PMC3949572.pdf",
+   "page": 2,
+   "id": "p002-x64",
+   "px": [
+    851,
+    1387
+   ],
+   "qid": "w01"
+  },
+  {
+   "doc": "corpus/arxiv/2607.28739v1.pdf",
+   "name": "2607.28739v1.pdf",
+   "page": 16,
+   "id": "p016-x925",
+   "px": [
+    456,
+    323
+   ],
+   "qid": "w02"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29150v1.pdf",
+   "name": "2607.29150v1.pdf",
+   "page": 2,
+   "id": "p002-x34",
+   "px": [
+    593,
+    310
+   ],
+   "qid": "w03"
+  },
+  {
+   "doc": "corpus/datasheets/ti_opa2340.pdf",
+   "name": "ti_opa2340.pdf",
+   "page": 11,
+   "id": "p011-x473",
+   "px": [
+    503,
+    402
+   ],
+   "qid": "w04"
+  },
+  {
+   "doc": "corpus/datasheets/ti_lp5907.pdf",
+   "name": "ti_lp5907.pdf",
+   "page": 8,
+   "id": "p008-x307",
+   "px": [
+    451,
+    358
+   ],
+   "qid": "w05"
+  },
+  {
+   "doc": "corpus/datasheets/bmi160_bosch.pdf",
+   "name": "bmi160_bosch.pdf",
+   "page": 15,
+   "id": "p015-x32",
+   "px": [
+    781,
+    534
+   ],
+   "qid": "w06"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29606v1.pdf",
+   "name": "2607.29606v1.pdf",
+   "page": 2,
+   "id": "p002-x650",
+   "px": [
+    1914,
+    1467
+   ],
+   "qid": "w07"
+  },
+  {
+   "doc": "corpus/arxiv/2607.24285v1.pdf",
+   "name": "2607.24285v1.pdf",
+   "page": 18,
+   "id": "p018-x903",
+   "px": [
+    1920,
+    737
+   ],
+   "qid": "w08"
+  },
+  {
+   "doc": "corpus/pmc/aair-5-113.PMC3579091.pdf",
+   "name": "aair-5-113.PMC3579091.pdf",
+   "page": 2,
+   "id": "p002-x13",
+   "px": [
+    611,
+    445
+   ],
+   "qid": "w09"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29687v1.pdf",
+   "name": "2607.29687v1.pdf",
+   "page": 8,
+   "id": "p008-x663",
+   "px": [
+    805,
+    564
+   ],
+   "qid": "w10"
+  },
+  {
+   "doc": "corpus/pmc/12874_2026_Article_2817.PMC13093937.pdf",
+   "name": "12874_2026_Article_2817.PMC13093937.pdf",
+   "page": 4,
+   "id": "p004-x164",
+   "px": [
+    1985,
+    1084
+   ],
+   "qid": "w11"
+  },
+  {
+   "doc": "corpus/datasheets/ti_lm5069.pdf",
+   "name": "ti_lm5069.pdf",
+   "page": 25,
+   "id": "p025-x1133",
+   "px": [
+    1280,
+    800
+   ],
+   "qid": "w12"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29484v1.pdf",
+   "name": "2607.29484v1.pdf",
+   "page": 2,
+   "id": "p002-x357",
+   "px": [
+    2100,
+    490
+   ],
+   "qid": "w13"
+  },
+  {
+   "doc": "corpus/datasheets/ti_lm386.pdf",
+   "name": "ti_lm386.pdf",
+   "page": 6,
+   "id": "p006-x252",
+   "px": [
+    805,
+    753
+   ],
+   "qid": "w14"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29559v1.pdf",
+   "name": "2607.29559v1.pdf",
+   "page": 3,
+   "id": "p003-x410",
+   "px": [
+    1216,
+    423
+   ],
+   "qid": "w15"
+  },
+  {
+   "doc": "corpus/pmc/enm-31-284.PMC4923413.pdf",
+   "name": "enm-31-284.PMC4923413.pdf",
+   "page": 2,
+   "id": "p002-x4",
+   "px": [
+    1004,
+    770
+   ],
+   "qid": "w16"
+  },
+  {
+   "doc": "corpus/pmc/40268_2017_Article_213.PMC5694426.pdf",
+   "name": "40268_2017_Article_213.PMC5694426.pdf",
+   "page": 4,
+   "id": "p004-x34",
+   "px": [
+    969,
+    693
+   ],
+   "qid": "w17"
+  },
+  {
+   "doc": "corpus/arxiv/2607.29542v1.pdf",
+   "name": "2607.29542v1.pdf",
+   "page": 3,
+   "id": "p003-x400",
+   "px": [
+    1161,
+    864
+   ],
+   "qid": "w18"
+  },
+  {
+   "doc": "corpus/pmc/etm-17-05-3580.PMC6447806.pdf",
+   "name": "etm-17-05-3580.PMC6447806.pdf",
+   "page": 3,
+   "id": "p003-x6",
+   "px": [
+    1013,
+    940
+   ],
+   "qid": "w19"
+  },
+  {
+   "doc": "corpus/pmc/IJBMS-20-880.PMC5651473.pdf",
+   "name": "IJBMS-20-880.PMC5651473.pdf",
+   "page": 3,
+   "id": "p003-x102",
+   "px": [
+    492,
+    405
+   ],
+   "qid": "w20"
+  }
+ ]
+}
