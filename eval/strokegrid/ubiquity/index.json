@@ -1,0 +1,9 @@
+{
+ "rule": "stroke_grid page whose signature covers >0.5 of the document",
+ "note": "marginal to boxed_text, which is already shipped",
+ "corpus": "corpus/arxiv_holdout",
+ "n_docs": 348,
+ "n_firings_after_boxed_text": 77,
+ "n_dropped": 0,
+ "candidates": []
+}

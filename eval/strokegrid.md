@@ -83,7 +83,7 @@ geometry differs page to page while furniture repeats.
 
 | threshold | wasted cut | useful lost | precision | recall |
 |---|--:|--:|--:|--:|
-| 0.50 (current `UBIQUITY`) | 6 | 0 | **100%** | 8% |
+| 0.50 (current `UBIQUITY`) — all 6 from one document, see below | 6 | 0 | **100%** | 8% |
 | 0.30 | 13 | 2 | 87% | 18% |
 | 0.25 | 17 | 2 | 89% | 24% |
 | **0.20** | **21** | **2** | **91%** | **29%** |
@@ -105,9 +105,13 @@ and at 0.20 it removes 21 and costs 2 real figures.
   is larger but not free, since it trades content for cost rather than saving
   both.
 
-The 0.50 variant is a different case: strictly free, no content lost, and it
-needs no new constant because `UBIQUITY` already exists. That one is worth
-implementing if anyone wants a small, safe win. It fixes 8% of the problem.
+The 0.50 variant looked like a different case: strictly free, no content lost,
+no new constant because `UBIQUITY` already exists. **It was measured properly
+afterwards and rejected.** Its 6 cuts are pages 2–7 of a single document, and
+`boxed_text` now drops all six — that file routes zero vision calls today. On
+the holdout it fires on 0 of the 77 firings that survive `boxed_text`. The
+write-up is in `eval/rejected-signals.md`; the lesson is that "100% precision"
+over one document formats identically to a real number.
 
 ## So how do you make it work? A rule that measures well, and what it still needs
 
@@ -167,8 +171,9 @@ Recall is entirely corpus-dependent:
 It solves the LaTeX families — prompt boxes, pseudocode frames, proof pages —
 and is completely blind to the vendor-boilerplate family, because a Würth title
 block or a Nexperia legal table is a real multi-column grid with more than two
-vertical positions. Those need the recurrence rule instead, and the free
-`UBIQUITY = 0.50` variant above is the start of it.
+vertical positions. Those need a recurrence rule instead, and no working one
+exists — the `UBIQUITY = 0.50` variant that looked like the start of it turned
+out to fire only on pages `boxed_text` already takes.
 
 ### Validated out-of-sample, and shipped
 

@@ -37,11 +37,12 @@ claim exactly. 2,473 → 2,456 calls on that corpus, at no compute cost.
 
 What is left from it, in order:
 
-- **A free win, still unimplemented.** Dropping a `stroke_grid` page whose
-  signature covers more than the existing `UBIQUITY` (0.50) share of its
-  document removes 6 wasted calls and loses nothing — 100% precision on the
-  labelled set, no new constant. Small (8% of the waste) but strictly positive,
-  and it attacks the vendor-boilerplate family that `boxed_text` cannot see.
+- ~~**A free win**, dropping a `stroke_grid` page whose signature covers more
+  than `UBIQUITY` (0.50) of its document~~ — **rejected**, and worth reading as
+  a cautionary tale. Its "6 wasted calls removed, 100% precision" was six pages
+  of *one* document, and `boxed_text` now drops all six anyway: that file routes
+  zero calls today. Marginal benefit nil, and 0 firings on the holdout.
+  `eval/rejected-signals.md`.
 - **Do not ship the 0.20 threshold** from `strokegrid.md`'s table. It is read
   off the set it would be validated against. It needs its own holdout.
 - **The known failure mode is booktabs tables continued across pages** — two

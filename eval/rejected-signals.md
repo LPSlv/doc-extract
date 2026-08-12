@@ -88,6 +88,40 @@ Two consequences worth stating plainly rather than burying:
 Revisit if `_raster_pixmap` ever changes scale policy again, since the error is
 entirely a function of that policy.
 
+## Signature ubiquity for `stroke_grid` — rejected, subsumed and never replicated
+
+**The idea.** `harvest.py` already computes the set of page signatures covering
+more than `UBIQUITY` (0.50) of a document, and already drops such a page as
+`vector_furniture` — but only when it also has low ink, low stroke fraction and
+fewer than 8 rects, which a ruled vendor title block fails by design. So: drop
+a `stroke_grid` firing on signature ubiquity alone.
+
+This sat in `docs/NEXT.md` for a while as *the free win* — "6 wasted calls
+removed, nothing lost, 100% precision, and no new constant". Every word was
+true and the recommendation was still wrong, for two reasons that only appear
+when you ask where the 6 came from.
+
+**All six are pages 2–7 of one document** (`MGR-10-30.PMC7871936.pdf`, the PMC
+review that burned six consecutive calls on prose pages whose only strokes were
+a header rule and a footer bar). A rule measured on one document is an
+anecdote with a percentage attached. "100% precision" over n=1 reads exactly
+like "95% precision" over 55 in a summary table, which is the whole danger.
+
+**And `boxed_text` already takes them.** That document now routes **zero**
+vision calls; all six pages are dropped as `boxed_text`. The marginal benefit
+of the ubiquity rule, on top of what ships, is nothing.
+
+**Measured out-of-sample too, for completeness**: on `corpus/arxiv_holdout` it
+fires on **0 of the 77** `stroke_grid` firings that survive `boxed_text`. That
+is not evidence against it so much as the wrong holdout — the rule targets
+vendor and publisher boilerplate, and 348 arXiv papers contain none. Testing it
+properly would need a datasheet or journal holdout, which does not exist here.
+
+**Verdict: rejected, and removed from the queue.** `eval/strokegrid_ubiquity.py`
+keeps the measurement. If a boilerplate-heavy holdout is ever fetched, that
+script scores the candidate in one command — but it would first have to find a
+case `boxed_text` does not already handle.
+
 ## Frame containment for `boxed_text` — rejected, dominated
 
 **The idea.** The `boxed_text` rule that shipped (see `eval/strokegrid.md`)
