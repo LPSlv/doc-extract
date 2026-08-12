@@ -15,6 +15,12 @@ green, 93 tests, `eval/gate.py` 7/7 byte-identical.
 - Routed rasters follow the page's placement matrix, on rotated pages too;
   guarded by `tests/test_raster_orientation.py`, and CI installs PyMuPDF so
   those tests actually run.
+- **`boxed_text` ships**, the first routing rule here validated on a corpus
+  fetched after it was designed. 6,834 → 6,797 vision calls, one known failure
+  mode, documented in the README's limitations rather than left for a user to
+  find. [`eval/strokegrid.md`](../eval/strokegrid.md).
+- `eval/report.py` can regenerate `RESULTS.md` again — it had been crashing on
+  `office.json` since that file landed in the results directory.
 
 ## Next, in the order I would do it
 
@@ -93,12 +99,23 @@ LPSlv's GitHub identity and needs an explicit yes.
 
 ## A caution for whoever picks this up
 
-Over one session, three defects were found in the skill and **four in the
+Across two sessions, three defects were found in the skill and **six in the
 measurement code**: withheld routed items, a circular gate, a contaminated
-question, and an answer key with the correct option at C fourteen times in
-thirty. Every one of them flattered or distorted a published number, and none
-was caught by tests.
+question, an answer key with the correct option at C fourteen times in thirty,
+a scorer that read the `page` column as the label and reported 0% on a set that
+was unanimously clean, and a validation script blind to `cost_guard` that
+under-reported a drop set by exactly the one item that mattered. Every one
+flattered or distorted a published number, and none was caught by tests.
 
 Prefer building durable labelled artifacts over running fresh end-to-end evals.
 An artifact can be re-checked by someone else; an eval mostly re-discovers the
 mistakes of whoever wrote it.
+
+Two habits earned their keep on the `boxed_text` work and are worth repeating:
+
+- **Diff the shipped implementation against the analysis script.** They
+  disagreed by one page. That page was the only real table in the drop set and
+  the entire known failure mode of the rule.
+- **Ask where a percentage came from before believing it.** "100% precision, 6
+  calls saved" was one document. It sat in this file as a recommendation for
+  two sessions.
