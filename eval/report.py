@@ -9,7 +9,7 @@ Pure formatting: every number comes from a bench.py result file, which in
 turn comes from commands recorded in that script. Nothing is computed here
 that cannot be recomputed from the committed JSONs.
 """
-import datetime, json, pathlib, subprocess
+import datetime, json, pathlib, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 RES = ROOT / "docs" / "benchmarks" / "results"
@@ -39,7 +39,16 @@ def load():
     for p in sorted(RES.glob("*.json")):
         if p.stem.startswith("_"):
             continue
-        ds[p.stem] = json.loads(p.read_text())
+        d = json.loads(p.read_text())
+        # office.json is written by eval/office_bench.py, which measures a
+        # different thing (no optical baseline exists for a .docx) and so has
+        # no opt_tok. It landed in the same directory and this glob picked it
+        # up, crashing every regeneration of RESULTS.md until the schema was
+        # checked here. The Office numbers have their own block in the README.
+        if "opt_tok" not in d.get("summary", {}):
+            print(f"skipping {p.name}: not a PDF cost benchmark", file=sys.stderr)
+            continue
+        ds[p.stem] = d
     return dict(sorted(ds.items(),
                        key=lambda kv: (ORDER.index(kv[0]) if kv[0] in ORDER
                                        else 99, kv[0])))
@@ -152,8 +161,12 @@ def main():
     # ---- honesty section ---------------------------------------------------
     A("## What this does not measure\n")
     A("- **Figure-description accuracy on text-bearing PDFs.** No public "
-      "benchmark scores it; the only accuracy measurement in this repo "
-      "remains `eval/oldscans.md` (scanned pages, olmOCR ground truth).")
+      "benchmark scores it, so the question is answered here on a set built "
+      "for it: 23 screened questions over 16 pages, doc-extract 22/23 against "
+      "23/23 for reading every page (`eval/figqa.md`). That is enough to "
+      "separate a working visual layer from an absent one and no more. "
+      "Scanned pages have real ground truth and are measured separately in "
+      "`eval/oldscans.md`.")
     A("- **Vector-figure false negatives.** The zero-call cross-check above "
       "uses embedded rasters ≥300×300 px as an independent figure detector; "
       "a chart drawn purely with vector strokes has no such witness, so a "
@@ -162,7 +175,11 @@ def main():
       "for arbitrary arXiv/PMC/bill text; quality claims stay pinned to "
       "opendataloader-bench and the byte-identity gate (`eval/gate.py`).")
     A("- **Threshold sensitivity.** Deliberately out of scope: tuning on the "
-      "measurement set would invalidate it.\n")
+      "measurement set would invalidate it. The one routing rule added since "
+      "(`boxed_text`) was fitted on labels from these corpora and then "
+      "validated on 348 papers fetched afterwards, with every drop labelled "
+      "blind — see `eval/strokegrid.md` for the method and the one failure "
+      "mode it is known to have.\n")
 
     dest = ROOT / "docs" / "benchmarks" / "RESULTS.md"
     dest.write_text("\n".join(L))

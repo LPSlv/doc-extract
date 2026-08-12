@@ -170,24 +170,79 @@ block or a Nexperia legal table is a real multi-column grid with more than two
 vertical positions. Those need the recurrence rule instead, and the free
 `UBIQUITY = 0.50` variant above is the start of it.
 
-### The validation this still needs, and why it is not done
+### Validated out-of-sample, and shipped
 
-**A true out-of-sample corpus.** The rule was designed by looking at these
-labels, so its numbers are in-sample and the document split only shows
-stability, not generalisation.
+The rule was designed by looking at the labels above, so those numbers are
+in-sample and the document split showed stability, not generalisation. The
+obvious holdouts could not serve: `bills` and the six olmOCR corpora produce
+only **17** `stroke_grid` firings between them and the rule fires on **none**
+— olmOCR extracts are single pages and bills are short, so no page template
+can recur.
 
-The obvious holdout is not available here: `bills` and the six olmOCR corpora
-were deliberately left unlabelled, but they produce only **17** `stroke_grid`
-firings between them and the rule fires on **none** of them — olmOCR extracts
-are single pages and bills are short, so no page template can recur. Validating
-this needs a fresh corpus of multi-page LaTeX papers that this repo does not
-currently contain.
+So a corpus was fetched for the purpose. **`corpus/arxiv_holdout`: 348 papers
+from `2608.*`**, sha256-pinned in `eval/manifests/arxiv_holdout.urls.tsv`,
+**disjoint from `corpus/arxiv` by content hash** (14 of the IDs are late-July
+`2607.*` that appear in the August listing; none is a file the design set
+contains). Rebuild with `uv run eval/fetch.py arxiv_holdout`.
 
-Until that exists, the honest status is: **the best candidate found, measured
-at 95% precision in-sample and stable under a document split, not shipped.**
-Two of this repo's rejected signals were flawless on the set they were fitted
-to and then lost real content elsewhere; that is exactly the failure this rule
-is still exposed to.
+94 `stroke_grid` firings. The rule dropped **18** of them. Every drop was
+rendered and labelled **blind** by three independent labellers who saw the PNG
+and nothing else — not the rule, not the hypothesis, not which answer would be
+convenient — and who were instructed to break every tie *against* `none`.
+
+| | drops | `none` | real | precision |
+|---|--:|--:|--:|--:|
+| effective (change what ships) | 17 | 17 | 0 | **100%** |
+| all firings of the rule | 18 | 17 | 1 | 94% |
+| **combined with the 170 in-sample** | **55** | **52** | **3** | **95%** |
+
+The three labellers agreed unanimously on all 17 effective drops, with
+near-identical descriptions: proof pages, boxed prompt listings, framed JSON
+examples. 95% Wilson interval on 17/17 is 82–100%.
+
+Effect on the corpus: **2,473 vision calls → 2,456**, a 0.69% reduction, with
+no `cost_guard` cascades. It costs nothing to compute — `page_geometry`
+already walks `get_cdrawings()` once per page, so `vx_pos` is collected in the
+loop that was already running.
+
+Shipped in `harvest.py` as the `boxed_text` drop, with `box_templates()`
+carrying the reasoning and `tests/test_boxed_text.py` pinning both halves of
+the rule and the fact that the frame fixture really does trip the branch.
+
+### The one failure mode, named
+
+The 18th drop is why this section can be specific. `2608.07734v1` p19 is
+**Table 2, a booktabs table continued across pages** — two interior rules
+separating three column groups, in the same place on every continuation page.
+It satisfies the rule perfectly: two vertical positions, repeated. The rule's
+premise, *a real table's geometry differs page to page*, is simply false for
+continued tables.
+
+That page is safe only by accident: `cost_guard` collapses that document into
+24 whole-page renders, so it is described anyway. In a document that does not
+collapse, the rule would silently degrade a table.
+
+**All three real items lost across 188 labelled firings are this same case**
+(`pi-13-473.PMC5067340` p5, `2607.29378v1` p7, `2608.07734v1` p19). One
+observation would be a fluke; three of three is a class.
+
+Two things bound the damage. A dropped page still keeps its extracted text —
+`process_pdf` runs over the whole document independently of routing, so what
+is lost is the *vision description* of a table the text extractor rendered
+without structure, not the table's content. And the exchange rate is 52
+wasted calls avoided for 3 degraded tables.
+
+A refinement that targets exactly this case was measured and rejected; see
+`eval/rejected-signals.md`.
+
+### How the 18th drop was found
+
+Not by the validation script. That script scores the rule against
+`harvest_batch`'s *item* list, which is post-`cost_guard`, so it never saw a
+firing inside a collapsed document. The discrepancy surfaced only because the
+shipped implementation was diffed against the script's 17 candidates and
+returned 18. Had the rule been implemented from the script's output alone, a
+real table in the drop set would have gone unrecorded.
 
 ## What would actually move the number
 
@@ -206,6 +261,19 @@ contain.
 - `eval/strokegrid/labels.tsv` — the 170 labels, tag / corpus / file / page / label / note
 - `eval/strokegrid/pages/` — the renders, gitignored, rebuild with
   `uv run eval/strokegrid_render.py`
+- `eval/strokegrid/holdout/index.json` — what the rule drops on the holdout
+- `eval/strokegrid/holdout/labels.tsv` — the 17 blind labels and their 3/3 agreement
+- `eval/strokegrid_validate.py` — applies the rule to a corpus, renders the drops
+- `eval/strokegrid_holdout_score.py` — precision and its Wilson interval
+- `eval/strokegrid_frame_test.py` — scores plain vs framed over all 188 firings
+
+Two measurement bugs found and fixed while scoring the holdout, recorded
+because this file's whole argument is that measurement code is where the
+errors are. `strokegrid_holdout_score.py` first read the label by column
+*index* and picked up `page` instead, reporting 0% precision on a set that is
+unanimously `none`; it now reads by column name. And the validation script's
+blindness to `cost_guard` is described above — it under-reported the drop set
+by one, and the one it missed was the only real item.
 
 One correction worth recording: an earlier pass reported that 26% of firings
 were on pages whose markdown already contained a table, implying filter 3 was

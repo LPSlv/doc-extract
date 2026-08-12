@@ -1,0 +1,15 @@
+{
+ "corpus": "corpus/arxiv_holdout",
+ "docs": 348,
+ "pages": 7694,
+ "calls": 2456,
+ "by_reason": {
+  "diagonals": 39,
+  "curves": 441,
+  "standalone_raster": 753,
+  "whole_document": 1011,
+  "stroke_grid": 77,
+  "raster_grid": 94,
+  "dense_grid": 41
+ }
+}

@@ -155,6 +155,7 @@ because the obvious alternative was tested and failed on a real document:
 | Require strokes in **both** orientations | Underlines are horizontal only; counting all strokes fired on bibliography pages |
 | Stroke-area floor on curves and diagonals | A vendor logo is bézier artwork too — 4N25's only call was its legal disclaimer |
 | Drop repeated vector signatures | `ti_ucc27517` carries the same 143-curve logo on six pages |
+| Drop a **repeating two-edge frame** | A box around a prompt listing has strokes in both orientations and reads as a ruled table; `2607.29679v1` burned five calls on them ([`eval/strokegrid.md`](eval/strokegrid.md)) |
 | Drop emblems repeated across *documents* | The GPO seal fired on 227 of 230 US bills — documents with no figures at all |
 | Collapse pages with >6 rasters | A 48-tile inpainting figure is one figure; one TI package photo arrives as 12 strips |
 | Never cost more than reading everything | On single-page documents the routed set can lose; the guard caps it |
@@ -179,7 +180,7 @@ manifest under [`eval/manifests/`](eval/manifests/) and a fetch script.
 Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
 
 <!-- benchmarks:begin -->
-Reading every page of these 2,342 PDFs costs 48.9M input tokens. doc-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,834 vision calls over 20,375 pages) instead of all of them.
+Reading every page of these 2,342 PDFs costs 48.9M input tokens. doc-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,797 vision calls over 20,375 pages) instead of all of them.
 
 Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan or unparsed table whatsoever. It is the floor, not an option.
 
@@ -191,11 +192,11 @@ Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan o
 | `olmocr_arxiv_math` | 522 | 522 | 2.5× | 0.12 |
 | `olmocr_tables` | 188 | 188 | 2.4× | 0.45 |
 | `olmocr_headers_footers` | 266 | 266 | 2.1× | 0.50 |
-| `arxiv` | 238 | 5,336 | 2.0× | 0.27 |
+| `arxiv` | 238 | 5,336 | 2.0× | 0.26 |
 | `papers` | 24 | 704 | 1.9× | 0.39 |
 | `olmocr_scans` | 134 | 134 | 1.8× | 1.00 |
 | `olmocr_multi_column` | 231 | 231 | 1.5× | 0.58 |
-| `pmc` | 220 | 1,923 | 1.3× | 0.56 |
+| `pmc` | 220 | 1,923 | 1.3× | 0.55 |
 | `olmocr_long_tiny_text` | 62 | 62 | 0.9× | 1.05 |
 
 `olmocr_long_tiny_text` sits last because it **loses**: 62 single-page documents where text plus one figure render costs more than the page itself. Single pages have nothing to amortise. It stays in the table.
@@ -384,6 +385,26 @@ the first document; at the measured 0.34 it does not.
 >   `stroke_grid` was wrong on all 3 of its firings there; `standalone_raster`
 >   on none of 6. Those calls are wasted, and they are inside the 0.34
 >   calls-per-page figure above, not additional to it.
+> - **`stroke_grid` is the weakest branch, measured exhaustively.** All 170 of
+>   its firings across 711 documents were rendered and labelled: 38% ruled
+>   tables, 6% plots, 14% other real figures, and **42% nothing at all**
+>   ([`eval/strokegrid.md`](eval/strokegrid.md)). Its second stated purpose,
+>   marker-based plots, accounts for 10 firings in 170 — do not defend the
+>   branch on that basis. Roughly half the waste is now filtered (see the next
+>   bullet); the vendor-boilerplate half — Würth title blocks, Nexperia legal
+>   pages — is untouched, because those are real multi-column grids.
+> - **The `boxed_text` filter can drop a continued table.** It removes a
+>   `stroke_grid` firing whose page has exactly two vertical stroke positions
+>   repeating elsewhere in the document — a frame around a prompt listing, an
+>   algorithm or a proof. Validated on 348 arXiv papers fetched afterwards and
+>   labelled blind by three independent labellers: **17 drops, 17 correct**,
+>   95% over all 188 labelled firings. But a booktabs table **continued across
+>   pages** has two interior rules in the same place on every page and looks
+>   identical to a template. All 3 real items lost across those 188 firings are
+>   that case. The page's text still survives — routing only decides what gets
+>   a vision description — so what is lost is the table's structure, not its
+>   content. A refinement targeting it was measured and rejected as dominated
+>   ([`eval/rejected-signals.md`](eval/rejected-signals.md)).
 > - **A raster can hide the figure next to it.** When a page holds both an
 >   embedded bitmap and vector artwork, firing `standalone_raster` emits the
 >   bitmap and suppresses the page render — so the vector figure is never seen.

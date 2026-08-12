@@ -88,6 +88,45 @@ Two consequences worth stating plainly rather than burying:
 Revisit if `_raster_pixmap` ever changes scale policy again, since the error is
 entirely a function of that policy.
 
+## Frame containment for `boxed_text` — rejected, dominated
+
+**The idea.** The `boxed_text` rule that shipped (see `eval/strokegrid.md`)
+drops a `stroke_grid` firing whose page has exactly two distinct vertical
+stroke positions repeated on three or more pages. Its one known failure is a
+**booktabs table continued across pages**: two interior rules, same place
+every page, indistinguishable from a template.
+
+There is a principled way to tell them apart, and it is not a threshold. In a
+real frame the two verticals **are** the box's edges, so the horizontal rules
+run from one to the other and the three coincide. A continued table's interior
+rules sit strictly inside its horizontal rules. So: drop only when both
+vertical positions match the x-extent of the page's horizontal strokes.
+
+**Measured** over all 188 labelled firings — 170 in-sample, 18 from the
+holdout — by `eval/strokegrid_frame_test.py`:
+
+| rule | wasted cut | real lost | precision |
+|---|--:|--:|--:|
+| shipped (`vx == 2`, repeated) | 52 | 3 | 95% |
+| + frame containment | 20 | 1 | 95% |
+
+**Verdict: rejected, and the reason is not precision.** Both rules sit at 95%.
+Containment gives up **32 of the 52** wasted calls — 62% of the entire benefit
+— to rescue **2 of the 3** tables, and does not fix the third
+(`2607.29378v1` p7). It buys one table back per sixteen wasted calls
+surrendered, and still leaves the failure mode present.
+
+What kills the recall is that the containment test is not specific to boxes:
+any unrelated horizontal rule wider than the frame — a header rule, a footer
+bar, a full-width `\hrule` above a caption — pushes the x-extent past the
+frame's edges and rescues a page that was genuinely waste.
+
+Worth revisiting only with a signal that identifies *continuation* directly
+(a repeated column header, a "continued" caption, the same fingerprint on
+consecutive pages rather than scattered ones). Consecutiveness is the cheapest
+of those and was not tested; the three known losses are too few to fit it on
+without repeating the mistake this whole exercise was about.
+
 ## Multi-figure pages — measured, not yet actioned
 
 Not a rejected signal; an open one, recorded because the measurement exists.

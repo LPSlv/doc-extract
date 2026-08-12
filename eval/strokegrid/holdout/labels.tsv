@@ -1,0 +1,19 @@
+tag	corpus	file	page	label	agree	note
+h001	arxiv_holdout	2607.28861v1.pdf	28	none	3/3	proof text with displayed equations
+h002	arxiv_holdout	2607.29245v1.pdf	16	none	3/3	propositions and proofs, displayed equations
+h003	arxiv_holdout	2607.29245v1.pdf	27	none	3/3	appendix proof with numbered displayed equations
+h004	arxiv_holdout	2608.01069v1.pdf	19	none	3/3	lemmas and proofs with displayed bounds
+h005	arxiv_holdout	2608.01320v1.pdf	42	none	3/3	boxed algorithm description in bulleted steps
+h006	arxiv_holdout	2608.01409v1.pdf	14	none	3/3	boxed LLM prompt listings
+h007	arxiv_holdout	2608.01409v1.pdf	16	none	3/3	boxed few-shot demonstration listing with JSON
+h008	arxiv_holdout	2608.01409v1.pdf	17	none	3/3	boxed demonstration listing continued
+h009	arxiv_holdout	2608.02480v1.pdf	63	none	3/3	algebraic derivation, lemma and proof
+h010	arxiv_holdout	2608.03085v1.pdf	53	none	3/3	proofs of propositions with displayed equations
+h011	arxiv_holdout	2608.04406v1.pdf	19	none	3/3	lemmas and proofs, matrix norm inequalities
+h012	arxiv_holdout	2608.04406v1.pdf	20	none	3/3	proof with displayed matrix inequalities
+h013	arxiv_holdout	2608.07224v1.pdf	41	none	3/3	entropy proof, theorem statement, displayed bounds
+h014	arxiv_holdout	2608.07224v1.pdf	75	none	3/3	proofs plus acknowledgments paragraph
+h015	arxiv_holdout	2608.07400v1.pdf	19	none	3/3	boxed JSON record listing and boxed example
+h016	arxiv_holdout	2608.07437v1.pdf	24	none	3/3	single large framed training-prompt listing
+h017	arxiv_holdout	2608.07440v1.pdf	11	none	3/3	theorem, corollary, proposition with proofs
+h018	arxiv_holdout	2608.07734v1.pdf	19	table	1/1	booktabs Table 2 continued across pages; two interior rules

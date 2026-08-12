@@ -1,7 +1,7 @@
 # Where this was left
 
-State at the end of the 2026-08-11 session. Everything below is pushed, CI
-green, 85 tests, `eval/gate.py` 7/7 byte-identical.
+State at the end of the 2026-08-12 session. Everything below is pushed, CI
+green, 93 tests, `eval/gate.py` 7/7 byte-identical.
 
 ## What is true right now
 
@@ -23,52 +23,37 @@ green, 85 tests, `eval/gate.py` 7/7 byte-identical.
 All 170 firings labelled. **42% waste**, not the 100% the three-observation v1
 sample implied, and the waste has three distinct causes rather than one.
 
+**The `boxed_text` rule is now validated and shipped.** Count *distinct*
+vertical stroke positions instead of strokes; drop a `stroke_grid` firing with
+exactly 2 (the frame signature — left edge, right edge, nothing between) whose
+fingerprint repeats on ≥2 other pages. In `harvest.py` as `box_templates()`,
+pinned by `tests/test_boxed_text.py`.
+
+Validated on `corpus/arxiv_holdout` — 348 papers fetched for the purpose,
+disjoint from `corpus/arxiv` by content hash — with all drops labelled blind by
+three independent labellers. **17 effective drops, 17 `none`, 100% precision**
+(95% CI 82–100%); 95% over all 188 labelled firings, matching the in-sample
+claim exactly. 2,473 → 2,456 calls on that corpus, at no compute cost.
+
 What is left from it, in order:
 
-- **A free win, unimplemented.** Dropping a `stroke_grid` page whose signature
-  covers more than the existing `UBIQUITY` (0.50) share of its document removes
-  6 wasted calls and loses nothing — 100% precision on the labelled set, and no
-  new constant. Small (8% of the waste) but strictly positive.
-- **Do not ship the 0.20 threshold** from that table. It is read off the set it
-  would be validated against. It needs a held-out corpus first.
-- **A rule for the LaTeX half now exists and measures well**: count *distinct*
-  vertical stroke positions instead of strokes, and drop a firing where there
-  are exactly 2 (the box signature — left edge, right edge, nothing between)
-  AND the same fingerprint appears on ≥2 other pages of the document. 35 of 72
-  wasted calls removed, 2 real items lost, **95% precision**, stable under a
-  document-level split (92% / 96%).
-  **Not shipped — it needs a true holdout, and the holdout now exists.**
-
-  `corpus/arxiv_holdout` was fetched for exactly this: 348 papers from `2608.*`,
-  disjoint from `corpus/arxiv` (`2607.*`), sha256-pinned in
-  `eval/manifests/arxiv_holdout.urls.tsv`. Rebuild with
-  `uv run eval/fetch.py arxiv_holdout` (arXiv allows one request per 3 s, so
-  budget ~20 minutes).
-
-  **RESUME HERE — three steps, in order:**
-
-  1. `uv run eval/strokegrid_validate.py corpus/arxiv_holdout`
-     Applies the rule and renders every page it would drop to
-     `eval/strokegrid/holdout/pages/`. On the first 59 papers this was 19
-     firings and 4 drops, so expect roughly 100 firings and 25 drops at full
-     size — enough to test 95% precision, not enough to refine it.
-  2. Label those drops **blind**, the way `eval/strokegrid/labels.tsv` was built:
-     one agent per batch, sees only the PNGs, assigns
-     `table` / `plot` / `figure` / `none`. Anything not `none` is a real item
-     the rule would have destroyed.
-  3. Decide on the number. If precision holds near 95%, implement in
-     `harvest.py` (and update `reference/harvest-block.md`, which
-     `tests/check_sync.py` enforces), add a test naming this incident, re-run
-     `eval/bench.py` over the affected corpora, and regenerate the README block
-     with `uv run eval/readme_tables.py --write`. If precision drops below
-     ~90%, record it in `eval/rejected-signals.md` and stop — that is a result,
-     not a failure.
-
-  Do not skip step 2 in favour of eyeballing a few. The whole reason this rule
-  is unshipped is that its numbers came from the set that designed it.
-- It is blind to the vendor-boilerplate half (Würth title blocks, Nexperia
-  legal pages) — those are real multi-column grids. Recurrence, not lattice
-  shape, is the lever there.
+- **A free win, still unimplemented.** Dropping a `stroke_grid` page whose
+  signature covers more than the existing `UBIQUITY` (0.50) share of its
+  document removes 6 wasted calls and loses nothing — 100% precision on the
+  labelled set, no new constant. Small (8% of the waste) but strictly positive,
+  and it attacks the vendor-boilerplate family that `boxed_text` cannot see.
+- **Do not ship the 0.20 threshold** from `strokegrid.md`'s table. It is read
+  off the set it would be validated against. It needs its own holdout.
+- **The known failure mode is booktabs tables continued across pages** — two
+  interior rules in the same place on every continuation page. All three real
+  items lost across 188 firings are this case. A containment refinement that
+  targets it was measured and rejected as dominated (`rejected-signals.md`);
+  the untested idea is *consecutiveness*, since a continued table's pages are
+  adjacent and a prompt-box template's usually are not. Three observations is
+  too few to fit that on.
+- `boxed_text` is blind to the vendor-boilerplate half (Würth title blocks,
+  Nexperia legal pages) — those are real multi-column grids. Recurrence, not
+  lattice shape, is the lever there.
 - Worth knowing: the branch's second stated purpose, marker-based plots, fired
   **10 times in 170**. Do not defend the threshold on that basis.
 

@@ -1,28 +1,94 @@
 {
  "rule": "vx==2 and same fingerprint on >=2 other pages",
- "corpus": "arxiv_holdout",
- "n_docs": 59,
- "n_firings": 19,
+ "corpus": "corpus/arxiv_holdout",
+ "n_docs": 348,
+ "n_firings": 94,
+ "n_dropped": 17,
  "candidates": [
   {
    "tag": "h001",
+   "file": "2607.28861v1.pdf",
+   "page": 28
+  },
+  {
+   "tag": "h002",
+   "file": "2607.29245v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "h003",
+   "file": "2607.29245v1.pdf",
+   "page": 27
+  },
+  {
+   "tag": "h004",
+   "file": "2608.01069v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "h005",
    "file": "2608.01320v1.pdf",
    "page": 42
   },
   {
-   "tag": "h002",
+   "tag": "h006",
    "file": "2608.01409v1.pdf",
    "page": 14
   },
   {
-   "tag": "h003",
+   "tag": "h007",
    "file": "2608.01409v1.pdf",
    "page": 16
   },
   {
-   "tag": "h004",
+   "tag": "h008",
    "file": "2608.01409v1.pdf",
    "page": 17
+  },
+  {
+   "tag": "h009",
+   "file": "2608.02480v1.pdf",
+   "page": 63
+  },
+  {
+   "tag": "h010",
+   "file": "2608.03085v1.pdf",
+   "page": 53
+  },
+  {
+   "tag": "h011",
+   "file": "2608.04406v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "h012",
+   "file": "2608.04406v1.pdf",
+   "page": 20
+  },
+  {
+   "tag": "h013",
+   "file": "2608.07224v1.pdf",
+   "page": 41
+  },
+  {
+   "tag": "h014",
+   "file": "2608.07224v1.pdf",
+   "page": 75
+  },
+  {
+   "tag": "h015",
+   "file": "2608.07400v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "h016",
+   "file": "2608.07437v1.pdf",
+   "page": 24
+  },
+  {
+   "tag": "h017",
+   "file": "2608.07440v1.pdf",
+   "page": 11
   }
  ]
 }

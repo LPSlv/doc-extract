@@ -26,6 +26,9 @@ STROKE_MIN_FRAC   = 0.02  # stroke bbox must cover this much of the page
 STROKE_MAX_ASPECT = 5.0   # ...and not be an edge-hugging sliver
 RASTER_GRID   = 6      # more rasters than this on one page: render the page
 SCALE_GUARD   = 15     # vision calls above which we stop and ask
+VSTROKE_TOL   = 2.0    # pt; two vertical strokes within this are the same edge
+VSTROKE_MIN   = 3.0    # pt; shorter than this is a tick or a glyph, not an edge
+BOX_REPEATS   = 3      # occurrences of a 2-edge signature that make it a template
 
 
 def _cluster(vals, tol=EDGE_TOL):
@@ -44,6 +47,12 @@ def page_geometry(pg):
            FULLPAGE_FRAC of the page (background tint), divided by page area.
            Unfilled/stroke-only paths contribute zero ink.
 
+    vx_pos = the distinct x-positions of the page's vertical strokes, clustered
+           at VSTROKE_TOL. Counting POSITIONS rather than strokes is what tells
+           a frame (two positions: a left edge and a right edge) apart from a
+           ruled table (3-4) or a plot (10+). Background paths are included
+           deliberately: a frame drawn as a full-width path is still a frame.
+
     Reads get_cdrawings(), not get_drawings(): identical data, but as plain
     tuples. The wrapper spends more time constructing Point/Rect objects than
     MuPDF spends walking the page (measured 2.4x on 632 datasheet pages), and
@@ -53,6 +62,7 @@ def page_geometry(pg):
     parea = max(1.0, pw * ph)
     curves = diagonals = axis_h = axis_v = rects = 0
     xs, ys, ink = [], [], 0.0
+    vx = []
     sx0 = sy0 = float("inf"); sx1 = sy1 = float("-inf")   # stroke bounding box
 
     for path in pg.get_cdrawings():
@@ -79,6 +89,8 @@ def page_geometry(pg):
                     axis_h += 1
                 else:
                     axis_v += 1
+                if dx <= 1.0 and dy > VSTROKE_MIN:
+                    vx.append((p1x + p2x) / 2)
                 has_stroke = True
         if has_stroke and not is_background:
             sx0 = min(sx0, rx0); sy0 = min(sy0, ry0)
@@ -99,7 +111,31 @@ def page_geometry(pg):
         "rects": rects, "x_edges": len(_cluster(xs)), "y_edges": len(_cluster(ys)),
         "ink": round(ink / parea, 4),
         "stroke_frac": round(stroke_frac, 4), "stroke_aspect": round(stroke_aspect, 2),
+        "vx_pos": tuple(round(v) for v in _cluster(vx, VSTROKE_TOL)),
     }
+
+
+def box_templates(geoms):
+    """Frame signatures that repeat within this document.
+
+    Boxed text is the largest false positive in `stroke_grid`: a frame drawn
+    around a prompt listing, an algorithm or a proof puts strokes in both
+    orientations and reads as a ruled table. Two facts separate it from a real
+    table and neither is sufficient alone.
+
+    A frame has exactly TWO distinct vertical stroke positions -- a left edge
+    and a right edge, nothing between. Alone that cut 41 wasted calls out of
+    170 firings but destroyed 13 real items, because a two-column ruled table
+    also has two verticals.
+
+    A template REPEATS, while a real table's geometry differs page to page. So
+    the signature must also appear on BOX_REPEATS pages, counting this one.
+    Composed, the two measured 95% precision in-sample, and then 100% (17
+    drops, 0 real items lost, 95% CI 82-100%) on 348 arXiv papers fetched
+    afterwards for the purpose. See eval/strokegrid.md.
+    """
+    n = collections.Counter(g["vx_pos"] for g in geoms if len(g["vx_pos"]) == 2)
+    return {sig for sig, c in n.items() if c >= BOX_REPEATS}
 
 
 def _plot_shaped(g):
@@ -448,6 +484,8 @@ def harvest(path):
     template = {k for k, n in counts.items()
                 if npages > 2 and n / npages > UBIQUITY}
 
+    boxes = box_templates(geoms)
+
     renders, edges, page_sigs = {}, {}, {}
     for i, pg in enumerate(doc):
         if (i + 1) in ocr_pages:
@@ -469,6 +507,9 @@ def harvest(path):
             dropped.append({"page": i + 1, "why": "vector_furniture"})
             continue
         why = render_reason(g)
+        if why == "stroke_grid" and g["vx_pos"] in boxes:
+            dropped.append({"page": i + 1, "why": "boxed_text"})
+            continue
         if why:
             renders[i] = why
             edges[i] = render_edge(pg)

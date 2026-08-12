@@ -1,6 +1,6 @@
 # Benchmark results
 
-Generated 2026-08-03 at commit `8740da8` by `uv run eval/report.py` from the per-dataset JSONs in `docs/benchmarks/results/`.
+Generated 2026-08-12 at commit `a043a46` by `uv run eval/report.py` from the per-dataset JSONs in `docs/benchmarks/results/`.
 Reproduce any dataset with `uv run eval/fetch.py <dataset>` then `uv run eval/bench.py corpus/<dataset>`; inputs are pinned by sha256 in `eval/manifests/<dataset>.json`.
 Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; optical baseline renders every page at 140 dpi. Wall time is the deterministic local pipeline only — model inference is excluded.
 
@@ -9,16 +9,16 @@ Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; o
 | dataset | files | pages | MB | full optical | text only | **doc-extract** | vs optical | vision calls | local s |
 |---|---|---|---|---|---|---|---|---|---|
 | tds | 23 | 632 | 31 | 1,513,884 | 282,933 | **546,969** | +64% | 253 | 20 |
-| datasheets | 204 | 7,641 | 398 | 18,511,075 | 3,362,899 | **6,395,087** | +65% | 3,197 | 300 |
-| papers | 24 | 704 | 172 | 1,705,760 | 622,992 | **913,606** | +46% | 277 | 25 |
-| arxiv | 238 | 5,336 | 859 | 12,856,721 | 5,031,436 | **6,446,136** | +50% | 1,415 | 251 |
-| pmc | 220 | 1,923 | 460 | 4,450,900 | 2,270,193 | **3,310,381** | +26% | 1,070 | 115 |
-| bills | 230 | 2,736 | 57 | 6,684,048 | 948,046 | **953,986** | +86% | 9 | 16 |
+| datasheets | 204 | 7,641 | 398 | 18,511,075 | 3,362,899 | **6,395,087** | +65% | 3,197 | 304 |
+| papers | 24 | 704 | 172 | 1,705,760 | 622,992 | **912,097** | +47% | 275 | 25 |
+| arxiv | 238 | 5,336 | 859 | 12,856,721 | 5,031,436 | **6,423,108** | +50% | 1,388 | 248 |
+| pmc | 220 | 1,923 | 460 | 4,450,900 | 2,270,193 | **3,302,911** | +26% | 1,062 | 116 |
+| bills | 230 | 2,736 | 57 | 6,684,048 | 948,046 | **953,986** | +86% | 9 | 15 |
 | olmocr_multi_column | 231 | 231 | 64 | 532,845 | 255,624 | **348,597** | +35% | 135 | 8 |
-| olmocr_headers_footers | 266 | 266 | 65 | 597,036 | 190,402 | **278,653** | +53% | 133 | 10 |
+| olmocr_headers_footers | 266 | 266 | 65 | 597,036 | 190,402 | **278,653** | +53% | 133 | 13 |
 | olmocr_arxiv_math | 522 | 522 | 95 | 1,249,499 | 443,449 | **492,855** | +61% | 61 | 17 |
 | olmocr_tables | 188 | 188 | 39 | 435,331 | 118,278 | **179,907** | +59% | 85 | 8 |
-| olmocr_long_tiny_text | 62 | 62 | 24 | 103,450 | 55,737 | **110,929** | -7% | 65 | 11 |
+| olmocr_long_tiny_text | 62 | 62 | 24 | 103,450 | 55,737 | **110,929** | -7% | 65 | 12 |
 | olmocr_scans | 134 | 134 | 68 | 273,172 | 1,810 | **151,274** | +45% | 134 | 10 |
 
 `text only` is always cheapest and always misses every figure, scan and unparsed table; it is a floor, not an option. `vs optical` is doc-extract's token saving against rendering every page.
@@ -29,9 +29,9 @@ Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; o
 |---|---|---|---|---|---|---|---|---|---|
 | tds | 44 | 0 | 176 | 20 | 0 | 10 | 3 | 0 | 253 |
 | datasheets | 519 | 19 | 2056 | 279 | 8 | 25 | 46 | 245 | 3197 |
-| papers | 102 | 7 | 33 | 13 | 8 | 23 | 11 | 80 | 277 |
-| arxiv | 453 | 2 | 353 | 43 | 19 | 71 | 49 | 425 | 1415 |
-| pmc | 271 | 0 | 152 | 6 | 13 | 41 | 1 | 586 | 1070 |
+| papers | 102 | 7 | 33 | 13 | 8 | 21 | 11 | 80 | 275 |
+| arxiv | 453 | 2 | 353 | 43 | 19 | 44 | 49 | 425 | 1388 |
+| pmc | 271 | 0 | 152 | 6 | 13 | 33 | 1 | 586 | 1062 |
 | bills | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 9 |
 | olmocr_multi_column | 42 | 15 | 28 | 7 | 0 | 4 | 1 | 38 | 135 |
 | olmocr_headers_footers | 44 | 24 | 12 | 4 | 4 | 3 | 2 | 40 | 133 |
@@ -47,8 +47,8 @@ Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; o
 | tds | 0.38 | 0.35 | 0.71 | 1.33 | 1.33 | 2/23 | 7 | 1 |
 | datasheets | 0.39 | 0.40 | 0.59 | 0.98 | 1.33 | 5/204 | 101 | 1 |
 | papers | 0.40 | 0.33 | 1.00 | 1.00 | 1.00 | 1/24 | 8 | 0 |
-| arxiv | 0.36 | 0.25 | 1.00 | 1.25 | 2.00 | 45/238 | 18 | 4 |
-| pmc | 0.54 | 0.50 | 1.00 | 1.00 | 1.50 | 27/220 | 7 | 2 |
+| arxiv | 0.35 | 0.25 | 1.00 | 1.25 | 2.00 | 52/238 | 17 | 4 |
+| pmc | 0.53 | 0.50 | 1.00 | 1.00 | 1.50 | 29/220 | 7 | 2 |
 | bills | 0.00 | 0.00 | 0.00 | 0.08 | 0.17 | 221/230 | 0 | 0 |
 | olmocr_multi_column | 0.58 | 1.00 | 1.00 | 2.00 | 2.00 | 106/231 | 0 | 10 |
 | olmocr_headers_footers | 0.50 | 0.00 | 1.00 | 2.00 | 3.00 | 143/266 | 0 | 8 |
@@ -92,7 +92,7 @@ Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; o
 
 **doc-extract costs MORE than full optical** (4 files): `2607.29341v1.pdf` (+650), `2607.29414v1.pdf` (+66), `2607.29500v1.pdf` (+5,229), `2607.29513v1.pdf` (+58)
 
-**most vision calls:** `2607.29029v1.pdf` (51/51p), `2607.28594v1.pdf` (27/27p), `2607.29679v1.pdf` (27/61p), `2607.29427v1.pdf` (25/53p), `2607.29476v1.pdf` (24/36p)
+**most vision calls:** `2607.29029v1.pdf` (51/51p), `2607.28594v1.pdf` (27/27p), `2607.29427v1.pdf` (25/53p), `2607.29476v1.pdf` (24/36p), `2607.28965v1.pdf` (23/23p)
 
 ### pmc
 
@@ -100,7 +100,7 @@ Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; o
 - `AJPS-20-243.PMC10450116.pdf` — 3 calls / 2 pages (mostly `standalone_raster`)
 - `1809-4406-aob-30-spe1-e245692.PMC9270044.pdf` — 5 calls / 4 pages (mostly `standalone_raster`)
 
-**doc-extract costs MORE than full optical** (17 files): `1052071.PMC7395265.pdf` (+1,408), `1809-4406-aob-30-spe1-e245692.PMC9270044.pdf` (+794), `41467_2025_Article_65996.PMC12678810.pdf` (+2,299), `JEM_20131560.PMC3949572.pdf` (+4,094), `LM054059Han.PMC11801479.pdf` (+255), `MGR-10-30.PMC7871936.pdf` (+2,369), `edinbmedj75066-0001.PMC5306817.pdf` (+1,606), `fncel-06-00025.PMC3357636.pdf` (+442), `main.PMC10973653.pdf` (+559), `main.PMC11782883.pdf` (+8,495) …
+**doc-extract costs MORE than full optical** (16 files): `1052071.PMC7395265.pdf` (+1,408), `1809-4406-aob-30-spe1-e245692.PMC9270044.pdf` (+794), `41467_2025_Article_65996.PMC12678810.pdf` (+2,299), `JEM_20131560.PMC3949572.pdf` (+4,094), `LM054059Han.PMC11801479.pdf` (+255), `edinbmedj75066-0001.PMC5306817.pdf` (+1,606), `fncel-06-00025.PMC3357636.pdf` (+442), `main.PMC10973653.pdf` (+559), `main.PMC11782883.pdf` (+8,495), `main.PMC8349044.pdf` (+31) …
 
 **most vision calls:** `edinbmedj75066-0001.PMC5306817.pdf` (40/40p), `main.PMC11292527.pdf` (21/21p), `41586_2025_Article_9767.PMC12657213.pdf` (18/19p), `KCAM_20_2674357.PMC13185462.pdf` (17/17p), `13287_2025_Article_4518.PMC12296610.pdf` (16/16p)
 
@@ -186,7 +186,7 @@ Token model: image `(w*h)/750` after fitting inside 1568 px; text `chars/3.5`; o
 
 ## What this does not measure
 
-- **Figure-description accuracy on text-bearing PDFs.** No public benchmark scores it; the only accuracy measurement in this repo remains `eval/oldscans.md` (scanned pages, olmOCR ground truth).
+- **Figure-description accuracy on text-bearing PDFs.** No public benchmark scores it, so the question is answered here on a set built for it: 23 screened questions over 16 pages, doc-extract 22/23 against 23/23 for reading every page (`eval/figqa.md`). That is enough to separate a working visual layer from an absent one and no more. Scanned pages have real ground truth and are measured separately in `eval/oldscans.md`.
 - **Vector-figure false negatives.** The zero-call cross-check above uses embedded rasters ≥300×300 px as an independent figure detector; a chart drawn purely with vector strokes has no such witness, so a text page whose vector chart was missed is invisible to this suite.
 - **Extraction quality on the new corpora.** No ground truth exists for arbitrary arXiv/PMC/bill text; quality claims stay pinned to opendataloader-bench and the byte-identity gate (`eval/gate.py`).
-- **Threshold sensitivity.** Deliberately out of scope: tuning on the measurement set would invalidate it.
+- **Threshold sensitivity.** Deliberately out of scope: tuning on the measurement set would invalidate it. The one routing rule added since (`boxed_text`) was fitted on labels from these corpora and then validated on 348 papers fetched afterwards, with every drop labelled blind — see `eval/strokegrid.md` for the method and the one failure mode it is known to have.
