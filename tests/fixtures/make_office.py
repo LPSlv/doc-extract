@@ -43,6 +43,12 @@ Each fixture exists for a named failure this design already tripped over:
                    inlines sharing one asset id, which is where docx placement
                    counts come from.
   headless.docx    no headings whatsoever -- the citation-granularity fallback.
+  collide.pptx     prose byte-identical to the placeholder anydoc emits for a
+                   picture. An inline description anchors to that placeholder,
+                   which is ordinary text: a slide ABOUT a file called
+                   image.png, or a caption repeating a picture's alt text,
+                   renders the same line the picture does. One slide per
+                   flavour of the collision.
 """
 import pathlib, io
 
@@ -94,6 +100,61 @@ def deck():
     s3.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED,
                         Inches(1), Inches(1.5), Inches(6), Inches(4), data)
     prs.save(HERE / "deck.pptx")
+
+
+def collide():
+    """Three ways prose can look exactly like an image placeholder.
+
+    anydoc renders a picture as its alt text on a line of its own: the generic
+    `image.png` when the author set none, the author's words when they did.
+    Nothing distinguishes that line from a paragraph a human typed.
+
+      s01  a text box reading `image.png`, ABOVE the picture -- naive
+           "first placeholder on the slide" anchoring lands on the prose.
+      s02  the same string inside a table cell, which is NOT a line of its
+           own; whole-line matching must ignore it and still anchor the
+           picture correctly.
+      s03  two pictures sharing the author alt text "Site plan", plus a
+           caption paragraph repeating it: three candidate lines, two
+           pictures.
+
+    Pictures are distinct colours and one slide each, so the furniture filter
+    keeps all of them and the deck really does produce four pending items.
+    """
+    from pptx import Presentation
+    from pptx.util import Inches
+
+    prs = Presentation()
+    titled = prs.slide_layouts[5]
+
+    s1 = prs.slides.add_slide(titled)
+    s1.shapes.title.text = "Naming convention"
+    s1.shapes.add_textbox(Inches(0.5), Inches(1.4), Inches(6),
+                          Inches(0.6)).text_frame.text = "image.png"
+    s1.shapes.add_picture(_png((10, 120, 60), (640, 480)), Inches(0.5), Inches(2.4),
+                          width=Inches(4))
+
+    s2 = prs.slides.add_slide(titled)
+    s2.shapes.title.text = "File table"
+    tbl = s2.shapes.add_table(2, 2, Inches(0.5), Inches(1.4),
+                              Inches(5), Inches(1.2)).table
+    tbl.cell(0, 0).text = "asset"
+    tbl.cell(0, 1).text = "image.png"
+    tbl.cell(1, 0).text = "size"
+    tbl.cell(1, 1).text = "640x480"
+    s2.shapes.add_picture(_png((200, 60, 10), (640, 480)), Inches(0.5), Inches(3.2),
+                          width=Inches(4))
+
+    s3 = prs.slides.add_slide(titled)
+    s3.shapes.title.text = "Site plan"
+    for n, rgb in enumerate(((40, 40, 200), (40, 200, 200))):
+        pic = s3.shapes.add_picture(_png(rgb, (640, 480)),
+                                    Inches(0.5 + 3.5 * n), Inches(1.6), width=Inches(3))
+        pic._element._nvXxPr.cNvPr.set("descr", "Site plan")
+    s3.shapes.add_textbox(Inches(0.5), Inches(5.4), Inches(6),
+                          Inches(0.6)).text_frame.text = "Site plan"
+
+    prs.save(HERE / "collide.pptx")
 
 
 def imageheavy():
@@ -182,6 +243,6 @@ def docs():
 
 
 if __name__ == "__main__":
-    deck(); imageheavy(); book(); single(); docs()
+    deck(); imageheavy(); book(); single(); docs(); collide()
     for f in sorted(HERE.glob("*.pptx")) + sorted(HERE.glob("*.xlsx")) + sorted(HERE.glob("*.docx")):
         print(f"{f.name:<20} {f.stat().st_size:>7} bytes")

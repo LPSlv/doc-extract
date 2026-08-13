@@ -80,6 +80,115 @@ def _split_markdown(md, level):
     return out
 
 
+def _split_spans(md, level):
+    """[(label, start, end)] -- the same split as `_split_markdown`, as offsets.
+
+    Anchoring a description inside a unit needs to know where that unit SITS in
+    the engine's markdown, and `_split_markdown` returns stripped bodies with
+    the heading lines already consumed, so the position is gone by then. This
+    walks the same lines and reports the span instead; `md[start:end].strip()`
+    is the body `_split_markdown` would have produced.
+
+    Kept as a second function rather than folded into the first: the split is
+    load-bearing for citation and its behaviour on odd line endings is pinned
+    by tests. tests/test_inline.py asserts the two agree on every fixture.
+    """
+    out, label, fence = [], None, None
+    start = end = pos = 0
+    started = False
+    for line in md.split("\n"):
+        lend = pos + len(line)
+        f = _FENCE.match(line)
+        if f:
+            fence = None if fence else f.group(1)
+        if fence is None and line.startswith("#" * level + " "):
+            if started or label is not None:
+                out.append((label, start, end))
+            label = line[level + 1:].strip()          # len("#" * level + " ")
+            start = end = lend + 1
+            started = False
+        else:
+            if not started:
+                start, started = pos, True
+            end = lend
+        pos = lend + 1
+    if started or label is not None:
+        out.append((label, start, end))
+    return out
+
+
+def _token_offsets(md, token):
+    """Offsets just past every line whose WHOLE content is `token`.
+
+    anydoc renders an image inline as its alt text on a line of its own -- the
+    package's generic `image.png` when the author set none, the author's words
+    when they did. That is the only anchor an Office document offers, and it is
+    ordinary text: a slide that discusses a file called `image.png`, or a
+    caption repeating the alt text, produces the identical line.
+
+    So the match is deliberately narrow. Whole-line only, which is what keeps a
+    table cell reading `| a | image.png |` out of the count, and fence-aware,
+    so a code listing cannot supply an anchor either. Anything short of an
+    exact whole-line hit is not an anchor; the caller then falls back to the
+    unit boundary, which is computed rather than matched.
+    """
+    out, fence, pos = [], None, 0
+    for line in md.split("\n"):
+        lend = pos + len(line)
+        f = _FENCE.match(line)
+        if f:
+            fence = None if fence else f.group(1)
+        elif fence is None and line == token:
+            out.append(lend)
+        pos = lend + 1
+    return out
+
+
+def _anchor_by_token(md, inlines, base=0):
+    """{origin_part: offset} for the inlines this markdown anchors PROVABLY.
+
+    `inlines` is [(alt-token, origin_part)] in document order, `base` the
+    offset of `md` inside doc.md.
+
+    An anchor is only used when the number of whole-line hits for a token
+    equals the number of inlines carrying it. That equality is the whole
+    safety argument: if a slide's prose happens to contain the placeholder
+    line, or the renderer emitted nothing for an inline, the counts disagree
+    and every anchor for that token is discarded rather than guessed. Being
+    one line out is invisible to the byte-identity gate -- an insertion
+    round-trips wherever it lands -- so the check has to happen here.
+
+    First placement wins: an image drawn twice in one unit is one manifest
+    item, and the earlier position is the one a reader meets first.
+    """
+    by_token = {}
+    for tok, part in inlines:
+        by_token.setdefault(tok, []).append(part)
+    anchors = {}
+    for tok, parts in by_token.items():
+        if not tok:
+            continue                  # the renderer emitted nothing to anchor to
+        spots = _token_offsets(md, tok)
+        if len(spots) != len(parts):
+            continue                  # ambiguous: prose collision, or unrendered
+        for part, off in zip(parts, spots):
+            anchors.setdefault(part, base + off)
+    return anchors
+
+
+def _placed_inlines(doc):
+    """[(alt-token, origin_part)] for image inlines that resolve to an asset."""
+    out = []
+    for inline in _image_inlines(doc.blocks):
+        src = inline.source
+        if not src or src.kind != "asset" or src.asset_id is None:
+            continue
+        if not 0 <= src.asset_id < len(doc.assets):
+            continue
+        out.append((inline.alt or "", doc.assets[src.asset_id].origin_part))
+    return out
+
+
 def _image_inlines(blocks):
     """Every image inline, depth first, in document order."""
     for b in blocks:
@@ -104,7 +213,7 @@ def _pptx(data):
     rids = ooxml.slide_rids(data)
     if not rids:
         raise anydoc.MalformedError("presentation has no slide list")
-    units, placements, failed = [], {}, []
+    units, placements, failed, per_slide = [], {}, [], []
     for i, rid in enumerate(rids, start=1):
         label = f"s{i:02d}"
         try:
@@ -117,8 +226,10 @@ def _pptx(data):
             # could be read", so the per-unit tier has to be restored here.
             failed.append({"unit": label, "why": f"unit_failed({type(e).__name__})"})
             units.append((label, ""))
+            per_slide.append((label, "", None))
             continue
         units.append((label, md.strip()))
+        per_slide.append((label, md.strip(), doc))
         for a in doc.assets:
             e = placements.setdefault(a.origin_part,
                                       {"data": a.data, "media": a.media_type,
@@ -129,7 +240,19 @@ def _pptx(data):
     # what this pipeline actually produced, so it is what the gate must hold
     # the artifact against.
     raw = "\n\n".join(b for _, b in units if b)
-    return units, placements, failed, [], raw
+
+    # Slide spans in that concatenation are arithmetic, not search: each body
+    # contributes len(body) and the "\n\n" the join put between them. So the
+    # unit fallback anchor is exact even when no per-image anchor survives.
+    unit_end, pos = {}, 0
+    for label, body, doc in per_slide:
+        unit_end[label] = pos + len(body)
+        if not body:
+            continue
+        for part, off in _anchor_by_token(body, _placed_inlines(doc), pos).items():
+            placements.get(part, {}).setdefault("anchor", off)
+        pos += len(body) + 2
+    return units, placements, failed, [], raw, unit_end
 
 
 def _docx(data):
@@ -163,6 +286,7 @@ def _docx(data):
     has_lead = bool(chunks) and chunks[0][0] is None
     cursor = 0 if has_lead else -1
     current = units[0][0] if units else "doc"
+    at = {}                            # unit index -> [(alt-token, part)]
     for b in doc.blocks:
         if b.kind == "heading" and b.level == 1:
             cursor += 1
@@ -179,7 +303,23 @@ def _docx(data):
                                       {"data": a.data, "media": a.media_type,
                                        "units": set()})
             e["units"].add(current)
-    return units, placements, [], [], md
+            at.setdefault(max(cursor, 0), []).append((inline.alt or "", a.origin_part))
+
+    # docx images usually anchor to nothing at all: anydoc renders an image
+    # inline as its alt text, and Word writes no alt text unless the author
+    # typed one, so the markdown for doc.docx contains no trace of either
+    # picture. Measured, not assumed -- tests/test_inline.py pins it. Those
+    # items fall back to the end of the section they sit in, which is exact.
+    spans = _split_spans(md, 1)
+    unit_end = {}
+    for i, (label, _) in enumerate(units):
+        if i >= len(spans):
+            break
+        _, s, e = spans[i]
+        unit_end[label] = e
+        for part, off in _anchor_by_token(md[s:e], at.get(i, []), s).items():
+            placements.get(part, {}).setdefault("anchor", off)
+    return units, placements, [], [], md, unit_end
 
 
 def _xlsx(data):
@@ -208,6 +348,14 @@ def _xlsx(data):
     else:
         units = [("doc", md.strip())]
 
+    # Sheet spans in the engine's markdown. xlsx images and charts come from
+    # the package rather than from anydoc, so they have no rendered inline to
+    # anchor to at all -- the end of their sheet's block is the closest
+    # position that is computed rather than guessed.
+    unit_end, spans = {}, {lab: (s, e) for lab, s, e in _split_spans(md, 2) if lab}
+    for lab, _ in units:
+        unit_end[lab] = spans[lab][1] if lab in spans else len(md.rstrip())
+
     known = {u for u, _ in units}
     placements = {}
     for part, sheet in media:
@@ -227,9 +375,10 @@ def _xlsx(data):
         chart_items.append({
             "id": f"chart{n:02d}", "page": unit, "kind": "native_chart",
             "reason": "native_chart", "px": [0, 0],
+            "anchor": unit_end.get(unit),
             "description": _chart_markdown(ch),
         })
-    return units, placements, dropped, chart_items, md
+    return units, placements, dropped, chart_items, md, unit_end
 
 
 def _chart_markdown(ch):
@@ -263,7 +412,7 @@ def harvest_office(path):
         return {"status": "error", "error": "unsupported", "path": str(path),
                 "detail": "not a docx, xlsx or pptx package"}
     try:
-        units, placements, dropped, extra, raw_md = {
+        units, placements, dropped, extra, raw_md, unit_end = {
             "pptx": _pptx, "docx": _docx, "xlsx": _xlsx}[fmt](data)
     except anydoc.EncryptedError:
         return {"status": "error", "error": "encrypted", "path": str(path)}
@@ -302,6 +451,13 @@ def harvest_office(path):
         items.append({
             "id": _item_id(part), "page": unit, "kind": "raster",
             "reason": "standalone_raster", "px": [w, h], "media_type": media,
+            # Where a description of this image belongs in the engine's own
+            # text: the image's own line when that line is provably its own,
+            # otherwise the end of its unit. Never None for Office -- the unit
+            # boundary always exists -- but describe.py treats a missing or
+            # out-of-range anchor as "put it at the end", which is what the
+            # PDF and standalone-image paths get.
+            "anchor": e.get("anchor", unit_end.get(unit)),
             "description": None, "_bytes": e["data"],
         })
 

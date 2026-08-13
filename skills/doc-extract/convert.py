@@ -38,8 +38,8 @@ import fitz
 # bounds live in harvest.py, which already computes a budget for every page it
 # routes to a render; this module holds no second copy of that arithmetic.
 from harvest import harvest, render_edge, MAX_EDGE_PX, SCALE_GUARD
-from artifact import splice, strip
 from cache import cache_dir, publish, sha256_file, ENGINE, SCHEMA
+from describe import rebuild
 import image as image_adapter
 
 
@@ -137,10 +137,11 @@ def _write_image(doc, item, images_dir, edge_override=None):
     return name
 
 
-def convert(path, out=None, edge=None, force=False, root=None):
+def convert(path, out=None, edge=None, force=False, root=None, inline=False):
     src = Path(path)
     harvester, engine = route(src)
-    dest = cache_dir(src, root=root, engine=engine)
+    placement = "inline" if inline else "trailing"
+    dest = cache_dir(src, root=root, engine=engine, placement=placement)
 
     if dest.exists() and not force:
         man = json.loads((dest / "manifest.json").read_text())
@@ -189,7 +190,17 @@ def convert(path, out=None, edge=None, force=False, root=None):
             (staging / "pages" / f"{stem}.md").write_text(pm or "")
         (staging / "manifest.json").write_text(json.dumps(
             {"items": h["items"], "dropped": h["dropped"],
+             # describe.py reads this rather than taking a flag of its own: the
+             # placement has to be the same on every call that rebuilds doc.md,
+             # and a per-call flag would let a resumed run mix the two.
+             "placement": placement,
              **({"units": labels} if labels else {})}, indent=2))
+        # Items that arrive already described -- spreadsheet charts read from
+        # the chart definition -- have to be spliced in here. describe.py only
+        # runs when the agent has something to write, so a workbook whose only
+        # visual is a chart used to publish a doc.md with the chart missing
+        # from it while the manifest said it was described.
+        rebuild(staging)
         (staging / "source.json").write_text(json.dumps({
             "path": str(src.resolve()), "sha256": sha256_file(src),
             "bytes": src.stat().st_size, "pdf_type": h["pdf_type"],
@@ -225,6 +236,8 @@ def _report(src, dest, man, cached, out):
         "status": "ok", "path": str(src), "artifact": str(dest), "cached": cached,
         "doc_md": str(dest / "doc.md"), "pages_dir": str(dest / "pages"),
         "manifest": str(dest / "manifest.json"),
+        "placement": man.get("placement", "trailing"),
+        "anchored": sum(1 for i in man["items"] if i.get("anchor") is not None),
         "pending": pending, "dropped": len(man["dropped"]),
         "over_scale_guard": len(pending) > SCALE_GUARD, "scale_guard": SCALE_GUARD,
     }
@@ -237,13 +250,18 @@ def main(argv=None):
     ap.add_argument("--edge", type=int, default=None,
                     help="force a long-edge pixel budget instead of the adaptive one")
     ap.add_argument("--force", action="store_true", help="ignore any cached artifact")
+    ap.add_argument("--inline", action="store_true",
+                    help="place each description at its image's position in "
+                         "doc.md instead of in one block at the end. Office "
+                         "only -- PDFs have no anchor to place against.")
     ap.add_argument("--cache-root", default=None)
     a = ap.parse_args(argv)
 
     bad = 0
     for p in a.pdfs:
         try:
-            r = convert(p, out=a.out, edge=a.edge, force=a.force, root=a.cache_root)
+            r = convert(p, out=a.out, edge=a.edge, force=a.force,
+                        root=a.cache_root, inline=a.inline)
         except Exception as e:
             r = {"status": "error", "error": "convert_failed",
                  "detail": f"{type(e).__name__}: {e}", "path": p}

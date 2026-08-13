@@ -11,9 +11,10 @@ half-written one, which matters because the vision pass can take minutes.
 import hashlib, os, shutil, tempfile
 from pathlib import Path
 
-SCHEMA = 1
+SCHEMA = 2          # 2: manifest items carry `anchor`; doc.md may inline
 ENGINE = "pdf-inspector==0.2.6"
 DEFAULT_ROOT = Path.home() / ".cache" / "doc-extract"
+PLACEMENT = "trailing"
 
 
 def sha256_file(path, _chunk=1 << 20):
@@ -24,11 +25,19 @@ def sha256_file(path, _chunk=1 << 20):
     return h.hexdigest()
 
 
-def cache_dir(pdf_path, root=None, engine=ENGINE, schema=SCHEMA):
-    """Where this PDF's artifact lives, under this engine and schema."""
+def cache_dir(pdf_path, root=None, engine=ENGINE, schema=SCHEMA,
+              placement=PLACEMENT):
+    """Where this PDF's artifact lives, under this engine, schema and placement.
+
+    `placement` is in the key because it changes what doc.md looks like:
+    "trailing" puts every description in one block at the end, "inline" puts
+    each at its image's position. An artifact built one way and served to a run
+    that asked for the other would be silently the wrong shape -- and since the
+    two differ only in layout, nothing downstream would notice.
+    """
     root = Path(root) if root is not None else DEFAULT_ROOT
     digest = sha256_file(pdf_path)
-    tag = hashlib.sha256(f"{engine}|{schema}".encode()).hexdigest()[:8]
+    tag = hashlib.sha256(f"{engine}|{schema}|{placement}".encode()).hexdigest()[:8]
     return root / f"{digest}-{tag}"
 
 

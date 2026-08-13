@@ -41,9 +41,21 @@ def splice(text: str, additions):
     Strips first, so a resumed run replaces rather than stacks duplicates.
     Offsets refer to the stripped text and are applied back-to-front so that
     earlier ones stay valid.
+
+    Nothing in `text` is ever edited, only inserted between -- which is what
+    makes the byte-identity gate an enforceable structural property rather than
+    a bookkeeping one. A substitution scheme that recorded what it overwrote
+    would round-trip just as well while silently eating engine prose; see
+    eval/gate.py.
+
+    Two additions at the SAME offset keep the order they were given. Sorting on
+    the offset alone reverses them, because back-to-front insertion pushes each
+    new block ahead of the one already there -- which puts a slide's second
+    figure above its first.
     """
     base = strip(text)
-    for pos, body in sorted(additions, key=lambda a: -a[0]):
+    for _, pos, body in sorted(((n, p, b) for n, (p, b) in enumerate(additions)),
+                               key=lambda a: (-a[1], -a[0])):
         block = "\n" + OPEN + "\n" + _escape(body) + "\n" + CLOSE + "\n"
         base = base[:pos] + block + base[pos:]
     return base

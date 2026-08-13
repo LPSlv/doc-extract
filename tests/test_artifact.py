@@ -77,6 +77,16 @@ def test_inserted_description_is_readable_in_the_output():
     assert "A stacked bar." in out
 
 
+def test_two_blocks_at_the_same_offset_keep_the_order_given():
+    """Inline placement puts a slide's figures at the same unit boundary when
+    neither could be anchored to its own line. Sorting on the offset alone
+    inserts them back-to-front, which silently reverses reading order."""
+    anchor = RAW.index("Trailing")
+    out = splice(RAW, [(anchor, "FIRST"), (anchor, "SECOND")])
+    assert out.index("FIRST") < out.index("SECOND")
+    assert strip(out) == RAW
+
+
 def test_insertion_position_is_respected():
     anchor = RAW.index("Trailing")
     out = splice(RAW, [(anchor, "BLOCK")])

@@ -11,11 +11,28 @@ existing added block first and re-appends from the manifest, so running this
 twice on the same item replaces rather than duplicates -- which is what makes a
 half-finished vision pass safe to resume.
 
-Where descriptions land: appended at the end of doc.md under one heading, each
-labelled with its page. pdf-inspector's Markdown carries no page offsets, so
-"insert at the figure's position" is not knowable from its output; pretending
-otherwise would put text in the wrong place. End-of-document with an explicit
-[pN] label is honest and keeps citations working.
+Where descriptions land, and why there are two answers:
+
+`trailing` (the default) appends everything at the end of doc.md under one
+heading, each entry labelled with its page. For a PDF that is the only honest
+option: pdf-inspector's Markdown carries no page offsets -- its per-page text
+comes from a different extractor and is often not even a substring of the
+document text -- so "insert at the figure's position" is not knowable, and
+pretending otherwise would put text in the wrong place.
+
+`inline` (opt in with `convert.py --inline`) puts each description at the
+position its manifest item recorded, which Office documents can supply and
+PDFs cannot. It is an INSERTION at that offset, never a substitution: the
+engine's own line stays exactly where it was. That distinction is the whole
+reason the byte-identity guarantee survives the change -- see eval/gate.py,
+which fails the moment anything is edited in place instead.
+
+What inline does NOT promise is that the position is right. Byte-identity
+cannot check placement: an insertion round-trips wherever it lands. office.py
+only emits an image's own line as the anchor when the count of candidate lines
+matches the count of image inlines exactly, and falls back to the end of the
+unit otherwise -- so the position is either provably that image's, or a unit
+boundary, never a guess between two lines that look alike.
 """
 import sys, json
 from pathlib import Path
@@ -50,24 +67,61 @@ def _order(pair):
     return (1, 0, n, "")
 
 
+def _entry(item):
+    return (f"**[{_label(item['page'])}] {item['id']}** "
+            f"({item['reason']}) — {item['description']}")
+
+
+def _anchor(item, base, inline):
+    """Where this item's block goes, as an offset into the stripped text.
+
+    None means "with the trailing block". An anchor that is missing, not an
+    integer, or outside the engine text is treated as absent rather than
+    trusted: manifests outlive the code that wrote them, and a stale offset
+    must degrade to the end of the document, never into the middle of a word.
+    """
+    if not inline:
+        return None
+    a = item.get("anchor")
+    if not isinstance(a, int) or isinstance(a, bool) or not 0 <= a <= len(base):
+        return None
+    return a
+
+
 def rebuild(artifact):
-    """Regenerate doc.md from the engine text plus every described item."""
+    """Regenerate doc.md from the engine text plus every described item.
+
+    Offsets in the manifest are offsets into the ENGINE's text, and `base` is
+    the engine's text -- strip() has just removed every block this function
+    previously added. That is what makes a resumed run land in the same place
+    as the first one instead of drifting by the length of what it already
+    wrote.
+    """
     artifact = Path(artifact)
     man = json.loads((artifact / "manifest.json").read_text())
     base = strip((artifact / "doc.md").read_text())
+    inline = man.get("placement") == "inline"
 
     described = [(n, i) for n, i in enumerate(man["items"]) if i.get("description")]
     if not described:
         (artifact / "doc.md").write_text(base)
         return 0
 
-    lines = [HEADING, ""]
+    groups, trailing = {}, []
     for _, i in sorted(described, key=_order):
-        lines.append(f"**[{_label(i['page'])}] {i['id']}** ({i['reason']}) — {i['description']}")
-        lines.append("")
-    body = "\n".join(lines).rstrip()
+        pos = _anchor(i, base, inline)
+        if pos is None:
+            trailing.append(_entry(i))
+        else:
+            groups.setdefault(pos, []).append(_entry(i))
 
-    (artifact / "doc.md").write_text(splice(base, [(len(base), body)]))
+    # Blocks in document order, so equal offsets keep reading order and the
+    # trailing block -- which sits at the very end -- comes last.
+    additions = [(pos, "\n\n".join(entries)) for pos, entries in sorted(groups.items())]
+    if trailing:
+        additions.append((len(base), "\n\n".join([HEADING] + trailing)))
+
+    (artifact / "doc.md").write_text(splice(base, additions))
     return len(described)
 
 

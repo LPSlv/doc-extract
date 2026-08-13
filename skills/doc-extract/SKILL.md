@@ -23,6 +23,7 @@ Requires `uv`. Nothing else; dependencies resolve on first run.
 
 ```bash
 uv run <skill-dir>/convert.py FILE [MORE ...]
+uv run <skill-dir>/convert.py FILE --inline    # descriptions at the image's position
 ```
 
 One JSON object per document, on stdout. Everything deterministic is now done:
@@ -98,6 +99,34 @@ mapping each file to its label, in order.
 which wraps it in delimiters. That is what lets the benchmark strip the additions
 and prove the skill does not degrade text extraction. Editing in place breaks
 that guarantee silently.
+
+## Where descriptions land, and the one thing `--inline` does not promise
+
+By default every description is appended in one block at the end of `doc.md`,
+labelled `[s02]`, `[p12]` or `[Sheet2]`. `--inline` instead places each block at
+its image's position. Pass it at **convert** time, not to `describe.py`: the
+placement is recorded in the artifact (and in its cache key), so a resumed
+vision pass cannot mix the two.
+
+| Format | What `--inline` can anchor to |
+|---|---|
+| PowerPoint | the picture's own line, when that line is provably the picture's; otherwise the end of the slide |
+| Word | the end of the section the picture sits in — anydoc renders a picture as its alt text, and Word writes none unless the author typed one, so there is usually no line to anchor to |
+| Excel | the end of the sheet — images and charts come from the package, and anydoc renders neither |
+| PDF, image | nothing. `--inline` changes nothing for a PDF |
+
+The block is **inserted** beside the engine's line, never substituted for it,
+which is why byte-identity survives — `eval/gate.py` runs both placements and
+fails on any in-place edit.
+
+What inline does *not* promise is that the position is right; byte-identity
+cannot check placement, because an insertion round-trips wherever it lands. The
+anchor is anydoc's alt text, which is ordinary prose: a slide about a file
+called `image.png` renders the same line a picture does. So an image's own line
+is used only when the number of candidate lines in that unit equals the number
+of pictures in it, and the description falls back to the unit boundary
+otherwise. Positions are either provably that picture's, or a unit boundary —
+never a guess between two lines that look alike.
 
 ## Why the filters are what they are
 
