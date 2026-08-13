@@ -1,0 +1,151 @@
+{
+ "corpus": "corpus/papers",
+ "rule": "FILTER3_ROWS = 4 where the page carries no raster",
+ "documents": 25,
+ "ok": 24,
+ "errors": [
+  {
+   "file": "rob_palm-e.pdf",
+   "status": "error",
+   "patched": "error"
+  }
+ ],
+ "filter3_pages": 238,
+ "blind_spot_pages": 61,
+ "predicate_firings": 3,
+ "predicate_documents": 3,
+ "predicate_by_vendor": {
+  "ai": 2,
+  "cs": 1
+ },
+ "predicate_by_branch": {
+  "diagonals": 1,
+  "curves": 1,
+  "stroke_grid": 1
+ },
+ "calls_before": 255,
+ "calls_after": 258,
+ "tokens_before": 275333,
+ "tokens_after": 277925,
+ "renders_added": 3,
+ "renders_added_documents": 3,
+ "whole_document_side_effects": 0,
+ "rasters_handed_back": 0,
+ "documents_changed": [
+  {
+   "file": "ai_attention-is-all-you-need.pdf",
+   "before": 5,
+   "after": 6,
+   "added": [
+    "p013-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ai_instructgpt.pdf",
+   "before": 16,
+   "after": 17,
+   "added": [
+    "p057-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "cs_lora.pdf",
+   "before": 5,
+   "after": 6,
+   "added": [
+    "p004-render"
+   ],
+   "lost": []
+  }
+ ],
+ "collapse_flips": [],
+ "scale_guard_flips": [],
+ "over_scale_guard_before": 6,
+ "over_scale_guard_after": 6,
+ "t_ship": 33.5,
+ "t_pat": 29.5,
+ "predicate_rows": [
+  {
+   "file": "ai_attention-is-all-you-need.pdf",
+   "vendor": "ai",
+   "page": 13,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 18,
+   "paths": 624,
+   "page_chars": 793
+  },
+  {
+   "file": "ai_instructgpt.pdf",
+   "vendor": "ai",
+   "page": 57,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 208,
+   "diagonals": 17,
+   "paths": 222,
+   "page_chars": 631
+  },
+  {
+   "file": "cs_lora.pdf",
+   "vendor": "cs",
+   "page": 4,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 14,
+   "page_chars": 3748
+  }
+ ],
+ "added_rows": [
+  {
+   "file": "ai_attention-is-all-you-need.pdf",
+   "vendor": "ai",
+   "page": 13,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 18,
+   "predicate": true
+  },
+  {
+   "file": "ai_instructgpt.pdf",
+   "vendor": "ai",
+   "page": 57,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 208,
+   "diagonals": 17,
+   "predicate": true
+  },
+  {
+   "file": "cs_lora.pdf",
+   "vendor": "cs",
+   "page": 4,
+   "reason": "stroke_grid",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 0,
+   "predicate": true
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+tag	label	note
+d079	figure	memory map block diagram with address ranges
+d080	table	electrical spec table, transmit current consumption
+d081	figure	memory map block diagram with address ranges
+d082	figure	datasheet front page, thermocouple application block diagram
+d083	figure	six digital filter response plots
+d084	figure	functional block diagram of four-channel ADC
+d085	figure	global-chop block diagram and conversion timing diagram
+d086	branding	prose and equations, vendor logo only
+d087	table	CLOCK register field description table
+d088	table	CFG register field description table
+d089	branding	prose and equations, vendor logo only
+d090	figure	plot of reactive energy error versus current
+d091	figure	four-channel PAM multiplex schematic
+d092	figure	six DAC characteristic plots and waveforms
+d093	figure	SPI timing requirements table and timing diagram
+d094	figure	three gate driver application schematics
+d095	figure	generator mode power supply schematic
+d096	table	package materials information table
+d097	figure	stencil design mechanical drawing, VQFN package
+d098	table	thermal and electrical characteristics tables
+d099	figure	plot of zero-current output voltage vs common-mode
+d100	figure	unidirectional current sense application schematic
+d101	table	ADC_CONFIG register field description table
+d102	figure	tape and reel dimension drawings with table
+d103	figure	tape and reel box isometric drawing
+d104	figure	power calculation scheme sequence diagram

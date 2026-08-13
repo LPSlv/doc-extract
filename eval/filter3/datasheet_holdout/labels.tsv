@@ -1,0 +1,157 @@
+tag	corpus	vendor	file	page	branch	pipe_rows	label	agree	votes	note
+d001	datasheet_holdout	aos	aos_AOW14N50.pdf	5	curves	3	figure	3/3	figure|figure|figure	two transient thermal impedance log-log plots
+d002	datasheet_holdout	aos	aos_AOZ1266AQI.pdf	10	curves	3	figure	3/3	figure|figure|figure	plotted curve ICIN vs voltage conversion ratio
+d003	datasheet_holdout	aos	aos_AOZ1267AQI.pdf	10	curves	3	figure	3/3	figure|figure|figure	plotted curve ICIN vs voltage conversion ratio
+d004	datasheet_holdout	aos	aos_AOZ23655QI.pdf	2	curves	3	figure	3/3	figure|figure|figure	two application circuit schematics
+d005	datasheet_holdout	espressif	espressif_esp32-c3_datasheet_en.pdf	29	stroke_grid	3	table	3/3	table|table|table	pin mapping table between chip and flash
+d006	datasheet_holdout	espressif	espressif_esp32-h2_datasheet_en.pdf	21	curves	3	figure	3/3	figure|figure|figure	power scheme block diagram and reset timing waveform
+d007	datasheet_holdout	espressif	espressif_esp32-s2_datasheet_en.pdf	28	stroke_grid	3	table	3/3	table|table|table	pin mapping table for flash/PSRAM
+d008	datasheet_holdout	espressif	espressif_esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf	29	stroke_grid	3	table	3/3	table|table|table	current consumption table, modem-sleep mode
+d009	datasheet_holdout	espressif	espressif_esp32-s3_datasheet_en.pdf	31	stroke_grid	3	table	3/3	table|table|table	pin mapping table for flash/PSRAM
+d010	datasheet_holdout	espressif	espressif_esp32-wroom-32_datasheet_en.pdf	15	stroke_grid	3	table	3/3	table|table|table	small timing parameter table
+d011	datasheet_holdout	espressif	espressif_esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf	17	stroke_grid	3	table	3/3	table|table|table	small timing parameter table
+d012	datasheet_holdout	espressif	espressif_esp32-wrover-e_esp32-wrover-ie_datasheet_en.pdf	18	stroke_grid	3	table	3/3	table|table|table	small timing parameter table
+d013	datasheet_holdout	espressif	espressif_esp32_datasheet_en.pdf	50	stroke_grid	3	table	3/3	table|table|table	interface signal function table
+d014	datasheet_holdout	espressif	espressif_esp8684_datasheet_en.pdf	23	stroke_grid	3	table	3/3	table|table|table	small timing parameter table
+d015	datasheet_holdout	espressif	espressif_esp8684_datasheet_en.pdf	32	stroke_grid	3	table	3/3	table|table|table	predefined power modes table, prose
+d016	datasheet_holdout	melexis	melexis_mlx90397.pdf	35	dense_grid	3	table	3/3	table|table|table	register bit-field layout and bit description table
+d017	datasheet_holdout	melexis	melexis_mlx90397.pdf	48	dense_grid	3	table	3/3	table|table|table	revision history table
+d018	datasheet_holdout	melexis	melexis_mlx90421.pdf	29	curves	3	figure	3/3	figure|figure|figure	angle discontinuity diagram and linearization transfer curve
+d019	datasheet_holdout	melexis	melexis_mlx90421.pdf	52	curves	3	figure	3/3	figure|figure|figure	two package outline mechanical drawings
+d020	datasheet_holdout	melexis	melexis_mlx90421.pdf	54	curves	3	figure	3/3	figure|figure|figure	sensitive spot and angle detection package drawings
+d021	datasheet_holdout	melexis	melexis_mlx90421.pdf	57	curves	3	figure	3/3	figure|figure|figure	four package drawings with magnet orientations
+d022	datasheet_holdout	melexis	melexis_mlx90421.pdf	59	curves	3	figure	3/3	figure|figure|figure	package marking diagram and sensitive spot drawing
+d023	datasheet_holdout	melexis	melexis_mlx90422.pdf	13	curves	3	figure	3/3	figure|figure|figure	latency plot and step response timing diagram
+d024	datasheet_holdout	melexis	melexis_mlx90422.pdf	30	dense_grid	3	table	3/3	table|table|table	four parameter option tables
+d025	datasheet_holdout	melexis	melexis_mlx90422.pdf	33	curves	3	figure	3/3	figure|figure|figure	4-point linearization transfer curve plot
+d026	datasheet_holdout	melexis	melexis_mlx90422.pdf	56	curves	3	figure	3/3	figure|figure|figure	two package outline mechanical drawings
+d027	datasheet_holdout	melexis	melexis_mlx90422.pdf	58	curves	3	figure	3/3	figure|figure|figure	Package sensitive-spot drawing and angle detection diagrams
+d028	datasheet_holdout	melexis	melexis_mlx90422.pdf	61	curves	3	figure	3/3	figure|figure|figure	SMP-3 package angle detection drawings with magnets
+d029	datasheet_holdout	melexis	melexis_mlx90422.pdf	63	curves	3	figure	3/3	figure|figure|figure	SMP-4 marking diagram and sensitive spot drawing
+d030	datasheet_holdout	melexis	melexis_mlx90614.pdf	25	curves	3	figure	3/3	figure|figure|figure	PWM waveform and timing diagrams with equations
+d031	datasheet_holdout	melexis	melexis_mlx90641.pdf	55	curves	3	table	3/3	table|table|table	Shaded device marking decode table
+d032	datasheet_holdout	nexperia	nexperia_74HC_HCT02.pdf	6	diagonals	3	figure	2/3	figure|figure|table	Timing table plus propagation delay waveform diagram
+d033	datasheet_holdout	nexperia	nexperia_74HC_HCT373.pdf	3	curves	3	figure	3/3	figure|figure|figure	Octal latch logic diagram
+d034	datasheet_holdout	nexperia	nexperia_74HC_HCT373.pdf	12	curves	3	figure	3/3	figure|figure|figure	TSSOP20 package outline drawing with dimensions table
+d035	datasheet_holdout	nexperia	nexperia_74HC_HCT574.pdf	13	curves	3	figure	3/3	figure|figure|figure	TSSOP20 package outline drawing with dimensions table
+d036	datasheet_holdout	nexperia	nexperia_PBSS5350X.pdf	10	stroke_grid	3	table	3/3	table|table|table	Revision history table only
+d037	datasheet_holdout	nexperia	nexperia_PESD3V3L1BA.pdf	1	curves	3	figure	2/3	table|figure|figure	Cover page with quick reference data table
+d038	datasheet_holdout	nexperia	nexperia_PESD3V3L1BA.pdf	9	stroke_grid	3	table	3/3	table|table|table	Revision history table only
+d039	datasheet_holdout	nexperia	nexperia_PMEG3010ER.pdf	11	stroke_grid	3	table	3/3	table|table|table	Revision history table only
+d040	datasheet_holdout	nexperia	nexperia_PMV30UN.pdf	7	diagonals	3	figure	3/3	figure|figure|figure	Three plotted characteristic curves
+d041	datasheet_holdout	nexperia	nexperia_PSMN022-30PL.pdf	5	diagonals	3	figure	3/3	figure|figure|figure	Transient thermal impedance plot with inset waveform
+d042	datasheet_holdout	nexperia	nexperia_PSMN4R0-30YL.pdf	4	diagonals	3	figure	3/3	figure|figure|figure	Transient thermal impedance plot with inset waveform
+d043	datasheet_holdout	renesas	renesas_8a34046-datasheet.pdf	64	curves	3	figure	3/3	figure|figure|figure	PWM coded symbol waveform diagrams
+d044	datasheet_holdout	renesas	renesas_isl23428-datasheet.pdf	20	curves	3	figure	3/3	figure|figure|figure	TSSOP package outline drawing, multiple views
+d045	datasheet_holdout	renesas	renesas_isl6558-datasheet.pdf	5	curves	3	figure	3/3	figure|figure|figure	Three-phase converter application schematic
+d046	datasheet_holdout	renesas	renesas_isl6558-datasheet.pdf	8	curves	3	figure	3/3	figure|figure|figure	Text columns with output load line plot
+d047	datasheet_holdout	renesas	renesas_isl78693-datasheet.pdf	3	curves	3	figure	3/3	figure|figure|figure	Evaluation board circuit schematic
+d048	datasheet_holdout	renesas	renesas_isl8016-datasheet.pdf	20	curves	3	figure	3/3	figure|figure|figure	Simulated loop gain and phase plots
+d049	datasheet_holdout	renesas	renesas_x93154-datasheet.pdf	6	curves	3	figure	3/3	figure|figure|figure	Mode tables, waveform symbol key, resistor schematic
+d050	datasheet_holdout	renesas	renesas_zsc31050-datasheet.pdf	22	curves	3	figure	3/3	figure|figure|figure	Four application circuit schematics
+d051	datasheet_holdout	rpi	rpi_cm5-datasheet.pdf	19	curves	3	table	3/3	table|table|table	Pin description table only
+d052	datasheet_holdout	rpi	rpi_cm5-datasheet.pdf	28	curves	3	table	3/3	table|table|table	Current and MTBF tables with prose
+d053	datasheet_holdout	rpi	rpi_pico-2-datasheet.pdf	20	curves	3	table	3/3	table|table|table	Part numbers ordering table and note box
+d054	datasheet_holdout	rpi	rpi_rp2040-datasheet.pdf	28	curves	3	figure	3/3	figure|figure|figure	Block diagram of two Cortex-M0+ processors and SIO
+d055	datasheet_holdout	rpi	rpi_rp2040-datasheet.pdf	331	dense_grid	3	table	3/3	table|table|table	Instruction bit-encoding table with prose and syntax list
+d056	datasheet_holdout	rpi	rpi_rp2040-datasheet.pdf	418	stroke_grid	3	table	3/3	table|table|table	Register bits table above UART feature prose
+d057	datasheet_holdout	rpi	rpi_rp2040-datasheet.pdf	540	stroke_grid	3	table	3/3	table|table|table	Code listing plus TIMER register list table
+d058	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	274	stroke_grid	3	table	3/3	table|table|table	Instruction list table and code usage block
+d059	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	336	stroke_grid	3	table	3/3	table|table|table	MCONFIGPTR register bits table above prose
+d060	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	342	diagonals	3	figure	3/3	figure|figure|figure	Block diagram of XIP flash subsystem and cache
+d061	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	455	curves	3	figure	3/3	figure|figure|figure	PCB layout drawing of regulator section
+d062	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	893	dense_grid	3	table	3/3	table|table|table	Assembler syntax blocks and IN encoding table
+d063	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	896	dense_grid	3	table	3/3	table|table|table	Code blocks and PULL instruction encoding table
+d064	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	897	dense_grid	3	table	3/3	table|table|table	Code blocks and MOV instruction encoding table
+d065	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	902	dense_grid	3	table	3/3	table|table|table	IRQ syntax blocks and SET encoding table
+d066	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1047	stroke_grid	3	table	3/3	table|table|table	IC_COMP_TYPE register table above SPI prose
+d067	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1216	stroke_grid	3	table	3/3	table|table|table	Code listing and TRNG register list table
+d068	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1260	dense_grid	3	table	3/3	table|table|table	Register bit enumeration table, SRAM access counters
+d069	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1262	dense_grid	3	table	3/3	table|table|table	Register bit enumeration table, peripheral access counters
+d070	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1265	dense_grid	3	table	3/3	table|table|table	Register bit enumeration table, SRAM access counters
+d071	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1267	dense_grid	3	table	3/3	table|table|table	Register bit enumeration table, peripheral access counters
+d072	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1268	dense_grid	3	table	3/3	table|table|table	Register bit enumeration table, ROM and XIP counters
+d073	datasheet_holdout	rpi	rpi_rp2350-datasheet.pdf	1327	dense_grid	3	table	3/3	table|table|table	OTP page lock state register bits table
+d074	datasheet_holdout	silabs	silabs_efm32gg11-datasheet.pdf	33	stroke_grid	3	table	3/3	table|table|table	Current consumption electrical specification table with notes
+d075	datasheet_holdout	silabs	silabs_efm32gg11-datasheet.pdf	68	stroke_grid	3	table	3/3	table|table|table	Pulse counter and analog port specification tables
+d076	datasheet_holdout	silabs	silabs_efm32gg11-datasheet.pdf	118	curves	3	figure	3/3	figure|figure|figure	BGA192 device pinout ball map drawing
+d077	datasheet_holdout	silabs	silabs_efm8bb3-datasheet.pdf	39	curves	3	figure	3/3	figure|figure|figure	SPI slave timing waveform diagram and table
+d078	datasheet_holdout	silabs	silabs_efm8ub1-datasheet.pdf	15	diagonals	3	figure	3/3	figure|figure|figure	Flash memory map diagram with bootloader regions
+d079	datasheet_holdout	silabs	silabs_efr32bg24-datasheet.pdf	20	diagonals	3	figure	3/3	figure|figure|figure	memory map block diagram with address ranges
+d080	datasheet_holdout	silabs	silabs_efr32fg23-datasheet.pdf	39	stroke_grid	3	table	3/3	table|table|table	current consumption specification table with notes
+d081	datasheet_holdout	silabs	silabs_efr32mg24-datasheet.pdf	20	diagonals	3	figure	3/3	figure|figure|figure	memory map block diagram with address ranges
+d082	datasheet_holdout	ti	ti_ads1220.pdf	1	curves	3	figure	3/3	figure|figure|figure	thermocouple application schematic, features text, package table
+d083	datasheet_holdout	ti	ti_ads1220.pdf	28	curves	3	figure	3/3	figure|figure|figure	six digital filter response plots
+d084	datasheet_holdout	ti	ti_ads131m04.pdf	17	curves	3	figure	3/3	figure|figure|figure	functional block diagram of four-channel ADC
+d085	datasheet_holdout	ti	ti_ads131m04.pdf	31	curves	3	figure	3/3	figure|figure|figure	global-chop block diagram and conversion timing diagram
+d086	datasheet_holdout	ti	ti_ads131m04.pdf	32	curves	3	branding	3/3	branding|branding|branding	text, equations, vendor logo only
+d087	datasheet_holdout	ti	ti_ads131m04.pdf	53	curves	3	table	3/3	table|table|table	CLOCK register field description table
+d088	datasheet_holdout	ti	ti_ads131m04.pdf	58	curves	3	table	3/3	table|table|table	CFG register field description table
+d089	datasheet_holdout	ti	ti_ads131m04.pdf	87	curves	3	branding	3/3	branding|branding|branding	text, equations, vendor logo only
+d090	datasheet_holdout	ti	ti_ads131m04.pdf	90	curves	3	figure	3/3	figure|figure|figure	reactive energy error versus current plot
+d091	datasheet_holdout	ti	ti_cd4066b.pdf	13	curves	3	figure	3/3	figure|figure|figure	four-channel PAM multiplex system schematic
+d092	datasheet_holdout	ti	ti_dac80501.pdf	16	curves	3	figure	3/3	figure|figure|figure	six DAC characteristic plots and waveforms
+d093	datasheet_holdout	ti	ti_drv8323.pdf	19	curves	3	figure	3/3	figure|figure|figure	SPI timing requirements table and timing diagram
+d094	datasheet_holdout	ti	ti_drv8323.pdf	34	curves	3	figure	3/3	figure|figure|figure	three half-bridge gate driver schematics
+d095	datasheet_holdout	ti	ti_drv8323.pdf	73	curves	3	figure	3/3	figure|figure|figure	generator mode power supply schematic
+d096	datasheet_holdout	ti	ti_drv8323.pdf	86	curves	3	table	3/3	table|table|table	package materials information table
+d097	datasheet_holdout	ti	ti_drv8323.pdf	95	curves	3	figure	3/3	figure|figure|figure	VQFN stencil design mechanical drawing
+d098	datasheet_holdout	ti	ti_hdc3020.pdf	6	curves	3	table	3/3	table|table|table	thermal and electrical characteristics tables
+d099	datasheet_holdout	ti	ti_ina181.pdf	19	curves	3	figure	3/3	figure|figure|figure	zero-current output voltage versus common-mode plot
+d100	datasheet_holdout	ti	ti_ina181.pdf	20	curves	3	figure	3/3	figure|figure|figure	unidirectional current sense application schematic
+d101	datasheet_holdout	ti	ti_ina228.pdf	23	curves	3	table	3/3	table|table|table	ADC_CONFIG register field description table
+d102	datasheet_holdout	ti	ti_ina228.pdf	43	curves	3	figure	3/3	figure|figure|figure	tape and reel dimension drawings plus table
+d103	datasheet_holdout	ti	ti_ina228.pdf	44	curves	3	figure	3/3	figure|figure|figure	tape and reel box dimension drawing
+d104	datasheet_holdout	ti	ti_ina238.pdf	13	curves	3	figure	3/3	figure|figure|figure	power calculation scheme sequence diagram
+d105	datasheet_holdout	ti	ti_ina238.pdf	41	curves	3	figure	3/3	figure|figure|figure	Tape and reel drawings, quadrant diagram, dimension table
+d106	datasheet_holdout	ti	ti_ina238.pdf	42	curves	3	figure	3/3	figure|figure|figure	Isometric tape and reel box drawing with dimensions
+d107	datasheet_holdout	ti	ti_lm5164.pdf	1	curves	3	figure	3/3	figure|figure|figure	Application schematic and efficiency curve on front page
+d108	datasheet_holdout	ti	ti_lm5164.pdf	37	curves	3	figure	3/3	figure|figure|figure	Isometric tape and reel box drawing with dimensions
+d109	datasheet_holdout	ti	ti_lmr33630.pdf	44	curves	3	figure	3/3	figure|figure|figure	Tape and reel drawings, quadrant diagram, dimension table
+d110	datasheet_holdout	ti	ti_lmr33630.pdf	55	curves	3	figure	3/3	figure|figure|figure	Land pattern and solder mask detail drawings
+d111	datasheet_holdout	ti	ti_lmr33630.pdf	58	curves	3	figure	3/3	figure|figure|figure	Land pattern and solder mask detail drawings
+d112	datasheet_holdout	ti	ti_lmt01.pdf	15	curves	3	figure	3/3	figure|figure|figure	Three plotted accuracy and transfer function graphs
+d113	datasheet_holdout	ti	ti_lmt01.pdf	19	curves	3	branding	2/3	branding|none|branding	Design procedure text and equations, TI logo
+d114	datasheet_holdout	ti	ti_lmt01.pdf	27	curves	3	figure	3/3	figure|figure|figure	Tape and reel drawings, quadrant diagram, dimension table
+d115	datasheet_holdout	ti	ti_lmt01.pdf	28	curves	3	figure	3/3	figure|figure|figure	Isometric tape and reel box drawing with dimensions
+d116	datasheet_holdout	ti	ti_opa189.pdf	23	curves	3	figure	3/3	figure|figure|figure	EMIRR test configuration circuit diagram
+d117	datasheet_holdout	ti	ti_opa189.pdf	26	curves	3	figure	3/3	figure|figure|figure	Noise spectral density plot versus source resistance
+d118	datasheet_holdout	ti	ti_opa189.pdf	44	curves	3	figure	3/3	figure|figure|figure	SOT-23 land pattern and solder mask drawings
+d119	datasheet_holdout	ti	ti_opa189.pdf	48	curves	3	figure	3/3	figure|figure|figure	Solder paste stencil pattern drawing
+d120	datasheet_holdout	ti	ti_opa2188.pdf	22	curves	3	figure	3/3	figure|figure|figure	Measured transfer function plot for V-I converter
+d121	datasheet_holdout	ti	ti_opa2188.pdf	38	curves	3	figure	3/3	figure|figure|figure	Solder paste stencil pattern drawing
+d122	datasheet_holdout	ti	ti_opt4001.pdf	19	curves	3	branding	2/3	branding|none|branding	Register calculation text and equations, TI logo
+d123	datasheet_holdout	ti	ti_opt4001.pdf	26	curves	3	table	3/3	table|table|table	Ruled register map table of bit fields
+d124	datasheet_holdout	ti	ti_sn74lv1t34.pdf	1	curves	3	figure	3/3	figure|figure|figure	Level shifter block diagrams and switching threshold waveforms
+d125	datasheet_holdout	ti	ti_sn74lv1t34.pdf	24	curves	3	figure	3/3	figure|figure|figure	SOT-23 land pattern and solder mask drawings
+d126	datasheet_holdout	ti	ti_tca9534.pdf	9	curves	3	figure	3/3	figure|figure|figure	Six typical characteristic curve plots
+d127	datasheet_holdout	ti	ti_tca9534.pdf	10	curves	3	figure	3/3	figure|figure|figure	Six typical characteristic curve plots
+d128	datasheet_holdout	ti	ti_tca9534.pdf	11	curves	3	figure	3/3	figure|figure|figure	Six typical characteristic curve plots
+d129	datasheet_holdout	ti	ti_tca9534.pdf	25	curves	3	figure	3/3	figure|figure|figure	Equations plus LED pullup resistor circuit diagram
+d130	datasheet_holdout	ti	ti_tca9534.pdf	26	curves	3	figure	3/3	figure|figure|figure	LED circuit diagram and two pullup resistance plots
+d131	datasheet_holdout	ti	ti_tmp235.pdf	20	curves	3	figure	3/3	figure|figure|figure	Land pattern and solder mask drawings, SOT-23
+d132	datasheet_holdout	ti	ti_tps54360.pdf	1	curves	3	figure	3/3	figure|figure|figure	Simplified schematic and efficiency curve on front page
+d133	datasheet_holdout	ti	ti_tps54360.pdf	14	curves	3	branding	3/3	branding|branding|branding	Body text with equation, TI logo only
+d134	datasheet_holdout	ti	ti_tps54360.pdf	30	curves	3	table	3/3	table|table|table	Capacitor types table plus display equations
+d135	datasheet_holdout	ti	ti_tps54360.pdf	48	curves	3	figure	3/3	figure|figure|figure	PowerPAD SOIC land pattern and solder mask details
+d136	datasheet_holdout	ti	ti_tps61093.pdf	26	curves	3	figure	3/3	figure|figure|figure	WSON land pattern and solder mask drawings
+d137	datasheet_holdout	ti	ti_tps63020.pdf	7	curves	3	figure	3/3	figure|figure|figure	Two maximum output current versus input voltage plots
+d138	datasheet_holdout	ti	ti_tps63020.pdf	18	curves	3	figure	3/3	figure|figure|figure	Six efficiency curve plots
+d139	datasheet_holdout	ti	ti_ucc21520.pdf	8	curves	3	table	3/3	table|table|table	Safety limiting values and electrical characteristics tables
+d140	datasheet_holdout	vishay	vishay_sfh6345.pdf	8	curves	3	figure	3/3	figure|figure|figure	Package marking and tape-and-reel mechanical drawings
+d141	datasheet_holdout	vishay	vishay_sib457ed.pdf	6	curves	3	figure	3/3	figure|figure|figure	Two normalized thermal transient impedance plots
+d142	datasheet_holdout	vishay	vishay_sip12107.pdf	4	curves	3	figure	3/3	figure|figure|figure	Functional block diagram and package marking drawing
+d143	datasheet_holdout	vishay	vishay_sip32475.pdf	1	curves	3	figure	3/3	figure|figure|figure	Typical application circuit schematic
+d144	datasheet_holdout	vishay	vishay_vsma1094750.pdf	7	curves	3	figure	3/3	figure|figure|figure	Recommended footprint drawings and solder reflow profile
+d145	pmc	pmc(journal)	SMS-30-1256.PMC7317861.pdf	1	curves	3	branding	3/3	branding|branding|branding	Journal article first page, publisher logo, shaded abstract
+d146	pmc	pmc(journal)	ao2c08104.PMC10193573.pdf	7	curves	3	branding	3/3	branding|branding|branding	Two-column text and references, journal banner
+d147	pmc	pmc(journal)	bmjopen-2021-054381.PMC8628334.pdf	1	curves	3	branding	3/3	branding|branding|branding	Journal front page, BMJ logo, shaded box
+d148	pmc	pmc(journal)	bmjophth-2020-000572.PMC7528428.pdf	1	curves	3	branding	3/3	branding|branding|branding	Journal front page, BMJ logo, shaded key messages
+d149	pmc	pmc(journal)	bmjophth-2020-000572.PMC7528428.pdf	3	curves	3	figure	3/3	figure|figure|figure	CONSORT-style enrolment and allocation flow chart
+d150	pmc	pmc(journal)	bmjoq-14-4.PMC12645623.pdf	1	curves	3	branding	3/3	branding|branding|branding	Journal front page, BMJ logo, abstract text
+d151	pmc	pmc(journal)	bmjoq-14-4.PMC12645623.pdf	4	curves	3	table	3/3	table|table|table	Continued results table and body text
+d152	pmc	pmc(journal)	ctg201734a.PMC5539342.pdf	1	stroke_grid	3	branding	2/3	branding|none|branding	Article opening page, text only with rules
+d153	pmc	pmc(journal)	jes20161a.PMC4913168.pdf	1	curves	3	branding	3/3	branding|branding|branding	Article opening page, npg logo, shaded abstract
+d154	pmc	pmc(journal)	ofaf684.PMC13037372.pdf	1	curves	3	branding	3/3	branding|branding|branding	Article opening page, IDSA and Oxford logos
+d155	pmc	pmc(journal)	ymj-54-71.PMC3521284.pdf	3	diagonals	3	figure	3/3	figure|figure|figure	Patient inclusion flow chart beside body text
+d156	pmc	pmc(journal)	ymj-54-71.PMC3521284.pdf	9	diagonals	3	figure	3/3	figure|figure|figure	Age-distribution prevalence line chart with references

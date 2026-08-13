@@ -26,3 +26,5 @@ eval/filter3/pages/
 eval/filter3/parts/
 eval/filter3/costparts/
 eval/filter3/holdout/pages/
+eval/filter3/datasheet_holdout/pages/
+eval/filter3/datasheet_holdout/parts/

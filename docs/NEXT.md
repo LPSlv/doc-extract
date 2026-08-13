@@ -180,13 +180,44 @@ What is left from it:
   (62–82) across 71 blind holdout labels, for +386 calls and +2.3% of prompt
   tokens. Patch and test at `eval/filter3/proposed.patch`.
 
-  **It is being validated on `corpus/datasheet_holdout` before any decision**,
-  because 324 of its 400 firings are datasheets and neither existing holdout is
-  one. The measuring agent recorded that such a corpus did not exist; it was
-  built by parallel work the same day. Until that lands, three things count
-  against it: it would be **the first cost increase this repo has accepted**,
-  every rule shipped here so far had 100% holdout precision, and its
-  `pmc_holdout` cell is **1 of 9**.
+  **Validated on `corpus/datasheet_holdout`, and rejected as written.** 144
+  renders added over 294 datasheets, all labelled blind by three labellers each:
+  **63% carry a figure (95% Wilson 55–71)**, against 87% in-sample. Pooled over
+  all three holdouts it is **143/215 = 66.5% (60–72)** — the same rate as the
+  entire 4,065-page blind spot (65.6%, 60–71). `T = 4` selects a **smaller**
+  population, not a better one, and `eval/rejected-signals.md` already rejected
+  routing that population on price.
+
+  **The branch-gated version is what survives, and `eval/filter3.md` predicted
+  it before this corpus existed.** `stroke_grid` and `dense_grid` *mean* "a ruled
+  table the extractor missed", which is exactly what filter 3 establishes — they
+  were 0 of 11 and 1 of 7 in-sample, and on the datasheet holdout they are
+  **0 of 36, all `table`, unanimously**, a quarter of all firings there against
+  14 of 400 in-sample. Gated to `curves`/`diagonals`: **139/164 = 84.8% (78–89)**
+  across three holdouts, for **+374 calls** against the proposal's +386 — 97% of
+  the cost. It is **not** a vendor rule: ungated the holdout reads TI 78% /
+  others 53%, gated it inverts to TI 78% / others **92%**.
+
+  **Two things the holdout did not fix.** Journals genuinely fail — `pmc_holdout`
+  is a **census, not a sample** (the rule fires exactly 9 times on 250
+  documents), and adding the 12 never-labelled `corpus/pmc` firings gives **4 of
+  21, 19% (8–40)**, almost all publisher front matter. And the gate does not help
+  `SCALE_GUARD`: **10 documents newly stop to ask**, all TI, all one direction.
+
+  **Not applied.** The gated patch and its test still need writing —
+  `eval/filter3_patch.py --narrow` is the exact source that was measured. It
+  would be the first cost increase this repo has accepted (+2.3% of prompt
+  tokens, 2.25× → 2.20×), which is a product judgement rather than a measurement
+  one. The argument for it: it adds pages carrying a figure at **85%**, while the
+  `curves` pages the router **already pays for** carry one at **73%**
+  (`eval/nofigure.md`) — it buys content at a better rate than existing spend.
+- **Correction:** the `over_scale_guard` flip count for this rule is **10**, not
+  the 13 first reported here or the 12 in `eval/filter3/cost.json`.
+  `filter3.py cost_run()` reads the flag from before `drop_batch_furniture` while
+  reading calls and tokens from after it; `ti_ne556.pdf` and `ti_sn74hc125.pdf`
+  land at exactly 15 calls and so do not cross. Eleventh and twelfth measurement
+  defects here — and **the first two that made a result look worse rather than
+  better.**
 - Still uncounted: **769 filter-3 pages carrying a raster that filters 1–2
   dropped**. Nothing on them is routed either, but a rule there interacts with
   the furniture and dedup filters, which is a different argument.

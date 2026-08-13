@@ -1,0 +1,27 @@
+tag	label	note
+d053	table	Part numbers table plus note box
+d054	figure	Dual Cortex-M0+ processor block diagram
+d055	table	Bit-field instruction encoding table
+d056	table	Register bit table and feature lists
+d057	table	Code listing and register offset table
+d058	table	Instruction list table and code blocks
+d059	table	Register bit table and prose
+d060	figure	XIP flash subsystem block diagram
+d061	figure	PCB layout drawing of regulator section
+d062	table	Bit-field encoding table and syntax blocks
+d063	table	PULL instruction encoding table
+d064	table	MOV instruction encoding table
+d065	table	SET instruction encoding table
+d066	table	Register bit table and SPI feature list
+d067	table	Code listing and TRNG register table
+d068	table	Enumerated bit-value register table
+d069	table	Enumerated bit-value register table
+d070	table	Enumerated bit-value register table
+d071	table	Enumerated bit-value register table
+d072	table	Enumerated bit-value register table
+d073	table	LOCK_S register bit table
+d074	table	Current consumption specification table
+d075	table	Pulse counter and analog port tables
+d076	figure	BGA192 package pinout drawing plus table
+d077	figure	SPI slave timing waveform diagram and table
+d078	figure	Flash memory map diagram with bootloader

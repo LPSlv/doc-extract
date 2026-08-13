@@ -1,0 +1,157 @@
+tag	label	note
+d001	figure	two transient thermal impedance log-log plots
+d002	figure	plotted curve ICIN vs voltage conversion ratio
+d003	figure	plotted curve ICIN vs voltage conversion ratio
+d004	figure	two application circuit schematics
+d005	table	pin mapping table between chip and flash
+d006	figure	power scheme block diagram and reset timing waveform
+d007	table	pin mapping table for flash/PSRAM
+d008	table	current consumption table, modem-sleep mode
+d009	table	pin mapping table for flash/PSRAM
+d010	table	small timing parameter table
+d011	table	small timing parameter table
+d012	table	small timing parameter table
+d013	table	interface signal function table
+d014	table	small timing parameter table
+d015	table	predefined power modes table, prose
+d016	table	register bit-field layout and bit description table
+d017	table	revision history table
+d018	figure	angle discontinuity diagram and linearization transfer curve
+d019	figure	two package outline mechanical drawings
+d020	figure	sensitive spot and angle detection package drawings
+d021	figure	four package drawings with magnet orientations
+d022	figure	package marking diagram and sensitive spot drawing
+d023	figure	latency plot and step response timing diagram
+d024	table	four parameter option tables
+d025	figure	4-point linearization transfer curve plot
+d026	figure	two package outline mechanical drawings
+d027	figure	Package sensitive-spot drawing and angle detection diagrams
+d028	figure	SMP-3 package angle detection drawings with magnets
+d029	figure	SMP-4 marking diagram and sensitive spot drawing
+d030	figure	PWM waveform and timing diagrams with equations
+d031	table	Shaded device marking decode table
+d032	figure	Timing table plus propagation delay waveform diagram
+d033	figure	Octal latch logic diagram
+d034	figure	TSSOP20 package outline drawing with dimensions table
+d035	figure	TSSOP20 package outline drawing with dimensions table
+d036	table	Revision history table only
+d037	table	Cover page with quick reference data table
+d038	table	Revision history table only
+d039	table	Revision history table only
+d040	figure	Three plotted characteristic curves
+d041	figure	Transient thermal impedance plot with inset waveform
+d042	figure	Transient thermal impedance plot with inset waveform
+d043	figure	PWM coded symbol waveform diagrams
+d044	figure	TSSOP package outline drawing, multiple views
+d045	figure	Three-phase converter application schematic
+d046	figure	Text columns with output load line plot
+d047	figure	Evaluation board circuit schematic
+d048	figure	Simulated loop gain and phase plots
+d049	figure	Mode tables, waveform symbol key, resistor schematic
+d050	figure	Four application circuit schematics
+d051	table	Pin description table only
+d052	table	Current and MTBF tables with prose
+d053	table	Part numbers ordering table and note box
+d054	figure	Block diagram of two Cortex-M0+ processors and SIO
+d055	table	Instruction bit-encoding table with prose and syntax list
+d056	table	Register bits table above UART feature prose
+d057	table	Code listing plus TIMER register list table
+d058	table	Instruction list table and code usage block
+d059	table	MCONFIGPTR register bits table above prose
+d060	figure	Block diagram of XIP flash subsystem and cache
+d061	figure	PCB layout drawing of regulator section
+d062	table	Assembler syntax blocks and IN encoding table
+d063	table	Code blocks and PULL instruction encoding table
+d064	table	Code blocks and MOV instruction encoding table
+d065	table	IRQ syntax blocks and SET encoding table
+d066	table	IC_COMP_TYPE register table above SPI prose
+d067	table	Code listing and TRNG register list table
+d068	table	Register bit enumeration table, SRAM access counters
+d069	table	Register bit enumeration table, peripheral access counters
+d070	table	Register bit enumeration table, SRAM access counters
+d071	table	Register bit enumeration table, peripheral access counters
+d072	table	Register bit enumeration table, ROM and XIP counters
+d073	table	OTP page lock state register bits table
+d074	table	Current consumption electrical specification table with notes
+d075	table	Pulse counter and analog port specification tables
+d076	figure	BGA192 device pinout ball map drawing
+d077	figure	SPI slave timing waveform diagram and table
+d078	figure	Flash memory map diagram with bootloader regions
+d079	figure	memory map block diagram with address ranges
+d080	table	current consumption specification table with notes
+d081	figure	memory map block diagram with address ranges
+d082	figure	thermocouple application schematic, features text, package table
+d083	figure	six digital filter response plots
+d084	figure	functional block diagram of four-channel ADC
+d085	figure	global-chop block diagram and conversion timing diagram
+d086	branding	text, equations, vendor logo only
+d087	table	CLOCK register field description table
+d088	table	CFG register field description table
+d089	branding	text, equations, vendor logo only
+d090	figure	reactive energy error versus current plot
+d091	figure	four-channel PAM multiplex system schematic
+d092	figure	six DAC characteristic plots and waveforms
+d093	figure	SPI timing requirements table and timing diagram
+d094	figure	three half-bridge gate driver schematics
+d095	figure	generator mode power supply schematic
+d096	table	package materials information table
+d097	figure	VQFN stencil design mechanical drawing
+d098	table	thermal and electrical characteristics tables
+d099	figure	zero-current output voltage versus common-mode plot
+d100	figure	unidirectional current sense application schematic
+d101	table	ADC_CONFIG register field description table
+d102	figure	tape and reel dimension drawings plus table
+d103	figure	tape and reel box dimension drawing
+d104	figure	power calculation scheme sequence diagram
+d105	figure	Tape and reel drawings, quadrant diagram, dimension table
+d106	figure	Isometric tape and reel box drawing with dimensions
+d107	figure	Application schematic and efficiency curve on front page
+d108	figure	Isometric tape and reel box drawing with dimensions
+d109	figure	Tape and reel drawings, quadrant diagram, dimension table
+d110	figure	Land pattern and solder mask detail drawings
+d111	figure	Land pattern and solder mask detail drawings
+d112	figure	Three plotted accuracy and transfer function graphs
+d113	branding	Design procedure text and equations, TI logo
+d114	figure	Tape and reel drawings, quadrant diagram, dimension table
+d115	figure	Isometric tape and reel box drawing with dimensions
+d116	figure	EMIRR test configuration circuit diagram
+d117	figure	Noise spectral density plot versus source resistance
+d118	figure	SOT-23 land pattern and solder mask drawings
+d119	figure	Solder paste stencil pattern drawing
+d120	figure	Measured transfer function plot for V-I converter
+d121	figure	Solder paste stencil pattern drawing
+d122	branding	Register calculation text and equations, TI logo
+d123	table	Ruled register map table of bit fields
+d124	figure	Level shifter block diagrams and switching threshold waveforms
+d125	figure	SOT-23 land pattern and solder mask drawings
+d126	figure	Six typical characteristic curve plots
+d127	figure	Six typical characteristic curve plots
+d128	figure	Six typical characteristic curve plots
+d129	figure	Equations plus LED pullup resistor circuit diagram
+d130	figure	LED circuit diagram and two pullup resistance plots
+d131	figure	Land pattern and solder mask drawings, SOT-23
+d132	figure	Simplified schematic and efficiency curve on front page
+d133	branding	Body text with equation, TI logo only
+d134	table	Capacitor types table plus display equations
+d135	figure	PowerPAD SOIC land pattern and solder mask details
+d136	figure	WSON land pattern and solder mask drawings
+d137	figure	Two maximum output current versus input voltage plots
+d138	figure	Six efficiency curve plots
+d139	table	Safety limiting values and electrical characteristics tables
+d140	figure	Package marking and tape-and-reel mechanical drawings
+d141	figure	Two normalized thermal transient impedance plots
+d142	figure	Functional block diagram and package marking drawing
+d143	figure	Typical application circuit schematic
+d144	figure	Recommended footprint drawings and solder reflow profile
+d145	branding	Journal article first page, publisher logo, shaded abstract
+d146	branding	Two-column text and references, journal banner
+d147	branding	Journal front page, BMJ logo, shaded box
+d148	branding	Journal front page, BMJ logo, shaded key messages
+d149	figure	CONSORT-style enrolment and allocation flow chart
+d150	branding	Journal front page, BMJ logo, abstract text
+d151	table	Continued results table and body text
+d152	branding	Article opening page, text only with rules
+d153	branding	Article opening page, npg logo, shaded abstract
+d154	branding	Article opening page, IDSA and Oxford logos
+d155	figure	Patient inclusion flow chart beside body text
+d156	figure	Age-distribution prevalence line chart with references

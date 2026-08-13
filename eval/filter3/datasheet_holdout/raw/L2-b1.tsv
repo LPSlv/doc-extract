@@ -1,0 +1,27 @@
+tag	label	note
+d001	figure	Two transient thermal impedance log-log curve charts
+d002	figure	Plotted curve of ICIN vs voltage conversion ratio
+d003	figure	Plotted curve of ICIN vs voltage conversion ratio
+d004	figure	Two application circuit schematics with components
+d005	table	Pin mapping table for chip and flash
+d006	figure	Power scheme block diagram and power-up timing waveform
+d007	table	Pin mapping table for flash and PSRAM
+d008	table	Current consumption table for modem-sleep mode
+d009	table	Pin mapping table for flash and PSRAM
+d010	table	Timing parameter description table
+d011	table	Timing parameter description table
+d012	table	Timing parameter description table
+d013	table	Interface signal and function table
+d014	table	Timing parameter description table
+d015	table	Predefined power modes table with text
+d016	table	Register bit-field table and bit description table
+d017	table	Revision history table
+d018	figure	Angle discontinuity diagram and linearization transfer curve
+d019	figure	Two package outline mechanical drawings with dimensions
+d020	figure	Sensitive spot drawing and magnet angle detection drawings
+d021	figure	Four package drawings with magnet orientations
+d022	figure	Package marking diagram and sensitive spot drawing
+d023	figure	Latency plot and SENT step response timing diagram
+d024	table	Four parameter option tables
+d025	figure	4-point linearization transfer function plot
+d026	figure	Two package outline mechanical drawings with dimensions

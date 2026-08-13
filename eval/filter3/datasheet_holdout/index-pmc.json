@@ -1,0 +1,401 @@
+{
+ "corpus": "corpus/pmc",
+ "rule": "FILTER3_ROWS = 4 where the page carries no raster",
+ "documents": 220,
+ "ok": 220,
+ "errors": [],
+ "filter3_pages": 443,
+ "blind_spot_pages": 113,
+ "predicate_firings": 12,
+ "predicate_documents": 9,
+ "predicate_by_vendor": {
+  "bmjophth-2020-000572.PMC7528428.pdf": 2,
+  "bmjoq-14-4.PMC12645623.pdf": 2,
+  "ymj-54-71.PMC3521284.pdf": 2,
+  "SMS-30-1256.PMC7317861.pdf": 1,
+  "ao2c08104.PMC10193573.pdf": 1,
+  "bmjopen-2021-054381.PMC8628334.pdf": 1,
+  "ctg201734a.PMC5539342.pdf": 1,
+  "jes20161a.PMC4913168.pdf": 1,
+  "ofaf684.PMC13037372.pdf": 1
+ },
+ "predicate_by_branch": {
+  "curves": 9,
+  "diagonals": 2,
+  "stroke_grid": 1
+ },
+ "calls_before": 920,
+ "calls_after": 930,
+ "tokens_before": 927406,
+ "tokens_after": 936386,
+ "renders_added": 10,
+ "renders_added_documents": 7,
+ "whole_document_side_effects": 0,
+ "rasters_handed_back": 0,
+ "documents_changed": [
+  {
+   "file": "SMS-30-1256.PMC7317861.pdf",
+   "before": 3,
+   "after": 4,
+   "added": [
+    "p001-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "bmjopen-2021-054381.PMC8628334.pdf",
+   "before": 4,
+   "after": 5,
+   "added": [
+    "p001-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "bmjophth-2020-000572.PMC7528428.pdf",
+   "before": 3,
+   "after": 5,
+   "added": [
+    "p001-render",
+    "p003-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "bmjoq-14-4.PMC12645623.pdf",
+   "before": 2,
+   "after": 4,
+   "added": [
+    "p001-render",
+    "p004-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "jes20161a.PMC4913168.pdf",
+   "before": 3,
+   "after": 4,
+   "added": [
+    "p001-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ofaf684.PMC13037372.pdf",
+   "before": 1,
+   "after": 2,
+   "added": [
+    "p001-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ymj-54-71.PMC3521284.pdf",
+   "before": 0,
+   "after": 2,
+   "added": [
+    "p003-render",
+    "p009-render"
+   ],
+   "lost": []
+  }
+ ],
+ "collapse_flips": [],
+ "scale_guard_flips": [],
+ "over_scale_guard_before": 4,
+ "over_scale_guard_after": 4,
+ "t_ship": 123.0,
+ "t_pat": 112.9,
+ "predicate_rows": [
+  {
+   "file": "SMS-30-1256.PMC7317861.pdf",
+   "vendor": "SMS-30-1256.PMC7317861.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 72,
+   "diagonals": 12,
+   "paths": 25,
+   "page_chars": 3291
+  },
+  {
+   "file": "ao2c08104.PMC10193573.pdf",
+   "vendor": "ao2c08104.PMC10193573.pdf",
+   "page": 7,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 184,
+   "diagonals": 0,
+   "paths": 23,
+   "page_chars": 6555
+  },
+  {
+   "file": "bmjopen-2021-054381.PMC8628334.pdf",
+   "vendor": "bmjopen-2021-054381.PMC8628334.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 665,
+   "diagonals": 17,
+   "paths": 41,
+   "page_chars": 5087
+  },
+  {
+   "file": "bmjophth-2020-000572.PMC7528428.pdf",
+   "vendor": "bmjophth-2020-000572.PMC7528428.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 836,
+   "diagonals": 20,
+   "paths": 56,
+   "page_chars": 4842
+  },
+  {
+   "file": "bmjophth-2020-000572.PMC7528428.pdf",
+   "vendor": "bmjophth-2020-000572.PMC7528428.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 26,
+   "diagonals": 18,
+   "paths": 35,
+   "page_chars": 3336
+  },
+  {
+   "file": "bmjoq-14-4.PMC12645623.pdf",
+   "vendor": "bmjoq-14-4.PMC12645623.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 826,
+   "diagonals": 20,
+   "paths": 37,
+   "page_chars": 5013
+  },
+  {
+   "file": "bmjoq-14-4.PMC12645623.pdf",
+   "vendor": "bmjoq-14-4.PMC12645623.pdf",
+   "page": 4,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 10,
+   "diagonals": 0,
+   "paths": 37,
+   "page_chars": 5568
+  },
+  {
+   "file": "ctg201734a.PMC5539342.pdf",
+   "vendor": "ctg201734a.PMC5539342.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 2,
+   "page_chars": 5509
+  },
+  {
+   "file": "jes20161a.PMC4913168.pdf",
+   "vendor": "jes20161a.PMC4913168.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 83,
+   "diagonals": 0,
+   "paths": 43,
+   "page_chars": 6157
+  },
+  {
+   "file": "ofaf684.PMC13037372.pdf",
+   "vendor": "ofaf684.PMC13037372.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 79,
+   "diagonals": 22,
+   "paths": 15,
+   "page_chars": 5810
+  },
+  {
+   "file": "ymj-54-71.PMC3521284.pdf",
+   "vendor": "ymj-54-71.PMC3521284.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 40,
+   "paths": 32,
+   "page_chars": 4525
+  },
+  {
+   "file": "ymj-54-71.PMC3521284.pdf",
+   "vendor": "ymj-54-71.PMC3521284.pdf",
+   "page": 9,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 157,
+   "paths": 116,
+   "page_chars": 4477
+  }
+ ],
+ "added_rows": [
+  {
+   "file": "SMS-30-1256.PMC7317861.pdf",
+   "vendor": "SMS-30-1256.PMC7317861.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 72,
+   "diagonals": 12,
+   "predicate": true
+  },
+  {
+   "file": "bmjopen-2021-054381.PMC8628334.pdf",
+   "vendor": "bmjopen-2021-054381.PMC8628334.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 665,
+   "diagonals": 17,
+   "predicate": true
+  },
+  {
+   "file": "bmjophth-2020-000572.PMC7528428.pdf",
+   "vendor": "bmjophth-2020-000572.PMC7528428.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 836,
+   "diagonals": 20,
+   "predicate": true
+  },
+  {
+   "file": "bmjophth-2020-000572.PMC7528428.pdf",
+   "vendor": "bmjophth-2020-000572.PMC7528428.pdf",
+   "page": 3,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 26,
+   "diagonals": 18,
+   "predicate": true
+  },
+  {
+   "file": "bmjoq-14-4.PMC12645623.pdf",
+   "vendor": "bmjoq-14-4.PMC12645623.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 826,
+   "diagonals": 20,
+   "predicate": true
+  },
+  {
+   "file": "bmjoq-14-4.PMC12645623.pdf",
+   "vendor": "bmjoq-14-4.PMC12645623.pdf",
+   "page": 4,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 10,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "jes20161a.PMC4913168.pdf",
+   "vendor": "jes20161a.PMC4913168.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 83,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "ofaf684.PMC13037372.pdf",
+   "vendor": "ofaf684.PMC13037372.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 79,
+   "diagonals": 22,
+   "predicate": true
+  },
+  {
+   "file": "ymj-54-71.PMC3521284.pdf",
+   "vendor": "ymj-54-71.PMC3521284.pdf",
+   "page": 3,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 40,
+   "predicate": true
+  },
+  {
+   "file": "ymj-54-71.PMC3521284.pdf",
+   "vendor": "ymj-54-71.PMC3521284.pdf",
+   "page": 9,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 157,
+   "predicate": true
+  }
+ ]
+}

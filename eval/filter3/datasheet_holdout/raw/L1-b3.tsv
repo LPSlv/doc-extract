@@ -1,0 +1,27 @@
+tag	label	note
+d053	table	Part numbers ordering table and note box
+d054	figure	Block diagram of two Cortex-M0+ processors and SIO
+d055	table	Instruction bit-encoding table with prose and syntax list
+d056	table	Register bits table above UART feature prose
+d057	table	Code listing plus TIMER register list table
+d058	table	Instruction list table and code usage block
+d059	table	MCONFIGPTR register bits table above prose
+d060	figure	Block diagram of XIP flash subsystem and cache
+d061	figure	PCB layout drawing of regulator section
+d062	table	Assembler syntax blocks and IN encoding table
+d063	table	Code blocks and PULL instruction encoding table
+d064	table	Code blocks and MOV instruction encoding table
+d065	table	IRQ syntax blocks and SET encoding table
+d066	table	IC_COMP_TYPE register table above SPI prose
+d067	table	Code listing and TRNG register list table
+d068	table	Register bit enumeration table, SRAM access counters
+d069	table	Register bit enumeration table, peripheral access counters
+d070	table	Register bit enumeration table, SRAM access counters
+d071	table	Register bit enumeration table, peripheral access counters
+d072	table	Register bit enumeration table, ROM and XIP counters
+d073	table	OTP page lock state register bits table
+d074	table	Current consumption electrical specification table with notes
+d075	table	Pulse counter and analog port specification tables
+d076	figure	BGA192 device pinout ball map drawing
+d077	figure	SPI slave timing waveform diagram and table
+d078	figure	Flash memory map diagram with bootloader regions

@@ -1,0 +1,27 @@
+tag	label	note
+d131	figure	land pattern and solder mask drawings, SOT-23
+d132	figure	simplified schematic and efficiency vs load current plot
+d133	branding	prose with one display equation, vendor logo only
+d134	table	capacitor types table plus display equations
+d135	figure	land pattern and solder mask drawings, PowerPAD SOIC
+d136	figure	land pattern and solder mask drawings, WSON
+d137	figure	two plotted curves, maximum output current vs input voltage
+d138	figure	six efficiency curve plots
+d139	table	safety limiting values and electrical characteristics tables
+d140	figure	package marking and tape-and-reel mechanical drawings
+d141	figure	two thermal transient impedance plots with pulse waveform inset
+d142	figure	functional block diagram, ordering table, package marking
+d143	figure	typical application circuit schematic and ordering table
+d144	figure	footprint drawings and reflow solder profile plot
+d145	branding	journal article first page, publisher logo and ORCID icons
+d146	branding	article text and references, journal header banner
+d147	branding	journal title page, publisher logos and shaded text box
+d148	branding	journal title page, publisher logos and key messages box
+d149	figure	enrolment and allocation flow chart
+d150	branding	journal title page, publisher logos and abstract
+d151	table	continued shaded table with footnotes and prose
+d152	none	journal article text, abstract and introduction only
+d153	branding	journal article first page, publisher logo and abstract
+d154	branding	journal title page, IDSA and Oxford logos
+d155	figure	inclusion flow chart with prose columns
+d156	figure	age-distribution prevalence line chart and references

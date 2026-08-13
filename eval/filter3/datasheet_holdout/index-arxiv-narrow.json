@@ -1,0 +1,1092 @@
+{
+ "corpus": "corpus/arxiv",
+ "rule": "FILTER3_ROWS = 4 where the page carries no raster AND render_reason is curves/diagonals",
+ "documents": 238,
+ "ok": 238,
+ "errors": [],
+ "filter3_pages": 2712,
+ "blind_spot_pages": 307,
+ "predicate_firings": 34,
+ "predicate_documents": 29,
+ "predicate_by_vendor": {
+  "2607.28713v1.pdf": 4,
+  "2607.23728v1.pdf": 2,
+  "2607.29665v1.pdf": 2,
+  "2607.24328v1.pdf": 1,
+  "2607.28578v1.pdf": 1,
+  "2607.28732v1.pdf": 1,
+  "2607.28739v1.pdf": 1,
+  "2607.28817v1.pdf": 1,
+  "2607.28832v1.pdf": 1,
+  "2607.28962v1.pdf": 1,
+  "2607.28988v1.pdf": 1,
+  "2607.28992v1.pdf": 1,
+  "2607.29060v1.pdf": 1,
+  "2607.29203v1.pdf": 1,
+  "2607.29341v1.pdf": 1,
+  "2607.29414v1.pdf": 1,
+  "2607.29432v1.pdf": 1,
+  "2607.29433v1.pdf": 1,
+  "2607.29534v1.pdf": 1,
+  "2607.29561v1.pdf": 1,
+  "2607.29569v1.pdf": 1,
+  "2607.29582v1.pdf": 1,
+  "2607.29605v1.pdf": 1,
+  "2607.29609v1.pdf": 1,
+  "2607.29617v1.pdf": 1,
+  "2607.29666v1.pdf": 1,
+  "2607.29674v1.pdf": 1,
+  "2607.29678v1.pdf": 1,
+  "2607.29679v1.pdf": 1
+ },
+ "predicate_by_branch": {
+  "curves": 23,
+  "diagonals": 6,
+  "stroke_grid": 4,
+  "dense_grid": 1
+ },
+ "calls_before": 1284,
+ "calls_after": 1312,
+ "tokens_before": 1319949,
+ "tokens_after": 1349298,
+ "renders_added": 28,
+ "renders_added_documents": 23,
+ "whole_document_side_effects": 0,
+ "rasters_handed_back": 0,
+ "documents_changed": [
+  {
+   "file": "2607.23728v1.pdf",
+   "before": 4,
+   "after": 6,
+   "added": [
+    "p003-render",
+    "p004-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.24328v1.pdf",
+   "before": 0,
+   "after": 1,
+   "added": [
+    "p002-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28578v1.pdf",
+   "before": 0,
+   "after": 1,
+   "added": [
+    "p032-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "before": 5,
+   "after": 9,
+   "added": [
+    "p001-render",
+    "p011-render",
+    "p019-render",
+    "p024-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28732v1.pdf",
+   "before": 9,
+   "after": 10,
+   "added": [
+    "p019-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28739v1.pdf",
+   "before": 13,
+   "after": 14,
+   "added": [
+    "p010-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28817v1.pdf",
+   "before": 2,
+   "after": 3,
+   "added": [
+    "p004-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28962v1.pdf",
+   "before": 2,
+   "after": 3,
+   "added": [
+    "p003-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28988v1.pdf",
+   "before": 0,
+   "after": 1,
+   "added": [
+    "p012-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.28992v1.pdf",
+   "before": 2,
+   "after": 3,
+   "added": [
+    "p018-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29203v1.pdf",
+   "before": 6,
+   "after": 7,
+   "added": [
+    "p003-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29414v1.pdf",
+   "before": 8,
+   "after": 9,
+   "added": [
+    "p009-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29534v1.pdf",
+   "before": 0,
+   "after": 1,
+   "added": [
+    "p038-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29561v1.pdf",
+   "before": 17,
+   "after": 18,
+   "added": [
+    "p006-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29569v1.pdf",
+   "before": 4,
+   "after": 5,
+   "added": [
+    "p005-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29582v1.pdf",
+   "before": 8,
+   "after": 9,
+   "added": [
+    "p003-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29605v1.pdf",
+   "before": 2,
+   "after": 3,
+   "added": [
+    "p006-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29617v1.pdf",
+   "before": 1,
+   "after": 2,
+   "added": [
+    "p002-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29665v1.pdf",
+   "before": 2,
+   "after": 4,
+   "added": [
+    "p003-render",
+    "p016-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29666v1.pdf",
+   "before": 17,
+   "after": 18,
+   "added": [
+    "p009-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29674v1.pdf",
+   "before": 1,
+   "after": 2,
+   "added": [
+    "p032-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29678v1.pdf",
+   "before": 9,
+   "after": 10,
+   "added": [
+    "p005-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "2607.29679v1.pdf",
+   "before": 22,
+   "after": 23,
+   "added": [
+    "p013-render"
+   ],
+   "lost": []
+  }
+ ],
+ "collapse_flips": [],
+ "scale_guard_flips": [],
+ "over_scale_guard_before": 12,
+ "over_scale_guard_after": 12,
+ "t_ship": 334.4,
+ "t_pat": 315.1,
+ "predicate_rows": [
+  {
+   "file": "2607.23728v1.pdf",
+   "vendor": "2607.23728v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 108,
+   "diagonals": 0,
+   "paths": 48,
+   "page_chars": 2837
+  },
+  {
+   "file": "2607.23728v1.pdf",
+   "vendor": "2607.23728v1.pdf",
+   "page": 4,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 98,
+   "diagonals": 47,
+   "paths": 36,
+   "page_chars": 4342
+  },
+  {
+   "file": "2607.24328v1.pdf",
+   "vendor": "2607.24328v1.pdf",
+   "page": 2,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 4,
+   "diagonals": 602,
+   "paths": 293,
+   "page_chars": 4588
+  },
+  {
+   "file": "2607.28578v1.pdf",
+   "vendor": "2607.28578v1.pdf",
+   "page": 32,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 10,
+   "diagonals": 1,
+   "paths": 13,
+   "page_chars": 2452
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 48,
+   "diagonals": 0,
+   "paths": 9,
+   "page_chars": 5370
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 11,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 1326,
+   "paths": 538,
+   "page_chars": 4207
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 19,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 1008,
+   "diagonals": 0,
+   "paths": 1785,
+   "page_chars": 2398
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 24,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 2291,
+   "paths": 1023,
+   "page_chars": 2177
+  },
+  {
+   "file": "2607.28732v1.pdf",
+   "vendor": "2607.28732v1.pdf",
+   "page": 19,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 1078,
+   "paths": 2257,
+   "page_chars": 3760
+  },
+  {
+   "file": "2607.28739v1.pdf",
+   "vendor": "2607.28739v1.pdf",
+   "page": 10,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 22004,
+   "diagonals": 5581,
+   "paths": 4452,
+   "page_chars": 4126
+  },
+  {
+   "file": "2607.28817v1.pdf",
+   "vendor": "2607.28817v1.pdf",
+   "page": 4,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 40,
+   "diagonals": 16,
+   "paths": 37,
+   "page_chars": 1519
+  },
+  {
+   "file": "2607.28832v1.pdf",
+   "vendor": "2607.28832v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 22,
+   "page_chars": 6804
+  },
+  {
+   "file": "2607.28962v1.pdf",
+   "vendor": "2607.28962v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 16640,
+   "diagonals": 2080,
+   "paths": 3214,
+   "page_chars": 4990
+  },
+  {
+   "file": "2607.28988v1.pdf",
+   "vendor": "2607.28988v1.pdf",
+   "page": 12,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 56,
+   "diagonals": 825,
+   "paths": 318,
+   "page_chars": 1553
+  },
+  {
+   "file": "2607.28992v1.pdf",
+   "vendor": "2607.28992v1.pdf",
+   "page": 18,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 12,
+   "diagonals": 0,
+   "paths": 17,
+   "page_chars": 3033
+  },
+  {
+   "file": "2607.29060v1.pdf",
+   "vendor": "2607.29060v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "dense_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 4,
+   "diagonals": 0,
+   "paths": 21,
+   "page_chars": 5617
+  },
+  {
+   "file": "2607.29203v1.pdf",
+   "vendor": "2607.29203v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 30,
+   "paths": 32,
+   "page_chars": 2469
+  },
+  {
+   "file": "2607.29341v1.pdf",
+   "vendor": "2607.29341v1.pdf",
+   "page": 11,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 506,
+   "diagonals": 352,
+   "paths": 587,
+   "page_chars": 4365
+  },
+  {
+   "file": "2607.29414v1.pdf",
+   "vendor": "2607.29414v1.pdf",
+   "page": 9,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 96,
+   "diagonals": 189,
+   "paths": 192,
+   "page_chars": 4611
+  },
+  {
+   "file": "2607.29432v1.pdf",
+   "vendor": "2607.29432v1.pdf",
+   "page": 2,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 33,
+   "page_chars": 3312
+  },
+  {
+   "file": "2607.29433v1.pdf",
+   "vendor": "2607.29433v1.pdf",
+   "page": 13,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 19,
+   "page_chars": 3818
+  },
+  {
+   "file": "2607.29534v1.pdf",
+   "vendor": "2607.29534v1.pdf",
+   "page": 38,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 216,
+   "diagonals": 42,
+   "paths": 121,
+   "page_chars": 367
+  },
+  {
+   "file": "2607.29561v1.pdf",
+   "vendor": "2607.29561v1.pdf",
+   "page": 6,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 180,
+   "diagonals": 352,
+   "paths": 469,
+   "page_chars": 4800
+  },
+  {
+   "file": "2607.29569v1.pdf",
+   "vendor": "2607.29569v1.pdf",
+   "page": 5,
+   "pipe_rows": 3,
+   "reason": "diagonals",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 85,
+   "paths": 274,
+   "page_chars": 4707
+  },
+  {
+   "file": "2607.29582v1.pdf",
+   "vendor": "2607.29582v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 20,
+   "diagonals": 31,
+   "paths": 42,
+   "page_chars": 3321
+  },
+  {
+   "file": "2607.29605v1.pdf",
+   "vendor": "2607.29605v1.pdf",
+   "page": 6,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 16,
+   "diagonals": 13,
+   "paths": 18,
+   "page_chars": 1773
+  },
+  {
+   "file": "2607.29609v1.pdf",
+   "vendor": "2607.29609v1.pdf",
+   "page": 7,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 115,
+   "page_chars": 4052
+  },
+  {
+   "file": "2607.29617v1.pdf",
+   "vendor": "2607.29617v1.pdf",
+   "page": 2,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 336,
+   "diagonals": 147,
+   "paths": 161,
+   "page_chars": 4105
+  },
+  {
+   "file": "2607.29665v1.pdf",
+   "vendor": "2607.29665v1.pdf",
+   "page": 3,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 8180,
+   "diagonals": 89,
+   "paths": 491,
+   "page_chars": 3614
+  },
+  {
+   "file": "2607.29665v1.pdf",
+   "vendor": "2607.29665v1.pdf",
+   "page": 16,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 120,
+   "diagonals": 60,
+   "paths": 506,
+   "page_chars": 3783
+  },
+  {
+   "file": "2607.29666v1.pdf",
+   "vendor": "2607.29666v1.pdf",
+   "page": 9,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 66,
+   "diagonals": 20,
+   "paths": 61,
+   "page_chars": 4188
+  },
+  {
+   "file": "2607.29674v1.pdf",
+   "vendor": "2607.29674v1.pdf",
+   "page": 32,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 164,
+   "diagonals": 1216,
+   "paths": 319,
+   "page_chars": 3921
+  },
+  {
+   "file": "2607.29678v1.pdf",
+   "vendor": "2607.29678v1.pdf",
+   "page": 5,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 160,
+   "diagonals": 2,
+   "paths": 54,
+   "page_chars": 5434
+  },
+  {
+   "file": "2607.29679v1.pdf",
+   "vendor": "2607.29679v1.pdf",
+   "page": 13,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 76,
+   "diagonals": 11,
+   "paths": 29,
+   "page_chars": 3396
+  }
+ ],
+ "added_rows": [
+  {
+   "file": "2607.23728v1.pdf",
+   "vendor": "2607.23728v1.pdf",
+   "page": 3,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 108,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "2607.23728v1.pdf",
+   "vendor": "2607.23728v1.pdf",
+   "page": 4,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 98,
+   "diagonals": 47,
+   "predicate": true
+  },
+  {
+   "file": "2607.24328v1.pdf",
+   "vendor": "2607.24328v1.pdf",
+   "page": 2,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 4,
+   "diagonals": 602,
+   "predicate": true
+  },
+  {
+   "file": "2607.28578v1.pdf",
+   "vendor": "2607.28578v1.pdf",
+   "page": 32,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 10,
+   "diagonals": 1,
+   "predicate": true
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 48,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 11,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 1326,
+   "predicate": true
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 19,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 1008,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "2607.28713v1.pdf",
+   "vendor": "2607.28713v1.pdf",
+   "page": 24,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 2291,
+   "predicate": true
+  },
+  {
+   "file": "2607.28732v1.pdf",
+   "vendor": "2607.28732v1.pdf",
+   "page": 19,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 1078,
+   "predicate": true
+  },
+  {
+   "file": "2607.28739v1.pdf",
+   "vendor": "2607.28739v1.pdf",
+   "page": 10,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 22004,
+   "diagonals": 5581,
+   "predicate": true
+  },
+  {
+   "file": "2607.28817v1.pdf",
+   "vendor": "2607.28817v1.pdf",
+   "page": 4,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 40,
+   "diagonals": 16,
+   "predicate": true
+  },
+  {
+   "file": "2607.28962v1.pdf",
+   "vendor": "2607.28962v1.pdf",
+   "page": 3,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 16640,
+   "diagonals": 2080,
+   "predicate": true
+  },
+  {
+   "file": "2607.28988v1.pdf",
+   "vendor": "2607.28988v1.pdf",
+   "page": 12,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 56,
+   "diagonals": 825,
+   "predicate": true
+  },
+  {
+   "file": "2607.28992v1.pdf",
+   "vendor": "2607.28992v1.pdf",
+   "page": 18,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 12,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "2607.29203v1.pdf",
+   "vendor": "2607.29203v1.pdf",
+   "page": 3,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 30,
+   "predicate": true
+  },
+  {
+   "file": "2607.29414v1.pdf",
+   "vendor": "2607.29414v1.pdf",
+   "page": 9,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 96,
+   "diagonals": 189,
+   "predicate": true
+  },
+  {
+   "file": "2607.29534v1.pdf",
+   "vendor": "2607.29534v1.pdf",
+   "page": 38,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 216,
+   "diagonals": 42,
+   "predicate": true
+  },
+  {
+   "file": "2607.29561v1.pdf",
+   "vendor": "2607.29561v1.pdf",
+   "page": 6,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 180,
+   "diagonals": 352,
+   "predicate": true
+  },
+  {
+   "file": "2607.29569v1.pdf",
+   "vendor": "2607.29569v1.pdf",
+   "page": 5,
+   "reason": "diagonals",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 85,
+   "predicate": true
+  },
+  {
+   "file": "2607.29582v1.pdf",
+   "vendor": "2607.29582v1.pdf",
+   "page": 3,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 20,
+   "diagonals": 31,
+   "predicate": true
+  },
+  {
+   "file": "2607.29605v1.pdf",
+   "vendor": "2607.29605v1.pdf",
+   "page": 6,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 16,
+   "diagonals": 13,
+   "predicate": true
+  },
+  {
+   "file": "2607.29617v1.pdf",
+   "vendor": "2607.29617v1.pdf",
+   "page": 2,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 336,
+   "diagonals": 147,
+   "predicate": true
+  },
+  {
+   "file": "2607.29665v1.pdf",
+   "vendor": "2607.29665v1.pdf",
+   "page": 3,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 8180,
+   "diagonals": 89,
+   "predicate": true
+  },
+  {
+   "file": "2607.29665v1.pdf",
+   "vendor": "2607.29665v1.pdf",
+   "page": 16,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 120,
+   "diagonals": 60,
+   "predicate": true
+  },
+  {
+   "file": "2607.29666v1.pdf",
+   "vendor": "2607.29666v1.pdf",
+   "page": 9,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 66,
+   "diagonals": 20,
+   "predicate": true
+  },
+  {
+   "file": "2607.29674v1.pdf",
+   "vendor": "2607.29674v1.pdf",
+   "page": 32,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 164,
+   "diagonals": 1216,
+   "predicate": true
+  },
+  {
+   "file": "2607.29678v1.pdf",
+   "vendor": "2607.29678v1.pdf",
+   "page": 5,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 160,
+   "diagonals": 2,
+   "predicate": true
+  },
+  {
+   "file": "2607.29679v1.pdf",
+   "vendor": "2607.29679v1.pdf",
+   "page": 13,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 76,
+   "diagonals": 11,
+   "predicate": true
+  }
+ ]
+}

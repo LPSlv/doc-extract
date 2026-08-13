@@ -1,0 +1,27 @@
+tag	label	note
+d131	figure	Land pattern and solder mask drawings, SOT-23
+d132	figure	Simplified schematic and efficiency curve on front page
+d133	branding	Body text with equation, TI logo only
+d134	table	Capacitor types table plus display equations
+d135	figure	PowerPAD SOIC land pattern and solder mask details
+d136	figure	WSON land pattern and solder mask drawings
+d137	figure	Two maximum output current versus input voltage plots
+d138	figure	Six efficiency curve plots
+d139	table	Safety limiting values and electrical characteristics tables
+d140	figure	Package marking and tape-and-reel mechanical drawings
+d141	figure	Two normalized thermal transient impedance plots
+d142	figure	Functional block diagram and package marking drawing
+d143	figure	Typical application circuit schematic
+d144	figure	Recommended footprint drawings and solder reflow profile
+d145	branding	Journal article first page, publisher logo, shaded abstract
+d146	branding	Two-column text and references, journal banner
+d147	branding	Journal front page, BMJ logo, shaded box
+d148	branding	Journal front page, BMJ logo, shaded key messages
+d149	figure	CONSORT-style enrolment and allocation flow chart
+d150	branding	Journal front page, BMJ logo, abstract text
+d151	table	Continued results table and body text
+d152	branding	Article opening page, text only with rules
+d153	branding	Article opening page, npg logo, shaded abstract
+d154	branding	Article opening page, IDSA and Oxford logos
+d155	figure	Patient inclusion flow chart beside body text
+d156	figure	Age-distribution prevalence line chart with references

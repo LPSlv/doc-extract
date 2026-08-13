@@ -1,0 +1,883 @@
+{
+ "corpus": "corpus/tds",
+ "rule": "FILTER3_ROWS = 4 where the page carries no raster",
+ "documents": 23,
+ "ok": 23,
+ "errors": [],
+ "filter3_pages": 365,
+ "blind_spot_pages": 248,
+ "predicate_firings": 27,
+ "predicate_documents": 13,
+ "predicate_by_vendor": {
+  "ti": 22,
+  "nexperia": 3,
+  "1n4148": 1,
+  "4n25": 1
+ },
+ "predicate_by_branch": {
+  "curves": 25,
+  "stroke_grid": 2
+ },
+ "calls_before": 253,
+ "calls_after": 280,
+ "tokens_before": 263810,
+ "tokens_after": 295243,
+ "renders_added": 27,
+ "renders_added_documents": 13,
+ "whole_document_side_effects": 0,
+ "rasters_handed_back": 0,
+ "documents_changed": [
+  {
+   "file": "1n4148_nexperia.pdf",
+   "before": 1,
+   "after": 2,
+   "added": [
+    "p005-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "4n25_vishay.pdf",
+   "before": 0,
+   "after": 1,
+   "added": [
+    "p006-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "nexperia_PBSS4350X.pdf",
+   "before": 0,
+   "after": 1,
+   "added": [
+    "p010-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "nexperia_PESD5V0X1BL.pdf",
+   "before": 4,
+   "after": 5,
+   "added": [
+    "p001-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "nexperia_PMEG3020EP.pdf",
+   "before": 2,
+   "after": 3,
+   "added": [
+    "p010-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_ina226.pdf",
+   "before": 19,
+   "after": 21,
+   "added": [
+    "p005-render",
+    "p012-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "before": 24,
+   "after": 27,
+   "added": [
+    "p006-render",
+    "p047-render",
+    "p051-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "before": 19,
+   "after": 22,
+   "added": [
+    "p011-render",
+    "p023-render",
+    "p033-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_tca9548a.pdf",
+   "before": 25,
+   "after": 26,
+   "added": [
+    "p006-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "before": 41,
+   "after": 48,
+   "added": [
+    "p013-render",
+    "p014-render",
+    "p019-render",
+    "p070-render",
+    "p079-render",
+    "p083-render",
+    "p087-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "before": 26,
+   "after": 27,
+   "added": [
+    "p011-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "before": 20,
+   "after": 22,
+   "added": [
+    "p024-render",
+    "p026-render"
+   ],
+   "lost": []
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "before": 13,
+   "after": 16,
+   "added": [
+    "p007-render",
+    "p008-render",
+    "p032-render"
+   ],
+   "lost": []
+  }
+ ],
+ "collapse_flips": [],
+ "scale_guard_flips": [
+  {
+   "file": "ti_ucc27517.pdf",
+   "calls": [
+    13,
+    16
+   ],
+   "dir": "over"
+  }
+ ],
+ "over_scale_guard_before": 7,
+ "over_scale_guard_after": 8,
+ "t_ship": 21.2,
+ "t_pat": 18.5,
+ "predicate_rows": [
+  {
+   "file": "1n4148_nexperia.pdf",
+   "vendor": "1n4148",
+   "page": 5,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 37,
+   "diagonals": 0,
+   "paths": 34,
+   "page_chars": 441
+  },
+  {
+   "file": "4n25_vishay.pdf",
+   "vendor": "4n25",
+   "page": 6,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 40,
+   "diagonals": 44,
+   "paths": 36,
+   "page_chars": 449
+  },
+  {
+   "file": "nexperia_PBSS4350X.pdf",
+   "vendor": "nexperia",
+   "page": 10,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 140,
+   "page_chars": 694
+  },
+  {
+   "file": "nexperia_PESD5V0X1BL.pdf",
+   "vendor": "nexperia",
+   "page": 1,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 202,
+   "diagonals": 51,
+   "paths": 186,
+   "page_chars": 1071
+  },
+  {
+   "file": "nexperia_PMEG3020EP.pdf",
+   "vendor": "nexperia",
+   "page": 10,
+   "pipe_rows": 3,
+   "reason": "stroke_grid",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 0,
+   "diagonals": 0,
+   "paths": 140,
+   "page_chars": 651
+  },
+  {
+   "file": "ti_ina226.pdf",
+   "vendor": "ti",
+   "page": 5,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 21,
+   "paths": 488,
+   "page_chars": 2064
+  },
+  {
+   "file": "ti_ina226.pdf",
+   "vendor": "ti",
+   "page": 12,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 43,
+   "paths": 83,
+   "page_chars": 3719
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "vendor": "ti",
+   "page": 6,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 21,
+   "paths": 277,
+   "page_chars": 1718
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "vendor": "ti",
+   "page": 47,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 85,
+   "diagonals": 68,
+   "paths": 1286,
+   "page_chars": 618
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "vendor": "ti",
+   "page": 51,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 40,
+   "diagonals": 41,
+   "paths": 1241,
+   "page_chars": 477
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "vendor": "ti",
+   "page": 11,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 179,
+   "diagonals": 35,
+   "paths": 52,
+   "page_chars": 1759
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "vendor": "ti",
+   "page": 23,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 85,
+   "diagonals": 68,
+   "paths": 1286,
+   "page_chars": 618
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "vendor": "ti",
+   "page": 33,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 81,
+   "diagonals": 69,
+   "paths": 1284,
+   "page_chars": 558
+  },
+  {
+   "file": "ti_tca9548a.pdf",
+   "vendor": "ti",
+   "page": 6,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 21,
+   "paths": 400,
+   "page_chars": 1817
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 13,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 21,
+   "paths": 369,
+   "page_chars": 2247
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 14,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 21,
+   "paths": 174,
+   "page_chars": 1758
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 19,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 41217,
+   "diagonals": 21,
+   "paths": 164,
+   "page_chars": 1093
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 70,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 106,
+   "diagonals": 82,
+   "paths": 1328,
+   "page_chars": 855
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 79,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 14,
+   "diagonals": 56,
+   "paths": 3114,
+   "page_chars": 516
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 83,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 85,
+   "diagonals": 68,
+   "paths": 1286,
+   "page_chars": 618
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 87,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 40,
+   "diagonals": 41,
+   "paths": 1241,
+   "page_chars": 477
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "vendor": "ti",
+   "page": 11,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 247,
+   "diagonals": 92,
+   "paths": 405,
+   "page_chars": 1921
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "vendor": "ti",
+   "page": 24,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 126,
+   "paths": 179,
+   "page_chars": 349
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "vendor": "ti",
+   "page": 26,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 85,
+   "diagonals": 65,
+   "paths": 1280,
+   "page_chars": 663
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "vendor": "ti",
+   "page": 7,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 140,
+   "paths": 269,
+   "page_chars": 1262
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "vendor": "ti",
+   "page": 8,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 143,
+   "diagonals": 156,
+   "paths": 172,
+   "page_chars": 761
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "vendor": "ti",
+   "page": 32,
+   "pipe_rows": 3,
+   "reason": "curves",
+   "has_raster": false,
+   "vector_furniture": false,
+   "boxed_text": false,
+   "curves": 85,
+   "diagonals": 68,
+   "paths": 1286,
+   "page_chars": 618
+  }
+ ],
+ "added_rows": [
+  {
+   "file": "1n4148_nexperia.pdf",
+   "vendor": "1n4148",
+   "page": 5,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 37,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "4n25_vishay.pdf",
+   "vendor": "4n25",
+   "page": 6,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 40,
+   "diagonals": 44,
+   "predicate": true
+  },
+  {
+   "file": "nexperia_PBSS4350X.pdf",
+   "vendor": "nexperia",
+   "page": 10,
+   "reason": "stroke_grid",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "nexperia_PESD5V0X1BL.pdf",
+   "vendor": "nexperia",
+   "page": 1,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 202,
+   "diagonals": 51,
+   "predicate": true
+  },
+  {
+   "file": "nexperia_PMEG3020EP.pdf",
+   "vendor": "nexperia",
+   "page": 10,
+   "reason": "stroke_grid",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 0,
+   "diagonals": 0,
+   "predicate": true
+  },
+  {
+   "file": "ti_ina226.pdf",
+   "vendor": "ti",
+   "page": 5,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 21,
+   "predicate": true
+  },
+  {
+   "file": "ti_ina226.pdf",
+   "vendor": "ti",
+   "page": 12,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 43,
+   "predicate": true
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "vendor": "ti",
+   "page": 6,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 21,
+   "predicate": true
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "vendor": "ti",
+   "page": 47,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 85,
+   "diagonals": 68,
+   "predicate": true
+  },
+  {
+   "file": "ti_lmv321.pdf",
+   "vendor": "ti",
+   "page": 51,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 40,
+   "diagonals": 41,
+   "predicate": true
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "vendor": "ti",
+   "page": 11,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 179,
+   "diagonals": 35,
+   "predicate": true
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "vendor": "ti",
+   "page": 23,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 85,
+   "diagonals": 68,
+   "predicate": true
+  },
+  {
+   "file": "ti_sn74lvc1g08.pdf",
+   "vendor": "ti",
+   "page": 33,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 81,
+   "diagonals": 69,
+   "predicate": true
+  },
+  {
+   "file": "ti_tca9548a.pdf",
+   "vendor": "ti",
+   "page": 6,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 21,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 13,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 21,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 14,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 21,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 19,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 41217,
+   "diagonals": 21,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 70,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 106,
+   "diagonals": 82,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 79,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 14,
+   "diagonals": 56,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 83,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 85,
+   "diagonals": 68,
+   "predicate": true
+  },
+  {
+   "file": "ti_tlv9061.pdf",
+   "vendor": "ti",
+   "page": 87,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 40,
+   "diagonals": 41,
+   "predicate": true
+  },
+  {
+   "file": "ti_tps54331.pdf",
+   "vendor": "ti",
+   "page": 11,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 247,
+   "diagonals": 92,
+   "predicate": true
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "vendor": "ti",
+   "page": 24,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 126,
+   "predicate": true
+  },
+  {
+   "file": "ti_tps61023.pdf",
+   "vendor": "ti",
+   "page": 26,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 85,
+   "diagonals": 65,
+   "predicate": true
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "vendor": "ti",
+   "page": 7,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 140,
+   "predicate": true
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "vendor": "ti",
+   "page": 8,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 143,
+   "diagonals": 156,
+   "predicate": true
+  },
+  {
+   "file": "ti_ucc27517.pdf",
+   "vendor": "ti",
+   "page": 32,
+   "reason": "curves",
+   "kind": "page_render",
+   "collapsed": false,
+   "pipe_rows": 3,
+   "curves": 85,
+   "diagonals": 68,
+   "predicate": true
+  }
+ ]
+}
