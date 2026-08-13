@@ -1,7 +1,12 @@
 # Where this was left
 
-State at the end of the 2026-08-12 session. Everything below is pushed, CI
-green, 93 tests, `eval/gate.py` 7/7 byte-identical.
+State at the end of the **2026-08-13** session. Everything below is pushed, CI
+green, **146 tests**, `eval/gate.py` **16/16** byte-identical (8 documents ×
+2 description placements).
+
+This header said "2026-08-12, 93 tests, 7/7" until the moment it was rewritten,
+which is the same rot the cost bullet below documents. If you finish a session
+here, the last edit is this line.
 
 ## What is true right now
 
@@ -33,6 +38,29 @@ green, 93 tests, `eval/gate.py` 7/7 byte-identical.
   find. [`eval/strokegrid.md`](../eval/strokegrid.md).
 - `eval/report.py` can regenerate `RESULTS.md` again — it had been crashing on
   `office.json` since that file landed in the results directory.
+- **`textonly_page` ships** — inside a `cost_guard` collapse, drop a page with no
+  raster and ≤2 drawing paths. 203 blind drops across two holdouts fetched
+  afterwards, 0 real items lost. The largest routing saving here: 6,175 → 5,903
+  calls on the design corpora. [`eval/nofigure.md`](../eval/nofigure.md).
+- **Descriptions can be placed inline** — `convert.py --inline`, Office only,
+  opt-in, default unchanged. By *insertion* beside the engine's line, never
+  substitution for it, which is what keeps byte-identity enforceable; the gate
+  runs both placements over every format.
+- **Filter 3 now records what it suppresses** (`why: "parsed_table"`, with
+  `wanted` and `raster`). Behaviour-neutral — zero routing drift across all
+  twelve corpora — but it means the largest measured loss here is finally
+  visible in `manifest.json` rather than invisible to every eval.
+- **Three corpora exist for validating vendor and journal rules**, each fetched
+  after the rule it tested and each verified disjoint by content hash:
+  `corpus/arxiv_holdout` (348), `corpus/pmc_holdout` (250 journals),
+  `corpus/datasheet_holdout` (295 datasheets, 11 vendors, TI held to 9%). The
+  last one is new and is the durable asset from a rule that failed on it.
+- **Four routing candidates were examined on 2026-08-13 and none shipped**: the
+  `curves` small-cluster rule (80% precision out of sample, cascades, and costs
+  5× the compute that sank soft-mask), the multi-figure swap and its
+  multi-raster half (both trade resolution for coverage), `boxed_text`
+  consecutiveness (the premise is backwards), and `FILTER3_ROWS = 4` (selects a
+  smaller population, not a better one). Every one is written up.
 
 ## Next, in the order I would do it
 
@@ -242,18 +270,33 @@ What is left from it:
 
 ## Not done, and waiting on a human
 
-**The launch.** Drafts exist but were written to a scratchpad that does not
-survive the session; regenerate them from `eval/figqa.md` and the README. Four
-pieces were planned: a Firecrawl Discussions post (smallest audience, and it
-carries a factual claim about `extract_pages_markdown` scoring worse than
-`process_pdf` — post it first so an error surfaces cheaply), Show HN,
-r/LocalLLaMA, and an X thread.
+**The launch.** Drafts are written and committed at
+[`docs/launch/`](launch/) — Firecrawl Discussions, Show HN, r/LocalLLaMA, an X
+thread, and `00-claims.md`, which sources all 73 factual claims to a `file:line`
+so the set can be audited in one pass. They lead with the measurement failures,
+not the multiplier: every tool in this space claims a multiplier and almost none
+publishes the eval that didn't work.
 
-Lead with the measurement failures, not the multiplier. Every tool in this
-space claims a multiplier; almost none publishes the eval that didn't work.
+**Nothing has been posted anywhere, and posting needs an explicit yes** — it
+goes out under LPSlv's GitHub and social identities.
 
-Nothing has been posted anywhere. Posting to Firecrawl's repo happens under
-LPSlv's GitHub identity and needs an explicit yes.
+Three things to settle before it does:
+
+- **The `extract_pages_markdown` claim that justified posting to Firecrawl first
+  was ours, and it was wrong.** `eval/figqa.md` said the per-page API returns
+  nothing on 3 of 30 documents; re-running both APIs gives **1**. The drafts now
+  lead with a named repro (`irlz44n_infineon.pdf`, pages 1–2 return 0 chars
+  against 7,559 from `process_pdf`) instead of the aggregate. The strategy
+  worked exactly as intended — the error surfaced at the cheapest possible
+  audience, which was us.
+- **The opendataloader comparison scores exist only in a design spec.** No
+  evaluator output, no results JSON, nothing regenerates them. They are printed
+  with that caveat stated. A repo whose pitch is published negative results
+  probably should not lead with a number it cannot reproduce; cutting them is
+  the safer call.
+- **The cost figures move whenever routing does**, and did twice on 2026-08-13.
+  Re-check every number in `00-claims.md` against
+  `docs/benchmarks/results/*.json` immediately before posting.
 
 ## A caution for whoever picks this up
 
@@ -285,3 +328,27 @@ Two habits earned their keep on the `boxed_text` work and are worth repeating:
 - **Ask where a percentage came from before believing it.** "100% precision, 6
   calls saved" was one document. It sat in this file as a recommendation for
   two sessions.
+
+Four more earned theirs on 2026-08-13, when four candidates were examined and
+none shipped:
+
+- **Build the holdout before trusting the number, and check what the holdout is
+  made of.** The `curves` rule read 17/17 in-sample and 80% on 295 vendor-diverse
+  datasheets — 98% on TI, 66% on everyone else. `FILTER3_ROWS = 4` read 87%
+  in-sample and 63% on the corpus carrying four fifths of its firings. Both were
+  fitted to a corpus that was 75% one vendor. A holdout of the wrong *kind* is
+  not a holdout.
+- **Precision is not the only axis, and usually not the deciding one.** The
+  `curves` rule failed three ways independently: precision, cascade (46
+  suppressed rasters returned and four documents got *more* expensive), and
+  compute (5× the per-document overhead that sank soft-mask suppression). The
+  multi-figure swap passed on cost and failed on resolution, which nobody had
+  thought to measure.
+- **Check whether the claim survives changing the denominator.** "2.25× → 1.87×"
+  was true of the five-corpus figure and wrong about the published headline,
+  which is 2.5× → ~2.05×. Same arithmetic, different question.
+- **Separate exposure from harm.** Every routing number here — 65.6%, 70%, 85% —
+  says a figure *exists*, never that an answer was *lost*, while cost is measured
+  in exact tokens. Pricing benefit in a proxy and cost in currency
+  systematically favours doing nothing. `eval/figqa.md` is still the only
+  measurement here that crosses the gap, at n=23.
