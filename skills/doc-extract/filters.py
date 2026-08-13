@@ -1,10 +1,11 @@
 """Format-agnostic filters shared by the PDF and Office paths.
 
-These four thresholds and the two functions over them are the only routing
-logic that means the same thing regardless of where an image came from: a logo
-is small, thin, or repeated on every unit whether the unit is a PDF page, a
-slide, or a worksheet. Everything else in harvest.py reads PDF vector geometry
-and has no Office analogue -- see the design spec, section 4.3.
+These thresholds and the two functions over them are the only routing logic
+that means the same thing regardless of where an image came from: a logo is
+small, thin, or repeated on every unit whether the unit is a PDF page, a slide,
+or a worksheet, and a routed set is expensive at the same count either way.
+Everything else in harvest.py reads PDF vector geometry and has no Office
+analogue -- see the design spec, section 4.3.
 
 Deliberately NOT here: the pixel-hash dedup. harvest.py's version is entangled
 with xref and raw-stream shortcuts that exist to avoid re-encoding every image
@@ -23,6 +24,14 @@ MIN_AREA      = 40_000 # px^2
 UBIQUITY      = 0.50   # placed on more than this fraction of pages => furniture
 
 MAX_EDGE_PX = 1568       # above this the model downsamples anyway
+
+# Not a furniture threshold: a consent threshold, and the only reason it lives
+# here is that it means the same thing on every format. It was defined in
+# harvest.py, so office.py -- which must not import harvest, that would drag
+# PyMuPDF into the Office path -- had no way to reach it and hardcoded
+# `"over_scale_guard": False` instead. Harmless while convert.py recomputed the
+# flag from `pending`, and a landmine for any other caller of harvest_office().
+SCALE_GUARD = 15         # vision calls above which we stop and ask
 
 
 def furniture_reason(w, h, placements, npages):

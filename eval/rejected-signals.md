@@ -165,6 +165,53 @@ consecutive pages rather than scattered ones). Consecutiveness is the cheapest
 of those and was not tested; the three known losses are too few to fit it on
 without repeating the mistake this whole exercise was about.
 
+## Consecutiveness for `boxed_text` — rejected, and the premise is backwards
+
+**The idea**, left open by the containment rejection above and by
+`docs/NEXT.md`: a continued table's pages are adjacent, a prompt-box or
+title-block template's usually are not. So do not drop when the repeating
+fingerprint appears on *consecutive* pages.
+
+**It was not fitted to the three known losses.** Three observations cannot
+validate a rule, so this measured how the signal distributes over every labelled
+firing first — 170 in-sample plus 18 holdout — and the distribution ends the
+argument. "Adjacent" means the identical vx fingerprint on page ±1.
+
+| population | `table` adjacent | `none` adjacent |
+|---|--:|--:|
+| all 188 firings | 10/65 = 15% | 56/89 = **63%** |
+| fingerprint repeats ≥3 (n=71) | 9/10 = 90% | 49/60 = 82% |
+| the 55 `boxed_text` drops | 2/3 | 41/52 = 79% |
+
+Consecutiveness marks **waste**, not continued tables: a multi-page proof run
+and a repeated prompt box are as adjacent as any continued table, and among
+firings whose fingerprint repeats at all, `none` and `table` are
+indistinguishable (Fisher two-sided p = 0.53).
+
+Priced anyway, against the 52-cut / 3-lost rule that ships:
+
+| rule | wasted cut | real lost | precision |
+|---|--:|--:|--:|
+| shipped (`vx == 2`, repeated) | 52 | 3 | 95% |
+| + frame containment (rejected above) | 20 | 1 | 95% |
+| + this page adjacent to a same-fp page | 11 | 1 | 92% |
+| + any two same-fp pages consecutive | 8 | 0 | 100% |
+
+**Verdict: rejected, dominated by a rule that was already rejected as
+dominated.** The page-level variant rescues the same 2 of 3 tables containment
+rescues while giving up 41 of the 52 wasted calls instead of 32. The
+document-level variant does reach 100% precision and rescues all three,
+`2607.29378v1` p7 included — but it keeps 8 of 52 cuts, and **6 of those 8 are
+pages of one document**, `MGR-10-30.PMC7871936`, whose box fingerprints alternate
+recto/verso (2, 4, 6 and 3, 5, 7) so it survives on page parity rather than on
+anything about tables. That is the same shape as the "free win" this file
+already rejects: a percentage over one file.
+
+Measured by `eval/consecutive_test.py`, which recomputes every fingerprint
+twice — once through `harvest.page_geometry`, once from a separate
+implementation — and reproduces the shipped rule's 52/3 exactly before scoring
+any candidate.
+
 ## Multi-figure pages — priced on both sides, rejected
 
 The fix this section used to leave open — render the whole page whenever a

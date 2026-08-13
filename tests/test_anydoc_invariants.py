@@ -198,3 +198,29 @@ def test_to_document_rejects_pdf():
     pdf = (Path(__file__).resolve().parents[1] / "example" / "sample-report.pdf")
     with pytest.raises(Exception):
         anydoc.to_document(pdf.read_bytes(), "pdf")
+
+
+def test_over_scale_guard_is_computed_not_hardcoded():
+    """office.py returned a literal False here.
+
+    It was invisible because convert.py recomputes the flag from `pending`
+    before reporting it, so the user path was always right and no test looked
+    at harvest_office() directly. Any other caller -- a bench, a future
+    entry point -- would have read False on a deck that routes thirty items.
+
+    The constant lives in filters.py rather than harvest.py precisely so this
+    path can reach it: office.py must not import harvest, which would pull
+    PyMuPDF into the Office path.
+    """
+    import sys
+    sys.path.insert(0, str(FIX.parents[1] / "skills" / "doc-extract"))
+    from filters import SCALE_GUARD
+    from office import harvest_office
+
+    heavy = harvest_office(str(FIX / "imageheavy.pptx"))
+    assert heavy["vision_calls"] > SCALE_GUARD
+    assert heavy["over_scale_guard"] is True
+
+    light = harvest_office(str(FIX / "deck.pptx"))
+    assert light["vision_calls"] <= SCALE_GUARD
+    assert light["over_scale_guard"] is False

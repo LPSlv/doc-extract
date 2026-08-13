@@ -16,7 +16,8 @@ including what was dropped, since false negatives are the dangerous direction.
 import sys, json, hashlib, collections
 import fitz
 import pdf_inspector as pi
-from filters import MIN_DIM, MAX_ASPECT, MIN_AREA, UBIQUITY, MAX_EDGE_PX, furniture_reason, _tok
+from filters import (MIN_DIM, MAX_ASPECT, MIN_AREA, UBIQUITY, MAX_EDGE_PX,
+                     SCALE_GUARD, furniture_reason, _tok)
 
 # ---------------------------------------------------------------- definitions
 EDGE_TOL      = 3.0    # pt; two rect edges within this are the "same" gridline
@@ -25,7 +26,6 @@ INK_MIN       = 0.15   # filled non-background area / page area
 STROKE_MIN_FRAC   = 0.02  # stroke bbox must cover this much of the page
 STROKE_MAX_ASPECT = 5.0   # ...and not be an edge-hugging sliver
 RASTER_GRID   = 6      # more rasters than this on one page: render the page
-SCALE_GUARD   = 15     # vision calls above which we stop and ask
 VSTROKE_TOL   = 2.0    # pt; two vertical strokes within this are the same edge
 VSTROKE_MIN   = 3.0    # pt; shorter than this is a tick or a glyph, not an edge
 BOX_REPEATS   = 3      # occurrences of a 2-edge signature that make it a template

@@ -67,9 +67,15 @@ What is left from it, in order:
   interior rules in the same place on every continuation page. All three real
   items lost across 188 firings are this case. A containment refinement that
   targets it was measured and rejected as dominated (`rejected-signals.md`);
-  the untested idea is *consecutiveness*, since a continued table's pages are
-  adjacent and a prompt-box template's usually are not. Three observations is
-  too few to fit that on.
+  the untested idea was *consecutiveness*, since a continued table's pages are
+  adjacent and a prompt-box template's usually are not. **Measured, and dead**
+  (`eval/rejected-signals.md`). The premise is backwards: over all 188 labelled
+  firings it marks waste rather than tables — 63% of `none` sit on
+  consecutive-fingerprint pages against 15% of `table` — and on the 55 drops the
+  difference is 41/52 against 2/3, Fisher p = 0.53. The candidate is dominated
+  by the containment refinement that was itself rejected as dominated. The
+  failure mode stands unfixed; a signal identifying *continuation* directly (a
+  repeated column header, a "continued" caption) is what is left.
 - `boxed_text` is blind to the vendor-boilerplate half (Würth title blocks,
   Nexperia legal pages) — those are real multi-column grids. Recurrence, not
   lattice shape, is the lever there.
@@ -112,8 +118,23 @@ What is left from it:
   come from 240 of 4,106 firings with CIs stated. `datasheets` is 74% of
   `curves` firings and TI-dominated; the pmc and tds cells are 7 and 8
   observations.
-- **`over_scale_guard` flips were not counted.** Removing 272 renders takes some
-  documents below `SCALE_GUARD = 15`, changing when the skill stops to ask.
+- ~~**`over_scale_guard` flips were not counted.**~~ — counted, see
+  [`eval/scaleguard.md`](../eval/scaleguard.md). **10 documents of 2,342** flip
+  true → false, 145 → 135 over the guard; none flips the other way and none can,
+  since `drop_textonly` only removes items. All ten are `cost_guard` collapses in
+  arxiv, pmc and papers, landing at 7–15 calls. On the 16 pages of those ten that
+  `eval/nofigure` already labels, the rule dropped 4 of 4 `none` pages and kept 8
+  figures, 3 tables and 1 branding page: the guard now fires on 6.9% fewer
+  documents, and what it stopped announcing is the part with nothing on it. 119
+  calls across the ten now happen without a prompt, and `SCALE_GUARD = 15`
+  remains an arbitrary number nobody has validated.
+- **Fixed while measuring the above:** `office.py` returned a hardcoded
+  `"over_scale_guard": False`. Invisible because `convert.py` recomputes the flag
+  from `pending`, so the user path was always right and no test read
+  `harvest_office()` directly — a deck routing thirty items reported `False`.
+  `SCALE_GUARD` now lives in `filters.py`, which the Office path can import
+  without dragging PyMuPDF in, and
+  `tests/test_anydoc_invariants.py` pins both directions.
 
 ### 3. ~~Multi-figure pages~~ — DONE, rejected, see [`eval/multifigure.md`](../eval/multifigure.md)
 

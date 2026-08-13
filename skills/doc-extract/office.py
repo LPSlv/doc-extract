@@ -33,7 +33,7 @@ import zipfile
 import anydoc
 
 import ooxml
-from filters import furniture_reason
+from filters import SCALE_GUARD, furniture_reason
 from image import VIEWABLE, dimensions
 
 ENGINE = "anydoc==0.1.6"
@@ -483,7 +483,8 @@ def harvest_office(path):
         "page_markdown": [b for _, b in units],
         "unit_labels": [u for u, _ in units],
         "page_sigs": {}, "engine": ENGINE, "text_chars": len(doc_md),
-        "vision_calls": len(pending), "over_scale_guard": False,
+        "vision_calls": len(pending),
+        "over_scale_guard": len(pending) > SCALE_GUARD,
         "items": items, "dropped": dropped,
     }
 

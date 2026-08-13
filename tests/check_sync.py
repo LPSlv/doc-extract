@@ -24,8 +24,8 @@ DOC = SKILL / "reference" / "harvest-block.md"
 # The exact line the splice replaces. Asserted rather than pattern-matched: if
 # harvest.py's import grows a name and this literal is not updated, the check
 # fails loudly instead of silently emitting a block that is missing a symbol.
-IMPORT_LINE = ("from filters import MIN_DIM, MAX_ASPECT, MIN_AREA, UBIQUITY, "
-               "MAX_EDGE_PX, furniture_reason, _tok\n")
+IMPORT_LINE = ("from filters import (MIN_DIM, MAX_ASPECT, MIN_AREA, UBIQUITY, MAX_EDGE_PX,\n"
+               "                     SCALE_GUARD, furniture_reason, _tok)\n")
 
 HEADER = """# harvest-block
 
