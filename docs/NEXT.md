@@ -9,9 +9,21 @@ green, 93 tests, `eval/gate.py` 7/7 byte-identical.
   screened so only the visual can answer them. One genuine miss (w18b), a page
   carrying two drawings where only the upper is routed. Method and every
   correction: [`eval/figqa.md`](../eval/figqa.md).
-- **Cost: unchanged and reproducible.** 48.9M / 13.6M / 20.1M tokens, 0.34
-  vision calls per page, 2,342 PDFs, 20,375 pages. Both README marker blocks
-  regenerate byte-identically from `eval/readme_tables.py --write`.
+- **Cost: regenerated 2026-08-13 against the shipped router.** 48.9M / 13.6M /
+  **19.9M** tokens, **2.5×**, **0.32** vision calls per page (6,525 / 20,375),
+  2,342 PDFs, 20,375 pages. All twelve results JSONs re-run after
+  `textonly_page` shipped; both README marker blocks regenerate byte-identically
+  from `eval/readme_tables.py --write`.
+
+  **This number has now gone stale twice in one day, the same way both times.**
+  It was 0.34 in this file and three places in the README — the pre-`boxed_text`
+  rate — then 0.33 for the few hours between fixing that and shipping
+  `textonly_page`. Both times the *generated* block was right and the
+  hand-carried prose around it was wrong. Anything quoted outside a marker block
+  is unmanaged by definition. If you change routing, `eval/bench.py` over all
+  twelve corpora and `eval/readme_tables.py --write` are part of the change, not
+  follow-up work — and then grep the README for the old figures, because the
+  generator will not touch them.
 - Routed rasters follow the page's placement matrix, on rotated pages too;
   guarded by `tests/test_raster_orientation.py`, and CI installs PyMuPDF so
   those tests actually run.
@@ -64,23 +76,70 @@ What is left from it, in order:
 - Worth knowing: the branch's second stated purpose, marker-based plots, fired
   **10 times in 170**. Do not defend the threshold on that basis.
 
-### 2. Routed pages carrying no figure — 11 of 30
+### 2. ~~Routed pages carrying no figure~~ — DONE, see [`eval/nofigure.md`](../eval/nofigure.md)
 
-The largest measured waste, concentrated in `whole_document` (4 of 9) and
-`curves` (4 of 11): references pages, prose, mastheads, an ESD icon.
+4,106 `curves` and `whole_document` firings enumerated, 240 labelled by three
+independent labellers each. **`curves` wastes 25% (CI 18–33), `whole_document`
+34% (CI 26–43)** — reweighted, 28% of firings and 19% of every vision call these
+corpora make. The figure-QA sample's 37% was close in aggregate and wrong on the
+branch split.
 
-Expect this to end in `eval/rejected-signals.md`. Twelve branding signals were
-already measured and eleven rejected, for the reason recorded in
-`eval/tds-corpus.md`: branding is separable from a figure only by reading it,
-which is the call being avoided. Run it anyway — a documented negative is worth
-more than an untested intuition.
+**`textonly_page` ships**, and it is the largest routing saving measured here.
+Inside a `cost_guard` collapse, drop a page with no raster and at most
+`TEXTONLY_PATHS` (2) drawing paths. Validated on two corpora fetched
+afterwards — `corpus/pmc_holdout` (250 journal PDFs, disjoint from `corpus/pmc`
+by content hash, `uv run eval/discover.py pmc_holdout && uv run eval/fetch.py
+pmc_holdout`) and `corpus/arxiv_holdout` — **203 blind drops labelled by three
+labellers each, 0 real items, 100% precision** (Wilson 97–100 / 96–100).
+6,175 → 5,903 calls on the design corpora, from 76 of 96 collapsed documents.
+In `harvest.py` as `drop_textonly()`, pinned by `tests/test_textonly_page.py`.
+For scale, `boxed_text` was 0.69%.
 
-### 3. Multi-figure pages — measured, deliberately not actioned
+What is left from it:
 
-54% of routed rasters sit on pages with more than one raster; 10% are lone
-rasters on pages that also show vector figure signal. Broad exposure, small
-measured loss (1 in 23). The obvious fix turns 134 crops into page renders.
-Measure that trade before implementing it. See `eval/rejected-signals.md`.
+- **`curves` is 45% of all vision calls and a quarter of that is branding** —
+  2,770 firings, and nothing measured reaches it. Four signals tried, all in
+  `eval/rejected-signals.md`. The one that separates cleanly (small stroke
+  cluster, no caption: 17 cut, 0 lost) needs a *datasheet* holdout, which does
+  not exist and is hard to build: ST, Microchip, TME and LCSC block automated
+  fetches.
+- **The unreachable 16** of `whole_document`'s 41 wasted calls: BMC/RSC title
+  pages, TI tables of contents, and old scanned journal pages where the page
+  *is* one image, so no geometric test can see it is only prose.
+- `TEXTONLY_PATHS = 2` is a floor, not a tuned threshold. 6 cuts one more and
+  starts losing real items (87%). Moving it needs a fresh holdout.
+- **Estimates, not a census.** Unlike `strokegrid.md`'s 170, these branch rates
+  come from 240 of 4,106 firings with CIs stated. `datasheets` is 74% of
+  `curves` firings and TI-dominated; the pmc and tds cells are 7 and 8
+  observations.
+- **`over_scale_guard` flips were not counted.** Removing 272 renders takes some
+  documents below `SCALE_GUARD = 15`, changing when the skill stops to ask.
+
+### 3. ~~Multi-figure pages~~ — DONE, rejected, see [`eval/multifigure.md`](../eval/multifigure.md)
+
+Priced on both sides. **+0.99% tokens** to recover a real figure on **50.4% of
+129 blind-labelled pages** (95% CI 42–59%, 59 of 91 documents) — and it pays by
+shrinking the raster it already reads to a **median 0.27× linear resolution**,
+100% of them below 1.0×. Rejected: it buys a second figure by half-blinding the
+first, and half the time there is no second figure. The non-degrading variant —
+render *and* keep the crop — is +2.13% and +131 vision calls.
+
+What is left from it:
+
+- **All 131 triggers are filter 3.** `pm.count("\n|") >= 3` skips a page for its
+  table before `render_reason` ever runs. So filter 3 discards a page for one
+  reason while ignoring another reason to keep it — and filter-3 pages with
+  figure signal and *no* raster are the same defect, entirely uncounted.
+- **The multi-raster half is the cheap one and nobody costed it.** The rule as
+  worded does not say *lone*: 308 rasters on 96 pages, where collapsing to one
+  render per page is **−34,044 tokens and −212 calls**. Cost measured, benefit
+  unlabelled. That is the one worth labelling next.
+- Corrected in passing: `eval/rejected-signals.md` said these corpora hold
+  **1,014** documents. They hold **686**. Every count downstream of it was right,
+  which is exactly why it survived.
+- The labellers were three runs of one model on one prompt. 129/131 unanimity
+  measures determinism, not reliability — and the same caveat applies to
+  `eval/strokegrid`'s holdout, where it is not currently stated.
 
 ## Not done, and waiting on a human
 

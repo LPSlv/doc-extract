@@ -7,6 +7,21 @@ parameter tables it handles perfectly.
 
 Reproduce with `uv run eval/datasheet-cost.py` (expects `datasheets/*.pdf`).
 
+> [!NOTE]
+> **These are pre-adaptive-resolution numbers.** Every total below describes the
+> flat-140-dpi renderer that this repo replaced; the shipped pipeline sizes each
+> page from its own smallest text (`harvest.py:render_edge()`). On this same set
+> that took the first question from **1,084,905 to 668,054 tokens — 59% below
+> reading every page, not the 33% quoted here** — and turned `lm2596_ti` from 1%
+> worse into 34% better. `eval/resolution.md` has the current figures.
+>
+> One line already carried the new number while the headline did not: line 79
+> below says "1,626,152 → 668,054", which is the post-resolution comparison
+> sitting in a pre-resolution document. That looked like a self-contradiction
+> and is really a half-applied update. The stale totals are kept as the
+> historical record rather than rewritten, since the resolution work is only
+> meaningful against what it improved on.
+
 ## Token model
 
 Images are charged at `(w x h)/750` after fitting inside 1568px on the long

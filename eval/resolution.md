@@ -7,8 +7,10 @@ pages do not contain.
 
 ## The rule
 
-`convert.py:_render_edge()` sizes each page from the size of its own smallest
-meaningful text:
+`harvest.py:render_edge()` sizes each page from the size of its own smallest
+meaningful text (this document said `convert.py:_render_edge()` until
+2026-08-13; the function lives in `harvest.py` and has no leading underscore —
+`convert.py:40` imports it):
 
     edge_px = page_long_edge_pt x (8.0 / fifth_percentile_font_pt)
     clamped to [800, 1568] px;  pages with no text layer get 1100 px

@@ -40,9 +40,22 @@ by string match and stray tokens in the extracted text — the bare letters
 `C E B` on q03 — would falsely credit the text arm. Random baseline 25%.
 
 The whole-document markdown comes from `process_pdf`, not
-`extract_pages_markdown`: the per-page API returns nothing at all on 3 of these
-30 documents, and grading against it would have handed the baseline a loss it
-had not earned.
+`extract_pages_markdown`, because the per-page API loses text the
+whole-document API recovers, and grading against it would have handed the
+baseline a loss it had not earned.
+
+> **Corrected 2026-08-13.** This paragraph said the per-page API "returns
+> nothing at all on 3 of these 30 documents". Re-running both APIs at
+> pdf-inspector 0.2.6 over all 30 gives **1**, not 3:
+> `corpus/pmc/main.PMC9937890.pdf`, 4 of 4 pages empty against 18,398 chars
+> from `process_pdf`. No reading of the data yields 3 at document level; the
+> figure most likely came from the per-page rate, **20 of 624 pages (3.2%)**.
+> What is true and defensible: 1 of 30 documents is a total loss, **8 of 30
+> carry at least one empty page**, and 3.2% of pages come back empty. The
+> decision to grade against `process_pdf` stands — it is if anything better
+> supported by 8 of 30 than by the number originally written down.
+
+
 
 ## Half the routed pages have nothing on them
 

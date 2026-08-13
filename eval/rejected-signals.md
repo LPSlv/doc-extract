@@ -20,7 +20,11 @@ vision call on it.
 **Implemented as filter 0** in `harvest()`: scan every xref for `SMask`/`Mask`
 keys, collect the referenced xrefs, drop them before the furniture filter.
 
-**Measured** on 1,014 documents across datasheets, pmc, arxiv and papers:
+**Measured** on 686 documents across datasheets, pmc, arxiv and papers (this
+said **1,014** until 2026-08-13 — the corpora hold 204 + 220 + 238 + 24 = 686,
+per `docs/benchmarks/results/*.json`. Every count downstream of it — 1,345,
+728, 134, 483, 519, 826 — reproduces exactly, which is how a wrong denominator
+survived this long next to right numerators):
 
 | | before | after |
 |---|--:|--:|
@@ -161,9 +165,57 @@ consecutive pages rather than scattered ones). Consecutiveness is the cheapest
 of those and was not tested; the three known losses are too few to fit it on
 without repeating the mistake this whole exercise was about.
 
-## Multi-figure pages — measured, not yet actioned
+## Multi-figure pages — priced on both sides, rejected
 
-Not a rejected signal; an open one, recorded because the measurement exists.
+The fix this section used to leave open — render the whole page whenever a
+raster fires on a page that also shows vector figure signal — has been measured.
+Full working in [`eval/multifigure.md`](multifigure.md).
+
+The trigger is **131 items, not the 134** recorded below: three sit on pages that
+already carry a page render. All 131 are suppressed by **filter 3**, the
+`pm.count("\n|") >= 3` shortcut, so this is not a raster-routing problem at all —
+it is a page skipped for its table while its figure went with it.
+
+**Cost +56,580 tokens, +0.99%** of routed image tokens (`_tok` on native raster
+px, the model `cost_guard` and `bench.py` use; priced from the PNGs `convert.py`
+really writes it is +57,420, so the model *overstates* the increase by 0.4% and
+flatters the status quo). `cost_guard` **damps** this one instead of cancelling
+it, unlike the soft-mask case above: two documents collapse to `whole_document`,
+and since `whole` is a ceiling the token term is −1,051 — at a price of +10
+vision calls.
+
+**Benefit: 65 of 129 blind-labelled pages (50.4%, 95% Wilson 42–59%)** really do
+lose figure content outside the crop, across 59 of 91 documents. Broad, and far
+larger than the 1-in-23 figure-QA headline — because it measures exposure, not
+harm.
+
+**Rejected anyway, on an axis nobody was looking at.** A page render caps the
+raster at its placement, and the median trigger crop is **4.8% of its page**: the
+routed raster drops to a **median 0.27× linear resolution**, 74% below 0.5×,
+100% below 1.0×. On the 64 pages where nothing is lost, that degradation buys
+nothing. The swap trades a legible figure for a glimpse of a second one.
+
+No narrower trigger rescues it — the bill is the price of a page render, roughly
+constant per page, so excluding `stroke_grid` + `dense_grid` saves 2% of the
+cost. The two cost-*negative* triggers look like a free win and are the trap:
+`render_tok <= crop_tok` selects high-resolution crops, so its median resolution
+ratio is 0.21× against 0.34× for the rest. It is cheap precisely because of what
+it throws away.
+
+The variant that loses nothing — render **and** keep the crop — is **+122,441
+(+2.13%) and +131 vision calls**. That is the row to argue about if this is ever
+revisited; it was never what the proposal said.
+
+Two things worth carrying forward. The rule **as literally worded** does not say
+*lone*: on the multi-raster half it covers 308 rasters on 96 pages, where
+collapsing to one render per page is **−34,044 tokens and −212 calls**. Cost
+measured, benefit not labelled — that is the larger and cheaper half, and nobody
+had costed it. And the labellers are three runs of one model on one prompt:
+129/131 unanimity is evidence of determinism, not of reliability. The same
+caveat applies to `eval/strokegrid`'s holdout.
+
+The original measurement, kept because the rejection is only meaningful against
+it:
 
 The one genuine miss in figure-QA v3 (w18b) is a page carrying two drawings
 where the router emits only the upper. Across the same four corpora:
@@ -183,3 +235,34 @@ An obvious fix — render the whole page whenever a raster fires on a page that
 also shows vector figure signal — would convert 134 crops into 134 page
 renders. That is a cost increase for a defect measured at 1 in 23, and it has
 not been justified. It should be measured properly before anyone implements it.
+
+## Four signals for the `curves` branch — all rejected
+
+`curves` fires 2,770 times across the 711-document base, 45% of every vision
+call, and 25% of it is waste (`eval/nofigure.md`). 21 of 30 labelled wasted
+calls are one thing: a Texas Instruments datasheet page whose only vector
+content is the 143-curve header logo. Four ways of catching it were measured
+against the 120 labelled firings.
+
+| signal | outcome |
+|---|---|
+| page signature covering >`UBIQUITY` of the document | **rejected — 0 of 120 firings.** `vector_furniture` already removes those; the logo's curve count repeats but the full `(curves, diagonals, axis_h, axis_v)` tuple does not, because rules and underlines elsewhere vary |
+| identical `curves` count on ≥10 pages | rejected — 41 fires, **20 real items lost**, 51% precision |
+| largest connected stroke cluster | rejected — **0.0372 on the TI header and 0.0372 on `ti_lm317` p25 (thermal chart), p27 (PCB layout) and `ti_lp2985` p15 (block diagram)**. TI rasterises its figures, so a figure page has exactly the same vector content as a prose page. The same measure was rejected once already in `eval/tds-corpus.md`, for a different reason and the same underlying one |
+| small cluster **and** no figure caption | measured 17 cut, 17 `branding`, 0 real lost — **not shipped** |
+
+The last one is the interesting rejection. It is clean in-sample and still fails
+the bar on three counts: it is read off the set it would be validated on; 2 of
+its 17 drops carry rasters, so dropping them un-subsumes an image, which is
+exactly the cascade that forced the QR-code filter's revert; and it targets
+*vendor* boilerplate, so `arxiv_holdout` and `pmc_holdout` are both the wrong
+holdout — the same mismatch that made `arxiv_holdout` useless for the
+signature-ubiquity rule. Building a datasheet holdout is not small: ST,
+Microchip, TME and LCSC block automated fetches.
+
+This is the thirteenth through sixteenth branding signal measured here, and the
+conclusion `eval/tds-corpus.md` reached for rasters holds for vectors: **a vendor
+logo is separable from a figure only by reading it**, and reading it is the call
+being avoided. The difference is the exposure. For rasters, branding was 3.4% of
+vision calls at a median 140 tokens. Here it is a quarter of the largest branch
+in the router.

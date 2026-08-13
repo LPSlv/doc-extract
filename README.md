@@ -23,8 +23,8 @@ no upload — the vision is the subscription you already pay for.
 
 | across 2,342 PDFs, 20,375 pages | read every page | text only | **doc-extract** |
 |---|--:|--:|--:|
-| input tokens | 48.9M | 13.6M | **20.1M** |
-| vision calls per page | 1.00 | 0 | **0.34** |
+| input tokens | 48.9M | 13.6M | **19.9M** |
+| vision calls per page | 1.00 | 0 | **0.32** |
 | figures it can see | all | **none** | the ones text missed |
 
 <sub>Text alone is cheapest because it is blind — a floor, not an option. Once
@@ -132,6 +132,35 @@ pages a question touches. Cite as `[p12]`, or `[report.pdf:p12]` across document
 > which wraps it in strippable delimiters. That is what lets the benchmark strip
 > the additions and prove the skill does not degrade text extraction.
 
+### Where descriptions land
+
+By default every description is appended in one block at the end of `doc.md`,
+labelled `[p12]`, `[s02]` or `[Sheet2]`. `convert.py --inline` places each block
+at its image's position instead — Office only; a PDF has no anchor, so
+`--inline` changes nothing for one.
+
+| format | `--inline` anchors to |
+|---|---|
+| PowerPoint | the picture's own line, when that line is provably the picture's; otherwise the end of the slide |
+| Word | the end of the section the picture sits in — Word writes no alt text unless the author typed one, so the markdown usually holds no trace of the picture |
+| Excel | the end of the sheet — images and charts come from the package, and the text engine renders neither |
+| PDF, image | nothing |
+
+The block is **inserted** beside the engine's line, never substituted for it.
+That is what keeps the byte-identity guarantee enforceable: `eval/gate.py` runs
+both placements over every format and fails on any in-place edit. A substitution
+that recorded what it overwrote would reverse perfectly while silently eating a
+prose line it mistook for a placeholder — the anchor is the text engine's alt
+text, which is ordinary prose, and a slide *about* a file called `image.png`
+renders the same line a picture does.
+
+What `--inline` does not promise is that the position is right. Byte-identity
+cannot check placement, because an insertion round-trips wherever it lands. An
+image's own line is used only when the number of candidate lines in its unit
+equals the number of pictures in it; otherwise the description falls back to the
+unit boundary. Positions are either provably that picture's or a unit boundary,
+never a guess between two lines that look alike.
+
 ## Extracting the images does not give you the figures
 
 "Extract the images from a PDF" is a well-defined operation that every tool
@@ -180,7 +209,7 @@ manifest under [`eval/manifests/`](eval/manifests/) and a fetch script.
 Full tables: [`docs/benchmarks/RESULTS.md`](docs/benchmarks/RESULTS.md).
 
 <!-- benchmarks:begin -->
-Reading every page of these 2,342 PDFs costs 48.9M input tokens. doc-extract reads the same 20,375 pages for 20.1M — **2.4× less** — because it looks at one page in three (6,797 vision calls over 20,375 pages) instead of all of them.
+Reading every page of these 2,342 PDFs costs 48.9M input tokens. doc-extract reads the same 20,375 pages for 19.9M — **2.5× less** — because it looks at one page in three (6,525 vision calls over 20,375 pages) instead of all of them.
 
 Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan or unparsed table whatsoever. It is the floor, not an option.
 
@@ -192,11 +221,11 @@ Extracting text alone is cheaper still, at 13.6M, and captures no figure, scan o
 | `olmocr_arxiv_math` | 522 | 522 | 2.5× | 0.12 |
 | `olmocr_tables` | 188 | 188 | 2.4× | 0.45 |
 | `olmocr_headers_footers` | 266 | 266 | 2.1× | 0.50 |
-| `arxiv` | 238 | 5,336 | 2.0× | 0.26 |
-| `papers` | 24 | 704 | 1.9× | 0.39 |
+| `arxiv` | 238 | 5,336 | 2.0× | 0.24 |
+| `papers` | 24 | 704 | 1.9× | 0.36 |
 | `olmocr_scans` | 134 | 134 | 1.8× | 1.00 |
 | `olmocr_multi_column` | 231 | 231 | 1.5× | 0.58 |
-| `pmc` | 220 | 1,923 | 1.3× | 0.55 |
+| `pmc` | 220 | 1,923 | 1.4× | 0.48 |
 | `olmocr_long_tiny_text` | 62 | 62 | 0.9× | 1.05 |
 
 `olmocr_long_tiny_text` sits last because it **loses**: 62 single-page documents where text plus one figure render costs more than the page itself. Single pages have nothing to amortise. It stays in the table.
@@ -305,7 +334,7 @@ Across 236 documents (1,335 units), the filters cut 1,647 embedded images down t
 <sub>Baseline is describe every extracted asset, before furniture filters and dedup — not a page render, which Office documents do not have. Residue, counted not hidden: 1 chart unreadable, 108 assets in formats no agent can view.</sub>
 <!-- office:end -->
 
-**The 2.4× does not transfer, and it was never going to.** PDF routing wins by
+**The 2.5× does not transfer, and it was never going to.** PDF routing wins by
 avoiding page renders — the expensive baseline it beats is looking at every
 page optically. An Office document has no render to avoid, so the only lever
 left is filtering embedded images, and most embedded images in a real deck are
@@ -322,7 +351,7 @@ What Office documents genuinely gain:
 |---|---|
 | **Spreadsheet charts** | Read from the chart definition — **exact numbers, zero vision calls**. 19 of 20 recovered across 35 workbooks |
 | Citations and cache | `[s07]`, `[Sheet2]`, `[Budget assumptions]`; follow-up questions read text, not pixels |
-| Byte-identity | Stripped output equals raw anydoc output, enforced by `eval/gate.py` on every format |
+| Byte-identity | Stripped output equals raw engine output, enforced by `eval/gate.py` on every format **and both placements** |
 | No per-page bill | The vision is your own agent's, not a metered service |
 
 Excel is the outlier that pays: anydoc's spreadsheet path is pure cell
@@ -346,7 +375,7 @@ a page needed OCR. Two differences matter:
 
 Selective routing is what makes that practical rather than merely possible: at
 1.00 vision calls per page a subscription-funded agent exhausts its budget on
-the first document; at the measured 0.34 it does not.
+the first document; at the measured 0.32 it does not.
 
 > [!IMPORTANT]
 > This is a billing-model comparison, not a quality one. Parse's OCR on a
@@ -378,13 +407,26 @@ the first document; at the measured 0.34 it does not.
 >   detector dropped robot-manipulation photographs. Cheap handling, not
 >   detection, is the mitigation: a branding image costs a median 140 tokens
 >   against 878 for a figure, and the describe rubric dismisses one in a line.
-> - **Two routed pages in five have nothing on them.** On 30 routed pages
->   sampled one-per-document across arxiv, pmc, datasheets and papers, 11 carry
->   no figure at all — mastheads, references pages, plain prose, an ESD icon, a
->   QR box — and one more duplicates a table the extractor already recovered.
->   `stroke_grid` was wrong on all 3 of its firings there; `standalone_raster`
->   on none of 6. Those calls are wasted, and they are inside the 0.34
->   calls-per-page figure above, not additional to it.
+> - **Roughly a quarter of routed pages have nothing on them.** 4,106 `curves`
+>   and `whole_document` firings were enumerated across 711 documents and 240
+>   labelled by three independent labellers each: `curves` wastes **25%** (95% CI
+>   18–33), `whole_document` **34%** (26–43) — reweighted, 28% of firings and
+>   **19% of every vision call these corpora make**
+>   ([`eval/nofigure.md`](eval/nofigure.md)). Mastheads, references pages,
+>   bibliographies, publisher title pages, plain two-column prose. Those calls
+>   are wasted, and they are inside the 0.32 calls-per-page figure above, not
+>   additional to it. An earlier 30-page sample put this at 37% overall, which
+>   was close in aggregate and wrong on the branch split.
+> - **The largest remaining block of waste is the `curves` branch, and nothing
+>   reaches it.** `curves` is 45% of all vision calls; a quarter of that is one
+>   thing — a Texas Instruments datasheet page whose only vector content is the
+>   143-curve header logo. Four signals were measured against it and all four
+>   rejected ([`eval/rejected-signals.md`](eval/rejected-signals.md)). The
+>   sharpest measure scores **0.0372 on the TI logo and 0.0372 on a real thermal
+>   chart**, because TI rasterises its figures — so a prose page and a figure
+>   page have identical vector content. That is the sixteenth branding signal
+>   rejected here, and the reason has not changed: a vendor logo is separable
+>   from a figure only by reading it, which is the call being avoided.
 > - **`stroke_grid` is the weakest branch, measured exhaustively.** All 170 of
 >   its firings across 711 documents were rendered and labelled: 38% ruled
 >   tables, 6% plots, 14% other real figures, and **42% nothing at all**
@@ -405,6 +447,21 @@ the first document; at the measured 0.34 it does not.
 >   a vision description — so what is lost is the table's structure, not its
 >   content. A refinement targeting it was measured and rejected as dominated
 >   ([`eval/rejected-signals.md`](eval/rejected-signals.md)).
+> - **The `textonly_page` filter rests on a floor, not a tuned threshold.** It
+>   drops a page inside a whole-document collapse when the page carries no raster
+>   and at most **2** drawing paths — a border and a header rule. Validated blind
+>   on two corpora fetched after it was written (250 journal PDFs disjoint from
+>   `corpus/pmc` by content hash, plus 348 arXiv papers): **203 drops labelled, 0
+>   real items lost**. No failure mode has been observed, which is not the same
+>   as none existing. Raising the constant to 6 cuts one more wasted call and
+>   starts losing real figures (87% precision), so 2 is deliberately conservative
+>   and moving it needs its own holdout.
+> - **The labellers behind every precision figure here are one model.** "Three
+>   independent labellers" means three runs of the same model on the same prompt.
+>   They are independent of each other's answers, not of each other's blind
+>   spots, and unanimity measures determinism rather than reliability. The Wilson
+>   intervals price sampling error only — they cannot price a systematic misread
+>   all three share.
 > - **A raster can hide the figure next to it.** When a page holds both an
 >   embedded bitmap and vector artwork, firing `standalone_raster` emits the
 >   bitmap and suppresses the page render — so the vector figure is never seen.
@@ -426,7 +483,7 @@ the first document; at the measured 0.34 it does not.
 >   so the set is built here and its construction is the thing to audit
 >   ([`eval/figqa.md`](eval/figqa.md)).
 > - **On Office documents the routing saves very little.** 1.9% of vision
->   tokens across the 236-document corpus, against 2.4× on PDFs. There is no
+>   tokens across the 236-document corpus, against 2.5× on PDFs. There is no
 >   page render to avoid, so the only lever is filtering embedded images, and
 >   most of those are content. Slide decks cost more than one call per slide.
 >   The cache, citations and chart extraction are the reasons to use it there —

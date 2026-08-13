@@ -205,6 +205,15 @@ The three labellers agreed unanimously on all 17 effective drops, with
 near-identical descriptions: proof pages, boxed prompt listings, framed JSON
 examples. 95% Wilson interval on 17/17 is 82–100%.
 
+> **Read that unanimity carefully.** The "three independent labellers" are three
+> runs of one model on one prompt. They are independent of each other's answers,
+> not of each other's blind spots, and near-identical descriptions are as
+> consistent with shared bias as with correctness. Unanimity here is evidence of
+> **determinism, not reliability**, and the Wilson interval prices sampling error
+> only — it cannot price a systematic misread all three share. The same caveat
+> applies to `eval/multifigure`'s 129/131 unanimity. A genuinely independent
+> check would need a different model, a different prompt, or a human.
+
 Effect on the corpus: **2,473 vision calls → 2,456**, a 0.69% reduction, with
 no `cost_guard` cascades. It costs nothing to compute — `page_geometry`
 already walks `get_cdrawings()` once per page, so `vx_pos` is collected in the

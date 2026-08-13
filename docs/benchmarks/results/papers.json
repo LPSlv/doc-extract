@@ -1,7 +1,7 @@
 {
  "dataset": "papers",
- "generated": "2026-08-12",
- "harvest_sha256": "3285e3b332047efe",
+ "generated": "2026-08-13",
+ "harvest_sha256": "886bbddc409fdd47",
  "token_model": {
   "image": "(w*h)/750 fit 1568px",
   "text": "chars/3.5",
@@ -14,8 +14,8 @@
   "bytes": 172210077,
   "opt_tok": 1705760,
   "txt_tok": 622992,
-  "ours_tok": 912097,
-  "calls": 275,
+  "ours_tok": 898519,
+  "calls": 255,
   "reasons": {
    "standalone_raster": 102,
    "diagonals": 13,
@@ -23,13 +23,13 @@
    "no_text_layer": 7,
    "raster_grid": 11,
    "stroke_grid": 21,
-   "whole_document": 80,
+   "whole_document": 60,
    "dense_grid": 8
   },
-  "t_opt": 12.3,
-  "t_txt": 2.84,
-  "t_ours": 25.05,
-  "wall_total": 37.38
+  "t_opt": 12.21,
+  "t_txt": 3.0,
+  "t_ours": 25.85,
+  "wall_total": 38.09
  },
  "rows": [
   {
@@ -37,12 +37,12 @@
    "bytes": 2215244,
    "pages": 15,
    "opt_tok": 36645,
-   "t_opt": 0.31675068399999873,
+   "t_opt": 0.3368845519999013,
    "big_rasters": 3,
-   "t_txt": 0.06345995600031529,
+   "t_txt": 0.06771656300043105,
    "txt_chars": 40723,
    "txt_tok": 11635,
-   "t_har": 0.3125157439999384,
+   "t_har": 0.32774588499887614,
    "pdf_type": "text_based",
    "calls": 5,
    "over_scale_guard": false,
@@ -51,7 +51,7 @@
     "diagonals": 2
    },
    "dropped": 0,
-   "t_render": 0.0738794600001711,
+   "t_render": 0.07862929200018698,
    "ours_tok": 17131
   },
   {
@@ -59,12 +59,12 @@
    "bytes": 775166,
    "pages": 16,
    "opt_tok": 37072,
-   "t_opt": 0.13489682199997333,
+   "t_opt": 0.13586617600049067,
    "big_rasters": 0,
-   "t_txt": 0.06339254099975733,
+   "t_txt": 0.06790512099905754,
    "txt_chars": 66132,
    "txt_tok": 18894,
-   "t_har": 0.21455183900025077,
+   "t_har": 0.24228450100054033,
    "pdf_type": "text_based",
    "calls": 2,
    "over_scale_guard": false,
@@ -72,7 +72,7 @@
     "standalone_raster": 2
    },
    "dropped": 32,
-   "t_render": 0.00032517499994355603,
+   "t_render": 0.0003358020003361162,
    "ours_tok": 19033
   },
   {
@@ -80,12 +80,12 @@
    "bytes": 10267274,
    "pages": 25,
    "opt_tok": 61075,
-   "t_opt": 0.5092222650000622,
+   "t_opt": 0.5428366300002381,
    "big_rasters": 17,
-   "t_txt": 0.07546161399977791,
+   "t_txt": 0.0833774889997585,
    "txt_chars": 58099,
    "txt_tok": 16599,
-   "t_har": 0.4099211650000143,
+   "t_har": 0.46611498600032064,
    "pdf_type": "mixed",
    "calls": 22,
    "over_scale_guard": true,
@@ -95,7 +95,7 @@
     "no_text_layer": 7
    },
    "dropped": 12,
-   "t_render": 0.1147207270000763,
+   "t_render": 0.13125979900178208,
    "ours_tok": 29958
   },
   {
@@ -103,12 +103,12 @@
    "bytes": 2630825,
    "pages": 34,
    "opt_tok": 83062,
-   "t_opt": 0.39504687500038926,
+   "t_opt": 0.4351127700010693,
    "big_rasters": 5,
-   "t_txt": 0.11206307099973856,
+   "t_txt": 0.1273316060014622,
    "txt_chars": 115072,
    "txt_tok": 32877,
-   "t_har": 0.38884044199994605,
+   "t_har": 0.44210797199957597,
    "pdf_type": "text_based",
    "calls": 7,
    "over_scale_guard": false,
@@ -117,7 +117,7 @@
     "diagonals": 2
    },
    "dropped": 0,
-   "t_render": 0.038920453999708116,
+   "t_render": 0.044300387000475894,
    "ours_tok": 42159
   },
   {
@@ -125,12 +125,12 @@
    "bytes": 6768044,
    "pages": 75,
    "opt_tok": 183225,
-   "t_opt": 1.3218222589998732,
+   "t_opt": 1.457019475999914,
    "big_rasters": 74,
-   "t_txt": 0.12938597499987736,
+   "t_txt": 0.14442458700068528,
    "txt_chars": 240302,
    "txt_tok": 68657,
-   "t_har": 1.244197477000398,
+   "t_har": 1.3517041129998688,
    "pdf_type": "text_based",
    "calls": 26,
    "over_scale_guard": true,
@@ -139,7 +139,7 @@
     "raster_grid": 4
    },
    "dropped": 52,
-   "t_render": 0.26480573499975435,
+   "t_render": 0.29414466200069,
    "ours_tok": 101092
   },
   {
@@ -147,12 +147,12 @@
    "bytes": 1797405,
    "pages": 68,
    "opt_tok": 166124,
-   "t_opt": 0.5667241199998898,
+   "t_opt": 0.5637923809990752,
    "big_rasters": 4,
-   "t_txt": 0.1354269270000259,
+   "t_txt": 0.1356811320001725,
    "txt_chars": 185834,
    "txt_tok": 53095,
-   "t_har": 0.6170476450001843,
+   "t_har": 0.564355197999248,
    "pdf_type": "text_based",
    "calls": 16,
    "over_scale_guard": true,
@@ -163,7 +163,7 @@
     "diagonals": 4
    },
    "dropped": 5,
-   "t_render": 0.11621052400005283,
+   "t_render": 0.1278345430000627,
    "ours_tok": 69178
   },
   {
@@ -171,33 +171,33 @@
    "bytes": 40842586,
    "pages": 45,
    "opt_tok": 109935,
-   "t_opt": 1.234977808000167,
+   "t_opt": 1.2797369849995448,
    "big_rasters": 157,
-   "t_txt": 0.13091914399956295,
+   "t_txt": 0.14032912200127612,
    "txt_chars": 103457,
    "txt_tok": 29559,
-   "t_har": 0.6354046090000338,
+   "t_har": 0.6960097160008445,
    "pdf_type": "text_based",
-   "calls": 45,
+   "calls": 37,
    "over_scale_guard": true,
    "reasons": {
-    "whole_document": 45
+    "whole_document": 37
    },
-   "dropped": 288,
-   "t_render": 0.8764600069998778,
-   "ours_tok": 73248
+   "dropped": 296,
+   "t_render": 0.8963362200011034,
+   "ours_tok": 67590
   },
   {
    "name": "ai_vit.pdf",
    "bytes": 3743814,
    "pages": 22,
    "opt_tok": 53746,
-   "t_opt": 0.28040694800029087,
+   "t_opt": 0.30094692499915254,
    "big_rasters": 1,
-   "t_txt": 0.08142080700008592,
+   "t_txt": 0.08423763800055895,
    "txt_chars": 68033,
    "txt_tok": 19438,
-   "t_har": 0.4675390340003105,
+   "t_har": 0.4762430150003638,
    "pdf_type": "text_based",
    "calls": 12,
    "over_scale_guard": false,
@@ -208,7 +208,7 @@
     "dense_grid": 1
    },
    "dropped": 293,
-   "t_render": 0.13460262799981138,
+   "t_render": 0.1493251390002115,
    "ours_tok": 30407
   },
   {
@@ -216,12 +216,12 @@
    "bytes": 4397514,
    "pages": 17,
    "opt_tok": 41531,
-   "t_opt": 0.4531430960000762,
+   "t_opt": 0.49527206600032514,
    "big_rasters": 6,
-   "t_txt": 0.037011954999798036,
+   "t_txt": 0.035196631999497185,
    "txt_chars": 53985,
    "txt_tok": 15424,
-   "t_har": 0.8144932770001105,
+   "t_har": 0.8919162029997096,
    "pdf_type": "text_based",
    "calls": 6,
    "over_scale_guard": false,
@@ -229,7 +229,7 @@
     "standalone_raster": 6
    },
    "dropped": 0,
-   "t_render": 0.0003205569996680424,
+   "t_render": 0.00036243499926058576,
    "ours_tok": 23713
   },
   {
@@ -237,12 +237,12 @@
    "bytes": 2415308,
    "pages": 25,
    "opt_tok": 61075,
-   "t_opt": 0.16899216000001616,
+   "t_opt": 0.17821711099895765,
    "big_rasters": 4,
-   "t_txt": 0.0648421219998454,
+   "t_txt": 0.07083956599853991,
    "txt_chars": 79174,
    "txt_tok": 22621,
-   "t_har": 0.25852188499993645,
+   "t_har": 0.28820112900029926,
    "pdf_type": "text_based",
    "calls": 7,
    "over_scale_guard": false,
@@ -252,7 +252,7 @@
     "diagonals": 2
    },
    "dropped": 3,
-   "t_render": 0.03317795199973261,
+   "t_render": 0.03704058799849008,
    "ours_tok": 27898
   },
   {
@@ -260,12 +260,12 @@
    "bytes": 21361931,
    "pages": 40,
    "opt_tok": 92680,
-   "t_opt": 0.7880605159998595,
+   "t_opt": 0.8038855459999468,
    "big_rasters": 96,
-   "t_txt": 0.18086313300000256,
+   "t_txt": 0.21466042199972435,
    "txt_chars": 113666,
    "txt_tok": 32476,
-   "t_har": 3.972796494999784,
+   "t_har": 4.280957649998527,
    "pdf_type": "text_based",
    "calls": 13,
    "over_scale_guard": false,
@@ -276,7 +276,7 @@
     "raster_grid": 3
    },
    "dropped": 407,
-   "t_render": 0.504516219999914,
+   "t_render": 0.5121868979986175,
    "ours_tok": 56722
   },
   {
@@ -284,18 +284,18 @@
    "bytes": 2053066,
    "pages": 9,
    "opt_tok": 21987,
-   "t_opt": 0.9740989930000978,
+   "t_opt": 0.9927278599989222,
    "big_rasters": 0,
-   "t_txt": 0.14822095499994248,
+   "t_txt": 0.1582696859986754,
    "txt_chars": 33721,
    "txt_tok": 9634,
-   "t_har": 0.47486172100025215,
+   "t_har": 0.48023261399976036,
    "pdf_type": "text_based",
    "calls": 0,
    "over_scale_guard": false,
    "reasons": {},
    "dropped": 0,
-   "t_render": 0.0007943750001686567,
+   "t_render": 0.0008766950013523456,
    "ours_tok": 9634
   },
   {
@@ -303,12 +303,12 @@
    "bytes": 8488381,
    "pages": 60,
    "opt_tok": 146580,
-   "t_opt": 1.2895676769999227,
+   "t_opt": 1.3408613680003327,
    "big_rasters": 3,
-   "t_txt": 0.6133421940003245,
+   "t_txt": 0.6893273269997735,
    "txt_chars": 203386,
    "txt_tok": 58110,
-   "t_har": 2.864871964000031,
+   "t_har": 2.964976667999508,
    "pdf_type": "text_based",
    "calls": 6,
    "over_scale_guard": false,
@@ -318,7 +318,7 @@
     "stroke_grid": 1
    },
    "dropped": 7,
-   "t_render": 0.29996067599995513,
+   "t_render": 0.35918327199942723,
    "ours_tok": 63415
   },
   {
@@ -326,12 +326,12 @@
    "bytes": 8979330,
    "pages": 15,
    "opt_tok": 36645,
-   "t_opt": 0.3896832899999936,
+   "t_opt": 0.44438758799878997,
    "big_rasters": 15,
-   "t_txt": 0.07634823599983065,
+   "t_txt": 0.08939157200074987,
    "txt_chars": 50684,
    "txt_tok": 14481,
-   "t_har": 0.9979747930001395,
+   "t_har": 1.0494269959999656,
    "pdf_type": "text_based",
    "calls": 3,
    "over_scale_guard": false,
@@ -341,7 +341,7 @@
     "dense_grid": 1
    },
    "dropped": 19,
-   "t_render": 0.10662616599984176,
+   "t_render": 0.10943495300125505,
    "ours_tok": 18538
   },
   {
@@ -349,12 +349,12 @@
    "bytes": 584641,
    "pages": 15,
    "opt_tok": 34755,
-   "t_opt": 0.10607935500001986,
+   "t_opt": 0.10043396999935794,
    "big_rasters": 0,
-   "t_txt": 0.0576976890001788,
+   "t_txt": 0.06067791800160194,
    "txt_chars": 31237,
    "txt_tok": 8924,
-   "t_har": 0.20252225100011856,
+   "t_har": 0.20134395599961863,
    "pdf_type": "text_based",
    "calls": 3,
    "over_scale_guard": false,
@@ -363,7 +363,7 @@
     "curves": 2
    },
    "dropped": 0,
-   "t_render": 0.0591612130001522,
+   "t_render": 0.05908372900012182,
    "ours_tok": 14442
   },
   {
@@ -371,12 +371,12 @@
    "bytes": 1609513,
    "pages": 26,
    "opt_tok": 63518,
-   "t_opt": 0.2620092570000452,
+   "t_opt": 0.25291333999848575,
    "big_rasters": 0,
-   "t_txt": 0.27308385500009535,
+   "t_txt": 0.27231765299984545,
    "txt_chars": 86851,
    "txt_tok": 24814,
-   "t_har": 1.052467379999598,
+   "t_har": 1.084660067999721,
    "pdf_type": "text_based",
    "calls": 5,
    "over_scale_guard": false,
@@ -385,7 +385,7 @@
     "stroke_grid": 3
    },
    "dropped": 27,
-   "t_render": 0.05632023299995126,
+   "t_render": 0.051095499000439304,
    "ours_tok": 30061
   },
   {
@@ -393,12 +393,12 @@
    "bytes": 444482,
    "pages": 15,
    "opt_tok": 36645,
-   "t_opt": 0.07760293000001184,
+   "t_opt": 0.07187317100033397,
    "big_rasters": 0,
-   "t_txt": 0.045192344000042795,
+   "t_txt": 0.0393229599994811,
    "txt_chars": 51402,
    "txt_tok": 14686,
-   "t_har": 0.1497501829999237,
+   "t_har": 0.15181858700088924,
    "pdf_type": "text_based",
    "calls": 3,
    "over_scale_guard": false,
@@ -406,7 +406,7 @@
     "stroke_grid": 3
    },
    "dropped": 4,
-   "t_render": 0.020870338000349875,
+   "t_render": 0.02084276500136184,
    "ours_tok": 17154
   },
   {
@@ -414,12 +414,12 @@
    "bytes": 547768,
    "pages": 15,
    "opt_tok": 34755,
-   "t_opt": 0.1774626910000734,
+   "t_opt": 0.1835255820005841,
    "big_rasters": 0,
-   "t_txt": 0.054682191999745555,
+   "t_txt": 0.053050690999953076,
    "txt_chars": 65792,
    "txt_tok": 18797,
-   "t_har": 0.21103982299973723,
+   "t_har": 0.20788504099982674,
    "pdf_type": "text_based",
    "calls": 6,
    "over_scale_guard": false,
@@ -429,7 +429,7 @@
     "stroke_grid": 1
    },
    "dropped": 0,
-   "t_render": 0.09372246699967945,
+   "t_render": 0.09425579200069478,
    "ours_tok": 25433
   },
   {
@@ -437,12 +437,12 @@
    "bytes": 819383,
    "pages": 12,
    "opt_tok": 29316,
-   "t_opt": 0.11560008399965227,
+   "t_opt": 0.1099226140013343,
    "big_rasters": 0,
-   "t_txt": 0.053284555000118417,
+   "t_txt": 0.049948832998779835,
    "txt_chars": 60915,
    "txt_tok": 17404,
-   "t_har": 0.2111144539999259,
+   "t_har": 0.2253549209999619,
    "pdf_type": "text_based",
    "calls": 4,
    "over_scale_guard": false,
@@ -452,7 +452,7 @@
     "stroke_grid": 1
    },
    "dropped": 0,
-   "t_render": 0.03425674899972364,
+   "t_render": 0.034356726000623894,
    "ours_tok": 22967
   },
   {
@@ -460,12 +460,12 @@
    "bytes": 7880321,
    "pages": 63,
    "opt_tok": 153909,
-   "t_opt": 0.4009724859997732,
+   "t_opt": 0.3875590019997617,
    "big_rasters": 19,
-   "t_txt": 0.08200479700008145,
+   "t_txt": 0.07991959100036183,
    "txt_chars": 109906,
    "txt_tok": 31401,
-   "t_har": 0.8384731090000059,
+   "t_har": 0.7814951010004734,
    "pdf_type": "text_based",
    "calls": 21,
    "over_scale_guard": true,
@@ -474,7 +474,7 @@
     "stroke_grid": 2
    },
    "dropped": 39,
-   "t_render": 0.012132139999721403,
+   "t_render": 0.01094983700022567,
    "ours_tok": 53727
   },
   {
@@ -482,54 +482,54 @@
    "bytes": 5353485,
    "pages": 18,
    "opt_tok": 43974,
-   "t_opt": 0.7054276719995869,
+   "t_opt": 0.35558213500007696,
    "big_rasters": 23,
-   "t_txt": 0.07473313800028336,
+   "t_txt": 0.07014941399938834,
    "txt_chars": 84520,
    "txt_tok": 24148,
-   "t_har": 0.5378196470001058,
+   "t_har": 0.4581612620004307,
    "pdf_type": "text_based",
-   "calls": 18,
-   "over_scale_guard": true,
+   "calls": 11,
+   "over_scale_guard": false,
    "reasons": {
-    "whole_document": 18
+    "whole_document": 11
    },
-   "dropped": 68,
-   "t_render": 0.3475427159996798,
-   "ours_tok": 40212
+   "dropped": 75,
+   "t_render": 0.22779303199968126,
+   "ours_tok": 35592
   },
   {
    "name": "rob_pi0.pdf",
    "bytes": 7893845,
    "pages": 17,
    "opt_tok": 41531,
-   "t_opt": 0.4922686249997241,
+   "t_opt": 0.4073891040006856,
    "big_rasters": 60,
-   "t_txt": 0.1071823620000032,
+   "t_txt": 0.09902530500039575,
    "txt_chars": 88518,
    "txt_tok": 25290,
-   "t_har": 0.6457642569998825,
+   "t_har": 0.5815331689991581,
    "pdf_type": "text_based",
-   "calls": 17,
-   "over_scale_guard": true,
+   "calls": 12,
+   "over_scale_guard": false,
    "reasons": {
-    "whole_document": 17
+    "whole_document": 12
    },
-   "dropped": 224,
-   "t_render": 0.35195375500006776,
-   "ours_tok": 39919
+   "dropped": 229,
+   "t_render": 0.32810700300069584,
+   "ours_tok": 36619
   },
   {
    "name": "rob_rt1.pdf",
    "bytes": 14672588,
    "pages": 31,
    "opt_tok": 75733,
-   "t_opt": 0.4496004160000666,
+   "t_opt": 0.40970504799952323,
    "big_rasters": 29,
-   "t_txt": 0.10732669299977715,
+   "t_txt": 0.09944552399974782,
    "txt_chars": 108084,
    "txt_tok": 30881,
-   "t_har": 0.44871929000009914,
+   "t_har": 0.40722265699878335,
    "pdf_type": "text_based",
    "calls": 16,
    "over_scale_guard": true,
@@ -541,7 +541,7 @@
     "dense_grid": 2
    },
    "dropped": 103,
-   "t_render": 0.15804812199985463,
+   "t_render": 0.15573944700008724,
    "ours_tok": 47383
   },
   {
@@ -549,12 +549,12 @@
    "bytes": 15668163,
    "pages": 26,
    "opt_tok": 60242,
-   "t_opt": 0.6879747359998873,
+   "t_opt": 0.6208381609994831,
    "big_rasters": 66,
-   "t_txt": 0.07178007199991043,
+   "t_txt": 0.06537488600042707,
    "txt_chars": 81017,
    "txt_tok": 23147,
-   "t_har": 0.2947776529999828,
+   "t_har": 0.27420413400068355,
    "pdf_type": "text_based",
    "calls": 12,
    "over_scale_guard": false,
@@ -564,7 +564,7 @@
     "raster_grid": 3
    },
    "dropped": 65,
-   "t_render": 0.2489989420000711,
+   "t_render": 0.23452256099881197,
    "ours_tok": 38673
   }
  ],

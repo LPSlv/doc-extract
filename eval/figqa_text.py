@@ -8,9 +8,13 @@ Two different things, deliberately kept apart:
 
   text/<id>.md   the WHOLE-DOCUMENT markdown from process_pdf. This is the
                  text-only arm as graded, because it is what the skill ships;
-                 extract_pages_markdown returns nothing at all on some
-                 documents (3 of these 30) and grading against it would
-                 handicap the baseline into a walkover.
+                 extract_pages_markdown loses text this API recovers -- 1 of
+                 these 30 documents comes back entirely empty, 8 of 30 have at
+                 least one empty page, 20 of 624 pages (3.2%) overall -- and
+                 grading against it would handicap the baseline into a
+                 walkover. (This docstring said "3 of these 30 documents"
+                 until 2026-08-13; re-running both APIs gives 1. See the
+                 correction note in eval/figqa.md.)
 
   view/<id>.txt  the candidate page's raw text via PyMuPDF, for authoring only.
                  Never graded. It exists so a question can be checked to be
