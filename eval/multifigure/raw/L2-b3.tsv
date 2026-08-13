@@ -1,0 +1,34 @@
+tag	label	note
+m070	sufficient	features text, device table, TI logo
+m071	sufficient	header nav icons, text, device table
+m072	sufficient	description text, function table, header
+m073	sufficient	header nav icons, text, device table
+m074	sufficient	description text, function table
+m075	sufficient	header icons, description text, device table
+m076	loses	DIP/SOIC package pinout diagram at left
+m077	sufficient	overview text, function table
+m078	loses	full package outline mechanical drawing
+m079	loses	full package outline mechanical drawing
+m080	sufficient	related links table, support text
+m081	loses	full package outline mechanical drawing
+m082	sufficient	related links table, support text
+m083	loses	full package outline mechanical drawing
+m084	sufficient	features text, device information table
+m085	loses	DIP package pinout diagram at left
+m086	loses	full package outline mechanical drawing
+m087	sufficient	header icons, features text, device table
+m088	loses	full package outline mechanical drawing
+m089	sufficient	header icons, features text, device table
+m090	sufficient	header icons, description text, device table
+m091	sufficient	notes text, headings, page furniture
+m092	sufficient	overview text, function table
+m093	loses	full package outline mechanical drawing
+m094	sufficient	related links table, support text
+m095	loses	full package outline mechanical drawing
+m096	sufficient	header icons, features text, device table
+m097	sufficient	overview text, function table
+m098	loses	full package outline mechanical drawing
+m099	sufficient	related links table, support text
+m100	loses	full package outline mechanical drawing
+m101	loses	Figure 7-3 input/output schematics below
+m102	loses	Figure 5-38 inrush current plot at right

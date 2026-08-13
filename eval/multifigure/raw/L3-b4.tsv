@@ -1,0 +1,33 @@
+tag	label	note
+m103	sufficient	body text, equation, TI logo
+m104	sufficient	tables, body text, headings
+m105	sufficient	feature text, device table, header icons
+m106	loses	Figure 28 input impedance circuit diagram above
+m107	loses	Figure 31 SDZ timing diagram at right
+m108	loses	five other characteristic charts, Figures 8-12
+m109	loses	Figure 7-9 application circuit schematic below
+m110	sufficient	revision history text, ESD icon only
+m111	sufficient	features text, device information table
+m112	sufficient	body text, revision table, ESD icon
+m113	loses	rest of Figure 1 pre-training and fine-tuning panels
+m114	norect	no red rectangle found on page
+m115	sufficient	table, body text, caption
+m116	loses	rest of Figure 1 ViT and encoder diagram
+m117	loses	Figure 10 two scatter plots below
+m118	loses	Figure 3 panels a, c, d
+m119	loses	bar chart beside Table 5
+m120	sufficient	two tables and body text
+m121	sufficient	three tables, body text, caption
+m122	sufficient	Table 4, caption, journal furniture
+m123	sufficient	Tables 2 and 3, body text
+m124	sufficient	abstract and body text, journal furniture
+m125	sufficient	abstract and body text, journal furniture
+m126	sufficient	abstract and body text, journal furniture
+m127	sufficient	Table 2, body text, figure caption
+m128	sufficient	Table 3, caption text
+m129	sufficient	Tables 2 and 3, body text
+m130	sufficient	Table I, caption, page furniture
+m131	sufficient	body text, figure caption, blue border
+m132	sufficient	body text, figure caption, blue border
+m133	sufficient	Table I, body text, caption
+m134	loses	Figure 3 bar chart below

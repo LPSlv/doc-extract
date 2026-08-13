@@ -1,0 +1,132 @@
+tag	label	note
+m001	loses	Figure 1 three prey-predator time-series plots
+m002	loses	top of plot frame and legend markers clipped
+m003	loses	rest of satellite/Earth calibration schematic
+m004	loses	Figure 1 BLE testbed block diagram
+m005	loses	rest of CaRL rollout/reward pipeline diagram
+m006	sufficient	journal logo, prompt text box, ruled table
+m007	loses	right-hand power spectrum panel and colorbar
+m008	loses	Figure 4 uplink MU-MIMO geometry diagram
+m009	loses	MSE-versus-iteration step chart outside panel
+m010	loses	MSE-versus-iteration step chart outside panel
+m011	loses	panels B and C line and bar plots
+m012	loses	Figure 4 impedance versus frequency plot
+m013	sufficient	proofs, theorems, displayed equations only
+m014	sufficient	body text, equations, boxed problem statement
+m015	norect	no red rectangle found on page
+m016	sufficient	Table 5 results table and body text
+m017	loses	rest of CodeShrink framework block diagram
+m018	loses	panels b-e spectra and lower part of a
+m019	sufficient	colorbar, axis labels, caption, body text
+m020	loses	Figure 14 Sankey failure-flow diagrams
+m021	sufficient	headings, Table 24, colored header band
+m022	sufficient	Bosch logo, title banner, document table
+m023	loses	Figure 8 coordinate system illustration
+m024	loses	Figures 1-3 characteristic curve plots
+m025	loses	package photo, pinout drawing, marking outline
+m026	loses	package photo, transistor symbol, pinout drawings
+m027	loses	package photo, device symbol, marking outline
+m028	sufficient	pin description table, watermark, logo
+m029	sufficient	heading, watermark text, footer
+m030	sufficient	heading, watermark text, footer
+m031	sufficient	application note text, watermark, footer
+m032	loses	package outline and MOSFET symbol in table
+m033	loses	Figure 5-20 data rate versus temperature plot
+m034	sufficient	ratings tables, ordering text, TI logo
+m035	loses	five other characteristic curve plots
+m036	loses	TSSOP pin configuration diagram
+m037	loses	simplified schematic block diagram
+m038	loses	simplified schematic block diagram
+m039	sufficient	features text, package and device tables
+m040	loses	adjustable regulator circuit schematic above
+m041	sufficient	related links table, ESD text
+m044	loses	Figure 8-23 legacy layout diagram
+m045	loses	Figure 5 layout diagram
+m046	sufficient	related links table, body text
+m047	loses	TO-220 package mechanical drawing
+m049	loses	Figure 9-9 bass boost circuit schematic
+m050	loses	two other package pinout diagrams
+m051	sufficient	related links table, revision history text
+m052	loses	thermal time constant chart, small schematic
+m053	loses	five other characteristic curve plots
+m054	sufficient	features text, device information table
+m055	loses	OPAx333 pinout diagrams
+m056	loses	functional block diagram schematic
+m057	loses	SSOP package mechanical drawing
+m058	sufficient	features text, device information table
+m059	loses	OPAx333 pinout diagrams
+m060	loses	functional block diagram schematic
+m061	loses	SSOP package mechanical drawing
+m062	loses	SSOP package mechanical drawing
+m063	loses	seven other output voltage and efficiency plots
+m064	sufficient	body text, headings, page furniture
+m065	sufficient	overview text, function table
+m066	sufficient	features text, device information table
+m067	sufficient	related links table, ESD text
+m068	sufficient	features text, device information table
+m069	sufficient	features text, device information table
+m070	sufficient	features text, device information table, TI logo
+m071	sufficient	features text, device table, header nav icons
+m072	sufficient	body text, function table, headings
+m073	sufficient	features text, device table, header icons
+m074	sufficient	body text, function table, headings
+m075	sufficient	features text, device information table, footnotes
+m076	loses	DIP/SOIC package pinout diagram at left
+m077	sufficient	body text, function table, headings
+m078	loses	full package outline mechanical drawing below
+m079	loses	full package outline mechanical drawing below
+m080	sufficient	related links table, body text, headings
+m081	loses	full package outline mechanical drawing below
+m082	sufficient	related links table, body text, ESD text
+m083	loses	full package outline mechanical drawing below
+m084	sufficient	features text, device information table, footnotes
+m085	loses	DIP/SOIC package pinout diagram at left
+m086	loses	full package outline mechanical drawing below
+m087	sufficient	features text, device information table, footnote
+m088	loses	full package outline mechanical drawing below
+m089	sufficient	features text, device information table, footnote
+m090	sufficient	features text, device information table, footnote
+m091	sufficient	notes text, headings, page furniture
+m092	sufficient	body text, function table, headings
+m093	loses	full package outline mechanical drawing below
+m094	sufficient	related links table, body text, headings
+m095	loses	full package outline mechanical drawing below
+m096	sufficient	features text, device information table, footnote
+m097	sufficient	body text, function table, headings
+m098	loses	full package outline mechanical drawing below
+m099	sufficient	related links table, body text, headings
+m100	loses	full package outline mechanical drawing below
+m101	loses	Figure 7-3 input/output transistor schematics below
+m102	loses	Figure 5-38 inrush current plot at right
+m103	sufficient	body text, equation, TI logo, footer
+m104	sufficient	tables, body text, logo, footer
+m105	sufficient	header icons, logo, tables, feature text
+m106	loses	Figure 28 input impedance circuit diagram above
+m107	loses	Figure 31 SDZ timing diagram at right
+m108	loses	five other characteristic plots, Figures 8-12
+m109	loses	Figure 7-9 application circuit schematic below
+m110	sufficient	revision-history text and tables only
+m111	sufficient	header icons, logo, feature text, table
+m112	sufficient	body text and revision table only
+m113	loses	rest of Figure 1 BERT pre-training/fine-tuning diagram
+m114	norect	no red rectangle found on page
+m115	sufficient	table, body text, caption only
+m116	loses	rest of ViT model overview diagram, encoder panel
+m117	loses	Figure 10 scatter plots below
+m118	loses	panels a, c, d: contour plots, heatmap, bars
+m119	loses	bar chart of success-rate delta at right
+m120	sufficient	instruction table and ablation results table
+m121	sufficient	Tables 2-4 and body text
+m122	sufficient	caption, Table 4, journal header/footer
+m123	sufficient	Tables 2-3, body text, footer
+m124	sufficient	title, abstract, body text, page furniture
+m125	sufficient	title, abstract, body text, page furniture
+m126	sufficient	title, abstract, body text, page furniture
+m127	sufficient	Table 2, body text, caption
+m128	sufficient	Table 3, caption, page header
+m129	sufficient	Tables 2-3, body text, footer
+m130	sufficient	Table I, caption, running heads
+m131	sufficient	body text, figure caption, page number
+m132	sufficient	body text, figure caption, page number
+m133	sufficient	body text, Table I, figure caption
+m134	loses	Figure 3 bar chart of diagnosis prevalence

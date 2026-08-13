@@ -1,0 +1,33 @@
+tag	label	note
+m103	sufficient	body text, equation, TI logo, footer
+m104	sufficient	tables, body text, logo, footer
+m105	sufficient	header icons, logo, tables, feature text
+m106	loses	Figure 28 input impedance circuit diagram above
+m107	loses	Figure 31 SDZ timing diagram at right
+m108	loses	five other characteristic plots, Figures 8-12
+m109	loses	Figure 7-9 application circuit schematic below
+m110	sufficient	revision-history text and tables only
+m111	sufficient	header icons, logo, feature text, table
+m112	sufficient	body text and revision table only
+m113	loses	rest of Figure 1 BERT pre-training/fine-tuning diagram
+m114	norect	no red rectangle found on page
+m115	sufficient	table, body text, caption only
+m116	loses	rest of ViT model overview diagram, encoder panel
+m117	loses	Figure 10 scatter plots below
+m118	loses	panels a, c, d: contour plots, heatmap, bars
+m119	loses	bar chart of success-rate delta at right
+m120	sufficient	instruction table and ablation results table
+m121	sufficient	Tables 2-4 and body text
+m122	sufficient	caption, Table 4, journal header/footer
+m123	sufficient	Tables 2-3, body text, footer
+m124	sufficient	title, abstract, body text, page furniture
+m125	sufficient	title, abstract, body text, page furniture
+m126	sufficient	title, abstract, body text, page furniture
+m127	sufficient	Table 2, body text, caption
+m128	sufficient	Table 3, caption, page header
+m129	sufficient	Tables 2-3, body text, footer
+m130	sufficient	Table I, caption, running heads
+m131	sufficient	body text, figure caption, page number
+m132	sufficient	body text, figure caption, page number
+m133	sufficient	body text, Table I, figure caption
+m134	loses	Figure 3 bar chart of diagnosis prevalence

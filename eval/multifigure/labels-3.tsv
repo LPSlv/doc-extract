@@ -1,0 +1,132 @@
+tag	label	note
+m001	loses	Figure 1 three time-series population plots
+m002	sufficient	axis labels and top legend row only
+m003	loses	rest of Fig 1 satellite-Earth geometry diagram
+m004	loses	Figure 1 testbed block diagram
+m005	loses	rest of Figure 7 pipeline diagram
+m006	sufficient	prompt text box, table, journal logo
+m007	loses	right panel power spectrum plot, colorbar
+m008	loses	Figure 4 uplink MU-MIMO geometry diagram
+m009	loses	MSE versus iteration step plot
+m010	loses	MSE versus iteration step plot
+m011	loses	panels B and C line and bar plots
+m012	loses	Figure 4 impedance frequency spectrum plot
+m013	sufficient	body text, equations, proofs
+m014	sufficient	text, equations, problem box
+m015	loses	panel b atomic level scheme
+m016	sufficient	Table 5 and body text
+m017	loses	rest of Figure 2 framework diagram
+m018	loses	panels b, c, d, e and remainder of a
+m019	sufficient	axis labels and colorbar strip
+m020	loses	Figure 14 Sankey failure-flow diagrams
+m021	sufficient	pin description table, header banner
+m022	sufficient	Bosch logo, title banner, document table
+m023	loses	Figure 8 coordinate system drawing
+m024	loses	Figures 1, 2, 3 characteristic curves
+m025	loses	package photo, pinout drawing, marking outline
+m026	loses	transistor symbol, package photo, marking drawing
+m027	loses	transistor symbol, package photo, marking drawing
+m028	sufficient	pin description table, watermark, logo
+m029	sufficient	watermark, logo, headings
+m030	sufficient	watermark, logo, headings
+m031	sufficient	application text, notes, watermark
+m032	loses	package outline and MOSFET symbol in table
+m033	loses	Figure 5-20 data rate versus temperature plot
+m034	sufficient	ratings table, ESD text, TI logo only
+m035	loses	five other characteristic curve plots
+m036	loses	pin configuration package diagram
+m037	loses	simplified schematic block diagram
+m038	loses	simplified schematic block diagram
+m039	sufficient	features text, tables, header icons
+m040	loses	circuit schematic Figure 8-9
+m041	sufficient	related-links table, text, headings
+m044	loses	Figure 8-23 layout diagram
+m045	loses	Figure 5 layout diagram
+m046	sufficient	related-links table, text, headings
+m047	loses	full mechanical package outline drawing
+m049	loses	circuit schematic Figure 9-9
+m050	loses	two other package pinout diagrams
+m051	sufficient	related-links table, revision history text
+m052	loses	thermal time constant chart, small circuit
+m053	loses	five other characteristic curve plots
+m054	sufficient	features text, device information table
+m055	loses	OPAx333 pinout diagrams
+m056	loses	functional block diagram schematic
+m057	loses	large package outline drawing
+m058	sufficient	features text, device information table
+m059	loses	OPAx333 pinout diagrams
+m060	loses	functional block diagram schematic
+m061	loses	large package outline drawing
+m062	loses	large package outline drawing
+m063	loses	seven other curve plots
+m064	sufficient	body text, headings, page furniture
+m065	sufficient	overview text, function table, pin labels
+m066	sufficient	features text, device information table
+m067	sufficient	related-links table, ESD text, headings
+m068	sufficient	features text, device information table
+m069	sufficient	features text, device information table
+m070	sufficient	features text, device information table, TI logo
+m071	sufficient	header nav icons, device table, features text
+m072	sufficient	description text, function table, headers
+m073	sufficient	header nav icons, device table, features text
+m074	sufficient	description text, function table
+m075	sufficient	header nav icons, device table, description text
+m076	loses	DIP/SOIC pinout diagram left of box
+m077	sufficient	description text, function table
+m078	loses	full SOIC package mechanical drawing below
+m079	loses	full SOIC package mechanical drawing below
+m080	sufficient	related links table, support text
+m081	loses	full SOIC package mechanical drawing below
+m082	sufficient	related links table, support text
+m083	loses	full SOIC package mechanical drawing below
+m084	sufficient	features text, device information table
+m085	loses	DIP pinout diagram left of box
+m086	loses	full SOIC package mechanical drawing below
+m087	sufficient	header nav icons, device table, features text
+m088	loses	full SOIC package mechanical drawing below
+m089	sufficient	header nav icons, device table, description text
+m090	sufficient	header nav icons, device table, description text
+m091	sufficient	lettered notes, heading, figure caption
+m092	sufficient	description text, function table
+m093	loses	full SOIC package mechanical drawing below
+m094	sufficient	related links table, support text
+m095	loses	full SOIC package mechanical drawing below
+m096	sufficient	header nav icons, device table, features text
+m097	sufficient	description text, function table
+m098	loses	full SOIC package mechanical drawing below
+m099	sufficient	related links table, support text
+m100	loses	full SOIC package mechanical drawing below
+m101	loses	Figure 7-3 input/output transistor schematics below
+m102	loses	Figure 5-38 inrush current plot at right
+m103	sufficient	body text, equation, TI logo
+m104	sufficient	tables, body text, headings
+m105	sufficient	feature text, device table, header icons
+m106	loses	Figure 28 input impedance circuit diagram above
+m107	loses	Figure 31 SDZ timing diagram at right
+m108	loses	five other characteristic charts, Figures 8-12
+m109	loses	Figure 7-9 application circuit schematic below
+m110	sufficient	revision history text, ESD icon only
+m111	sufficient	features text, device information table
+m112	sufficient	body text, revision table, ESD icon
+m113	loses	rest of Figure 1 pre-training and fine-tuning panels
+m114	norect	no red rectangle found on page
+m115	sufficient	table, body text, caption
+m116	loses	rest of Figure 1 ViT and encoder diagram
+m117	loses	Figure 10 two scatter plots below
+m118	loses	Figure 3 panels a, c, d
+m119	loses	bar chart beside Table 5
+m120	sufficient	two tables and body text
+m121	sufficient	three tables, body text, caption
+m122	sufficient	Table 4, caption, journal furniture
+m123	sufficient	Tables 2 and 3, body text
+m124	sufficient	abstract and body text, journal furniture
+m125	sufficient	abstract and body text, journal furniture
+m126	sufficient	abstract and body text, journal furniture
+m127	sufficient	Table 2, body text, figure caption
+m128	sufficient	Table 3, caption text
+m129	sufficient	Tables 2 and 3, body text
+m130	sufficient	Table I, caption, page furniture
+m131	sufficient	body text, figure caption, blue border
+m132	sufficient	body text, figure caption, blue border
+m133	sufficient	Table I, body text, caption
+m134	loses	Figure 3 bar chart below

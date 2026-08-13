@@ -1,0 +1,34 @@
+tag	label	note
+m001	loses	Figure 1 three time-series population plots
+m002	loses	top band of plot, legend markers clipped
+m003	loses	rest of Fig 1 orbital geometry diagram
+m004	loses	Figure 1 testbed block diagram
+m005	loses	entire Figure 7 pipeline diagram
+m006	sufficient	prompt text box, table, IEEE logo
+m007	loses	right panel power spectrum of Fig 3
+m008	loses	Figure 4 uplink MU-MIMO geometry diagram
+m009	loses	main MSE versus iteration step plot
+m010	loses	main MSE versus iteration step plot
+m011	loses	panels B and C of Figure S2
+m012	loses	Figure 4 impedance spectrum plot
+m013	sufficient	body text and proofs only
+m014	sufficient	text, equations; Fig 5 enclosed
+m015	loses	panel b energy level scheme
+m016	sufficient	Table 5 and body text
+m017	loses	rest of Fig 2 framework diagram
+m018	loses	panels b through e plots, schematic a
+m019	sufficient	colorbar, axis labels, body text
+m020	loses	Figure 14 Sankey failure diagrams
+m021	sufficient	Table 24, header banner, text
+m022	sufficient	Bosch logo, banners, document text
+m023	loses	Figure 8 coordinate system diagram
+m024	loses	Figures 1, 2, 3 characteristic curves
+m025	loses	package photo, pinout drawing, marking diagram
+m026	loses	device symbol, package photo, pinout drawings
+m027	loses	device symbol, package photo, marking drawing
+m028	sufficient	pin description table, watermark, furniture
+m029	sufficient	heading text, watermark, page furniture
+m030	sufficient	heading text, watermark, page furniture
+m031	sufficient	application note text and watermark
+m032	loses	package outline and MOSFET symbol in table
+m033	loses	Figure 5-20 data rate vs temperature plot

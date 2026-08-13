@@ -1,0 +1,34 @@
+tag	label	note
+m001	loses	Figure 1 three prey-predator time-series plots
+m002	loses	top of plot frame and legend markers clipped
+m003	loses	rest of satellite/Earth calibration schematic
+m004	loses	Figure 1 BLE testbed block diagram
+m005	loses	rest of CaRL rollout/reward pipeline diagram
+m006	sufficient	journal logo, prompt text box, ruled table
+m007	loses	right-hand power spectrum panel and colorbar
+m008	loses	Figure 4 uplink MU-MIMO geometry diagram
+m009	loses	MSE-versus-iteration step chart outside panel
+m010	loses	MSE-versus-iteration step chart outside panel
+m011	loses	panels B and C line and bar plots
+m012	loses	Figure 4 impedance versus frequency plot
+m013	sufficient	proofs, theorems, displayed equations only
+m014	sufficient	body text, equations, boxed problem statement
+m015	norect	no red rectangle found on page
+m016	sufficient	Table 5 results table and body text
+m017	loses	rest of CodeShrink framework block diagram
+m018	loses	panels b-e spectra and lower part of a
+m019	sufficient	colorbar, axis labels, caption, body text
+m020	loses	Figure 14 Sankey failure-flow diagrams
+m021	sufficient	headings, Table 24, colored header band
+m022	sufficient	Bosch logo, title banner, document table
+m023	loses	Figure 8 coordinate system illustration
+m024	loses	Figures 1-3 characteristic curve plots
+m025	loses	package photo, pinout drawing, marking outline
+m026	loses	package photo, transistor symbol, pinout drawings
+m027	loses	package photo, device symbol, marking outline
+m028	sufficient	pin description table, watermark, logo
+m029	sufficient	heading, watermark text, footer
+m030	sufficient	heading, watermark text, footer
+m031	sufficient	application note text, watermark, footer
+m032	loses	package outline and MOSFET symbol in table
+m033	loses	Figure 5-20 data rate versus temperature plot

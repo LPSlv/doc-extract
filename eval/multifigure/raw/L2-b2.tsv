@@ -1,0 +1,34 @@
+tag	label	note
+m034	sufficient	ratings tables, body text, vendor logo
+m035	loses	five other characteristic plots outside box
+m036	loses	pin configuration package diagram outside
+m037	loses	simplified block schematic of driver outside
+m038	loses	simplified schematic drawing outside box
+m039	sufficient	feature text, package and device tables
+m040	loses	regulator application circuit schematic above equations
+m041	sufficient	related-links table, text, ESD icon
+m044	loses	legacy chip layout diagram above box
+m045	loses	layout diagram figure 5 outside
+m046	sufficient	related-links table, body text, ESD icon
+m047	loses	full package outline mechanical drawing outside
+m049	loses	bass boost circuit schematic outside box
+m050	loses	two other package pinout diagrams outside
+m051	sufficient	links table, revision history, ESD icon
+m052	loses	thermal time constant chart and small schematic
+m053	loses	five other characteristic curve plots outside
+m054	sufficient	feature text, device information table, header icons
+m055	loses	OPAx333 pinout diagrams outside box
+m056	loses	functional block diagram schematic outside
+m057	loses	large package outline mechanical drawing outside
+m058	sufficient	feature text, device information table, header icons
+m059	loses	OPAx333 pinout diagrams outside box
+m060	loses	functional block diagram schematic outside
+m061	loses	large package outline mechanical drawing outside
+m062	loses	large package outline mechanical drawing outside
+m063	loses	seven other voltage and efficiency plots
+m064	sufficient	headings and running body text only
+m065	sufficient	overview text and function table
+m066	sufficient	feature text, device information table, header icons
+m067	sufficient	links table, body text, ESD icon
+m068	sufficient	feature text, device information table, caption
+m069	sufficient	feature text, device information table, caption

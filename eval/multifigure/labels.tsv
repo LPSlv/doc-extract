@@ -1,0 +1,132 @@
+tag	corpus	file	page	signal	bbox_frac	judgeable	label	agree	note
+m001	arxiv	2607.24285v1.pdf	18	dense_grid	0.0652	True	loses	3/3	Figure 1 three prey-predator time-series plots
+m002	arxiv	2607.28564v1.pdf	9	diagonals	0.1756	True	loses	2/3	top of plot frame and legend markers clipped
+m003	arxiv	2607.29107v1.pdf	2	curves	0.0031	True	loses	3/3	rest of satellite/Earth calibration schematic
+m004	arxiv	2607.29110v1.pdf	2	curves	0.058	True	loses	3/3	Figure 1 BLE testbed block diagram
+m005	arxiv	2607.29211v1.pdf	5	curves	0.0008	True	loses	3/3	rest of CaRL rollout/reward pipeline diagram
+m006	arxiv	2607.29402v1.pdf	6	curves	0.1474	True	sufficient	3/3	journal logo, prompt text box, ruled table
+m007	arxiv	2607.29414v1.pdf	5	curves	0.0317	True	loses	3/3	right-hand power spectrum panel and colorbar
+m008	arxiv	2607.29542v1.pdf	3	curves	0.079	True	loses	3/3	Figure 4 uplink MU-MIMO geometry diagram
+m009	arxiv	2607.29561v1.pdf	24	curves	0.0736	True	loses	3/3	MSE-versus-iteration step chart outside panel
+m010	arxiv	2607.29561v1.pdf	25	curves	0.0317	True	loses	3/3	MSE-versus-iteration step chart outside panel
+m011	arxiv	2607.29565v1.pdf	14	curves	0.0343	True	loses	3/3	panels B and C line and bar plots
+m012	arxiv	2607.29582v1.pdf	4	curves	0.0306	True	loses	3/3	Figure 4 impedance versus frequency plot
+m013	arxiv	2607.29603v1.pdf	5	stroke_grid	0.027	True	sufficient	3/3	proofs, theorems, displayed equations only
+m014	arxiv	2607.29603v1.pdf	7	curves	0.0179	True	sufficient	3/3	body text, equations, boxed problem statement
+m015	arxiv	2607.29609v1.pdf	3	curves	None	False	loses	2/3	panel b energy level scheme
+m016	arxiv	2607.29622v1.pdf	8	stroke_grid	0.0358	True	sufficient	3/3	Table 5 results table and body text
+m017	arxiv	2607.29637v1.pdf	4	curves	0.0124	True	loses	3/3	rest of CodeShrink framework block diagram
+m018	arxiv	2607.29666v1.pdf	5	curves	0.0059	True	loses	3/3	panels b-e spectra and lower part of a
+m019	arxiv	2607.29666v1.pdf	6	curves	0.0396	True	sufficient	3/3	colorbar, axis labels, caption, body text
+m020	arxiv	2607.29687v1.pdf	17	curves	0.111	True	loses	3/3	Figure 14 Sankey failure-flow diagrams
+m021	datasheets	bme680_bosch.pdf	44	dense_grid	0.2163	True	sufficient	3/3	headings, Table 24, colored header band
+m022	datasheets	bmi160_bosch.pdf	1	dense_grid	0.0343	True	sufficient	3/3	Bosch logo, title banner, document table
+m023	datasheets	bmi160_bosch.pdf	33	curves	0.1588	True	loses	3/3	Figure 8 coordinate system illustration
+m024	datasheets	diodes_bav99.pdf	3	diagonals	0.1066	True	loses	3/3	Figures 1-3 characteristic curve plots
+m025	datasheets	diodes_bss84.pdf	1	diagonals	0.0197	True	loses	3/3	package photo, pinout drawing, marking outline
+m026	datasheets	diodes_mmbt2222a.pdf	1	diagonals	0.0168	True	loses	3/3	package photo, transistor symbol, pinout drawings
+m027	datasheets	diodes_mmbt3906.pdf	1	diagonals	0.0119	True	loses	3/3	package photo, device symbol, marking outline
+m028	datasheets	diodes_pam8403.pdf	2	curves	0.1828	True	sufficient	3/3	pin description table, watermark, logo
+m029	datasheets	diodes_pam8403.pdf	5	curves	0.3833	True	sufficient	3/3	heading, watermark text, footer
+m030	datasheets	diodes_pam8403.pdf	6	curves	0.372	True	sufficient	3/3	heading, watermark text, footer
+m031	datasheets	diodes_pam8403.pdf	7	curves	0.1426	True	sufficient	3/3	application note text, watermark, footer
+m032	datasheets	nexperia_2N7002.pdf	1	curves	0.0069	True	loses	3/3	package outline and MOSFET symbol in table
+m033	datasheets	ti_ads1115.pdf	10	curves	0.0483	True	loses	3/3	Figure 5-20 data rate versus temperature plot
+m034	datasheets	ti_ads1256.pdf	2	diagonals	0.0017	True	sufficient	3/3	ratings tables, ordering text, TI logo
+m035	datasheets	ti_ads1256.pdf	10	curves	0.0484	True	loses	3/3	five other characteristic curve plots
+m036	datasheets	ti_ads7830.pdf	2	curves	0.0017	True	loses	3/3	TSSOP pin configuration diagram
+m037	datasheets	ti_drv8825.pdf	1	curves	0.0642	True	loses	3/3	simplified schematic block diagram
+m038	datasheets	ti_drv8871.pdf	1	curves	0.0821	True	loses	3/3	simplified schematic block diagram
+m039	datasheets	ti_lm2576.pdf	1	curves	0.0609	True	sufficient	3/3	features text, package and device tables
+m040	datasheets	ti_lm2576.pdf	22	curves	0.0049	True	loses	3/3	adjustable regulator circuit schematic above
+m041	datasheets	ti_lm2901.pdf	23	curves	0.0016	True	sufficient	3/3	related links table, ESD text
+m044	datasheets	ti_lm317.pdf	26	curves	0.1587	True	loses	3/3	Figure 8-23 legacy layout diagram
+m045	datasheets	ti_lm337.pdf	11	curves	0.0017	True	loses	3/3	Figure 5 layout diagram
+m046	datasheets	ti_lm339.pdf	23	curves	0.0016	True	sufficient	3/3	related links table, body text
+m047	datasheets	ti_lm35.pdf	34	curves	0.0045	True	loses	3/3	TO-220 package mechanical drawing
+m049	datasheets	ti_lm386.pdf	15	curves	0.0371	True	loses	3/3	Figure 9-9 bass boost circuit schematic
+m050	datasheets	ti_lm4040.pdf	4	curves	0.0158	True	loses	3/3	two other package pinout diagrams
+m051	datasheets	ti_lm4040.pdf	30	curves	0.0016	True	sufficient	3/3	related links table, revision history text
+m052	datasheets	ti_lmt84.pdf	1	curves	0.0376	True	loses	3/3	thermal time constant chart, small schematic
+m053	datasheets	ti_lp2985.pdf	8	curves	0.0489	True	loses	3/3	five other characteristic curve plots
+m054	datasheets	ti_opa2277.pdf	1	curves	0.0484	True	sufficient	3/3	features text, device information table
+m055	datasheets	ti_opa2333.pdf	1	curves	0.0313	True	loses	3/3	OPAx333 pinout diagrams
+m056	datasheets	ti_opa2340.pdf	12	curves	0.0464	True	loses	3/3	functional block diagram schematic
+m057	datasheets	ti_opa2340.pdf	35	curves	0.005	True	loses	3/3	SSOP package mechanical drawing
+m058	datasheets	ti_opa277.pdf	1	curves	0.0484	True	sufficient	3/3	features text, device information table
+m059	datasheets	ti_opa333.pdf	1	curves	0.0313	True	loses	3/3	OPAx333 pinout diagrams
+m060	datasheets	ti_opa340.pdf	12	curves	0.0464	True	loses	3/3	functional block diagram schematic
+m061	datasheets	ti_opa340.pdf	35	curves	0.005	True	loses	3/3	SSOP package mechanical drawing
+m062	datasheets	ti_opa350.pdf	35	curves	0.005	True	loses	3/3	SSOP package mechanical drawing
+m063	datasheets	ti_sn6501.pdf	8	curves	0.0423	True	loses	3/3	seven other output voltage and efficiency plots
+m064	datasheets	ti_sn65hvd230.pdf	30	curves	0.2115	True	sufficient	3/3	body text, headings, page furniture
+m065	datasheets	ti_sn74ahct125.pdf	9	curves	0.1112	True	sufficient	3/3	overview text, function table
+m066	datasheets	ti_sn74hc138.pdf	1	curves	0.1742	True	sufficient	3/3	features text, device information table
+m067	datasheets	ti_sn74hc138.pdf	13	curves	0.0016	True	sufficient	3/3	related links table, ESD text
+m068	datasheets	ti_sn74hc151.pdf	1	curves	0.2617	True	sufficient	3/3	features text, device information table
+m069	datasheets	ti_sn74hc153.pdf	1	curves	0.1869	True	sufficient	3/3	features text, device information table
+m070	datasheets	ti_sn74hc157.pdf	1	curves	0.201	True	sufficient	3/3	features text, device information table, TI logo
+m071	datasheets	ti_sn74hc174.pdf	1	curves	0.07	True	sufficient	3/3	features text, device table, header nav icons
+m072	datasheets	ti_sn74hc174.pdf	8	curves	0.1374	True	sufficient	3/3	body text, function table, headings
+m073	datasheets	ti_sn74hc175.pdf	1	curves	0.0724	True	sufficient	3/3	features text, device table, header icons
+m074	datasheets	ti_sn74hc175.pdf	8	curves	0.1505	True	sufficient	3/3	body text, function table, headings
+m075	datasheets	ti_sn74hc240.pdf	1	curves	0.1573	True	sufficient	3/3	features text, device information table, footnotes
+m076	datasheets	ti_sn74hc240.pdf	3	curves	0.0452	True	loses	3/3	DIP/SOIC package pinout diagram at left
+m077	datasheets	ti_sn74hc240.pdf	9	curves	0.2115	True	sufficient	3/3	body text, function table, headings
+m078	datasheets	ti_sn74hc240.pdf	32	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m079	datasheets	ti_sn74hc244.pdf	35	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m080	datasheets	ti_sn74hc245.pdf	13	curves	0.0016	True	sufficient	3/3	related links table, body text, headings
+m081	datasheets	ti_sn74hc245.pdf	32	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m082	datasheets	ti_sn74hc273.pdf	15	curves	0.0016	True	sufficient	3/3	related links table, body text, ESD text
+m083	datasheets	ti_sn74hc273.pdf	34	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m084	datasheets	ti_sn74hc373.pdf	1	curves	0.0627	True	sufficient	3/3	features text, device information table, footnotes
+m085	datasheets	ti_sn74hc373.pdf	3	curves	0.0403	True	loses	3/3	DIP/SOIC package pinout diagram at left
+m086	datasheets	ti_sn74hc373.pdf	31	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m087	datasheets	ti_sn74hc374.pdf	1	curves	0.1494	True	sufficient	3/3	features text, device information table, footnote
+m088	datasheets	ti_sn74hc374.pdf	21	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m089	datasheets	ti_sn74hc4040.pdf	1	curves	0.2777	True	sufficient	3/3	features text, device information table, footnote
+m090	datasheets	ti_sn74hc540.pdf	1	curves	0.0672	True	sufficient	3/3	features text, device information table, footnote
+m091	datasheets	ti_sn74hc540.pdf	7	curves	0.3437	True	sufficient	3/3	notes text, headings, page furniture
+m092	datasheets	ti_sn74hc540.pdf	8	curves	0.079	True	sufficient	3/3	body text, function table, headings
+m093	datasheets	ti_sn74hc540.pdf	18	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m094	datasheets	ti_sn74hc541.pdf	15	curves	0.0016	True	sufficient	3/3	related links table, body text, headings
+m095	datasheets	ti_sn74hc541.pdf	28	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m096	datasheets	ti_sn74hc574.pdf	1	curves	0.0919	True	sufficient	3/3	features text, device information table, footnote
+m097	datasheets	ti_sn74hc574.pdf	8	curves	0.1474	True	sufficient	3/3	body text, function table, headings
+m098	datasheets	ti_sn74hc574.pdf	28	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m099	datasheets	ti_sn74hct245.pdf	13	curves	0.0016	True	sufficient	3/3	related links table, body text, headings
+m100	datasheets	ti_sn74hct245.pdf	35	curves	0.004	True	loses	3/3	full package outline mechanical drawing below
+m101	datasheets	ti_sn75176b.pdf	15	curves	0.2415	True	loses	3/3	Figure 7-3 input/output transistor schematics below
+m102	datasheets	ti_tlv1117.pdf	16	curves	0.0556	True	loses	3/3	Figure 5-38 inrush current plot at right
+m103	datasheets	ti_tlv1117.pdf	18	curves	0.1081	True	sufficient	3/3	body text, equation, TI logo, footer
+m104	datasheets	ti_tlv1117.pdf	29	curves	0.0016	True	sufficient	3/3	tables, body text, logo, footer
+m105	datasheets	ti_tlv9002.pdf	1	curves	0.0569	True	sufficient	3/3	header icons, logo, tables, feature text
+m106	datasheets	ti_tpa3116d2.pdf	15	curves	0.0787	True	loses	3/3	Figure 28 input impedance circuit diagram above
+m107	datasheets	ti_tpa3116d2.pdf	18	curves	0.095	True	loses	3/3	Figure 31 SDZ timing diagram at right
+m108	datasheets	ti_tps22918.pdf	9	curves	0.0713	True	loses	3/3	five other characteristic plots, Figures 8-12
+m109	datasheets	ti_tps5430.pdf	19	curves	0.0373	True	loses	3/3	Figure 7-9 application circuit schematic below
+m110	datasheets	ti_tps5430.pdf	26	curves	0.0016	True	sufficient	3/3	revision-history text and tables only
+m111	datasheets	ti_ucc27524.pdf	1	curves	0.0357	True	sufficient	3/3	header icons, logo, feature text, table
+m112	datasheets	ti_ucc27524.pdf	28	curves	0.0016	True	sufficient	3/3	body text and revision table only
+m113	papers	ai_bert.pdf	3	curves	0.0124	True	loses	3/3	rest of Figure 1 BERT pre-training/fine-tuning diagram
+m114	papers	ai_bert.pdf	15	curves	None	False	norect	3/3	no red rectangle found on page
+m115	papers	ai_flashattention.pdf	28	stroke_grid	0.1498	True	sufficient	3/3	table, body text, caption only
+m116	papers	ai_vit.pdf	3	curves	0.0024	True	loses	3/3	rest of ViT model overview diagram, encoder panel
+m117	papers	bio_protein-lm.pdf	58	curves	0.1567	True	loses	3/3	Figure 10 scatter plots below
+m118	papers	bio_singlecell.pdf	9	curves	0.0161	True	loses	3/3	panels a, c, d: contour plots, heatmap, bars
+m119	papers	rob_rt1.pdf	13	diagonals	0.0843	True	loses	3/3	bar chart of success-rate delta at right
+m120	papers	rob_rt1.pdf	30	stroke_grid	0.0978	True	sufficient	3/3	instruction table and ablation results table
+m121	pmc	40268_2017_Article_213.PMC5694426.pdf	4	curves	0.0821	True	sufficient	3/3	Tables 2-4 and body text
+m122	pmc	41598_2024_Article_73788.PMC11466948.pdf	8	curves	0.4162	True	sufficient	3/3	caption, Table 4, journal header/footer
+m123	pmc	41598_2025_Article_28505.PMC12756295.pdf	14	curves	0.2105	True	sufficient	3/3	Tables 2-3, body text, footer
+m124	pmc	AJPS-20-243.PMC10450116.pdf	1	stroke_grid	0.0066	True	sufficient	3/3	title, abstract, body text, page furniture
+m125	pmc	IJCM-45-199.PMC7467180.pdf	1	stroke_grid	0.0066	True	sufficient	3/3	title, abstract, body text, page furniture
+m126	pmc	IJO-67-1080.PMC6611248.pdf	1	stroke_grid	0.0066	True	sufficient	3/3	title, abstract, body text, page furniture
+m127	pmc	ZEPT_16_2599612.PMC12713222.pdf	7	curves	0.1923	True	sufficient	3/3	Table 2, body text, caption
+m128	pmc	ZEPT_16_2599612.PMC12713222.pdf	8	curves	0.2052	True	sufficient	3/3	Table 3, caption, page header
+m129	pmc	cia-15-673.PMC7244746.pdf	5	stroke_grid	0.0892	True	sufficient	3/3	Tables 2-3, body text, footer
+m130	pmc	cm-96-392.PMC10642746.pdf	3	dense_grid	0.3344	True	sufficient	3/3	Table I, caption, running heads
+m131	pmc	ejtm-33-4-12037.PMC10811632.pdf	3	dense_grid	0.4036	True	sufficient	3/3	body text, figure caption, page number
+m132	pmc	ejtm-33-4-12037.PMC10811632.pdf	4	dense_grid	0.2094	True	sufficient	3/3	body text, figure caption, page number
+m133	pmc	in-17-110.PMC5407982.pdf	3	curves	0.2019	True	sufficient	3/3	body text, Table I, figure caption
+m134	pmc	zpag013.PMC13000462.pdf	5	curves	0.1929	True	loses	3/3	Figure 3 bar chart of diagnosis prevalence

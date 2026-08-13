@@ -1,0 +1,33 @@
+tag	label	note
+m103	sufficient	body text, equation, TI logo, page furniture
+m104	sufficient	tables, body text, logo, revision history
+m105	sufficient	features text, device table, header icons
+m106	loses	Figure 28 input impedance schematic above box
+m107	loses	Figure 31 SDZ timing diagram at right
+m108	loses	Figures 8-12 line plots outside box
+m109	loses	Figure 7-9 application circuit schematic below
+m110	sufficient	text, revision history bullet lists
+m111	sufficient	features text, device information table
+m112	sufficient	body text, revision table, headings
+m113	loses	most of Figure 1 pre-training/fine-tuning diagram outside
+m114	norect	no red rectangle found on page
+m115	sufficient	table, body text, caption
+m116	loses	rest of Figure 1 ViT and encoder diagram
+m117	loses	Figure 10 scatter plots below box
+m118	loses	panels a, c, d contour plots, heatmap, bars
+m119	loses	bar chart beside Table 5
+m120	sufficient	instruction table, ablation results table, text
+m121	sufficient	three tables, body text, page furniture
+m122	sufficient	caption, threshold effect table, journal furniture
+m123	sufficient	Tables 2 and 3, body text, caption
+m124	sufficient	abstract, body text, banners, journal furniture
+m125	sufficient	abstract, body text, banners, footers
+m126	sufficient	abstract, body text, headers, citation box
+m127	sufficient	Table 2, body text, figure caption
+m128	sufficient	Table 3, caption, notes
+m129	sufficient	Tables 2 and 3, body text, caption
+m130	sufficient	Table I, heading, page footer
+m131	sufficient	body text, italic figure caption
+m132	sufficient	body text, italic figure caption
+m133	sufficient	body text, Table I, figure caption
+m134	loses	Figure 3 grouped bar chart below box
