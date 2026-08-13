@@ -1,0 +1,6698 @@
+{
+ "corpora": [
+  "arxiv_holdout",
+  "pmc_holdout"
+ ],
+ "dpi": 130,
+ "definition": "pages with >1 routed raster (by item page) where render_reason fires",
+ "totals": {
+  "files": 598,
+  "pages": 9930,
+  "calls": 3267,
+  "rasters": 1139,
+  "img_tok": 3314871,
+  "multi_signal": 222,
+  "multi_crop_tok": 133689,
+  "multi_pages": 73,
+  "multi_render_tok": 95783
+ },
+ "docs": [
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2607.29295v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 4,
+   "ours": 4172,
+   "whole": 27710,
+   "npages": 40,
+   "pages": [
+    15
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2607.29554v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 5,
+   "ours": 1782,
+   "whole": 37017,
+   "npages": 46,
+   "pages": [
+    17
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00657v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 18,
+   "ours": 6914,
+   "whole": 50449,
+   "npages": 74,
+   "pages": [
+    26,
+    28,
+    65
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00677v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 10,
+   "ours": 8238,
+   "whole": 39448,
+   "npages": 50,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00693v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 6,
+   "ours": 7785,
+   "whole": 21895,
+   "npages": 18,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00994v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 16,
+   "ours": 7319,
+   "whole": 13092,
+   "npages": 16,
+   "pages": [
+    3,
+    7,
+    13,
+    15
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01012v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 6,
+   "ours": 3235,
+   "whole": 10238,
+   "npages": 13,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01017v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 10,
+   "ours": 9542,
+   "whole": 18753,
+   "npages": 21,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01147v2.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 8,
+   "ours": 2223,
+   "whole": 14852,
+   "npages": 14,
+   "pages": [
+    14
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01247v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 4,
+   "ours": 2016,
+   "whole": 9940,
+   "npages": 13,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.02668v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 7,
+   "ours": 11833,
+   "whole": 18959,
+   "npages": 24,
+   "pages": [
+    9,
+    15
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.02844v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 13,
+   "ours": 6850,
+   "whole": 33558,
+   "npages": 38,
+   "pages": [
+    31,
+    37
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.03085v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 18,
+   "ours": 8316,
+   "whole": 46237,
+   "npages": 68,
+   "pages": [
+    31,
+    33,
+    34,
+    61,
+    65
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.04227v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 8,
+   "ours": 2454,
+   "whole": 29425,
+   "npages": 33,
+   "pages": [
+    19
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.05216v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 23,
+   "ours": 13772,
+   "whole": 14034,
+   "npages": 15,
+   "pages": [
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.06581v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 13,
+   "ours": 6112,
+   "whole": 10956,
+   "npages": 10,
+   "pages": [
+    4,
+    7
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07029v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 14,
+   "ours": 28783,
+   "whole": 49315,
+   "npages": 28,
+   "pages": [
+    27
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07113v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 11,
+   "ours": 12984,
+   "whole": 31854,
+   "npages": 30,
+   "pages": [
+    7,
+    24
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07169v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 14,
+   "ours": 6220,
+   "whole": 17707,
+   "npages": 25,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07323v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 12,
+   "ours": 12642,
+   "whole": 21844,
+   "npages": 16,
+   "pages": [
+    5,
+    13
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07333v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 3,
+   "ours": 3364,
+   "whole": 28168,
+   "npages": 30,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07340v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 8,
+   "ours": 11358,
+   "whole": 12859,
+   "npages": 10,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07353v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 7,
+   "ours": 14467,
+   "whole": 16152,
+   "npages": 12,
+   "pages": [
+    10
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07363v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 3,
+   "ours": 3884,
+   "whole": 4922,
+   "npages": 6,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07405v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 6,
+   "ours": 1418,
+   "whole": 10362,
+   "npages": 11,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07639v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 4,
+   "ours": 2220,
+   "whole": 6687,
+   "npages": 9,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07663v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 12,
+   "ours": 16109,
+   "whole": 33635,
+   "npages": 33,
+   "pages": [
+    6,
+    15
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07861v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 17,
+   "ours": 23046,
+   "whole": 23097,
+   "npages": 22,
+   "pages": [
+    7,
+    22
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07863v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 11,
+   "ours": 7197,
+   "whole": 12263,
+   "npages": 13,
+   "pages": [
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07904v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 9,
+   "ours": 6584,
+   "whole": 20678,
+   "npages": 24,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07916v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 9,
+   "ours": 6833,
+   "whole": 16315,
+   "npages": 20,
+   "pages": [
+    7,
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07923v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 9,
+   "ours": 5250,
+   "whole": 17112,
+   "npages": 17,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07937v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 9,
+   "ours": 8436,
+   "whole": 9117,
+   "npages": 16,
+   "pages": [
+    6,
+    11
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07987v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 12,
+   "ours": 24330,
+   "whole": 26911,
+   "npages": 24,
+   "pages": [
+    1,
+    5
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08115v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 7,
+   "ours": 8432,
+   "whole": 11300,
+   "npages": 16,
+   "pages": [
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08125v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 12,
+   "ours": 4587,
+   "whole": 10954,
+   "npages": 14,
+   "pages": [
+    6,
+    7
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08132v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 10,
+   "ours": 8224,
+   "whole": 12335,
+   "npages": 14,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08138v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 14,
+   "ours": 12669,
+   "whole": 24804,
+   "npages": 25,
+   "pages": [
+    4,
+    22
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08191v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 14,
+   "ours": 5369,
+   "whole": 9689,
+   "npages": 9,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08309v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 13,
+   "ours": 7657,
+   "whole": 23352,
+   "npages": 26,
+   "pages": [
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08319v1.pdf",
+   "corpus": "arxiv_holdout",
+   "calls": 16,
+   "ours": 34507,
+   "whole": 50695,
+   "npages": 44,
+   "pages": [
+    36
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/41598_2025_Article_25844.PMC12639046.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 12,
+   "ours": 11082,
+   "whole": 15877,
+   "npages": 17,
+   "pages": [
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/NA-001-C9NA00431A.PMC9417117.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 12,
+   "ours": 6187,
+   "whole": 8109,
+   "npages": 9,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/RA-008-C8RA07841F.PMC9087645.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 8,
+   "ours": 4676,
+   "whole": 6177,
+   "npages": 6,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/ejh-68-2-3954.PMC11148694.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 10,
+   "ours": 5517,
+   "whole": 8588,
+   "npages": 7,
+   "pages": [
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/gku922.PMC4231771.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 8,
+   "ours": 7106,
+   "whole": 10146,
+   "npages": 12,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/main.PMC11080292.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 3,
+   "ours": 2177,
+   "whole": 8679,
+   "npages": 11,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/medscimonit-26-e922517.PMC7294844.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 7,
+   "ours": 8931,
+   "whole": 10193,
+   "npages": 10,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/medscimonit-27-e930139.PMC8366302.pdf",
+   "corpus": "pmc_holdout",
+   "calls": 13,
+   "ours": 6706,
+   "whole": 8056,
+   "npages": 8,
+   "pages": [
+    1,
+    6
+   ]
+  }
+ ],
+ "pages": [
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2607.29295v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2607.29295v1.pdf",
+   "page": 15,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 40,
+   "doc_calls": 4,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2484,
+   "crop_tok_gone": 2484,
+   "render_tok": 602,
+   "edge": 800,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p015-x1140",
+     "xref": 1140,
+     "px": [
+      1296,
+      719
+     ],
+     "tok": 1242,
+     "bbox": [
+      117.1,
+      72.0,
+      478.1,
+      272.6
+     ],
+     "bbox_frac": 0.1445,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x1141",
+     "xref": 1141,
+     "px": [
+      1296,
+      719
+     ],
+     "tok": 1242,
+     "bbox": [
+      117.1,
+      72.0,
+      478.1,
+      272.6
+     ],
+     "bbox_frac": 0.1445,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    }
+   ],
+   "tag": "r001"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2607.29554v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2607.29554v1.pdf",
+   "page": 17,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 46,
+   "doc_calls": 5,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 360,
+   "crop_tok_gone": 360,
+   "render_tok": 917,
+   "edge": 987,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p017-x747",
+     "xref": 747,
+     "px": [
+      316,
+      332
+     ],
+     "tok": 139,
+     "bbox": [
+      102.8,
+      100.4,
+      192.0,
+      194.1
+     ],
+     "bbox_frac": 0.0167,
+     "subsumed": true,
+     "placed_on": [
+      17
+     ]
+    },
+    {
+     "id": "p017-x748",
+     "xref": 748,
+     "px": [
+      241,
+      241
+     ],
+     "tok": 77,
+     "bbox": [
+      119.5,
+      105.8,
+      187.5,
+      173.8
+     ],
+     "bbox_frac": 0.0092,
+     "subsumed": true,
+     "placed_on": [
+      17
+     ]
+    },
+    {
+     "id": "p017-x749",
+     "xref": 749,
+     "px": [
+      344,
+      314
+     ],
+     "tok": 144,
+     "bbox": [
+      262.3,
+      105.5,
+      359.5,
+      194.1
+     ],
+     "bbox_frac": 0.0172,
+     "subsumed": true,
+     "placed_on": [
+      17
+     ]
+    }
+   ],
+   "tag": "r002"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00657v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00657v1.pdf",
+   "page": 26,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 74,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 492,
+   "crop_tok_gone": 492,
+   "render_tok": 767,
+   "edge": 864,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p026-x1265",
+     "xref": 1265,
+     "px": [
+      497,
+      372
+     ],
+     "tok": 246,
+     "bbox": [
+      150.7,
+      391.0,
+      288.8,
+      486.1
+     ],
+     "bbox_frac": 0.0271,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    },
+    {
+     "id": "p026-x1266",
+     "xref": 1266,
+     "px": [
+      497,
+      372
+     ],
+     "tok": 246,
+     "bbox": [
+      338.5,
+      391.0,
+      476.6,
+      486.1
+     ],
+     "bbox_frac": 0.0271,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    }
+   ],
+   "tag": "r003"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00657v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00657v1.pdf",
+   "page": 28,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 74,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 496,
+   "crop_tok_gone": 496,
+   "render_tok": 767,
+   "edge": 864,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p028-x1269",
+     "xref": 1269,
+     "px": [
+      501,
+      372
+     ],
+     "tok": 248,
+     "bbox": [
+      150.7,
+      102.1,
+      288.8,
+      197.2
+     ],
+     "bbox_frac": 0.0271,
+     "subsumed": true,
+     "placed_on": [
+      28
+     ]
+    },
+    {
+     "id": "p028-x1270",
+     "xref": 1270,
+     "px": [
+      501,
+      372
+     ],
+     "tok": 248,
+     "bbox": [
+      338.5,
+      102.1,
+      476.6,
+      197.2
+     ],
+     "bbox_frac": 0.0271,
+     "subsumed": true,
+     "placed_on": [
+      28
+     ]
+    }
+   ],
+   "tag": "r004"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00657v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00657v1.pdf",
+   "page": 65,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 74,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 432,
+   "crop_tok_gone": 432,
+   "render_tok": 767,
+   "edge": 864,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p065-x1246",
+     "xref": 1246,
+     "px": [
+      522,
+      311
+     ],
+     "tok": 216,
+     "bbox": [
+      150.7,
+      99.6,
+      288.8,
+      194.8
+     ],
+     "bbox_frac": 0.0271,
+     "subsumed": true,
+     "placed_on": [
+      65
+     ]
+    },
+    {
+     "id": "p065-x1247",
+     "xref": 1247,
+     "px": [
+      522,
+      311
+     ],
+     "tok": 216,
+     "bbox": [
+      338.5,
+      99.6,
+      476.6,
+      194.8
+     ],
+     "bbox_frac": 0.0271,
+     "subsumed": true,
+     "placed_on": [
+      65
+     ]
+    }
+   ],
+   "tag": "r005"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00677v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00677v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 50,
+   "doc_calls": 10,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 1896,
+   "crop_tok_gone": 1896,
+   "render_tok": 990,
+   "edge": 981,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p004-x988",
+     "xref": 988,
+     "px": [
+      434,
+      507
+     ],
+     "tok": 293,
+     "bbox": [
+      433.7,
+      154.2,
+      521.1,
+      256.2
+     ],
+     "bbox_frac": 0.0184,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x989",
+     "xref": 989,
+     "px": [
+      1291,
+      306
+     ],
+     "tok": 526,
+     "bbox": [
+      88.8,
+      272.7,
+      348.6,
+      334.3
+     ],
+     "bbox_frac": 0.033,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x992",
+     "xref": 992,
+     "px": [
+      536,
+      547
+     ],
+     "tok": 390,
+     "bbox": [
+      79.9,
+      146.7,
+      187.8,
+      256.8
+     ],
+     "bbox_frac": 0.0245,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x993",
+     "xref": 993,
+     "px": [
+      509,
+      531
+     ],
+     "tok": 360,
+     "bbox": [
+      190.2,
+      146.7,
+      292.7,
+      253.6
+     ],
+     "bbox_frac": 0.0226,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x995",
+     "xref": 995,
+     "px": [
+      456,
+      538
+     ],
+     "tok": 327,
+     "bbox": [
+      315.2,
+      148.9,
+      407.0,
+      257.2
+     ],
+     "bbox_frac": 0.0205,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r006"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00693v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00693v1.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 18,
+   "doc_calls": 6,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 753,
+   "crop_tok_gone": 753,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x444",
+     "xref": 444,
+     "px": [
+      775,
+      496
+     ],
+     "tok": 512,
+     "bbox": [
+      431.3,
+      55.9,
+      541.3,
+      126.3
+     ],
+     "bbox_frac": 0.016,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x448",
+     "xref": 448,
+     "px": [
+      560,
+      324
+     ],
+     "tok": 241,
+     "bbox": [
+      322.3,
+      132.3,
+      401.8,
+      178.3
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r007"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00994v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00994v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 16,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 324,
+   "crop_tok_gone": 324,
+   "render_tok": 1113,
+   "edge": 1040,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x703",
+     "xref": 703,
+     "px": [
+      349,
+      349
+     ],
+     "tok": 162,
+     "bbox": [
+      273.8,
+      106.4,
+      328.3,
+      160.9
+     ],
+     "bbox_frac": 0.0061,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x724",
+     "xref": 724,
+     "px": [
+      349,
+      349
+     ],
+     "tok": 162,
+     "bbox": [
+      112.7,
+      107.4,
+      167.2,
+      161.9
+     ],
+     "bbox_frac": 0.0061,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r008"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00994v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00994v1.pdf",
+   "page": 7,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 16,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 3358,
+   "crop_tok_gone": 3358,
+   "render_tok": 671,
+   "edge": 808,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x726",
+     "xref": 726,
+     "px": [
+      1128,
+      1117
+     ],
+     "tok": 1679,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x727",
+     "xref": 727,
+     "px": [
+      1128,
+      1117
+     ],
+     "tok": 1679,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r009"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00994v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00994v1.pdf",
+   "page": 13,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 16,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 324,
+   "crop_tok_gone": 324,
+   "render_tok": 724,
+   "edge": 839,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p013-x675",
+     "xref": 675,
+     "px": [
+      282,
+      287
+     ],
+     "tok": 107,
+     "bbox": [
+      74.7,
+      104.9,
+      138.7,
+      170.0
+     ],
+     "bbox_frac": 0.0086,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    },
+    {
+     "id": "p013-x676",
+     "xref": 676,
+     "px": [
+      287,
+      285
+     ],
+     "tok": 109,
+     "bbox": [
+      73.7,
+      191.7,
+      138.7,
+      256.3
+     ],
+     "bbox_frac": 0.0087,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    },
+    {
+     "id": "p013-x677",
+     "xref": 677,
+     "px": [
+      285,
+      286
+     ],
+     "tok": 108,
+     "bbox": [
+      72.3,
+      279.3,
+      137.0,
+      344.1
+     ],
+     "bbox_frac": 0.0086,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    }
+   ],
+   "tag": "r010"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.00994v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.00994v1.pdf",
+   "page": 15,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 16,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 631,
+   "crop_tok_gone": 631,
+   "render_tok": 733,
+   "edge": 844,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p015-x678",
+     "xref": 678,
+     "px": [
+      295,
+      298
+     ],
+     "tok": 117,
+     "bbox": [
+      73.5,
+      104.8,
+      140.1,
+      172.0
+     ],
+     "bbox_frac": 0.0092,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x679",
+     "xref": 679,
+     "px": [
+      280,
+      280
+     ],
+     "tok": 104,
+     "bbox": [
+      73.5,
+      191.1,
+      136.6,
+      254.2
+     ],
+     "bbox_frac": 0.0082,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x680",
+     "xref": 680,
+     "px": [
+      273,
+      274
+     ],
+     "tok": 99,
+     "bbox": [
+      72.5,
+      278.7,
+      134.1,
+      340.5
+     ],
+     "bbox_frac": 0.0079,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x681",
+     "xref": 681,
+     "px": [
+      288,
+      280
+     ],
+     "tok": 107,
+     "bbox": [
+      75.4,
+      360.7,
+      140.4,
+      423.8
+     ],
+     "bbox_frac": 0.0085,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x682",
+     "xref": 682,
+     "px": [
+      287,
+      287
+     ],
+     "tok": 109,
+     "bbox": [
+      75.4,
+      444.5,
+      140.1,
+      509.2
+     ],
+     "bbox_frac": 0.0086,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x683",
+     "xref": 683,
+     "px": [
+      268,
+      268
+     ],
+     "tok": 95,
+     "bbox": [
+      75.4,
+      531.4,
+      135.9,
+      591.8
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    }
+   ],
+   "tag": "r011"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.01012v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01012v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 13,
+   "doc_calls": 6,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 3235,
+   "crop_tok_gone": 3235,
+   "render_tok": 1273,
+   "edge": 1112,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x319",
+     "xref": 319,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": [
+      524.0,
+      73.6,
+      545.8,
+      95.5
+     ],
+     "bbox_frac": 0.001,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x320",
+     "xref": 320,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x321",
+     "xref": 321,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x323",
+     "xref": 323,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x324",
+     "xref": 324,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x325",
+     "xref": 325,
+     "px": [
+      1300,
+      860
+     ],
+     "tok": 1490,
+     "bbox": [
+      323.0,
+      75.1,
+      363.3,
+      101.8
+     ],
+     "bbox_frac": 0.0022,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r012"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.01017v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01017v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 21,
+   "doc_calls": 10,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1344,
+   "crop_tok_gone": 1344,
+   "render_tok": 1688,
+   "edge": 1339,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p004-x1287",
+     "xref": 1287,
+     "px": [
+      410,
+      410
+     ],
+     "tok": 224,
+     "bbox": [
+      83.8,
+      237.0,
+      98.6,
+      251.8
+     ],
+     "bbox_frac": 0.0004,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1288",
+     "xref": 1288,
+     "px": [
+      410,
+      410
+     ],
+     "tok": 224,
+     "bbox": [
+      83.8,
+      365.0,
+      98.3,
+      379.6
+     ],
+     "bbox_frac": 0.0004,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1289",
+     "xref": 1289,
+     "px": [
+      820,
+      820
+     ],
+     "tok": 896,
+     "bbox": [
+      83.8,
+      412.5,
+      99.2,
+      427.9
+     ],
+     "bbox_frac": 0.0005,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r013"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.01147v2.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01147v2.pdf",
+   "page": 14,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 14,
+   "doc_calls": 8,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 322,
+   "crop_tok_gone": 322,
+   "render_tok": 2264,
+   "edge": 1483,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p014-x717",
+     "xref": 717,
+     "px": [
+      224,
+      224
+     ],
+     "tok": 66,
+     "bbox": [
+      87.4,
+      86.7,
+      173.0,
+      172.3
+     ],
+     "bbox_frac": 0.0151,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x722",
+     "xref": 722,
+     "px": [
+      220,
+      220
+     ],
+     "tok": 64,
+     "bbox": [
+      87.4,
+      205.0,
+      173.0,
+      290.6
+     ],
+     "bbox_frac": 0.0151,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x727",
+     "xref": 727,
+     "px": [
+      220,
+      220
+     ],
+     "tok": 64,
+     "bbox": [
+      87.4,
+      323.3,
+      173.0,
+      408.9
+     ],
+     "bbox_frac": 0.0151,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x732",
+     "xref": 732,
+     "px": [
+      220,
+      220
+     ],
+     "tok": 64,
+     "bbox": [
+      87.4,
+      441.6,
+      173.0,
+      527.2
+     ],
+     "bbox_frac": 0.0151,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x736",
+     "xref": 736,
+     "px": [
+      220,
+      220
+     ],
+     "tok": 64,
+     "bbox": [
+      87.4,
+      559.9,
+      173.0,
+      645.5
+     ],
+     "bbox_frac": 0.0151,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    }
+   ],
+   "tag": "r014"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.01247v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.01247v1.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 13,
+   "doc_calls": 4,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 698,
+   "crop_tok_gone": 698,
+   "render_tok": 1026,
+   "edge": 999,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x740",
+     "xref": 740,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": [
+      60.8,
+      69.4,
+      68.5,
+      77.1
+     ],
+     "bbox_frac": 0.0001,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x741",
+     "xref": 741,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": [
+      60.8,
+      80.7,
+      68.5,
+      88.4
+     ],
+     "bbox_frac": 0.0001,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r015"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.02668v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.02668v1.pdf",
+   "page": 9,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 24,
+   "doc_calls": 7,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 4470,
+   "crop_tok_gone": 4470,
+   "render_tok": 778,
+   "edge": 870,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x853",
+     "xref": 853,
+     "px": [
+      1980,
+      1350
+     ],
+     "tok": 2235,
+     "bbox": [
+      108.6,
+      452.2,
+      259.1,
+      554.8
+     ],
+     "bbox_frac": 0.0319,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x854",
+     "xref": 854,
+     "px": [
+      1980,
+      1350
+     ],
+     "tok": 2235,
+     "bbox": [
+      108.6,
+      572.7,
+      259.1,
+      675.3
+     ],
+     "bbox_frac": 0.0319,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r016"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.02668v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.02668v1.pdf",
+   "page": 15,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 24,
+   "doc_calls": 7,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 4470,
+   "crop_tok_gone": 4470,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p015-x837",
+     "xref": 837,
+     "px": [
+      1980,
+      1350
+     ],
+     "tok": 2235,
+     "bbox": [
+      352.9,
+      63.8,
+      503.4,
+      166.4
+     ],
+     "bbox_frac": 0.0319,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x838",
+     "xref": 838,
+     "px": [
+      1980,
+      1350
+     ],
+     "tok": 2235,
+     "bbox": [
+      352.9,
+      184.3,
+      503.4,
+      286.9
+     ],
+     "bbox_frac": 0.0319,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    }
+   ],
+   "tag": "r017"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.02844v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.02844v1.pdf",
+   "page": 31,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 38,
+   "doc_calls": 13,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1540,
+   "crop_tok_gone": 1540,
+   "render_tok": 1025,
+   "edge": 998,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p031-x1405",
+     "xref": 1405,
+     "px": [
+      538,
+      538
+     ],
+     "tok": 385,
+     "bbox": [
+      88.4,
+      337.9,
+      194.1,
+      443.7
+     ],
+     "bbox_frac": 0.0231,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    },
+    {
+     "id": "p031-x1406",
+     "xref": 1406,
+     "px": [
+      538,
+      538
+     ],
+     "tok": 385,
+     "bbox": [
+      198.2,
+      337.9,
+      304.0,
+      443.7
+     ],
+     "bbox_frac": 0.0231,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    },
+    {
+     "id": "p031-x1407",
+     "xref": 1407,
+     "px": [
+      538,
+      538
+     ],
+     "tok": 385,
+     "bbox": [
+      308.1,
+      337.9,
+      413.8,
+      443.7
+     ],
+     "bbox_frac": 0.0231,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    },
+    {
+     "id": "p031-x1408",
+     "xref": 1408,
+     "px": [
+      538,
+      538
+     ],
+     "tok": 385,
+     "bbox": [
+      418.0,
+      337.9,
+      523.7,
+      443.7
+     ],
+     "bbox_frac": 0.0231,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    }
+   ],
+   "tag": "r018"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.02844v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.02844v1.pdf",
+   "page": 37,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 38,
+   "doc_calls": 13,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 224,
+   "crop_tok_gone": 224,
+   "render_tok": 1141,
+   "edge": 1053,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p037-x1411",
+     "xref": 1411,
+     "px": [
+      337,
+      250
+     ],
+     "tok": 112,
+     "bbox": [
+      136.3,
+      490.7,
+      269.6,
+      589.5
+     ],
+     "bbox_frac": 0.0272,
+     "subsumed": true,
+     "placed_on": [
+      37
+     ]
+    },
+    {
+     "id": "p037-x1412",
+     "xref": 1412,
+     "px": [
+      337,
+      250
+     ],
+     "tok": 112,
+     "bbox": [
+      364.7,
+      490.7,
+      497.9,
+      589.5
+     ],
+     "bbox_frac": 0.0272,
+     "subsumed": true,
+     "placed_on": [
+      37
+     ]
+    }
+   ],
+   "tag": "r019"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.03085v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.03085v1.pdf",
+   "page": 31,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 68,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 492,
+   "crop_tok_gone": 492,
+   "render_tok": 702,
+   "edge": 826,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p031-x1235",
+     "xref": 1235,
+     "px": [
+      496,
+      372
+     ],
+     "tok": 246,
+     "bbox": [
+      108.3,
+      376.9,
+      272.5,
+      492.7
+     ],
+     "bbox_frac": 0.0392,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    },
+    {
+     "id": "p031-x1236",
+     "xref": 1236,
+     "px": [
+      496,
+      372
+     ],
+     "tok": 246,
+     "bbox": [
+      365.7,
+      376.9,
+      529.9,
+      492.7
+     ],
+     "bbox_frac": 0.0392,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    }
+   ],
+   "tag": "r020"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.03085v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.03085v1.pdf",
+   "page": 33,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 68,
+   "doc_calls": 18,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 598,
+   "crop_tok_gone": 598,
+   "render_tok": 782,
+   "edge": 872,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p033-x1221",
+     "xref": 1221,
+     "px": [
+      361,
+      208
+     ],
+     "tok": 100,
+     "bbox": [
+      257.1,
+      99.5,
+      378.3,
+      169.0
+     ],
+     "bbox_frac": 0.0174,
+     "subsumed": true,
+     "placed_on": [
+      33
+     ]
+    },
+    {
+     "id": "p033-x1222",
+     "xref": 1222,
+     "px": [
+      363,
+      208
+     ],
+     "tok": 100,
+     "bbox": [
+      105.0,
+      99.5,
+      226.2,
+      169.0
+     ],
+     "bbox_frac": 0.0174,
+     "subsumed": true,
+     "placed_on": [
+      33
+     ]
+    },
+    {
+     "id": "p033-x1223",
+     "xref": 1223,
+     "px": [
+      361,
+      207
+     ],
+     "tok": 99,
+     "bbox": [
+      257.1,
+      231.7,
+      378.3,
+      301.2
+     ],
+     "bbox_frac": 0.0174,
+     "subsumed": true,
+     "placed_on": [
+      33
+     ]
+    },
+    {
+     "id": "p033-x1224",
+     "xref": 1224,
+     "px": [
+      362,
+      207
+     ],
+     "tok": 99,
+     "bbox": [
+      409.3,
+      231.7,
+      530.4,
+      301.2
+     ],
+     "bbox_frac": 0.0174,
+     "subsumed": true,
+     "placed_on": [
+      33
+     ]
+    },
+    {
+     "id": "p033-x1225",
+     "xref": 1225,
+     "px": [
+      363,
+      207
+     ],
+     "tok": 100,
+     "bbox": [
+      105.0,
+      231.7,
+      226.2,
+      301.2
+     ],
+     "bbox_frac": 0.0174,
+     "subsumed": true,
+     "placed_on": [
+      33
+     ]
+    },
+    {
+     "id": "p033-x1226",
+     "xref": 1226,
+     "px": [
+      362,
+      208
+     ],
+     "tok": 100,
+     "bbox": [
+      409.3,
+      99.5,
+      530.4,
+      169.0
+     ],
+     "bbox_frac": 0.0174,
+     "subsumed": true,
+     "placed_on": [
+      33
+     ]
+    }
+   ],
+   "tag": "r021"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.03085v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.03085v1.pdf",
+   "page": 34,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 68,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 424,
+   "crop_tok_gone": 424,
+   "render_tok": 834,
+   "edge": 900,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p034-x1227",
+     "xref": 1227,
+     "px": [
+      490,
+      325
+     ],
+     "tok": 212,
+     "bbox": [
+      336.1,
+      326.7,
+      502.0,
+      438.1
+     ],
+     "bbox_frac": 0.0382,
+     "subsumed": true,
+     "placed_on": [
+      34
+     ]
+    },
+    {
+     "id": "p034-x1228",
+     "xref": 1228,
+     "px": [
+      491,
+      325
+     ],
+     "tok": 212,
+     "bbox": [
+      125.8,
+      326.7,
+      291.7,
+      438.1
+     ],
+     "bbox_frac": 0.0382,
+     "subsumed": true,
+     "placed_on": [
+      34
+     ]
+    }
+   ],
+   "tag": "r022"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.03085v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.03085v1.pdf",
+   "page": 61,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 68,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 558,
+   "crop_tok_gone": 558,
+   "render_tok": 784,
+   "edge": 873,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p061-x1229",
+     "xref": 1229,
+     "px": [
+      561,
+      386
+     ],
+     "tok": 288,
+     "bbox": [
+      108.3,
+      261.1,
+      262.4,
+      361.1
+     ],
+     "bbox_frac": 0.0318,
+     "subsumed": true,
+     "placed_on": [
+      61
+     ]
+    },
+    {
+     "id": "p061-x1230",
+     "xref": 1230,
+     "px": [
+      570,
+      356
+     ],
+     "tok": 270,
+     "bbox": [
+      359.7,
+      248.8,
+      528.2,
+      358.1
+     ],
+     "bbox_frac": 0.038,
+     "subsumed": true,
+     "placed_on": [
+      61
+     ]
+    }
+   ],
+   "tag": "r023"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.03085v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.03085v1.pdf",
+   "page": 65,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 68,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 540,
+   "crop_tok_gone": 540,
+   "render_tok": 954,
+   "edge": 963,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p065-x1237",
+     "xref": 1237,
+     "px": [
+      570,
+      356
+     ],
+     "tok": 270,
+     "bbox": [
+      104.9,
+      108.5,
+      244.7,
+      199.1
+     ],
+     "bbox_frac": 0.0262,
+     "subsumed": true,
+     "placed_on": [
+      65
+     ]
+    },
+    {
+     "id": "p065-x1238",
+     "xref": 1238,
+     "px": [
+      570,
+      356
+     ],
+     "tok": 270,
+     "bbox": [
+      375.1,
+      96.2,
+      529.2,
+      196.2
+     ],
+     "bbox_frac": 0.0318,
+     "subsumed": true,
+     "placed_on": [
+      65
+     ]
+    }
+   ],
+   "tag": "r024"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.04227v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.04227v1.pdf",
+   "page": 19,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 33,
+   "doc_calls": 8,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 402,
+   "crop_tok_gone": 402,
+   "render_tok": 1376,
+   "edge": 1156,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p019-x1278",
+     "xref": 1278,
+     "px": [
+      219,
+      231
+     ],
+     "tok": 67,
+     "bbox": [
+      131.9,
+      96.0,
+      218.6,
+      187.4
+     ],
+     "bbox_frac": 0.0163,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x1279",
+     "xref": 1279,
+     "px": [
+      219,
+      231
+     ],
+     "tok": 67,
+     "bbox": [
+      261.8,
+      96.0,
+      348.5,
+      187.4
+     ],
+     "bbox_frac": 0.0163,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x1280",
+     "xref": 1280,
+     "px": [
+      219,
+      231
+     ],
+     "tok": 67,
+     "bbox": [
+      391.7,
+      96.0,
+      478.4,
+      187.4
+     ],
+     "bbox_frac": 0.0163,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x1284",
+     "xref": 1284,
+     "px": [
+      219,
+      231
+     ],
+     "tok": 67,
+     "bbox": [
+      131.9,
+      235.1,
+      218.6,
+      326.5
+     ],
+     "bbox_frac": 0.0163,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x1285",
+     "xref": 1285,
+     "px": [
+      219,
+      231
+     ],
+     "tok": 67,
+     "bbox": [
+      261.8,
+      235.1,
+      348.5,
+      326.5
+     ],
+     "bbox_frac": 0.0163,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x1286",
+     "xref": 1286,
+     "px": [
+      219,
+      231
+     ],
+     "tok": 67,
+     "bbox": [
+      391.7,
+      235.1,
+      478.4,
+      326.5
+     ],
+     "bbox_frac": 0.0163,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    }
+   ],
+   "tag": "r025"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.05216v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.05216v1.pdf",
+   "page": 12,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 15,
+   "doc_calls": 23,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1844,
+   "crop_tok_gone": 1844,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p012-x543",
+     "xref": 543,
+     "px": [
+      697,
+      588
+     ],
+     "tok": 546,
+     "bbox": [
+      49.0,
+      66.0,
+      213.5,
+      179.4
+     ],
+     "bbox_frac": 0.0385,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x544",
+     "xref": 544,
+     "px": [
+      793,
+      620
+     ],
+     "tok": 655,
+     "bbox": [
+      223.7,
+      66.0,
+      388.3,
+      179.4
+     ],
+     "bbox_frac": 0.0385,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x545",
+     "xref": 545,
+     "px": [
+      778,
+      620
+     ],
+     "tok": 643,
+     "bbox": [
+      398.5,
+      66.0,
+      563.0,
+      179.4
+     ],
+     "bbox_frac": 0.0385,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r026"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.06581v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.06581v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 10,
+   "doc_calls": 13,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1412,
+   "crop_tok_gone": 1412,
+   "render_tok": 1995,
+   "edge": 1392,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p004-x878",
+     "xref": 878,
+     "px": [
+      675,
+      393
+     ],
+     "tok": 353,
+     "bbox": [
+      243.9,
+      70.9,
+      277.7,
+      87.3
+     ],
+     "bbox_frac": 0.0011,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x879",
+     "xref": 879,
+     "px": [
+      675,
+      393
+     ],
+     "tok": 353,
+     "bbox": [
+      243.9,
+      101.1,
+      277.7,
+      117.4
+     ],
+     "bbox_frac": 0.0011,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x880",
+     "xref": 880,
+     "px": [
+      675,
+      393
+     ],
+     "tok": 353,
+     "bbox": [
+      283.9,
+      71.1,
+      317.8,
+      87.4
+     ],
+     "bbox_frac": 0.0011,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x881",
+     "xref": 881,
+     "px": [
+      675,
+      393
+     ],
+     "tok": 353,
+     "bbox": [
+      283.7,
+      101.3,
+      317.6,
+      117.7
+     ],
+     "bbox_frac": 0.0011,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r027"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.06581v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.06581v1.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 10,
+   "doc_calls": 13,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 740,
+   "crop_tok_gone": 740,
+   "render_tok": 1620,
+   "edge": 1254,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x887",
+     "xref": 887,
+     "px": [
+      373,
+      373
+     ],
+     "tok": 185,
+     "bbox": [
+      129.6,
+      51.4,
+      189.9,
+      111.7
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x888",
+     "xref": 888,
+     "px": [
+      373,
+      373
+     ],
+     "tok": 185,
+     "bbox": [
+      222.9,
+      51.4,
+      283.2,
+      111.7
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x889",
+     "xref": 889,
+     "px": [
+      373,
+      373
+     ],
+     "tok": 185,
+     "bbox": [
+      316.3,
+      51.4,
+      376.5,
+      111.7
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x890",
+     "xref": 890,
+     "px": [
+      373,
+      373
+     ],
+     "tok": 185,
+     "bbox": [
+      409.6,
+      51.4,
+      469.9,
+      111.7
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r028"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07029v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07029v1.pdf",
+   "page": 27,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 28,
+   "doc_calls": 14,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 214,
+   "crop_tok_gone": 214,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p027-x1511",
+     "xref": 1511,
+     "px": [
+      286,
+      283
+     ],
+     "tok": 107,
+     "bbox": [
+      344.4,
+      291.2,
+      464.4,
+      409.9
+     ],
+     "bbox_frac": 0.0294,
+     "subsumed": true,
+     "placed_on": [
+      27
+     ]
+    },
+    {
+     "id": "p027-x1512",
+     "xref": 1512,
+     "px": [
+      286,
+      283
+     ],
+     "tok": 107,
+     "bbox": [
+      166.2,
+      291.2,
+      286.2,
+      409.9
+     ],
+     "bbox_frac": 0.0294,
+     "subsumed": true,
+     "placed_on": [
+      27
+     ]
+    }
+   ],
+   "tag": "r029"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07113v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07113v1.pdf",
+   "page": 7,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 11,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 4370,
+   "crop_tok_gone": 4370,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x325",
+     "xref": 325,
+     "px": [
+      1800,
+      1200
+     ],
+     "tok": 2185,
+     "bbox": [
+      54.0,
+      54.0,
+      292.5,
+      213.0
+     ],
+     "bbox_frac": 0.0782,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x326",
+     "xref": 326,
+     "px": [
+      1800,
+      1200
+     ],
+     "tok": 2185,
+     "bbox": [
+      54.0,
+      54.0,
+      292.5,
+      213.0
+     ],
+     "bbox_frac": 0.0782,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r030"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07113v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07113v1.pdf",
+   "page": 24,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 11,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 3933,
+   "crop_tok_gone": 3933,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p024-x327",
+     "xref": 327,
+     "px": [
+      3000,
+      1200
+     ],
+     "tok": 1311,
+     "bbox": [
+      66.6,
+      56.8,
+      545.3,
+      248.3
+     ],
+     "bbox_frac": 0.1891,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x328",
+     "xref": 328,
+     "px": [
+      3000,
+      1200
+     ],
+     "tok": 1311,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x329",
+     "xref": 329,
+     "px": [
+      3000,
+      1200
+     ],
+     "tok": 1311,
+     "bbox": [
+      66.6,
+      475.8,
+      545.3,
+      667.3
+     ],
+     "bbox_frac": 0.1891,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    }
+   ],
+   "tag": "r031"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07169v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07169v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 25,
+   "doc_calls": 14,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 522,
+   "crop_tok_gone": 522,
+   "render_tok": 959,
+   "edge": 1009,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p004-x1236",
+     "xref": 1236,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      80.1,
+      96.5,
+      97.7,
+      116.3
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1237",
+     "xref": 1237,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      90.7,
+      135.5,
+      109.2,
+      154.1
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1238",
+     "xref": 1238,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      141.7,
+      103.2,
+      160.2,
+      121.7
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1239",
+     "xref": 1239,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      124.3,
+      103.2,
+      142.6,
+      121.7
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1243",
+     "xref": 1243,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      389.6,
+      111.8,
+      408.6,
+      130.9
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1244",
+     "xref": 1244,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      502.7,
+      152.4,
+      518.2,
+      167.9
+     ],
+     "bbox_frac": 0.0005,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r032"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07323v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07323v1.pdf",
+   "page": 5,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 12,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 2716,
+   "crop_tok_gone": 2716,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p005-x595",
+     "xref": 595,
+     "px": [
+      901,
+      558
+     ],
+     "tok": 670,
+     "bbox": [
+      140.4,
+      145.2,
+      291.8,
+      238.9
+     ],
+     "bbox_frac": 0.0293,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x596",
+     "xref": 596,
+     "px": [
+      834,
+      583
+     ],
+     "tok": 648,
+     "bbox": [
+      151.6,
+      286.6,
+      291.8,
+      384.5
+     ],
+     "bbox_frac": 0.0283,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x597",
+     "xref": 597,
+     "px": [
+      901,
+      580
+     ],
+     "tok": 696,
+     "bbox": [
+      335.5,
+      146.2,
+      487.0,
+      243.6
+     ],
+     "bbox_frac": 0.0305,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x598",
+     "xref": 598,
+     "px": [
+      836,
+      630
+     ],
+     "tok": 702,
+     "bbox": [
+      346.4,
+      282.7,
+      487.0,
+      388.6
+     ],
+     "bbox_frac": 0.0307,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    }
+   ],
+   "tag": "r033"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07323v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07323v1.pdf",
+   "page": 13,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 12,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1575,
+   "crop_tok_gone": 1575,
+   "render_tok": 1821,
+   "edge": 1330,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p013-x588",
+     "xref": 588,
+     "px": [
+      840,
+      419
+     ],
+     "tok": 469,
+     "bbox": [
+      138.4,
+      155.5,
+      290.2,
+      231.2
+     ],
+     "bbox_frac": 0.0237,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    },
+    {
+     "id": "p013-x589",
+     "xref": 589,
+     "px": [
+      840,
+      294
+     ],
+     "tok": 329,
+     "bbox": [
+      348.2,
+      162.0,
+      500.0,
+      215.1
+     ],
+     "bbox_frac": 0.0166,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    },
+    {
+     "id": "p013-x590",
+     "xref": 590,
+     "px": [
+      778,
+      483
+     ],
+     "tok": 501,
+     "bbox": [
+      149.6,
+      293.7,
+      290.2,
+      381.0
+     ],
+     "bbox_frac": 0.0253,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    },
+    {
+     "id": "p013-x591",
+     "xref": 591,
+     "px": [
+      780,
+      266
+     ],
+     "tok": 276,
+     "bbox": [
+      359.0,
+      300.6,
+      500.0,
+      348.6
+     ],
+     "bbox_frac": 0.014,
+     "subsumed": true,
+     "placed_on": [
+      13
+     ]
+    }
+   ],
+   "tag": "r034"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07333v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07333v1.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 3,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1316,
+   "crop_tok_gone": 1316,
+   "render_tok": 938,
+   "edge": 955,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x571",
+     "xref": 571,
+     "px": [
+      642,
+      1091
+     ],
+     "tok": 933,
+     "bbox": [
+      175.1,
+      566.0,
+      207.2,
+      620.7
+     ],
+     "bbox_frac": 0.0036,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x572",
+     "xref": 572,
+     "px": [
+      412,
+      699
+     ],
+     "tok": 383,
+     "bbox": [
+      317.2,
+      566.0,
+      349.0,
+      620.0
+     ],
+     "bbox_frac": 0.0035,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r035"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07340v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07340v1.pdf",
+   "page": 8,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 10,
+   "doc_calls": 8,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1853,
+   "crop_tok_gone": 1853,
+   "render_tok": 965,
+   "edge": 968,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p008-x1482",
+     "xref": 1482,
+     "px": [
+      1174,
+      571
+     ],
+     "tok": 893,
+     "bbox": [
+      55.0,
+      281.7,
+      293.0,
+      382.8
+     ],
+     "bbox_frac": 0.0496,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x1483",
+     "xref": 1483,
+     "px": [
+      1200,
+      600
+     ],
+     "tok": 960,
+     "bbox": [
+      53.8,
+      280.8,
+      294.0,
+      383.7
+     ],
+     "bbox_frac": 0.051,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    }
+   ],
+   "tag": "r036"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07353v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07353v1.pdf",
+   "page": 10,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 12,
+   "doc_calls": 7,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 10000,
+   "crop_tok_gone": 10000,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p010-x1154",
+     "xref": 1154,
+     "px": [
+      2086,
+      1591
+     ],
+     "tok": 2500,
+     "bbox": [
+      322.5,
+      86.9,
+      433.7,
+      171.7
+     ],
+     "bbox_frac": 0.0194,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x1155",
+     "xref": 1155,
+     "px": [
+      2086,
+      1591
+     ],
+     "tok": 2500,
+     "bbox": [
+      435.9,
+      86.9,
+      547.0,
+      171.7
+     ],
+     "bbox_frac": 0.0194,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x1148",
+     "xref": 1148,
+     "px": [
+      2086,
+      1591
+     ],
+     "tok": 2500,
+     "bbox": [
+      83.6,
+      97.6,
+      193.9,
+      181.8
+     ],
+     "bbox_frac": 0.0191,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x1149",
+     "xref": 1149,
+     "px": [
+      2086,
+      1591
+     ],
+     "tok": 2500,
+     "bbox": [
+      196.1,
+      97.6,
+      306.4,
+      181.8
+     ],
+     "bbox_frac": 0.0191,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    }
+   ],
+   "tag": "r037"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07363v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07363v1.pdf",
+   "page": 3,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 6,
+   "doc_calls": 3,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 3084,
+   "crop_tok_gone": 3084,
+   "render_tok": 1041,
+   "edge": 1006,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x334",
+     "xref": 334,
+     "px": [
+      2816,
+      1409
+     ],
+     "tok": 1640,
+     "bbox": [
+      126.1,
+      77.7,
+      485.9,
+      257.7
+     ],
+     "bbox_frac": 0.1337,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x335",
+     "xref": 335,
+     "px": [
+      7160,
+      3156
+     ],
+     "tok": 1444,
+     "bbox": [
+      74.1,
+      297.8,
+      274.9,
+      386.3
+     ],
+     "bbox_frac": 0.0367,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r038"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07405v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07405v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 11,
+   "doc_calls": 6,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 342,
+   "crop_tok_gone": 342,
+   "render_tok": 2458,
+   "edge": 1568,
+   "page_pt": [
+    595.3,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p003-x599",
+     "xref": 599,
+     "px": [
+      266,
+      266
+     ],
+     "tok": 94,
+     "bbox": [
+      67.8,
+      84.7,
+      122.4,
+      139.3
+     ],
+     "bbox_frac": 0.0063,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x604",
+     "xref": 604,
+     "px": [
+      266,
+      266
+     ],
+     "tok": 94,
+     "bbox": [
+      73.5,
+      87.9,
+      128.1,
+      142.5
+     ],
+     "bbox_frac": 0.0063,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x623",
+     "xref": 623,
+     "px": [
+      223,
+      205
+     ],
+     "tok": 60,
+     "bbox": [
+      239.8,
+      73.8,
+      285.6,
+      115.9
+     ],
+     "bbox_frac": 0.0041,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x644",
+     "xref": 644,
+     "px": [
+      266,
+      266
+     ],
+     "tok": 94,
+     "bbox": [
+      61.4,
+      81.5,
+      116.0,
+      136.1
+     ],
+     "bbox_frac": 0.0063,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r039"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07639v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07639v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 4,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 902,
+   "crop_tok_gone": 902,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x215",
+     "xref": 215,
+     "px": [
+      582,
+      582
+     ],
+     "tok": 451,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x216",
+     "xref": 216,
+     "px": [
+      582,
+      582
+     ],
+     "tok": 451,
+     "bbox": [
+      126.1,
+      204.6,
+      167.2,
+      250.5
+     ],
+     "bbox_frac": 0.0039,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r040"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07663v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07663v1.pdf",
+   "page": 6,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 33,
+   "doc_calls": 12,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 6883,
+   "crop_tok_gone": 6883,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p006-x4823",
+     "xref": 4823,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": [
+      296.0,
+      199.1,
+      302.5,
+      205.6
+     ],
+     "bbox_frac": 0.0001,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x4832",
+     "xref": 4832,
+     "px": [
+      4096,
+      2729
+     ],
+     "tok": 2184,
+     "bbox": [
+      107.9,
+      86.9,
+      324.1,
+      161.9
+     ],
+     "bbox_frac": 0.0334,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x4836",
+     "xref": 4836,
+     "px": [
+      1043,
+      1043
+     ],
+     "tok": 1450,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x4840",
+     "xref": 4840,
+     "px": [
+      1043,
+      1043
+     ],
+     "tok": 1450,
+     "bbox": [
+      140.9,
+      173.8,
+      168.5,
+      201.4
+     ],
+     "bbox_frac": 0.0016,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x4841",
+     "xref": 4841,
+     "px": [
+      1043,
+      1043
+     ],
+     "tok": 1450,
+     "bbox": [
+      136.5,
+      176.9,
+      164.9,
+      205.3
+     ],
+     "bbox_frac": 0.0017,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r041"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07663v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07663v1.pdf",
+   "page": 15,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 33,
+   "doc_calls": 12,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 363,
+   "crop_tok_gone": 363,
+   "render_tok": 1954,
+   "edge": 1378,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p015-x4846",
+     "xref": 4846,
+     "px": [
+      892,
+      164
+     ],
+     "tok": 195,
+     "bbox": [
+      320.2,
+      152.6,
+      478.6,
+      181.7
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x4859",
+     "xref": 4859,
+     "px": [
+      772,
+      164
+     ],
+     "tok": 168,
+     "bbox": [
+      168.5,
+      152.9,
+      305.2,
+      181.9
+     ],
+     "bbox_frac": 0.0082,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    }
+   ],
+   "tag": "r042"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07861v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07861v1.pdf",
+   "page": 7,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 22,
+   "doc_calls": 17,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 3215,
+   "crop_tok_gone": 3215,
+   "render_tok": 1337,
+   "edge": 1140,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x1969",
+     "xref": 1969,
+     "px": [
+      1543,
+      1183
+     ],
+     "tok": 2433,
+     "bbox": [
+      53.2,
+      53.1,
+      296.9,
+      239.9
+     ],
+     "bbox_frac": 0.0939,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x1971",
+     "xref": 1971,
+     "px": [
+      668,
+      878
+     ],
+     "tok": 782,
+     "bbox": [
+      381.7,
+      70.7,
+      518.7,
+      250.8
+     ],
+     "bbox_frac": 0.0509,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r043"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07861v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07861v1.pdf",
+   "page": 22,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 22,
+   "doc_calls": 17,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 5742,
+   "crop_tok_gone": 5742,
+   "render_tok": 2522,
+   "edge": 1565,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p022-x1941",
+     "xref": 1941,
+     "px": [
+      1351,
+      1063
+     ],
+     "tok": 1914,
+     "bbox": [
+      97.8,
+      257.4,
+      274.6,
+      396.5
+     ],
+     "bbox_frac": 0.0507,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    },
+    {
+     "id": "p022-x1944",
+     "xref": 1944,
+     "px": [
+      1351,
+      1063
+     ],
+     "tok": 1914,
+     "bbox": [
+      359.4,
+      57.1,
+      537.6,
+      197.3
+     ],
+     "bbox_frac": 0.0515,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    },
+    {
+     "id": "p022-x1947",
+     "xref": 1947,
+     "px": [
+      1351,
+      1063
+     ],
+     "tok": 1914,
+     "bbox": [
+      97.6,
+      57.4,
+      274.9,
+      196.9
+     ],
+     "bbox_frac": 0.051,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    }
+   ],
+   "tag": "r044"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07863v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07863v1.pdf",
+   "page": 9,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 13,
+   "doc_calls": 11,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 254,
+   "crop_tok_gone": 254,
+   "render_tok": 1015,
+   "edge": 993,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x935",
+     "xref": 935,
+     "px": [
+      218,
+      218
+     ],
+     "tok": 63,
+     "bbox": [
+      77.0,
+      68.3,
+      124.5,
+      115.8
+     ],
+     "bbox_frac": 0.0047,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x936",
+     "xref": 936,
+     "px": [
+      219,
+      219
+     ],
+     "tok": 63,
+     "bbox": [
+      77.0,
+      122.4,
+      124.5,
+      169.9
+     ],
+     "bbox_frac": 0.0047,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x937",
+     "xref": 937,
+     "px": [
+      220,
+      220
+     ],
+     "tok": 64,
+     "bbox": [
+      318.3,
+      68.4,
+      366.2,
+      116.2
+     ],
+     "bbox_frac": 0.0047,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x938",
+     "xref": 938,
+     "px": [
+      220,
+      220
+     ],
+     "tok": 64,
+     "bbox": [
+      318.2,
+      122.1,
+      366.0,
+      169.9
+     ],
+     "bbox_frac": 0.0047,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r045"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07904v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07904v1.pdf",
+   "page": 6,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 24,
+   "doc_calls": 9,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 940,
+   "crop_tok_gone": 940,
+   "render_tok": 1695,
+   "edge": 1283,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p006-x809",
+     "xref": 809,
+     "px": [
+      800,
+      800
+     ],
+     "tok": 853,
+     "bbox": [
+      191.5,
+      198.8,
+      196.0,
+      203.7
+     ],
+     "bbox_frac": 0.0,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x812",
+     "xref": 812,
+     "px": [
+      120,
+      549
+     ],
+     "tok": 87,
+     "bbox": [
+      346.3,
+      158.2,
+      364.8,
+      242.3
+     ],
+     "bbox_frac": 0.0032,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r046"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07916v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07916v1.pdf",
+   "page": 7,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 20,
+   "doc_calls": 9,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 698,
+   "crop_tok_gone": 698,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x800",
+     "xref": 800,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": [
+      108.0,
+      303.9,
+      161.3,
+      357.2
+     ],
+     "bbox_frac": 0.0059,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x811",
+     "xref": 811,
+     "px": [
+      512,
+      512
+     ],
+     "tok": 349,
+     "bbox": [
+      108.0,
+      244.4,
+      161.3,
+      297.7
+     ],
+     "bbox_frac": 0.0059,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r047"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07916v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07916v1.pdf",
+   "page": 9,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 20,
+   "doc_calls": 9,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1048,
+   "crop_tok_gone": 1048,
+   "render_tok": 900,
+   "edge": 935,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x823",
+     "xref": 823,
+     "px": [
+      1536,
+      256
+     ],
+     "tok": 524,
+     "bbox": [
+      108.0,
+      156.0,
+      504.0,
+      221.9
+     ],
+     "bbox_frac": 0.0538,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x824",
+     "xref": 824,
+     "px": [
+      1536,
+      256
+     ],
+     "tok": 524,
+     "bbox": [
+      108.0,
+      90.0,
+      504.0,
+      156.0
+     ],
+     "bbox_frac": 0.054,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r048"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07923v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07923v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 17,
+   "doc_calls": 9,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 618,
+   "crop_tok_gone": 618,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p004-x945",
+     "xref": 945,
+     "px": [
+      372,
+      209
+     ],
+     "tok": 103,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x946",
+     "xref": 946,
+     "px": [
+      372,
+      209
+     ],
+     "tok": 103,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x947",
+     "xref": 947,
+     "px": [
+      372,
+      209
+     ],
+     "tok": 103,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x948",
+     "xref": 948,
+     "px": [
+      372,
+      209
+     ],
+     "tok": 103,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x949",
+     "xref": 949,
+     "px": [
+      372,
+      209
+     ],
+     "tok": 103,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x950",
+     "xref": 950,
+     "px": [
+      372,
+      209
+     ],
+     "tok": 103,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r049"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07937v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07937v1.pdf",
+   "page": 6,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 9,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1509,
+   "crop_tok_gone": 1509,
+   "render_tok": 563,
+   "edge": 800,
+   "page_pt": [
+    408.5,
+    617.7
+   ],
+   "rasters": [
+    {
+     "id": "p006-x715",
+     "xref": 715,
+     "px": [
+      893,
+      481
+     ],
+     "tok": 572,
+     "bbox": [
+      68.2,
+      249.5,
+      113.6,
+      273.9
+     ],
+     "bbox_frac": 0.0044,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x716",
+     "xref": 716,
+     "px": [
+      948,
+      342
+     ],
+     "tok": 432,
+     "bbox": [
+      0.0,
+      247.5,
+      116.6,
+      295.3
+     ],
+     "bbox_frac": 0.0221,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x717",
+     "xref": 717,
+     "px": [
+      1000,
+      379
+     ],
+     "tok": 505,
+     "bbox": [
+      46.9,
+      269.4,
+      140.8,
+      305.0
+     ],
+     "bbox_frac": 0.0133,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r050"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07937v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07937v1.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 9,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 5129,
+   "crop_tok_gone": 5129,
+   "render_tok": 563,
+   "edge": 800,
+   "page_pt": [
+    408.5,
+    617.7
+   ],
+   "rasters": [
+    {
+     "id": "p011-x814",
+     "xref": 814,
+     "px": [
+      2048,
+      1066
+     ],
+     "tok": 1706,
+     "bbox": [
+      180.1,
+      136.3,
+      253.0,
+      174.3
+     ],
+     "bbox_frac": 0.011,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x815",
+     "xref": 815,
+     "px": [
+      2048,
+      1086
+     ],
+     "tok": 1738,
+     "bbox": [
+      180.8,
+      35.1,
+      252.4,
+      73.1
+     ],
+     "bbox_frac": 0.0108,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x821",
+     "xref": 821,
+     "px": [
+      2048,
+      1053
+     ],
+     "tok": 1685,
+     "bbox": [
+      183.0,
+      83.2,
+      254.6,
+      120.0
+     ],
+     "bbox_frac": 0.0104,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r051"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07987v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07987v1.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 24,
+   "doc_calls": 12,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 11173,
+   "crop_tok_gone": 11173,
+   "render_tok": 1111,
+   "edge": 1039,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x685",
+     "xref": 685,
+     "px": [
+      1993,
+      1869
+     ],
+     "tok": 3074,
+     "bbox": [
+      312.3,
+      187.9,
+      458.6,
+      325.1
+     ],
+     "bbox_frac": 0.0414,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x686",
+     "xref": 686,
+     "px": [
+      1956,
+      1833
+     ],
+     "tok": 3072,
+     "bbox": [
+      312.9,
+      188.5,
+      456.6,
+      323.0
+     ],
+     "bbox_frac": 0.0399,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x688",
+     "xref": 688,
+     "px": [
+      1438,
+      1869
+     ],
+     "tok": 2522,
+     "bbox": [
+      457.2,
+      187.9,
+      562.8,
+      325.1
+     ],
+     "bbox_frac": 0.0299,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x689",
+     "xref": 689,
+     "px": [
+      1401,
+      1833
+     ],
+     "tok": 2505,
+     "bbox": [
+      457.9,
+      188.5,
+      560.7,
+      323.0
+     ],
+     "bbox_frac": 0.0286,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r052"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.07987v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.07987v1.pdf",
+   "page": 5,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 24,
+   "doc_calls": 12,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 5560,
+   "crop_tok_gone": 5560,
+   "render_tok": 2513,
+   "edge": 1562,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p005-x691",
+     "xref": 691,
+     "px": [
+      1410,
+      1053
+     ],
+     "tok": 1979,
+     "bbox": [
+      382.9,
+      57.0,
+      561.6,
+      190.4
+     ],
+     "bbox_frac": 0.0492,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x692",
+     "xref": 692,
+     "px": [
+      622,
+      1052
+     ],
+     "tok": 872,
+     "bbox": [
+      182.9,
+      57.1,
+      261.8,
+      190.4
+     ],
+     "bbox_frac": 0.0217,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x693",
+     "xref": 693,
+     "px": [
+      1010,
+      1052
+     ],
+     "tok": 1416,
+     "bbox": [
+      52.6,
+      57.3,
+      180.6,
+      190.7
+     ],
+     "bbox_frac": 0.0352,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x694",
+     "xref": 694,
+     "px": [
+      922,
+      1052
+     ],
+     "tok": 1293,
+     "bbox": [
+      263.8,
+      57.1,
+      380.6,
+      190.4
+     ],
+     "bbox_frac": 0.0321,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    }
+   ],
+   "tag": "r053"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08115v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08115v1.pdf",
+   "page": 9,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 16,
+   "doc_calls": 7,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1920,
+   "crop_tok_gone": 1920,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x511",
+     "xref": 511,
+     "px": [
+      800,
+      600
+     ],
+     "tok": 640,
+     "bbox": [
+      108.0,
+      208.4,
+      207.0,
+      282.6
+     ],
+     "bbox_frac": 0.0152,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x512",
+     "xref": 512,
+     "px": [
+      800,
+      600
+     ],
+     "tok": 640,
+     "bbox": [
+      255.3,
+      208.4,
+      354.3,
+      282.6
+     ],
+     "bbox_frac": 0.0152,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x513",
+     "xref": 513,
+     "px": [
+      800,
+      600
+     ],
+     "tok": 640,
+     "bbox": [
+      402.5,
+      208.4,
+      501.5,
+      282.6
+     ],
+     "bbox_frac": 0.0152,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r054"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08125v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08125v1.pdf",
+   "page": 6,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 14,
+   "doc_calls": 12,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 282,
+   "crop_tok_gone": 282,
+   "render_tok": 702,
+   "edge": 826,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p006-x442",
+     "xref": 442,
+     "px": [
+      226,
+      226
+     ],
+     "tok": 68,
+     "bbox": [
+      359.9,
+      214.8,
+      381.6,
+      236.4
+     ],
+     "bbox_frac": 0.001,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x446",
+     "xref": 446,
+     "px": [
+      332,
+      332
+     ],
+     "tok": 146,
+     "bbox": [
+      534.9,
+      333.7,
+      557.0,
+      355.8
+     ],
+     "bbox_frac": 0.001,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x447",
+     "xref": 447,
+     "px": [
+      226,
+      226
+     ],
+     "tok": 68,
+     "bbox": [
+      358.2,
+      333.7,
+      380.3,
+      355.8
+     ],
+     "bbox_frac": 0.001,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r055"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08125v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08125v1.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 14,
+   "doc_calls": 12,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 609,
+   "crop_tok_gone": 609,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x448",
+     "xref": 448,
+     "px": [
+      606,
+      378
+     ],
+     "tok": 305,
+     "bbox": [
+      319.5,
+      54.2,
+      436.2,
+      127.0
+     ],
+     "bbox_frac": 0.0175,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x449",
+     "xref": 449,
+     "px": [
+      605,
+      378
+     ],
+     "tok": 304,
+     "bbox": [
+      441.1,
+      54.0,
+      557.9,
+      127.0
+     ],
+     "bbox_frac": 0.0176,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r056"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08132v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08132v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 14,
+   "doc_calls": 10,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 344,
+   "crop_tok_gone": 344,
+   "render_tok": 1286,
+   "edge": 1118,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x918",
+     "xref": 918,
+     "px": [
+      214,
+      415
+     ],
+     "tok": 118,
+     "bbox": [
+      106.0,
+      111.1,
+      118.6,
+      135.8
+     ],
+     "bbox_frac": 0.0006,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x920",
+     "xref": 920,
+     "px": [
+      165,
+      327
+     ],
+     "tok": 71,
+     "bbox": [
+      334.3,
+      199.6,
+      348.3,
+      223.1
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x926",
+     "xref": 926,
+     "px": [
+      241,
+      483
+     ],
+     "tok": 155,
+     "bbox": [
+      461.0,
+      57.0,
+      479.4,
+      93.7
+     ],
+     "bbox_frac": 0.0014,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r057"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08138v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08138v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 25,
+   "doc_calls": 14,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 2616,
+   "crop_tok_gone": 2616,
+   "render_tok": 1664,
+   "edge": 1271,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p004-x1078",
+     "xref": 1078,
+     "px": [
+      853,
+      568
+     ],
+     "tok": 646,
+     "bbox": [
+      313.7,
+      230.2,
+      350.2,
+      254.5
+     ],
+     "bbox_frac": 0.0018,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1079",
+     "xref": 1079,
+     "px": [
+      1053,
+      701
+     ],
+     "tok": 984,
+     "bbox": [
+      318.1,
+      171.1,
+      363.1,
+      201.1
+     ],
+     "bbox_frac": 0.0028,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1080",
+     "xref": 1080,
+     "px": [
+      1054,
+      702
+     ],
+     "tok": 986,
+     "bbox": [
+      75.5,
+      138.4,
+      120.6,
+      168.5
+     ],
+     "bbox_frac": 0.0028,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r058"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08138v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08138v1.pdf",
+   "page": 22,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 25,
+   "doc_calls": 14,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 600,
+   "crop_tok_gone": 600,
+   "render_tok": 1407,
+   "edge": 1169,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p022-x1062",
+     "xref": 1062,
+     "px": [
+      475,
+      475
+     ],
+     "tok": 300,
+     "bbox": [
+      115.5,
+      98.4,
+      300.8,
+      283.7
+     ],
+     "bbox_frac": 0.0708,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    },
+    {
+     "id": "p022-x1063",
+     "xref": 1063,
+     "px": [
+      475,
+      475
+     ],
+     "tok": 300,
+     "bbox": [
+      311.4,
+      98.4,
+      496.7,
+      283.7
+     ],
+     "bbox_frac": 0.0708,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    }
+   ],
+   "tag": "r059"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08191v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08191v1.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 14,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 2142,
+   "crop_tok_gone": 2142,
+   "render_tok": 1885,
+   "edge": 1353,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p004-x290",
+     "xref": 290,
+     "px": [
+      670,
+      546
+     ],
+     "tok": 487,
+     "bbox": [
+      148.4,
+      129.6,
+      177.5,
+      150.6
+     ],
+     "bbox_frac": 0.0013,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x291",
+     "xref": 291,
+     "px": [
+      670,
+      546
+     ],
+     "tok": 487,
+     "bbox": [
+      181.7,
+      164.8,
+      203.2,
+      180.5
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x292",
+     "xref": 292,
+     "px": [
+      514,
+      125
+     ],
+     "tok": 85,
+     "bbox": [
+      218.9,
+      192.1,
+      285.0,
+      208.3
+     ],
+     "bbox_frac": 0.0022,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x294",
+     "xref": 294,
+     "px": [
+      334,
+      266
+     ],
+     "tok": 118,
+     "bbox": [
+      264.9,
+      193.2,
+      283.7,
+      208.2
+     ],
+     "bbox_frac": 0.0006,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x298",
+     "xref": 298,
+     "px": [
+      428,
+      288
+     ],
+     "tok": 164,
+     "bbox": [
+      273.9,
+      169.8,
+      282.4,
+      176.6
+     ],
+     "bbox_frac": 0.0001,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x301",
+     "xref": 301,
+     "px": [
+      859,
+      700
+     ],
+     "tok": 801,
+     "bbox": [
+      181.7,
+      193.2,
+      203.8,
+      210.7
+     ],
+     "bbox_frac": 0.0008,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r060"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08309v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08309v1.pdf",
+   "page": 12,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 26,
+   "doc_calls": 13,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 1205,
+   "crop_tok_gone": 1205,
+   "render_tok": 755,
+   "edge": 857,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p012-x927",
+     "xref": 927,
+     "px": [
+      426,
+      426
+     ],
+     "tok": 241,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x938",
+     "xref": 938,
+     "px": [
+      426,
+      426
+     ],
+     "tok": 241,
+     "bbox": [
+      145.0,
+      202.2,
+      203.4,
+      260.5
+     ],
+     "bbox_frac": 0.007,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x939",
+     "xref": 939,
+     "px": [
+      426,
+      426
+     ],
+     "tok": 241,
+     "bbox": [
+      230.9,
+      202.2,
+      289.2,
+      260.5
+     ],
+     "bbox_frac": 0.007,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x940",
+     "xref": 940,
+     "px": [
+      426,
+      426
+     ],
+     "tok": 241,
+     "bbox": [
+      316.7,
+      202.2,
+      375.0,
+      260.5
+     ],
+     "bbox_frac": 0.007,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x941",
+     "xref": 941,
+     "px": [
+      426,
+      426
+     ],
+     "tok": 241,
+     "bbox": [
+      402.6,
+      202.2,
+      460.9,
+      260.5
+     ],
+     "bbox_frac": 0.007,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r061"
+  },
+  {
+   "corpus": "arxiv_holdout",
+   "file": "2608.08319v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv_holdout/2608.08319v1.pdf",
+   "page": 36,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 44,
+   "doc_calls": 16,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 4533,
+   "crop_tok_gone": 4533,
+   "render_tok": 2316,
+   "edge": 1568,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p036-x17363",
+     "xref": 17363,
+     "px": [
+      331,
+      316
+     ],
+     "tok": 139,
+     "bbox": [
+      272.2,
+      245.7,
+      337.3,
+      300.8
+     ],
+     "bbox_frac": 0.0072,
+     "subsumed": true,
+     "placed_on": [
+      36
+     ]
+    },
+    {
+     "id": "p036-x1351",
+     "xref": 1351,
+     "px": [
+      2588,
+      1359
+     ],
+     "tok": 1721,
+     "bbox": [
+      128.2,
+      89.4,
+      338.1,
+      233.1
+     ],
+     "bbox_frac": 0.0602,
+     "subsumed": true,
+     "placed_on": [
+      36
+     ]
+    },
+    {
+     "id": "p036-x1352",
+     "xref": 1352,
+     "px": [
+      1763,
+      1438
+     ],
+     "tok": 2673,
+     "bbox": [
+      346.0,
+      87.9,
+      486.3,
+      230.1
+     ],
+     "bbox_frac": 0.0398,
+     "subsumed": true,
+     "placed_on": [
+      36
+     ]
+    }
+   ],
+   "tag": "r062"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "41598_2025_Article_25844.PMC12639046.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/41598_2025_Article_25844.PMC12639046.pdf",
+   "page": 12,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 17,
+   "doc_calls": 12,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1937,
+   "crop_tok_gone": 1937,
+   "render_tok": 999,
+   "edge": 993,
+   "page_pt": [
+    595.3,
+    782.4
+   ],
+   "rasters": [
+    {
+     "id": "p012-x350",
+     "xref": 350,
+     "px": [
+      969,
+      836
+     ],
+     "tok": 1080,
+     "bbox": [
+      155.9,
+      370.5,
+      388.3,
+      571.2
+     ],
+     "bbox_frac": 0.1001,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x351",
+     "xref": 351,
+     "px": [
+      969,
+      664
+     ],
+     "tok": 857,
+     "bbox": [
+      155.9,
+      159.6,
+      388.3,
+      319.0
+     ],
+     "bbox_frac": 0.0795,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r063"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "NA-001-C9NA00431A.PMC9417117.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/NA-001-C9NA00431A.PMC9417117.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 12,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 845,
+   "crop_tok_gone": 845,
+   "render_tok": 983,
+   "edge": 983,
+   "page_pt": [
+    595.3,
+    779.5
+   ],
+   "rasters": [
+    {
+     "id": "p002-x370",
+     "xref": 370,
+     "px": [
+      634,
+      882
+     ],
+     "tok": 745,
+     "bbox": [
+      352.0,
+      499.0,
+      504.1,
+      710.6
+     ],
+     "bbox_frac": 0.0694,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x371",
+     "xref": 371,
+     "px": [
+      335,
+      225
+     ],
+     "tok": 100,
+     "bbox": [
+      472.5,
+      16.0,
+      552.9,
+      69.9
+     ],
+     "bbox_frac": 0.0093,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r064"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "RA-008-C8RA07841F.PMC9087645.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/RA-008-C8RA07841F.PMC9087645.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 6,
+   "doc_calls": 8,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1051,
+   "crop_tok_gone": 1051,
+   "render_tok": 812,
+   "edge": 894,
+   "page_pt": [
+    595.3,
+    779.5
+   ],
+   "rasters": [
+    {
+     "id": "p001-x183",
+     "xref": 183,
+     "px": [
+      890,
+      802
+     ],
+     "tok": 951,
+     "bbox": [
+      321.3,
+      518.3,
+      534.9,
+      710.6
+     ],
+     "bbox_frac": 0.0885,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x184",
+     "xref": 184,
+     "px": [
+      335,
+      225
+     ],
+     "tok": 100,
+     "bbox": [
+      472.5,
+      16.0,
+      552.9,
+      69.9
+     ],
+     "bbox_frac": 0.0093,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r065"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "ejh-68-2-3954.PMC11148694.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/ejh-68-2-3954.PMC11148694.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 10,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 492,
+   "crop_tok_gone": 492,
+   "render_tok": 1384,
+   "edge": 1177,
+   "page_pt": [
+    595.9,
+    794.7
+   ],
+   "rasters": [
+    {
+     "id": "p002-x12",
+     "xref": 12,
+     "px": [
+      499,
+      349
+     ],
+     "tok": 232,
+     "bbox": [
+      313.8,
+      125.4,
+      553.3,
+      293.0
+     ],
+     "bbox_frac": 0.0848,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x13",
+     "xref": 13,
+     "px": [
+      499,
+      391
+     ],
+     "tok": 260,
+     "bbox": [
+      313.8,
+      430.6,
+      553.3,
+      618.2
+     ],
+     "bbox_frac": 0.0949,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r066"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "ejh-68-2-3954.PMC11148694.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/ejh-68-2-3954.PMC11148694.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 10,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 460,
+   "crop_tok_gone": 460,
+   "render_tok": 1384,
+   "edge": 1177,
+   "page_pt": [
+    595.9,
+    794.7
+   ],
+   "rasters": [
+    {
+     "id": "p003-x16",
+     "xref": 16,
+     "px": [
+      499,
+      356
+     ],
+     "tok": 236,
+     "bbox": [
+      43.0,
+      320.2,
+      282.6,
+      490.8
+     ],
+     "bbox_frac": 0.0863,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x17",
+     "xref": 17,
+     "px": [
+      499,
+      337
+     ],
+     "tok": 224,
+     "bbox": [
+      299.6,
+      285.7,
+      539.1,
+      447.4
+     ],
+     "bbox_frac": 0.0818,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r067"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "ejh-68-2-3954.PMC11148694.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/ejh-68-2-3954.PMC11148694.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 10,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 496,
+   "crop_tok_gone": 496,
+   "render_tok": 1751,
+   "edge": 1324,
+   "page_pt": [
+    595.9,
+    794.7
+   ],
+   "rasters": [
+    {
+     "id": "p004-x19",
+     "xref": 19,
+     "px": [
+      499,
+      374
+     ],
+     "tok": 248,
+     "bbox": [
+      57.5,
+      276.9,
+      297.1,
+      456.5
+     ],
+     "bbox_frac": 0.0908,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x20",
+     "xref": 20,
+     "px": [
+      499,
+      374
+     ],
+     "tok": 248,
+     "bbox": [
+      312.6,
+      279.2,
+      552.1,
+      458.9
+     ],
+     "bbox_frac": 0.0909,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r068"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "gku922.PMC4231771.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/gku922.PMC4231771.pdf",
+   "page": 4,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 12,
+   "doc_calls": 8,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 3018,
+   "crop_tok_gone": 3018,
+   "render_tok": 1361,
+   "edge": 1149,
+   "page_pt": [
+    612.3,
+    790.9
+   ],
+   "rasters": [
+    {
+     "id": "p004-x159",
+     "xref": 159,
+     "px": [
+      579,
+      1336
+     ],
+     "tok": 1031,
+     "bbox": [
+      269.7,
+      297.9,
+      324.9,
+      425.5
+     ],
+     "bbox_frac": 0.0146,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x160",
+     "xref": 160,
+     "px": [
+      579,
+      1520
+     ],
+     "tok": 1173,
+     "bbox": [
+      162.9,
+      297.9,
+      218.2,
+      443.1
+     ],
+     "bbox_frac": 0.0166,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x161",
+     "xref": 161,
+     "px": [
+      719,
+      331
+     ],
+     "tok": 317,
+     "bbox": [
+      393.8,
+      219.4,
+      462.4,
+      251.1
+     ],
+     "bbox_frac": 0.0045,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x162",
+     "xref": 162,
+     "px": [
+      1499,
+      249
+     ],
+     "tok": 497,
+     "bbox": [
+      361.6,
+      371.7,
+      504.7,
+      395.5
+     ],
+     "bbox_frac": 0.007,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r069"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "main.PMC11080292.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/main.PMC11080292.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 11,
+   "doc_calls": 3,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 182,
+   "crop_tok_gone": 182,
+   "render_tok": 845,
+   "edge": 931,
+   "page_pt": [
+    544.3,
+    742.7
+   ],
+   "rasters": [
+    {
+     "id": "p001-x696",
+     "xref": 696,
+     "px": [
+      236,
+      298
+     ],
+     "tok": 93,
+     "bbox": [
+      448.4,
+      53.5,
+      505.1,
+      125.1
+     ],
+     "bbox_frac": 0.01,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x699",
+     "xref": 699,
+     "px": [
+      248,
+      271
+     ],
+     "tok": 89,
+     "bbox": [
+      38.2,
+      59.2,
+      97.8,
+      124.4
+     ],
+     "bbox_frac": 0.0096,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r070"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "medscimonit-26-e922517.PMC7294844.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/medscimonit-26-e922517.PMC7294844.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 10,
+   "doc_calls": 7,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 336,
+   "crop_tok_gone": 336,
+   "render_tok": 1007,
+   "edge": 1029,
+   "page_pt": [
+    566.9,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p001-x1212",
+     "xref": 1212,
+     "px": [
+      355,
+      355
+     ],
+     "tok": 168,
+     "bbox": [
+      21.3,
+      0.0,
+      106.3,
+      85.1
+     ],
+     "bbox_frac": 0.0161,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x1213",
+     "xref": 1213,
+     "px": [
+      355,
+      355
+     ],
+     "tok": 168,
+     "bbox": [
+      21.3,
+      0.0,
+      106.3,
+      85.1
+     ],
+     "bbox_frac": 0.0161,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r071"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "medscimonit-27-e930139.PMC8366302.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/medscimonit-27-e930139.PMC8366302.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 8,
+   "doc_calls": 13,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 336,
+   "crop_tok_gone": 336,
+   "render_tok": 1007,
+   "edge": 1029,
+   "page_pt": [
+    566.9,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p001-x666",
+     "xref": 666,
+     "px": [
+      355,
+      355
+     ],
+     "tok": 168,
+     "bbox": [
+      21.3,
+      0.0,
+      106.3,
+      85.1
+     ],
+     "bbox_frac": 0.0161,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x667",
+     "xref": 667,
+     "px": [
+      355,
+      355
+     ],
+     "tok": 168,
+     "bbox": [
+      21.3,
+      0.0,
+      106.3,
+      85.1
+     ],
+     "bbox_frac": 0.0161,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r072"
+  },
+  {
+   "corpus": "pmc_holdout",
+   "file": "medscimonit-27-e930139.PMC8366302.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc_holdout/medscimonit-27-e930139.PMC8366302.pdf",
+   "page": 6,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 8,
+   "doc_calls": 13,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1463,
+   "crop_tok_gone": 1463,
+   "render_tok": 1007,
+   "edge": 1029,
+   "page_pt": [
+    566.9,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p006-x54",
+     "xref": 54,
+     "px": [
+      685,
+      550
+     ],
+     "tok": 502,
+     "bbox": [
+      109.2,
+      108.0,
+      273.5,
+      239.8
+     ],
+     "bbox_frac": 0.0481,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x55",
+     "xref": 55,
+     "px": [
+      659,
+      551
+     ],
+     "tok": 484,
+     "bbox": [
+      314.1,
+      106.3,
+      472.2,
+      238.5
+     ],
+     "bbox_frac": 0.0464,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x56",
+     "xref": 56,
+     "px": [
+      661,
+      542
+     ],
+     "tok": 477,
+     "bbox": [
+      207.1,
+      267.4,
+      365.5,
+      397.3
+     ],
+     "bbox_frac": 0.0458,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r073"
+  }
+ ]
+}

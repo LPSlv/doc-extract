@@ -1,0 +1,95 @@
+tag	outside	detail	note
+r001	yes	lost	panels c-f unboxed; bifurcation axis and point labels illegible
+r002	yes	lost	panels c-e unboxed; bifurcation axis and point labels illegible
+r003	yes	lost	panels c-f unboxed; bifurcation axis and point labels illegible
+r004	yes	lost	panels c-f unboxed; bifurcation axis and point labels illegible
+r005	yes	legible	FIG 2 collapse plots in right column outside rectangles
+r006	yes	legible	flow-diagram arrows and rate labels outside insect crops
+r007	no	legible	only text outside; figure labels readable
+r008	no	legible	all six purity/completeness panels boxed; colorbars only outside
+r009	yes	lost	Figures 4 and 5 outside; Fig 3 annotations and legends illegible
+r010	yes	lost	Fig 2 permittivity plots outside; Fig 1 dimensions and circuit labels illegible
+r011	no	legible	only a text case-study figure outside the label boxes
+r012	yes	lost	most of Figure 1 pipeline outside; boxed icons too small
+r013	no	legible	all three Coma maps boxed; axis and colorbar readable
+r014	no	legible	all six scatter panels boxed; colorbars only outside
+r015	yes	lost	panel A schematic unboxed; panel C and F legends illegible
+r016	no	legible	both Fig 7 and Fig 8 panel rows boxed; text only outside
+r017	yes	legible	panels A and B unboxed: OAM spectrum and intensity profile
+r018	no	legible	only phase colorbar and ket labels outside panel B box
+r019	yes	lost	Fig 1 block diagram outside; boxed camera thumbnails unresolvable
+r020	no	legible	all three heatmap panels boxed; legend strip only outside
+r021	no	lost	3D variance surface and grid node labels hard to resolve
+r022	no	legible	only text boxes of pipeline outside the two illustrations
+r023	no	legible	both Fig 3 panels boxed; tables and text only outside
+r024	no	lost	Fig 4 three-panel legends and tick labels illegible
+r025	yes	lost	most of pipeline diagram outside boxes; stage labels tiny
+r026	yes	lost	page-stack icons, region crops outside; page thumbnails unreadable
+r027	yes	lost	client devices and arrows outside; tiny weight subscripts
+r028	yes	lost	scatter, histograms, S11 plot outside; mode fringes unresolved
+r029	yes	legible	colorbar and axes outside rectangles
+r030	no	legible	only tables and text outside
+r031	no	legible	only logo and text outside
+r032	yes	lost	PSRR and load-line charts outside; scope status bars unreadable
+r033	yes	lost	four line charts outside; small cursor annotation unreadable
+r034	yes	legible	package photo and transistor symbol outside
+r035	no	lost	schematic component values and emissions axes unreadable
+r036	no	legible	only text and tables outside
+r037	yes	legible	dimension drawings, land pattern, schematic outside; icons boxed
+r038	yes	lost	all tape and reel drawings outside; reel label unreadable
+r039	no	legible	only axis labels and captions outside
+r040	yes	legible	Figure 6 offset-vs-temperature chart unboxed
+r041	no	lost	scope channel labels and settings bars unreadable
+r042	no	legible	only axis labels and captions outside
+r043	yes	legible	Figures 45 and 46 noise-density charts unboxed
+r044	yes	legible	Figures 73 and 74 line charts unboxed
+r045	no	legible	only axis labels and captions outside
+r046	no	legible	only captions outside
+r047	no	legible	axis labels and range bracket outside
+r048	yes	legible	Figure 5-2 eight-pin pinout unboxed
+r049	yes	legible	Figure 5-3 DDPAK package pinout entirely outside rectangles
+r051	no	legible	all six characteristic curves boxed; only captions outside
+r052	yes	lost	Figure 39 schematic outside; THD plot tick labels unresolvable
+r053	yes	lost	Figure 1 outside; Figure 5 curve annotations too small
+r054	yes	legible	Figure 10 thermal response plot entirely outside rectangles
+r055	yes	lost	Figure 15 logic diagram outside; scope on-screen text unreadable
+r056	yes	legible	Figure 20 SC70 layout and via legend outside
+r057	no	legible	both ESR range plots boxed; only text outside
+r058	yes	legible	Figures 5-7 and 5-8 plots outside rectangles
+r059	yes	legible	Figures 5-19, 5-22, 5-23, 5-24 outside rectangles
+r060	yes	legible	Figures 5-19, 5-22, 5-23, 5-24 outside rectangles
+r061	yes	legible	Figures 21 and 22 plots outside rectangles
+r062	yes	legible	Figures 21 and 22 plots outside rectangles
+r063	yes	legible	Figures 19 through 22 outside rectangles
+r064	no	legible	schematic and curve both boxed; text and table outside
+r065	yes	legible	Figures 5-15 to 5-18, 5-21, 5-22 outside rectangles
+r066	no	legible	both package pinouts boxed; pin table is text
+r067	yes	legible	16-pin DIP package pinout diagram entirely outside rectangle
+r068	no	legible	both package pinouts boxed; pin table is text
+r069	no	legible	both package pinouts boxed; nothing graphic outside
+r070	no	legible	both package pinouts boxed; nothing graphic outside
+r071	no	legible	both package pinouts boxed; pin table is text
+r072	no	legible	both package pinouts boxed; nothing graphic outside
+r073	yes	lost	Figures 5-9, 5-10 outside; PSRR legends and curves merge
+r074	norect	norect	no red rectangle drawn on page
+r076	no	lost	tiny axis ticks and legend text in plots
+r077	yes	lost	Figure 22 timing waveforms outside; scope readouts unreadable
+r078	yes	legible	Figures 11 and 12 outside the rectangles
+r079	yes	lost	Figures 8-12, 8-13 outside; scope status bars unreadable
+r080	yes	legible	Figure 25 clock-sync schematic outside rectangles
+r081	yes	lost	Figures 44, 45 outside; rotated V/div labels unreadable
+r082	no	legible	only captions and test conditions outside
+r083	yes	lost	Figure 44 plot outside; scope status bars unreadable
+r084	yes	legible	Figure 5-22 noise plot outside rectangles
+r085	yes	lost	Figure 6-10 outside; decimal axis labels unreadable
+r086	yes	legible	Figures 6-17, 6-18, 6-20 outside rectangles
+r087	norect	norect	no red rectangle drawn on page
+r088	yes	legible	Figure 2 chain arrows and dots outside rectangles
+r089	yes	lost	Figure 5 plots outside; Figure 7 panel labels unreadable
+r090	yes	lost	panel B RNA structure outside; heatmap axis labels tiny
+r091	yes	lost	panels A and B outside; nucleotides in small box unreadable
+r092	yes	lost	panels c and d outside; dense fringes merge
+r093	yes	legible	Figure 1 spirometry chart outside rectangle
+r094	norect	norect	no red rectangle drawn on page
+r095	no	legible	only body text and captions outside
+r096	no	lost	fine emblem lettering inside logo boxes unreadable

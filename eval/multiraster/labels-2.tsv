@@ -1,0 +1,95 @@
+tag	outside	detail	note
+r001	yes	lost	panels c-f outside; tick labels and inset formula unreadable
+r002	yes	lost	panels c-e outside; bifurcation axis labels unreadable
+r003	yes	lost	panels c-f outside; tick and SN/TC labels unreadable
+r004	yes	lost	panels c-f outside; tick and SN/TC labels unreadable
+r005	yes	legible	Fig 2 distribution plots outside boxed Fig 1 panels
+r006	yes	legible	flow-diagram arrows and rate labels outside boxed insect photos
+r007	no	legible	only axis labels outside single boxed plot
+r008	yes	legible	right-column heatmaps and colorbars outside boxes
+r009	yes	legible	Figures 4 and 5 outside boxed Figure 3
+r010	yes	lost	Fig 2 curves outside; Fig 1a dimension labels unreadable
+r011	no	legible	only text-panel case study outside small label boxes
+r012	yes	legible	most pipeline icons and arrows outside small icon boxes
+r013	no	legible	only colorbars and axis labels outside three boxed maps
+r014	no	legible	only colorbars and axis labels outside six boxed panels
+r015	no	lost	panel F legend entries unresolvable
+r016	no	legible	only axis labels and colorbars outside six boxed panels
+r017	yes	legible	panels A and B bar chart and profile outside
+r018	yes	legible	panel B colorbar and eigenstate labels outside box
+r019	yes	lost	block diagram outside; boxed thumbnails too coarse
+r020	no	legible	only relevance colorbar legend outside three boxed panels
+r021	no	legible	only arrows and text blocks outside boxed panels
+r022	no	legible	only text pipeline boxes outside boxed cartoons
+r023	no	legible	only tables outside both boxed plots
+r024	no	lost	Fig 4 legend entries unresolvable
+r025	yes	lost	pipeline diagram extends far outside; tiny page thumbnails unreadable
+r026	yes	lost	routing flow diagrams outside; page thumbnails microscopic text
+r027	yes	lost	client devices and uplink arrows outside; tiny vector labels
+r028	yes	lost	scatter, histograms, S11 plot outside; mode fringes unresolved
+r029	no	lost	only colorbar and axes outside; faint dispersion curves merge
+r030	no	legible	tables and text only outside rectangles
+r031	no	legible	only Bosch logo and text outside rectangles
+r032	yes	lost	PSRR and foldback plots outside; scope status bars unreadable
+r033	yes	lost	four line plots outside; cursor annotation unreadable
+r034	yes	legible	package render and transistor symbol outside rectangles
+r035	no	lost	schematic part values, emissions axis labels unreadable
+r036	no	legible	only ordering leader lines outside; rect content readable
+r037	yes	legible	dimension drawings, 3D view, schematic outside; rects hold logos
+r038	yes	lost	tape and reel drawings outside; reel label microtext unreadable
+r039	no	legible	only axis text outside; plot annotations readable
+r040	yes	lost	Figure 6 offset plot unboxed; FFT noise traces merge
+r041	no	lost	scope timebase and channel status bars unreadable
+r042	no	legible	glitch annotations and codes readable inside rectangles
+r043	yes	legible	Figures 45 and 46 noise density plots unboxed
+r044	yes	legible	Figures 73 and 74 line plots unboxed
+r045	no	legible	all six waveform panels boxed; annotations readable
+r046	no	legible	all three waveform panels boxed; labels readable
+r047	yes	legible	orange Power-On Reset band falls below rectangle
+r048	no	legible	only pin function table and text outside
+r049	yes	lost	Figure 5-3 package pinout unboxed; boxed pin names tiny
+r051	no	legible	All six characteristic curves boxed
+r052	yes	lost	Figure 39 schematic unboxed; THD axis decades unreadable
+r053	yes	lost	Figure 1 unboxed; Figure 5 curve labels crowded
+r054	yes	legible	Figure 10 thermal response plot unboxed
+r055	yes	lost	Figure 15 schematic unboxed; scope status bars unreadable
+r056	yes	legible	Figure 20 SC70 layout and via legend unboxed
+r057	no	lost	Dense log grid merges; axis labels barely resolved
+r058	yes	legible	Figures 5-7 and 5-8 plots unboxed
+r059	yes	legible	Figures 5-19, 5-22, 5-23, 5-24 unboxed
+r060	yes	legible	Figures 5-19, 5-22, 5-23, 5-24 unboxed
+r061	yes	legible	Figures 21 and 22 plots unboxed
+r062	yes	legible	Figures 21 and 22 plots unboxed
+r063	yes	legible	Figures 19 through 22 plots unboxed
+r064	no	legible	Schematic and efficiency plot both boxed
+r065	yes	legible	Figures 5-15 to 5-18, 5-21, 5-22 unboxed
+r066	no	legible	Both package pinouts boxed
+r067	no	legible	Both package pinouts boxed
+r068	no	legible	Both package pinouts boxed
+r069	no	legible	Both package pinouts boxed
+r070	no	legible	Both package pinouts boxed
+r071	no	legible	Both package pinouts boxed
+r072	no	legible	Both package pinouts boxed
+r073	yes	lost	Figures 5-9, 5-10 unboxed; PSRR legends and curves merge
+r074	norect	norect	no red rectangle anywhere on page
+r076	no	legible	all six curve plots boxed; only captions outside
+r077	yes	lost	Figure 22 timing waveforms outside; scope readout bar unreadable
+r078	yes	legible	Figures 11 and 12 outside the rectangles
+r079	yes	lost	Figures 8-12, 8-13 outside; scope status bars unreadable
+r080	yes	legible	Figure 25 PLL clock schematic outside rectangles
+r081	yes	lost	Efficiency plots 44, 45 outside; rotated V/div labels unreadable
+r082	no	legible	all six waveform captures boxed; captions only outside
+r083	yes	lost	Figure 44 line regulation outside; scope readout bars unreadable
+r084	yes	legible	Figure 5-22 noise vs frequency plot outside
+r085	yes	legible	Figure 6-10 enable threshold plot unboxed
+r086	yes	legible	Figures 6-17, 6-18, 6-20 unboxed
+r087	norect	norect	no red rectangle; only Wurth logo red
+r088	yes	legible	middle node and transition arrows outside rectangles
+r089	yes	lost	Figure 5 plots outside; Figure 7 sublabels unreadable
+r090	yes	lost	panel B RNA structure outside; heatmap tick labels unreadable
+r091	yes	lost	panel A structures and panel B plot outside; nucleotide numbers unreadable
+r092	yes	lost	panels c and d outside; fine fringes in e, f merge
+r093	yes	legible	Figure 1 spirometry line chart outside rectangles
+r094	norect	norect	no red rectangle; only journal logo red
+r095	no	legible	both figures fully boxed; text only outside
+r096	no	lost	only logos boxed; logo lettering unresolvable

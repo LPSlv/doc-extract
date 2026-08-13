@@ -166,10 +166,18 @@ What is left from it:
   table before `render_reason` ever runs. So filter 3 discards a page for one
   reason while ignoring another reason to keep it — and filter-3 pages with
   figure signal and *no* raster are the same defect, entirely uncounted.
-- **The multi-raster half is the cheap one and nobody costed it.** The rule as
-  worded does not say *lone*: 308 rasters on 96 pages, where collapsing to one
-  render per page is **−34,044 tokens and −212 calls**. Cost measured, benefit
-  unlabelled. That is the one worth labelling next.
+- ~~**The multi-raster half is the cheap one and nobody costed it.**~~ —
+  labelled and **rejected**, see [`eval/multiraster.md`](../eval/multiraster.md).
+  The four stored components reproduce exactly (308 / 96 / 150,934 / 116,890);
+  the accounting built on them does not survive. The hypothesis was that the
+  resolution argument which killed the lone half might not apply when a page
+  already carries several small crops. **It applies — the crops are the same
+  size, there are just more of them.** 91 pages labelled: the swap recovers a
+  real graphic on **61.5%** (95% 51–71) and destroys resolvable detail *inside*
+  crops the router already reads on **39.6%** (30–50). 26 strictly better, 6
+  strictly worse, 30 a trade, 29 only cheaper. Against `textonly_page` (−4.0% of
+  calls, **zero** real items lost over 203 blind drops) it is not close.
+  `batch_furniture` was checked as a second-order term and is **zero of 94**.
 - Corrected in passing: `eval/rejected-signals.md` said these corpora hold
   **1,014** documents. They hold **686**. Every count downstream of it was right,
   which is exactly why it survived.

@@ -1,0 +1,23 @@
+tag	outside	detail	note
+r074	norect	norect	no red rectangle anywhere on page
+r076	no	legible	all six curve plots boxed; only captions outside
+r077	yes	lost	Figure 22 timing waveforms outside; scope readout bar unreadable
+r078	yes	legible	Figures 11 and 12 outside the rectangles
+r079	yes	lost	Figures 8-12, 8-13 outside; scope status bars unreadable
+r080	yes	legible	Figure 25 PLL clock schematic outside rectangles
+r081	yes	lost	Efficiency plots 44, 45 outside; rotated V/div labels unreadable
+r082	no	legible	all six waveform captures boxed; captions only outside
+r083	yes	lost	Figure 44 line regulation outside; scope readout bars unreadable
+r084	yes	legible	Figure 5-22 noise vs frequency plot outside
+r085	yes	legible	Figure 6-10 enable threshold plot unboxed
+r086	yes	legible	Figures 6-17, 6-18, 6-20 unboxed
+r087	norect	norect	no red rectangle; only Wurth logo red
+r088	yes	legible	middle node and transition arrows outside rectangles
+r089	yes	lost	Figure 5 plots outside; Figure 7 sublabels unreadable
+r090	yes	lost	panel B RNA structure outside; heatmap tick labels unreadable
+r091	yes	lost	panel A structures and panel B plot outside; nucleotide numbers unreadable
+r092	yes	lost	panels c and d outside; fine fringes in e, f merge
+r093	yes	legible	Figure 1 spirometry line chart outside rectangles
+r094	norect	norect	no red rectangle; only journal logo red
+r095	no	legible	both figures fully boxed; text only outside
+r096	no	lost	only logos boxed; logo lettering unresolvable

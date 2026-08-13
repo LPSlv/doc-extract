@@ -1,0 +1,25 @@
+tag	outside	detail	note
+r001	yes	lost	panels c-f outside; tick labels and inset formula unreadable
+r002	yes	lost	panels c-e outside; bifurcation axis labels unreadable
+r003	yes	lost	panels c-f outside; tick and SN/TC labels unreadable
+r004	yes	lost	panels c-f outside; tick and SN/TC labels unreadable
+r005	yes	legible	Fig 2 distribution plots outside boxed Fig 1 panels
+r006	yes	legible	flow-diagram arrows and rate labels outside boxed insect photos
+r007	no	legible	only axis labels outside single boxed plot
+r008	yes	legible	right-column heatmaps and colorbars outside boxes
+r009	yes	legible	Figures 4 and 5 outside boxed Figure 3
+r010	yes	lost	Fig 2 curves outside; Fig 1a dimension labels unreadable
+r011	no	legible	only text-panel case study outside small label boxes
+r012	yes	legible	most pipeline icons and arrows outside small icon boxes
+r013	no	legible	only colorbars and axis labels outside three boxed maps
+r014	no	legible	only colorbars and axis labels outside six boxed panels
+r015	no	lost	panel F legend entries unresolvable
+r016	no	legible	only axis labels and colorbars outside six boxed panels
+r017	yes	legible	panels A and B bar chart and profile outside
+r018	yes	legible	panel B colorbar and eigenstate labels outside box
+r019	yes	lost	block diagram outside; boxed thumbnails too coarse
+r020	no	legible	only relevance colorbar legend outside three boxed panels
+r021	no	legible	only arrows and text blocks outside boxed panels
+r022	no	legible	only text pipeline boxes outside boxed cartoons
+r023	no	legible	only tables outside both boxed plots
+r024	no	lost	Fig 4 legend entries unresolvable

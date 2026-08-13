@@ -1,0 +1,9321 @@
+{
+ "corpora": [
+  "datasheets",
+  "pmc",
+  "arxiv",
+  "papers"
+ ],
+ "dpi": 130,
+ "definition": "pages with >1 routed raster (by item page) where render_reason fires",
+ "totals": {
+  "files": 688,
+  "skipped": 2,
+  "pages": 15604,
+  "calls": 5650,
+  "rasters": 1345,
+  "img_tok": 5548426,
+  "multi_signal": 308,
+  "multi_crop_tok": 150934,
+  "multi_pages": 96,
+  "multi_render_tok": 116890
+ },
+ "docs": [
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/bme680_bosch.pdf",
+   "corpus": "datasheets",
+   "calls": 21,
+   "ours": 18034,
+   "whole": 49843,
+   "npages": 53,
+   "pages": [
+    48
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/bmi160_bosch.pdf",
+   "corpus": "datasheets",
+   "calls": 25,
+   "ours": 26709,
+   "whole": 115287,
+   "npages": 114,
+   "pages": [
+    107
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_ap2112.pdf",
+   "corpus": "datasheets",
+   "calls": 4,
+   "ours": 2002,
+   "whole": 23070,
+   "npages": 18,
+   "pages": [
+    11
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_az1117c.pdf",
+   "corpus": "datasheets",
+   "calls": 3,
+   "ours": 712,
+   "whole": 28341,
+   "npages": 24,
+   "pages": [
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_mmbt3904.pdf",
+   "corpus": "datasheets",
+   "calls": 2,
+   "ours": 174,
+   "whole": 8594,
+   "npages": 7,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_pam8403.pdf",
+   "corpus": "datasheets",
+   "calls": 9,
+   "ours": 2925,
+   "whole": 10993,
+   "npages": 11,
+   "pages": [
+    1,
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/led_wurth.pdf",
+   "corpus": "datasheets",
+   "calls": 12,
+   "ours": 12084,
+   "whole": 20844,
+   "npages": 9,
+   "pages": [
+    1,
+    5
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ads1256.pdf",
+   "corpus": "datasheets",
+   "calls": 10,
+   "ours": 7062,
+   "whole": 47508,
+   "npages": 49,
+   "pages": [
+    20
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ads7830.pdf",
+   "corpus": "datasheets",
+   "calls": 6,
+   "ours": 2785,
+   "whole": 25206,
+   "npages": 27,
+   "pages": [
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_bq25895.pdf",
+   "corpus": "datasheets",
+   "calls": 29,
+   "ours": 24849,
+   "whole": 66540,
+   "npages": 65,
+   "pages": [
+    52
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "corpus": "datasheets",
+   "calls": 44,
+   "ours": 24433,
+   "whole": 58724,
+   "npages": 63,
+   "pages": [
+    19,
+    20,
+    25,
+    26,
+    27,
+    31
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_iso1050.pdf",
+   "corpus": "datasheets",
+   "calls": 18,
+   "ours": 21100,
+   "whole": 43473,
+   "npages": 42,
+   "pages": [
+    5
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lm2576.pdf",
+   "corpus": "datasheets",
+   "calls": 34,
+   "ours": 39339,
+   "whole": 39884,
+   "npages": 45,
+   "pages": [
+    3,
+    9,
+    10
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lm833.pdf",
+   "corpus": "datasheets",
+   "calls": 11,
+   "ours": 10597,
+   "whole": 41813,
+   "npages": 36,
+   "pages": [
+    18
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lmt84.pdf",
+   "corpus": "datasheets",
+   "calls": 20,
+   "ours": 10785,
+   "whole": 25741,
+   "npages": 30,
+   "pages": [
+    7,
+    8,
+    14,
+    15
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lp2985.pdf",
+   "corpus": "datasheets",
+   "calls": 23,
+   "ours": 26343,
+   "whole": 50383,
+   "npages": 43,
+   "pages": [
+    14
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lp5907.pdf",
+   "corpus": "datasheets",
+   "calls": 28,
+   "ours": 19555,
+   "whole": 41128,
+   "npages": 52,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa134.pdf",
+   "corpus": "datasheets",
+   "calls": 18,
+   "ours": 17610,
+   "whole": 35060,
+   "npages": 35,
+   "pages": [
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa2134.pdf",
+   "corpus": "datasheets",
+   "calls": 18,
+   "ours": 17610,
+   "whole": 35060,
+   "npages": 35,
+   "pages": [
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa2340.pdf",
+   "corpus": "datasheets",
+   "calls": 22,
+   "ours": 9102,
+   "whole": 40464,
+   "npages": 48,
+   "pages": [
+    11
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa340.pdf",
+   "corpus": "datasheets",
+   "calls": 22,
+   "ours": 9102,
+   "whole": 40464,
+   "npages": 48,
+   "pages": [
+    11
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa350.pdf",
+   "corpus": "datasheets",
+   "calls": 14,
+   "ours": 8957,
+   "whole": 39992,
+   "npages": 44,
+   "pages": [
+    11
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn6501.pdf",
+   "corpus": "datasheets",
+   "calls": 18,
+   "ours": 13732,
+   "whole": 41037,
+   "npages": 38,
+   "pages": [
+    1,
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc138.pdf",
+   "corpus": "datasheets",
+   "calls": 14,
+   "ours": 11510,
+   "whole": 30145,
+   "npages": 35,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc157.pdf",
+   "corpus": "datasheets",
+   "calls": 18,
+   "ours": 14260,
+   "whole": 31600,
+   "npages": 37,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc273.pdf",
+   "corpus": "datasheets",
+   "calls": 16,
+   "ours": 12228,
+   "whole": 33783,
+   "npages": 37,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc374.pdf",
+   "corpus": "datasheets",
+   "calls": 15,
+   "ours": 10749,
+   "whole": 27327,
+   "npages": 32,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc540.pdf",
+   "corpus": "datasheets",
+   "calls": 14,
+   "ours": 8786,
+   "whole": 21731,
+   "npages": 25,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc541.pdf",
+   "corpus": "datasheets",
+   "calls": 16,
+   "ours": 12414,
+   "whole": 29935,
+   "npages": 34,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc574.pdf",
+   "corpus": "datasheets",
+   "calls": 15,
+   "ours": 10152,
+   "whole": 26487,
+   "npages": 31,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tlv1117.pdf",
+   "corpus": "datasheets",
+   "calls": 42,
+   "ours": 40605,
+   "whole": 58683,
+   "npages": 55,
+   "pages": [
+    11,
+    13,
+    14,
+    15
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps22918.pdf",
+   "corpus": "datasheets",
+   "calls": 23,
+   "ours": 12376,
+   "whole": 30034,
+   "npages": 30,
+   "pages": [
+    11
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps2553.pdf",
+   "corpus": "datasheets",
+   "calls": 19,
+   "ours": 13202,
+   "whole": 37656,
+   "npages": 44,
+   "pages": [
+    9
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps54331.pdf",
+   "corpus": "datasheets",
+   "calls": 25,
+   "ours": 27946,
+   "whole": 39823,
+   "npages": 41,
+   "pages": [
+    24
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps54560.pdf",
+   "corpus": "datasheets",
+   "calls": 28,
+   "ours": 22014,
+   "whole": 49802,
+   "npages": 51,
+   "pages": [
+    18,
+    34
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps61023.pdf",
+   "corpus": "datasheets",
+   "calls": 20,
+   "ours": 17856,
+   "whole": 26631,
+   "npages": 28,
+   "pages": [
+    16
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps62840.pdf",
+   "corpus": "datasheets",
+   "calls": 31,
+   "ours": 27879,
+   "whole": 52530,
+   "npages": 45,
+   "pages": [
+    24
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps7a47.pdf",
+   "corpus": "datasheets",
+   "calls": 19,
+   "ours": 18917,
+   "whole": 34263,
+   "npages": 32,
+   "pages": [
+    10
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ucc27524.pdf",
+   "corpus": "datasheets",
+   "calls": 35,
+   "ours": 30595,
+   "whole": 43029,
+   "npages": 50,
+   "pages": [
+    11,
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/datasheets/wurth_7447709100.pdf",
+   "corpus": "datasheets",
+   "calls": 5,
+   "ours": 7118,
+   "whole": 16212,
+   "npages": 7,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc/1589.PMC8594466.pdf",
+   "corpus": "pmc",
+   "calls": 10,
+   "ours": 8325,
+   "whole": 10439,
+   "npages": 13,
+   "pages": [
+    5,
+    7
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc/41586_2025_Article_9767.PMC12657213.pdf",
+   "corpus": "pmc",
+   "calls": 18,
+   "ours": 22825,
+   "whole": 30532,
+   "npages": 19,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc/aair-5-113.PMC3579091.pdf",
+   "corpus": "pmc",
+   "calls": 3,
+   "ours": 1716,
+   "whole": 3070,
+   "npages": 3,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc/amjcaserep-25-e941806.PMC10773620.pdf",
+   "corpus": "pmc",
+   "calls": 6,
+   "ours": 4997,
+   "whole": 7049,
+   "npages": 7,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc/in-17-110.PMC5407982.pdf",
+   "corpus": "pmc",
+   "calls": 5,
+   "ours": 2891,
+   "whole": 5103,
+   "npages": 6,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/pmc/main.PMC6319195.pdf",
+   "corpus": "pmc",
+   "calls": 4,
+   "ours": 2942,
+   "whole": 4480,
+   "npages": 7,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24285v1.pdf",
+   "corpus": "arxiv",
+   "calls": 17,
+   "ours": 19218,
+   "whole": 25241,
+   "npages": 35,
+   "pages": [
+    22,
+    23,
+    24,
+    25
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24615v1.pdf",
+   "corpus": "arxiv",
+   "calls": 2,
+   "ours": 329,
+   "whole": 6082,
+   "npages": 7,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.28053v1.pdf",
+   "corpus": "arxiv",
+   "calls": 13,
+   "ours": 11859,
+   "whole": 21498,
+   "npages": 23,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.28564v1.pdf",
+   "corpus": "arxiv",
+   "calls": 7,
+   "ours": 4850,
+   "whole": 50023,
+   "npages": 73,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.28739v1.pdf",
+   "corpus": "arxiv",
+   "calls": 13,
+   "ours": 5172,
+   "whole": 13102,
+   "npages": 17,
+   "pages": [
+    16
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29092v1.pdf",
+   "corpus": "arxiv",
+   "calls": 5,
+   "ours": 6184,
+   "whole": 22140,
+   "npages": 21,
+   "pages": [
+    7
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29187v1.pdf",
+   "corpus": "arxiv",
+   "calls": 6,
+   "ours": 4591,
+   "whole": 5412,
+   "npages": 5,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29211v1.pdf",
+   "corpus": "arxiv",
+   "calls": 9,
+   "ours": 7017,
+   "whole": 14180,
+   "npages": 13,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29377v1.pdf",
+   "corpus": "arxiv",
+   "calls": 7,
+   "ours": 3097,
+   "whole": 9928,
+   "npages": 9,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29414v1.pdf",
+   "corpus": "arxiv",
+   "calls": 8,
+   "ours": 6853,
+   "whole": 13393,
+   "npages": 12,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29454v1.pdf",
+   "corpus": "arxiv",
+   "calls": 10,
+   "ours": 4134,
+   "whole": 13985,
+   "npages": 15,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29476v1.pdf",
+   "corpus": "arxiv",
+   "calls": 24,
+   "ours": 10861,
+   "whole": 24106,
+   "npages": 36,
+   "pages": [
+    16
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29542v1.pdf",
+   "corpus": "arxiv",
+   "calls": 11,
+   "ours": 8571,
+   "whole": 12271,
+   "npages": 15,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29565v1.pdf",
+   "corpus": "arxiv",
+   "calls": 10,
+   "ours": 11524,
+   "whole": 12590,
+   "npages": 17,
+   "pages": [
+    5,
+    7
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29569v1.pdf",
+   "corpus": "arxiv",
+   "calls": 4,
+   "ours": 1770,
+   "whole": 6911,
+   "npages": 9,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29581v1.pdf",
+   "corpus": "arxiv",
+   "calls": 9,
+   "ours": 6497,
+   "whole": 19291,
+   "npages": 27,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29582v1.pdf",
+   "corpus": "arxiv",
+   "calls": 8,
+   "ours": 2335,
+   "whole": 4521,
+   "npages": 6,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29585v1.pdf",
+   "corpus": "arxiv",
+   "calls": 9,
+   "ours": 10857,
+   "whole": 14894,
+   "npages": 22,
+   "pages": [
+    7
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29606v1.pdf",
+   "corpus": "arxiv",
+   "calls": 5,
+   "ours": 8448,
+   "whole": 11287,
+   "npages": 14,
+   "pages": [
+    10
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29614v1.pdf",
+   "corpus": "arxiv",
+   "calls": 17,
+   "ours": 7940,
+   "whole": 23821,
+   "npages": 35,
+   "pages": [
+    19
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29638v1.pdf",
+   "corpus": "arxiv",
+   "calls": 11,
+   "ours": 3739,
+   "whole": 11208,
+   "npages": 15,
+   "pages": [
+    3,
+    12
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29659v1.pdf",
+   "corpus": "arxiv",
+   "calls": 2,
+   "ours": 177,
+   "whole": 5009,
+   "npages": 6,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29666v1.pdf",
+   "corpus": "arxiv",
+   "calls": 17,
+   "ours": 10525,
+   "whole": 15812,
+   "npages": 19,
+   "pages": [
+    11,
+    14
+   ]
+  },
+  {
+   "path": "/home/lps/pdf-extract/corpus/papers/ai_ddpm.pdf",
+   "corpus": "papers",
+   "calls": 22,
+   "ours": 13351,
+   "whole": 19286,
+   "npages": 25,
+   "pages": [
+    2,
+    7
+   ]
+  }
+ ],
+ "pages": [
+  {
+   "corpus": "arxiv",
+   "file": "2607.24285v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24285v1.pdf",
+   "page": 22,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 17,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2887,
+   "crop_tok_gone": 2887,
+   "render_tok": 867,
+   "edge": 960,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p022-x939",
+     "xref": 939,
+     "px": [
+      1920,
+      926
+     ],
+     "tok": 1581,
+     "bbox": [
+      63.4,
+      72.9,
+      293.8,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    },
+    {
+     "id": "p022-x940",
+     "xref": 940,
+     "px": [
+      1920,
+      765
+     ],
+     "tok": 1306,
+     "bbox": [
+      295.8,
+      72.9,
+      526.2,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      22
+     ]
+    }
+   ],
+   "tag": "r001"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.24285v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24285v1.pdf",
+   "page": 23,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 17,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2631,
+   "crop_tok_gone": 2631,
+   "render_tok": 867,
+   "edge": 960,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p023-x950",
+     "xref": 950,
+     "px": [
+      1920,
+      769
+     ],
+     "tok": 1312,
+     "bbox": [
+      63.4,
+      72.9,
+      293.8,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      23
+     ]
+    },
+    {
+     "id": "p023-x951",
+     "xref": 951,
+     "px": [
+      1920,
+      773
+     ],
+     "tok": 1319,
+     "bbox": [
+      295.8,
+      72.9,
+      526.2,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      23
+     ]
+    }
+   ],
+   "tag": "r002"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.24285v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24285v1.pdf",
+   "page": 24,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 17,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2587,
+   "crop_tok_gone": 2587,
+   "render_tok": 867,
+   "edge": 960,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p024-x964",
+     "xref": 964,
+     "px": [
+      1920,
+      760
+     ],
+     "tok": 1297,
+     "bbox": [
+      63.4,
+      72.9,
+      293.8,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x965",
+     "xref": 965,
+     "px": [
+      1920,
+      756
+     ],
+     "tok": 1290,
+     "bbox": [
+      295.8,
+      72.9,
+      526.2,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    }
+   ],
+   "tag": "r003"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.24285v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24285v1.pdf",
+   "page": 25,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 17,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2622,
+   "crop_tok_gone": 2622,
+   "render_tok": 867,
+   "edge": 960,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p025-x978",
+     "xref": 978,
+     "px": [
+      1920,
+      764
+     ],
+     "tok": 1304,
+     "bbox": [
+      63.4,
+      72.9,
+      293.8,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      25
+     ]
+    },
+    {
+     "id": "p025-x979",
+     "xref": 979,
+     "px": [
+      1920,
+      772
+     ],
+     "tok": 1318,
+     "bbox": [
+      295.8,
+      72.9,
+      526.2,
+      216.9
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      25
+     ]
+    }
+   ],
+   "tag": "r004"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.24615v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.24615v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 2,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 329,
+   "crop_tok_gone": 329,
+   "render_tok": 1065,
+   "edge": 1018,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x694",
+     "xref": 694,
+     "px": [
+      336,
+      369
+     ],
+     "tok": 165,
+     "bbox": [
+      87.4,
+      58.1,
+      160.1,
+      138.1
+     ],
+     "bbox_frac": 0.012,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x695",
+     "xref": 695,
+     "px": [
+      335,
+      369
+     ],
+     "tok": 164,
+     "bbox": [
+      200.2,
+      58.1,
+      272.8,
+      138.1
+     ],
+     "bbox_frac": 0.012,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r005"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.28053v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.28053v1.pdf",
+   "page": 6,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 23,
+   "doc_calls": 13,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 631,
+   "crop_tok_gone": 631,
+   "render_tok": 625,
+   "edge": 800,
+   "page_pt": [
+    544.3,
+    742.7
+   ],
+   "rasters": [
+    {
+     "id": "p006-x1065",
+     "xref": 1065,
+     "px": [
+      470,
+      249
+     ],
+     "tok": 156,
+     "bbox": [
+      219.0,
+      184.6,
+      258.2,
+      207.9
+     ],
+     "bbox_frac": 0.0023,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1066",
+     "xref": 1066,
+     "px": [
+      500,
+      228
+     ],
+     "tok": 152,
+     "bbox": [
+      301.4,
+      183.7,
+      340.4,
+      208.1
+     ],
+     "bbox_frac": 0.0024,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1067",
+     "xref": 1067,
+     "px": [
+      423,
+      226
+     ],
+     "tok": 127,
+     "bbox": [
+      381.7,
+      183.3,
+      430.8,
+      209.5
+     ],
+     "bbox_frac": 0.0032,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1068",
+     "xref": 1068,
+     "px": [
+      312,
+      211
+     ],
+     "tok": 87,
+     "bbox": [
+      139.2,
+      123.6,
+      197.4,
+      162.9
+     ],
+     "bbox_frac": 0.0057,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1069",
+     "xref": 1069,
+     "px": [
+      386,
+      213
+     ],
+     "tok": 109,
+     "bbox": [
+      147.3,
+      184.6,
+      189.4,
+      207.8
+     ],
+     "bbox_frac": 0.0024,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r006"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.28564v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.28564v1.pdf",
+   "page": 4,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 73,
+   "doc_calls": 7,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1403,
+   "crop_tok_gone": 1403,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p004-x6386",
+     "xref": 6386,
+     "px": [
+      942,
+      562
+     ],
+     "tok": 705,
+     "bbox": [
+      106.6,
+      60.3,
+      512.9,
+      302.7
+     ],
+     "bbox_frac": 0.2032,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x6387",
+     "xref": 6387,
+     "px": [
+      941,
+      557
+     ],
+     "tok": 698,
+     "bbox": [
+      106.6,
+      87.9,
+      512.5,
+      328.1
+     ],
+     "bbox_frac": 0.2012,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r007"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.28739v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.28739v1.pdf",
+   "page": 16,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 17,
+   "doc_calls": 13,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 1176,
+   "crop_tok_gone": 1176,
+   "render_tok": 1660,
+   "edge": 1328,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p016-x925",
+     "xref": 925,
+     "px": [
+      456,
+      323
+     ],
+     "tok": 196,
+     "bbox": [
+      59.5,
+      89.5,
+      191.6,
+      183.1
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x926",
+     "xref": 926,
+     "px": [
+      456,
+      323
+     ],
+     "tok": 196,
+     "bbox": [
+      220.0,
+      89.5,
+      352.1,
+      183.1
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x927",
+     "xref": 927,
+     "px": [
+      456,
+      323
+     ],
+     "tok": 196,
+     "bbox": [
+      380.5,
+      89.5,
+      512.7,
+      183.1
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x928",
+     "xref": 928,
+     "px": [
+      456,
+      323
+     ],
+     "tok": 196,
+     "bbox": [
+      59.5,
+      205.4,
+      191.6,
+      299.0
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x929",
+     "xref": 929,
+     "px": [
+      456,
+      323
+     ],
+     "tok": 196,
+     "bbox": [
+      220.0,
+      205.4,
+      352.1,
+      299.0
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x930",
+     "xref": 930,
+     "px": [
+      456,
+      323
+     ],
+     "tok": 196,
+     "bbox": [
+      380.5,
+      205.4,
+      512.7,
+      299.0
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    }
+   ],
+   "tag": "r008"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29092v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29092v1.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 21,
+   "doc_calls": 5,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1409,
+   "crop_tok_gone": 1409,
+   "render_tok": 977,
+   "edge": 975,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x534",
+     "xref": 534,
+     "px": [
+      1280,
+      408
+     ],
+     "tok": 696,
+     "bbox": [
+      63.5,
+      144.2,
+      276.7,
+      212.3
+     ],
+     "bbox_frac": 0.03,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x535",
+     "xref": 535,
+     "px": [
+      1280,
+      418
+     ],
+     "tok": 713,
+     "bbox": [
+      63.5,
+      60.3,
+      276.7,
+      130.0
+     ],
+     "bbox_frac": 0.0306,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r009"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29187v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29187v1.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 5,
+   "doc_calls": 6,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1976,
+   "crop_tok_gone": 1976,
+   "render_tok": 1416,
+   "edge": 1173,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x35",
+     "xref": 35,
+     "px": [
+      384,
+      159
+     ],
+     "tok": 81,
+     "bbox": [
+      484.8,
+      620.4,
+      530.9,
+      639.5
+     ],
+     "bbox_frac": 0.0018,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x33",
+     "xref": 33,
+     "px": [
+      392,
+      159
+     ],
+     "tok": 83,
+     "bbox": [
+      370.3,
+      620.4,
+      417.4,
+      639.5
+     ],
+     "bbox_frac": 0.0019,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x32",
+     "xref": 32,
+     "px": [
+      1071,
+      737
+     ],
+     "tok": 1052,
+     "bbox": [
+      75.8,
+      245.3,
+      266.5,
+      367.9
+     ],
+     "bbox_frac": 0.0482,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x31",
+     "xref": 31,
+     "px": [
+      938,
+      608
+     ],
+     "tok": 760,
+     "bbox": [
+      55.4,
+      86.0,
+      286.9,
+      236.0
+     ],
+     "bbox_frac": 0.0716,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r010"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29211v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29211v1.pdf",
+   "page": 8,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 13,
+   "doc_calls": 9,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 309,
+   "crop_tok_gone": 309,
+   "render_tok": 989,
+   "edge": 1025,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p008-x971",
+     "xref": 971,
+     "px": [
+      466,
+      190
+     ],
+     "tok": 118,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x972",
+     "xref": 972,
+     "px": [
+      363,
+      215
+     ],
+     "tok": 104,
+     "bbox": [
+      242.2,
+      214.9,
+      274.8,
+      234.2
+     ],
+     "bbox_frac": 0.0013,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x974",
+     "xref": 974,
+     "px": [
+      305,
+      215
+     ],
+     "tok": 87,
+     "bbox": [
+      480.1,
+      214.9,
+      507.5,
+      234.2
+     ],
+     "bbox_frac": 0.0011,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    }
+   ],
+   "tag": "r011"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29377v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29377v1.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 7,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 566,
+   "crop_tok_gone": 566,
+   "render_tok": 1972,
+   "edge": 1384,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x349",
+     "xref": 349,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      489.2,
+      235.0,
+      506.0,
+      251.8
+     ],
+     "bbox_frac": 0.0006,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x354",
+     "xref": 354,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      533.9,
+      324.3,
+      551.7,
+      342.1
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x355",
+     "xref": 355,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      383.7,
+      278.3,
+      400.8,
+      295.4
+     ],
+     "bbox_frac": 0.0006,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x364",
+     "xref": 364,
+     "px": [
+      314,
+      314
+     ],
+     "tok": 131,
+     "bbox": [
+      434.4,
+      321.9,
+      455.3,
+      342.8
+     ],
+     "bbox_frac": 0.0009,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x365",
+     "xref": 365,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      430.1,
+      274.9,
+      449.6,
+      294.4
+     ],
+     "bbox_frac": 0.0008,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x366",
+     "xref": 366,
+     "px": [
+      256,
+      256
+     ],
+     "tok": 87,
+     "bbox": [
+      380.0,
+      237.2,
+      397.8,
+      255.0
+     ],
+     "bbox_frac": 0.0007,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r012"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29414v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29414v1.pdf",
+   "page": 4,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 12,
+   "doc_calls": 8,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 786,
+   "crop_tok_gone": 786,
+   "render_tok": 1451,
+   "edge": 1241,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p004-x1437",
+     "xref": 1437,
+     "px": [
+      444,
+      444
+     ],
+     "tok": 262,
+     "bbox": [
+      84.6,
+      64.4,
+      184.9,
+      164.8
+     ],
+     "bbox_frac": 0.0201,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1440",
+     "xref": 1440,
+     "px": [
+      444,
+      444
+     ],
+     "tok": 262,
+     "bbox": [
+      243.5,
+      64.4,
+      343.9,
+      164.8
+     ],
+     "bbox_frac": 0.0201,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x1443",
+     "xref": 1443,
+     "px": [
+      444,
+      444
+     ],
+     "tok": 262,
+     "bbox": [
+      401.8,
+      67.7,
+      499.4,
+      165.3
+     ],
+     "bbox_frac": 0.019,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r013"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29454v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29454v1.pdf",
+   "page": 6,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 15,
+   "doc_calls": 10,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 324,
+   "crop_tok_gone": 324,
+   "render_tok": 877,
+   "edge": 965,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p006-x996",
+     "xref": 996,
+     "px": [
+      203,
+      203
+     ],
+     "tok": 54,
+     "bbox": [
+      84.4,
+      117.5,
+      172.8,
+      205.9
+     ],
+     "bbox_frac": 0.0156,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x997",
+     "xref": 997,
+     "px": [
+      203,
+      203
+     ],
+     "tok": 54,
+     "bbox": [
+      84.4,
+      219.0,
+      172.8,
+      307.4
+     ],
+     "bbox_frac": 0.0156,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x999",
+     "xref": 999,
+     "px": [
+      203,
+      203
+     ],
+     "tok": 54,
+     "bbox": [
+      183.2,
+      117.5,
+      271.6,
+      205.9
+     ],
+     "bbox_frac": 0.0156,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1000",
+     "xref": 1000,
+     "px": [
+      203,
+      203
+     ],
+     "tok": 54,
+     "bbox": [
+      183.2,
+      219.0,
+      271.6,
+      307.4
+     ],
+     "bbox_frac": 0.0156,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1002",
+     "xref": 1002,
+     "px": [
+      203,
+      203
+     ],
+     "tok": 54,
+     "bbox": [
+      282.0,
+      117.5,
+      370.5,
+      205.9
+     ],
+     "bbox_frac": 0.0156,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x1003",
+     "xref": 1003,
+     "px": [
+      203,
+      203
+     ],
+     "tok": 54,
+     "bbox": [
+      282.0,
+      219.0,
+      370.5,
+      307.4
+     ],
+     "bbox_frac": 0.0156,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r014"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29476v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29476v1.pdf",
+   "page": 16,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 36,
+   "doc_calls": 24,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 1715,
+   "crop_tok_gone": 1715,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p016-x921",
+     "xref": 921,
+     "px": [
+      560,
+      460
+     ],
+     "tok": 343,
+     "bbox": [
+      225.3,
+      34.4,
+      401.2,
+      178.9
+     ],
+     "bbox_frac": 0.0524,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x922",
+     "xref": 922,
+     "px": [
+      560,
+      460
+     ],
+     "tok": 343,
+     "bbox": [
+      402.2,
+      34.4,
+      578.1,
+      178.9
+     ],
+     "bbox_frac": 0.0524,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x923",
+     "xref": 923,
+     "px": [
+      560,
+      460
+     ],
+     "tok": 343,
+     "bbox": [
+      41.0,
+      178.2,
+      216.9,
+      322.7
+     ],
+     "bbox_frac": 0.0524,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x924",
+     "xref": 924,
+     "px": [
+      560,
+      460
+     ],
+     "tok": 343,
+     "bbox": [
+      227.2,
+      178.2,
+      403.1,
+      322.7
+     ],
+     "bbox_frac": 0.0524,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x925",
+     "xref": 925,
+     "px": [
+      560,
+      460
+     ],
+     "tok": 343,
+     "bbox": [
+      402.2,
+      179.3,
+      578.1,
+      323.8
+     ],
+     "bbox_frac": 0.0524,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    }
+   ],
+   "tag": "r015"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29542v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29542v1.pdf",
+   "page": 6,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 15,
+   "doc_calls": 11,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 4220,
+   "crop_tok_gone": 4220,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p006-x427",
+     "xref": 427,
+     "px": [
+      756,
+      756
+     ],
+     "tok": 762,
+     "bbox": [
+      331.5,
+      64.7,
+      413.0,
+      146.2
+     ],
+     "bbox_frac": 0.0137,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x429",
+     "xref": 429,
+     "px": [
+      756,
+      756
+     ],
+     "tok": 762,
+     "bbox": [
+      459.6,
+      64.7,
+      541.0,
+      146.2
+     ],
+     "bbox_frac": 0.0137,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x431",
+     "xref": 431,
+     "px": [
+      711,
+      711
+     ],
+     "tok": 674,
+     "bbox": [
+      207.4,
+      462.7,
+      269.5,
+      524.8
+     ],
+     "bbox_frac": 0.008,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x433",
+     "xref": 433,
+     "px": [
+      711,
+      711
+     ],
+     "tok": 674,
+     "bbox": [
+      108.0,
+      562.5,
+      170.1,
+      624.6
+     ],
+     "bbox_frac": 0.008,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x434",
+     "xref": 434,
+     "px": [
+      711,
+      711
+     ],
+     "tok": 674,
+     "bbox": [
+      207.4,
+      562.5,
+      269.5,
+      624.6
+     ],
+     "bbox_frac": 0.008,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    },
+    {
+     "id": "p006-x435",
+     "xref": 435,
+     "px": [
+      711,
+      711
+     ],
+     "tok": 674,
+     "bbox": [
+      108.0,
+      462.7,
+      170.1,
+      524.8
+     ],
+     "bbox_frac": 0.008,
+     "subsumed": true,
+     "placed_on": [
+      6
+     ]
+    }
+   ],
+   "tag": "r016"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29565v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29565v1.pdf",
+   "page": 5,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 17,
+   "doc_calls": 10,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2281,
+   "crop_tok_gone": 2281,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p005-x753",
+     "xref": 753,
+     "px": [
+      384,
+      241
+     ],
+     "tok": 123,
+     "bbox": [
+      352.6,
+      244.9,
+      554.3,
+      371.4
+     ],
+     "bbox_frac": 0.0527,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x754",
+     "xref": 754,
+     "px": [
+      2621,
+      1726
+     ],
+     "tok": 2158,
+     "bbox": [
+      122.3,
+      238.2,
+      341.2,
+      382.8
+     ],
+     "bbox_frac": 0.0653,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    }
+   ],
+   "tag": "r017"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29565v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29565v1.pdf",
+   "page": 7,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 17,
+   "doc_calls": 10,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 3867,
+   "crop_tok_gone": 3867,
+   "render_tok": 912,
+   "edge": 941,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x755",
+     "xref": 755,
+     "px": [
+      2250,
+      1671
+     ],
+     "tok": 2434,
+     "bbox": [
+      139.6,
+      52.5,
+      320.3,
+      186.7
+     ],
+     "bbox_frac": 0.05,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x756",
+     "xref": 756,
+     "px": [
+      1100,
+      935
+     ],
+     "tok": 1371,
+     "bbox": [
+      135.3,
+      32.0,
+      336.9,
+      203.2
+     ],
+     "bbox_frac": 0.0712,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x757",
+     "xref": 757,
+     "px": [
+      179,
+      262
+     ],
+     "tok": 62,
+     "bbox": [
+      356.6,
+      90.8,
+      454.9,
+      151.2
+     ],
+     "bbox_frac": 0.0122,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r018"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29569v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29569v1.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 4,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 452,
+   "crop_tok_gone": 452,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x500",
+     "xref": 500,
+     "px": [
+      425,
+      399
+     ],
+     "tok": 226,
+     "bbox": [
+      349.4,
+      276.3,
+      376.9,
+      302.1
+     ],
+     "bbox_frac": 0.0015,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x501",
+     "xref": 501,
+     "px": [
+      425,
+      399
+     ],
+     "tok": 226,
+     "bbox": [
+      315.8,
+      276.3,
+      343.3,
+      302.1
+     ],
+     "bbox_frac": 0.0015,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r019"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29581v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29581v1.pdf",
+   "page": 1,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 27,
+   "doc_calls": 9,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1605,
+   "crop_tok_gone": 1605,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x933",
+     "xref": 933,
+     "px": [
+      634,
+      634
+     ],
+     "tok": 535,
+     "bbox": [
+      317.3,
+      198.7,
+      393.4,
+      274.8
+     ],
+     "bbox_frac": 0.012,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x934",
+     "xref": 934,
+     "px": [
+      634,
+      634
+     ],
+     "tok": 535,
+     "bbox": [
+      397.4,
+      198.7,
+      473.5,
+      274.8
+     ],
+     "bbox_frac": 0.012,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x935",
+     "xref": 935,
+     "px": [
+      634,
+      634
+     ],
+     "tok": 535,
+     "bbox": [
+      477.4,
+      198.7,
+      553.6,
+      274.8
+     ],
+     "bbox_frac": 0.012,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r020"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29582v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29582v1.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 6,
+   "doc_calls": 8,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 906,
+   "crop_tok_gone": 906,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x392",
+     "xref": 392,
+     "px": [
+      321,
+      138
+     ],
+     "tok": 59,
+     "bbox": [
+      284.3,
+      86.2,
+      400.7,
+      136.3
+     ],
+     "bbox_frac": 0.012,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x393",
+     "xref": 393,
+     "px": [
+      622,
+      170
+     ],
+     "tok": 140,
+     "bbox": [
+      87.5,
+      207.6,
+      312.6,
+      269.2
+     ],
+     "bbox_frac": 0.0286,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x394",
+     "xref": 394,
+     "px": [
+      238,
+      210
+     ],
+     "tok": 66,
+     "bbox": [
+      435.5,
+      79.1,
+      521.7,
+      155.0
+     ],
+     "bbox_frac": 0.0135,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x398",
+     "xref": 398,
+     "px": [
+      302,
+      238
+     ],
+     "tok": 95,
+     "bbox": [
+      337.0,
+      193.4,
+      446.5,
+      279.5
+     ],
+     "bbox_frac": 0.0194,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x399",
+     "xref": 399,
+     "px": [
+      584,
+      420
+     ],
+     "tok": 327,
+     "bbox": [
+      79.6,
+      286.1,
+      291.0,
+      438.1
+     ],
+     "bbox_frac": 0.0662,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x400",
+     "xref": 400,
+     "px": [
+      557,
+      296
+     ],
+     "tok": 219,
+     "bbox": [
+      88.2,
+      68.0,
+      289.6,
+      175.0
+     ],
+     "bbox_frac": 0.0444,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r021"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29585v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29585v1.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 22,
+   "doc_calls": 9,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1222,
+   "crop_tok_gone": 1222,
+   "render_tok": 875,
+   "edge": 964,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p007-x666",
+     "xref": 666,
+     "px": [
+      762,
+      602
+     ],
+     "tok": 611,
+     "bbox": [
+      414.8,
+      76.4,
+      524.6,
+      163.0
+     ],
+     "bbox_frac": 0.019,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x667",
+     "xref": 667,
+     "px": [
+      762,
+      602
+     ],
+     "tok": 611,
+     "bbox": [
+      412.6,
+      172.8,
+      522.7,
+      259.4
+     ],
+     "bbox_frac": 0.019,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r022"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29606v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29606v1.pdf",
+   "page": 10,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 14,
+   "doc_calls": 5,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 4238,
+   "crop_tok_gone": 4238,
+   "render_tok": 1206,
+   "edge": 1082,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p010-x627",
+     "xref": 627,
+     "px": [
+      2793,
+      1806
+     ],
+     "tok": 2119,
+     "bbox": [
+      52.2,
+      558.8,
+      172.7,
+      636.7
+     ],
+     "bbox_frac": 0.0194,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x628",
+     "xref": 628,
+     "px": [
+      2793,
+      1806
+     ],
+     "tok": 2119,
+     "bbox": [
+      176.2,
+      558.8,
+      296.7,
+      636.7
+     ],
+     "bbox_frac": 0.0194,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    }
+   ],
+   "tag": "r023"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29614v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29614v1.pdf",
+   "page": 19,
+   "signal": "stroke_grid",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 17,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1321,
+   "crop_tok_gone": 1321,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p019-x211",
+     "xref": 211,
+     "px": [
+      1090,
+      277
+     ],
+     "tok": 402,
+     "bbox": [
+      134.8,
+      115.8,
+      480.6,
+      203.7
+     ],
+     "bbox_frac": 0.0627,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x212",
+     "xref": 212,
+     "px": [
+      579,
+      400
+     ],
+     "tok": 308,
+     "bbox": [
+      138.6,
+      264.8,
+      249.3,
+      341.2
+     ],
+     "bbox_frac": 0.0175,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x213",
+     "xref": 213,
+     "px": [
+      570,
+      402
+     ],
+     "tok": 305,
+     "bbox": [
+      252.3,
+      263.2,
+      363.0,
+      341.2
+     ],
+     "bbox_frac": 0.0178,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x214",
+     "xref": 214,
+     "px": [
+      575,
+      400
+     ],
+     "tok": 306,
+     "bbox": [
+      366.1,
+      264.3,
+      476.8,
+      341.2
+     ],
+     "bbox_frac": 0.0176,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    }
+   ],
+   "tag": "r024"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29638v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29638v1.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 15,
+   "doc_calls": 11,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 457,
+   "crop_tok_gone": 457,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x178",
+     "xref": 178,
+     "px": [
+      318,
+      324
+     ],
+     "tok": 137,
+     "bbox": [
+      115.7,
+      143.3,
+      170.1,
+      198.9
+     ],
+     "bbox_frac": 0.0063,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x179",
+     "xref": 179,
+     "px": [
+      144,
+      470
+     ],
+     "tok": 90,
+     "bbox": [
+      235.6,
+      102.8,
+      278.0,
+      241.7
+     ],
+     "bbox_frac": 0.0121,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x185",
+     "xref": 185,
+     "px": [
+      332,
+      322
+     ],
+     "tok": 142,
+     "bbox": [
+      323.0,
+      145.6,
+      380.1,
+      200.8
+     ],
+     "bbox_frac": 0.0065,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x193",
+     "xref": 193,
+     "px": [
+      191,
+      347
+     ],
+     "tok": 88,
+     "bbox": [
+      57.8,
+      128.5,
+      108.1,
+      219.7
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r025"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29638v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29638v1.pdf",
+   "page": 12,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 15,
+   "doc_calls": 11,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 1565,
+   "crop_tok_gone": 1565,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p012-x198",
+     "xref": 198,
+     "px": [
+      738,
+      125
+     ],
+     "tok": 123,
+     "bbox": [
+      369.0,
+      276.7,
+      506.5,
+      300.0
+     ],
+     "bbox_frac": 0.0066,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x199",
+     "xref": 199,
+     "px": [
+      555,
+      825
+     ],
+     "tok": 610,
+     "bbox": [
+      202.5,
+      243.6,
+      295.9,
+      382.3
+     ],
+     "bbox_frac": 0.0267,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x204",
+     "xref": 204,
+     "px": [
+      477,
+      358
+     ],
+     "tok": 227,
+     "bbox": [
+      208.1,
+      493.4,
+      288.5,
+      553.5
+     ],
+     "bbox_frac": 0.01,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x205",
+     "xref": 205,
+     "px": [
+      488,
+      366
+     ],
+     "tok": 238,
+     "bbox": [
+      209.6,
+      562.4,
+      291.5,
+      624.3
+     ],
+     "bbox_frac": 0.0105,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x206",
+     "xref": 206,
+     "px": [
+      528,
+      260
+     ],
+     "tok": 183,
+     "bbox": [
+      364.5,
+      503.1,
+      453.5,
+      546.8
+     ],
+     "bbox_frac": 0.008,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x207",
+     "xref": 207,
+     "px": [
+      527,
+      263
+     ],
+     "tok": 184,
+     "bbox": [
+      448.7,
+      503.1,
+      537.3,
+      547.2
+     ],
+     "bbox_frac": 0.0081,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r026"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29659v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29659v1.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 6,
+   "doc_calls": 2,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 177,
+   "crop_tok_gone": 177,
+   "render_tok": 1063,
+   "edge": 1016,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x410",
+     "xref": 410,
+     "px": [
+      176,
+      381
+     ],
+     "tok": 89,
+     "bbox": [
+      197.9,
+      55.1,
+      252.3,
+      159.2
+     ],
+     "bbox_frac": 0.0117,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x413",
+     "xref": 413,
+     "px": [
+      248,
+      269
+     ],
+     "tok": 88,
+     "bbox": [
+      180.7,
+      145.0,
+      261.8,
+      222.1
+     ],
+     "bbox_frac": 0.0129,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r027"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29666v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29666v1.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 19,
+   "doc_calls": 17,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 1281,
+   "crop_tok_gone": 1281,
+   "render_tok": 1177,
+   "edge": 1069,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x1021",
+     "xref": 1021,
+     "px": [
+      345,
+      383
+     ],
+     "tok": 176,
+     "bbox": [
+      69.6,
+      62.4,
+      127.0,
+      125.7
+     ],
+     "bbox_frac": 0.0075,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x1023",
+     "xref": 1023,
+     "px": [
+      671,
+      248
+     ],
+     "tok": 221,
+     "bbox": [
+      331.7,
+      145.1,
+      443.1,
+      186.3
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x1024",
+     "xref": 1024,
+     "px": [
+      671,
+      248
+     ],
+     "tok": 221,
+     "bbox": [
+      331.7,
+      190.1,
+      443.1,
+      231.4
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x1025",
+     "xref": 1025,
+     "px": [
+      671,
+      248
+     ],
+     "tok": 221,
+     "bbox": [
+      331.7,
+      190.1,
+      443.1,
+      231.4
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x1026",
+     "xref": 1026,
+     "px": [
+      671,
+      248
+     ],
+     "tok": 221,
+     "bbox": [
+      447.0,
+      145.1,
+      558.4,
+      186.3
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x1027",
+     "xref": 1027,
+     "px": [
+      671,
+      248
+     ],
+     "tok": 221,
+     "bbox": [
+      447.0,
+      190.2,
+      558.4,
+      231.3
+     ],
+     "bbox_frac": 0.0095,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r028"
+  },
+  {
+   "corpus": "arxiv",
+   "file": "2607.29666v1.pdf",
+   "path": "/home/lps/pdf-extract/corpus/arxiv/2607.29666v1.pdf",
+   "page": 14,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 19,
+   "doc_calls": 17,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 694,
+   "crop_tok_gone": 694,
+   "render_tok": 1155,
+   "edge": 1059,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p014-x1034",
+     "xref": 1034,
+     "px": [
+      509,
+      512
+     ],
+     "tok": 347,
+     "bbox": [
+      442.0,
+      73.1,
+      526.4,
+      158.1
+     ],
+     "bbox_frac": 0.0148,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x1036",
+     "xref": 1036,
+     "px": [
+      509,
+      512
+     ],
+     "tok": 347,
+     "bbox": [
+      341.7,
+      73.1,
+      426.1,
+      158.1
+     ],
+     "bbox_frac": 0.0148,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    }
+   ],
+   "tag": "r029"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "bme680_bosch.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/bme680_bosch.pdf",
+   "page": 48,
+   "signal": "dense_grid",
+   "why_not_rendered": "filter3",
+   "npages": 53,
+   "doc_calls": 21,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 207,
+   "crop_tok_gone": 207,
+   "render_tok": 602,
+   "edge": 800,
+   "page_pt": [
+    595.3,
+    841.9
+   ],
+   "rasters": [
+    {
+     "id": "p048-x142",
+     "xref": 142,
+     "px": [
+      358,
+      226
+     ],
+     "tok": 107,
+     "bbox": [
+      30.6,
+      180.1,
+      209.3,
+      292.9
+     ],
+     "bbox_frac": 0.0402,
+     "subsumed": true,
+     "placed_on": [
+      48
+     ]
+    },
+    {
+     "id": "p048-x143",
+     "xref": 143,
+     "px": [
+      345,
+      219
+     ],
+     "tok": 100,
+     "bbox": [
+      31.1,
+      427.0,
+      203.7,
+      537.1
+     ],
+     "bbox_frac": 0.0379,
+     "subsumed": true,
+     "placed_on": [
+      48
+     ]
+    }
+   ],
+   "tag": "r030"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "bmi160_bosch.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/bmi160_bosch.pdf",
+   "page": 107,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 114,
+   "doc_calls": 25,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 172,
+   "crop_tok_gone": 172,
+   "render_tok": 1016,
+   "edge": 1039,
+   "page_pt": [
+    595.3,
+    842.0
+   ],
+   "rasters": [
+    {
+     "id": "p107-x353",
+     "xref": 353,
+     "px": [
+      225,
+      269
+     ],
+     "tok": 80,
+     "bbox": [
+      221.3,
+      511.2,
+      389.7,
+      712.6
+     ],
+     "bbox_frac": 0.0676,
+     "subsumed": true,
+     "placed_on": [
+      107
+     ]
+    },
+    {
+     "id": "p107-x354",
+     "xref": 354,
+     "px": [
+      282,
+      246
+     ],
+     "tok": 92,
+     "bbox": [
+      205.8,
+      281.4,
+      403.5,
+      448.0
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      107
+     ]
+    }
+   ],
+   "tag": "r031"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "diodes_ap2112.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_ap2112.pdf",
+   "page": 11,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 18,
+   "doc_calls": 4,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 813,
+   "crop_tok_gone": 813,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x43",
+     "xref": 43,
+     "px": [
+      567,
+      413
+     ],
+     "tok": 312,
+     "bbox": [
+      352.8,
+      141.4,
+      538.0,
+      276.4
+     ],
+     "bbox_frac": 0.0516,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x45",
+     "xref": 45,
+     "px": [
+      531,
+      354
+     ],
+     "tok": 250,
+     "bbox": [
+      101.4,
+      352.9,
+      292.6,
+      480.4
+     ],
+     "bbox_frac": 0.0503,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x47",
+     "xref": 47,
+     "px": [
+      547,
+      345
+     ],
+     "tok": 251,
+     "bbox": [
+      344.8,
+      353.3,
+      542.0,
+      477.5
+     ],
+     "bbox_frac": 0.0505,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r032"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "diodes_az1117c.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_az1117c.pdf",
+   "page": 9,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 24,
+   "doc_calls": 3,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 568,
+   "crop_tok_gone": 568,
+   "render_tok": 2130,
+   "edge": 1438,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x84",
+     "xref": 84,
+     "px": [
+      509,
+      419
+     ],
+     "tok": 284,
+     "bbox": [
+      87.6,
+      339.9,
+      270.9,
+      491.1
+     ],
+     "bbox_frac": 0.0572,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x96",
+     "xref": 96,
+     "px": [
+      517,
+      412
+     ],
+     "tok": 284,
+     "bbox": [
+      370.7,
+      342.7,
+      553.9,
+      489.6
+     ],
+     "bbox_frac": 0.0555,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r033"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "diodes_mmbt3904.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_mmbt3904.pdf",
+   "page": 1,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 2,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 174,
+   "crop_tok_gone": 174,
+   "render_tok": 852,
+   "edge": 910,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x2899",
+     "xref": 2899,
+     "px": [
+      253,
+      256
+     ],
+     "tok": 86,
+     "bbox": [
+      406.6,
+      249.0,
+      489.4,
+      332.8
+     ],
+     "bbox_frac": 0.0143,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x2900",
+     "xref": 2900,
+     "px": [
+      296,
+      224
+     ],
+     "tok": 88,
+     "bbox": [
+      190.1,
+      551.3,
+      286.6,
+      624.4
+     ],
+     "bbox_frac": 0.0146,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r034"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "diodes_pam8403.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_pam8403.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 11,
+   "doc_calls": 9,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 594,
+   "crop_tok_gone": 594,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x1682",
+     "xref": 1682,
+     "px": [
+      278,
+      404
+     ],
+     "tok": 149,
+     "bbox": [
+      383.8,
+      109.5,
+      509.8,
+      291.5
+     ],
+     "bbox_frac": 0.0473,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x1683",
+     "xref": 1683,
+     "px": [
+      343,
+      474
+     ],
+     "tok": 216,
+     "bbox": [
+      338.0,
+      430.2,
+      544.7,
+      715.1
+     ],
+     "bbox_frac": 0.1215,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x1684",
+     "xref": 1684,
+     "px": [
+      444,
+      388
+     ],
+     "tok": 229,
+     "bbox": [
+      68.6,
+      456.2,
+      301.9,
+      660.1
+     ],
+     "bbox_frac": 0.0981,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r035"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "diodes_pam8403.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/diodes_pam8403.pdf",
+   "page": 9,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 11,
+   "doc_calls": 9,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 385,
+   "crop_tok_gone": 385,
+   "render_tok": 852,
+   "edge": 910,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x31",
+     "xref": 31,
+     "px": [
+      319,
+      216
+     ],
+     "tok": 91,
+     "bbox": [
+      232.6,
+      168.4,
+      401.1,
+      281.6
+     ],
+     "bbox_frac": 0.0393,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x32",
+     "xref": 32,
+     "px": [
+      543,
+      407
+     ],
+     "tok": 294,
+     "bbox": [
+      194.5,
+      517.4,
+      439.3,
+      700.4
+     ],
+     "bbox_frac": 0.0924,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r036"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "led_wurth.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/led_wurth.pdf",
+   "page": 1,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 12,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 382,
+   "crop_tok_gone": 382,
+   "render_tok": 2316,
+   "edge": 1568,
+   "page_pt": [
+    841.9,
+    595.3
+   ],
+   "rasters": [
+    {
+     "id": "p001-x265",
+     "xref": 265,
+     "px": [
+      203,
+      253
+     ],
+     "tok": 68,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x269",
+     "xref": 269,
+     "px": [
+      203,
+      253
+     ],
+     "tok": 68,
+     "bbox": [
+      387.6,
+      464.9,
+      409.5,
+      492.1
+     ],
+     "bbox_frac": 0.0012,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x287",
+     "xref": 287,
+     "px": [
+      204,
+      282
+     ],
+     "tok": 76,
+     "bbox": [
+      412.9,
+      464.9,
+      432.5,
+      492.1
+     ],
+     "bbox_frac": 0.0011,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x291",
+     "xref": 291,
+     "px": [
+      400,
+      160
+     ],
+     "tok": 85,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x295",
+     "xref": 295,
+     "px": [
+      400,
+      160
+     ],
+     "tok": 85,
+     "bbox": [
+      317.8,
+      513.3,
+      410.7,
+      550.5
+     ],
+     "bbox_frac": 0.0069,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r037"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "led_wurth.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/led_wurth.pdf",
+   "page": 5,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 9,
+   "doc_calls": 12,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 122,
+   "crop_tok_gone": 122,
+   "render_tok": 2316,
+   "edge": 1568,
+   "page_pt": [
+    841.9,
+    595.3
+   ],
+   "rasters": [
+    {
+     "id": "p005-x138",
+     "xref": 138,
+     "px": [
+      200,
+      230
+     ],
+     "tok": 61,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x139",
+     "xref": 139,
+     "px": [
+      200,
+      230
+     ],
+     "tok": 61,
+     "bbox": [
+      574.3,
+      259.5,
+      598.1,
+      287.0
+     ],
+     "bbox_frac": 0.0013,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    }
+   ],
+   "tag": "r038"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_ads1256.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ads1256.pdf",
+   "page": 20,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 49,
+   "doc_calls": 10,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1086,
+   "crop_tok_gone": 1086,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p020-x201",
+     "xref": 201,
+     "px": [
+      776,
+      526
+     ],
+     "tok": 544,
+     "bbox": [
+      83.5,
+      313.0,
+      269.3,
+      439.0
+     ],
+     "bbox_frac": 0.0483,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    },
+    {
+     "id": "p020-x202",
+     "xref": 202,
+     "px": [
+      772,
+      527
+     ],
+     "tok": 542,
+     "bbox": [
+      84.7,
+      90.7,
+      270.0,
+      217.2
+     ],
+     "bbox_frac": 0.0483,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    }
+   ],
+   "tag": "r039"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_ads7830.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ads7830.pdf",
+   "page": 9,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 27,
+   "doc_calls": 6,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 2719,
+   "crop_tok_gone": 2719,
+   "render_tok": 870,
+   "edge": 920,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x108",
+     "xref": 108,
+     "px": [
+      776,
+      526
+     ],
+     "tok": 544,
+     "bbox": [
+      352.5,
+      130.4,
+      535.7,
+      254.6
+     ],
+     "bbox_frac": 0.0469,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x121",
+     "xref": 121,
+     "px": [
+      778,
+      526
+     ],
+     "tok": 545,
+     "bbox": [
+      99.5,
+      326.3,
+      283.2,
+      450.5
+     ],
+     "bbox_frac": 0.047,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x134",
+     "xref": 134,
+     "px": [
+      776,
+      526
+     ],
+     "tok": 544,
+     "bbox": [
+      99.4,
+      521.8,
+      282.6,
+      645.9
+     ],
+     "bbox_frac": 0.0469,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x147",
+     "xref": 147,
+     "px": [
+      774,
+      526
+     ],
+     "tok": 542,
+     "bbox": [
+      100.2,
+      130.2,
+      283.1,
+      254.6
+     ],
+     "bbox_frac": 0.0469,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x160",
+     "xref": 160,
+     "px": [
+      776,
+      526
+     ],
+     "tok": 544,
+     "bbox": [
+      352.5,
+      326.1,
+      535.7,
+      450.3
+     ],
+     "bbox_frac": 0.0469,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r040"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_bq25895.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_bq25895.pdf",
+   "page": 52,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 65,
+   "doc_calls": 29,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 3072,
+   "crop_tok_gone": 3072,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p052-x1018",
+     "xref": 1018,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      310.6,
+      477.2,
+      550.7,
+      621.2
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      52
+     ]
+    },
+    {
+     "id": "p052-x1019",
+     "xref": 1019,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      310.6,
+      282.7,
+      550.7,
+      426.7
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      52
+     ]
+    },
+    {
+     "id": "p052-x1020",
+     "xref": 1020,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      61.3,
+      477.2,
+      301.4,
+      621.2
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      52
+     ]
+    },
+    {
+     "id": "p052-x1021",
+     "xref": 1021,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      310.6,
+      76.2,
+      550.7,
+      220.2
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      52
+     ]
+    },
+    {
+     "id": "p052-x1022",
+     "xref": 1022,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      61.3,
+      282.7,
+      301.4,
+      426.7
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      52
+     ]
+    },
+    {
+     "id": "p052-x1023",
+     "xref": 1023,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      61.3,
+      76.2,
+      301.4,
+      220.2
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      52
+     ]
+    }
+   ],
+   "tag": "r041"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_dac8562.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "page": 19,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 63,
+   "doc_calls": 44,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 1602,
+   "crop_tok_gone": 1602,
+   "render_tok": 1107,
+   "edge": 1037,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p019-x806",
+     "xref": 806,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      109.9,
+      537.8,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x822",
+     "xref": 822,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      515.1,
+      537.8,
+      665.5
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x838",
+     "xref": 838,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      74.1,
+      312.5,
+      285.8,
+      462.9
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x854",
+     "xref": 854,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      312.5,
+      537.8,
+      462.9
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x870",
+     "xref": 870,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      74.1,
+      109.9,
+      285.8,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    },
+    {
+     "id": "p019-x886",
+     "xref": 886,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      74.1,
+      515.1,
+      285.8,
+      665.5
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      19
+     ]
+    }
+   ],
+   "tag": "r042"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_dac8562.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "page": 20,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 63,
+   "doc_calls": 44,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 2926,
+   "crop_tok_gone": 2926,
+   "render_tok": 1722,
+   "edge": 1293,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p020-x918",
+     "xref": 918,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      326.7,
+      507.7,
+      538.4,
+      658.1
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    },
+    {
+     "id": "p020-x934",
+     "xref": 934,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      81.9,
+      507.0,
+      293.6,
+      657.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    },
+    {
+     "id": "p020-x956",
+     "xref": 956,
+     "px": [
+      795,
+      564
+     ],
+     "tok": 597,
+     "bbox": [
+      326.1,
+      109.9,
+      537.8,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    },
+    {
+     "id": "p020-x957",
+     "xref": 957,
+     "px": [
+      795,
+      564
+     ],
+     "tok": 597,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    },
+    {
+     "id": "p020-x969",
+     "xref": 969,
+     "px": [
+      795,
+      565
+     ],
+     "tok": 598,
+     "bbox": [
+      74.1,
+      109.9,
+      285.9,
+      260.3
+     ],
+     "bbox_frac": 0.0658,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    },
+    {
+     "id": "p020-x970",
+     "xref": 970,
+     "px": [
+      795,
+      565
+     ],
+     "tok": 598,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      20
+     ]
+    }
+   ],
+   "tag": "r043"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_dac8562.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "page": 25,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 63,
+   "doc_calls": 44,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1070,
+   "crop_tok_gone": 1070,
+   "render_tok": 1107,
+   "edge": 1037,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p025-x1222",
+     "xref": 1222,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      508.2,
+      537.8,
+      658.6
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      25
+     ]
+    },
+    {
+     "id": "p025-x1234",
+     "xref": 1234,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      74.7,
+      508.2,
+      286.4,
+      658.5
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      25
+     ]
+    },
+    {
+     "id": "p025-x1246",
+     "xref": 1246,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      305.6,
+      537.8,
+      456.0
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      25
+     ]
+    },
+    {
+     "id": "p025-x1258",
+     "xref": 1258,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      74.7,
+      305.8,
+      286.4,
+      456.1
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      25
+     ]
+    }
+   ],
+   "tag": "r044"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_dac8562.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "page": 26,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 63,
+   "doc_calls": 44,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 1604,
+   "crop_tok_gone": 1604,
+   "render_tok": 1107,
+   "edge": 1037,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p026-x1291",
+     "xref": 1291,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      74.1,
+      312.5,
+      285.8,
+      462.9
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    },
+    {
+     "id": "p026-x1307",
+     "xref": 1307,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      326.7,
+      515.1,
+      538.4,
+      665.5
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    },
+    {
+     "id": "p026-x1323",
+     "xref": 1323,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      74.1,
+      515.1,
+      285.8,
+      665.5
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    },
+    {
+     "id": "p026-x1339",
+     "xref": 1339,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      109.9,
+      537.8,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    },
+    {
+     "id": "p026-x1355",
+     "xref": 1355,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      74.7,
+      109.9,
+      286.4,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    },
+    {
+     "id": "p026-x1371",
+     "xref": 1371,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      312.5,
+      537.8,
+      462.9
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      26
+     ]
+    }
+   ],
+   "tag": "r045"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_dac8562.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "page": 27,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 63,
+   "doc_calls": 44,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 802,
+   "crop_tok_gone": 802,
+   "render_tok": 1969,
+   "edge": 1383,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p027-x1403",
+     "xref": 1403,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      326.1,
+      109.9,
+      537.8,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      27
+     ]
+    },
+    {
+     "id": "p027-x1413",
+     "xref": 1413,
+     "px": [
+      501,
+      401
+     ],
+     "tok": 267,
+     "bbox": [
+      74.1,
+      109.9,
+      285.8,
+      260.3
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      27
+     ]
+    },
+    {
+     "id": "p027-x1423",
+     "xref": 1423,
+     "px": [
+      502,
+      401
+     ],
+     "tok": 268,
+     "bbox": [
+      200.7,
+      312.6,
+      412.4,
+      462.9
+     ],
+     "bbox_frac": 0.0657,
+     "subsumed": true,
+     "placed_on": [
+      27
+     ]
+    }
+   ],
+   "tag": "r046"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_dac8562.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_dac8562.pdf",
+   "page": 31,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 63,
+   "doc_calls": 44,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 651,
+   "crop_tok_gone": 651,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p031-x1559",
+     "xref": 1559,
+     "px": [
+      681,
+      226
+     ],
+     "tok": 205,
+     "bbox": [
+      231.4,
+      382.6,
+      355.3,
+      423.7
+     ],
+     "bbox_frac": 0.0105,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    },
+    {
+     "id": "p031-x1560",
+     "xref": 1560,
+     "px": [
+      681,
+      492
+     ],
+     "tok": 446,
+     "bbox": [
+      231.4,
+      293.0,
+      355.3,
+      382.5
+     ],
+     "bbox_frac": 0.0229,
+     "subsumed": true,
+     "placed_on": [
+      31
+     ]
+    }
+   ],
+   "tag": "r047"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_iso1050.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_iso1050.pdf",
+   "page": 5,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 42,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 260,
+   "crop_tok_gone": 260,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p005-x232",
+     "xref": 232,
+     "px": [
+      365,
+      172
+     ],
+     "tok": 83,
+     "bbox": [
+      348.5,
+      104.0,
+      512.8,
+      181.4
+     ],
+     "bbox_frac": 0.0262,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x239",
+     "xref": 239,
+     "px": [
+      408,
+      327
+     ],
+     "tok": 177,
+     "bbox": [
+      89.6,
+      104.0,
+      273.1,
+      251.1
+     ],
+     "bbox_frac": 0.0557,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    }
+   ],
+   "tag": "r048"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lm2576.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lm2576.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 45,
+   "doc_calls": 34,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 2983,
+   "crop_tok_gone": 2983,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x155",
+     "xref": 155,
+     "px": [
+      1564,
+      1137
+     ],
+     "tok": 2371,
+     "bbox": [
+      125.0,
+      166.0,
+      237.7,
+      247.9
+     ],
+     "bbox_frac": 0.019,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x156",
+     "xref": 156,
+     "px": [
+      1249,
+      368
+     ],
+     "tok": 612,
+     "bbox": [
+      246.8,
+      97.0,
+      365.2,
+      131.9
+     ],
+     "bbox_frac": 0.0085,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r049"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lm2576.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lm2576.pdf",
+   "page": 9,
+   "signal": "curves",
+   "why_not_rendered": "already_rendered",
+   "npages": 45,
+   "doc_calls": 34,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 0,
+   "crop_tok_item": 8206,
+   "crop_tok_gone": 0,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x313",
+     "xref": 313,
+     "px": [
+      1467,
+      1399
+     ],
+     "tok": 2736,
+     "bbox": [
+      346.2,
+      450.8,
+      515.2,
+      612.0
+     ],
+     "bbox_frac": 0.0562,
+     "subsumed": false,
+     "placed_on": [
+      9,
+      10
+     ]
+    },
+    {
+     "id": "p009-x314",
+     "xref": 314,
+     "px": [
+      1467,
+      1398
+     ],
+     "tok": 2734,
+     "bbox": [
+      345.1,
+      259.8,
+      516.2,
+      422.9
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": false,
+     "placed_on": [
+      9,
+      10
+     ]
+    },
+    {
+     "id": "p009-x315",
+     "xref": 315,
+     "px": [
+      1467,
+      1399
+     ],
+     "tok": 2736,
+     "bbox": [
+      96.8,
+      450.8,
+      265.8,
+      612.0
+     ],
+     "bbox_frac": 0.0562,
+     "subsumed": false,
+     "placed_on": [
+      9,
+      10
+     ]
+    }
+   ],
+   "tag": "r050"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lm2576.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lm2576.pdf",
+   "page": 10,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 45,
+   "doc_calls": 34,
+   "n_item": 3,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 5447,
+   "crop_tok_gone": 13653,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x313",
+     "xref": 313,
+     "px": [
+      1467,
+      1399
+     ],
+     "tok": 2736,
+     "bbox": [
+      96.8,
+      259.8,
+      265.8,
+      421.0
+     ],
+     "bbox_frac": 0.0562,
+     "subsumed": true,
+     "placed_on": [
+      9,
+      10
+     ]
+    },
+    {
+     "id": "p009-x314",
+     "xref": 314,
+     "px": [
+      1467,
+      1398
+     ],
+     "tok": 2734,
+     "bbox": [
+      96.8,
+      76.2,
+      265.8,
+      237.2
+     ],
+     "bbox_frac": 0.0562,
+     "subsumed": true,
+     "placed_on": [
+      9,
+      10
+     ]
+    },
+    {
+     "id": "p009-x315",
+     "xref": 315,
+     "px": [
+      1467,
+      1399
+     ],
+     "tok": 2736,
+     "bbox": [
+      346.2,
+      76.2,
+      515.2,
+      237.3
+     ],
+     "bbox_frac": 0.0562,
+     "subsumed": true,
+     "placed_on": [
+      9,
+      10
+     ]
+    },
+    {
+     "id": "p010-x328",
+     "xref": 328,
+     "px": [
+      433,
+      336
+     ],
+     "tok": 193,
+     "bbox": [
+      346.2,
+      447.0,
+      515.1,
+      578.0
+     ],
+     "bbox_frac": 0.0457,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x330",
+     "xref": 330,
+     "px": [
+      1415,
+      1353
+     ],
+     "tok": 2552,
+     "bbox": [
+      344.5,
+      259.8,
+      516.8,
+      424.5
+     ],
+     "bbox_frac": 0.0585,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x331",
+     "xref": 331,
+     "px": [
+      1475,
+      1374
+     ],
+     "tok": 2702,
+     "bbox": [
+      98.4,
+      447.0,
+      264.3,
+      601.5
+     ],
+     "bbox_frac": 0.0529,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    }
+   ],
+   "tag": "r051"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lm833.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lm833.pdf",
+   "page": 18,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 36,
+   "doc_calls": 11,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 3815,
+   "crop_tok_gone": 3815,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p018-x779",
+     "xref": 779,
+     "px": [
+      877,
+      813
+     ],
+     "tok": 950,
+     "bbox": [
+      250.5,
+      345.9,
+      361.2,
+      448.6
+     ],
+     "bbox_frac": 0.0235,
+     "subsumed": true,
+     "placed_on": [
+      18
+     ]
+    },
+    {
+     "id": "p018-x784",
+     "xref": 784,
+     "px": [
+      1532,
+      1403
+     ],
+     "tok": 2865,
+     "bbox": [
+      251.5,
+      186.0,
+      360.4,
+      285.6
+     ],
+     "bbox_frac": 0.0224,
+     "subsumed": true,
+     "placed_on": [
+      18
+     ]
+    }
+   ],
+   "tag": "r052"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lmt84.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lmt84.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 20,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 987,
+   "crop_tok_gone": 987,
+   "render_tok": 852,
+   "edge": 910,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x239",
+     "xref": 239,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      96.6,
+      297.7,
+      263.6,
+      464.7
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x244",
+     "xref": 244,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      348.6,
+      297.7,
+      515.6,
+      464.7
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x249",
+     "xref": 249,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      97.8,
+      481.4,
+      264.8,
+      648.4
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x256",
+     "xref": 256,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      348.6,
+      481.4,
+      515.6,
+      648.4
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x270",
+     "xref": 270,
+     "px": [
+      343,
+      297
+     ],
+     "tok": 135,
+     "bbox": [
+      335.0,
+      102.9,
+      528.5,
+      270.5
+     ],
+     "bbox_frac": 0.0669,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r053"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lmt84.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lmt84.pdf",
+   "page": 8,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 20,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 639,
+   "crop_tok_gone": 639,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p008-x280",
+     "xref": 280,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      349.8,
+      92.7,
+      516.8,
+      259.7
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x287",
+     "xref": 287,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      97.8,
+      92.7,
+      264.8,
+      259.7
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x292",
+     "xref": 292,
+     "px": [
+      400,
+      400
+     ],
+     "tok": 213,
+     "bbox": [
+      96.6,
+      276.4,
+      263.6,
+      443.4
+     ],
+     "bbox_frac": 0.0576,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    }
+   ],
+   "tag": "r054"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lmt84.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lmt84.pdf",
+   "page": 14,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 20,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 4280,
+   "crop_tok_gone": 4280,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p014-x435",
+     "xref": 435,
+     "px": [
+      1280,
+      502
+     ],
+     "tok": 856,
+     "bbox": [
+      57.0,
+      492.1,
+      302.8,
+      588.5
+     ],
+     "bbox_frac": 0.0489,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x436",
+     "xref": 436,
+     "px": [
+      1280,
+      502
+     ],
+     "tok": 856,
+     "bbox": [
+      309.0,
+      346.0,
+      554.8,
+      442.4
+     ],
+     "bbox_frac": 0.0489,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x445",
+     "xref": 445,
+     "px": [
+      1280,
+      502
+     ],
+     "tok": 856,
+     "bbox": [
+      57.0,
+      346.0,
+      302.8,
+      442.4
+     ],
+     "bbox_frac": 0.0489,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x447",
+     "xref": 447,
+     "px": [
+      1280,
+      502
+     ],
+     "tok": 856,
+     "bbox": [
+      309.0,
+      492.1,
+      554.8,
+      588.5
+     ],
+     "bbox_frac": 0.0489,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x446",
+     "xref": 446,
+     "px": [
+      1280,
+      502
+     ],
+     "tok": 856,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    }
+   ],
+   "tag": "r055"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lmt84.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lmt84.pdf",
+   "page": 15,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 20,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1538,
+   "crop_tok_gone": 1538,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p015-x463",
+     "xref": 463,
+     "px": [
+      682,
+      660
+     ],
+     "tok": 600,
+     "bbox": [
+      245.4,
+      391.8,
+      366.6,
+      509.1
+     ],
+     "bbox_frac": 0.0293,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x470",
+     "xref": 470,
+     "px": [
+      984,
+      715
+     ],
+     "tok": 938,
+     "bbox": [
+      219.0,
+      545.6,
+      392.4,
+      671.6
+     ],
+     "bbox_frac": 0.0451,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    }
+   ],
+   "tag": "r056"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lp2985.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lp2985.pdf",
+   "page": 14,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 43,
+   "doc_calls": 23,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1063,
+   "crop_tok_gone": 1063,
+   "render_tok": 904,
+   "edge": 938,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p014-x482",
+     "xref": 482,
+     "px": [
+      638,
+      590
+     ],
+     "tok": 501,
+     "bbox": [
+      354.0,
+      133.2,
+      507.3,
+      274.9
+     ],
+     "bbox_frac": 0.0448,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    },
+    {
+     "id": "p014-x483",
+     "xref": 483,
+     "px": [
+      668,
+      632
+     ],
+     "tok": 562,
+     "bbox": [
+      106.4,
+      133.2,
+      256.2,
+      274.9
+     ],
+     "bbox_frac": 0.0438,
+     "subsumed": true,
+     "placed_on": [
+      14
+     ]
+    }
+   ],
+   "tag": "r057"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_lp5907.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_lp5907.pdf",
+   "page": 8,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 52,
+   "doc_calls": 28,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 768,
+   "crop_tok_gone": 768,
+   "render_tok": 1163,
+   "edge": 1063,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p008-x292",
+     "xref": 292,
+     "px": [
+      339,
+      272
+     ],
+     "tok": 122,
+     "bbox": [
+      348.0,
+      489.2,
+      492.2,
+      605.0
+     ],
+     "bbox_frac": 0.0344,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x307",
+     "xref": 307,
+     "px": [
+      451,
+      358
+     ],
+     "tok": 215,
+     "bbox": [
+      370.6,
+      305.6,
+      511.8,
+      419.7
+     ],
+     "bbox_frac": 0.0332,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x322",
+     "xref": 322,
+     "px": [
+      449,
+      359
+     ],
+     "tok": 214,
+     "bbox": [
+      121.8,
+      489.3,
+      265.2,
+      604.0
+     ],
+     "bbox_frac": 0.034,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    },
+    {
+     "id": "p008-x345",
+     "xref": 345,
+     "px": [
+      450,
+      362
+     ],
+     "tok": 217,
+     "bbox": [
+      114.3,
+      305.5,
+      254.9,
+      418.6
+     ],
+     "bbox_frac": 0.0328,
+     "subsumed": true,
+     "placed_on": [
+      8
+     ]
+    }
+   ],
+   "tag": "r058"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_opa134.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa134.pdf",
+   "page": 12,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1084,
+   "crop_tok_gone": 1084,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p012-x548",
+     "xref": 548,
+     "px": [
+      775,
+      525
+     ],
+     "tok": 542,
+     "bbox": [
+      342.8,
+      121.4,
+      528.8,
+      247.4
+     ],
+     "bbox_frac": 0.0483,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x561",
+     "xref": 561,
+     "px": [
+      775,
+      525
+     ],
+     "tok": 542,
+     "bbox": [
+      93.5,
+      307.4,
+      279.5,
+      433.4
+     ],
+     "bbox_frac": 0.0483,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r059"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_opa2134.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa2134.pdf",
+   "page": 12,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1084,
+   "crop_tok_gone": 1084,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p012-x548",
+     "xref": 548,
+     "px": [
+      775,
+      525
+     ],
+     "tok": 542,
+     "bbox": [
+      342.8,
+      121.4,
+      528.8,
+      247.4
+     ],
+     "bbox_frac": 0.0483,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x561",
+     "xref": 561,
+     "px": [
+      775,
+      525
+     ],
+     "tok": 542,
+     "bbox": [
+      93.5,
+      307.4,
+      279.5,
+      433.4
+     ],
+     "bbox_frac": 0.0483,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r060"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_opa2340.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa2340.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 48,
+   "doc_calls": 22,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 539,
+   "crop_tok_gone": 539,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x473",
+     "xref": 473,
+     "px": [
+      503,
+      402
+     ],
+     "tok": 269,
+     "bbox": [
+      95.1,
+      108.5,
+      276.5,
+      231.0
+     ],
+     "bbox_frac": 0.0459,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x486",
+     "xref": 486,
+     "px": [
+      503,
+      404
+     ],
+     "tok": 270,
+     "bbox": [
+      346.9,
+      108.3,
+      529.0,
+      231.3
+     ],
+     "bbox_frac": 0.0462,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r061"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_opa340.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa340.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 48,
+   "doc_calls": 22,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 539,
+   "crop_tok_gone": 539,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x473",
+     "xref": 473,
+     "px": [
+      503,
+      402
+     ],
+     "tok": 269,
+     "bbox": [
+      95.1,
+      108.5,
+      276.5,
+      231.0
+     ],
+     "bbox_frac": 0.0459,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x486",
+     "xref": 486,
+     "px": [
+      503,
+      404
+     ],
+     "tok": 270,
+     "bbox": [
+      346.9,
+      108.3,
+      529.0,
+      231.3
+     ],
+     "bbox_frac": 0.0462,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r062"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_opa350.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_opa350.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 44,
+   "doc_calls": 14,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 540,
+   "crop_tok_gone": 540,
+   "render_tok": 879,
+   "edge": 924,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x424",
+     "xref": 424,
+     "px": [
+      503,
+      403
+     ],
+     "tok": 270,
+     "bbox": [
+      94.8,
+      501.0,
+      277.3,
+      625.4
+     ],
+     "bbox_frac": 0.0468,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x433",
+     "xref": 433,
+     "px": [
+      503,
+      403
+     ],
+     "tok": 270,
+     "bbox": [
+      346.9,
+      500.5,
+      529.6,
+      624.9
+     ],
+     "bbox_frac": 0.0469,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r063"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn6501.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn6501.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 38,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 829,
+   "crop_tok_gone": 829,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p001-x7",
+     "xref": 7,
+     "px": [
+      720,
+      596
+     ],
+     "tok": 572,
+     "bbox": [
+      317.3,
+      419.2,
+      544.0,
+      606.9
+     ],
+     "bbox_frac": 0.0878,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x15",
+     "xref": 15,
+     "px": [
+      647,
+      299
+     ],
+     "tok": 257,
+     "bbox": [
+      68.0,
+      419.2,
+      294.7,
+      524.0
+     ],
+     "bbox_frac": 0.049,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r064"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn6501.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn6501.pdf",
+   "page": 9,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 38,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 347,
+   "crop_tok_gone": 347,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x384",
+     "xref": 384,
+     "px": [
+      407,
+      326
+     ],
+     "tok": 176,
+     "bbox": [
+      339.1,
+      395.3,
+      522.2,
+      542.0
+     ],
+     "bbox_frac": 0.0554,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x412",
+     "xref": 412,
+     "px": [
+      396,
+      325
+     ],
+     "tok": 171,
+     "bbox": [
+      92.3,
+      395.3,
+      270.4,
+      541.5
+     ],
+     "bbox_frac": 0.0537,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r065"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc138.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc138.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 35,
+   "doc_calls": 14,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 503,
+   "crop_tok_gone": 503,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x133",
+     "xref": 133,
+     "px": [
+      436,
+      451
+     ],
+     "tok": 262,
+     "bbox": [
+      321.6,
+      104.0,
+      539.7,
+      329.5
+     ],
+     "bbox_frac": 0.1014,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x135",
+     "xref": 135,
+     "px": [
+      448,
+      404
+     ],
+     "tok": 241,
+     "bbox": [
+      69.3,
+      104.0,
+      293.4,
+      306.0
+     ],
+     "bbox_frac": 0.0934,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r066"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc157.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc157.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 37,
+   "doc_calls": 18,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 191,
+   "crop_tok_gone": 191,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x95",
+     "xref": 95,
+     "px": [
+      276,
+      321
+     ],
+     "tok": 118,
+     "bbox": [
+      361.6,
+      103.4,
+      499.7,
+      263.9
+     ],
+     "bbox_frac": 0.0457,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x99",
+     "xref": 99,
+     "px": [
+      224,
+      247
+     ],
+     "tok": 73,
+     "bbox": [
+      125.3,
+      103.4,
+      237.3,
+      226.9
+     ],
+     "bbox_frac": 0.0285,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r067"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc273.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc273.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 37,
+   "doc_calls": 16,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 516,
+   "crop_tok_gone": 516,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x146",
+     "xref": 146,
+     "px": [
+      408,
+      418
+     ],
+     "tok": 227,
+     "bbox": [
+      328.6,
+      104.0,
+      532.7,
+      313.0
+     ],
+     "bbox_frac": 0.088,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x148",
+     "xref": 148,
+     "px": [
+      488,
+      445
+     ],
+     "tok": 289,
+     "bbox": [
+      68.0,
+      104.0,
+      294.7,
+      310.8
+     ],
+     "bbox_frac": 0.0967,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r068"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc374.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc374.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 32,
+   "doc_calls": 15,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 186,
+   "crop_tok_gone": 186,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x118",
+     "xref": 118,
+     "px": [
+      272,
+      284
+     ],
+     "tok": 102,
+     "bbox": [
+      362.6,
+      104.0,
+      498.7,
+      246.0
+     ],
+     "bbox_frac": 0.0398,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x120",
+     "xref": 120,
+     "px": [
+      216,
+      294
+     ],
+     "tok": 84,
+     "bbox": [
+      127.3,
+      104.0,
+      235.3,
+      251.0
+     ],
+     "bbox_frac": 0.0328,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r069"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc540.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc540.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 25,
+   "doc_calls": 14,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 198,
+   "crop_tok_gone": 198,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x114",
+     "xref": 114,
+     "px": [
+      280,
+      299
+     ],
+     "tok": 111,
+     "bbox": [
+      360.6,
+      104.0,
+      500.7,
+      253.5
+     ],
+     "bbox_frac": 0.0432,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x116",
+     "xref": 116,
+     "px": [
+      224,
+      294
+     ],
+     "tok": 87,
+     "bbox": [
+      125.3,
+      104.0,
+      237.3,
+      251.0
+     ],
+     "bbox_frac": 0.034,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r070"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc541.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc541.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 34,
+   "doc_calls": 16,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 500,
+   "crop_tok_gone": 500,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x157",
+     "xref": 157,
+     "px": [
+      408,
+      415
+     ],
+     "tok": 225,
+     "bbox": [
+      328.6,
+      104.0,
+      532.7,
+      311.5
+     ],
+     "bbox_frac": 0.0873,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x159",
+     "xref": 159,
+     "px": [
+      472,
+      438
+     ],
+     "tok": 275,
+     "bbox": [
+      68.0,
+      104.0,
+      294.7,
+      314.4
+     ],
+     "bbox_frac": 0.0985,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r071"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_sn74hc574.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_sn74hc574.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 31,
+   "doc_calls": 15,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 197,
+   "crop_tok_gone": 197,
+   "render_tok": 843,
+   "edge": 905,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p003-x115",
+     "xref": 115,
+     "px": [
+      276,
+      291
+     ],
+     "tok": 107,
+     "bbox": [
+      361.6,
+      104.0,
+      499.7,
+      249.5
+     ],
+     "bbox_frac": 0.0414,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x117",
+     "xref": 117,
+     "px": [
+      228,
+      299
+     ],
+     "tok": 90,
+     "bbox": [
+      124.3,
+      104.0,
+      238.3,
+      253.5
+     ],
+     "bbox_frac": 0.0352,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r072"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tlv1117.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tlv1117.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 55,
+   "doc_calls": 42,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 3542,
+   "crop_tok_gone": 3542,
+   "render_tok": 1713,
+   "edge": 1290,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x293",
+     "xref": 293,
+     "px": [
+      331,
+      254
+     ],
+     "tok": 112,
+     "bbox": [
+      338.3,
+      486.2,
+      523.0,
+      627.9
+     ],
+     "bbox_frac": 0.054,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x304",
+     "xref": 304,
+     "px": [
+      318,
+      243
+     ],
+     "tok": 103,
+     "bbox": [
+      88.6,
+      486.2,
+      274.1,
+      627.9
+     ],
+     "bbox_frac": 0.0542,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x306",
+     "xref": 306,
+     "px": [
+      1754,
+      1725
+     ],
+     "tok": 3223,
+     "bbox": [
+      358.6,
+      99.4,
+      502.7,
+      241.1
+     ],
+     "bbox_frac": 0.0421,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x316",
+     "xref": 316,
+     "px": [
+      322,
+      243
+     ],
+     "tok": 104,
+     "bbox": [
+      87.4,
+      99.4,
+      275.3,
+      241.1
+     ],
+     "bbox_frac": 0.0549,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r073"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tlv1117.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tlv1117.pdf",
+   "page": 13,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 55,
+   "doc_calls": 42,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 0,
+   "crop_tok_item": 3381,
+   "crop_tok_gone": 0,
+   "render_tok": 1699,
+   "edge": 1285,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p013-x380",
+     "xref": 380,
+     "px": [
+      358,
+      243
+     ],
+     "tok": 115,
+     "bbox": [
+      326.2,
+      292.8,
+      535.1,
+      434.5
+     ],
+     "bbox_frac": 0.0611,
+     "subsumed": false,
+     "placed_on": [
+      13,
+      27
+     ]
+    },
+    {
+     "id": "p013-x382",
+     "xref": 382,
+     "px": [
+      1863,
+      1726
+     ],
+     "tok": 3037,
+     "bbox": [
+      104.9,
+      486.2,
+      257.8,
+      627.9
+     ],
+     "bbox_frac": 0.0447,
+     "subsumed": false,
+     "placed_on": [
+      13,
+      27
+     ]
+    },
+    {
+     "id": "p013-x383",
+     "xref": 383,
+     "px": [
+      354,
+      243
+     ],
+     "tok": 114,
+     "bbox": [
+      327.4,
+      99.4,
+      533.9,
+      241.1
+     ],
+     "bbox_frac": 0.0604,
+     "subsumed": false,
+     "placed_on": [
+      13,
+      27
+     ]
+    },
+    {
+     "id": "p013-x385",
+     "xref": 385,
+     "px": [
+      358,
+      243
+     ],
+     "tok": 115,
+     "bbox": [
+      76.9,
+      292.8,
+      285.8,
+      434.5
+     ],
+     "bbox_frac": 0.0611,
+     "subsumed": false,
+     "placed_on": [
+      13,
+      27
+     ]
+    }
+   ],
+   "tag": "r074"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tlv1117.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tlv1117.pdf",
+   "page": 14,
+   "signal": "curves",
+   "why_not_rendered": "already_rendered",
+   "npages": 55,
+   "doc_calls": 42,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 0,
+   "crop_tok_item": 3185,
+   "crop_tok_gone": 0,
+   "render_tok": 1713,
+   "edge": 1290,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p014-x423",
+     "xref": 423,
+     "px": [
+      340,
+      243
+     ],
+     "tok": 110,
+     "bbox": [
+      331.5,
+      99.4,
+      529.8,
+      241.1
+     ],
+     "bbox_frac": 0.058,
+     "subsumed": false,
+     "placed_on": [
+      14,
+      28
+     ]
+    },
+    {
+     "id": "p014-x425",
+     "xref": 425,
+     "px": [
+      1909,
+      1726
+     ],
+     "tok": 2963,
+     "bbox": [
+      103.0,
+      292.8,
+      259.7,
+      434.5
+     ],
+     "bbox_frac": 0.0458,
+     "subsumed": false,
+     "placed_on": [
+      14,
+      27
+     ]
+    },
+    {
+     "id": "p014-x426",
+     "xref": 426,
+     "px": [
+      346,
+      243
+     ],
+     "tok": 112,
+     "bbox": [
+      80.4,
+      99.4,
+      282.3,
+      241.1
+     ],
+     "bbox_frac": 0.059,
+     "subsumed": false,
+     "placed_on": [
+      14,
+      28
+     ]
+    }
+   ],
+   "tag": "r075"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tlv1117.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tlv1117.pdf",
+   "page": 15,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 55,
+   "doc_calls": 42,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 3691,
+   "crop_tok_gone": 3691,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p015-x435",
+     "xref": 435,
+     "px": [
+      326,
+      243
+     ],
+     "tok": 105,
+     "bbox": [
+      335.6,
+      486.2,
+      525.7,
+      627.9
+     ],
+     "bbox_frac": 0.0556,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x437",
+     "xref": 437,
+     "px": [
+      318,
+      243
+     ],
+     "tok": 103,
+     "bbox": [
+      337.9,
+      292.8,
+      523.4,
+      434.5
+     ],
+     "bbox_frac": 0.0542,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x439",
+     "xref": 439,
+     "px": [
+      316,
+      243
+     ],
+     "tok": 102,
+     "bbox": [
+      89.2,
+      486.2,
+      273.5,
+      627.9
+     ],
+     "bbox_frac": 0.0539,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x441",
+     "xref": 441,
+     "px": [
+      1781,
+      1725
+     ],
+     "tok": 3175,
+     "bbox": [
+      357.5,
+      99.4,
+      503.8,
+      241.1
+     ],
+     "bbox_frac": 0.0428,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x442",
+     "xref": 442,
+     "px": [
+      318,
+      243
+     ],
+     "tok": 103,
+     "bbox": [
+      88.6,
+      292.8,
+      274.1,
+      434.5
+     ],
+     "bbox_frac": 0.0542,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    },
+    {
+     "id": "p015-x444",
+     "xref": 444,
+     "px": [
+      320,
+      243
+     ],
+     "tok": 103,
+     "bbox": [
+      88.0,
+      99.4,
+      274.7,
+      241.1
+     ],
+     "bbox_frac": 0.0546,
+     "subsumed": true,
+     "placed_on": [
+      15
+     ]
+    }
+   ],
+   "tag": "r076"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps22918.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps22918.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 30,
+   "doc_calls": 23,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1152,
+   "crop_tok_gone": 1152,
+   "render_tok": 1995,
+   "edge": 1392,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x308",
+     "xref": 308,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      186.0,
+      93.0,
+      426.0,
+      237.0
+     ],
+     "bbox_frac": 0.0713,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x309",
+     "xref": 309,
+     "px": [
+      1157,
+      415
+     ],
+     "tok": 640,
+     "bbox": [
+      154.1,
+      327.2,
+      457.7,
+      436.1
+     ],
+     "bbox_frac": 0.0682,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r077"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps2553.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps2553.pdf",
+   "page": 9,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 44,
+   "doc_calls": 19,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 4,
+   "crop_tok_item": 1605,
+   "crop_tok_gone": 1280,
+   "render_tok": 2135,
+   "edge": 1440,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p009-x318",
+     "xref": 318,
+     "px": [
+      616,
+      397
+     ],
+     "tok": 326,
+     "bbox": [
+      330.4,
+      275.8,
+      533.6,
+      406.8
+     ],
+     "bbox_frac": 0.0549,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x319",
+     "xref": 319,
+     "px": [
+      615,
+      397
+     ],
+     "tok": 325,
+     "bbox": [
+      83.1,
+      458.6,
+      276.7,
+      583.6
+     ],
+     "bbox_frac": 0.0499,
+     "subsumed": false,
+     "placed_on": [
+      9,
+      20
+     ]
+    },
+    {
+     "id": "p009-x320",
+     "xref": 320,
+     "px": [
+      598,
+      400
+     ],
+     "tok": 318,
+     "bbox": [
+      337.8,
+      93.1,
+      526.1,
+      219.0
+     ],
+     "bbox_frac": 0.0489,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x321",
+     "xref": 321,
+     "px": [
+      600,
+      400
+     ],
+     "tok": 320,
+     "bbox": [
+      85.5,
+      275.8,
+      274.5,
+      401.8
+     ],
+     "bbox_frac": 0.0491,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    },
+    {
+     "id": "p009-x322",
+     "xref": 322,
+     "px": [
+      597,
+      397
+     ],
+     "tok": 316,
+     "bbox": [
+      86.0,
+      93.0,
+      274.0,
+      218.0
+     ],
+     "bbox_frac": 0.0485,
+     "subsumed": true,
+     "placed_on": [
+      9
+     ]
+    }
+   ],
+   "tag": "r078"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps54331.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps54331.pdf",
+   "page": 24,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 41,
+   "doc_calls": 25,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 2332,
+   "crop_tok_gone": 2332,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p024-x650",
+     "xref": 650,
+     "px": [
+      800,
+      547
+     ],
+     "tok": 583,
+     "bbox": [
+      350.7,
+      270.6,
+      510.2,
+      442.2
+     ],
+     "bbox_frac": 0.0564,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x677",
+     "xref": 677,
+     "px": [
+      800,
+      547
+     ],
+     "tok": 583,
+     "bbox": [
+      350.3,
+      76.1,
+      510.0,
+      247.7
+     ],
+     "bbox_frac": 0.0565,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x695",
+     "xref": 695,
+     "px": [
+      800,
+      547
+     ],
+     "tok": 583,
+     "bbox": [
+      101.0,
+      269.4,
+      260.6,
+      440.6
+     ],
+     "bbox_frac": 0.0564,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x709",
+     "xref": 709,
+     "px": [
+      800,
+      547
+     ],
+     "tok": 583,
+     "bbox": [
+      101.4,
+      75.1,
+      260.5,
+      246.1
+     ],
+     "bbox_frac": 0.0561,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    }
+   ],
+   "tag": "r079"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps54560.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps54560.pdf",
+   "page": 18,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 51,
+   "doc_calls": 28,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 987,
+   "crop_tok_gone": 987,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p018-x649",
+     "xref": 649,
+     "px": [
+      530,
+      467
+     ],
+     "tok": 330,
+     "bbox": [
+      309.5,
+      235.8,
+      556.4,
+      453.4
+     ],
+     "bbox_frac": 0.1109,
+     "subsumed": true,
+     "placed_on": [
+      18
+     ]
+    },
+    {
+     "id": "p018-x658",
+     "xref": 658,
+     "px": [
+      530,
+      465
+     ],
+     "tok": 328,
+     "bbox": [
+      187.5,
+      475.4,
+      425.9,
+      684.5
+     ],
+     "bbox_frac": 0.1029,
+     "subsumed": true,
+     "placed_on": [
+      18
+     ]
+    },
+    {
+     "id": "p018-x667",
+     "xref": 667,
+     "px": [
+      530,
+      466
+     ],
+     "tok": 329,
+     "bbox": [
+      57.5,
+      235.6,
+      304.5,
+      452.9
+     ],
+     "bbox_frac": 0.1107,
+     "subsumed": true,
+     "placed_on": [
+      18
+     ]
+    }
+   ],
+   "tag": "r080"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps54560.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps54560.pdf",
+   "page": 34,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 51,
+   "doc_calls": 28,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1636,
+   "crop_tok_gone": 1636,
+   "render_tok": 1950,
+   "edge": 1376,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p034-x1559",
+     "xref": 1559,
+     "px": [
+      640,
+      480
+     ],
+     "tok": 409,
+     "bbox": [
+      75.7,
+      60.2,
+      334.6,
+      240.1
+     ],
+     "bbox_frac": 0.0961,
+     "subsumed": true,
+     "placed_on": [
+      34
+     ]
+    },
+    {
+     "id": "p034-x1570",
+     "xref": 1570,
+     "px": [
+      640,
+      480
+     ],
+     "tok": 409,
+     "bbox": [
+      74.9,
+      259.8,
+      336.0,
+      437.5
+     ],
+     "bbox_frac": 0.0957,
+     "subsumed": true,
+     "placed_on": [
+      34
+     ]
+    },
+    {
+     "id": "p034-x1584",
+     "xref": 1584,
+     "px": [
+      640,
+      480
+     ],
+     "tok": 409,
+     "bbox": [
+      327.7,
+      259.6,
+      586.5,
+      439.8
+     ],
+     "bbox_frac": 0.0962,
+     "subsumed": true,
+     "placed_on": [
+      34
+     ]
+    },
+    {
+     "id": "p034-x1600",
+     "xref": 1600,
+     "px": [
+      640,
+      480
+     ],
+     "tok": 409,
+     "bbox": [
+      327.7,
+      60.2,
+      586.5,
+      240.4
+     ],
+     "bbox_frac": 0.0962,
+     "subsumed": true,
+     "placed_on": [
+      34
+     ]
+    }
+   ],
+   "tag": "r081"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps61023.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps61023.pdf",
+   "page": 16,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 28,
+   "doc_calls": 20,
+   "n_item": 6,
+   "n_placed": 6,
+   "n_subsumed": 6,
+   "crop_tok_item": 6024,
+   "crop_tok_gone": 6024,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p016-x526",
+     "xref": 526,
+     "px": [
+      1024,
+      736
+     ],
+     "tok": 1004,
+     "bbox": [
+      317.5,
+      488.9,
+      543.7,
+      651.5
+     ],
+     "bbox_frac": 0.0759,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x539",
+     "xref": 539,
+     "px": [
+      1024,
+      736
+     ],
+     "tok": 1004,
+     "bbox": [
+      317.5,
+      295.0,
+      543.7,
+      457.6
+     ],
+     "bbox_frac": 0.0759,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x552",
+     "xref": 552,
+     "px": [
+      1024,
+      736
+     ],
+     "tok": 1004,
+     "bbox": [
+      68.2,
+      488.9,
+      294.4,
+      651.5
+     ],
+     "bbox_frac": 0.0759,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x565",
+     "xref": 565,
+     "px": [
+      1024,
+      736
+     ],
+     "tok": 1004,
+     "bbox": [
+      317.5,
+      101.4,
+      543.7,
+      264.0
+     ],
+     "bbox_frac": 0.0759,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x581",
+     "xref": 581,
+     "px": [
+      1024,
+      736
+     ],
+     "tok": 1004,
+     "bbox": [
+      68.2,
+      295.0,
+      294.4,
+      457.6
+     ],
+     "bbox_frac": 0.0759,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    },
+    {
+     "id": "p016-x594",
+     "xref": 594,
+     "px": [
+      1024,
+      736
+     ],
+     "tok": 1004,
+     "bbox": [
+      68.4,
+      101.4,
+      294.4,
+      263.8
+     ],
+     "bbox_frac": 0.0757,
+     "subsumed": true,
+     "placed_on": [
+      16
+     ]
+    }
+   ],
+   "tag": "r082"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps62840.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps62840.pdf",
+   "page": 24,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 45,
+   "doc_calls": 31,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 2560,
+   "crop_tok_gone": 2560,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p024-x829",
+     "xref": 829,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      57.0,
+      455.4,
+      303.0,
+      603.0
+     ],
+     "bbox_frac": 0.0749,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x831",
+     "xref": 831,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      309.0,
+      455.4,
+      555.0,
+      603.0
+     ],
+     "bbox_frac": 0.0749,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x833",
+     "xref": 833,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      57.0,
+      260.6,
+      303.0,
+      408.2
+     ],
+     "bbox_frac": 0.0749,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x835",
+     "xref": 835,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      309.0,
+      260.6,
+      555.0,
+      408.2
+     ],
+     "bbox_frac": 0.0749,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    },
+    {
+     "id": "p024-x837",
+     "xref": 837,
+     "px": [
+      800,
+      480
+     ],
+     "tok": 512,
+     "bbox": [
+      309.0,
+      74.6,
+      555.0,
+      222.2
+     ],
+     "bbox_frac": 0.0749,
+     "subsumed": true,
+     "placed_on": [
+      24
+     ]
+    }
+   ],
+   "tag": "r083"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_tps7a47.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_tps7a47.pdf",
+   "page": 10,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 32,
+   "doc_calls": 19,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1250,
+   "crop_tok_gone": 1250,
+   "render_tok": 1830,
+   "edge": 1333,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p010-x467",
+     "xref": 467,
+     "px": [
+      387,
+      263
+     ],
+     "tok": 135,
+     "bbox": [
+      356.0,
+      145.4,
+      535.9,
+      267.7
+     ],
+     "bbox_frac": 0.0454,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x481",
+     "xref": 481,
+     "px": [
+      646,
+      438
+     ],
+     "tok": 377,
+     "bbox": [
+      109.6,
+      302.0,
+      286.4,
+      421.9
+     ],
+     "bbox_frac": 0.0437,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    },
+    {
+     "id": "p010-x499",
+     "xref": 499,
+     "px": [
+      904,
+      613
+     ],
+     "tok": 738,
+     "bbox": [
+      106.5,
+      145.5,
+      286.2,
+      267.3
+     ],
+     "bbox_frac": 0.0452,
+     "subsumed": true,
+     "placed_on": [
+      10
+     ]
+    }
+   ],
+   "tag": "r084"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_ucc27524.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ucc27524.pdf",
+   "page": 11,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 50,
+   "doc_calls": 35,
+   "n_item": 5,
+   "n_placed": 5,
+   "n_subsumed": 5,
+   "crop_tok_item": 4567,
+   "crop_tok_gone": 4567,
+   "render_tok": 845,
+   "edge": 907,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p011-x283",
+     "xref": 283,
+     "px": [
+      952,
+      701
+     ],
+     "tok": 889,
+     "bbox": [
+      317.3,
+      481.0,
+      544.0,
+      648.0
+     ],
+     "bbox_frac": 0.0781,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x284",
+     "xref": 284,
+     "px": [
+      960,
+      701
+     ],
+     "tok": 897,
+     "bbox": [
+      321.2,
+      301.1,
+      540.1,
+      460.9
+     ],
+     "bbox_frac": 0.0722,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x285",
+     "xref": 285,
+     "px": [
+      992,
+      701
+     ],
+     "tok": 927,
+     "bbox": [
+      68.3,
+      481.0,
+      294.4,
+      640.8
+     ],
+     "bbox_frac": 0.0746,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x297",
+     "xref": 297,
+     "px": [
+      992,
+      701
+     ],
+     "tok": 927,
+     "bbox": [
+      68.3,
+      301.1,
+      294.4,
+      460.9
+     ],
+     "bbox_frac": 0.0746,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    },
+    {
+     "id": "p011-x298",
+     "xref": 298,
+     "px": [
+      992,
+      701
+     ],
+     "tok": 927,
+     "bbox": [
+      68.3,
+      121.2,
+      294.4,
+      281.0
+     ],
+     "bbox_frac": 0.0746,
+     "subsumed": true,
+     "placed_on": [
+      11
+     ]
+    }
+   ],
+   "tag": "r085"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "ti_ucc27524.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/ti_ucc27524.pdf",
+   "page": 12,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 50,
+   "doc_calls": 35,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 2713,
+   "crop_tok_gone": 2713,
+   "render_tok": 1148,
+   "edge": 1056,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p012-x327",
+     "xref": 327,
+     "px": [
+      972,
+      701
+     ],
+     "tok": 908,
+     "bbox": [
+      68.0,
+      526.0,
+      294.7,
+      689.6
+     ],
+     "bbox_frac": 0.0765,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x328",
+     "xref": 328,
+     "px": [
+      956,
+      701
+     ],
+     "tok": 893,
+     "bbox": [
+      317.3,
+      121.2,
+      544.0,
+      287.5
+     ],
+     "bbox_frac": 0.0778,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    },
+    {
+     "id": "p012-x339",
+     "xref": 339,
+     "px": [
+      976,
+      701
+     ],
+     "tok": 912,
+     "bbox": [
+      68.0,
+      121.2,
+      294.7,
+      284.1
+     ],
+     "bbox_frac": 0.0762,
+     "subsumed": true,
+     "placed_on": [
+      12
+     ]
+    }
+   ],
+   "tag": "r086"
+  },
+  {
+   "corpus": "datasheets",
+   "file": "wurth_7447709100.pdf",
+   "path": "/home/lps/pdf-extract/corpus/datasheets/wurth_7447709100.pdf",
+   "page": 1,
+   "signal": "diagonals",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 5,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 170,
+   "crop_tok_gone": 170,
+   "render_tok": 2316,
+   "edge": 1568,
+   "page_pt": [
+    841.9,
+    595.3
+   ],
+   "rasters": [
+    {
+     "id": "p001-x295",
+     "xref": 295,
+     "px": [
+      400,
+      160
+     ],
+     "tok": 85,
+     "bbox": null,
+     "bbox_frac": null,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x299",
+     "xref": 299,
+     "px": [
+      400,
+      160
+     ],
+     "tok": 85,
+     "bbox": [
+      317.8,
+      513.3,
+      410.7,
+      550.5
+     ],
+     "bbox_frac": 0.0069,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r087"
+  },
+  {
+   "corpus": "papers",
+   "file": "ai_ddpm.pdf",
+   "path": "/home/lps/pdf-extract/corpus/papers/ai_ddpm.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 25,
+   "doc_calls": 22,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 264,
+   "crop_tok_gone": 264,
+   "render_tok": 848,
+   "edge": 908,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p002-x229",
+     "xref": 229,
+     "px": [
+      257,
+      257
+     ],
+     "tok": 88,
+     "bbox": [
+      322.5,
+      72.3,
+      365.1,
+      115.0
+     ],
+     "bbox_frac": 0.0038,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x230",
+     "xref": 230,
+     "px": [
+      257,
+      257
+     ],
+     "tok": 88,
+     "bbox": [
+      161.6,
+      72.3,
+      204.3,
+      115.0
+     ],
+     "bbox_frac": 0.0038,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x228",
+     "xref": 228,
+     "px": [
+      257,
+      257
+     ],
+     "tok": 88,
+     "bbox": [
+      411.5,
+      72.3,
+      454.2,
+      115.0
+     ],
+     "bbox_frac": 0.0038,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r088"
+  },
+  {
+   "corpus": "papers",
+   "file": "ai_ddpm.pdf",
+   "path": "/home/lps/pdf-extract/corpus/papers/ai_ddpm.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 25,
+   "doc_calls": 22,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1308,
+   "crop_tok_gone": 1308,
+   "render_tok": 1155,
+   "edge": 1059,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x445",
+     "xref": 445,
+     "px": [
+      2701,
+      574
+     ],
+     "tok": 696,
+     "bbox": [
+      147.6,
+      517.2,
+      464.4,
+      584.5
+     ],
+     "bbox_frac": 0.044,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x439",
+     "xref": 439,
+     "px": [
+      678,
+      678
+     ],
+     "tok": 612,
+     "bbox": [
+      127.8,
+      409.4,
+      484.2,
+      765.8
+     ],
+     "bbox_frac": 0.2621,
+     "subsumed": true,
+     "placed_on": [
+      7,
+      20
+     ]
+    }
+   ],
+   "tag": "r089"
+  },
+  {
+   "corpus": "pmc",
+   "file": "1589.PMC8594466.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/1589.PMC8594466.pdf",
+   "page": 5,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 13,
+   "doc_calls": 10,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 3858,
+   "crop_tok_gone": 3858,
+   "render_tok": 659,
+   "edge": 800,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p005-x80",
+     "xref": 80,
+     "px": [
+      492,
+      504
+     ],
+     "tok": 330,
+     "bbox": [
+      166.0,
+      194.8,
+      225.1,
+      255.3
+     ],
+     "bbox_frac": 0.0074,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x81",
+     "xref": 81,
+     "px": [
+      482,
+      506
+     ],
+     "tok": 325,
+     "bbox": [
+      98.2,
+      90.9,
+      156.1,
+      151.7
+     ],
+     "bbox_frac": 0.0073,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    },
+    {
+     "id": "p005-x82",
+     "xref": 82,
+     "px": [
+      1851,
+      1809
+     ],
+     "tok": 3203,
+     "bbox": [
+      123.1,
+      302.6,
+      345.2,
+      519.7
+     ],
+     "bbox_frac": 0.0995,
+     "subsumed": true,
+     "placed_on": [
+      5
+     ]
+    }
+   ],
+   "tag": "r090"
+  },
+  {
+   "corpus": "pmc",
+   "file": "1589.PMC8594466.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/1589.PMC8594466.pdf",
+   "page": 7,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 13,
+   "doc_calls": 10,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 1172,
+   "crop_tok_gone": 1172,
+   "render_tok": 2531,
+   "edge": 1568,
+   "page_pt": [
+    612.0,
+    792.0
+   ],
+   "rasters": [
+    {
+     "id": "p007-x115",
+     "xref": 115,
+     "px": [
+      1361,
+      611
+     ],
+     "tok": 1108,
+     "bbox": [
+      288.8,
+      562.4,
+      452.2,
+      635.8
+     ],
+     "bbox_frac": 0.0247,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    },
+    {
+     "id": "p007-x122",
+     "xref": 122,
+     "px": [
+      141,
+      344
+     ],
+     "tok": 64,
+     "bbox": [
+      265.3,
+      447.3,
+      299.1,
+      529.9
+     ],
+     "bbox_frac": 0.0058,
+     "subsumed": true,
+     "placed_on": [
+      7
+     ]
+    }
+   ],
+   "tag": "r091"
+  },
+  {
+   "corpus": "pmc",
+   "file": "41586_2025_Article_9767.PMC12657213.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/41586_2025_Article_9767.PMC12657213.pdf",
+   "page": 3,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 19,
+   "doc_calls": 18,
+   "n_item": 4,
+   "n_placed": 4,
+   "n_subsumed": 4,
+   "crop_tok_item": 1478,
+   "crop_tok_gone": 1478,
+   "render_tok": 2275,
+   "edge": 1506,
+   "page_pt": [
+    595.3,
+    790.9
+   ],
+   "rasters": [
+    {
+     "id": "p003-x127",
+     "xref": 127,
+     "px": [
+      754,
+      368
+     ],
+     "tok": 369,
+     "bbox": [
+      65.2,
+      64.3,
+      165.5,
+      113.2
+     ],
+     "bbox_frac": 0.0104,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x134",
+     "xref": 134,
+     "px": [
+      754,
+      369
+     ],
+     "tok": 370,
+     "bbox": [
+      65.2,
+      153.4,
+      165.5,
+      202.5
+     ],
+     "bbox_frac": 0.0105,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x140",
+     "xref": 140,
+     "px": [
+      754,
+      368
+     ],
+     "tok": 369,
+     "bbox": [
+      455.9,
+      64.3,
+      556.2,
+      113.2
+     ],
+     "bbox_frac": 0.0104,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    },
+    {
+     "id": "p003-x146",
+     "xref": 146,
+     "px": [
+      754,
+      369
+     ],
+     "tok": 370,
+     "bbox": [
+      455.9,
+      153.4,
+      556.2,
+      202.5
+     ],
+     "bbox_frac": 0.0105,
+     "subsumed": true,
+     "placed_on": [
+      3
+     ]
+    }
+   ],
+   "tag": "r092"
+  },
+  {
+   "corpus": "pmc",
+   "file": "aair-5-113.PMC3579091.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/aair-5-113.PMC3579091.pdf",
+   "page": 2,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 3,
+   "doc_calls": 3,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 598,
+   "crop_tok_gone": 598,
+   "render_tok": 1312,
+   "edge": 1146,
+   "page_pt": [
+    595.3,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p002-x11",
+     "xref": 11,
+     "px": [
+      398,
+      445
+     ],
+     "tok": 236,
+     "bbox": [
+      305.1,
+      72.8,
+      400.6,
+      179.5
+     ],
+     "bbox_frac": 0.0216,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    },
+    {
+     "id": "p002-x13",
+     "xref": 13,
+     "px": [
+      611,
+      445
+     ],
+     "tok": 362,
+     "bbox": [
+      401.5,
+      72.7,
+      548.0,
+      179.5
+     ],
+     "bbox_frac": 0.0331,
+     "subsumed": true,
+     "placed_on": [
+      2
+     ]
+    }
+   ],
+   "tag": "r093"
+  },
+  {
+   "corpus": "pmc",
+   "file": "amjcaserep-25-e941806.PMC10773620.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/amjcaserep-25-e941806.PMC10773620.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 6,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 332,
+   "crop_tok_gone": 332,
+   "render_tok": 1007,
+   "edge": 1029,
+   "page_pt": [
+    566.9,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p001-x423",
+     "xref": 423,
+     "px": [
+      353,
+      353
+     ],
+     "tok": 166,
+     "bbox": [
+      21.3,
+      0.0,
+      105.8,
+      84.6
+     ],
+     "bbox_frac": 0.0159,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x424",
+     "xref": 424,
+     "px": [
+      353,
+      353
+     ],
+     "tok": 166,
+     "bbox": [
+      21.3,
+      0.0,
+      105.8,
+      84.6
+     ],
+     "bbox_frac": 0.0159,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r094"
+  },
+  {
+   "corpus": "pmc",
+   "file": "in-17-110.PMC5407982.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/in-17-110.PMC5407982.pdf",
+   "page": 4,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 6,
+   "doc_calls": 5,
+   "n_item": 3,
+   "n_placed": 3,
+   "n_subsumed": 3,
+   "crop_tok_item": 1062,
+   "crop_tok_gone": 1062,
+   "render_tok": 1035,
+   "edge": 1018,
+   "page_pt": [
+    595.3,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p004-x45",
+     "xref": 45,
+     "px": [
+      831,
+      592
+     ],
+     "tok": 655,
+     "bbox": [
+      55.6,
+      468.0,
+      410.3,
+      720.7
+     ],
+     "bbox_frac": 0.1897,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x46",
+     "xref": 46,
+     "px": [
+      453,
+      564
+     ],
+     "tok": 340,
+     "bbox": [
+      317.9,
+      66.9,
+      548.9,
+      354.5
+     ],
+     "bbox_frac": 0.1407,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    },
+    {
+     "id": "p004-x47",
+     "xref": 47,
+     "px": [
+      243,
+      208
+     ],
+     "tok": 67,
+     "bbox": [
+      381.6,
+      71.5,
+      512.9,
+      184.0
+     ],
+     "bbox_frac": 0.0313,
+     "subsumed": true,
+     "placed_on": [
+      4
+     ]
+    }
+   ],
+   "tag": "r095"
+  },
+  {
+   "corpus": "pmc",
+   "file": "main.PMC6319195.pdf",
+   "path": "/home/lps/pdf-extract/corpus/pmc/main.PMC6319195.pdf",
+   "page": 1,
+   "signal": "curves",
+   "why_not_rendered": "filter3",
+   "npages": 7,
+   "doc_calls": 4,
+   "n_item": 2,
+   "n_placed": 2,
+   "n_subsumed": 2,
+   "crop_tok_item": 242,
+   "crop_tok_gone": 242,
+   "render_tok": 640,
+   "edge": 800,
+   "page_pt": [
+    595.3,
+    793.7
+   ],
+   "rasters": [
+    {
+     "id": "p001-x496",
+     "xref": 496,
+     "px": [
+      333,
+      307
+     ],
+     "tok": 136,
+     "bbox": [
+      45.4,
+      64.9,
+      125.2,
+      138.3
+     ],
+     "bbox_frac": 0.0124,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    },
+    {
+     "id": "p001-x497",
+     "xref": 497,
+     "px": [
+      277,
+      288
+     ],
+     "tok": 106,
+     "bbox": [
+      474.3,
+      64.5,
+      540.8,
+      133.6
+     ],
+     "bbox_frac": 0.0097,
+     "subsumed": true,
+     "placed_on": [
+      1
+     ]
+    }
+   ],
+   "tag": "r096"
+  }
+ ]
+}

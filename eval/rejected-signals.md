@@ -253,11 +253,25 @@ The variant that loses nothing — render **and** keep the crop — is **+122,44
 (+2.13%) and +131 vision calls**. That is the row to argue about if this is ever
 revisited; it was never what the proposal said.
 
-Two things worth carrying forward. The rule **as literally worded** does not say
-*lone*: on the multi-raster half it covers 308 rasters on 96 pages, where
-collapsing to one render per page is **−34,044 tokens and −212 calls**. Cost
-measured, benefit not labelled — that is the larger and cheaper half, and nobody
-had costed it. And the labellers are three runs of one model on one prompt:
+**The multi-raster half was labelled afterwards and rejects for the same
+reason** (`eval/multiraster.md`). The rule as literally worded does not say
+*lone*: on that half it covers 308 rasters on 96 pages, and collapsing them to
+one render per page is **−34,044 tokens and −212 calls** — cheaper *and* fewer
+calls, the opposite sign. `docs/NEXT.md` called it the one worth labelling next,
+on the reasoning that the resolution argument might not apply when a page
+already carries several rasters cropped small. It applies: the crops are the
+same size, there are just more of them. Over 91 labelled pages the swap recovers
+a real graphic on **61.5%** and destroys resolvable detail inside crops the
+router already reads on **39.6%** — 26 strictly better, 6 strictly worse, 30 a
+trade, 29 only cheaper. `batch_furniture` was checked as a second-order term and
+matches **0 of 94** candidates.
+
+So both halves of the same sentence are now rejected, on the same axis, at
+opposite token signs. The lesson is about the axis rather than the rule: a page
+render is not a superset of a crop, and any proposal that swaps one for the
+other is trading resolution for coverage whether it saves money or spends it.
+
+And the labellers are three runs of one model on one prompt:
 129/131 unanimity is evidence of determinism, not of reliability. The same
 caveat applies to `eval/strokegrid`'s holdout.
 

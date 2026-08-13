@@ -1,0 +1,25 @@
+tag	outside	detail	note
+r001	yes	lost	panels c-f plots outside; bifurcation axis and SN/TC labels unreadable
+r002	yes	lost	panels c-e plots outside; tiny equilibrium labels inside boxes
+r003	yes	lost	panels c-f plots outside; tick and branch labels unreadable
+r004	yes	lost	panels c-f plots outside; tiny annotations inside bifurcation panels
+r005	yes	legible	FIG.2 collapse and sigma plots outside rectangles
+r006	yes	legible	flow diagram arrows and rate labels outside insect boxes
+r007	no	legible	only axis labels and tick numbers outside
+r008	no	legible	only purity/completeness colorbars outside the six panels
+r009	yes	lost	Fig.4 and Fig.5 plots outside; Fig.3 legends tiny
+r010	yes	lost	Fig.2 permittivity curves outside; Fig.1a dimension labels unreadable
+r011	no	legible	only textual case-study panels outside the two badges
+r012	yes	lost	whole Fig.1 pipeline outside; boxed icons unresolvable
+r013	no	legible	only colorbars and axis labels outside map panels
+r014	no	legible	only the three colorbars outside scatter panels
+r015	yes	lost	panel A schematic outside; panel C/F legends unreadable
+r016	no	legible	only colorbars and axis labels outside field maps
+r017	yes	legible	panels A bar chart and B intensity profile outside
+r018	yes	legible	panel B bottom matrix row and ket labels outside
+r019	yes	lost	Fig.1 block diagram outside; observation thumbnails unresolvable
+r020	no	legible	only column headers and relevance colorbar outside
+r021	yes	legible	connector arrows and result text boxes outside rectangles
+r022	no	legible	only pipeline text boxes outside the two illustrations
+r023	no	legible	only tables and text outside the two plots
+r024	no	lost	Fig.4 explainer legends and tick labels unreadable

@@ -22,3 +22,7 @@ eval/curves_holdout/pages/
 eval/curves_holdout/parts/
 eval/multiraster/pages/
 eval/multiraster/holdout/pages/
+eval/filter3/pages/
+eval/filter3/parts/
+eval/filter3/costparts/
+eval/filter3/holdout/pages/

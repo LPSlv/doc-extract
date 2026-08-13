@@ -1,0 +1,25 @@
+tag	outside	detail	note
+r025	yes	lost	rest of pipeline diagram outside; thumbnails tiny
+r026	yes	lost	flowcharts and region crops outside; page thumbnails unreadable
+r027	yes	lost	client devices and arrows outside; tiny weight labels
+r028	yes	legible	scatter plot, histograms, S11 spectrum outside boxes
+r029	no	lost	only axes and colorbar outside; faint branches merge
+r030	no	legible	only tables and text outside rectangles
+r031	no	legible	only text, logo, header rules outside
+r032	yes	lost	PSRR and load-line charts outside; scope readouts unreadable
+r033	yes	lost	four line charts outside; small cursor annotation unreadable
+r034	yes	legible	package drawing and transistor symbol outside boxes
+r035	no	lost	all graphics boxed; schematic values and EMI axes unreadable
+r036	no	legible	only ordering callout boxes and watermark outside
+r037	yes	lost	dimension drawings and LED schematic outside; icon detail lost
+r038	yes	lost	tape and reel drawings outside; reel label unreadable
+r039	no	legible	only axis labels and frames outside rectangles
+r040	yes	lost	Figure 6 offset chart unboxed; noise traces merge
+r041	no	lost	only captions outside; scope status bars unreadable
+r042	no	legible	only leader labels and captions outside boxes
+r043	yes	legible	noise density charts (Fig 45, 46) outside boxes
+r044	yes	legible	Figures 73 and 74 line charts outside boxes
+r045	no	legible	only annotation text and captions outside boxes
+r046	no	legible	only captions and axis text outside boxes
+r047	yes	legible	green and orange POR bands outside the box
+r048	yes	legible	Figure 5-2 8-pin pinout outside the box

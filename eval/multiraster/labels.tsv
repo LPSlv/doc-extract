@@ -1,0 +1,95 @@
+tag	corpus	file	page	signal	edge	subsumed	rects	judgeable	outside	outside_agree	detail	detail_agree	note_l1
+r001	arxiv	2607.24285v1.pdf	22	dense_grid	960	2	2	True	yes	3/3	lost	3/3	panels c-f unboxed; bifurcation axis and point labels illegible
+r002	arxiv	2607.24285v1.pdf	23	stroke_grid	960	2	2	True	yes	3/3	lost	3/3	panels c-e unboxed; bifurcation axis and point labels illegible
+r003	arxiv	2607.24285v1.pdf	24	diagonals	960	2	2	True	yes	3/3	lost	3/3	panels c-f unboxed; bifurcation axis and point labels illegible
+r004	arxiv	2607.24285v1.pdf	25	dense_grid	960	2	2	True	yes	3/3	lost	3/3	panels c-f unboxed; bifurcation axis and point labels illegible
+r005	arxiv	2607.24615v1.pdf	3	curves	1018	2	2	True	yes	3/3	legible	3/3	FIG 2 collapse plots in right column outside rectangles
+r006	arxiv	2607.28053v1.pdf	6	diagonals	800	5	5	True	yes	3/3	legible	3/3	flow-diagram arrows and rate labels outside insect crops
+r007	arxiv	2607.28564v1.pdf	4	diagonals	908	2	2	True	no	3/3	legible	3/3	only text outside; figure labels readable
+r008	arxiv	2607.28739v1.pdf	16	stroke_grid	1328	6	6	True	no	2/3	legible	3/3	all six purity/completeness panels boxed; colorbars only outside
+r009	arxiv	2607.29092v1.pdf	7	curves	975	2	2	True	yes	3/3	lost	2/3	Figures 4 and 5 outside; Fig 3 annotations and legends illegible
+r010	arxiv	2607.29187v1.pdf	2	curves	1173	4	4	True	yes	3/3	lost	3/3	Fig 2 permittivity plots outside; Fig 1 dimensions and circuit labels illegible
+r011	arxiv	2607.29211v1.pdf	8	curves	1025	3	2	True	no	3/3	legible	3/3	only a text case-study figure outside the label boxes
+r012	arxiv	2607.29377v1.pdf	1	curves	1384	6	6	True	yes	3/3	lost	2/3	most of Figure 1 pipeline outside; boxed icons too small
+r013	arxiv	2607.29414v1.pdf	4	stroke_grid	1241	3	3	True	no	3/3	legible	3/3	all three Coma maps boxed; axis and colorbar readable
+r014	arxiv	2607.29454v1.pdf	6	stroke_grid	965	6	6	True	no	3/3	legible	3/3	all six scatter panels boxed; colorbars only outside
+r015	arxiv	2607.29476v1.pdf	16	curves	800	5	5	True	yes	2/3	lost	3/3	panel A schematic unboxed; panel C and F legends illegible
+r016	arxiv	2607.29542v1.pdf	6	curves	908	6	6	True	no	3/3	legible	3/3	both Fig 7 and Fig 8 panel rows boxed; text only outside
+r017	arxiv	2607.29565v1.pdf	5	curves	800	2	2	True	yes	3/3	legible	3/3	panels A and B unboxed: OAM spectrum and intensity profile
+r018	arxiv	2607.29565v1.pdf	7	dense_grid	941	3	3	True	yes	2/3	legible	3/3	only phase colorbar and ket labels outside panel B box
+r019	arxiv	2607.29569v1.pdf	1	curves	800	2	2	True	yes	3/3	lost	3/3	Fig 1 block diagram outside; boxed camera thumbnails unresolvable
+r020	arxiv	2607.29581v1.pdf	1	diagonals	800	3	3	True	no	3/3	legible	3/3	all three heatmap panels boxed; legend strip only outside
+r021	arxiv	2607.29582v1.pdf	2	curves	908	6	6	True	no	2/3	legible	2/3	3D variance surface and grid node labels hard to resolve
+r022	arxiv	2607.29585v1.pdf	7	curves	964	2	2	True	no	3/3	legible	3/3	only text boxes of pipeline outside the two illustrations
+r023	arxiv	2607.29606v1.pdf	10	stroke_grid	1082	2	2	True	no	3/3	legible	3/3	both Fig 3 panels boxed; tables and text only outside
+r024	arxiv	2607.29614v1.pdf	19	stroke_grid	800	4	4	True	no	3/3	lost	3/3	Fig 4 three-panel legends and tick labels illegible
+r025	arxiv	2607.29638v1.pdf	3	curves	908	4	4	True	yes	3/3	lost	3/3	most of pipeline diagram outside boxes; stage labels tiny
+r026	arxiv	2607.29638v1.pdf	12	curves	800	6	6	True	yes	3/3	lost	3/3	page-stack icons, region crops outside; page thumbnails unreadable
+r027	arxiv	2607.29659v1.pdf	2	curves	1016	2	2	True	yes	3/3	lost	3/3	client devices and arrows outside; tiny weight subscripts
+r028	arxiv	2607.29666v1.pdf	11	curves	1069	6	6	True	yes	3/3	lost	2/3	scatter, histograms, S11 plot outside; mode fringes unresolved
+r029	arxiv	2607.29666v1.pdf	14	diagonals	1059	2	2	True	no	2/3	lost	2/3	colorbar and axes outside rectangles
+r030	datasheets	bme680_bosch.pdf	48	dense_grid	800	2	2	True	no	3/3	legible	3/3	only tables and text outside
+r031	datasheets	bmi160_bosch.pdf	107	diagonals	1039	2	2	True	no	3/3	legible	3/3	only logo and text outside
+r032	datasheets	diodes_ap2112.pdf	11	diagonals	1568	3	3	True	yes	3/3	lost	3/3	PSRR and load-line charts outside; scope status bars unreadable
+r033	datasheets	diodes_az1117c.pdf	9	curves	1438	2	2	True	yes	3/3	lost	3/3	four line charts outside; small cursor annotation unreadable
+r034	datasheets	diodes_mmbt3904.pdf	1	diagonals	910	2	2	True	yes	3/3	legible	3/3	package photo and transistor symbol outside
+r035	datasheets	diodes_pam8403.pdf	1	curves	800	3	3	True	no	3/3	lost	3/3	schematic component values and emissions axes unreadable
+r036	datasheets	diodes_pam8403.pdf	9	curves	910	2	2	True	no	3/3	legible	3/3	only text and tables outside
+r037	datasheets	led_wurth.pdf	1	diagonals	1568	5	3	True	yes	3/3	legible	2/3	dimension drawings, land pattern, schematic outside; icons boxed
+r038	datasheets	led_wurth.pdf	5	diagonals	1568	2	1	True	yes	3/3	lost	3/3	all tape and reel drawings outside; reel label unreadable
+r039	datasheets	ti_ads1256.pdf	20	diagonals	1568	2	2	True	no	3/3	legible	3/3	only axis labels and captions outside
+r040	datasheets	ti_ads7830.pdf	9	curves	920	5	5	True	yes	3/3	lost	2/3	Figure 6 offset-vs-temperature chart unboxed
+r041	datasheets	ti_bq25895.pdf	52	curves	1056	6	6	True	no	3/3	lost	3/3	scope channel labels and settings bars unreadable
+r042	datasheets	ti_dac8562.pdf	19	curves	1037	6	6	True	no	3/3	legible	3/3	only axis labels and captions outside
+r043	datasheets	ti_dac8562.pdf	20	curves	1293	6	4	True	yes	3/3	legible	3/3	Figures 45 and 46 noise-density charts unboxed
+r044	datasheets	ti_dac8562.pdf	25	curves	1037	4	4	True	yes	3/3	legible	3/3	Figures 73 and 74 line charts unboxed
+r045	datasheets	ti_dac8562.pdf	26	curves	1037	6	6	True	no	3/3	legible	3/3	only axis labels and captions outside
+r046	datasheets	ti_dac8562.pdf	27	curves	1383	3	3	True	no	3/3	legible	3/3	only captions outside
+r047	datasheets	ti_dac8562.pdf	31	curves	905	2	2	True	yes	2/3	legible	3/3	axis labels and range bracket outside
+r048	datasheets	ti_iso1050.pdf	5	curves	905	2	2	True	yes	2/3	legible	3/3	Figure 5-2 eight-pin pinout unboxed
+r049	datasheets	ti_lm2576.pdf	3	curves	1056	2	2	True	yes	3/3	legible	2/3	Figure 5-3 DDPAK package pinout entirely outside rectangles
+r051	datasheets	ti_lm2576.pdf	10	curves	1056	6	6	True	no	3/3	legible	3/3	all six characteristic curves boxed; only captions outside
+r052	datasheets	ti_lm833.pdf	18	curves	905	2	2	True	yes	3/3	lost	3/3	Figure 39 schematic outside; THD plot tick labels unresolvable
+r053	datasheets	ti_lmt84.pdf	7	curves	910	5	5	True	yes	3/3	lost	2/3	Figure 1 outside; Figure 5 curve annotations too small
+r054	datasheets	ti_lmt84.pdf	8	curves	905	3	3	True	yes	3/3	legible	3/3	Figure 10 thermal response plot entirely outside rectangles
+r055	datasheets	ti_lmt84.pdf	14	curves	905	5	4	True	yes	3/3	lost	3/3	Figure 15 logic diagram outside; scope on-screen text unreadable
+r056	datasheets	ti_lmt84.pdf	15	curves	905	2	2	True	yes	3/3	legible	3/3	Figure 20 SC70 layout and via legend outside
+r057	datasheets	ti_lp2985.pdf	14	curves	938	2	2	True	no	3/3	legible	2/3	both ESR range plots boxed; only text outside
+r058	datasheets	ti_lp5907.pdf	8	curves	1063	4	4	True	yes	3/3	legible	3/3	Figures 5-7 and 5-8 plots outside rectangles
+r059	datasheets	ti_opa134.pdf	12	curves	1568	2	2	True	yes	3/3	legible	3/3	Figures 5-19, 5-22, 5-23, 5-24 outside rectangles
+r060	datasheets	ti_opa2134.pdf	12	curves	1568	2	2	True	yes	3/3	legible	3/3	Figures 5-19, 5-22, 5-23, 5-24 outside rectangles
+r061	datasheets	ti_opa2340.pdf	11	curves	1056	2	2	True	yes	3/3	legible	3/3	Figures 21 and 22 plots outside rectangles
+r062	datasheets	ti_opa340.pdf	11	curves	1056	2	2	True	yes	3/3	legible	3/3	Figures 21 and 22 plots outside rectangles
+r063	datasheets	ti_opa350.pdf	11	curves	924	2	2	True	yes	3/3	legible	3/3	Figures 19 through 22 outside rectangles
+r064	datasheets	ti_sn6501.pdf	1	curves	905	2	2	True	no	3/3	legible	3/3	schematic and curve both boxed; text and table outside
+r065	datasheets	ti_sn6501.pdf	9	curves	1568	2	2	True	yes	3/3	legible	3/3	Figures 5-15 to 5-18, 5-21, 5-22 outside rectangles
+r066	datasheets	ti_sn74hc138.pdf	3	curves	800	2	2	True	no	3/3	legible	3/3	both package pinouts boxed; pin table is text
+r067	datasheets	ti_sn74hc157.pdf	3	curves	800	2	2	True	no	2/3	legible	3/3	16-pin DIP package pinout diagram entirely outside rectangle
+r068	datasheets	ti_sn74hc273.pdf	3	curves	800	2	2	True	no	3/3	legible	3/3	both package pinouts boxed; pin table is text
+r069	datasheets	ti_sn74hc374.pdf	3	curves	905	2	2	True	no	3/3	legible	3/3	both package pinouts boxed; nothing graphic outside
+r070	datasheets	ti_sn74hc540.pdf	3	curves	905	2	2	True	no	3/3	legible	3/3	both package pinouts boxed; nothing graphic outside
+r071	datasheets	ti_sn74hc541.pdf	3	curves	800	2	2	True	no	3/3	legible	3/3	both package pinouts boxed; pin table is text
+r072	datasheets	ti_sn74hc574.pdf	3	curves	905	2	2	True	no	3/3	legible	3/3	both package pinouts boxed; nothing graphic outside
+r073	datasheets	ti_tlv1117.pdf	11	curves	1290	4	4	True	yes	3/3	lost	3/3	Figures 5-9, 5-10 outside; PSRR legends and curves merge
+r074	datasheets	ti_tlv1117.pdf	13	curves	1285	0	0	False	norect	3/3	norect	3/3	no red rectangle drawn on page
+r076	datasheets	ti_tlv1117.pdf	15	curves	1056	6	6	True	no	3/3	lost	2/3	tiny axis ticks and legend text in plots
+r077	datasheets	ti_tps22918.pdf	11	curves	1392	2	2	True	yes	3/3	lost	3/3	Figure 22 timing waveforms outside; scope readouts unreadable
+r078	datasheets	ti_tps2553.pdf	9	curves	1440	4	4	True	yes	3/3	legible	3/3	Figures 11 and 12 outside the rectangles
+r079	datasheets	ti_tps54331.pdf	24	curves	1568	4	4	True	yes	3/3	lost	3/3	Figures 8-12, 8-13 outside; scope status bars unreadable
+r080	datasheets	ti_tps54560.pdf	18	curves	1056	3	3	True	yes	3/3	legible	3/3	Figure 25 clock-sync schematic outside rectangles
+r081	datasheets	ti_tps54560.pdf	34	curves	1376	4	4	True	yes	3/3	lost	3/3	Figures 44, 45 outside; rotated V/div labels unreadable
+r082	datasheets	ti_tps61023.pdf	16	curves	1056	6	6	True	no	3/3	legible	3/3	only captions and test conditions outside
+r083	datasheets	ti_tps62840.pdf	24	curves	1056	5	5	True	yes	3/3	lost	3/3	Figure 44 plot outside; scope status bars unreadable
+r084	datasheets	ti_tps7a47.pdf	10	curves	1333	3	3	True	yes	3/3	legible	3/3	Figure 5-22 noise plot outside rectangles
+r085	datasheets	ti_ucc27524.pdf	11	curves	907	5	5	True	yes	2/3	lost	2/3	Figure 6-10 outside; decimal axis labels unreadable
+r086	datasheets	ti_ucc27524.pdf	12	curves	1056	3	3	True	yes	3/3	legible	3/3	Figures 6-17, 6-18, 6-20 outside rectangles
+r087	datasheets	wurth_7447709100.pdf	1	diagonals	1568	2	1	False	norect	2/3	norect	2/3	no red rectangle drawn on page
+r088	papers	ai_ddpm.pdf	2	curves	908	3	3	True	yes	3/3	legible	3/3	Figure 2 chain arrows and dots outside rectangles
+r089	papers	ai_ddpm.pdf	7	curves	1059	2	2	True	yes	3/3	lost	3/3	Figure 5 plots outside; Figure 7 panel labels unreadable
+r090	pmc	1589.PMC8594466.pdf	5	curves	800	3	3	True	yes	3/3	lost	3/3	panel B RNA structure outside; heatmap axis labels tiny
+r091	pmc	1589.PMC8594466.pdf	7	curves	1568	2	2	True	yes	3/3	lost	3/3	panels A and B outside; nucleotides in small box unreadable
+r092	pmc	41586_2025_Article_9767.PMC12657213.pdf	3	curves	1506	4	4	True	yes	3/3	lost	3/3	panels c and d outside; dense fringes merge
+r093	pmc	aair-5-113.PMC3579091.pdf	2	curves	1146	2	2	True	yes	3/3	legible	3/3	Figure 1 spirometry chart outside rectangle
+r094	pmc	amjcaserep-25-e941806.PMC10773620.pdf	1	curves	1029	2	2	False	norect	3/3	norect	3/3	no red rectangle drawn on page
+r095	pmc	in-17-110.PMC5407982.pdf	4	curves	1018	3	3	True	no	3/3	legible	3/3	only body text and captions outside
+r096	pmc	main.PMC6319195.pdf	1	curves	800	2	2	True	no	3/3	lost	3/3	fine emblem lettering inside logo boxes unreadable
