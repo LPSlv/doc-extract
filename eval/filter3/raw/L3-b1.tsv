@@ -1,0 +1,51 @@
+tag	label	note
+f001	figure	scatter plot of extinction rate plus parameter table
+f002	figure	commutative diagram of maps between measures
+f003	figure	two abundance-pattern plots with residual panels
+f004	figure	block diagram of deep JSCC system
+f005	figure	accuracy versus CSNR plot and tables
+f006	figure	pipeline flowchart with boxes and arrows
+f007	figure	arc diagrams of Fourier variables
+f008	figure	two line plots of eigenvalues and occupation
+f009	figure	grid of reinforcement learning curves
+f010	figure	geometric diagram of domain and thin fracture
+f011	figure	four-panel temperature-velocity scatter diagram
+f012	figure	three panels of optimizer trajectory curves
+f013	figure	bar charts of success rate plus results table
+f014	figure	signal-to-noise and luminosity function panels
+f015	figure	test accuracy curves plus two tables
+f016	table	boxed table of fitted equations by noise level
+f017	none	proof text with display equations
+f018	table	two benchmark result tables and text
+f019	none	algorithm pseudocode block and proof text
+f020	figure	logic symbols and package pinout drawings
+f021	figure	logic symbols, pinout drawings, pin table
+f022	figure	SO16 package outline drawing with dimensions
+f023	figure	timing waveforms and test circuit schematic
+f024	figure	SO14 package outline drawing with dimensions
+f025	figure	DHVQFN20 package outline drawing
+f026	figure	DHXQFN14 package outline drawing
+f027	figure	SO14 package outline drawing with dimensions
+f028	figure	package pinout diagrams and pin table
+f029	figure	XSON5 package outline drawing
+f030	figure	SOT753 package outline drawing
+f031	table	datasheet cover, logo, quick reference table
+f032	table	full-scale range table and text
+f033	table	full-scale range table and text
+f034	table	register bit-field tables
+f035	table	equations and parameter table
+f036	figure	schematic of input multiplexer
+f037	figure	I2C read sequence protocol diagram
+f038	figure	reel and tape drawings plus dimension table
+f039	table	absolute maximum and operating condition tables
+f040	table	electrical characteristics table
+f041	table	electrical characteristics table
+f042	table	charging parameter tables and text
+f043	figure	thermistor schematic and threshold diagram
+f044	table	register bit map and field description table
+f045	table	register bit map and field description table
+f046	figure	six characteristic curves with inset circuits
+f047	figure	reel and tape drawings plus dimension table
+f048	table	multiplexer truth table
+f049	figure	land pattern and solder mask drawings
+f050	figure	six power-supply current curves and histograms

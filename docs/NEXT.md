@@ -162,10 +162,34 @@ render *and* keep the crop — is +2.13% and +131 vision calls.
 
 What is left from it:
 
-- **All 131 triggers are filter 3.** `pm.count("\n|") >= 3` skips a page for its
-  table before `render_reason` ever runs. So filter 3 discards a page for one
-  reason while ignoring another reason to keep it — and filter-3 pages with
-  figure signal and *no* raster are the same defect, entirely uncounted.
+- ~~**All 131 triggers are filter 3**~~ — **counted, see
+  [`eval/filter3.md`](../eval/filter3.md), and it is the largest content loss
+  measured in this repo.** Filter 3 skips **8,295** pages; on **5,137**
+  `render_reason` would have fired, and on **4,065** the page carries no raster
+  at all, so nothing about it is ever routed *or counted*. **65.6% of 250
+  blind-labelled pages carry a real figure** (95% CI 60–71), ≈2,668 of the
+  population, across 409 documents. The comparison that makes it a defect rather
+  than a trade-off: the `curves` pages filter 3 **discards** carry figures at
+  70%; the `curves` pages the router **pays for** carry them at 73%. The only
+  difference is whether a table was parsed somewhere on the page.
+
+  Fixing it in full is **+3,911 calls and +64% image tokens**, 2.25× → 1.85× —
+  rejected on price (`eval/rejected-signals.md`). **`FILTER3_ROWS = 4` is
+  proposed and deliberately NOT applied**: three pipe lines is a header, a rule
+  and *one data row*, so requiring two takes 400 pages at 87% in-sample and 73%
+  (62–82) across 71 blind holdout labels, for +386 calls and +2.3% of prompt
+  tokens. Patch and test at `eval/filter3/proposed.patch`.
+
+  **It is being validated on `corpus/datasheet_holdout` before any decision**,
+  because 324 of its 400 firings are datasheets and neither existing holdout is
+  one. The measuring agent recorded that such a corpus did not exist; it was
+  built by parallel work the same day. Until that lands, three things count
+  against it: it would be **the first cost increase this repo has accepted**,
+  every rule shipped here so far had 100% holdout precision, and its
+  `pmc_holdout` cell is **1 of 9**.
+- Still uncounted: **769 filter-3 pages carrying a raster that filters 1–2
+  dropped**. Nothing on them is routed either, but a rule there interacts with
+  the furniture and dedup filters, which is a different argument.
 - ~~**The multi-raster half is the cheap one and nobody costed it.**~~ —
   labelled and **rejected**, see [`eval/multiraster.md`](../eval/multiraster.md).
   The four stored components reproduce exactly (308 / 96 / 150,934 / 116,890);
@@ -202,8 +226,16 @@ LPSlv's GitHub identity and needs an explicit yes.
 
 ## A caution for whoever picks this up
 
-Across two sessions, three defects were found in the skill and **six in the
-measurement code**: withheld routed items, a circular gate, a contaminated
+Across three sessions, **four** defects were found in the skill and six in the
+measurement code. The fourth skill defect is **filter 3**, and it is the one
+nobody was looking for: it surfaced as a side effect of `eval/multifigure.md`
+and had never been counted, because **a filter that suppresses a call produces
+no artifact to audit**. Every eval here samples the routed set —
+`figqa_select.py` draws its candidates from `res["items"]` — so anything the
+router silently drops is invisible to all of them by construction, figure-QA
+included. If you add a filter, add a way to see what it removed.
+
+The measurement defects were: withheld routed items, a circular gate, a contaminated
 question, an answer key with the correct option at C fourteen times in thirty,
 a scorer that read the `page` column as the label and reported 0% on a set that
 was unanimously clean, and a validation script blind to `cost_guard` that

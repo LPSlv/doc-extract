@@ -1,0 +1,51 @@
+tag	label	note
+f101	figure	six offset voltage distribution histograms and curves
+f102	figure	six plots: settling, short-circuit current, crosstalk
+f103	figure	op amp schematics and settling response plot
+f104	figure	amplifier schematic and board layout drawing
+f105	figure	solder paste stencil dimensional drawing
+f106	figure	schematic of quad op amp driving ADC
+f107	figure	offset voltage plot and input protection schematic
+f108	figure	two active filter circuit schematics
+f109	figure	package outline dimensional drawings
+f110	figure	two pullup resistance application curves
+f111	figure	land pattern and solder mask drawings
+f112	figure	land pattern and solder mask drawings
+f113	figure	two output switch voltage swing curves
+f114	figure	block diagram and output signal waveforms
+f115	table	text, equations and one ruled table
+f116	figure	datasheet front page with equivalent schematic diagram
+f117	figure	test circuit schematic, waveforms and table
+f118	figure	three package pin-out drawings
+f119	figure	reel and tape dimension drawings with table
+f120	figure	package outline drawing with detail views
+f121	figure	four typical characteristic curves and small table
+f122	figure	solder paste stencil dimensional drawing
+f123	figure	solder paste stencil dimensional drawing
+f124	figure	solder paste stencil dimensional drawing
+f125	figure	clamping diode structure diagram and function table
+f126	figure	land pattern and solder mask drawings
+f127	figure	solder paste stencil dimensional drawing
+f128	table	thermal and electrical characteristics tables only
+f129	figure	reel and tape dimension drawings with table
+f130	figure	land pattern and solder mask drawings
+f131	figure	logic diagram of 4-bit synchronous counter
+f132	branding	text disclaimer with only vendor logo
+f133	figure	reel and tape dimension drawings with table
+f134	figure	solder paste stencil dimensional drawing
+f135	figure	reel and tape dimension drawings with table
+f136	figure	land pattern and solder mask drawings
+f137	figure	land pattern and solder mask drawings
+f138	table	ratings, operating conditions and thermal tables
+f139	figure	shipping tube dimension drawing with table
+f140	table	switching characteristics tables only
+f141	table	package option table with footnotes
+f142	figure	land pattern and solder mask drawings
+f143	figure	tape and reel box drawing with table
+f144	table	ratings, operating conditions and thermal tables
+f145	table	package option addendum table
+f146	figure	shipping tube dimension drawing with table
+f147	table	switching and operating characteristics tables
+f148	table	electrical and timing characteristics tables
+f149	table	thermal and electrical characteristics tables
+f150	figure	solder paste stencil dimensional drawing

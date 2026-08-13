@@ -1,0 +1,428 @@
+[
+ {
+  "vtag": "v001",
+  "corpus": "arxiv_holdout",
+  "tag": "h043",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h043.png"
+ },
+ {
+  "vtag": "v002",
+  "corpus": "arxiv_holdout",
+  "tag": "h002",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h002.png"
+ },
+ {
+  "vtag": "v003",
+  "corpus": "arxiv_holdout",
+  "tag": "h039",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h039.png"
+ },
+ {
+  "vtag": "v004",
+  "corpus": "arxiv_holdout",
+  "tag": "h021",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h021.png"
+ },
+ {
+  "vtag": "v005",
+  "corpus": "arxiv_holdout",
+  "tag": "h012",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h012.png"
+ },
+ {
+  "vtag": "v006",
+  "corpus": "arxiv_holdout",
+  "tag": "h041",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h041.png"
+ },
+ {
+  "vtag": "v007",
+  "corpus": "arxiv_holdout",
+  "tag": "h051",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h051.png"
+ },
+ {
+  "vtag": "v008",
+  "corpus": "arxiv_holdout",
+  "tag": "h037",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h037.png"
+ },
+ {
+  "vtag": "v009",
+  "corpus": "arxiv_holdout",
+  "tag": "h052",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h052.png"
+ },
+ {
+  "vtag": "v010",
+  "corpus": "arxiv_holdout",
+  "tag": "h028",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h028.png"
+ },
+ {
+  "vtag": "v011",
+  "corpus": "arxiv_holdout",
+  "tag": "h023",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h023.png"
+ },
+ {
+  "vtag": "v012",
+  "corpus": "arxiv_holdout",
+  "tag": "h008",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h008.png"
+ },
+ {
+  "vtag": "v013",
+  "corpus": "pmc_holdout",
+  "tag": "h006",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h006.png"
+ },
+ {
+  "vtag": "v014",
+  "corpus": "arxiv_holdout",
+  "tag": "h013",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h013.png"
+ },
+ {
+  "vtag": "v015",
+  "corpus": "arxiv_holdout",
+  "tag": "h055",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h055.png"
+ },
+ {
+  "vtag": "v016",
+  "corpus": "pmc_holdout",
+  "tag": "h001",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h001.png"
+ },
+ {
+  "vtag": "v017",
+  "corpus": "arxiv_holdout",
+  "tag": "h038",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h038.png"
+ },
+ {
+  "vtag": "v018",
+  "corpus": "arxiv_holdout",
+  "tag": "h057",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h057.png"
+ },
+ {
+  "vtag": "v019",
+  "corpus": "arxiv_holdout",
+  "tag": "h024",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h024.png"
+ },
+ {
+  "vtag": "v020",
+  "corpus": "arxiv_holdout",
+  "tag": "h025",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h025.png"
+ },
+ {
+  "vtag": "v021",
+  "corpus": "arxiv_holdout",
+  "tag": "h045",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h045.png"
+ },
+ {
+  "vtag": "v022",
+  "corpus": "arxiv_holdout",
+  "tag": "h035",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h035.png"
+ },
+ {
+  "vtag": "v023",
+  "corpus": "arxiv_holdout",
+  "tag": "h031",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h031.png"
+ },
+ {
+  "vtag": "v024",
+  "corpus": "arxiv_holdout",
+  "tag": "h059",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h059.png"
+ },
+ {
+  "vtag": "v025",
+  "corpus": "arxiv_holdout",
+  "tag": "h010",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h010.png"
+ },
+ {
+  "vtag": "v026",
+  "corpus": "arxiv_holdout",
+  "tag": "h050",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h050.png"
+ },
+ {
+  "vtag": "v027",
+  "corpus": "pmc_holdout",
+  "tag": "h002",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h002.png"
+ },
+ {
+  "vtag": "v028",
+  "corpus": "arxiv_holdout",
+  "tag": "h053",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h053.png"
+ },
+ {
+  "vtag": "v029",
+  "corpus": "arxiv_holdout",
+  "tag": "h054",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h054.png"
+ },
+ {
+  "vtag": "v030",
+  "corpus": "arxiv_holdout",
+  "tag": "h030",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h030.png"
+ },
+ {
+  "vtag": "v031",
+  "corpus": "pmc_holdout",
+  "tag": "h005",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h005.png"
+ },
+ {
+  "vtag": "v032",
+  "corpus": "arxiv_holdout",
+  "tag": "h022",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h022.png"
+ },
+ {
+  "vtag": "v033",
+  "corpus": "arxiv_holdout",
+  "tag": "h040",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h040.png"
+ },
+ {
+  "vtag": "v034",
+  "corpus": "pmc_holdout",
+  "tag": "h009",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h009.png"
+ },
+ {
+  "vtag": "v035",
+  "corpus": "arxiv_holdout",
+  "tag": "h016",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h016.png"
+ },
+ {
+  "vtag": "v036",
+  "corpus": "arxiv_holdout",
+  "tag": "h014",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h014.png"
+ },
+ {
+  "vtag": "v037",
+  "corpus": "arxiv_holdout",
+  "tag": "h047",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h047.png"
+ },
+ {
+  "vtag": "v038",
+  "corpus": "arxiv_holdout",
+  "tag": "h034",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h034.png"
+ },
+ {
+  "vtag": "v039",
+  "corpus": "arxiv_holdout",
+  "tag": "h018",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h018.png"
+ },
+ {
+  "vtag": "v040",
+  "corpus": "arxiv_holdout",
+  "tag": "h001",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h001.png"
+ },
+ {
+  "vtag": "v041",
+  "corpus": "arxiv_holdout",
+  "tag": "h020",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h020.png"
+ },
+ {
+  "vtag": "v042",
+  "corpus": "arxiv_holdout",
+  "tag": "h006",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h006.png"
+ },
+ {
+  "vtag": "v043",
+  "corpus": "arxiv_holdout",
+  "tag": "h046",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h046.png"
+ },
+ {
+  "vtag": "v044",
+  "corpus": "pmc_holdout",
+  "tag": "h003",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h003.png"
+ },
+ {
+  "vtag": "v045",
+  "corpus": "pmc_holdout",
+  "tag": "h004",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h004.png"
+ },
+ {
+  "vtag": "v046",
+  "corpus": "arxiv_holdout",
+  "tag": "h007",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h007.png"
+ },
+ {
+  "vtag": "v047",
+  "corpus": "arxiv_holdout",
+  "tag": "h056",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h056.png"
+ },
+ {
+  "vtag": "v048",
+  "corpus": "arxiv_holdout",
+  "tag": "h036",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h036.png"
+ },
+ {
+  "vtag": "v049",
+  "corpus": "arxiv_holdout",
+  "tag": "h062",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h062.png"
+ },
+ {
+  "vtag": "v050",
+  "corpus": "arxiv_holdout",
+  "tag": "h058",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h058.png"
+ },
+ {
+  "vtag": "v051",
+  "corpus": "arxiv_holdout",
+  "tag": "h042",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h042.png"
+ },
+ {
+  "vtag": "v052",
+  "corpus": "arxiv_holdout",
+  "tag": "h004",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h004.png"
+ },
+ {
+  "vtag": "v053",
+  "corpus": "arxiv_holdout",
+  "tag": "h061",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h061.png"
+ },
+ {
+  "vtag": "v054",
+  "corpus": "pmc_holdout",
+  "tag": "h008",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h008.png"
+ },
+ {
+  "vtag": "v055",
+  "corpus": "arxiv_holdout",
+  "tag": "h011",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h011.png"
+ },
+ {
+  "vtag": "v056",
+  "corpus": "arxiv_holdout",
+  "tag": "h048",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h048.png"
+ },
+ {
+  "vtag": "v057",
+  "corpus": "arxiv_holdout",
+  "tag": "h032",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h032.png"
+ },
+ {
+  "vtag": "v058",
+  "corpus": "arxiv_holdout",
+  "tag": "h003",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h003.png"
+ },
+ {
+  "vtag": "v059",
+  "corpus": "arxiv_holdout",
+  "tag": "h026",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h026.png"
+ },
+ {
+  "vtag": "v060",
+  "corpus": "arxiv_holdout",
+  "tag": "h019",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h019.png"
+ },
+ {
+  "vtag": "v061",
+  "corpus": "arxiv_holdout",
+  "tag": "h029",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h029.png"
+ },
+ {
+  "vtag": "v062",
+  "corpus": "arxiv_holdout",
+  "tag": "h044",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h044.png"
+ },
+ {
+  "vtag": "v063",
+  "corpus": "arxiv_holdout",
+  "tag": "h033",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h033.png"
+ },
+ {
+  "vtag": "v064",
+  "corpus": "arxiv_holdout",
+  "tag": "h005",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h005.png"
+ },
+ {
+  "vtag": "v065",
+  "corpus": "arxiv_holdout",
+  "tag": "h017",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h017.png"
+ },
+ {
+  "vtag": "v066",
+  "corpus": "arxiv_holdout",
+  "tag": "h009",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h009.png"
+ },
+ {
+  "vtag": "v067",
+  "corpus": "pmc_holdout",
+  "tag": "h007",
+  "image": "eval/filter3/holdout/pages/proposed/pmc_holdout/h007.png"
+ },
+ {
+  "vtag": "v068",
+  "corpus": "arxiv_holdout",
+  "tag": "h049",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h049.png"
+ },
+ {
+  "vtag": "v069",
+  "corpus": "arxiv_holdout",
+  "tag": "h060",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h060.png"
+ },
+ {
+  "vtag": "v070",
+  "corpus": "arxiv_holdout",
+  "tag": "h027",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h027.png"
+ },
+ {
+  "vtag": "v071",
+  "corpus": "arxiv_holdout",
+  "tag": "h015",
+  "image": "eval/filter3/holdout/pages/proposed/arxiv_holdout/h015.png"
+ }
+]

@@ -1,0 +1,51 @@
+tag	label	note
+f001	figure	scatter plot of extinction rate versus growth rate
+f002	figure	commutative diagram of flow maps and measures
+f003	figure	two abundance pattern plots with residual panels
+f004	figure	block diagram of task-oriented deep JSCC system
+f005	figure	accuracy versus CSNR line plot plus tables
+f006	figure	three-column pipeline flowchart and corpus table
+f007	figure	arc diagrams of Fourier variable half-circles
+f008	figure	two panel plots of eigenvalues and occupation
+f009	figure	grid of reinforcement learning curves, plus table
+f010	figure	shaded diagram of domain interface and thin fracture
+f011	figure	four stacked temperature-velocity diagrams with tracks
+f012	figure	three optimizer trajectory plots over iterations
+f013	figure	bar charts for MetaWorld and CALVIN, plus table
+f014	figure	signal-to-noise panels and UV luminosity function grid
+f015	figure	three test accuracy curve panels, plus two tables
+f016	table	ruled table of fitted equations by noise level
+f017	none	proofs, inequalities and display equations only
+f018	table	two benchmark result tables and equations
+f019	none	algorithm pseudocode listing and proof text
+f020	figure	logic symbols and package pinning drawings
+f021	figure	logic symbols, pinning drawings and pin table
+f022	figure	SO16 package outline drawing with dimensions
+f023	figure	propagation delay waveforms and test circuit
+f024	figure	SO14 package outline drawing with dimensions
+f025	figure	DHVQFN20 package outline drawing with dimensions
+f026	figure	DHXQFN14 package outline drawing with dimensions
+f027	figure	SO14 package outline drawing with dimensions
+f028	figure	eight package pinning drawings and pin table
+f029	figure	XSON5 package outline drawing with dimensions
+f030	figure	SOT753 package outline drawing with dimensions
+f031	table	datasheet cover, quick reference table, vendor logos
+f032	table	full-scale range table and text
+f033	table	full-scale range table and text
+f034	table	threshold register bit-field tables
+f035	table	parameter table with equations
+f036	figure	schematic of input multiplexer with ESD diodes
+f037	figure	I2C read sequence bit-field timing diagram
+f038	figure	tape and reel drawings with dimension table
+f039	table	absolute maximum and operating condition tables
+f040	table	electrical characteristics table
+f041	table	electrical characteristics table continued
+f042	table	charging parameter and current setting tables
+f043	figure	thermistor network schematic and threshold diagram
+f044	table	register bit map and field description tables
+f045	table	register bit map and field description tables
+f046	figure	six output current and transfer characteristic plots
+f047	figure	tape and reel drawings with dimension table
+f048	table	truth table for analog multiplexers
+f049	figure	land pattern and solder mask drawings
+f050	figure	six supply current plots and histograms

@@ -345,3 +345,35 @@ logo is separable from a figure only by reading it**, and reading it is the call
 being avoided. The difference is the exposure. For rasters, branding was 3.4% of
 vision calls at a median 140 tokens. Here it is a quarter of the largest branch
 in the router.
+
+## Routing every filter-3 page with figure signal — rejected on price
+
+**The idea.** `pm.count("\n|") >= 3` skips a page because the extractor parsed a
+table on it, before `render_reason` runs. Measured over the 711-document base
+([`eval/filter3.md`](filter3.md)): **4,065 such pages carry figure signal and no
+raster**, so nothing on them is routed at all, and **65.6% of a 250-page blind
+sample carry a real figure** (95% CI 60–71). The exposure is real, and it is the
+largest content loss measured in this repo.
+
+**Rejected because the bill is the bill.** Routing them all is **+3,911 vision
+calls on 5,903 and +64.1% of routed image tokens**, taking optical/ours from
+2.25× to 1.85×; deleting filter 3 outright is +75.3% and 1.79×. `cost_guard`
+**amplifies** rather than damps this one — 26–39 documents collapse into
+`whole_document`, the opposite sign from the multifigure case — and 52–78
+documents newly cross `SCALE_GUARD`.
+
+**And no signal narrows it.** Nine candidates scored against the 250 labels:
+`curves`/`diagonals` only 70%, plus a caption 78% at half the recall, plus
+`ink >= 0.02` **50%**, plus `rects >= 8` 44%. Precision spans 44–78% while cost
+falls in step with recall — exactly the shape `eval/multifigure.md` found, for
+the same reason: the price is the price of a page render, roughly constant per
+page and indifferent to why the page was chosen.
+
+The only lever that separates these pages is **filter 3's own constant**. Three
+pipe lines is a header, a rule and one data row. See `eval/filter3.md`, where
+`FILTER3_ROWS = 4` is proposed for that one-data-row case; it is not part of this
+rejection.
+
+Worth recording for whoever revisits: on filter-3 pages `stroke_grid` finds **0
+figures in 11** and `dense_grid` 1 in 7, so those two branches' skips are
+correct and only `curves`/`diagonals` are in question.

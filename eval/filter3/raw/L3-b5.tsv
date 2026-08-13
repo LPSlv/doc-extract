@@ -1,0 +1,51 @@
+tag	label	note
+f201	figure	Datasheet cover with two temperature accuracy plots
+f202	figure	Tape and reel box dimension drawing plus table
+f203	figure	Two 8-pin package pinout drawings, pin function table
+f204	table	Typical design and switching frequency tables only
+f205	figure	Frequency compensation circuit schematic with equations
+f206	figure	Six efficiency, loop response and regulation curves
+f207	figure	Solder stencil land pattern drawing with opening table
+f208	figure	SOT563 6-pin package top view drawing
+f209	figure	Five characteristic curves versus temperature and voltage
+f210	figure	Five threshold and RDSON versus temperature plots
+f211	figure	Six switching frequency and load current plots
+f212	table	Absolute maximum, ESD and operating condition tables
+f213	figure	Reel, tape and quadrant drawings plus dimension table
+f214	table	Accelerometer electrical characteristics tables
+f215	table	FIFO_CONFIG register bit-field tables
+f216	table	SPI timing specification table
+f217	figure	Four transistor characteristic curve plots
+f218	figure	Four power and forward current derating plots
+f219	table	Calibration register bit assignment tables
+f220	table	Static characteristics table for 74HCT245
+f221	table	Recommended operating and static characteristics tables
+f222	table	Revision history table
+f223	table	Ordering, marking and limiting values tables
+f224	figure	Runtime and memory usage plots plus result tables
+f225	table	Two shaded benchmark result tables
+f226	figure	Bar chart of success rates plus results table
+f227	table	Dataset statistics table with prose
+f228	table	Serum creatinine risk table with article back matter
+f229	table	Robustness evaluation table with conclusion text
+f230	table	Baseline participant characteristics table
+f231	table	Correlation table with discussion text
+f232	table	Mean A1C results table with article text
+f233	figure	Patient enrollment flow diagram
+f234	table	Multivariate analysis table with discussion text
+f235	table	Absolute maximum and electrical characteristics tables
+f236	figure	DHVQFN16 package outline drawing with dimensions
+f237	figure	XSON6 package outline drawing with dimensions
+f238	table	Current and power calculation table with equations
+f239	table	Package option addendum ordering table
+f240	table	Absolute maximum, ESD, operating condition tables
+f241	figure	TSSOP land pattern and solder mask drawings
+f242	figure	SOT-23 land pattern and solder mask drawings
+f243	figure	X2QFN land pattern and solder mask drawings
+f244	branding	Text and equations only, vendor logo header
+f245	figure	Gate driver output structure schematic plus logic table
+f246	branding	Power dissipation equations and text, vendor logo
+f247	table	Packaging information ordering table
+f248	table	Electrical and switching characteristics tables
+f249	figure	Wave soldering footprint drawing for SOT89
+f250	table	Transistor characteristics table

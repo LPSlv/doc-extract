@@ -1,0 +1,51 @@
+tag	label	note
+f051	figure	stencil design drawing plus small stencil opening table
+f052	figure	pin configuration package diagram plus ratings tables
+f053	figure	tape and reel box dimension drawing
+f054	table	absolute maximum, ESD and thermal tables only
+f055	figure	land pattern and solder mask detail drawings
+f056	figure	five plotted typical characteristic curves
+f057	table	register set summary table only
+f058	figure	typical CAN bus node block diagram
+f059	figure	solder paste stencil pad drawings
+f060	figure	TO-CAN transistor package outline drawing
+f061	figure	reel and tape dimension drawings plus table
+f062	table	tape and reel dimensions table only
+f063	table	packaging information table only
+f064	table	maximum ratings and operating conditions tables
+f065	table	electrical and switching characteristics tables
+f066	table	electrical characteristics table only
+f067	figure	regulator and battery charger circuit schematics
+f068	figure	current-limited charger and 4A regulator schematics
+f069	table	electrical characteristics table only
+f070	figure	TO-252 solder paste stencil drawing
+f071	figure	reel and tape dimension drawings plus table
+f072	figure	TO-92 land pattern example drawings
+f073	table	packaging information table only
+f074	table	packaging information table only
+f075	table	packaging table with explanatory footnotes
+f076	figure	SOIC land pattern and solder mask drawings
+f077	table	packaging table with explanatory footnotes
+f078	table	packaging table with explanatory footnotes
+f079	figure	SOT land pattern and solder mask drawings
+f080	figure	six plotted performance characteristic curves
+f081	branding	equations and prose, TI logo header only
+f082	figure	six plotted characteristic curves
+f083	figure	SOT solder paste stencil drawing
+f084	figure	TSSOP land pattern and solder mask drawings
+f085	figure	VSSOP solder paste stencil drawing
+f086	figure	tape and reel box drawing plus table
+f087	table	device functional mode comparison table
+f088	table	ratings and operating conditions tables
+f089	table	tape and reel dimensions table only
+f090	figure	functional block diagram plus driver table
+f091	figure	simplified schematic, features and device table
+f092	figure	TSSOP solder paste stencil drawing
+f093	figure	32-pin QFN device pinout drawing
+f094	figure	simplified op amp schematic and device table
+f095	figure	astable circuit schematic and waveform plot
+f096	figure	timing waveform plot and modulation circuit schematic
+f097	figure	duty cycle plot and modulator circuit schematic
+f098	figure	six plotted distortion characteristic curves
+f099	figure	two package pinout drawings plus pin table
+f100	figure	SOIC land pattern and solder mask drawings

@@ -1,0 +1,51 @@
+tag	label	note
+f101	figure	offset drift histograms and offset voltage curves
+f102	figure	settling, short-circuit, propagation delay and crosstalk plots
+f103	figure	op amp schematics and settling transient plot
+f104	figure	amplifier schematic and board layout drawing
+f105	figure	solder paste stencil drawing, VSSOP package
+f106	figure	schematic of quad op amp driving A/D converter
+f107	figure	offset vs common-mode plot and protection schematic
+f108	figure	two active filter schematics
+f109	figure	USON package outline mechanical drawing
+f110	figure	two pullup resistance application curves
+f111	figure	land pattern and solder mask detail drawings
+f112	figure	land pattern and solder mask detail drawings
+f113	figure	two output switch voltage swing plots
+f114	figure	block diagram and output timing waveforms
+f115	table	equations and one ruled LDO voltage table
+f116	figure	equivalent input and output schematic diagram, device table
+f117	figure	receiver table, test circuit schematic, voltage waveforms
+f118	figure	three package pin-out diagrams
+f119	figure	reel and tape dimension drawings with table
+f120	figure	SOT-23 package outline mechanical drawing
+f121	figure	four typical characteristic curves plus small table
+f122	figure	solder paste stencil drawing, SSOP package
+f123	figure	solder paste stencil drawing, TSSOP package
+f124	figure	solder paste stencil drawing, TSSOP package
+f125	figure	clamp diode schematic and function table
+f126	figure	land pattern and solder mask detail drawings
+f127	figure	solder paste stencil drawing, TSSOP package
+f128	table	thermal and electrical characteristics tables
+f129	figure	reel and tape dimension drawings with table
+f130	figure	land pattern and solder mask detail drawings
+f131	figure	logic diagram of 4-bit synchronous counter
+f132	branding	disclaimer text with vendor logo only
+f133	figure	reel and tape dimension drawings with table
+f134	figure	solder paste stencil drawing, TSSOP package
+f135	figure	reel and tape dimension drawings with table
+f136	figure	land pattern and solder mask detail drawings
+f137	figure	land pattern and solder mask detail drawings
+f138	table	absolute maximum, operating and thermal tables
+f139	figure	shipping tube dimension drawing with table
+f140	table	switching characteristics tables
+f141	table	orderable part number addendum table
+f142	figure	land pattern and solder mask detail drawings
+f143	figure	tape and reel box drawing with table
+f144	table	maximum ratings, operating conditions, thermal tables
+f145	table	orderable part number addendum table
+f146	figure	shipping tube dimension drawing with table
+f147	table	switching and operating characteristics tables
+f148	table	electrical and timing characteristics tables
+f149	table	thermal and electrical characteristics tables
+f150	figure	solder paste stencil drawing, TSSOP package

@@ -1,0 +1,251 @@
+tag	corpus	file	page	branch	label	agree	note
+f001	arxiv	2607.27983v1.pdf	3	curves	figure	3/3	scatter plot of extinction rate versus growth rate
+f002	arxiv	2607.28578v1.pdf	32	curves	figure	3/3	commutative diagram of flow maps and measures
+f003	arxiv	2607.28729v1.pdf	23	curves	figure	3/3	two abundance pattern plots with residual panels
+f004	arxiv	2607.28907v1.pdf	2	curves	figure	3/3	block diagram of task-oriented deep JSCC system
+f005	arxiv	2607.28907v1.pdf	12	curves	figure	3/3	accuracy versus CSNR line plot plus tables
+f006	arxiv	2607.29188v1.pdf	3	curves	figure	3/3	three-column pipeline flowchart and corpus table
+f007	arxiv	2607.29423v1.pdf	8	curves	figure	3/3	arc diagrams of Fourier variable half-circles
+f008	arxiv	2607.29467v1.pdf	5	curves	figure	3/3	two panel plots of eigenvalues and occupation
+f009	arxiv	2607.29559v1.pdf	5	curves	figure	3/3	grid of reinforcement learning curves, plus table
+f010	arxiv	2607.29605v1.pdf	6	curves	figure	3/3	shaded diagram of domain interface and thin fracture
+f011	arxiv	2607.29650v1.pdf	6	curves	figure	3/3	four stacked temperature-velocity diagrams with tracks
+f012	arxiv	2607.29674v1.pdf	4	curves	figure	3/3	three optimizer trajectory plots over iterations
+f013	arxiv	2607.29613v1.pdf	7	dense_grid	figure	3/3	bar charts for MetaWorld and CALVIN, plus table
+f014	arxiv	2607.28713v1.pdf	24	diagonals	figure	3/3	signal-to-noise panels and UV luminosity function grid
+f015	arxiv	2607.29674v1.pdf	6	diagonals	figure	3/3	three test accuracy curve panels, plus two tables
+f016	arxiv	2607.27137v1.pdf	28	stroke_grid	table	3/3	ruled table of fitted equations by noise level
+f017	arxiv	2607.29003v1.pdf	14	stroke_grid	none	3/3	proofs, inequalities and display equations only
+f018	arxiv	2607.29494v1.pdf	5	stroke_grid	table	3/3	two benchmark result tables and equations
+f019	arxiv	2607.29686v1.pdf	11	stroke_grid	none	3/3	algorithm pseudocode listing and proof text
+f020	datasheets	nexperia_74HC_HCT00.pdf	2	curves	figure	3/3	logic symbols and package pinning drawings
+f021	datasheets	nexperia_74HC_HCT125.pdf	2	curves	figure	3/3	logic symbols, pinning drawings and pin table
+f022	datasheets	nexperia_74HC_HCT138.pdf	10	curves	figure	3/3	SO16 package outline drawing with dimensions
+f023	datasheets	nexperia_74HC_HCT14.pdf	6	curves	figure	3/3	propagation delay waveforms and test circuit
+f024	datasheets	nexperia_74HC_HCT14.pdf	11	curves	figure	3/3	SO14 package outline drawing with dimensions
+f025	datasheets	nexperia_74HC_HCT245.pdf	12	curves	figure	3/3	DHVQFN20 package outline drawing with dimensions
+f026	datasheets	nexperia_74HC_HCT32.pdf	12	curves	figure	3/3	DHXQFN14 package outline drawing with dimensions
+f027	datasheets	nexperia_74HC_HCT74.pdf	13	curves	figure	3/3	SO14 package outline drawing with dimensions
+f028	datasheets	nexperia_74LVC1G04.pdf	3	curves	figure	3/3	eight package pinning drawings and pin table
+f029	datasheets	nexperia_74LVC1G04.pdf	16	curves	figure	3/3	XSON5 package outline drawing with dimensions
+f030	datasheets	nexperia_74LVC1G14.pdf	11	curves	figure	3/3	SOT753 package outline drawing with dimensions
+f031	datasheets	nexperia_PESD5V0X1BL.pdf	1	curves	table	3/3	datasheet cover, quick reference table, vendor logos
+f032	datasheets	ti_ads1015.pdf	11	curves	table	3/3	full-scale range table and text
+f033	datasheets	ti_ads1115.pdf	15	curves	table	3/3	full-scale range table and text
+f034	datasheets	ti_ads1115.pdf	27	curves	table	3/3	threshold register bit-field tables
+f035	datasheets	ti_ads1115.pdf	35	curves	table	3/3	parameter table with equations
+f036	datasheets	ti_ads1256.pdf	14	curves	figure	3/3	schematic of input multiplexer with ESD diodes
+f037	datasheets	ti_ads7830.pdf	16	curves	figure	3/3	I2C read sequence bit-field timing diagram
+f038	datasheets	ti_ads7830.pdf	22	curves	figure	3/3	tape and reel drawings with dimension table
+f039	datasheets	ti_bq24074.pdf	10	curves	table	3/3	absolute maximum and operating condition tables
+f040	datasheets	ti_bq25895.pdf	8	curves	table	3/3	electrical characteristics table
+f041	datasheets	ti_bq25895.pdf	9	curves	table	3/3	electrical characteristics table continued
+f042	datasheets	ti_bq25895.pdf	21	curves	table	3/3	charging parameter and current setting tables
+f043	datasheets	ti_bq25895.pdf	23	curves	figure	3/3	thermistor network schematic and threshold diagram
+f044	datasheets	ti_bq25895.pdf	39	curves	table	3/3	register bit map and field description tables
+f045	datasheets	ti_bq25895.pdf	40	curves	table	3/3	register bit map and field description tables
+f046	datasheets	ti_cd40106b.pdf	9	curves	figure	3/3	six output current and transfer characteristic plots
+f047	datasheets	ti_cd4017b.pdf	10	curves	figure	3/3	tape and reel drawings with dimension table
+f048	datasheets	ti_cd4051b.pdf	17	curves	table	3/3	truth table for analog multiplexers
+f049	datasheets	ti_cd4093b.pdf	19	curves	figure	3/3	land pattern and solder mask drawings
+f050	datasheets	ti_dac8562.pdf	24	curves	figure	3/3	six supply current plots and histograms
+f051	datasheets	ti_drv8833.pdf	28	curves	figure	3/3	Solder paste stencil drawing with stencil opening table
+f052	datasheets	ti_drv8871.pdf	3	curves	figure	3/3	HSOP pin configuration drawing plus pin function tables
+f053	datasheets	ti_hdc1080.pdf	24	curves	figure	3/3	Tape and reel box isometric drawing plus table
+f054	datasheets	ti_hdc2080.pdf	5	curves	table	3/3	Absolute maximum, ESD and thermal spec tables
+f055	datasheets	ti_ina180.pdf	51	curves	figure	3/3	Land pattern and solder mask detail drawings
+f056	datasheets	ti_ina219.pdf	8	curves	figure	3/3	Five typical characteristic curve plots
+f057	datasheets	ti_ina3221.pdf	24	curves	table	3/3	Register set summary table
+f058	datasheets	ti_iso1050.pdf	25	curves	figure	3/3	Typical CAN bus node block diagram
+f059	datasheets	ti_iso1050.pdf	32	curves	figure	3/3	SOIC solder paste stencil drawings
+f060	datasheets	ti_lf356.pdf	41	curves	figure	3/3	TO-CAN transistor package outline drawing
+f061	datasheets	ti_lm1117.pdf	29	curves	figure	3/3	Reel and tape dimension diagrams plus table
+f062	datasheets	ti_lm1117.pdf	30	curves	table	3/3	Tape and reel dimension table only
+f063	datasheets	ti_lm2901.pdf	27	curves	table	3/3	Packaging information addendum table
+f064	datasheets	ti_lm2903.pdf	4	curves	table	3/3	Absolute maximum and operating condition tables
+f065	datasheets	ti_lm2903.pdf	7	curves	table	3/3	Electrical and switching characteristics tables
+f066	datasheets	ti_lm2903.pdf	8	curves	table	3/3	Electrical characteristics comparison table
+f067	datasheets	ti_lm317.pdf	19	curves	figure	3/3	Two LM317 regulator application schematics
+f068	datasheets	ti_lm317.pdf	21	curves	figure	3/3	Charger and adjustable regulator circuit schematics
+f069	datasheets	ti_lm324.pdf	11	curves	table	3/3	Electrical characteristics table for op amps
+f070	datasheets	ti_lm337.pdf	24	curves	figure	3/3	TO-252 solder paste stencil drawing
+f071	datasheets	ti_lm339.pdf	32	curves	figure	3/3	Reel and tape dimension diagrams plus table
+f072	datasheets	ti_lm35.pdf	32	curves	figure	3/3	TO-92 land pattern example drawings
+f073	datasheets	ti_lm358.pdf	33	curves	table	3/3	Packaging information addendum table
+f074	datasheets	ti_lm358.pdf	34	curves	table	3/3	Packaging information addendum table
+f075	datasheets	ti_lm358.pdf	40	curves	table	3/3	Packaging table with footnote text
+f076	datasheets	ti_lm386.pdf	31	curves	figure	3/3	SOIC land pattern and solder mask drawings
+f077	datasheets	ti_lm393.pdf	28	curves	table	3/3	Packaging table with footnote text
+f078	datasheets	ti_lm4040.pdf	42	curves	table	3/3	Packaging table with footnote text
+f079	datasheets	ti_lm4040.pdf	56	curves	figure	3/3	SOT land pattern and solder mask drawings
+f080	datasheets	ti_lm4562.pdf	20	curves	figure	3/3	Six typical performance characteristic plots
+f081	datasheets	ti_lm5069.pdf	20	curves	none	2/3	Body text with display equations only
+f082	datasheets	ti_lm833.pdf	9	curves	figure	3/3	Six typical characteristic curve plots
+f083	datasheets	ti_lmv321.pdf	36	curves	figure	3/3	SOT solder paste stencil drawing
+f084	datasheets	ti_lmv321.pdf	41	curves	figure	3/3	TSSOP land pattern and solder mask drawings
+f085	datasheets	ti_lmv321.pdf	51	curves	figure	3/3	VSSOP solder paste stencil drawing
+f086	datasheets	ti_lmv358.pdf	29	curves	figure	3/3	Tape and reel box drawing plus table
+f087	datasheets	ti_lp2985.pdf	18	curves	table	3/3	Text with device functional mode comparison table
+f088	datasheets	ti_lp5907.pdf	4	curves	table	3/3	Maximum ratings and operating condition tables
+f089	datasheets	ti_lp5907.pdf	32	curves	table	3/3	Tape and reel dimension table only
+f090	datasheets	ti_max232.pdf	9	curves	figure	3/3	Functional block diagram plus driver function table
+f091	datasheets	ti_max3232.pdf	1	curves	figure	3/3	Cover page with simplified schematic diagram
+f092	datasheets	ti_max3232.pdf	29	curves	figure	3/3	TSSOP solder paste stencil drawing
+f093	datasheets	ti_msp430g2553.pdf	4	curves	figure	3/3	QFN device pinout diagram
+f094	datasheets	ti_ne5532.pdf	1	curves	figure	3/3	Cover page with simplified op amp schematic
+f095	datasheets	ti_ne555.pdf	12	curves	figure	3/3	Astable circuit schematic and waveform traces
+f096	datasheets	ti_ne555.pdf	15	curves	figure	3/3	Timing waveforms and pulse-width modulation circuit
+f097	datasheets	ti_ne556.pdf	11	curves	figure	3/3	Duty cycle plot and modulation circuit schematic
+f098	datasheets	ti_opa1612.pdf	8	curves	figure	3/3	Six distortion plots with inset schematics
+f099	datasheets	ti_opa1678.pdf	5	curves	figure	3/3	SOIC and QFN pinout drawings plus table
+f100	datasheets	ti_opa1678.pdf	54	curves	figure	3/3	SOIC land pattern and solder mask drawings
+f101	datasheets	ti_opa192.pdf	14	curves	figure	3/3	six offset voltage distribution histograms and curves
+f102	datasheets	ti_opa192.pdf	20	curves	figure	3/3	six plots: settling, short-circuit current, crosstalk
+f103	datasheets	ti_opa192.pdf	24	curves	figure	3/3	op amp schematics and settling response plot
+f104	datasheets	ti_opa192.pdf	36	curves	figure	3/3	amplifier schematic and board layout drawing
+f105	datasheets	ti_opa2333.pdf	48	curves	figure	3/3	solder paste stencil dimensional drawing
+f106	datasheets	ti_opa350.pdf	16	curves	figure	3/3	schematic of quad op amp driving ADC
+f107	datasheets	ti_opa365.pdf	13	curves	figure	3/3	offset voltage plot and input protection schematic
+f108	datasheets	ti_opa365.pdf	16	curves	figure	3/3	two active filter circuit schematics
+f109	datasheets	ti_opt3001.pdf	41	curves	figure	3/3	package outline dimensional drawings
+f110	datasheets	ti_pca9306.pdf	20	curves	figure	3/3	two pullup resistance application curves
+f111	datasheets	ti_pca9306.pdf	32	curves	figure	3/3	land pattern and solder mask drawings
+f112	datasheets	ti_pca9306.pdf	35	curves	figure	3/3	land pattern and solder mask drawings
+f113	datasheets	ti_sn6501.pdf	11	curves	figure	3/3	two output switch voltage swing curves
+f114	datasheets	ti_sn6501.pdf	15	curves	figure	3/3	block diagram and output signal waveforms
+f115	datasheets	ti_sn6501.pdf	17	curves	table	3/3	text, equations and one ruled table
+f116	datasheets	ti_sn65hvd230.pdf	1	curves	figure	3/3	datasheet front page with equivalent schematic diagram
+f117	datasheets	ti_sn65hvd230.pdf	16	curves	figure	3/3	test circuit schematic, waveforms and table
+f118	datasheets	ti_sn74ahct125.pdf	3	curves	figure	3/3	three package pin-out drawings
+f119	datasheets	ti_sn74hc00.pdf	20	curves	figure	3/3	reel and tape dimension drawings with table
+f120	datasheets	ti_sn74hc02.pdf	24	curves	figure	3/3	package outline drawing with detail views
+f121	datasheets	ti_sn74hc04.pdf	7	curves	figure	3/3	four typical characteristic curves and small table
+f122	datasheets	ti_sn74hc04.pdf	29	curves	figure	3/3	solder paste stencil dimensional drawing
+f123	datasheets	ti_sn74hc08.pdf	37	curves	figure	3/3	solder paste stencil dimensional drawing
+f124	datasheets	ti_sn74hc125.pdf	36	curves	figure	3/3	solder paste stencil dimensional drawing
+f125	datasheets	ti_sn74hc126.pdf	11	curves	figure	3/3	clamping diode structure diagram and function table
+f126	datasheets	ti_sn74hc126.pdf	35	curves	figure	3/3	land pattern and solder mask drawings
+f127	datasheets	ti_sn74hc132.pdf	39	curves	figure	3/3	solder paste stencil dimensional drawing
+f128	datasheets	ti_sn74hc138.pdf	5	curves	table	3/3	thermal and electrical characteristics tables only
+f129	datasheets	ti_sn74hc14.pdf	19	curves	figure	3/3	reel and tape dimension drawings with table
+f130	datasheets	ti_sn74hc157.pdf	25	curves	figure	3/3	land pattern and solder mask drawings
+f131	datasheets	ti_sn74hc161.pdf	3	curves	figure	3/3	logic diagram of 4-bit synchronous counter
+f132	datasheets	ti_sn74hc161.pdf	16	curves	branding	3/3	text disclaimer with only vendor logo
+f133	datasheets	ti_sn74hc165.pdf	20	curves	figure	3/3	reel and tape dimension drawings with table
+f134	datasheets	ti_sn74hc165.pdf	35	curves	figure	3/3	solder paste stencil dimensional drawing
+f135	datasheets	ti_sn74hc174.pdf	14	curves	figure	3/3	reel and tape dimension drawings with table
+f136	datasheets	ti_sn74hc174.pdf	18	curves	figure	3/3	land pattern and solder mask drawings
+f137	datasheets	ti_sn74hc174.pdf	28	curves	figure	3/3	land pattern and solder mask drawings
+f138	datasheets	ti_sn74hc175.pdf	4	curves	table	3/3	ratings, operating conditions and thermal tables
+f139	datasheets	ti_sn74hc175.pdf	16	curves	figure	3/3	shipping tube dimension drawing with table
+f140	datasheets	ti_sn74hc244.pdf	7	curves	table	3/3	switching characteristics tables only
+f141	datasheets	ti_sn74hc244.pdf	23	curves	table	3/3	package option table with footnotes
+f142	datasheets	ti_sn74hc244.pdf	40	curves	figure	3/3	land pattern and solder mask drawings
+f143	datasheets	ti_sn74hc32.pdf	20	curves	figure	3/3	tape and reel box drawing with table
+f144	datasheets	ti_sn74hc373.pdf	4	curves	table	3/3	ratings, operating conditions and thermal tables
+f145	datasheets	ti_sn74hc373.pdf	18	curves	table	3/3	package option addendum table
+f146	datasheets	ti_sn74hc373.pdf	23	curves	figure	3/3	shipping tube dimension drawing with table
+f147	datasheets	ti_sn74hc374.pdf	6	curves	table	3/3	switching and operating characteristics tables
+f148	datasheets	ti_sn74hc4040.pdf	5	curves	table	3/3	electrical and timing characteristics tables
+f149	datasheets	ti_sn74hc4066.pdf	5	curves	table	3/3	thermal and electrical characteristics tables
+f150	datasheets	ti_sn74hc4066.pdf	34	curves	figure	3/3	solder paste stencil dimensional drawing
+f151	datasheets	ti_sn74hc541.pdf	7	curves	table	3/3	Switching characteristics tables only
+f152	datasheets	ti_sn74hc595.pdf	17	curves	table	3/3	Packaging information table
+f153	datasheets	ti_sn74hc74.pdf	18	curves	table	3/3	Packaging information table
+f154	datasheets	ti_sn74hc74.pdf	19	curves	table	3/3	Packaging information table
+f155	datasheets	ti_sn74hct245.pdf	9	curves	figure	3/3	Logic block diagram plus function table
+f156	datasheets	ti_sn74lvc1g04.pdf	21	curves	figure	3/3	Tape and reel box drawing with dimensions table
+f157	datasheets	ti_sn74lvc1g07.pdf	16	curves	table	3/3	Package option addendum table and notes
+f158	datasheets	ti_sn74lvc1g07.pdf	40	curves	figure	3/3	X2SON land pattern board layout drawing
+f159	datasheets	ti_sn74lvc1g08.pdf	33	curves	figure	3/3	SOT land pattern and solder mask details
+f160	datasheets	ti_sn74lvc1g08.pdf	45	curves	figure	3/3	SOT solder paste stencil drawing
+f161	datasheets	ti_sn74lvc1g125.pdf	32	curves	figure	3/3	X2SON land pattern and solder mask details
+f162	datasheets	ti_sn74lvc1g14.pdf	5	curves	table	3/3	Absolute maximum and ESD ratings tables
+f163	datasheets	ti_sn74lvc1g14.pdf	25	curves	figure	3/3	SOT land pattern and solder mask details
+f164	datasheets	ti_tl071.pdf	33	curves	figure	3/3	Op amp board layout and schematic
+f165	datasheets	ti_tl071.pdf	40	curves	table	3/3	Package option addendum table
+f166	datasheets	ti_tl071.pdf	48	curves	table	3/3	Package materials dimensions table
+f167	datasheets	ti_tl072.pdf	43	curves	figure	3/3	Reel and tape dimension drawings plus table
+f168	datasheets	ti_tl072.pdf	63	curves	figure	3/3	SOT solder paste stencil drawing
+f169	datasheets	ti_tl072.pdf	68	curves	figure	3/3	SOIC land pattern and solder mask details
+f170	datasheets	ti_tl074.pdf	6	curves	figure	3/3	CFP package pinout drawing plus pin table
+f171	datasheets	ti_tl074.pdf	13	curves	table	3/3	Electrical characteristics table
+f172	datasheets	ti_tl074.pdf	43	curves	figure	3/3	Reel and tape dimension drawings plus table
+f173	datasheets	ti_tl074.pdf	48	curves	table	3/3	Package materials dimensions table
+f174	datasheets	ti_tl082.pdf	8	curves	figure	3/3	LCCC package pinout drawing plus pin table
+f175	datasheets	ti_tl082.pdf	66	curves	figure	3/3	CDIP land pattern with detail views
+f176	datasheets	ti_tl084.pdf	16	curves	table	3/3	AC electrical characteristics table
+f177	datasheets	ti_tl084.pdf	68	curves	figure	3/3	SOT land pattern and solder mask details
+f178	datasheets	ti_tl431.pdf	17	curves	figure	3/3	Plotted curves and test circuit schematics
+f179	datasheets	ti_tl431.pdf	55	curves	figure	3/3	Tape and reel box drawing with dimensions table
+f180	datasheets	ti_tl431.pdf	61	curves	figure	3/3	Tube dimension drawing plus dimensions table
+f181	datasheets	ti_tlc555.pdf	5	curves	table	3/3	Thermal information table
+f182	datasheets	ti_tlc555.pdf	20	curves	figure	3/3	Duty cycle plot and timer circuit diagram
+f183	datasheets	ti_tlc5940.pdf	20	curves	figure	3/3	Grayscale data packet format bit diagram
+f184	datasheets	ti_tlv1701.pdf	34	curves	figure	3/3	SOT land pattern and solder mask details
+f185	datasheets	ti_tlv1701.pdf	38	curves	figure	3/3	TSSOP solder paste stencil drawing
+f186	datasheets	ti_tlv2372.pdf	21	curves	figure	3/3	Shutdown waveform plots versus time
+f187	datasheets	ti_tlv2372.pdf	33	curves	table	3/3	Package option addendum table
+f188	datasheets	ti_tlv2372.pdf	38	curves	figure	3/3	Tube dimension drawing plus dimensions table
+f189	datasheets	ti_tlv2372.pdf	45	curves	figure	3/3	TSSOP solder paste stencil drawing
+f190	datasheets	ti_tlv271.pdf	16	curves	figure	3/3	Op amp functional block diagram
+f191	datasheets	ti_tlv271.pdf	25	curves	table	3/3	Packaging information table
+f192	datasheets	ti_tlv757p.pdf	26	curves	table	3/3	Packaging table with footnotes and disclaimer
+f193	datasheets	ti_tlv9002.pdf	31	curves	figure	3/3	Photodiode amplifier circuit schematic
+f194	datasheets	ti_tlv9002.pdf	78	curves	figure	3/3	TSSOP land pattern and solder mask details
+f195	datasheets	ti_tlv9002.pdf	95	curves	figure	3/3	SOT solder paste stencil drawing
+f196	datasheets	ti_tlv9061.pdf	60	curves	figure	3/3	SOIC land pattern and solder mask details
+f197	datasheets	ti_tlv9062.pdf	8	curves	figure	3/3	Three package pinout drawings plus pin table
+f198	datasheets	ti_tlv9062.pdf	66	curves	figure	3/3	SOT-23 land pattern and solder mask details
+f199	datasheets	ti_tlv9062.pdf	80	curves	figure	3/3	X2QFN land pattern and solder mask details
+f200	datasheets	ti_tmp102.pdf	1	curves	figure	3/3	Simplified schematic and block diagram on cover
+f201	datasheets	ti_tmp117.pdf	1	curves	figure	3/3	Two temperature accuracy plots on datasheet cover page
+f202	datasheets	ti_tpa3116d2.pdf	36	curves	figure	3/3	Tape and reel box dimension drawing with table
+f203	datasheets	ti_tps54331.pdf	3	curves	figure	3/3	Two 8-pin package pinout drawings plus pin table
+f204	datasheets	ti_tps54331.pdf	12	curves	table	3/3	Two ruled parameter tables, no graphic
+f205	datasheets	ti_tps54560.pdf	21	curves	figure	3/3	Frequency compensation schematic with op-amp and RC networks
+f206	datasheets	ti_tps54560.pdf	35	curves	figure	3/3	Six efficiency, loop response and regulation curves
+f207	datasheets	ti_tps54560.pdf	50	curves	figure	3/3	Solder stencil design drawing with dimensions
+f208	datasheets	ti_tps61023.pdf	3	curves	figure	3/3	SOT563 6-pin package top view drawing
+f209	datasheets	ti_tps61023.pdf	7	curves	figure	3/3	Five typical characteristic curves versus temperature
+f210	datasheets	ti_tps62840.pdf	10	curves	figure	3/3	Five threshold and discharge current curves
+f211	datasheets	ti_tps62840.pdf	23	curves	figure	3/3	Six switching frequency and load current curves
+f212	datasheets	ti_ucc27524.pdf	5	curves	table	3/3	Absolute maximum, ESD and operating condition tables
+f213	datasheets	ti_ucc27524.pdf	32	curves	figure	3/3	Reel, tape and quadrant orientation drawings
+f214	datasheets	bmi160_bosch.pdf	8	dense_grid	table	3/3	Shaded electrical characteristics tables for accelerometer
+f215	datasheets	bmi160_bosch.pdf	63	dense_grid	table	3/3	Register bit definition tables for FIFO_CONFIG
+f216	datasheets	bmi160_bosch.pdf	90	dense_grid	table	3/3	SPI timing specification table
+f217	datasheets	nexperia_PBSS4350X.pdf	6	diagonals	figure	3/3	Four transistor characteristic curve plots
+f218	datasheets	nexperia_PMEG3020EP.pdf	6	diagonals	figure	3/3	Four rectifier power and current derating plots
+f219	datasheets	ti_ads1256.pdf	33	diagonals	table	3/3	Register bit assignment tables for calibration bytes
+f220	datasheets	nexperia_74HC_HCT245.pdf	6	stroke_grid	table	3/3	Static characteristics table for logic transceiver
+f221	datasheets	nexperia_74LVC1G14.pdf	5	stroke_grid	table	3/3	Recommended operating conditions and static characteristics tables
+f222	datasheets	nexperia_PMBT3904.pdf	8	stroke_grid	table	3/3	Revision history table
+f223	datasheets	nexperia_PMEG3020EP.pdf	2	stroke_grid	table	3/3	Ordering, marking and limiting values tables
+f224	papers	ai_flashattention.pdf	9	curves	figure	3/3	Runtime and memory usage line plots plus tables
+f225	papers	bio_drug-discovery.pdf	27	dense_grid	table	3/3	Two heat-shaded benchmark result tables
+f226	papers	rob_rt1.pdf	27	diagonals	figure	3/3	Bar chart of success rates beside results table
+f227	papers	bio_alphafold-analysis.pdf	4	stroke_grid	table	3/3	Dataset statistics table with body text
+f228	pmc	10.1177_20543581231221892.PMC10757427.pdf	4	curves	table	3/3	Relative risk results table with article text
+f229	pmc	41598_2025_Article_28505.PMC12756295.pdf	15	curves	table	3/3	Robustness evaluation table with conclusion text
+f230	pmc	ZEPT_16_2599612.PMC12713222.pdf	5	curves	table	3/3	Baseline characteristics table with body text
+f231	pmc	tvst-14-6-8.PMC12136137.pdf	5	curves	table	3/3	Correlation table with journal body text
+f232	pmc	207.PMC4523731.pdf	4	dense_grid	table	3/3	Mean A1C results table with article text
+f233	pmc	10-1055-a-0650-3908.PMC6175603.pdf	3	diagonals	figure	3/3	CONSORT patient enrollment flow diagram
+f234	pmc	main.PMC7501458.pdf	5	stroke_grid	table	3/3	Multivariate analysis table with body text
+f235	tds	4n25_vishay.pdf	2	curves	table	3/3	Absolute maximum and electrical characteristics tables
+f236	tds	74hc595_nexperia.pdf	17	curves	figure	3/3	DHVQFN16 package outline drawing with dimension table
+f237	tds	nexperia_74LVC1G14.pdf	14	curves	figure	3/3	XSON6 package outline drawing with dimension table
+f238	tds	ti_ina226.pdf	16	curves	table	3/3	Register configuration table with equations
+f239	tds	ti_lmv321.pdf	25	curves	table	3/3	Package option addendum ordering table
+f240	tds	ti_tca9548a.pdf	4	curves	table	3/3	Absolute maximum, ESD and operating condition tables
+f241	tds	ti_tca9548a.pdf	37	curves	figure	3/3	TSSOP land pattern and solder mask drawings
+f242	tds	ti_tlv9061.pdf	66	curves	figure	3/3	SOT-23 land pattern and solder mask drawings
+f243	tds	ti_tlv9061.pdf	97	curves	figure	3/3	X2QFN land pattern and solder mask drawings
+f244	tds	ti_tps54331.pdf	16	curves	branding	2/3	Equations and text with vendor logo only
+f245	tds	ti_ucc27517.pdf	16	curves	figure	3/3	Gate driver output structure schematic plus logic table
+f246	tds	ti_ucc27517.pdf	25	curves	branding	2/3	Power dissipation equations with vendor logo only
+f247	tds	ti_ucc27517.pdf	27	curves	table	3/3	Packaging information table with footnotes
+f248	tds	ti_sn74lvc1g08.pdf	6	dense_grid	table	3/3	Electrical and switching characteristics tables
+f249	tds	nexperia_PBSS4350X.pdf	9	diagonals	figure	3/3	Wave soldering footprint drawing for SOT89
+f250	tds	nexperia_BC817_SER.pdf	5	stroke_grid	table	3/3	Transistor characteristics table

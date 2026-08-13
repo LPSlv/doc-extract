@@ -1,0 +1,251 @@
+tag	label	note
+f001	figure	scatter plot of extinction rate versus growth rate
+f002	figure	commutative diagram of flow maps and measures
+f003	figure	two abundance pattern plots with residual panels
+f004	figure	block diagram of task-oriented deep JSCC system
+f005	figure	accuracy versus CSNR line plot plus tables
+f006	figure	three-column pipeline flowchart and corpus table
+f007	figure	arc diagrams of Fourier variable half-circles
+f008	figure	two panel plots of eigenvalues and occupation
+f009	figure	grid of reinforcement learning curves, plus table
+f010	figure	shaded diagram of domain interface and thin fracture
+f011	figure	four stacked temperature-velocity diagrams with tracks
+f012	figure	three optimizer trajectory plots over iterations
+f013	figure	bar charts for MetaWorld and CALVIN, plus table
+f014	figure	signal-to-noise panels and UV luminosity function grid
+f015	figure	three test accuracy curve panels, plus two tables
+f016	table	ruled table of fitted equations by noise level
+f017	none	proofs, inequalities and display equations only
+f018	table	two benchmark result tables and equations
+f019	none	algorithm pseudocode listing and proof text
+f020	figure	logic symbols and package pinning drawings
+f021	figure	logic symbols, pinning drawings and pin table
+f022	figure	SO16 package outline drawing with dimensions
+f023	figure	propagation delay waveforms and test circuit
+f024	figure	SO14 package outline drawing with dimensions
+f025	figure	DHVQFN20 package outline drawing with dimensions
+f026	figure	DHXQFN14 package outline drawing with dimensions
+f027	figure	SO14 package outline drawing with dimensions
+f028	figure	eight package pinning drawings and pin table
+f029	figure	XSON5 package outline drawing with dimensions
+f030	figure	SOT753 package outline drawing with dimensions
+f031	table	datasheet cover, quick reference table, vendor logos
+f032	table	full-scale range table and text
+f033	table	full-scale range table and text
+f034	table	threshold register bit-field tables
+f035	table	parameter table with equations
+f036	figure	schematic of input multiplexer with ESD diodes
+f037	figure	I2C read sequence bit-field timing diagram
+f038	figure	tape and reel drawings with dimension table
+f039	table	absolute maximum and operating condition tables
+f040	table	electrical characteristics table
+f041	table	electrical characteristics table continued
+f042	table	charging parameter and current setting tables
+f043	figure	thermistor network schematic and threshold diagram
+f044	table	register bit map and field description tables
+f045	table	register bit map and field description tables
+f046	figure	six output current and transfer characteristic plots
+f047	figure	tape and reel drawings with dimension table
+f048	table	truth table for analog multiplexers
+f049	figure	land pattern and solder mask drawings
+f050	figure	six supply current plots and histograms
+f051	figure	Solder paste stencil drawing with stencil opening table
+f052	figure	HSOP pin configuration drawing plus pin function tables
+f053	figure	Tape and reel box isometric drawing plus table
+f054	table	Absolute maximum, ESD and thermal spec tables
+f055	figure	Land pattern and solder mask detail drawings
+f056	figure	Five typical characteristic curve plots
+f057	table	Register set summary table
+f058	figure	Typical CAN bus node block diagram
+f059	figure	SOIC solder paste stencil drawings
+f060	figure	TO-CAN transistor package outline drawing
+f061	figure	Reel and tape dimension diagrams plus table
+f062	table	Tape and reel dimension table only
+f063	table	Packaging information addendum table
+f064	table	Absolute maximum and operating condition tables
+f065	table	Electrical and switching characteristics tables
+f066	table	Electrical characteristics comparison table
+f067	figure	Two LM317 regulator application schematics
+f068	figure	Charger and adjustable regulator circuit schematics
+f069	table	Electrical characteristics table for op amps
+f070	figure	TO-252 solder paste stencil drawing
+f071	figure	Reel and tape dimension diagrams plus table
+f072	figure	TO-92 land pattern example drawings
+f073	table	Packaging information addendum table
+f074	table	Packaging information addendum table
+f075	table	Packaging table with footnote text
+f076	figure	SOIC land pattern and solder mask drawings
+f077	table	Packaging table with footnote text
+f078	table	Packaging table with footnote text
+f079	figure	SOT land pattern and solder mask drawings
+f080	figure	Six typical performance characteristic plots
+f081	none	Body text with display equations only
+f082	figure	Six typical characteristic curve plots
+f083	figure	SOT solder paste stencil drawing
+f084	figure	TSSOP land pattern and solder mask drawings
+f085	figure	VSSOP solder paste stencil drawing
+f086	figure	Tape and reel box drawing plus table
+f087	table	Text with device functional mode comparison table
+f088	table	Maximum ratings and operating condition tables
+f089	table	Tape and reel dimension table only
+f090	figure	Functional block diagram plus driver function table
+f091	figure	Cover page with simplified schematic diagram
+f092	figure	TSSOP solder paste stencil drawing
+f093	figure	QFN device pinout diagram
+f094	figure	Cover page with simplified op amp schematic
+f095	figure	Astable circuit schematic and waveform traces
+f096	figure	Timing waveforms and pulse-width modulation circuit
+f097	figure	Duty cycle plot and modulation circuit schematic
+f098	figure	Six distortion plots with inset schematics
+f099	figure	SOIC and QFN pinout drawings plus table
+f100	figure	SOIC land pattern and solder mask drawings
+f101	figure	six offset voltage distribution histograms and curves
+f102	figure	six plots: settling, short-circuit current, crosstalk
+f103	figure	op amp schematics and settling response plot
+f104	figure	amplifier schematic and board layout drawing
+f105	figure	solder paste stencil dimensional drawing
+f106	figure	schematic of quad op amp driving ADC
+f107	figure	offset voltage plot and input protection schematic
+f108	figure	two active filter circuit schematics
+f109	figure	package outline dimensional drawings
+f110	figure	two pullup resistance application curves
+f111	figure	land pattern and solder mask drawings
+f112	figure	land pattern and solder mask drawings
+f113	figure	two output switch voltage swing curves
+f114	figure	block diagram and output signal waveforms
+f115	table	text, equations and one ruled table
+f116	figure	datasheet front page with equivalent schematic diagram
+f117	figure	test circuit schematic, waveforms and table
+f118	figure	three package pin-out drawings
+f119	figure	reel and tape dimension drawings with table
+f120	figure	package outline drawing with detail views
+f121	figure	four typical characteristic curves and small table
+f122	figure	solder paste stencil dimensional drawing
+f123	figure	solder paste stencil dimensional drawing
+f124	figure	solder paste stencil dimensional drawing
+f125	figure	clamping diode structure diagram and function table
+f126	figure	land pattern and solder mask drawings
+f127	figure	solder paste stencil dimensional drawing
+f128	table	thermal and electrical characteristics tables only
+f129	figure	reel and tape dimension drawings with table
+f130	figure	land pattern and solder mask drawings
+f131	figure	logic diagram of 4-bit synchronous counter
+f132	branding	text disclaimer with only vendor logo
+f133	figure	reel and tape dimension drawings with table
+f134	figure	solder paste stencil dimensional drawing
+f135	figure	reel and tape dimension drawings with table
+f136	figure	land pattern and solder mask drawings
+f137	figure	land pattern and solder mask drawings
+f138	table	ratings, operating conditions and thermal tables
+f139	figure	shipping tube dimension drawing with table
+f140	table	switching characteristics tables only
+f141	table	package option table with footnotes
+f142	figure	land pattern and solder mask drawings
+f143	figure	tape and reel box drawing with table
+f144	table	ratings, operating conditions and thermal tables
+f145	table	package option addendum table
+f146	figure	shipping tube dimension drawing with table
+f147	table	switching and operating characteristics tables
+f148	table	electrical and timing characteristics tables
+f149	table	thermal and electrical characteristics tables
+f150	figure	solder paste stencil dimensional drawing
+f151	table	Switching characteristics tables only
+f152	table	Packaging information table
+f153	table	Packaging information table
+f154	table	Packaging information table
+f155	figure	Logic block diagram plus function table
+f156	figure	Tape and reel box drawing with dimensions table
+f157	table	Package option addendum table and notes
+f158	figure	X2SON land pattern board layout drawing
+f159	figure	SOT land pattern and solder mask details
+f160	figure	SOT solder paste stencil drawing
+f161	figure	X2SON land pattern and solder mask details
+f162	table	Absolute maximum and ESD ratings tables
+f163	figure	SOT land pattern and solder mask details
+f164	figure	Op amp board layout and schematic
+f165	table	Package option addendum table
+f166	table	Package materials dimensions table
+f167	figure	Reel and tape dimension drawings plus table
+f168	figure	SOT solder paste stencil drawing
+f169	figure	SOIC land pattern and solder mask details
+f170	figure	CFP package pinout drawing plus pin table
+f171	table	Electrical characteristics table
+f172	figure	Reel and tape dimension drawings plus table
+f173	table	Package materials dimensions table
+f174	figure	LCCC package pinout drawing plus pin table
+f175	figure	CDIP land pattern with detail views
+f176	table	AC electrical characteristics table
+f177	figure	SOT land pattern and solder mask details
+f178	figure	Plotted curves and test circuit schematics
+f179	figure	Tape and reel box drawing with dimensions table
+f180	figure	Tube dimension drawing plus dimensions table
+f181	table	Thermal information table
+f182	figure	Duty cycle plot and timer circuit diagram
+f183	figure	Grayscale data packet format bit diagram
+f184	figure	SOT land pattern and solder mask details
+f185	figure	TSSOP solder paste stencil drawing
+f186	figure	Shutdown waveform plots versus time
+f187	table	Package option addendum table
+f188	figure	Tube dimension drawing plus dimensions table
+f189	figure	TSSOP solder paste stencil drawing
+f190	figure	Op amp functional block diagram
+f191	table	Packaging information table
+f192	table	Packaging table with footnotes and disclaimer
+f193	figure	Photodiode amplifier circuit schematic
+f194	figure	TSSOP land pattern and solder mask details
+f195	figure	SOT solder paste stencil drawing
+f196	figure	SOIC land pattern and solder mask details
+f197	figure	Three package pinout drawings plus pin table
+f198	figure	SOT-23 land pattern and solder mask details
+f199	figure	X2QFN land pattern and solder mask details
+f200	figure	Simplified schematic and block diagram on cover
+f201	figure	Two temperature accuracy plots on datasheet cover page
+f202	figure	Tape and reel box dimension drawing with table
+f203	figure	Two 8-pin package pinout drawings plus pin table
+f204	table	Two ruled parameter tables, no graphic
+f205	figure	Frequency compensation schematic with op-amp and RC networks
+f206	figure	Six efficiency, loop response and regulation curves
+f207	figure	Solder stencil design drawing with dimensions
+f208	figure	SOT563 6-pin package top view drawing
+f209	figure	Five typical characteristic curves versus temperature
+f210	figure	Five threshold and discharge current curves
+f211	figure	Six switching frequency and load current curves
+f212	table	Absolute maximum, ESD and operating condition tables
+f213	figure	Reel, tape and quadrant orientation drawings
+f214	table	Shaded electrical characteristics tables for accelerometer
+f215	table	Register bit definition tables for FIFO_CONFIG
+f216	table	SPI timing specification table
+f217	figure	Four transistor characteristic curve plots
+f218	figure	Four rectifier power and current derating plots
+f219	table	Register bit assignment tables for calibration bytes
+f220	table	Static characteristics table for logic transceiver
+f221	table	Recommended operating conditions and static characteristics tables
+f222	table	Revision history table
+f223	table	Ordering, marking and limiting values tables
+f224	figure	Runtime and memory usage line plots plus tables
+f225	table	Two heat-shaded benchmark result tables
+f226	figure	Bar chart of success rates beside results table
+f227	table	Dataset statistics table with body text
+f228	table	Relative risk results table with article text
+f229	table	Robustness evaluation table with conclusion text
+f230	table	Baseline characteristics table with body text
+f231	table	Correlation table with journal body text
+f232	table	Mean A1C results table with article text
+f233	figure	CONSORT patient enrollment flow diagram
+f234	table	Multivariate analysis table with body text
+f235	table	Absolute maximum and electrical characteristics tables
+f236	figure	DHVQFN16 package outline drawing with dimension table
+f237	figure	XSON6 package outline drawing with dimension table
+f238	table	Register configuration table with equations
+f239	table	Package option addendum ordering table
+f240	table	Absolute maximum, ESD and operating condition tables
+f241	figure	TSSOP land pattern and solder mask drawings
+f242	figure	SOT-23 land pattern and solder mask drawings
+f243	figure	X2QFN land pattern and solder mask drawings
+f244	branding	Equations and text with vendor logo only
+f245	figure	Gate driver output structure schematic plus logic table
+f246	branding	Power dissipation equations with vendor logo only
+f247	table	Packaging information table with footnotes
+f248	table	Electrical and switching characteristics tables
+f249	figure	Wave soldering footprint drawing for SOT89
+f250	table	Transistor characteristics table

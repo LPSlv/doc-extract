@@ -1,0 +1,72 @@
+tag	label	note
+v001	figure	DnCNN network block diagram with layer boxes
+v002	figure	Persistence diagram and transformed scatter plots
+v003	figure	Two accuracy-vs-oversampling line plots with confidence bands
+v004	figure	Forest plot of odds ratios and stacked bar charts
+v005	figure	Bar chart of AUPRC with error bars
+v006	figure	Histogram of relative amplitude error with median lines
+v007	table	Ruled multi-column comparison panels of code and text
+v008	figure	Grid of state-estimate time series and RMSE bars
+v009	figure	Horizontal bar chart of hypervolume and Shapley values
+v010	none	Text, equations and boxed algorithm pseudocode
+v011	figure	Log-log runtime scaling plot for path graphs
+v012	table	Ruled saddle-data table with display equations
+v013	branding	PNAS journal banner, logos, ORCID and update badges
+v014	figure	Panels of concentration-profile curves with error bars
+v015	figure	Demographic table plus violin plots by cohort
+v016	table	Large rotated baseline-characteristics table
+v017	figure	Kernel approximation error log-log line plot
+v018	figure	Two flowchart-style RL architecture diagrams
+v019	figure	Log-log runtime scaling plot for tree graphs
+v020	figure	Spearman correlation bar chart and language data bars
+v021	figure	NMSE bar charts and CDF curves for channel estimation
+v022	figure	Bit-error-rate and probability curves for modulation schemes
+v023	table	Ruled query-complexity table with highlighted cells
+v024	figure	Loss histogram and ASR ablation line plot
+v025	figure	Mapping diagram of framework boxes with arrows
+v026	figure	Results table plus grid of reward-vs-policy-size plots
+v027	branding	BMJ Open journal banner, logos and boxed abstract
+v028	figure	Radar charts and accuracy bar charts across datasets
+v029	figure	Scatter plot of predicted versus true energy ratio
+v030	figure	Pipeline flow diagram of coloured boxes and arrows
+v031	figure	Clinical management flowchart with decision diamonds
+v032	figure	Shaded heatmap grids of simulated investor design
+v033	none	Dense display equations and boxed formulas only
+v034	branding	ESC journal logo, banner and boxed abstract panels
+v035	figure	Panels of solute mass decay curves with error bars
+v036	figure	Dispersion coefficient curves with error bars
+v037	figure	Two ring diagrams of nodes joined by arrows
+v038	figure	Bit-error-rate curve plot beside equations
+v039	figure	Two multi-panel concentration comparison plot groups
+v040	figure	Three-panel power curve plot with confidence intervals
+v041	none	Prompt listings and code blocks with text
+v042	table	Simulation scenario table with equations
+v043	figure	Three sum-rate line plots with references
+v044	table	Ruled availability table with in-cell percentage bars
+v045	branding	BMJ Quality and Safety banner, logos, boxed abstract
+v046	figure	Four panels: bar chart, curves, violin and scatter
+v047	figure	Box-and-strip plot of wall-clock time per dataset
+v048	figure	Duffing oscillator waveform panels and RMSE plots
+v049	figure	Grouped bar chart of preference ordering with error bars
+v050	none	Python code listings only
+v051	figure	Pulse waveform fits, residuals and error histogram
+v052	figure	Embedding scatter plots, landscape and silhouette curves
+v053	figure	Bar charts and scatter plots of AI interaction fractions
+v054	branding	ESC journal logo, banner and boxed abstract panels
+v055	figure	Free energy flow diagram of coloured boxes and arrows
+v056	none	Proofs, lemmas and display equations only
+v057	figure	Convergence, energy efficiency and computational cost plots
+v058	figure	Point cloud plus persistence diagram and landscape grid
+v059	figure	Normalized capacity versus Wasserstein distance line plot
+v060	figure	Two multi-panel concentration comparison plot groups
+v061	table	Small ruled asymptotic-rate table with equations
+v062	figure	NMSE curves with insets and grouped RMSE bar charts
+v063	figure	Sum-rate versus inference time ratio line plot
+v064	figure	Proof dependency diagram of boxes and arrows
+v065	figure	Stacked bar chart, heatmap and wall-dominance curves
+v066	figure	Two forest plots of variable importance estimates
+v067	branding	PNAS journal banner, logos, ORCID and update badges
+v068	none	Proofs, theorems and display equations only
+v069	figure	Training pipeline diagram with icons and coloured boxes
+v070	figure	Optimization trajectory plot over contour ellipses
+v071	figure	Panels of solute mass decay curves with error bars

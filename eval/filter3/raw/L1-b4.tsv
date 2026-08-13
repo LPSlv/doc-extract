@@ -1,0 +1,51 @@
+tag	label	note
+f151	table	Switching characteristics tables only
+f152	table	Packaging information table
+f153	table	Packaging information table
+f154	table	Packaging information table
+f155	figure	Logic block diagram plus function table
+f156	figure	Tape and reel box drawing with dimensions table
+f157	table	Package option addendum table and notes
+f158	figure	X2SON land pattern board layout drawing
+f159	figure	SOT land pattern and solder mask details
+f160	figure	SOT solder paste stencil drawing
+f161	figure	X2SON land pattern and solder mask details
+f162	table	Absolute maximum and ESD ratings tables
+f163	figure	SOT land pattern and solder mask details
+f164	figure	Op amp board layout and schematic
+f165	table	Package option addendum table
+f166	table	Package materials dimensions table
+f167	figure	Reel and tape dimension drawings plus table
+f168	figure	SOT solder paste stencil drawing
+f169	figure	SOIC land pattern and solder mask details
+f170	figure	CFP package pinout drawing plus pin table
+f171	table	Electrical characteristics table
+f172	figure	Reel and tape dimension drawings plus table
+f173	table	Package materials dimensions table
+f174	figure	LCCC package pinout drawing plus pin table
+f175	figure	CDIP land pattern with detail views
+f176	table	AC electrical characteristics table
+f177	figure	SOT land pattern and solder mask details
+f178	figure	Plotted curves and test circuit schematics
+f179	figure	Tape and reel box drawing with dimensions table
+f180	figure	Tube dimension drawing plus dimensions table
+f181	table	Thermal information table
+f182	figure	Duty cycle plot and timer circuit diagram
+f183	figure	Grayscale data packet format bit diagram
+f184	figure	SOT land pattern and solder mask details
+f185	figure	TSSOP solder paste stencil drawing
+f186	figure	Shutdown waveform plots versus time
+f187	table	Package option addendum table
+f188	figure	Tube dimension drawing plus dimensions table
+f189	figure	TSSOP solder paste stencil drawing
+f190	figure	Op amp functional block diagram
+f191	table	Packaging information table
+f192	table	Packaging table with footnotes and disclaimer
+f193	figure	Photodiode amplifier circuit schematic
+f194	figure	TSSOP land pattern and solder mask details
+f195	figure	SOT solder paste stencil drawing
+f196	figure	SOIC land pattern and solder mask details
+f197	figure	Three package pinout drawings plus pin table
+f198	figure	SOT-23 land pattern and solder mask details
+f199	figure	X2QFN land pattern and solder mask details
+f200	figure	Simplified schematic and block diagram on cover

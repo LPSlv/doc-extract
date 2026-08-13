@@ -1,0 +1,72 @@
+tag	corpus	file	page	branch	pipe_rows	label	agree	note
+v001	arxiv_holdout	2608.04864v1.pdf	3	curves	3	figure	3/3	DnCNN network block diagram with layer boxes
+v002	arxiv_holdout	2607.29008v1.pdf	7	curves	3	figure	3/3	Persistence diagram and transformed scatter plots
+v003	arxiv_holdout	2608.04227v1.pdf	21	curves	3	figure	3/3	Two accuracy-vs-oversampling line plots with confidence bands
+v004	arxiv_holdout	2608.01017v1.pdf	20	curves	3	figure	3/3	Forest plot of odds ratios and stacked bar charts
+v005	arxiv_holdout	2608.00632v1.pdf	18	stroke_grid	3	figure	3/3	Bar chart of AUPRC with error bars
+v006	arxiv_holdout	2608.04863v2.pdf	34	curves	3	figure	3/3	Histogram of relative amplitude error with median lines
+v007	arxiv_holdout	2608.07169v1.pdf	16	stroke_grid	3	table	3/3	Ruled multi-column comparison panels of code and text
+v008	arxiv_holdout	2608.04201v1.pdf	29	curves	3	figure	3/3	Grid of state-estimate time series and RMSE bars
+v009	arxiv_holdout	2608.07180v1.pdf	10	stroke_grid	3	figure	3/3	Horizontal bar chart of hypervolume and Shapley values
+v010	arxiv_holdout	2608.01976v1.pdf	13	stroke_grid	3	none	3/3	Text, equations and boxed algorithm pseudocode
+v011	arxiv_holdout	2608.01385v1.pdf	26	curves	3	figure	3/3	Log-log runtime scaling plot for path graphs
+v012	arxiv_holdout	2607.29554v1.pdf	34	stroke_grid	3	table	3/3	Ruled saddle-data table with display equations
+v013	pmc_holdout	pnas.202202992.PMC9618145.pdf	1	curves	3	branding	3/3	PNAS journal banner, logos, ORCID and update badges
+v014	arxiv_holdout	2608.00856v1.pdf	19	curves	3	figure	3/3	Panels of concentration-profile curves with error bars
+v015	arxiv_holdout	2608.07287v1.pdf	8	curves	3	figure	3/3	Demographic table plus violin plots by cohort
+v016	pmc_holdout	JAH3-9-e017024.PMC7763767.pdf	5	dense_grid	3	table	3/3	Large rotated baseline-characteristics table
+v017	arxiv_holdout	2608.04227v1.pdf	18	curves	3	figure	3/3	Kernel approximation error log-log line plot
+v018	arxiv_holdout	2608.07335v1.pdf	11	curves	3	figure	3/3	Two flowchart-style RL architecture diagrams
+v019	arxiv_holdout	2608.01385v1.pdf	27	curves	3	figure	3/3	Log-log runtime scaling plot for tree graphs
+v020	arxiv_holdout	2608.01395v1.pdf	16	dense_grid	3	figure	3/3	Spearman correlation bar chart and language data bars
+v021	arxiv_holdout	2608.05520v1.pdf	12	curves	3	figure	3/3	NMSE bar charts and CDF curves for channel estimation
+v022	arxiv_holdout	2608.04178v1.pdf	12	curves	3	figure	3/3	Bit-error-rate and probability curves for modulation schemes
+v023	arxiv_holdout	2608.02826v1.pdf	5	stroke_grid	3	table	3/3	Ruled query-complexity table with highlighted cells
+v024	arxiv_holdout	2608.07430v1.pdf	33	curves	3	figure	3/3	Loss histogram and ASR ablation line plot
+v025	arxiv_holdout	2608.00503v1.pdf	14	curves	3	figure	3/3	Mapping diagram of framework boxes with arrows
+v026	arxiv_holdout	2608.07151v1.pdf	5	diagonals	3	figure	2/3	Results table plus grid of reward-vs-policy-size plots
+v027	pmc_holdout	bmjopen-15-10.PMC12548626.pdf	1	curves	3	branding	3/3	BMJ Open journal banner, logos and boxed abstract
+v028	arxiv_holdout	2608.07274v1.pdf	7	curves	3	figure	3/3	Radar charts and accuracy bar charts across datasets
+v029	arxiv_holdout	2608.07285v1.pdf	6	curves	3	figure	3/3	Scatter plot of predicted versus true energy ratio
+v030	arxiv_holdout	2608.02769v1.pdf	9	curves	3	figure	3/3	Pipeline flow diagram of coloured boxes and arrows
+v031	pmc_holdout	oarrr-8-023.PMC5098768.pdf	5	curves	3	figure	3/3	Clinical management flowchart with decision diamonds
+v032	arxiv_holdout	2608.01204v1.pdf	20	stroke_grid	3	figure	3/3	Shaded heatmap grids of simulated investor design
+v033	arxiv_holdout	2608.04863v2.pdf	20	stroke_grid	3	none	3/3	Dense display equations and boxed formulas only
+v034	pmc_holdout	ytaa139.PMC7501943.pdf	1	curves	3	branding	3/3	ESC journal logo, banner and boxed abstract panels
+v035	arxiv_holdout	2608.00856v1.pdf	28	curves	3	figure	3/3	Panels of solute mass decay curves with error bars
+v036	arxiv_holdout	2608.00856v1.pdf	24	curves	3	figure	3/3	Dispersion coefficient curves with error bars
+v037	arxiv_holdout	2608.07042v1.pdf	19	curves	3	figure	3/3	Two ring diagrams of nodes joined by arrows
+v038	arxiv_holdout	2608.04178v1.pdf	11	curves	3	figure	3/3	Bit-error-rate curve plot beside equations
+v039	arxiv_holdout	2608.00856v1.pdf	49	curves	3	figure	3/3	Two multi-panel concentration comparison plot groups
+v040	arxiv_holdout	2607.28861v1.pdf	21	curves	3	figure	3/3	Three-panel power curve plot with confidence intervals
+v041	arxiv_holdout	2608.01017v1.pdf	16	curves	3	none	3/3	Prompt listings and code blocks with text
+v042	arxiv_holdout	2607.29456v1.pdf	8	dense_grid	3	table	3/3	Simulation scenario table with equations
+v043	arxiv_holdout	2608.06251v1.pdf	6	curves	3	figure	3/3	Three sum-rate line plots with references
+v044	pmc_holdout	bmjopen-2023-072511.PMC10773330.pdf	7	curves	3	table	3/3	Ruled availability table with in-cell percentage bars
+v045	pmc_holdout	bmjqs-34-2.PMC11874309.pdf	1	curves	3	branding	3/3	BMJ Quality and Safety banner, logos, boxed abstract
+v046	arxiv_holdout	2607.29554v1.pdf	16	curves	3	figure	3/3	Four panels: bar chart, curves, violin and scatter
+v047	arxiv_holdout	2608.07303v1.pdf	13	curves	3	figure	3/3	Box-and-strip plot of wall-clock time per dataset
+v048	arxiv_holdout	2608.04201v1.pdf	27	curves	3	figure	3/3	Duffing oscillator waveform panels and RMSE plots
+v049	arxiv_holdout	2608.07622v1.pdf	9	curves	3	figure	3/3	Grouped bar chart of preference ordering with error bars
+v050	arxiv_holdout	2608.07395v1.pdf	20	dense_grid	3	none	3/3	Python code listings only
+v051	arxiv_holdout	2608.04863v2.pdf	42	curves	3	figure	3/3	Pulse waveform fits, residuals and error histogram
+v052	arxiv_holdout	2607.29008v1.pdf	22	curves	3	figure	3/3	Embedding scatter plots, landscape and silhouette curves
+v053	arxiv_holdout	2608.07457v1.pdf	3	curves	3	figure	3/3	Bar charts and scatter plots of AI interaction fractions
+v054	pmc_holdout	ytaa090.PMC7319824.pdf	1	curves	3	branding	3/3	ESC journal logo, banner and boxed abstract panels
+v055	arxiv_holdout	2608.00503v1.pdf	25	curves	3	figure	3/3	Free energy flow diagram of coloured boxes and arrows
+v056	arxiv_holdout	2608.07139v1.pdf	18	stroke_grid	3	none	3/3	Proofs, lemmas and display equations only
+v057	arxiv_holdout	2608.03237v1.pdf	5	curves	3	figure	3/3	Convergence, energy efficiency and computational cost plots
+v058	arxiv_holdout	2607.29008v1.pdf	10	curves	3	figure	3/3	Point cloud plus persistence diagram and landscape grid
+v059	arxiv_holdout	2608.01434v1.pdf	12	diagonals	3	figure	3/3	Normalized capacity versus Wasserstein distance line plot
+v060	arxiv_holdout	2608.00856v1.pdf	50	curves	3	figure	3/3	Two multi-panel concentration comparison plot groups
+v061	arxiv_holdout	2608.02668v1.pdf	20	stroke_grid	3	table	3/3	Small ruled asymptotic-rate table with equations
+v062	arxiv_holdout	2608.05520v1.pdf	11	curves	3	figure	3/3	NMSE curves with insets and grouped RMSE bar charts
+v063	arxiv_holdout	2608.03614v1.pdf	23	curves	3	figure	3/3	Sum-rate versus inference time ratio line plot
+v064	arxiv_holdout	2607.29375v1.pdf	14	curves	3	figure	3/3	Proof dependency diagram of boxes and arrows
+v065	arxiv_holdout	2608.00856v1.pdf	34	curves	3	figure	3/3	Stacked bar chart, heatmap and wall-dominance curves
+v066	arxiv_holdout	2608.00247v1.pdf	27	curves	3	figure	3/3	Two forest plots of variable importance estimates
+v067	pmc_holdout	pnas.202303642.PMC11287164.pdf	1	curves	3	branding	3/3	PNAS journal banner, logos, ORCID and update badges
+v068	arxiv_holdout	2608.07139v1.pdf	21	stroke_grid	3	none	3/3	Proofs, theorems and display equations only
+v069	arxiv_holdout	2608.07437v1.pdf	7	curves	3	figure	3/3	Training pipeline diagram with icons and coloured boxes
+v070	arxiv_holdout	2608.01434v1.pdf	14	curves	3	figure	3/3	Optimization trajectory plot over contour ellipses
+v071	arxiv_holdout	2608.00856v1.pdf	27	curves	3	figure	3/3	Panels of solute mass decay curves with error bars

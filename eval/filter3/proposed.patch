@@ -1,0 +1,63 @@
+--- skills/doc-extract/harvest.py	2026-08-13 14:10:28.975057590 +0300
++++ skills/doc-extract/harvest.py	2026-08-13 15:08:22.913497521 +0300
+@@ -30,6 +30,8 @@
+ VSTROKE_MIN   = 3.0    # pt; shorter than this is a tick or a glyph, not an edge
+ BOX_REPEATS   = 3      # occurrences of a 2-edge signature that make it a template
+ TEXTONLY_PATHS = 2     # drawing paths a page may have and still carry no picture
++FILTER3_ROWS  = 4      # pipe rows a parsed table needs before it speaks for
++                       # a page that carries no raster; see filter 3
+ 
+ 
+ def _cluster(vals, tol=EDGE_TOL):
+@@ -539,6 +541,9 @@
+                 if npages > 2 and n / npages > UBIQUITY}
+ 
+     boxes = box_templates(geoms)
++    # Every page carrying a raster at all, before filters 1 and 2 have their
++    # say. Read by filter 3 below and by drop_textonly after the collapse.
++    raster_pages = {p for e in seen.values() for p in e["pages"]}
+ 
+     renders, edges, page_sigs = {}, {}, {}
+     for i, pg in enumerate(doc):
+@@ -550,8 +555,22 @@
+                 edges[i] = render_edge(pg)
+             continue
+         pm = page_mds[i] if i < len(page_mds) else ""
+-        if pm.count("\n|") >= 3:
+-            continue                              # filter 3: extractor won
++        # -- filter 3: the extractor won -- but only over what it can see, and
++        # a table with a header, a rule and ONE data row counts three pipe
++        # lines. Where the page also carries a raster, that raster is routed
++        # by another path and the page is not lost; rendering it instead is
++        # the swap eval/multifigure.md priced and rejected, because a page
++        # render caps the raster at its placement (median 0.27x linear
++        # resolution). Where the page carries NO raster, this skip is the
++        # whole decision and nothing else on the page is ever looked at.
++        # Measured over 711 documents: 4,065 such pages are discarded, and of
++        # 250 sampled and labelled blind by three labellers, 66% carry a real
++        # figure -- the same rate at which the `curves` pages the router DOES
++        # route carry one. Requiring two data rows takes the 400 pages whose
++        # "table" is a single row: 87% carry a figure in-sample, 73% (95% CI
++        # 62-82) on 71 blind labels across two holdouts. eval/filter3.md.
++        if pm.count("\n|") >= (3 if i in raster_pages else FILTER3_ROWS):
++            continue
+         g = geoms[i]
+         # ...but only when the page carries nothing else. A shaded table has
+         # filled rects and no strokes at all, so it matches the empty-stroke
+@@ -593,11 +612,11 @@
+     items, guard = cost_guard(items, doc, edges)
+     if guard:
+         dropped.append(guard)
+-        # Only ever after the collapse: before it, `seen` covers images the
+-        # furniture filter is about to drop, and a page that looks bare here
+-        # may still be carrying a raster the routed set would have emitted.
+-        img_pages = {p for e in seen.values() for p in e["pages"]}
+-        items, gone = drop_textonly(items, geoms, img_pages, ocr_pages)
++        # Only ever after the collapse: before it, a page that looks bare
++        # here may still be carrying a raster the routed set would have
++        # emitted, and `raster_pages` deliberately counts images the furniture
++        # filter is about to drop.
++        items, gone = drop_textonly(items, geoms, raster_pages, ocr_pages)
+         dropped += gone
+     doc.close()
+ 

@@ -1,0 +1,51 @@
+tag	label	note
+f001	figure	Pareto-front scatter plot plus parameter table
+f002	figure	Commutative diagram of maps between measures
+f003	figure	Two elemental abundance plots with residual panels
+f004	figure	Block diagram of task-oriented deep JSCC system
+f005	figure	Accuracy-versus-CSNR line plot and result tables
+f006	figure	Pipeline flow diagram plus corpus statistics table
+f007	figure	Arc diagrams of Fourier variable domains
+f008	figure	Two plots: eigenvalue curves and occupation probability
+f009	figure	Grid of learning curves plus results table
+f010	figure	Illustration of domain interface and thin fracture
+f011	figure	Four-panel temperature-velocity diagrams with tracks
+f012	figure	Three optimizer divergence trajectory plots
+f013	figure	Large results table plus two bar charts
+f014	figure	Multi-panel signal-to-noise and luminosity function plots
+f015	figure	Three test-accuracy curve panels plus two tables
+f016	table	Boxed table of fitted equations by noise level
+f017	none	Proof text with display equations only
+f018	table	Two benchmark result tables plus prose
+f019	none	Algorithm pseudocode block with lemma and proof
+f020	figure	Logic symbols, logic diagram, package pinout drawings
+f021	figure	Logic symbols, package pinouts, pin description table
+f022	figure	SO16 package outline mechanical drawing with dimensions
+f023	figure	Propagation delay waveforms and switching test circuit
+f024	figure	SO14 package outline mechanical drawing with dimensions
+f025	figure	DHVQFN20 package outline drawing with dimension table
+f026	figure	DHXQFN14 package outline drawing with dimension table
+f027	figure	SO14 package outline mechanical drawing with dimensions
+f028	figure	Eight package pinout drawings plus pin description table
+f029	figure	XSON5 package outline drawing with dimension table
+f030	figure	SOT753 package outline drawing with dimension table
+f031	table	Quick reference table; cover package image and logo
+f032	table	Full-scale range and LSB size table
+f033	table	Full-scale range and LSB size table
+f034	table	Register bit-field and field description tables
+f035	table	Equations and circuit parameter value table
+f036	figure	Schematic of ADC input multiplexer with ESD diodes
+f037	figure	I2C read sequence bus timing diagram
+f038	figure	Tape and reel drawings plus dimension table
+f039	table	Absolute maximum, ESD and operating condition tables
+f040	table	Electrical characteristics specification table
+f041	table	Electrical characteristics specification table
+f042	table	Charging parameter and charging current tables
+f043	figure	TS resistor network schematic and threshold diagram
+f044	table	Register bit map and field description tables
+f045	table	Register bit map and field description tables
+f046	figure	Six output current and transfer characteristic curves
+f047	figure	Tape and reel drawings plus dimension table
+f048	table	Truth table of input states and channels
+f049	figure	Land pattern and solder mask board layout drawing
+f050	figure	Six supply-current curves and histogram plots

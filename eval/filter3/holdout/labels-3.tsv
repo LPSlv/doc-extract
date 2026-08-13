@@ -1,0 +1,72 @@
+tag	label	note
+v001	figure	DnCNN architecture block diagram
+v002	figure	persistence and transformed diagram scatter plots
+v003	figure	accuracy versus oversampling line plots
+v004	figure	odds-ratio forest plot and stacked bar charts
+v005	figure	AUPRC bar chart with error bars
+v006	figure	histogram of relative amplitude error
+v007	table	ruled comparison panels of prose and code
+v008	figure	state estimate curves and RMSE bar chart
+v009	figure	hypervolume interval plot and Shapley bars
+v010	none	algorithm pseudocode block and prose
+v011	figure	log-log solution time plot
+v012	table	ruled saddle-data table with equations
+v013	branding	PNAS masthead logo and update icon
+v014	figure	concentration profile panel plots
+v015	figure	violin plots plus demographics table
+v016	table	rotated baseline characteristics table
+v017	figure	approximation error log-log plot
+v018	figure	two RL architecture block diagrams
+v019	figure	log-log solution time plot
+v020	figure	correlation bar chart and word-count bars
+v021	figure	NMSE bar charts and CDF curves
+v022	figure	bit-error-rate curves and probability plot
+v023	table	ruled query complexity table with equations
+v024	figure	loss histogram and ASR line plot
+v025	figure	mapping diagram of boxes and arrows
+v026	figure	reward curve grid plus results table
+v027	branding	BMJ Open masthead and publisher logos
+v028	figure	radar charts and comparison bar charts
+v029	figure	predicted versus true scatter plot
+v030	figure	DAIF pipeline flow diagram
+v031	figure	clinical management flowchart
+v032	figure	shaded heatmap grids of investor design
+v033	none	display equations and prose only
+v034	branding	ESC logo case report title page
+v035	figure	solute mass validation curve panels
+v036	figure	dispersion coefficient curve with error bars
+v037	figure	circle-and-arrow coupling illustration
+v038	figure	bit-error-rate curve and equations
+v039	figure	concentration comparison curve panels
+v040	figure	power curve panels by distribution
+v041	none	prompt and code listing boxes
+v042	table	simulation scenario table with equations
+v043	figure	sum-rate convergence line plots
+v044	table	availability table with in-cell bars
+v045	branding	BMJ Qual Saf masthead and logos
+v046	figure	bar, curve, violin and scatter panels
+v047	figure	strip and box plot of wall-clock
+v048	figure	waveform traces, RMSE curves, bar chart
+v049	figure	preference ordering bar chart
+v050	none	python code listings only
+v051	figure	pulse waveform fits and error histogram
+v052	figure	embedding scatter and landscape curves
+v053	figure	fraction difference bar and line plots
+v054	branding	ESC logo case report title page
+v055	figure	free energy minimization block diagram
+v056	none	proofs, lemmas and equations
+v057	figure	convergence, efficiency and cost plots
+v058	figure	persistence diagram and landscape grid
+v059	figure	capacity versus distance line plot
+v060	figure	concentration comparison curve panels
+v061	table	small ruled table with equations
+v062	figure	NMSE curves and RMSE bar charts
+v063	figure	sum-rate versus time ratio plot
+v064	figure	proof dependency box diagram
+v065	figure	stacked bar chart and heatmap panels
+v066	figure	variable importance forest plots
+v067	branding	PNAS masthead logo and update icon
+v068	none	equations, proofs and corollaries
+v069	figure	training pipeline schematic diagram
+v070	figure	optimization trajectory scatter plot
+v071	figure	solute mass validation curve panels

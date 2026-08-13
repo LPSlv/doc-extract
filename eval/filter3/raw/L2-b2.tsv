@@ -1,0 +1,51 @@
+tag	label	note
+f051	figure	Solder stencil pad drawing with dimensions, small table
+f052	figure	Pin configuration package drawing plus rating tables
+f053	figure	Isometric tape-and-reel box drawing, dimension table
+f054	table	Absolute maximum, ESD, operating and thermal tables
+f055	figure	Land pattern and solder mask detail drawings
+f056	figure	Five plotted characteristic curves
+f057	table	Register set summary table
+f058	figure	CAN bus node block diagram
+f059	figure	Solder paste stencil pad drawings
+f060	figure	TO-CAN package outline drawing, two views
+f061	figure	Reel and tape dimension drawings plus table
+f062	table	Tape and reel device dimension table
+f063	table	Packaging information option addendum table
+f064	table	Absolute maximum and operating condition tables
+f065	table	Electrical and switching characteristics tables
+f066	table	Electrical characteristics table for comparators
+f067	figure	Two LM317 regulator circuit schematics with equations
+f068	figure	Charger and 4A regulator circuit schematics
+f069	table	Electrical characteristics table for op amps
+f070	figure	TO-252 solder paste stencil drawing
+f071	figure	Reel and tape dimension drawings plus table
+f072	figure	TO-92 land pattern drawings, two lead options
+f073	table	Packaging information option addendum table
+f074	table	Packaging information option addendum table
+f075	table	Packaging table with footnote text
+f076	figure	SOIC land pattern and solder mask drawings
+f077	table	Packaging table with footnotes and disclaimer
+f078	table	Packaging table with footnotes
+f079	figure	SOT land pattern and solder mask drawings
+f080	figure	Six plotted performance characteristic curves
+f081	none	Text with display equations only
+f082	figure	Six plotted typical characteristic curves
+f083	figure	SOT solder paste stencil drawing
+f084	figure	TSSOP land pattern and solder mask drawings
+f085	figure	VSSOP solder paste stencil drawing
+f086	figure	Isometric tape-and-reel box drawing, dimension table
+f087	table	Text with device functional mode comparison table
+f088	table	Ratings and operating condition tables
+f089	table	Tape and reel dimension table
+f090	figure	Functional block diagram plus small function table
+f091	figure	Datasheet cover with simplified schematic diagram
+f092	figure	TSSOP solder paste stencil drawing
+f093	figure	QFN device pinout drawing
+f094	figure	Datasheet cover with simplified op-amp schematic
+f095	figure	Astable circuit schematic and waveform plot
+f096	figure	Timing waveform plot and PWM circuit schematic
+f097	figure	Duty cycle plot and modulator circuit schematic
+f098	figure	Six distortion plots with inset schematics
+f099	figure	Two package pinout drawings plus pin table
+f100	figure	SOIC land pattern and solder mask drawings

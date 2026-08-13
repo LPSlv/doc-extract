@@ -1,0 +1,34 @@
+{
+ "baseline_calls": 5903,
+ "baseline_tokens": 5812236,
+ "proposed_calls": 6289,
+ "proposed_tokens": 6214583,
+ "filter3_rows": 4,
+ "collapse_flips": [
+  [
+   "corpus/datasheets/ti_lm2576.pdf",
+   false,
+   true,
+   34,
+   44,
+   39339,
+   39225
+  ]
+ ],
+ "scale_guard_flips": [
+  "corpus/datasheets/ti_opa350.pdf",
+  "corpus/datasheets/ti_sn74ls00.pdf",
+  "corpus/datasheets/ti_opa365.pdf",
+  "corpus/datasheets/ti_sn74hc00.pdf",
+  "corpus/tds/ti_ucc27517.pdf",
+  "corpus/datasheets/ti_sn74hc244.pdf",
+  "corpus/datasheets/ti_opa192.pdf",
+  "corpus/datasheets/ti_tlv1701.pdf",
+  "corpus/datasheets/ti_opa196.pdf",
+  "corpus/datasheets/ti_ucc27517.pdf",
+  "corpus/datasheets/ti_ne556.pdf",
+  "corpus/datasheets/ti_sn74hc125.pdf",
+  "corpus/datasheets/ti_tlv271.pdf"
+ ],
+ "documents_changed": 172
+}

@@ -1,0 +1,72 @@
+tag	label	note
+v001	figure	DnCNN network block diagram
+v002	figure	persistence diagram scatter plots
+v003	figure	accuracy versus oversampling ratio curves
+v004	figure	odds-ratio forest plot and stacked bar charts
+v005	figure	AUPRC bar chart with error bars
+v006	figure	histogram of relative amplitude error
+v007	table	ruled comparison table of memory-type code snippets
+v008	figure	state estimation traces and RMSE bar chart
+v009	figure	hypervolume interval plot and Shapley bars
+v010	none	algorithm pseudocode and prose
+v011	figure	log-log solution time plot, path graphs
+v012	table	tilted saddle data table among equations
+v013	branding	PNAS title page, logo and update badge
+v014	figure	concentration profile panel plots
+v015	figure	demographic table plus violin plots
+v016	table	landscape baseline characteristics table
+v017	figure	kernel approximation error log-log plot
+v018	figure	DQN and PQN architecture flowcharts
+v019	figure	log-log solution time plot, tree graphs
+v020	figure	correlation bar chart and per-language word counts
+v021	figure	NMSE bar charts and SE CDF curves
+v022	figure	bit-error-rate and separation probability curves
+v023	table	ruled classical and quantum query bounds table
+v024	figure	SN loss histogram and ASR ablation curve
+v025	figure	RGP to microcircuit mapping diagram
+v026	figure	performance table plus pruning reward curves
+v027	branding	BMJ Open title page with journal logos
+v028	figure	radar charts and accuracy bar plots
+v029	figure	predicted versus true scatter plot
+v030	figure	DAIF pipeline thematic flow diagram
+v031	figure	RA pregnancy management flowchart
+v032	figure	shaded investor design grid heatmap
+v033	none	display equations only
+v034	branding	ESC case report title page with logo
+v035	figure	surviving solute mass validation plots
+v036	figure	axial dispersion coefficient curve plot
+v037	figure	circle node and arrow coupling diagrams
+v038	figure	bit-error-rate versus SNR curves
+v039	figure	concentration comparison panel plots
+v040	figure	faceted power curves for DST
+v041	none	prompt text and code listings
+v042	table	simulation scenarios overview table
+v043	figure	sum-rate convergence and scaling plots
+v044	table	ruled availability table with in-cell bars
+v045	branding	BMJ Qual Saf title page with logos
+v046	figure	recall bars, basin curves, scatter panels
+v047	figure	wall-clock box and strip plot
+v048	figure	Duffing oscillator traces and RMSE plots
+v049	figure	preference ordering bar chart
+v050	none	Python code listings
+v051	figure	pulse waveforms, residuals, error histogram
+v052	figure	embedding scatter and landscape curves
+v053	figure	fraction difference bar and line plots
+v054	branding	ESC case report title page with logo
+v055	figure	free energy minimization block diagram
+v056	none	proofs and display equations
+v057	figure	energy efficiency convergence and cost plots
+v058	figure	persistence diagrams, landscapes, silhouettes
+v059	figure	capacity versus Wasserstein distance plot
+v060	figure	concentration comparison panel plots
+v061	table	small ruled growth-rate table among equations
+v062	figure	NMSE curves and RMSE bar charts
+v063	figure	sum-rate versus inference time ratio plot
+v064	figure	proof dependency box and arrow diagram
+v065	figure	stacked uptake bars and heatmap panels
+v066	figure	variable importance forest plots
+v067	branding	PNAS research article title page, logo
+v068	none	proofs and display equations
+v069	figure	SFT and RL training pipeline diagram
+v070	figure	optimization trajectories in parameter space
+v071	figure	surviving solute mass validation curves
