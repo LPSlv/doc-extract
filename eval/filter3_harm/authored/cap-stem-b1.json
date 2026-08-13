@@ -1,0 +1,61 @@
+[
+ {"id": "h04",
+  "stem": "In Fig. 8 (the SOT108-1 package outline drawing), across which features of the package is the dimension labeled HE measured?",
+  "anchor": "Fig. 8.\nPackage outline SOT108-1 (SO14)",
+  "note": "Page is a mechanical package-outline drawing with a dimension table; HE appears as a leader label on the drawing."},
+
+ {"id": "h07",
+  "stem": "In Figure 8-1, to which rail is the clamping diode that conducts the positive input clamp current (+IIK) at the logic input connected?",
+  "anchor": "Figure 8-1. Electrical Placement of Clamping Diodes for Each Input and Output",
+  "note": "Schematic shows VCC, GND, logic input/output with +IIK, -IIK, +IOK, -IOK labels; question asks a connectivity fact."},
+
+ {"id": "h08",
+  "stem": "In the solder paste stencil design drawing for PW0014A, what are the length and width of each of the 14 stencil apertures?",
+  "anchor": "EXAMPLE STENCIL DESIGN ... 14X (1.5) ... 14X (0.45)",
+  "note": "Stencil example based on a 0.125 mm thick stencil; aperture dimensions appear as loose 14X labels."},
+
+ {"id": "h10",
+  "stem": "In the land pattern example for PW0016A, what is the center-to-center pitch between adjacent pads?",
+  "anchor": "EXAMPLE BOARD LAYOUT ... 14X (0.65) ... LAND PATTERN EXAMPLE",
+  "note": "16-pin TSSOP land pattern; the pitch dimension is spanned across 14 gaps."},
+
+ {"id": "h11",
+  "stem": "In the land pattern example for the X2SON package DPW0005A, what is the diameter of the via shown in the center thermal pad?",
+  "anchor": "VIA ... LAND PATTERN EXAMPLE ... SOLDER MASK DEFINED ... X2SON - 0.4 mm max height ... DPW0005A",
+  "note": "A via callout with a diameter dimension sits on the thermal pad of the land pattern."},
+
+ {"id": "h13",
+  "stem": "In the TAPE AND REEL BOX DIMENSIONS drawing at the top of the page, which of the labeled edges (W, L, or H) is the one whose value is 35.0 mm for the SOT-23 (DBV) TL431 devices listed?",
+  "anchor": "TAPE AND REEL BOX DIMENSIONS\nWidth (mm)\nW\nL\nH",
+  "note": "The figure is a small box pictogram whose three edges are labeled W, L, H; the adjacent table gives Length/Width/Height values."},
+
+ {"id": "h15",
+  "stem": "In the land pattern example for the X2QFN package RUC0014A, what are the two dimensions of each of the 14 signal pads?",
+  "anchor": "LAND PATTERN EXAMPLE\nEXPOSED METAL SHOWN\nSCALE: 23X ... 14X (0.2) ... 14X (0.6)",
+  "note": "Pad dimensions appear as loose 14X callouts on the land pattern drawing."},
+
+ {"id": "h16",
+  "stem": "In the TAPE AND REEL BOX DIMENSIONS drawing at the top of the page, which labeled edge (W, L, or H) corresponds to the 45.0 mm figure listed for TPA3116D2DADR?",
+  "anchor": "TAPE AND REEL BOX DIMENSIONS\nWidth (mm)\nW\nL\nH",
+  "note": "Same box pictogram as other package-materials pages; asks which lettered edge maps to which tabulated dimension."},
+
+ {"id": "h18",
+  "stem": "In Fig. 1 (the patient flow diagram), how many patients allocated to SDBP-B actually received the assigned bowel preparation?",
+  "anchor": "▶Fig. 1 Flow diagram of patients enrolled.",
+  "note": "CONSORT-style flow diagram with allocation, received-prep, and BBPS-score counts for the three arms."},
+
+ {"id": "h20",
+  "stem": "In the land pattern example for PW0024A, what is the length of each of the 24 pads?",
+  "anchor": "LAND PATTERN EXAMPLE ... 24X (1.5) ... 24X (0.45) ... PW0024A",
+  "note": "24-pin TSSOP land pattern; pad length and width appear as separate 24X callouts."},
+
+ {"id": "h22",
+  "stem": "In the upper typical application schematic (IMON 3rd Order Thermal Compensation Application), between which pins of the AOZ23655QI is the thermistor network containing RNTC(T) connected?",
+  "anchor": "Typical Application \nIMON 3rd Order Thermal Compensation Application\n(Thermal Compensation only IMON Function)",
+  "note": "Page carries two application schematics; the upper one is the IMON-only 3rd-order version with ISEN_P/ISEN_N, IMON, RNTC(T)."},
+
+ {"id": "h23",
+  "stem": "In Figure 2-3, between which two points on the CHIP_EN waveform is the interval tRST measured?",
+  "anchor": "Figure 2-3. Visualization of Timing Parameters for Power-up and Reset",
+  "note": "Timing diagram shows the power rails reaching 2.8 V, CHIP_EN, VIL_nRST, tSTBL and tRST; Section 2.5.3 points the reader at this figure."}
+]

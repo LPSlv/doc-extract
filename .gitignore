@@ -28,3 +28,8 @@ eval/filter3/costparts/
 eval/filter3/holdout/pages/
 eval/filter3/datasheet_holdout/pages/
 eval/filter3/datasheet_holdout/parts/
+eval/filter3_harm/pages/
+eval/filter3_harm/mat_optical/
+eval/filter3_harm/mat_render/
+eval/filter3_harm/mat_text/
+eval/filter3_harm/view/

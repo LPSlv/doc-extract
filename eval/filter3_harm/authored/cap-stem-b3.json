@@ -1,0 +1,56 @@
+[
+ {"id": "h50",
+  "stem": "In Fig. 4 (age-distribution prevalence per 100000 males on December 31, 2007), which age band shows the highest combined HA+HB prevalence?",
+  "anchor": "Fig. 4. Age-distribution prevalence (per 100000 males) on December 31, 2007. HA, hemophilia A; HB, hemophilia B.",
+  "note": "Axis tick labels (0.00-1.20 and the 0-5 ... >90 bands) and the three-entry legend HA+HB / HA / HB are present as loose spans."},
+
+ {"id": "h52",
+  "stem": "In Figure 2 (parts of the interface between Omega^(1)_eps and the thin fracture R_eps), which of the three labeled interface curves is the one lying on the boundary of the node R^(0)_eps rather than on a thin rectangle?",
+  "anchor": "Figure 2. Parts of the interface between Ω(1) ε and the thin fracture Rε",
+  "note": "The figure's own labels Gamma^(1,1), Gamma^(1,0), Gamma^(1,2) appear above the caption; the index convention is stated in the prose after (2.5)."},
+
+ {"id": "h53",
+  "stem": "In the leftmost panel of FIG. 14 (cumulative S/N versus instrument noise sensitivity sigma_noise), what cumulative S/N does the Hα×HeII cross-correlation curve at z = 5 reach at the vertical line marking the current CDIM configuration?",
+  "anchor": "FIG. 14. The current CDIM configuration would enable a marginal detection of the Hα×HeII cross-correlation signal ... From left to right, the four panels vary the instrument sensitivity, spectral resolution, pixel size, and survey area",
+  "note": "Legend entries Hα×HeII / Hα / HeII and the SPHEREx-deep / CDIM / CDIM+ vertical-line labels are in the text layer; FIG. 15 also appears on the page but FIG. 14 carries the page's lead discussion."},
+
+ {"id": "h54",
+  "stem": "In the Power-Supply Current vs Digital Input Code plot taken with the internal reference enabled and gain = 1, what is the power-supply current at a digital input code of 32768?",
+  "anchor": "Figure 70. Power-Supply Current vs Digital Input Code ... Internal reference enabled, Gain = 1 ... 0 8192 16384 24576 32768 40960 49152 57344 65536 Digital Input Code Power−Supply Current (mA)",
+  "note": "Page carries six curves (Figures 67-72); I identified this one by its plot conditions rather than by figure number, since the number-to-panel mapping is not certain from the text alone."},
+
+ {"id": "h58",
+  "stem": "In the Functional Block Diagram of Section 7.2, how many driver channels are shown in the TIN-to-TOUT path (the number annotated on that path)?",
+  "anchor": "7.2 Functional Block Diagram / 5V TIN ROUT 2 2 2 2 TOUT RS232 RIN RS232 RX TX POWER",
+  "note": "The block-diagram labels arrive as loose spans including four '2' multiplicity marks; the POWER, driver, and receiver blocks are described in 7.3.1-7.3.3."},
+
+ {"id": "h60",
+  "stem": "In Figure 12 (Offset Voltage vs Common-Mode Voltage), at what common-mode voltage do the five typical units show the marked step in VOS?",
+  "anchor": "Figure 12. Offset Voltage vs Common-Mode Voltage ... VOS (V) VCM (V) C001 5 Typical Units Shown VCM = -18.1 V",
+  "note": "Page carries six figures (7-12); Figure 12 is the one whose in-plot annotations are legible in the text layer."},
+
+ {"id": "h61",
+  "stem": "In Figure 45 (Maximum Output Voltage vs Frequency), what peak-to-peak output voltage does the VS = ±15 V curve deliver at 1 MHz?",
+  "anchor": "Figure 45. Maximum Output Voltage vs Frequency ... Output Voltage (VPP) Frequency (Hz) C033 VS = ±2.25 V VS = ±5 V VS = ±15 V Maximum output voltage without slew-rate induced distortion.",
+  "note": "Six figures (43-48) on the page; Figure 45 is the one whose three-curve legend and axis ranges are present in the text layer."},
+
+ {"id": "h62",
+  "stem": "In the EXAMPLE STENCIL DESIGN / SOLDER PASTE EXAMPLE drawing for the DGK0008A VSSOP package, what is the long-side dimension of each of the eight solder-paste apertures?",
+  "anchor": "EXAMPLE STENCIL DESIGN 8X (1.4) 8X (0.45) 6X (0.65) (4.4) (R0.05) TYP ... SOLDER PASTE EXAMPLE SCALE: 15X",
+  "note": "Whole page is the stencil drawing plus its notes; dimensions appear as loose spans."},
+
+ {"id": "h64",
+  "stem": "In Figure 5-31 (D1, D2 Primary-Side Output Switch Voltage Swing vs Current at VCC = 3.3 V), what is the VD1/VD2 voltage swing at a switching current of 100 mA?",
+  "anchor": "Figure 5-31. D1, D2 Primary-Side Output Switch Voltage Swing vs Current ... ID1, ID2 - Switching Current - mA ... VD1, VD2 - Voltage Swing - V VCC = 3.3V",
+  "note": "The page also holds the companion VCC = 5 V curve (Figure 5-32)."},
+
+ {"id": "h68",
+  "stem": "In Figure 7-4 (Pulse-Width-Modulation vs Control Voltage), what output duty cycle does the 'Clock period = 2.5 RC' curve give at a control voltage of 2.5 V?",
+  "anchor": "Figure 7-4. Pulse-Width-Modulation vs Control Voltage / Clock Duty Cycle 98%, VDD = 5V ... Clock period = 1 RC Clock period = 2.5 RC",
+  "note": "Page also contains the pulse-position-modulator schematic (Figure 7-5), but the prose in 7.2.2.2 and 7.2.2.3 discusses Figure 7-4 most."},
+
+ {"id": "h69",
+  "stem": "In Figure 32 (Shutdown Supply Current and Output Voltage vs Time, VDD = 15 V), what is the supply current per channel before the shutdown pulse is applied?",
+  "anchor": "Figure 32. Shutdown Supply Current and Output Voltage vs Time ... Shutdown Pulse (V) Output Voltage (V) Supply Current (mA/Ch) V = 15 V DD ... IDD(SHDN = 0)",
+  "note": "Two companion figures on the page (VDD = 15 V and VDD = 5 V); the 15 V one is Figure 32 per the caption order."}
+]

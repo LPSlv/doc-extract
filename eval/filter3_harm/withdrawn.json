@@ -1,0 +1,5 @@
+[
+ {"id": "h33",
+  "reason": "author contamination, self-reported. The image-first author's own status note reads: \"asked for ball A13 (VBUS) deliberately, since the visible part of Table 5.1 stops at A12, so the answer must come from the ball map\". That is the authorship bias this eval exists to control, admitted in writing: the question was selected BECAUSE the page's text could not answer it. Recorded rather than deleted, as eval/figqa.md records v25.",
+  "found_by": "reading the authoring agents' status reports before scoring"}
+]

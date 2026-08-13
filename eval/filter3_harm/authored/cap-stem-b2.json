@@ -1,0 +1,61 @@
+[
+ {"id": "h25",
+  "stem": "In Figure 36 (SMP-3 angle detection), how is the magnet's N-S pole axis oriented relative to the sensor package at the position labelled \"~90 Deg.\", compared with the one labelled \"~0 Deg.\"?",
+  "anchor": "Figure 36 - SMP-3 angle detection / Angle detection SMP-3 / ~ 0 Deg.* / ~ 90 Deg.* / ~ 270 Deg.* / ~ 180 Deg.* / N S",
+  "note": "Page shows four magnet orientations with N/S labels tied to four angle callouts."},
+
+ {"id": "h26",
+  "stem": "In Figure 41 (SMP-4 marking), which marking field does the six-character \"CCCCCC\" string on the package correspond to?",
+  "anchor": "18.5.2. SMP-4 - Marking ... Marking : 422Axx-L Fxxxxx YYWW CCCCCC ... Year (YY) and Week (WW) date code / Capacitor Configuration ... Figure 41 - SMP-4 marking",
+  "note": "Page also carries Figure 42 (sensitive spot position), but Figure 41 has the larger share of the page's text."},
+
+ {"id": "h27",
+  "stem": "In Fig. 12 (package outline SOT360-1, TSSOP20), what is the maximum overall package height A in millimetres?",
+  "anchor": "Fig. 12. Package outline SOT360-1 (TSSOP20) ... TSSOP20: plastic thin shrink small outline package; 20 leads; body width 4.4 mm ... A max. 1.1 ... DIMENSIONS (mm are the original dimensions)",
+  "note": "Dimension table is part of the outline drawing."},
+
+ {"id": "h29",
+  "stem": "In Fig 4 (transient thermal impedance from junction to mounting base versus pulse duration), what is the approximate Zth(j-mb) value on the single-shot curve at a pulse duration tp of 1 ms?",
+  "anchor": "Fig 4. Transient thermal impedance from junction to mounting base as a function of pulse duration; typical values ... single shot ... tp (s) ... Zth (j-mb) (K/W) ... δ = 0.5",
+  "note": "Axis decades and duty-factor curves (0.5 down to 0.02, plus single shot) are in the loose text."},
+
+ {"id": "h30",
+  "stem": "In Figure 2 (simple output device load line), where does the droop load line put the output voltage at maximum output current IOUT,MAX relative to the nominal level VOUT,NOM?",
+  "anchor": "FIGURE 2. SIMPLE OUTPUT DEVICE LOAD LINE ... VOUT,NL VOUT,FL IOUT,MAX IOUT,NL VOUT,NOM IOUT,MID NOMINAL LOAD LINE DROOP LOAD LINE",
+  "note": "Text also discusses Figure 1 at length, but only Figure 2's own labels appear on this page, so the figure here is Figure 2."},
+
+ {"id": "h31",
+  "stem": "In Figure 4 (Application Example 2, the 0V to 10V output configuration), which ZSC31050 pin drives the gate of the external JFET supply regulator?",
+  "anchor": "Figure 4. Application Example 2 / 0V to 10V output configuration with supply regulator (external JFET), temperature compensation via internal diode, and bridge in voltage mode ... VGATE ... ZD 6.8V ... Out: 0 to 10V",
+  "note": "Four application schematics (Figures 3-6) share the page; Figure 4 is the one whose component labels dominate the text."},
+
+ {"id": "h34",
+  "stem": "In Figure 3.2 (EFR32MG24 Memory Map - Core Peripherals and Code Space), what address range is assigned to the FLASH_USERDATA region?",
+  "anchor": "Figure 3.2.  EFR32MG24 Memory Map — Core Peripherals and Code Space ... FLASH 0x08000000 0x08180000 FLASH_USERDATA 0x0fe00000 0x0fe00400 FLASH_DEVINFO",
+  "note": ""},
+
+ {"id": "h36",
+  "stem": "In Figure 6-10 (Four-Channel PAM Multiplex System Diagram), which device supplies the sequential channel-select signals that switch the CD4066B analog switches?",
+  "anchor": "Figure 6-10. Four-Channel PAM Multiplex System Diagram ... 1/4 CD4066B ... CD4018B ... PE J1 J2 J3 J4 J5 Q2 Q1 ... Clock Reset ... Signal Inputs / Signal Outputs",
+  "note": ""},
+
+ {"id": "h40",
+  "stem": "In Figure 24 (LMT01 typical accuracy when using the first-order Equation 1, 92 typical units at VP - VN = 2.15 V), roughly what is the largest temperature accuracy error shown at a junction temperature of 150°C?",
+  "anchor": "Figure 24. LMT01 Typical Accuracy When Using First Order Equation Equation 1 – 92 Typical Units Plotted at (VP – VN) = 2.15 V ... Temperature Accuracy (ƒC) / LMT01 Junction Temperaure (ƒC) / C018",
+  "note": "Page carries Figures 23, 24 and 25; the prose centres on the Figure 24 vs Figure 25 accuracy comparison."},
+
+ {"id": "h41",
+  "stem": "In Figure 8-5 (noise performance of the OPAx189 and OPA211 in unity-gain buffer configuration), at what source resistance RS do the OPAx189 and OPA211 total-noise curves cross?",
+  "anchor": "Figure 8-5. Noise Performance of the OPAx189 and OPA211 in Unity-Gain Buffer Configuration ... Voltage Noise Spectral Density, EO (V/Hz1/2) / Source Resistance, RS (Ÿ) ... OPA211 OPAx189 Resistor Noise RS = 3.6 kŸ",
+  "note": ""},
+
+ {"id": "h42",
+  "stem": "In the front-page translation diagram labelled \"Switching Thresholds for 1.8-V to 3.3-V Translation\", what input switching thresholds VIH and VIL are shown for the LV1Txx logic?",
+  "anchor": "Switching Thresholds for 1.8-V to 3.3-V Translation ... LV1Txx Logic Vcc = 1.8V ... VIH = 0.99V VIL = 0.55V ... VIH min = 1.36V VIL min = 0.8V VOH min = 2.4V VOL max = 0.4V",
+  "note": "Three LV1Txx system diagrams (Vcc = 5.0V, 3.3V, 1.8V) appear; only the 1.8-V/3.3-V one carries the named threshold caption."},
+
+ {"id": "h49",
+  "stem": "In Fig. 1 (flow chart for inclusion), how many subjects were removed at the step that excludes female factor VIII or factor IX disorder patients?",
+  "anchor": "Fig. 1. Flow chart for inclusion. ... Registration files for factor VIII or factor IX disorder male patients n=988 ... Exclude factor VIII or factor IX disorder female patients n=53",
+  "note": ""}
+]

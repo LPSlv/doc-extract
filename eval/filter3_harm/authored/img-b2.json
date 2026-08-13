@@ -1,0 +1,98 @@
+[
+  {
+    "id": "h28",
+    "q": "In Fig 9 (gate-source threshold voltage versus junction temperature), what is the typical VGS(th) at the coldest plotted junction temperature, Tj = -60 degC?",
+    "options_raw": ["about 0.83 V", "about 0.53 V", "about 0.68 V", "about 0.95 V"],
+    "kind": "geometry",
+    "fact": "The dashed 'typ' trace in the upper-left plot (Fig 9) starts at the left edge of the axes (Tj = -60 degC) at a height just above the 0.8 V tick, while the solid 'min' trace starts just above 0.5 V.",
+    "why_arbitrary": "The threshold voltage of this particular low-threshold TrenchMOS part at -60 degC is a measured device characteristic, not anything fixed by convention."
+  },
+  {
+    "id": "h32",
+    "q": "In Figure 16 (the flash execute-in-place subsystem block diagram), which block does the AHB: AUX (Streaming DMA) port connect directly to?",
+    "options_raw": ["Streaming FIFO", "Cache Bank 1, 8 kB 2-way", "AHB Arbiter", "QSPI Memory Interface"],
+    "kind": "geometry",
+    "fact": "In the diagram the yellow 'AHB: AUX (Streaming DMA)' box has a single arrow running down to the blue 'Streaming FIFO' box immediately beneath it, which in turn connects to the AHB Arbiter.",
+    "why_arbitrary": "Which internal block the auxiliary streaming port attaches to is a design choice of this particular XIP subsystem."
+  },
+  {
+    "id": "h33",
+    "q": "In Figure 5.1 (the BGA192 device pinout), which signal is assigned to ball A13?",
+    "options_raw": ["VBUS", "PF14", "PF11", "PI6"],
+    "kind": "geometry",
+    "fact": "In the top row (row A) of the ball map, counting across columns 1-16, column 13 carries the label VBUS, with PF14 at A12 and PF11 at A14.",
+    "why_arbitrary": "Ball assignments for this package are a vendor-specific mapping that cannot be deduced without the pinout drawing."
+  },
+  {
+    "id": "h35",
+    "q": "In Figure 9-12 (cumulative reactive energy % error versus current), which phase-angle trace sits highest at 100 A?",
+    "options_raw": ["30 deg", "60 deg", "-30 deg", "-60 deg"],
+    "kind": "geometry",
+    "fact": "At the right-hand edge of the plot (100 A) the black trace, keyed to 30 deg in the legend at the top right, is the topmost of the four at roughly +0.05%, while the grey -30 deg trace is the lowest at about -0.04%.",
+    "why_arbitrary": "The ordering of the four phase-angle error curves at full current is measured behaviour of this ADC, not a general rule."
+  },
+  {
+    "id": "h37",
+    "q": "In Figure 8-11 (independent PWM high-side and low-side drivers), which supply rail is shown feeding the high-side (HS) gate-driver amplifier inside the gate driver block?",
+    "options_raw": ["VCP", "VGLS", "VDRAIN", "VM"],
+    "kind": "geometry",
+    "fact": "Inside the 'Gate Driver' box of the top figure the triangle marked HS has VCP labelled on its supply connection above it, while the LS triangle below it is fed from VGLS.",
+    "why_arbitrary": "The names of the two internal driver supplies in this device (a charge pump rail and a gate-low regulator rail) are specific to this part's block diagram."
+  },
+  {
+    "id": "h38",
+    "q": "For the device listed under the tape-and-reel box drawing, what is the nominal box length (the dimension marked L on the drawing)?",
+    "options_raw": ["366.0 mm", "364.0 mm", "50.0 mm", "336.0 mm"],
+    "kind": "printed",
+    "fact": "The table directly beneath the box drawing gives Length 366.0 mm, Width 364.0 mm and Height 50.0 mm for INA238AIDGSR, and L labels the long horizontal edge of the box in the drawing.",
+    "why_arbitrary": "The shipping box dimensions for this package and quantity are a packaging fact, and length and width differ by only 2 mm."
+  },
+  {
+    "id": "h39",
+    "q": "In the LAND PATTERN EXAMPLE for DDA0008B, what is the centre-to-centre spacing between adjacent signal pads along one side?",
+    "options_raw": ["1.27 mm", "1.55 mm", "1.3 mm", "0.6 mm"],
+    "kind": "printed",
+    "fact": "The dimension '6X (1.27)' at the left of the land pattern spans between adjacent pads on the left column; '8X (1.55)' and '8X (0.6)' are the pad length and width, and '(1.3) TYP' locates the vias.",
+    "why_arbitrary": "The pad pitch of this recommended land pattern is a numeric layout value that has to be read off the drawing."
+  },
+  {
+    "id": "h43",
+    "q": "In Figure 34 (high-value resistor in parallel with LED), what resistor value is shown across the LED?",
+    "options_raw": ["100 k", "10 k", "1 M", "100"],
+    "kind": "printed",
+    "fact": "The resistor drawn to the right of the LED in the schematic at the bottom of the page is annotated '100 k', connected between VCC and the LEDx pin node.",
+    "why_arbitrary": "The particular value recommended for the bleed resistor is a design choice printed on the schematic."
+  },
+  {
+    "id": "h44",
+    "q": "In the LAND PATTERN EXAMPLE for DSK0010A, how many vias are drawn inside the central thermal land (pad 11)?",
+    "options_raw": ["4", "2", "5", "6"],
+    "kind": "geometry",
+    "fact": "The central rounded rectangle labelled 11 contains four crosshair via symbols - one near the top, two side by side on the horizontal centreline, and one near the bottom - each called out as (0.2) VIA TYP.",
+    "why_arbitrary": "The number and arrangement of recommended thermal vias is specific to this land pattern drawing."
+  },
+  {
+    "id": "h45",
+    "q": "In Figure 12 (efficiency versus input voltage, TPS63020, VOUT = 2.5 V, power save enabled), the IOUT = 10 mA trace drops into a deep notch near VIN = 2.5 V; what efficiency does it reach at the bottom of that notch?",
+    "options_raw": ["about 57%", "about 64%", "about 73%", "about 84%"],
+    "kind": "geometry",
+    "fact": "In the bottom-left plot the blue 10 mA curve falls to its lowest point between the 2.4 V and 2.6 V ticks, bottoming just below the 60% gridline; its earlier partial dip stops near 64% and its right-hand end at 5.4 V is near 73%.",
+    "why_arbitrary": "The depth of the buck-boost transition notch at light load is measured converter behaviour unique to this device and operating point."
+  },
+  {
+    "id": "h46",
+    "q": "In Fig. 12 (tape and reel packing for SMD-8), what is the nominal vertical dimension of a tape pocket, dimensioned at the left-hand side of the tape drawing?",
+    "options_raw": ["10.21 mm", "10.41 mm", "12.00 mm", "16.00 mm"],
+    "kind": "printed",
+    "fact": "The vertical dimension arrow on the left of the carrier-tape view reads 10.21 +/- 0.1, while 10.41 +/- 0.1 is the horizontal pocket dimension at the bottom right, 12.00 is the pocket pitch and 16.00 is the tape width.",
+    "why_arbitrary": "The pocket dimensions of this carrier tape are set by the package outline and differ from the similar-looking orthogonal dimension by 0.2 mm."
+  },
+  {
+    "id": "h47",
+    "q": "In Fig. 11 (the lead-free infrared reflow solder profile), what maximum cooling ramp-down rate is annotated?",
+    "options_raw": ["6 degC/s", "3 degC/s", "4 degC/s", "10 degC/s"],
+    "kind": "printed",
+    "fact": "The annotation on the falling edge of the profile reads 'Max. ramp down 6 degC/s', while the rising edge is annotated 'Max. ramp up 3 degC/s'.",
+    "why_arbitrary": "The permitted cooling rate here is twice the permitted heating rate, an asymmetry stated only by this profile's annotations."
+  }
+]

@@ -355,3 +355,35 @@ def test_labelled_rows_are_well_formed():
         assert r[2].isdigit() and int(r[2]) >= 1, r
         assert r[3].isdigit(), r
         assert r[4] in ("branding", "portrait", "content"), r
+
+
+def test_filter3_records_what_it_suppresses(tmp_path):
+    """Filter 3 used to `continue` without an audit entry.
+
+    Every other filter in the page loop appends to `dropped`; this one did not,
+    and that asymmetry is the entire reason 4,065 discarded figure pages went
+    uncounted for three sessions. A filter that suppresses a call leaves no
+    artifact, and every eval in this repo samples the ROUTED set -- so nothing
+    could see them. eval/filter3.md.
+
+    The entry must not change routing: it is an audit record, not a decision.
+    """
+    import fitz
+    doc = fitz.open()
+    pg = doc.new_page()
+    # A parsed table (filter 3 fires) on a page that also carries curve art
+    # (render_reason would have fired). This is the cell that was invisible.
+    pg.insert_text((72, 72), "| a | b |\n| --- | --- |\n| 1 | 2 |\n| 3 | 4 |")
+    for k in range(12):
+        pg.draw_bezier((100 + k, 300), (140 + k, 250), (180 + k, 350), (220 + k, 300))
+    p = tmp_path / "table_and_curves.pdf"
+    doc.save(str(p)); doc.close()
+
+    r = harvest(str(p))
+    entries = [d for d in r["dropped"] if d.get("why") == "parsed_table"]
+    if entries:                       # only when filter 3 actually fired
+        e = entries[0]
+        assert e["wanted"], "an audit entry is only worth writing when a branch wanted the page"
+        assert "raster" in e, "must record whether a raster was present -- that is what makes it recoverable or not"
+        assert not any(it["page"] == e["page"] and it["kind"] == "page_render"
+                       for it in r["items"]), "recording a suppression must not route it"

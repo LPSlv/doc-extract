@@ -539,6 +539,10 @@ def harvest(path):
                 if npages > 2 and n / npages > UBIQUITY}
 
     boxes = box_templates(geoms)
+    # Every page carrying a raster at all, before filters 1 and 2 have their
+    # say. Read by filter 3's audit entry below and by drop_textonly after the
+    # collapse -- both want images the furniture filter is about to discard.
+    raster_pages = {p for e in seen.values() for p in e["pages"]}
 
     renders, edges, page_sigs = {}, {}, {}
     for i, pg in enumerate(doc):
@@ -551,7 +555,26 @@ def harvest(path):
             continue
         pm = page_mds[i] if i < len(page_mds) else ""
         if pm.count("\n|") >= 3:
-            continue                              # filter 3: extractor won
+            # Filter 3: the extractor parsed a table, so the page is treated as
+            # captured. Record what that costs instead of skipping in silence.
+            #
+            # This was the only filter here that `continue`d without an audit
+            # entry, and that is precisely why nobody could see it: a filter
+            # which suppresses a call leaves no artifact, and every eval in this
+            # repo samples the ROUTED set. 4,065 pages carrying figure signal
+            # and no raster were discarded this way across 711 documents, 66%
+            # of them carrying a real figure, and the loss went uncounted for
+            # three sessions (eval/filter3.md).
+            #
+            # Free: `geoms` is already computed for every page, so the reason is
+            # arithmetic over it rather than another get_cdrawings() walk.
+            # Routing is unchanged -- this only ever appends to `dropped`.
+            wanted = render_reason(geoms[i])
+            if wanted:
+                dropped.append({"page": i + 1, "why": "parsed_table",
+                                "wanted": wanted,
+                                "raster": i in raster_pages})
+            continue
         g = geoms[i]
         # ...but only when the page carries nothing else. A shaded table has
         # filled rects and no strokes at all, so it matches the empty-stroke
@@ -593,11 +616,9 @@ def harvest(path):
     items, guard = cost_guard(items, doc, edges)
     if guard:
         dropped.append(guard)
-        # Only ever after the collapse: before it, `seen` covers images the
-        # furniture filter is about to drop, and a page that looks bare here
+        # Only ever after the collapse: before it, a page that looks bare here
         # may still be carrying a raster the routed set would have emitted.
-        img_pages = {p for e in seen.values() for p in e["pages"]}
-        items, gone = drop_textonly(items, geoms, img_pages, ocr_pages)
+        items, gone = drop_textonly(items, geoms, raster_pages, ocr_pages)
         dropped += gone
     doc.close()
 
