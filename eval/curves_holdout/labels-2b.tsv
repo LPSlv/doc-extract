@@ -1,0 +1,31 @@
+tag	label	note
+c056	branding	TOC dot-leader list, Renesas logo + header/footer rules
+c057	branding	TOC continuation, logo + header/footer rules
+c058	branding	GPIO prose section, logo + rules only
+c059	branding	GPIO modes prose bullets, logo + rules only
+c060	branding	OTP memory prose, logo + rules only
+c061	branding	EEPROM prose sections, logo + rules only
+c063	branding	reset-step prose and numbered list, logo + rules
+c066	branding	blank page, Renesas logo and header rule only
+c067	figure	package outline drawing, top/side views, land pattern
+c070	figure	SOT23-3 package outline drawing with land pattern
+c071	branding	Intersil datasheet cover, prose + features, logos and rules
+c072	figure	QFN package outline drawing, multiple views
+c074	figure	cover page with Basic Circuit Diagram schematic
+c075	branding	Table of Contents, header/footer rules only
+c077	branding	pin description prose, header/footer rules only
+c079	branding	troubleshooting prose lists, header/footer rules
+c080	branding	Raspberry Pi back cover, logo on colour panel
+c085	branding	CM4/CM5 differences prose, header/footer rules
+c086	branding	Raspberry Pi back cover, logo on colour panel
+c091	branding	Raspberry Pi back cover, logo on colour panel
+c092	branding	title page, large Raspberry Pi logo only
+c093	branding	RP2040 datasheet cover, colour panel and rules
+c094	branding	RP2350 datasheet cover, colour panel and rules
+c095	figure	back cover photograph of Simplicity Studio user, icon row
+c097	branding	Table of Contents, rules + Silicon Labs logo
+c100	branding	application-note prose list, rule + logo
+c101	figure	back cover with rendered smart-city PCB image, icon row
+c102	figure	back cover photograph of Simplicity Studio user, icon row
+c103	branding	near-blank page, header/footer rules + logo
+c104	branding	Table of Contents, rules + Silicon Labs logo

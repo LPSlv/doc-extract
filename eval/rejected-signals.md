@@ -296,18 +296,28 @@ against the 120 labelled firings.
 | page signature covering >`UBIQUITY` of the document | **rejected — 0 of 120 firings.** `vector_furniture` already removes those; the logo's curve count repeats but the full `(curves, diagonals, axis_h, axis_v)` tuple does not, because rules and underlines elsewhere vary |
 | identical `curves` count on ≥10 pages | rejected — 41 fires, **20 real items lost**, 51% precision |
 | largest connected stroke cluster | rejected — **0.0372 on the TI header and 0.0372 on `ti_lm317` p25 (thermal chart), p27 (PCB layout) and `ti_lp2985` p15 (block diagram)**. TI rasterises its figures, so a figure page has exactly the same vector content as a prose page. The same measure was rejected once already in `eval/tds-corpus.md`, for a different reason and the same underlying one |
-| small cluster **and** no figure caption | measured 17 cut, 17 `branding`, 0 real lost — **not shipped** |
+| small cluster **and** no figure caption | **rejected out-of-sample.** 17 cut / 0 lost in-sample; on 295 vendor-diverse datasheets fetched afterwards it drops 222 `curves` calls, and **24 of 120 blind-labelled drops are real figures — 80% precision (95% Wilson 72–86)**. 98% on TI, 66% on everything else. It also cascades: −222 drops buy only −190 calls because 46 subsumed rasters return, and four documents finish with more calls than before |
 
-The last one is the interesting rejection. It is clean in-sample and still fails
-the bar on three counts: it is read off the set it would be validated on; 2 of
-its 17 drops carry rasters, so dropping them un-subsumes an image, which is
-exactly the cascade that forced the QR-code filter's revert; and it targets
-*vendor* boilerplate, so `arxiv_holdout` and `pmc_holdout` are both the wrong
-holdout — the same mismatch that made `arxiv_holdout` useless for the
-signature-ubiquity rule. Building a datasheet holdout is not small: ST,
-Microchip, TME and LCSC block automated fetches.
+The last one is the interesting rejection, and the holdout says why. The median
+`cluster_frac` of its `branding` drops is **0.0372** — the TI header logo it was
+fitted around — and the median of its `figure` drops is **0.0283**, *below* it.
+The distributions are interleaved rather than merely overlapping, so no
+threshold on this measure separates them: even `cluster_frac <= 0.01` still
+labels 2 of 25 as real. What it cuts is *small figures* — a Vishay page whose
+entire content is one impedance-vs-frequency plot, Renesas multi-view package
+outline drawings (many small clusters, so "largest cluster" reads small), AOS
+part-marking and test-circuit pages whose captions read *Figure A* and defeat a
+keep-gate whose regex wants a digit. Full working in
+[`eval/curves-holdout.md`](curves-holdout.md).
 
-This is the thirteenth through sixteenth branding signal measured here, and the
+Two of the three original objections were fixed by building the holdout. The
+third was not, and it reproduced on real documents: **2 of the 17 in-sample
+drops carried rasters, and on the holdout 35 of 222 do** — dropping the page
+un-subsumes the image, so 46 rasters come back as standalone calls and four
+documents end up costing *more* than before. That is the QR-code filter's
+cascade (`eval/tds-corpus.md`), on a different branch.
+
+This is the thirteenth through seventeenth branding signal measured here, and the
 conclusion `eval/tds-corpus.md` reached for rasters holds for vectors: **a vendor
 logo is separable from a figure only by reading it**, and reading it is the call
 being avoided. The difference is the exposure. For rasters, branding was 3.4% of

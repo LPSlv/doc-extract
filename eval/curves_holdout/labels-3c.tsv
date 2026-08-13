@@ -1,0 +1,31 @@
+tag	label	note
+c105	branding	prose System Overview, Silicon Labs logo + header/footer rules
+c107	branding	prose interface spec / app notes, Silicon Labs logo + rules
+c111	branding	Table of Contents, TI logo + header/footer rules
+c114	branding	prose Device Functional Modes, TI logo + rules
+c115	branding	prose Operating Modes, TI logo + rules
+c116	branding	prose Programming / Serial Interface, TI logo + rules
+c118	branding	prose support + revision history, TI logo and ESD caution mark
+c123	branding	prose Layout Guidelines, TI logo + rules
+c124	branding	prose doc support, TI logo and ESD caution mark
+c126	branding	Package Option Addendum footnote text, TI logo + rules
+c127	branding	Table of Contents, TI logo + rules
+c130	branding	prose with inline equation, TI logo + rules
+c133	branding	TOC and revision history lists, TI logo + rules
+c135	branding	prose fault modes, TI logo + rules
+c137	branding	prose Application and Implementation, TI logo + rules
+c138	branding	prose Layout Guidelines, TI logo + rules
+c140	branding	trademarks/glossary text, TI logo and ESD caution mark
+c141	branding	addendum disclaimer text, TI logo + rules
+c144	branding	prose Power Supply / Layout, TI logo + rules
+c146	branding	revision history lists, TI logo + rules
+c147	branding	addendum disclaimer and qualified versions, TI logo + rules
+c149	branding	doc support text, TI logo and ESD caution mark
+c152	figure	datasheet front page: simplified block diagram plus device information table
+c159	branding	Table of Contents, TI logo + rules
+c161	branding	addendum note only, TI logo + rules
+c162	branding	Table of Contents, TI logo + rules
+c166	branding	addendum disclaimer and qualified versions, TI logo + rules
+c167	branding	TOC and revision history lists, TI logo + rules
+c168	branding	revision history bullets, TI logo + rules
+c169	branding	prose design procedure with two equations, TI logo + rules

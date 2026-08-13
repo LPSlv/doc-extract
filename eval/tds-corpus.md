@@ -20,8 +20,13 @@ component classes rather than one manufacturer's ICs:
 Not committed to git (vendor copyright); `corpus/` is gitignored. The download
 list is in `eval/tds-fetch.sh` so the corpus is reproducible.
 
-ST, Microchip, TME and LCSC block automated fetches; those vendors are absent
-for that reason, not by choice.
+ST, Microchip, TME and LCSC are absent, not by choice — but the reasons differ,
+and this line said "block automated fetches" for all four until 2026-08-13.
+Building `corpus/datasheet_holdout` checked each one: **Microchip's server
+answers 200**; it is `robots.txt` that says `Disallow: /`, so the omission is
+policy-compliance rather than refusal. ST, TME and LCSC do refuse. The
+distinction matters because a robots policy can be revisited with the
+publisher's permission and a 403 cannot.
 
 ## Results
 

@@ -1,0 +1,31 @@
+tag	label	note
+c056	branding	TOC entries, Renesas logo + header/footer rules
+c057	branding	TOC continuation, logo + rules only
+c058	branding	GPIO prose text, logo + header/footer rules
+c059	branding	GPIO modes prose, logo + rules
+c060	branding	OTP memory prose, logo + rules
+c061	branding	EEPROM prose, logo + rules
+c063	branding	reset-sequence prose, logo + rules
+c066	branding	near-blank page, only Renesas logo and rule
+c067	figure	package outline drawing, top/side views, land pattern
+c070	figure	SOT23-3 package outline drawing with land pattern
+c071	branding	ISL6551 datasheet cover text, Intersil logo + rules
+c072	figure	QFN package outline drawing, multiple views
+c074	figure	ZSC31050 cover with basic circuit/block diagram
+c075	branding	Table of Contents, header/footer rules only
+c077	branding	pin description prose, header/footer rules
+c079	branding	troubleshooting prose lists, header/footer rules
+c080	branding	back cover, Raspberry Pi logo on colour field
+c085	branding	CM4/CM5 differences prose, header/footer rules
+c086	branding	back cover, Raspberry Pi logo on colour field
+c091	branding	back cover, Raspberry Pi logo on colour field
+c092	branding	title page, large Raspberry Pi logo only
+c093	branding	RP2040 cover, colour field + rules, no figure
+c094	branding	RP2350 cover, colour field + rules, no figure
+c095	figure	back cover photo of person at monitor plus icon row
+c097	branding	CP2105 table of contents, Silicon Labs logo
+c100	branding	application-note list prose, logo + rules
+c101	figure	marketing banner with 3D city-on-board render, icons
+c102	figure	back cover photo of person at monitor plus icon row
+c103	branding	blank page, header rule and Silicon Labs logo
+c104	branding	CP2110 table of contents, logo + rules

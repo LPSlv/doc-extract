@@ -1,0 +1,31 @@
+tag	label	note
+c170	branding	prose plus inline equations, TI logo and header/footer rules only
+c176	branding	package addendum text, TI logo, header/footer rules
+c177	branding	prose with CAUTION box, TI logo and rules
+c179	branding	addendum disclaimer prose, TI logo and rules
+c180	branding	description prose, TI logo and rules
+c182	branding	FPCB/rework prose bullets, TI logo and rules
+c183	branding	documentation support text, ESD caution icon, TI logo
+c186	branding	table of contents index, TI logo and rules
+c187	branding	application/layout prose with Note box, TI logo
+c188	branding	doc support plus revision history, ESD icon, TI logo
+c189	branding	short mechanical/orderable paragraph, TI logo
+c192	branding	addendum disclaimer prose, TI logo and rules
+c194	branding	table of contents index, TI logo and rules
+c196	branding	power dissipation prose with equations, TI logo
+c197	branding	doc support and revision history, ESD icon, TI logo
+c199	branding	inductor selection prose with equations, TI logo
+c200	branding	compensation equations and symbol list, TI logo
+c201	branding	addendum disclaimer and qualified versions, TI logo
+c205	branding	table of contents index, TI logo and rules
+c206	branding	two short description paragraphs, TI logo
+c207	branding	single Condition F paragraph, TI logo
+c208	branding	gate driver loss equations and prose, TI logo
+c210	branding	bootstrap capacitor prose with Note box, TI logo
+c211	branding	power supply recommendations prose, TI logo
+c214	branding	addendum qualified versions note, TI logo
+c215	figure	magnetic flux field illustration and pocket tape orientation drawing
+c218	figure	typical curves plot of impedance R/X/Z vs frequency
+c219	figure	three derating curves, drain current and power dissipation vs temperature
+c220	figure	current derating and power derating curves
+c222	branding	two-column prose with design equations, Vishay logo and rules

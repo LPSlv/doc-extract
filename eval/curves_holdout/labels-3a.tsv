@@ -1,0 +1,31 @@
+tag	label	note
+c105	branding	prose System Overview, Silicon Labs logo + header/footer rules
+c107	branding	prose app-note list, Silicon Labs logo + rules
+c111	branding	Table of Contents index, TI logo + header/footer rules
+c114	branding	prose Device Functional Modes, TI logo + rules
+c115	branding	prose Operating Modes, TI logo + rules
+c116	branding	prose Programming/Serial Interface, TI logo + rules
+c118	branding	prose support sections + revision history, ESD caution mark, TI logo
+c123	branding	prose Layout Guidelines, TI logo + rules
+c124	branding	prose doc support, ESD caution mark, TI logo
+c126	branding	package addendum footnotes/disclaimer, TI logo + rules
+c127	branding	Table of Contents index, TI logo + rules
+c130	branding	prose DAC transfer function with inline equation, TI logo
+c133	branding	Table of Contents plus revision history lists, TI logo
+c135	branding	prose fault/protection modes, TI logo + rules
+c137	branding	prose Application and Implementation intro, TI logo
+c138	branding	prose Layout Guidelines, TI logo + rules
+c140	branding	trademarks/glossary prose, ESD caution mark, TI logo
+c141	branding	package addendum disclaimer text, TI logo + rules
+c144	branding	prose power supply and layout guidelines, TI logo
+c146	branding	revision history change lists, TI logo + rules
+c147	branding	package addendum disclaimer and qualified versions, TI logo
+c149	branding	device/doc support prose, ESD caution mark, TI logo
+c152	figure	datasheet front page with simplified block diagram and device info table
+c159	branding	Table of Contents index, TI logo + rules
+c161	branding	package addendum note only, TI logo + rules
+c162	branding	Table of Contents index, TI logo + rules
+c166	branding	package addendum disclaimer and qualified versions, TI logo
+c167	branding	Table of Contents plus revision history lists, TI logo
+c168	branding	revision history bullets, TI logo + rules
+c169	branding	prose design procedure with two inline equations, TI logo

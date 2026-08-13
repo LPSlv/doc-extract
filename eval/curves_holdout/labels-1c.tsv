@@ -1,0 +1,31 @@
+tag	label	note
+c002	figure	gate charge/switching/UIS/diode recovery test circuits and waveforms
+c003	figure	IGBT test circuits and switching waveform figures A-C
+c004	figure	gate charge, resistive switching, UIS, diode recovery circuits and waveforms
+c005	branding	cover page prose (description/features/apps), logo, header bar, green mark
+c006	figure	typical application schematic of AOZ1266AQI buck regulator
+c008	figure	part marking package top-view drawing with callouts
+c009	branding	cover page prose, AOS logo, header bar, green product mark
+c011	branding	two columns of prose and equations, logo and header/footer rules only
+c013	figure	cover page with typical application schematic of AOZ1360
+c014	figure	part marking drawings for SO-8 and DFN-10 packages
+c016	figure	QFN-31 pin configuration diagram plus ordering table
+c018	figure	part marking QFN5x5 drawing over legal text
+c020	branding	Espressif disclaimer/copyright page with logo only
+c021	branding	Espressif ESP32-C3 cover page, logo and red bars only
+c022	branding	Espressif disclaimer/copyright page with logo only
+c024	branding	Espressif disclaimer/copyright page with logo only
+c025	branding	Espressif disclaimer/copyright page with logo only
+c027	branding	Espressif ESP32-PICO cover page, logo and red bars only
+c028	branding	Espressif disclaimer/copyright page with logo only
+c031	branding	Espressif disclaimer/copyright page with logo only
+c035	branding	Espressif disclaimer/copyright page with logo only
+c036	branding	Espressif disclaimer/copyright page with logo only
+c037	branding	Espressif ESP32 Series cover page, logo and red bars only
+c040	figure	angle detection illustrations, magnet orientation on SOIC-8
+c041	branding	Nexperia cover page prose with logos and rules only
+c045	branding	Omron short prose page, logo header rules and footer block
+c048	figure	tube/tape packing, reel and carrier tape dimension drawings
+c051	figure	block diagram and 20-lead TSSOP pin assignment
+c052	branding	Renesas cover page overview/features prose, logo and rules
+c053	branding	full page of prose, Renesas logo and header/footer rules

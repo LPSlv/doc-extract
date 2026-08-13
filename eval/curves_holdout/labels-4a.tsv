@@ -1,0 +1,31 @@
+tag	label	note
+c170	branding	prose plus typeset equations; TI logo, header/footer rules only
+c176	branding	package addendum text; TI logo and rules only
+c177	branding	prose plus CAUTION text box; TI logo and rules
+c179	branding	addendum footnotes/disclaimer text; TI logo and rules
+c180	branding	description prose; TI logo and rules
+c182	branding	FPCB/rework prose bullets; TI logo and rules
+c183	branding	documentation support text plus ESD warning mark; TI logo
+c186	branding	table of contents listing; TI logo and rules
+c187	branding	application prose plus Note box; TI logo and rules
+c188	branding	doc support, ESD mark, revision-history lines; TI logo
+c189	branding	one short paragraph; TI logo and rules
+c192	branding	disclaimer paragraphs; TI logo and rules
+c194	branding	table of contents listing; TI logo and rules
+c196	branding	power dissipation prose plus equations; TI logo and rules
+c197	branding	doc support, ESD mark, revision history; TI logo
+c199	branding	inductor selection prose plus equations; TI logo and rules
+c200	branding	compensation/power-loss equations and symbol list; TI logo
+c201	branding	addendum disclaimer text; TI logo and rules
+c205	branding	table of contents listing; TI logo and rules
+c206	branding	two short description paragraphs; TI logo and rules
+c207	branding	single Condition F paragraph; TI logo and rules
+c208	branding	gate-driver loss prose plus equations; TI logo and rules
+c210	branding	bootstrap capacitor prose plus Note box; TI logo
+c211	branding	power supply recommendation prose; TI logo and rules
+c214	branding	addendum qualified-versions text; TI logo and rules
+c215	figure	magnetic flux-field illustration and pocket-tape orientation drawing
+c218	figure	impedance vs frequency typical-curve plot (R, X, Z)
+c219	figure	three derating curves: current and power vs temperature
+c220	figure	two derating curves: current and power vs case temperature
+c222	branding	two-column design prose with inline equations; Vishay logo, rules

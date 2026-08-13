@@ -1,0 +1,121 @@
+tag	corpus	file	page	vendor	label	agree	note
+c002	datasheet_holdout	aos_AOD2210.pdf	6	aos	figure	3/3	MOSFET test circuits and switching waveforms
+c003	datasheet_holdout	aos_AOD6B60M1.pdf	9	aos	figure	3/3	IGBT gate charge/switching test circuits and waveforms
+c004	datasheet_holdout	aos_AONS660A60.pdf	6	aos	figure	3/3	gate charge, switching, UIS, diode recovery circuits
+c005	datasheet_holdout	aos_AOZ1266AQI.pdf	1	aos	branding	3/3	title page text, AOS logo, Green Product mark
+c006	datasheet_holdout	aos_AOZ1266AQI.pdf	2	aos	figure	3/3	typical application schematic of buck regulator
+c008	datasheet_holdout	aos_AOZ1266AQI.pdf	15	aos	figure	3/3	QFN part marking drawing plus legal text
+c009	datasheet_holdout	aos_AOZ1267AQI.pdf	1	aos	branding	3/3	title page text, AOS logo, Green Product mark
+c011	datasheet_holdout	aos_AOZ1267AQI.pdf	11	aos	branding	3/3	prose with equations, header logo and rules only
+c013	datasheet_holdout	aos_AOZ1360DIL.pdf	1	aos	figure	3/3	title page with typical application schematic
+c014	datasheet_holdout	aos_AOZ1360DIL.pdf	15	aos	figure	3/3	SO-8 and DFN-10 part marking drawings
+c016	datasheet_holdout	aos_AOZ23655QI.pdf	4	aos	figure	3/3	31-pin QFN pin configuration plus ordering table
+c018	datasheet_holdout	aos_AOZ23655QI.pdf	21	aos	figure	3/3	QFN5x5 part marking drawing, legal text
+c020	datasheet_holdout	espressif_esp32-c3-mini-1_datasheet_en.pdf	48	espressif	branding	3/3	Espressif logo and disclaimer text
+c021	datasheet_holdout	espressif_esp32-c3_datasheet_en.pdf	1	espressif	branding	3/3	datasheet cover, logo and red bars only
+c022	datasheet_holdout	espressif_esp32-c3_datasheet_en.pdf	76	espressif	branding	3/3	Espressif logo and disclaimer text
+c024	datasheet_holdout	espressif_esp32-c6_datasheet_en.pdf	86	espressif	branding	3/3	Espressif logo and disclaimer text
+c025	datasheet_holdout	espressif_esp32-h2-mini-1_mini-1u_datasheet_en.pdf	45	espressif	branding	3/3	Espressif logo and disclaimer text
+c027	datasheet_holdout	espressif_esp32-pico-d4_datasheet_en.pdf	1	espressif	branding	3/3	datasheet cover, logo and red bars only
+c028	datasheet_holdout	espressif_esp32-pico-d4_datasheet_en.pdf	65	espressif	branding	3/3	Espressif logo and disclaimer text
+c031	datasheet_holdout	espressif_esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf	53	espressif	branding	3/3	Espressif logo and disclaimer text
+c035	datasheet_holdout	espressif_esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf	52	espressif	branding	3/3	Espressif logo and disclaimer text
+c036	datasheet_holdout	espressif_esp32-wrover-e_esp32-wrover-ie_datasheet_en.pdf	53	espressif	branding	3/3	Espressif logo and disclaimer text
+c037	datasheet_holdout	espressif_esp32_datasheet_en.pdf	1	espressif	branding	3/3	datasheet cover, logo and red bars only
+c040	datasheet_holdout	melexis_mlx90365.pdf	42	melexis	figure	3/3	SOIC-8 magnet angle orientation illustrations
+c041	datasheet_holdout	nexperia_74LVC1G32.pdf	1	nexperia	branding	3/3	title page text, Nexperia logos only
+c045	datasheet_holdout	omron_en-b3f.pdf	9	omron	branding	3/3	short prose, Omron header rules and footer box
+c048	datasheet_holdout	omron_en-g6s.pdf	7	omron	figure	3/3	reel and carrier tape dimension drawings
+c051	datasheet_holdout	renesas_85104i-datasheet.pdf	1	renesas	figure	3/3	block diagram and pin assignment drawing
+c052	datasheet_holdout	renesas_8a34046-datasheet.pdf	1	renesas	branding	3/3	overview and feature text, Renesas logo and rules
+c053	datasheet_holdout	renesas_8a34046-datasheet.pdf	3	renesas	branding	3/3	prose only, Renesas logo and header/footer rules
+c056	datasheet_holdout	renesas_8a34046-datasheet.pdf	6	renesas	branding	3/3	TOC entries, Renesas logo + header/footer rules
+c057	datasheet_holdout	renesas_8a34046-datasheet.pdf	7	renesas	branding	3/3	TOC continuation, logo + rules only
+c058	datasheet_holdout	renesas_8a34046-datasheet.pdf	38	renesas	branding	3/3	GPIO prose text, logo + header/footer rules
+c059	datasheet_holdout	renesas_8a34046-datasheet.pdf	39	renesas	branding	3/3	GPIO modes prose, logo + rules
+c060	datasheet_holdout	renesas_8a34046-datasheet.pdf	42	renesas	branding	3/3	OTP memory prose, logo + rules
+c061	datasheet_holdout	renesas_8a34046-datasheet.pdf	43	renesas	branding	3/3	EEPROM prose, logo + rules
+c063	datasheet_holdout	renesas_8a34046-datasheet.pdf	46	renesas	branding	3/3	reset-sequence prose, logo + rules
+c066	datasheet_holdout	renesas_8n3pgdambki-025-data-sheet.pdf	20	renesas	branding	3/3	near-blank page, only Renesas logo and rule
+c067	datasheet_holdout	renesas_isl23415-datasheet.pdf	18	renesas	figure	3/3	package outline drawing, top/side views, land pattern
+c070	datasheet_holdout	renesas_isl60002-datasheet.pdf	39	renesas	figure	3/3	SOT23-3 package outline drawing with land pattern
+c071	datasheet_holdout	renesas_isl6551-datasheet.pdf	1	renesas	branding	3/3	ISL6551 datasheet cover text, Intersil logo + rules
+c072	datasheet_holdout	renesas_isl8016-datasheet.pdf	22	renesas	figure	3/3	QFN package outline drawing, multiple views
+c074	datasheet_holdout	renesas_zsc31050-datasheet.pdf	1	renesas	figure	3/3	ZSC31050 cover with basic circuit/block diagram
+c075	datasheet_holdout	rpi_cm4-datasheet.pdf	3	rpi	branding	3/3	Table of Contents, header/footer rules only
+c077	datasheet_holdout	rpi_cm4-datasheet.pdf	13	rpi	branding	3/3	pin description prose, header/footer rules
+c079	datasheet_holdout	rpi_cm4-datasheet.pdf	27	rpi	branding	3/3	troubleshooting prose lists, header/footer rules
+c080	datasheet_holdout	rpi_cm4-datasheet.pdf	30	rpi	branding	3/3	back cover, Raspberry Pi logo on colour field
+c085	datasheet_holdout	rpi_cm5-datasheet.pdf	36	rpi	branding	3/3	CM4/CM5 differences prose, header/footer rules
+c086	datasheet_holdout	rpi_cm5-datasheet.pdf	38	rpi	branding	3/3	back cover, Raspberry Pi logo on colour field
+c091	datasheet_holdout	rpi_pico-w-datasheet.pdf	26	rpi	branding	3/3	back cover, Raspberry Pi logo on colour field
+c092	datasheet_holdout	rpi_raspberry-pi-4-datasheet.pdf	1	rpi	branding	3/3	title page, large Raspberry Pi logo only
+c093	datasheet_holdout	rpi_rp2040-datasheet.pdf	1	rpi	branding	3/3	RP2040 cover, colour field + rules, no figure
+c094	datasheet_holdout	rpi_rp2350-datasheet.pdf	1	rpi	branding	3/3	RP2350 cover, colour field + rules, no figure
+c095	datasheet_holdout	silabs_cp2102-9.pdf	26	silabs	figure	3/3	back cover photo of person at monitor plus icon row
+c097	datasheet_holdout	silabs_cp2105.pdf	2	silabs	branding	3/3	CP2105 table of contents, Silicon Labs logo
+c100	datasheet_holdout	silabs_cp2105.pdf	22	silabs	branding	3/3	application-note list prose, logo + rules
+c101	datasheet_holdout	silabs_cp2105.pdf	24	silabs	figure	3/3	marketing banner with 3D city-on-board render, icons
+c102	datasheet_holdout	silabs_cp2108.pdf	35	silabs	figure	3/3	back cover photo of person at monitor plus icon row
+c103	datasheet_holdout	silabs_cp2110.pdf	2	silabs	branding	3/3	blank page, header rule and Silicon Labs logo
+c104	datasheet_holdout	silabs_cp2110.pdf	3	silabs	branding	3/3	CP2110 table of contents, logo + rules
+c105	datasheet_holdout	silabs_cp2110.pdf	4	silabs	branding	3/3	prose System Overview, Silicon Labs logo + header/footer rules
+c107	datasheet_holdout	silabs_cp2110.pdf	24	silabs	branding	3/3	prose app-note list, Silicon Labs logo + rules
+c111	datasheet_holdout	ti_ads1220.pdf	2	ti	branding	3/3	Table of Contents index, TI logo + header/footer rules
+c114	datasheet_holdout	ti_ads1220.pdf	34	ti	branding	3/3	prose Device Functional Modes, TI logo + rules
+c115	datasheet_holdout	ti_ads1220.pdf	35	ti	branding	3/3	prose Operating Modes, TI logo + rules
+c116	datasheet_holdout	ti_ads1220.pdf	36	ti	branding	3/3	prose Programming/Serial Interface, TI logo + rules
+c118	datasheet_holdout	ti_ads1220.pdf	67	ti	branding	3/3	prose support sections + revision history, ESD caution mark, TI logo
+c123	datasheet_holdout	ti_ads131m04.pdf	91	ti	branding	3/3	prose Layout Guidelines, TI logo + rules
+c124	datasheet_holdout	ti_ads131m04.pdf	93	ti	branding	3/3	prose doc support, ESD caution mark, TI logo
+c126	datasheet_holdout	ti_cd4013b.pdf	16	ti	branding	3/3	package addendum footnotes/disclaimer, TI logo + rules
+c127	datasheet_holdout	ti_cd4066b.pdf	2	ti	branding	3/3	Table of Contents index, TI logo + rules
+c130	datasheet_holdout	ti_dac80501.pdf	21	ti	branding	3/3	prose DAC transfer function with inline equation, TI logo
+c133	datasheet_holdout	ti_drv8323.pdf	3	ti	branding	3/3	Table of Contents plus revision history lists, TI logo
+c135	datasheet_holdout	ti_drv8323.pdf	50	ti	branding	3/3	prose fault/protection modes, TI logo + rules
+c137	datasheet_holdout	ti_drv8323.pdf	63	ti	branding	3/3	prose Application and Implementation intro, TI logo
+c138	datasheet_holdout	ti_drv8323.pdf	75	ti	branding	3/3	prose Layout Guidelines, TI logo + rules
+c140	datasheet_holdout	ti_drv8323.pdf	79	ti	branding	3/3	trademarks/glossary prose, ESD caution mark, TI logo
+c141	datasheet_holdout	ti_drv8323.pdf	82	ti	branding	3/3	package addendum disclaimer text, TI logo + rules
+c144	datasheet_holdout	ti_hdc3020.pdf	36	ti	branding	3/3	prose power supply and layout guidelines, TI logo
+c146	datasheet_holdout	ti_hdc3020.pdf	40	ti	branding	3/3	revision history change lists, TI logo + rules
+c147	datasheet_holdout	ti_hdc3020.pdf	51	ti	branding	3/3	package addendum disclaimer and qualified versions, TI logo
+c149	datasheet_holdout	ti_ina181.pdf	37	ti	branding	3/3	device/doc support prose, ESD caution mark, TI logo
+c152	datasheet_holdout	ti_ina228.pdf	1	ti	figure	3/3	datasheet front page with simplified block diagram and device info table
+c159	datasheet_holdout	ti_ina238.pdf	2	ti	branding	3/3	Table of Contents index, TI logo + rules
+c161	datasheet_holdout	ti_ina238.pdf	40	ti	branding	3/3	package addendum note only, TI logo + rules
+c162	datasheet_holdout	ti_lm5164.pdf	2	ti	branding	3/3	Table of Contents index, TI logo + rules
+c166	datasheet_holdout	ti_lm5164.pdf	35	ti	branding	3/3	package addendum disclaimer and qualified versions, TI logo
+c167	datasheet_holdout	ti_lmr33630.pdf	2	ti	branding	3/3	Table of Contents plus revision history lists, TI logo
+c168	datasheet_holdout	ti_lmr33630.pdf	3	ti	branding	3/3	revision history bullets, TI logo + rules
+c169	datasheet_holdout	ti_lmr33630.pdf	21	ti	branding	3/3	prose design procedure with two inline equations, TI logo
+c170	datasheet_holdout	ti_lmr33630.pdf	22	ti	branding	3/3	prose plus typeset equations; TI logo, header/footer rules only
+c176	datasheet_holdout	ti_lmt01.pdf	26	ti	branding	3/3	package addendum text; TI logo and rules only
+c177	datasheet_holdout	ti_opa189.pdf	34	ti	branding	3/3	prose plus CAUTION text box; TI logo and rules
+c179	datasheet_holdout	ti_opa2188.pdf	29	ti	branding	3/3	addendum footnotes/disclaimer text; TI logo and rules
+c180	datasheet_holdout	ti_opt4001.pdf	3	ti	branding	3/3	description prose; TI logo and rules
+c182	datasheet_holdout	ti_opt4001.pdf	43	ti	branding	3/3	FPCB/rework prose bullets; TI logo and rules
+c183	datasheet_holdout	ti_opt4001.pdf	44	ti	branding	3/3	documentation support text plus ESD warning mark; TI logo
+c186	datasheet_holdout	ti_sn74lv1t34.pdf	2	ti	branding	3/3	table of contents listing; TI logo and rules
+c187	datasheet_holdout	ti_sn74lv1t34.pdf	13	ti	branding	3/3	application prose plus Note box; TI logo and rules
+c188	datasheet_holdout	ti_sn74lv1t34.pdf	14	ti	branding	3/3	doc support, ESD mark, revision-history lines; TI logo
+c189	datasheet_holdout	ti_sn74lv1t34.pdf	15	ti	branding	3/3	one short paragraph; TI logo and rules
+c192	datasheet_holdout	ti_tca9534.pdf	32	ti	branding	3/3	disclaimer paragraphs; TI logo and rules
+c194	datasheet_holdout	ti_tps25200.pdf	2	ti	branding	3/3	table of contents listing; TI logo and rules
+c196	datasheet_holdout	ti_tps25200.pdf	18	ti	branding	3/3	power dissipation prose plus equations; TI logo and rules
+c197	datasheet_holdout	ti_tps25200.pdf	22	ti	branding	3/3	doc support, ESD mark, revision history; TI logo
+c199	datasheet_holdout	ti_tps54360.pdf	27	ti	branding	3/3	inductor selection prose plus equations; TI logo and rules
+c200	datasheet_holdout	ti_tps54360.pdf	32	ti	branding	3/3	compensation/power-loss equations and symbol list; TI logo
+c201	datasheet_holdout	ti_tps54360.pdf	41	ti	branding	3/3	addendum disclaimer text; TI logo and rules
+c205	datasheet_holdout	ti_ucc21520.pdf	2	ti	branding	3/3	table of contents listing; TI logo and rules
+c206	datasheet_holdout	ti_ucc21520.pdf	3	ti	branding	3/3	two short description paragraphs; TI logo and rules
+c207	datasheet_holdout	ti_ucc21520.pdf	25	ti	branding	3/3	single Condition F paragraph; TI logo and rules
+c208	datasheet_holdout	ti_ucc21520.pdf	30	ti	branding	3/3	gate-driver loss prose plus equations; TI logo and rules
+c210	datasheet_holdout	ti_ucc21520.pdf	32	ti	branding	3/3	bootstrap capacitor prose plus Note box; TI logo
+c211	datasheet_holdout	ti_ucc21520.pdf	38	ti	branding	3/3	power supply recommendation prose; TI logo and rules
+c214	datasheet_holdout	ti_ucc21520.pdf	46	ti	branding	3/3	addendum qualified-versions text; TI logo and rules
+c215	datasheet_holdout	vishay_ihlp-2525cz-5a.pdf	3	vishay	figure	3/3	magnetic flux-field illustration and pocket-tape orientation drawing
+c218	datasheet_holdout	vishay_ilhb.pdf	5	vishay	figure	3/3	impedance vs frequency typical-curve plot (R, X, Z)
+c219	datasheet_holdout	vishay_si4567dy.pdf	10	vishay	figure	3/3	three derating curves: current and power vs temperature
+c220	datasheet_holdout	vishay_si4840bdy.pdf	5	vishay	figure	3/3	two derating curves: current and power vs case temperature
+c222	datasheet_holdout	vishay_sip12107.pdf	15	vishay	branding	3/3	two-column design prose with inline equations; Vishay logo, rules

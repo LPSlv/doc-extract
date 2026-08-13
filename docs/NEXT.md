@@ -103,12 +103,27 @@ For scale, `boxed_text` was 0.69%.
 
 What is left from it:
 
-- **`curves` is 45% of all vision calls and a quarter of that is branding** —
-  2,770 firings, and nothing measured reaches it. Four signals tried, all in
-  `eval/rejected-signals.md`. The one that separates cleanly (small stroke
-  cluster, no caption: 17 cut, 0 lost) needs a *datasheet* holdout, which does
-  not exist and is hard to build: ST, Microchip, TME and LCSC block automated
-  fetches.
+- ~~**`curves` is 45% of all vision calls and a quarter of that is branding**~~ —
+  **the datasheet holdout now exists and the rule is rejected on it.**
+  `corpus/datasheet_holdout` — 295 datasheets, 9,449 pages, eleven vendors, no
+  vendor above 19% of files (TI is 9%, against 75% in `corpus/datasheets`),
+  disjoint by filename and by sha256 with one collision found and removed — was
+  fetched for exactly this. 222 drops, 120 labelled blind by three labellers
+  each: **80% precision (95% Wilson 72–86), 24 real figures lost**; 98% on TI,
+  **66% on every other vendor**. It also cascades: 46 subsumed rasters return and
+  four documents finish with *more* calls than before.
+  [`eval/curves-holdout.md`](../eval/curves-holdout.md). Nothing measured now
+  reaches the 2,770 `curves` firings — but **the corpus is the durable asset**,
+  and it is the right holdout for any future vendor-boilerplate candidate, as
+  `pmc_holdout` was for journals.
+- **Correction, made while fetching:** Microchip does *not* block automated
+  fetches at the server — `ww1.microchip.com` answers 200 to a datasheet
+  request. Its `robots.txt` is `Disallow: /`, so the corpus omits it by policy,
+  not by refusal. Winbond is the same shape (`Disallow: /resource-files`). ST,
+  TME and LCSC are unchanged. `analog.com` is simply unreachable from this
+  network, and would be the best remaining diversity source if reached
+  elsewhere. Actually refusing with 403: onsemi, ROHM, Toshiba, Bourns,
+  Littelfuse, TDK, TE Connectivity.
 - **The unreachable 16** of `whole_document`'s 41 wasted calls: BMC/RSC title
   pages, TI tables of contents, and old scanned journal pages where the page
   *is* one image, so no geometric test can see it is only prose.

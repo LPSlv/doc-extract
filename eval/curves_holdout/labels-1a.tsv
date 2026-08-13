@@ -1,0 +1,31 @@
+tag	label	note
+c002	figure	MOSFET test circuits and switching waveforms
+c003	figure	IGBT gate charge/switching test circuits and waveforms
+c004	figure	gate charge, switching, UIS, diode recovery circuits
+c005	branding	title page text, AOS logo, Green Product mark
+c006	figure	typical application schematic of buck regulator
+c008	figure	QFN part marking drawing plus legal text
+c009	branding	title page text, AOS logo, Green Product mark
+c011	branding	prose with equations, header logo and rules only
+c013	figure	title page with typical application schematic
+c014	figure	SO-8 and DFN-10 part marking drawings
+c016	figure	31-pin QFN pin configuration plus ordering table
+c018	figure	QFN5x5 part marking drawing, legal text
+c020	branding	Espressif logo and disclaimer text
+c021	branding	datasheet cover, logo and red bars only
+c022	branding	Espressif logo and disclaimer text
+c024	branding	Espressif logo and disclaimer text
+c025	branding	Espressif logo and disclaimer text
+c027	branding	datasheet cover, logo and red bars only
+c028	branding	Espressif logo and disclaimer text
+c031	branding	Espressif logo and disclaimer text
+c035	branding	Espressif logo and disclaimer text
+c036	branding	Espressif logo and disclaimer text
+c037	branding	datasheet cover, logo and red bars only
+c040	figure	SOIC-8 magnet angle orientation illustrations
+c041	branding	title page text, Nexperia logos only
+c045	branding	short prose, Omron header rules and footer box
+c048	figure	reel and carrier tape dimension drawings
+c051	figure	block diagram and pin assignment drawing
+c052	branding	overview and feature text, Renesas logo and rules
+c053	branding	prose only, Renesas logo and header/footer rules

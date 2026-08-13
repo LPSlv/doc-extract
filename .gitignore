@@ -18,3 +18,7 @@ eval/nofigure/pages/
 eval/nofigure/parts/
 eval/nofigure/holdout/pages/
 eval/nofigure/holdout/parts/
+eval/curves_holdout/pages/
+eval/curves_holdout/parts/
+eval/multiraster/pages/
+eval/multiraster/holdout/pages/

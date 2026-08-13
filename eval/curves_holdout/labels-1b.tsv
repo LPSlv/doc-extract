@@ -1,0 +1,31 @@
+tag	label	note
+c002	figure	gate charge / switching test circuits and waveforms
+c003	figure	IGBT test circuits and switching waveform figures A-C
+c004	figure	gate charge, switching, UIS, diode recovery circuits and waveforms
+c005	branding	title page prose, AOS logo, green product mark only
+c006	figure	typical application schematic of buck regulator
+c008	figure	part marking package drawing plus legal text
+c009	branding	title page prose, AOS logo, green product mark only
+c011	branding	prose with inline equations, logo and header/footer rules
+c013	figure	typical application schematic with logo and green mark
+c014	figure	SO-8 and DFN-10 part marking drawings
+c016	figure	QFN pin configuration diagram plus ordering table
+c018	figure	QFN5x5 part marking drawing plus disclaimer text
+c020	branding	Espressif disclaimer/copyright page, logo only
+c021	branding	datasheet cover title, red bars, Espressif logo
+c022	branding	Espressif disclaimer/copyright page, logo only
+c024	branding	Espressif disclaimer/copyright page, logo only
+c025	branding	Espressif disclaimer/copyright page, logo only
+c027	branding	ESP32-PICO cover title with logo and red bars
+c028	branding	Espressif disclaimer/copyright page, logo only
+c031	branding	Espressif disclaimer/copyright page, logo only
+c035	branding	Espressif disclaimer/copyright page, logo only
+c036	branding	Espressif disclaimer/copyright page, logo only
+c037	branding	ESP32 Series cover title with logo and red bars
+c040	figure	angle detection SOIC-8 magnet orientation illustrations
+c041	branding	Nexperia cover, description/features text, logo only
+c045	branding	Omron text page, header rules, logo, footer notice box
+c048	figure	tube/tape packing, reel and carrier tape drawings
+c051	figure	block diagram and TSSOP pin assignment
+c052	branding	Renesas overview/features text, logo and rules
+c053	branding	Renesas prose page, logo and header/footer rules
