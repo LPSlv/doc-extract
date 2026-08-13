@@ -1,0 +1,31 @@
+tag	label	note
+n006	figure	chat-bubble output examples with avatar icons
+n014	figure	three-panel pipeline flow diagram of run decomposition
+n022	figure	functional block diagram of battery charger IC
+n030	figure	stencil solder-paste mechanical drawing with dimensions
+n038	figure	rendered PCB layout photo of TO-220 example
+n046	figure	functional block diagram of LDO regulator
+n054	figure	ECG amplifier circuit schematic with component values
+n062	figure	TSSOP package outline mechanical drawing with detail view
+n070	figure	SOIC land pattern and solder mask drawings
+n078	table	device nomenclature table plus ESD warning icon
+n086	table	electrical characteristics parameter table
+n094	branding	revision history bullet lists, only TI logo
+n102	figure	two startup inrush current waveform plots
+n110	figure	bar charts and SEM micrographs with release curves
+n118	figure	X2QFN stencil solder-paste mechanical drawing
+n126	figure	stacked histograms of extrema wavelength distributions
+n134	none	two-column reference list only
+n142	figure	time-series style plots and comfort bar chart
+n150	table	detailed performance results table over text
+n158	none	acknowledgment and numbered reference list
+n166	figure	dropout voltage versus output current curve
+n174	figure	junction temperature rise curve with circuit data tables
+n182	figure	grid of generated landscape sample images
+n190	figure	pie chart and annual uptake bar chart
+n198	figure	box plots and WOMAC score line plots
+n206	none	plain prose methods and results text
+n214	branding	journal masthead, RSC logo, Creative Commons badge
+n222	figure	two photomicrographs of Hodgkin's disease cells
+n230	figure	ETDRS acuity scatter plot plus adverse events table
+n238	figure	arthroscopic photo of shoulder repair, then references

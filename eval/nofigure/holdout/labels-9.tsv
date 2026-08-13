@@ -1,0 +1,30 @@
+tag	label	note
+pmc001	none	two-column prose, running head rule only
+pmc005	none	two-column prose, introduction and methods
+pmc009	none	two-column reference list plus licence text
+pmc013	none	two-column reference list, publisher's note
+pmc017	none	two-column prose, thin coloured rules only
+pmc021	branding	prose two columns, Springer logo in footer
+pmc025	branding	reference list, Springer logo in footer
+pmc029	branding	reference list, Springer logo in footer
+pmc033	none	article title page, abstract, copyright footer
+pmc037	none	two-column reference list only
+pmc041	none	title page, abstract, rotated journal name text
+pmc045	none	acknowledgements and two-column reference list
+pmc049	none	conclusions, declarations, two-column references
+pmc053	none	two-column reference list only
+pmc057	none	conclusions, ethics, acknowledgements, references
+pmc061	none	chemical characterisation text, NMR data, conclusions
+pmc065	none	funding, conflicts, references, how-to-cite box
+pmc069	none	methods and results prose, two columns
+pmc073	none	reference list plus open-access licence footer
+pmc077	none	single-column methods prose only
+pmc081	branding	reference list, Korean J Radiology logo top-right
+pmc085	none	introduction and methods prose, two columns
+pmc089	none	declarations and two-column reference list
+pmc093	none	discussion and conclusions prose, two columns
+pmc097	none	discussion, conclusions, declarations, references
+pmc101	branding	methods prose, coloured masthead banner at top
+pmc105	branding	methods and results prose, Dovepress logos
+pmc109	none	introduction and methods prose, two columns
+pmc113	none	two-column reference list only

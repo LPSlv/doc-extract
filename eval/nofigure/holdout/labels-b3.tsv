@@ -1,0 +1,31 @@
+tag	label	note
+arx007	none	prose with numbered display equations only
+arx021	none	prose and display equations, supplementary methods text
+arx026	none	two-column reference list only
+arx040	none	two-column prose, related work and dataset text
+arx056	none	numbered reference list only
+arx061	none	appendix prose with display equations
+arx070	none	two-column prose describing measurement platform
+arx074	none	two-column numbered reference list
+arx091	none	single-column prose, contributions and related work
+arx106	branding	reference list with colored journal header rule
+arx123	none	prose with three display equations
+arx138	none	prose, methods overview referring to figures elsewhere
+arx150	none	numbered reference list only
+arx158	none	two-column prose, related work and theory
+arx166	none	two-column reference list only
+arx180	none	reference list only
+arx188	none	two-column prose with numbered contribution list
+arx194	none	prose describing campaign construction
+arx208	none	two-column reference list only
+arx215	none	prose results text quoting numbers inline
+arx228	none	prose, related work section
+arx232	none	proof text and theorem statement
+arx260	none	numbered reference list only
+arx272	branding	title page, abstract, prose; decorative title rules
+arx276	none	reference list only
+arx281	none	numbered reference list only
+arx289	none	reference list only
+arx308	none	appendix prose discussion, no graphics
+arx314	none	two-column prose with numbered display equations
+arx320	none	conclusion prose plus two-column reference list

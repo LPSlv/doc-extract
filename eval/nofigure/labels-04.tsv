@@ -1,0 +1,31 @@
+tag	label	note
+n004	figure	scatter maps and CDF curve plots with colorbars
+n012	none	prose plus boxed pseudocode listing, no graphics
+n020	figure	solder paste stencil mechanical drawing with dimensions
+n028	branding	TI logo and rules over revision history text
+n036	figure	six offset voltage versus temperature and supply plots
+n044	figure	six PSRR and output swing frequency response plots
+n052	figure	ESD protection circuit schematic with diodes and amplifier
+n060	figure	TSSOP package outline drawing with detail view
+n068	figure	logic gate layout diagram for unused inputs
+n076	figure	histograms and offset voltage characteristic curve plots
+n084	figure	histograms and offset voltage characteristic curve plots
+n092	figure	X2QFN package outline drawing with pin details
+n100	figure	PowerPAD SOIC mechanical drawing with gage plane detail
+n108	branding	nature banner over pseudocode algorithm and prose
+n116	figure	VQFN land pattern and solder mask detail drawings
+n124	figure	on-sky scatter plot with proper motion vectors
+n132	figure	two space-time colormap plots of numerical solution
+n140	figure	colored maze and clutter decomposition images plus tables
+n148	table	seven ruled comparison and ablation result tables
+n156	figure	block flowchart of four verification system variants
+n164	figure	adjustable regulator circuit schematic and package table
+n172	figure	WSON solder paste stencil drawing with dimensions
+n180	table	electrical and switching characteristics parameter tables
+n188	none	two columns of plain reference entries
+n196	none	reference list and publisher note, plain text
+n204	none	plain prose page of running text
+n212	none	two columns of bibliography references
+n220	figure	bone marrow micrograph and skull X-ray photograph
+n228	table	prose plus large ruled miRNA expression data table
+n236	none	two columns of prose with figure caption text

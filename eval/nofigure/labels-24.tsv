@@ -1,0 +1,31 @@
+tag	label	note
+n008	none	boxed monospace LLM prompt listing, plain text only
+n016	branding	datasheet cover text with nexperia logo and header rule
+n024	figure	SOP-16 solder paste stencil mechanical drawing
+n032	figure	averaging block diagram and amplitude-versus-samples noise plot
+n040	figure	six typical-characteristics charts, histograms and gain curves
+n048	branding	prose on dropout operation, TI logo header only
+n056	figure	SOIC-8 solder paste stencil mechanical drawing
+n064	figure	SOIC-14 solder paste stencil mechanical drawing
+n072	figure	SOIC-20 land pattern and solder mask detail drawings
+n080	figure	SOIC-8 solder paste stencil mechanical drawing
+n088	figure	sequential timer circuit schematic and output waveforms
+n096	figure	conversion cycle timing diagram plus equation
+n104	branding	revision history bullet lists, TI logo header only
+n112	figure	graphical abstract with mouse illustrations and timeline
+n120	branding	package option addendum notes, TI logo only
+n128	table	5G-to-6G scaling comparison table above two-column prose
+n136	figure	four JSA heatmaps, bar chart, three Schmidt mode panels
+n144	figure	pipeline framework diagram with RGB, depth, robot photos
+n152	none	numbered bibliography references only
+n160	table	absolute maximum, ESD, recommended operating condition tables
+n168	branding	support and trademark text with ESD warning icon
+n176	figure	TO-220 package mechanical outline drawing with dimensions
+n184	none	two-column bibliography references only
+n192	table	two primer sequence tables above two-column prose
+n200	branding	article title page, BMC logo, check-for-updates badge
+n208	figure	two boxplot panels of RUNX3 expression
+n216	figure	SEM micrographs, EDS spectrum, elemental mapping images
+n224	none	two-column methods prose, no graphics
+n232	branding	case report first page, check-for-updates badge, shaded box
+n240	table	wide clinical case table above references

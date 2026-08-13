@@ -1,0 +1,31 @@
+tag	label	note
+n005	figure	schematic of industrial event with signal traces and alarms
+n013	figure	MSE line plots vs clipping multiplier and minibatch size
+n021	figure	three ADC functional block diagrams
+n029	branding	table of contents and revision history, TI logo only
+n037	figure	thermal resistance and power dissipation curves
+n045	figure	transistor-level op-amp functional block schematic
+n053	figure	EMIRR vs frequency plot
+n061	branding	table of contents and revision history, TI logo only
+n069	branding	prose overview only, TI logo and footer rule
+n077	figure	three op-amp measurement circuit schematics
+n085	figure	PCB layout drawing and amplifier schematic
+n093	figure	six characterization plots of THD, current, overshoot
+n101	branding	equation and prose only, TI logo header
+n109	branding	journal cover page with QR code and banner
+n117	figure	solder stencil mechanical drawing with dimensions
+n125	figure	tangent-plane sky density maps with annotations
+n133	figure	3D space-time surface plots and profile curves
+n141	none	two-column prose with one inline equation
+n149	table	task ID to language instruction mapping table
+n157	figure	grid of precision and error-rate sliding-window plots
+n165	branding	table of contents and revision history, TI logo only
+n173	table	electrical characteristics parameter table
+n181	figure	latent diffusion model architecture diagram
+n189	figure	immune cell boxplots and correlation matrix
+n197	branding	journal title page, BMC logo and update badge
+n205	figure	multi-panel expression scatter plots and Western blots
+n213	figure	PCR gel electrophoresis image plus genetic diversity table
+n221	none	plain prose page of running text
+n229	figure	two GO enrichment bar charts
+n237	branding	article title page, check-for-updates badge only

@@ -1,0 +1,578 @@
+{
+ "rule": "whole_document page with 0 rasters and <= 2 paths",
+ "corpus": "corpus/pmc_holdout",
+ "dpi": 130,
+ "documents": 250,
+ "ok": 250,
+ "collapsed_documents": 65,
+ "vision_calls": 1244,
+ "whole_document_calls": 546,
+ "n_dropped": 113,
+ "candidates": [
+  {
+   "tag": "pmc001",
+   "file": "10.1177_18632521221129368.PMC9723872.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc002",
+   "file": "10.1177_18632521221129368.PMC9723872.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc003",
+   "file": "10.1177_18632521221129368.PMC9723872.pdf",
+   "page": 8
+  },
+  {
+   "tag": "pmc004",
+   "file": "10.1177_18632521221129368.PMC9723872.pdf",
+   "page": 9
+  },
+  {
+   "tag": "pmc005",
+   "file": "10.1177_27550834231197316.PMC10540568.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc006",
+   "file": "10.1177_27550834231197316.PMC10540568.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc007",
+   "file": "10.1177_27550834231197316.PMC10540568.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc008",
+   "file": "10.1177_27550834231197316.PMC10540568.pdf",
+   "page": 12
+  },
+  {
+   "tag": "pmc009",
+   "file": "1349-7235-56-1943.PMC5577067.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc010",
+   "file": "40478_2025_Article_2139.PMC12542097.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc011",
+   "file": "40478_2025_Article_2139.PMC12542097.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc012",
+   "file": "40478_2025_Article_2139.PMC12542097.pdf",
+   "page": 9
+  },
+  {
+   "tag": "pmc013",
+   "file": "40478_2025_Article_2139.PMC12542097.pdf",
+   "page": 11
+  },
+  {
+   "tag": "pmc014",
+   "file": "42003_2025_Article_7632.PMC11805992.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc015",
+   "file": "42003_2025_Article_7632.PMC11805992.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc016",
+   "file": "43856_2024_Article_720.PMC11739568.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc017",
+   "file": "43856_2024_Article_720.PMC11739568.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc018",
+   "file": "43856_2024_Article_720.PMC11739568.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc019",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc020",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 4
+  },
+  {
+   "tag": "pmc021",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc022",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 11
+  },
+  {
+   "tag": "pmc023",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 13
+  },
+  {
+   "tag": "pmc024",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 14
+  },
+  {
+   "tag": "pmc025",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 15
+  },
+  {
+   "tag": "pmc026",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 16
+  },
+  {
+   "tag": "pmc027",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 17
+  },
+  {
+   "tag": "pmc028",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 18
+  },
+  {
+   "tag": "pmc029",
+   "file": "726_2026_Article_3502.PMC12979271.pdf",
+   "page": 19
+  },
+  {
+   "tag": "pmc030",
+   "file": "IJABMR-9-236.PMC6822317.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc031",
+   "file": "IJCCM-18-513.PMC4134625.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc032",
+   "file": "IJNM-39-393.PMC11884354.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc033",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 1
+  },
+  {
+   "tag": "pmc034",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc035",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc036",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 8
+  },
+  {
+   "tag": "pmc037",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 9
+  },
+  {
+   "tag": "pmc038",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc039",
+   "file": "INZ2-12-446.PMC5725670.pdf",
+   "page": 11
+  },
+  {
+   "tag": "pmc040",
+   "file": "JAH3-13-e031484.PMC11179790.pdf",
+   "page": 9
+  },
+  {
+   "tag": "pmc041",
+   "file": "JGP_201511456.PMC4621752.pdf",
+   "page": 1
+  },
+  {
+   "tag": "pmc042",
+   "file": "JGP_201511456.PMC4621752.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc043",
+   "file": "JGP_201511456.PMC4621752.pdf",
+   "page": 11
+  },
+  {
+   "tag": "pmc044",
+   "file": "JGP_201511456.PMC4621752.pdf",
+   "page": 12
+  },
+  {
+   "tag": "pmc045",
+   "file": "JGP_201511456.PMC4621752.pdf",
+   "page": 13
+  },
+  {
+   "tag": "pmc046",
+   "file": "JGP_201511456.PMC4621752.pdf",
+   "page": 14
+  },
+  {
+   "tag": "pmc047",
+   "file": "JISPCD-6-359.PMC4981939.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc048",
+   "file": "JISPCD-6-359.PMC4981939.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc049",
+   "file": "JISPCD-6-359.PMC4981939.pdf",
+   "page": 7
+  },
+  {
+   "tag": "pmc050",
+   "file": "JOVR-12-30.PMC5340061.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc051",
+   "file": "JOVR-12-30.PMC5340061.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc052",
+   "file": "JOVR-12-30.PMC5340061.pdf",
+   "page": 9
+  },
+  {
+   "tag": "pmc053",
+   "file": "RA-008-C8RA07166G.PMC9086543.pdf",
+   "page": 7
+  },
+  {
+   "tag": "pmc054",
+   "file": "RA-009-C9RA08068F.PMC9076674.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc055",
+   "file": "RA-009-C9RA08068F.PMC9076674.pdf",
+   "page": 7
+  },
+  {
+   "tag": "pmc056",
+   "file": "RA-010-C9RA05895H.PMC9049140.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc057",
+   "file": "RA-010-C9RA05895H.PMC9049140.pdf",
+   "page": 12
+  },
+  {
+   "tag": "pmc058",
+   "file": "RA-010-C9RA05895H.PMC9049140.pdf",
+   "page": 13
+  },
+  {
+   "tag": "pmc059",
+   "file": "RA-010-C9RA05895H.PMC9049140.pdf",
+   "page": 14
+  },
+  {
+   "tag": "pmc060",
+   "file": "RA-010-D0RA09635K.PMC9058379.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc061",
+   "file": "RA-010-D0RA09635K.PMC9058379.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc062",
+   "file": "RA-010-D0RA09635K.PMC9058379.pdf",
+   "page": 7
+  },
+  {
+   "tag": "pmc063",
+   "file": "RA-013-D3RA00077J.PMC9997075.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc064",
+   "file": "RA-013-D3RA00077J.PMC9997075.pdf",
+   "page": 8
+  },
+  {
+   "tag": "pmc065",
+   "file": "cm9-139-1736.PMC13236295.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc066",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc067",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc068",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 4
+  },
+  {
+   "tag": "pmc069",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc070",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 7
+  },
+  {
+   "tag": "pmc071",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 12
+  },
+  {
+   "tag": "pmc072",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 15
+  },
+  {
+   "tag": "pmc073",
+   "file": "gkag175.PMC12956332.pdf",
+   "page": 16
+  },
+  {
+   "tag": "pmc074",
+   "file": "ijn-20-5161.PMC12036690.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc075",
+   "file": "ijn-20-5161.PMC12036690.pdf",
+   "page": 4
+  },
+  {
+   "tag": "pmc076",
+   "file": "ijn-20-5161.PMC12036690.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc077",
+   "file": "ijn-20-5161.PMC12036690.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc078",
+   "file": "ijn-20-5161.PMC12036690.pdf",
+   "page": 17
+  },
+  {
+   "tag": "pmc079",
+   "file": "ijn-20-5161.PMC12036690.pdf",
+   "page": 19
+  },
+  {
+   "tag": "pmc080",
+   "file": "kjr-19-358.PMC5840066.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc081",
+   "file": "kjr-19-358.PMC5840066.pdf",
+   "page": 8
+  },
+  {
+   "tag": "pmc082",
+   "file": "main.PMC10164889.pdf",
+   "page": 1
+  },
+  {
+   "tag": "pmc083",
+   "file": "main.PMC10248251.pdf",
+   "page": 4
+  },
+  {
+   "tag": "pmc084",
+   "file": "main.PMC10248251.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc085",
+   "file": "main.PMC10519841.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc086",
+   "file": "main.PMC10519841.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc087",
+   "file": "main.PMC12337683.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc088",
+   "file": "main.PMC12666721.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc089",
+   "file": "main.PMC12666721.pdf",
+   "page": 11
+  },
+  {
+   "tag": "pmc090",
+   "file": "main.PMC6565895.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc091",
+   "file": "main.PMC6974892.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc092",
+   "file": "main.PMC6974892.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc093",
+   "file": "main.PMC6974892.pdf",
+   "page": 8
+  },
+  {
+   "tag": "pmc094",
+   "file": "main.PMC6974892.pdf",
+   "page": 9
+  },
+  {
+   "tag": "pmc095",
+   "file": "main.PMC6974892.pdf",
+   "page": 10
+  },
+  {
+   "tag": "pmc096",
+   "file": "main.PMC8324949.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc097",
+   "file": "main.PMC8324949.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc098",
+   "file": "main.PMC8324949.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc099",
+   "file": "main.PMC8498686.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc100",
+   "file": "main.PMC8498686.pdf",
+   "page": 8
+  },
+  {
+   "tag": "pmc101",
+   "file": "noz159.PMC7442340.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc102",
+   "file": "noz159.PMC7442340.pdf",
+   "page": 13
+  },
+  {
+   "tag": "pmc103",
+   "file": "ott-9-2519.PMC4854247.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc104",
+   "file": "ott-9-2519.PMC4854247.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc105",
+   "file": "ott-9-2519.PMC4854247.pdf",
+   "page": 4
+  },
+  {
+   "tag": "pmc106",
+   "file": "wjon-13-343.PMC9822678.pdf",
+   "page": 5
+  },
+  {
+   "tag": "pmc107",
+   "file": "wjon-13-343.PMC9822678.pdf",
+   "page": 6
+  },
+  {
+   "tag": "pmc108",
+   "file": "wjon-13-343.PMC9822678.pdf",
+   "page": 7
+  },
+  {
+   "tag": "pmc109",
+   "file": "zr-46-3-634.PMC12361896.pdf",
+   "page": 2
+  },
+  {
+   "tag": "pmc110",
+   "file": "zr-46-3-634.PMC12361896.pdf",
+   "page": 3
+  },
+  {
+   "tag": "pmc111",
+   "file": "zr-46-3-634.PMC12361896.pdf",
+   "page": 11
+  },
+  {
+   "tag": "pmc112",
+   "file": "zr-46-3-634.PMC12361896.pdf",
+   "page": 12
+  },
+  {
+   "tag": "pmc113",
+   "file": "zr-46-3-634.PMC12361896.pdf",
+   "page": 13
+  }
+ ]
+}

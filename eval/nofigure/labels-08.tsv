@@ -1,0 +1,31 @@
+tag	label	note
+n008	branding	plain prompt text inside a plain rounded frame
+n016	branding	datasheet cover, prose and bullets, Nexperia logo only
+n024	figure	stencil solder-paste mechanical drawing with dimensions
+n032	figure	averaging block diagram and noise amplitude plot
+n040	figure	six typical-characteristics plots, histograms and gain curves
+n048	branding	prose only, TI header logo and footer rules
+n056	figure	SOIC stencil solder-paste drawing with dimensions
+n064	figure	SOIC-14 stencil solder-paste drawing with dimensions
+n072	figure	land pattern and solder mask detail drawings
+n080	figure	SOIC-8 stencil solder-paste drawing with dimensions
+n088	figure	sequential timer circuit schematic and output waveforms
+n096	figure	conversion cycle timing diagram plus equation
+n104	branding	revision history bullet lists, rules and TI logo
+n112	figure	graphical abstract with mouse illustrations and timeline
+n120	branding	package addendum notes text, TI logo only
+n128	table	scaling comparison table 5G versus 6G bottlenecks
+n136	figure	joint spectral amplitude heatmaps and Schmidt mode plots
+n144	figure	framework pipeline diagram with RGB depth and robot images
+n152	none	numbered reference list only
+n160	table	absolute maximum, ESD and operating condition tables
+n168	branding	support text with TI logo and ESD warning icon
+n176	figure	TO-220 package mechanical outline drawing with dimensions
+n184	none	two-column reference list only
+n192	table	two primer sequence tables plus prose
+n200	branding	article title page, BMC logo, abstract box, update badge
+n208	figure	RUNX3 expression boxplots by response, age and sex
+n216	figure	SEM micrographs, EDS spectrum and elemental maps
+n224	none	two-column methods prose, no graphics
+n232	branding	case report title page, key points box, update badge
+n240	table	wide case series table plus references

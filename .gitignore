@@ -13,3 +13,8 @@ eval/figqa/text/
 eval/figqa/view/
 eval/strokegrid/pages/
 eval/strokegrid/holdout/pages/
+eval/multifigure/pages/
+eval/nofigure/pages/
+eval/nofigure/parts/
+eval/nofigure/holdout/pages/
+eval/nofigure/holdout/parts/

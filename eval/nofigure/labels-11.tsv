@@ -1,0 +1,31 @@
+tag	label	note
+n003	figure	multi-survey light curve plots, optical and WISE magnitudes
+n011	figure	semantic map and world graph navigation illustration
+n019	figure	VSSOP package outline mechanical drawing with dimensions
+n027	figure	I2C timing diagram of SCL/SDA read frames
+n035	figure	six propagation delay versus input overdrive curves
+n043	figure	six source/sink current characteristic curves
+n051	figure	QFN exposed thermal pad mechanical drawing
+n059	figure	SOIC solder paste stencil pad layout drawing
+n067	figure	SOIC solder paste stencil pad layout drawing
+n075	figure	six op-amp typical characteristic curves
+n083	figure	TSSOP package outline mechanical drawing
+n091	figure	X2QFN solder paste stencil layout drawing
+n099	figure	two UVLO circuit schematics plus equations
+n107	figure	clinical hypertension treatment algorithm flowchart with icons
+n115	figure	I2C frame byte diagram and control register bitmap
+n123	figure	eight-panel scatter plots of positions and proper motions
+n131	figure	two space-time colour maps of v and w
+n139	table	boxed algorithm pseudocode listing with numbered steps
+n147	none	reference list only
+n155	figure	rendered hand reconstruction image grid plus ablation table
+n163	figure	SOIC package outline mechanical drawing
+n171	figure	shipping tube dimension diagram above packaging table
+n179	figure	two Butterworth filter circuit schematics
+n187	none	two-column prose, no graphics
+n195	none	two-column prose, no graphics
+n203	none	plain prose page
+n211	none	numbered reference list
+n219	figure	bar chart of compound concentrations, wild type versus mutant
+n227	figure	panelled photomicrographs of kisspeptin-immunoreactive neurons
+n235	none	prose with inline equations only

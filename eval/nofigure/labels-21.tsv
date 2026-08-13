@@ -1,0 +1,31 @@
+tag	label	note
+n005	figure	illustrative industrial event diagram with waveform panels
+n013	figure	two line-plot panels of MSE sensitivity sweeps
+n021	figure	three ADC functional block diagrams
+n029	branding	table of contents and revision history, TI logo only
+n037	figure	thermal resistance and power dissipation curves
+n045	figure	transistor-level op-amp functional block schematic
+n053	figure	EMIRR versus frequency plot
+n061	branding	table of contents and revision history, TI logo only
+n069	branding	prose overview only, TI logo and footer rule
+n077	figure	three op-amp test circuit schematics
+n085	figure	PCB layout drawing and amplifier schematic
+n093	figure	six characteristic curves of amplifier performance
+n101	branding	equation and prose, TI logo and footer bar
+n109	branding	journal masthead, article banner, QR code box
+n117	figure	solder stencil mechanical drawing with dimensions
+n125	figure	four annotated sky density maps
+n133	figure	3D space-time surface plots and profile curves
+n141	none	two-column prose with one inline equation
+n149	table	task ID mapping table across benchmarks
+n157	figure	nine-panel grid of precision and occurrence curves
+n165	branding	table of contents and revision history, TI logo only
+n173	table	electrical characteristics parameter table
+n181	figure	latent diffusion architecture diagram
+n189	figure	boxplot panel and correlation matrix plot
+n197	branding	journal cover page, BMC logo, updates icon
+n205	figure	scatter plots and Western blot bands
+n213	figure	PCR gel electrophoresis image plus data table
+n221	none	plain prose page of an old journal article
+n229	figure	two GO enrichment bar charts
+n237	branding	title page, rules and check-for-updates icon

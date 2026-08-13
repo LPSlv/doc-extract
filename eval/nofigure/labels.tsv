@@ -1,0 +1,241 @@
+tag	corpus	file	page	branch	label	agree	note
+n001	arxiv	2607.27983v1.pdf	5	curves	figure	3/3	two line plots with colorbars, growth rate and extinction rate
+n002	arxiv	2607.28715v1.pdf	9	curves	figure	3/3	three-panel spectrum, residuals and polarisation fraction plots
+n003	arxiv	2607.28735v1.pdf	12	curves	figure	3/3	multi-survey light curve plots, optical and WISE magnitude
+n004	arxiv	2607.29060v1.pdf	11	curves	figure	3/3	scatter maps and CDF curve plots with colorbars
+n005	arxiv	2607.29092v1.pdf	1	curves	figure	3/3	annotated block diagram of industrial event with waveform panels
+n006	arxiv	2607.29287v1.pdf	27	curves	figure	3/3	illustrated chat-bubble prompt and reasoning output examples
+n007	arxiv	2607.29397v1.pdf	19	curves	figure	3/3	boxed example panel with red-highlighted failure text, Figure 11
+n008	arxiv	2607.29530v1.pdf	21	curves	branding	2/3	plain prompt text inside a plain rounded frame
+n009	arxiv	2607.29545v1.pdf	9	curves	figure	3/3	video frame grids comparing routing strategies, plus small ablation table
+n010	arxiv	2607.29581v1.pdf	26	curves	figure	3/3	histogram and line plot of pixel AP, plus table
+n011	arxiv	2607.29600v1.pdf	1	curves	figure	3/3	teaser diagram of semantic map, world graph, navigation
+n012	arxiv	2607.29637v1.pdf	3	curves	none	2/3	prose plus boxed pseudocode listing, no graphics
+n013	arxiv	2607.29675v1.pdf	80	curves	figure	3/3	line plots of MSE vs clipping multiplier and minibatch size
+n014	arxiv	2607.29678v1.pdf	7	curves	figure	3/3	three-panel pipeline flowchart of run decomposition
+n015	arxiv	2607.29687v1.pdf	16	curves	figure	3/3	box plots and Sankey failure-flow diagrams
+n016	datasheets	nexperia_74HC_HCT595.pdf	1	curves	branding	3/3	datasheet cover, prose and bullets, Nexperia logo only
+n017	datasheets	nexperia_74LVC1G08.pdf	10	curves	figure	3/3	SOT886 package outline drawing with dimension table
+n018	datasheets	nexperia_74LVC1G125.pdf	15	curves	figure	3/3	X2SON5 package outline mechanical drawing with dimensions
+n019	datasheets	ti_ads1015.pdf	43	curves	figure	3/3	VSSOP package outline mechanical drawing with dimensions
+n020	datasheets	ti_ads1015.pdf	49	curves	figure	3/3	solder paste stencil mechanical drawing with dimensions
+n021	datasheets	ti_ads1115.pdf	12	curves	figure	3/3	three ADC functional block diagrams
+n022	datasheets	ti_bq24074.pdf	18	curves	figure	3/3	functional block diagram of battery charger IC
+n023	datasheets	ti_bq25895.pdf	15	curves	branding	3/3	prose only, TI logo and header rule
+n024	datasheets	ti_cd4017b.pdf	15	curves	figure	3/3	stencil solder-paste mechanical drawing with dimensions
+n025	datasheets	ti_cd4051b.pdf	16	curves	figure	3/3	functional block diagram of CD4053B multiplexer
+n026	datasheets	ti_cd4051b.pdf	21	curves	branding	3/3	TI logo header and ESD warning icon only
+n027	datasheets	ti_hdc1080.pdf	13	curves	figure	3/3	I2C timing diagram of SCL/SDA read frames
+n028	datasheets	ti_hdc2080.pdf	3	curves	branding	3/3	TI logo and rules over revision history text
+n029	datasheets	ti_ina180.pdf	2	curves	branding	3/3	table of contents and revision history, TI logo only
+n030	datasheets	ti_ina180.pdf	49	curves	figure	3/3	solder paste stencil mechanical drawing with dimensions
+n031	datasheets	ti_ina219.pdf	36	curves	figure	3/3	mechanical package outline drawing with dimensions
+n032	datasheets	ti_ina3221.pdf	16	curves	figure	3/3	averaging block diagram and noise amplitude plot
+n033	datasheets	ti_iso1050.pdf	13	curves	figure	3/3	six characteristic plots including two spectrum analyzer screenshots
+n034	datasheets	ti_lm2576.pdf	15	curves	branding	3/3	TI logo header; body is prose and equations
+n035	datasheets	ti_lm2901.pdf	17	curves	figure	3/3	six propagation delay versus input overdrive curves
+n036	datasheets	ti_lm2903.pdf	12	curves	figure	3/3	six offset voltage versus temperature and supply plots
+n037	datasheets	ti_lm317.pdf	25	curves	figure	3/3	thermal resistance and max power dissipation curves
+n038	datasheets	ti_lm317.pdf	27	curves	figure	3/3	rendered PCB layout photo of TO-220 example
+n039	datasheets	ti_lm324.pdf	28	curves	branding	3/3	revision history list, TI logo and rules
+n040	datasheets	ti_lm358.pdf	15	curves	figure	3/3	six typical-characteristics plots, histograms and gain curves
+n041	datasheets	ti_lm5069.pdf	37	curves	figure	3/3	land pattern and solder mask detail drawings
+n042	datasheets	ti_lm833.pdf	34	curves	figure	3/3	VSSOP land pattern and solder mask detail drawings
+n043	datasheets	ti_lmv321.pdf	10	curves	figure	3/3	six source/sink current versus output voltage curves
+n044	datasheets	ti_lmv321.pdf	11	curves	figure	3/3	six PSRR and output swing frequency response plots
+n045	datasheets	ti_lmv358.pdf	16	curves	figure	3/3	transistor-level op-amp functional block schematic
+n046	datasheets	ti_lp2985.pdf	15	curves	figure	3/3	functional block diagram of LDO regulator
+n047	datasheets	ti_lp2985.pdf	17	curves	figure	3/3	brickwall current-limit plot, Figure 6-3
+n048	datasheets	ti_lp2985.pdf	19	curves	branding	3/3	prose only, TI header logo and footer rules
+n049	datasheets	ti_max3232.pdf	19	curves	figure	3/3	SOIC-16 mechanical package drawing with dimensions
+n050	datasheets	ti_opa134.pdf	33	curves	figure	3/3	SOIC solder paste stencil design drawing
+n051	datasheets	ti_opa1678.pdf	49	curves	figure	3/3	QFN exposed thermal pad mechanical drawing, bottom view
+n052	datasheets	ti_opa196.pdf	25	curves	figure	3/3	ESD protection circuit schematic with diodes and amplifier
+n053	datasheets	ti_opa2277.pdf	16	curves	figure	3/3	EMIRR vs frequency plot
+n054	datasheets	ti_opa2333.pdf	22	curves	figure	3/3	ECG amplifier circuit schematic with component values
+n055	datasheets	ti_opa333.pdf	47	curves	figure	3/3	land pattern and solder mask detail drawings
+n056	datasheets	ti_opa350.pdf	34	curves	figure	3/3	SOIC stencil solder-paste drawing with dimensions
+n057	datasheets	ti_opa365.pdf	32	curves	figure	3/3	solder paste stencil layout drawing for SOT-23
+n058	datasheets	ti_pca9306.pdf	10	curves	branding	3/3	TI logo header only, otherwise plain prose
+n059	datasheets	ti_sn74hc00.pdf	25	curves	figure	3/3	SOIC solder paste stencil pad layout drawing
+n060	datasheets	ti_sn74hc00.pdf	36	curves	figure	3/3	TSSOP package outline drawing with detail view
+n061	datasheets	ti_sn74hc125.pdf	2	curves	branding	3/3	table of contents and revision history, TI logo only
+n062	datasheets	ti_sn74hc126.pdf	34	curves	figure	3/3	TSSOP package outline drawing with dimensioned views
+n063	datasheets	ti_sn74hc138.pdf	2	curves	branding	3/3	table of contents and revision history, TI logo
+n064	datasheets	ti_sn74hc14.pdf	36	curves	figure	3/3	SOIC-14 stencil solder-paste drawing with dimensions
+n065	datasheets	ti_sn74hc157.pdf	12	curves	branding	3/3	plain prose text with TI logo header only
+n066	datasheets	ti_sn74hc157.pdf	15	curves	branding	3/3	TI logo and ESD icon; revision history text
+n067	datasheets	ti_sn74hc240.pdf	34	curves	figure	3/3	SOIC-20 solder paste stencil pad layout drawing
+n068	datasheets	ti_sn74hc245.pdf	12	curves	figure	3/3	logic gate layout diagram for unused inputs
+n069	datasheets	ti_sn74hc373.pdf	8	curves	branding	3/3	prose overview under headings, TI logo only
+n070	datasheets	ti_sn74hc4066.pdf	25	curves	figure	3/3	land pattern and solder mask detail drawings
+n071	datasheets	ti_sn74hc541.pdf	9	curves	figure	3/3	two typical delay vs Vcc line charts
+n072	datasheets	ti_sn74hc541.pdf	29	curves	figure	3/3	land pattern and solder mask detail drawings
+n073	datasheets	ti_sn74hc574.pdf	17	curves	figure	3/3	ceramic dual flatpack mechanical drawing with dimensions
+n074	datasheets	ti_tca9548a.pdf	22	curves	figure	3/3	three application curve plots of voltage and resistance
+n075	datasheets	ti_tl071.pdf	24	curves	figure	3/3	six op-amp characteristic curves, voltage versus frequency
+n076	datasheets	ti_tl072.pdf	17	curves	figure	3/3	histograms and offset voltage characteristic curve plots
+n077	datasheets	ti_tl072.pdf	28	curves	figure	3/3	three op-amp test circuit schematics
+n078	datasheets	ti_tl072.pdf	34	curves	table	3/3	ruled device nomenclature table plus ESD icon
+n079	datasheets	ti_tl072.pdf	35	curves	branding	3/3	revision history list, TI logo and rules
+n080	datasheets	ti_tl072.pdf	69	curves	figure	3/3	SOIC-8 stencil solder-paste drawing with dimensions
+n081	datasheets	ti_tl072.pdf	74	curves	figure	3/3	TSSOP package outline drawing plus detail views
+n082	datasheets	ti_tl072.pdf	81	curves	figure	3/3	CDIP land pattern example drawing with dimensions
+n083	datasheets	ti_tl074.pdf	74	curves	figure	3/3	TSSOP package outline drawing with dimensions
+n084	datasheets	ti_tl084.pdf	17	curves	figure	3/3	histograms and offset voltage characteristic curve plots
+n085	datasheets	ti_tl084.pdf	27	curves	figure	3/3	PCB layout drawing and amplifier schematic
+n086	datasheets	ti_tl431.pdf	11	curves	table	3/3	electrical characteristics parameter table with min/typ/max
+n087	datasheets	ti_tlc555.pdf	2	curves	branding	3/3	table of contents, TI logo and rules
+n088	datasheets	ti_tlc555.pdf	22	curves	figure	3/3	sequential timer circuit schematic and output waveforms
+n089	datasheets	ti_tlv1117.pdf	20	curves	figure	3/3	adjustable regulator application circuit schematic
+n090	datasheets	ti_tlv9002.pdf	104	curves	figure	3/3	SOIC land pattern and solder mask detail drawings
+n091	datasheets	ti_tlv9061.pdf	81	curves	figure	3/3	X2QFN solder paste stencil pad layout drawing
+n092	datasheets	ti_tlv9061.pdf	96	curves	figure	3/3	X2QFN package outline drawing with pin details
+n093	datasheets	ti_tlv9062.pdf	18	curves	figure	3/3	six characteristic curves for op-amp parameters
+n094	datasheets	ti_tlv9062.pdf	31	curves	branding	3/3	revision history text lists, TI logo only
+n095	datasheets	ti_tlv9062.pdf	58	curves	figure	3/3	solder paste stencil land pattern drawing
+n096	datasheets	ti_tmp117.pdf	14	curves	figure	3/3	conversion cycle timing diagram plus equation
+n097	datasheets	ti_tps54331.pdf	2	curves	branding	3/3	table of contents and revision history, TI logo
+n098	datasheets	ti_tps54331.pdf	21	curves	branding	3/3	TI logo header; equations and bullet lists only
+n099	datasheets	ti_tps54560.pdf	15	curves	figure	3/3	two UVLO circuit schematics plus equations
+n100	datasheets	ti_tps54560.pdf	45	curves	figure	3/3	PowerPAD SOIC mechanical drawing with gage plane detail
+n101	datasheets	ti_tps61023.pdf	19	curves	branding	3/3	equation and prose, TI logo only
+n102	datasheets	ti_tps7a02.pdf	17	curves	figure	3/3	two startup inrush current waveform plots
+n103	datasheets	ti_tps7a02.pdf	44	curves	figure	3/3	DSBGA stencil solder paste drawing
+n104	datasheets	ti_tps7a47.pdf	23	curves	branding	3/3	revision history bullet lists, rules and TI logo
+n105	papers	bio_drug-discovery.pdf	2	curves	figure	3/3	architecture diagram of FNO and U-Net information flow
+n106	pmc	10.1177_17151635251352537.PMC12361176.pdf	1	curves	branding	3/3	journal banner, abstract box, CC and society logos
+n107	pmc	10.1177_17151635251352537.PMC12361176.pdf	14	curves	figure	3/3	clinical hypertension treatment algorithm flowchart with icons
+n108	pmc	41598_2025_Article_28505.PMC12756295.pdf	5	curves	branding	2/3	nature banner over pseudocode algorithm and prose
+n109	pmc	IJA-64-403.PMC7286399.pdf	1	curves	branding	3/3	journal cover page with QR code and masthead
+n110	pmc	ijn-12-1959.PMC5357078.pdf	8	curves	figure	3/3	bar charts and SEM micrographs with release curves
+n111	pmc	jbm-14-329.PMC10132291.pdf	1	curves	branding	3/3	journal masthead, ORCID icon, Creative Commons badge
+n112	pmc	main.PMC9535317.pdf	1	curves	figure	3/3	graphical abstract with mouse illustrations and timeline
+n113	tds	ti_ina226.pdf	7	curves	figure	3/3	six characteristic curves and histograms for INA226
+n114	tds	ti_ina226.pdf	17	curves	branding	3/3	TI logo header only, plain prose page
+n115	tds	ti_tca9548a.pdf	17	curves	figure	3/3	I2C bit frame diagram and control register bit map
+n116	tds	ti_tca9548a.pdf	34	curves	figure	3/3	VQFN land pattern and solder mask detail drawings
+n117	tds	ti_tlv9061.pdf	52	curves	figure	3/3	solder stencil mechanical drawing with dimensions
+n118	tds	ti_tlv9061.pdf	98	curves	figure	3/3	stencil solder paste pad drawing with dimensions
+n119	tds	ti_tps54331.pdf	13	curves	branding	3/3	prose only, TI logo and header rule
+n120	tds	ti_tps54331.pdf	30	curves	branding	3/3	package addendum notes text, TI logo only
+n121	arxiv	2607.28081v1.pdf	1	whole_document	none	3/3	title, authors, abstract, introduction prose only
+n122	arxiv	2607.28594v1.pdf	5	whole_document	none	3/3	plain two-column prose with one inline equation
+n123	arxiv	2607.28594v1.pdf	13	whole_document	figure	3/3	eight panels of positions, proper motions, distances
+n124	arxiv	2607.28594v1.pdf	14	whole_document	figure	3/3	on-sky scatter plot with proper motion vectors
+n125	arxiv	2607.28594v1.pdf	16	whole_document	figure	3/3	tangent-plane sky density maps, SDSS and DELVE
+n126	arxiv	2607.28736v1.pdf	12	whole_document	figure	3/3	histograms of extrema wavelengths per stellar population
+n127	arxiv	2607.28736v1.pdf	13	whole_document	figure	3/3	line width distribution histograms, Fig 8
+n128	arxiv	2607.28965v1.pdf	6	whole_document	table	3/3	scaling comparison table 5G versus 6G bottlenecks
+n129	arxiv	2607.29029v1.pdf	4	whole_document	none	3/3	equations only, Riemann problem wave solutions
+n130	arxiv	2607.29029v1.pdf	16	whole_document	figure	3/3	wave interaction diagram in x-t plane
+n131	arxiv	2607.29029v1.pdf	39	whole_document	figure	3/3	two space-time colour density plots plus small table
+n132	arxiv	2607.29029v1.pdf	41	whole_document	figure	3/3	two space-time colormap plots of numerical solution
+n133	arxiv	2607.29029v1.pdf	49	whole_document	figure	3/3	3D space-time surface plots and profile curves
+n134	arxiv	2607.29445v1.pdf	8	whole_document	none	3/3	two-column reference list only
+n135	arxiv	2607.29469v1.pdf	2	whole_document	none	3/3	two-column prose, no graphics
+n136	arxiv	2607.29469v1.pdf	8	whole_document	figure	3/3	joint spectral amplitude heatmaps and Schmidt mode plots
+n137	arxiv	2607.29482v1.pdf	8	whole_document	none	3/3	two-column bibliography reference list
+n138	arxiv	2607.29500v1.pdf	8	whole_document	figure	3/3	ILC control framework block diagram, Fig. 3
+n139	arxiv	2607.29513v1.pdf	5	whole_document	table	3/3	boxed algorithm pseudocode listing with numbered nested steps
+n140	arxiv	2607.29513v1.pdf	6	whole_document	figure	3/3	colored maze and clutter decomposition images plus tables
+n141	arxiv	2607.29517v1.pdf	3	whole_document	none	2/3	two-column prose with one inline equation
+n142	arxiv	2607.29517v1.pdf	7	whole_document	figure	3/3	time-series style alignment plots and comfort bar chart
+n143	arxiv	2607.29517v1.pdf	9	whole_document	none	3/3	single reference entry, otherwise blank
+n144	arxiv	2607.29567v1.pdf	2	whole_document	figure	3/3	framework pipeline diagram with RGB depth and robot images
+n145	arxiv	2607.29568v1.pdf	6	whole_document	figure	3/3	DynoDINO pipeline architecture diagram with CT slices
+n146	arxiv	2607.29568v1.pdf	17	whole_document	table	3/3	two ablation results tables of segmentation metrics
+n147	arxiv	2607.29568v1.pdf	20	whole_document	none	3/3	references list only, no graphics
+n148	arxiv	2607.29595v1.pdf	7	whole_document	table	3/3	seven ruled comparison and ablation result tables
+n149	arxiv	2607.29596v1.pdf	13	whole_document	table	3/3	task ID to language instruction mapping table
+n150	arxiv	2607.29613v1.pdf	8	whole_document	table	3/3	detailed performance results table across backbones
+n151	arxiv	2607.29613v1.pdf	11	whole_document	none	3/3	reference list only
+n152	arxiv	2607.29613v1.pdf	13	whole_document	none	3/3	numbered reference list only
+n153	arxiv	2607.29613v1.pdf	15	whole_document	figure	3/3	line chart of training dynamics plus results table
+n154	arxiv	2607.29633v1.pdf	2	whole_document	none	3/3	plain two-column prose, keywords and references format
+n155	arxiv	2607.29633v1.pdf	8	whole_document	figure	3/3	rendered hand images grid plus ablation table
+n156	arxiv	2607.29640v1.pdf	1	whole_document	figure	3/3	block flowchart of four verification system variants
+n157	arxiv	2607.29640v1.pdf	6	whole_document	figure	3/3	grid of precision and occurrence curves
+n158	arxiv	2607.29640v1.pdf	8	whole_document	none	3/3	acknowledgment and numbered reference list
+n159	datasheets	ti_adc128s102.pdf	2	whole_document	branding	3/3	table of contents and revision history, TI logo
+n160	datasheets	ti_adc128s102.pdf	4	whole_document	table	3/3	absolute maximum, ESD and operating condition tables
+n161	datasheets	ti_lf356.pdf	5	whole_document	table	3/3	thermal metrics and AC electrical characteristics tables
+n162	datasheets	ti_lf356.pdf	15	whole_document	figure	3/3	detailed transistor-level schematic of op amp
+n163	datasheets	ti_lf356.pdf	43	whole_document	figure	3/3	SOIC-8 package outline drawing with dimensions
+n164	datasheets	ti_lm1117.pdf	1	whole_document	figure	3/3	adjustable regulator circuit schematic and package table
+n165	datasheets	ti_lm1117.pdf	2	whole_document	branding	3/3	table of contents and revision history, TI logo only
+n166	datasheets	ti_lm1117.pdf	15	whole_document	figure	3/3	dropout voltage versus output current curve
+n167	datasheets	ti_lm1117.pdf	19	whole_document	figure	3/3	four thermal resistance and power dissipation graphs
+n168	datasheets	ti_lm1117.pdf	22	whole_document	branding	3/3	support text with TI logo and ESD warning icon
+n169	datasheets	ti_lm1117.pdf	23	whole_document	table	3/3	packaging information table of orderable part numbers
+n170	datasheets	ti_lm1117.pdf	29	whole_document	figure	3/3	reel and tape dimension drawings plus quadrant diagram
+n171	datasheets	ti_lm1117.pdf	33	whole_document	figure	3/3	tube dimension drawing plus package materials table
+n172	datasheets	ti_lm1117.pdf	42	whole_document	figure	3/3	WSON solder paste stencil drawing with dimensions
+n173	datasheets	ti_lm2596.pdf	7	whole_document	table	3/3	electrical characteristics parameter table with footnotes
+n174	datasheets	ti_lm2596.pdf	34	whole_document	figure	3/3	junction temperature rise curve plus circuit data tables
+n175	datasheets	ti_lm2596.pdf	40	whole_document	figure	3/3	tape and reel diagrams plus dimension tables
+n176	datasheets	ti_lm2596.pdf	44	whole_document	figure	3/3	TO-220 package mechanical outline drawing with dimensions
+n177	datasheets	ti_lm4562.pdf	3	whole_document	table	3/3	electrical characteristics parameter table for LM4562
+n178	datasheets	ti_lm4562.pdf	24	whole_document	figure	3/3	noise measurement circuit and two gain-vs-frequency plots
+n179	datasheets	ti_lm4562.pdf	27	whole_document	figure	3/3	two Butterworth filter circuit schematics with equations
+n180	datasheets	ti_lmc555.pdf	5	whole_document	table	3/3	electrical and switching characteristics parameter tables
+n181	papers	ai_latent-diffusion.pdf	4	whole_document	figure	3/3	latent diffusion model architecture diagram
+n182	papers	ai_latent-diffusion.pdf	18	whole_document	figure	3/3	grid of generated landscape sample photographs
+n183	papers	rob_diffusion-policy.pdf	7	whole_document	figure	3/3	grid of robot manipulation photographs, Fig 6
+n184	papers	rob_diffusion-policy.pdf	13	whole_document	none	3/3	two-column reference list only
+n185	papers	rob_diffusion-policy.pdf	16	whole_document	figure	3/3	grid of robot camera photographs for five tasks
+n186	papers	rob_diffusion-policy.pdf	18	whole_document	figure	3/3	photograph of cable tie and cup, hyperparameter tables
+n187	papers	rob_pi0.pdf	3	whole_document	none	3/3	plain two-column prose, no graphics
+n188	pmc	10.1177_1557988320916402.PMC7180304.pdf	7	whole_document	none	3/3	two columns of plain reference entries
+n189	pmc	12672_2025_Article_4328.PMC12835458.pdf	9	whole_document	figure	3/3	immune cell boxplots and correlation matrix
+n190	pmc	12879_2026_Article_13420.PMC13262211.pdf	6	whole_document	figure	3/3	pie chart and annual uptake bar chart
+n191	pmc	12882_2025_Article_4431.PMC12400737.pdf	5	whole_document	table	3/3	Table 3 of nominal characteristics with p values
+n192	pmc	12885_2025_Article_13472.PMC11987264.pdf	3	whole_document	table	3/3	two primer sequence tables plus prose
+n193	pmc	12885_2025_Article_13472.PMC11987264.pdf	5	whole_document	figure	3/3	immunohistochemical micrograph panels plus two small tables
+n194	pmc	12885_2025_Article_13472.PMC11987264.pdf	9	whole_document	none	3/3	reference list and publisher's note, no graphics
+n195	pmc	12984_2025_Article_1787.PMC12625538.pdf	12	whole_document	none	3/3	plain two-column prose, no graphics
+n196	pmc	13018_2024_Article_5406.PMC11674078.pdf	11	whole_document	none	3/3	reference list and publisher note, plain text
+n197	pmc	13018_2026_Article_6814.PMC13374069.pdf	1	whole_document	branding	3/3	journal title page, BMC logo and update badge
+n198	pmc	13018_2026_Article_6814.PMC13374069.pdf	13	whole_document	figure	3/3	box plots and WOMAC score line graphs
+n199	pmc	13018_2026_Article_6814.PMC13374069.pdf	14	whole_document	none	2/3	abbreviations, declarations and reference list
+n200	pmc	13287_2025_Article_4518.PMC12296610.pdf	1	whole_document	branding	3/3	article title page, BMC logo, abstract box, update badge
+n201	pmc	13287_2025_Article_4518.PMC12296610.pdf	4	whole_document	none	3/3	methods prose, two columns, no graphics
+n202	pmc	13287_2025_Article_4518.PMC12296610.pdf	7	whole_document	figure	3/3	pathway schematic, heatmap, micrographs and bar charts
+n203	pmc	137.PMC2132290.pdf	5	whole_document	none	3/3	scanned plain prose page, no illustrations
+n204	pmc	137.PMC2132290.pdf	9	whole_document	none	3/3	plain prose page of running text
+n205	pmc	40001_2025_Article_2662.PMC12102984.pdf	8	whole_document	figure	3/3	scatter plots and Western blot panels
+n206	pmc	427.PMC2136578.pdf	2	whole_document	none	3/3	plain prose methods and results text
+n207	pmc	427.PMC2136578.pdf	9	whole_document	figure	3/3	photographic plate of colony culture dishes
+n208	pmc	BJH-208-1617.PMC13176527.pdf	5	whole_document	figure	3/3	RUNX3 expression boxplots by response, age and sex
+n209	pmc	KCAM_20_2674357.PMC13185462.pdf	4	whole_document	table	3/3	methods prose with primer sequence table
+n210	pmc	KCAM_20_2674357.PMC13185462.pdf	6	whole_document	figure	3/3	violin plots, heatmaps and scatter plots panel
+n211	pmc	KJM2-34-95.PMC11915692.pdf	8	whole_document	none	3/3	numbered reference list, no graphics
+n212	pmc	LM054059Han.PMC11801479.pdf	8	whole_document	none	3/3	two columns of bibliography references
+n213	pmc	OpenVetJ-15-10-4928.PMC12613187.pdf	3	whole_document	figure	3/3	PCR gel electrophoresis image plus genetic diversity table
+n214	pmc	RA-008-C8RA04873H.PMC9088548.pdf	1	whole_document	branding	3/3	journal masthead, RSC logo, Creative Commons badge
+n215	pmc	RA-013-D3RA02180G.PMC10167492.pdf	4	whole_document	figure	3/3	SEM TEM SAED micrographs, XRD and Raman spectra
+n216	pmc	RA-016-D5RA08584E.PMC12781967.pdf	6	whole_document	figure	3/3	SEM micrographs, EDS spectrum and elemental maps
+n217	pmc	TJEM-20-81.PMC7305669.pdf	4	whole_document	figure	3/3	two bar charts of pain scores and satisfaction
+n218	pmc	TJEM-20-81.PMC7305669.pdf	5	whole_document	none	3/3	discussion text and reference list, colored headings
+n219	pmc	ao2c08104.PMC10193573.pdf	5	whole_document	figure	3/3	bar chart of compound concentration, wild type versus mutant
+n220	pmc	edinbmedj75066-0001.PMC5306817.pdf	15	whole_document	figure	3/3	bone marrow micrograph and skull X-ray photograph
+n221	pmc	edinbmedj75066-0001.PMC5306817.pdf	27	whole_document	none	3/3	plain prose page of a historical journal article
+n222	pmc	edinbmedj75066-0001.PMC5306817.pdf	29	whole_document	figure	3/3	two micrographs of Hodgkin's disease cell series
+n223	pmc	gky363.PMC6101490.pdf	1	whole_document	none	3/3	title, authors, abstract prose only
+n224	pmc	gky363.PMC6101490.pdf	2	whole_document	none	3/3	two-column methods prose, no graphics
+n225	pmc	jc773627.PMC2110141.pdf	6	whole_document	figure	3/3	gene dependency diagrams of yeast cell cycle
+n226	pmc	jc773627.PMC2110141.pdf	8	whole_document	none	3/3	plain two-column prose, no graphics at all
+n227	pmc	jrd-63-571.PMC5735268.pdf	5	whole_document	figure	3/3	photomicrograph panels of kisspeptin-immunoreactive neurons
+n228	pmc	main.PMC10746431.pdf	4	whole_document	table	3/3	prose plus large ruled miRNA expression data table
+n229	pmc	main.PMC10746431.pdf	7	whole_document	figure	3/3	two GO enrichment bar charts
+n230	pmc	main.PMC11179408.pdf	7	whole_document	figure	3/3	ETDRS acuity plot plus adverse events table
+n231	pmc	main.PMC11292527.pdf	6	whole_document	table	3/3	Table 1 bamboo species listing plus conclusion prose
+n232	pmc	main.PMC12666957.pdf	1	whole_document	branding	3/3	case report title page, key points box, update badge
+n233	pmc	main.PMC12666957.pdf	3	whole_document	figure	3/3	3D electroanatomic map and intraoperative photograph
+n234	pmc	main.PMC13316097.pdf	2	whole_document	table	3/3	boxed abbreviations list beside two-column prose
+n235	pmc	main.PMC13333375.pdf	3	whole_document	none	3/3	prose with inline equations, no graphics
+n236	pmc	main.PMC5527157.pdf	3	whole_document	none	3/3	two columns of prose with figure caption text
+n237	pmc	main.PMC6819747.pdf	1	whole_document	branding	3/3	article title page, check-for-updates badge only
+n238	pmc	main.PMC6819747.pdf	6	whole_document	figure	3/3	arthroscopic photo of shoulder repair, references
+n239	pmc	main.PMC8349044.pdf	2	whole_document	figure	3/3	chest CT scans and hematoxylin eosin micrograph
+n240	pmc	main.PMC9403183.pdf	5	whole_document	table	3/3	wide case series table plus references

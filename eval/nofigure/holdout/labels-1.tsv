@@ -1,0 +1,30 @@
+tag	label	note
+pmc001	none	two-column prose, methods section, no graphics
+pmc005	none	two-column prose, introduction and methods
+pmc009	none	reference list, licence text, copyright footer
+pmc013	none	reference list plus publisher's note
+pmc017	none	two-column prose, results and discussion
+pmc021	branding	prose only; Springer logo in footer
+pmc025	branding	reference list; Springer logo in footer
+pmc029	branding	reference list end; Springer logo in footer
+pmc033	none	title, authors, abstract, introduction start
+pmc037	none	two-column reference list only
+pmc041	branding	title page and abstract; vertical journal masthead
+pmc045	none	acknowledgements and reference list
+pmc049	none	conclusions, disclosures, reference list
+pmc053	none	two-column reference list only
+pmc057	none	discussion, conclusions, references
+pmc061	none	chemical characterisation text and conclusions
+pmc065	none	funding, references, how-to-cite box
+pmc069	none	methods and results prose only
+pmc073	none	reference list and licence footer
+pmc077	none	methods prose, single column
+pmc081	branding	reference list; KJR journal logo top right
+pmc085	none	prose, methods, no graphics
+pmc089	none	declarations and reference list
+pmc093	none	discussion and conclusions prose
+pmc097	none	discussion, conclusions, start of references
+pmc101	branding	methods prose; coloured journal header banner
+pmc105	branding	methods and results; Dovepress logos
+pmc109	none	introduction and methods prose
+pmc113	none	two-column reference list only

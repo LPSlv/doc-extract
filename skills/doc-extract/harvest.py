@@ -29,6 +29,7 @@ SCALE_GUARD   = 15     # vision calls above which we stop and ask
 VSTROKE_TOL   = 2.0    # pt; two vertical strokes within this are the same edge
 VSTROKE_MIN   = 3.0    # pt; shorter than this is a tick or a glyph, not an edge
 BOX_REPEATS   = 3      # occurrences of a 2-edge signature that make it a template
+TEXTONLY_PATHS = 2     # drawing paths a page may have and still carry no picture
 
 
 def _cluster(vals, tol=EDGE_TOL):
@@ -47,6 +48,11 @@ def page_geometry(pg):
            FULLPAGE_FRAC of the page (background tint), divided by page area.
            Unfilled/stroke-only paths contribute zero ink.
 
+    paths = how many drawing paths the page contains at all, filtered by
+           nothing. A page with no raster and at most TEXTONLY_PATHS of these
+           has no picture on it: a border and a header rule are two paths.
+           Used only by the whole_document filter; see drop_textonly().
+
     vx_pos = the distinct x-positions of the page's vertical strokes, clustered
            at VSTROKE_TOL. Counting POSITIONS rather than strokes is what tells
            a frame (two positions: a left edge and a right edge) apart from a
@@ -60,12 +66,13 @@ def page_geometry(pg):
     """
     pw, ph = pg.rect.width, pg.rect.height
     parea = max(1.0, pw * ph)
-    curves = diagonals = axis_h = axis_v = rects = 0
+    curves = diagonals = axis_h = axis_v = rects = paths = 0
     xs, ys, ink = [], [], 0.0
     vx = []
     sx0 = sy0 = float("inf"); sx1 = sy1 = float("-inf")   # stroke bounding box
 
     for path in pg.get_cdrawings():
+        paths += 1
         rx0, ry0, rx1, ry1 = path["rect"]
         rw, rh = rx1 - rx0, ry1 - ry0
         is_background = rw * rh > parea * FULLPAGE_FRAC
@@ -112,6 +119,7 @@ def page_geometry(pg):
         "ink": round(ink / parea, 4),
         "stroke_frac": round(stroke_frac, 4), "stroke_aspect": round(stroke_aspect, 2),
         "vx_pos": tuple(round(v) for v in _cluster(vx, VSTROKE_TOL)),
+        "paths": paths,
     }
 
 
@@ -346,6 +354,52 @@ def cost_guard(items, doc, edges):
     return out, {"why": "cost_guard", "routed_tokens": ours, "whole_tokens": whole}
 
 
+def drop_textonly(items, geoms, img_pages, ocr_pages):
+    """Pages a whole-document collapse renders although they carry no picture.
+
+    `cost_guard` replaces the routed set with one render per page whenever the
+    routed set costs more than reading the whole document. That bound is on
+    cost, not on content: it renders the references, the acknowledgements and
+    the two-column prose along with everything else. Labelling 120 sampled
+    `whole_document` calls found 34% of them carry nothing to look at
+    (eval/nofigure.md), which is the largest single block of waste measured in
+    this router.
+
+    Most of it is not reachable - a prose page under a journal masthead is
+    branding, and branding is separable from a figure only by reading it
+    (eval/tds-corpus.md, twelve signals, eleven rejected). This takes the part
+    that needs no judgement at all: a page with NO raster placed on it and at
+    most TEXTONLY_PATHS drawing paths has nothing pictorial on it. A page
+    border and a header rule are two paths.
+
+    Measured blind on two corpora fetched after the rule was written -
+    corpus/pmc_holdout (250 journal PDFs, disjoint from corpus/pmc by content
+    hash) and corpus/arxiv_holdout - by three independent labellers per page:
+    **203 drops labelled, 0 real items, 100% precision**, 95% Wilson 97-100%
+    and 96-100%. 113 of 546 whole_document calls on the first, 320 of 1,011 on
+    the second.
+
+    It cannot cascade the way the reverted QR filter did (eval/tds-corpus.md).
+    That filter removed IMAGES before `grid_pages`, so pages fell below
+    RASTER_GRID and re-expanded into crops. This removes a page render only
+    when the page carries no raster at all, and runs after cost_guard, so
+    there is nothing left on the page to un-subsume.
+
+    Text is unaffected either way: `process_pdf` runs over the whole document
+    independently of routing, so a dropped page keeps its extracted text.
+    """
+    keep, gone = [], []
+    for it in items:
+        i = it["page"] - 1
+        if (it["reason"] == "whole_document" and it["page"] not in ocr_pages
+                and i not in img_pages and i < len(geoms)
+                and geoms[i]["paths"] <= TEXTONLY_PATHS):
+            gone.append({"page": it["page"], "why": "textonly_page"})
+        else:
+            keep.append(it)
+    return keep, gone
+
+
 def harvest_batch(paths):
     """Harvest several documents and apply the cross-document furniture rule.
 
@@ -539,6 +593,12 @@ def harvest(path):
     items, guard = cost_guard(items, doc, edges)
     if guard:
         dropped.append(guard)
+        # Only ever after the collapse: before it, `seen` covers images the
+        # furniture filter is about to drop, and a page that looks bare here
+        # may still be carrying a raster the routed set would have emitted.
+        img_pages = {p for e in seen.values() for p in e["pages"]}
+        items, gone = drop_textonly(items, geoms, img_pages, ocr_pages)
+        dropped += gone
     doc.close()
 
     return {

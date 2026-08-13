@@ -1,0 +1,31 @@
+tag	label	note
+arx006	none	prose with numbered display equations only
+arx016	branding	shaded callout box banner, acknowledgements, references; no data graphic
+arx025	none	prose, acknowledgments and two-column reference list
+arx036	none	discussion and conclusion prose with bullet list
+arx053	none	related-work prose and conclusion, no graphics
+arx058	none	numbered reference list only
+arx066	none	numbered reference list only
+arx073	none	two-column conclusion prose plus references
+arx089	none	two-column numbered reference list only
+arx103	none	single-column numbered reference list only
+arx119	none	two-column reference list only
+arx134	none	two-column reference list only
+arx143	none	methods prose, no figures or tables
+arx153	none	two-column numbered reference list only
+arx160	none	two-column conclusion, acknowledgments, references
+arx173	none	prose with numbered constraint equations only
+arx187	none	title, authors, abstract, introduction prose
+arx190	none	two-column reference list only
+arx205	none	two-column introduction and related-work prose
+arx213	none	methods and results prose, no graphics
+arx221	none	limitations and conclusion prose only
+arx230	none	problem-statement prose with definition and bullets
+arx251	none	two-column supplementary prose, no graphics
+arx266	none	numbered reference list only
+arx274	none	reference list only
+arx280	none	method prose with inline and display equations
+arx288	none	conclusion prose and reference list
+arx303	none	two-column prose with contributions bullet list
+arx313	none	two-column methodology prose with equations
+arx317	none	two-column related-work and method prose

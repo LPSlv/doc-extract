@@ -1,0 +1,29 @@
+tag	label	note
+pmc003	none	conclusion, acknowledgements and numbered reference list
+pmc007	none	two-column discussion prose only
+pmc011	none	two-column methods prose only
+pmc015	none	references, acknowledgements, licence and copyright boilerplate
+pmc019	branding	prose two columns plus Springer publisher logo
+pmc023	branding	licence text and references, Springer logo footer
+pmc027	branding	two-column reference list, Springer logo footer
+pmc031	none	two-column methods and results prose
+pmc035	none	methods prose with copyright footer text
+pmc039	branding	references plus rounded "Cite this article as" box
+pmc043	none	two-column discussion prose only
+pmc047	none	methods and results prose, coloured headings
+pmc051	none	methods and results prose only
+pmc055	none	two-column numbered reference list
+pmc059	none	two-column numbered reference list
+pmc063	none	introduction and methodology prose only
+pmc067	none	two-column methods prose only
+pmc071	none	results and discussion prose only
+pmc075	none	single-column methods prose only
+pmc079	none	single-column numbered reference list
+pmc083	none	discussion, declarations and reference list
+pmc087	none	discussion, declarations and reference list
+pmc091	none	two-column introduction and methods prose
+pmc095	none	two-column reference list only
+pmc099	none	methods and results prose only
+pmc103	branding	introduction prose plus Dovepress masthead and logo
+pmc107	none	acknowledgements, declarations and reference list
+pmc111	none	discussion prose and data availability statement

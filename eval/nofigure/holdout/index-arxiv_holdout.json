@@ -1,0 +1,1613 @@
+{
+ "rule": "whole_document page with 0 rasters and <= 2 paths",
+ "corpus": "corpus/arxiv_holdout",
+ "dpi": 130,
+ "documents": 348,
+ "ok": 348,
+ "collapsed_documents": 62,
+ "vision_calls": 2456,
+ "whole_document_calls": 1011,
+ "n_dropped": 320,
+ "candidates": [
+  {
+   "tag": "arx001",
+   "file": "2607.28903v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx002",
+   "file": "2607.28903v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx003",
+   "file": "2607.28903v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx004",
+   "file": "2607.28903v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx005",
+   "file": "2607.28903v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx006",
+   "file": "2607.28903v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx007",
+   "file": "2607.28903v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx008",
+   "file": "2607.28903v1.pdf",
+   "page": 45
+  },
+  {
+   "tag": "arx009",
+   "file": "2607.28903v1.pdf",
+   "page": 47
+  },
+  {
+   "tag": "arx010",
+   "file": "2608.00271v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx011",
+   "file": "2608.00271v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx012",
+   "file": "2608.00271v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx013",
+   "file": "2608.00271v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx014",
+   "file": "2608.00271v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx015",
+   "file": "2608.00271v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx016",
+   "file": "2608.00271v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "arx017",
+   "file": "2608.00271v1.pdf",
+   "page": 20
+  },
+  {
+   "tag": "arx018",
+   "file": "2608.00271v1.pdf",
+   "page": 21
+  },
+  {
+   "tag": "arx019",
+   "file": "2608.00271v1.pdf",
+   "page": 22
+  },
+  {
+   "tag": "arx020",
+   "file": "2608.00271v1.pdf",
+   "page": 23
+  },
+  {
+   "tag": "arx021",
+   "file": "2608.00271v1.pdf",
+   "page": 44
+  },
+  {
+   "tag": "arx022",
+   "file": "2608.00271v1.pdf",
+   "page": 46
+  },
+  {
+   "tag": "arx023",
+   "file": "2608.00271v1.pdf",
+   "page": 49
+  },
+  {
+   "tag": "arx024",
+   "file": "2608.00675v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx025",
+   "file": "2608.00675v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx026",
+   "file": "2608.00675v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx027",
+   "file": "2608.00675v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx028",
+   "file": "2608.00675v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx029",
+   "file": "2608.00675v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx030",
+   "file": "2608.00697v2.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx031",
+   "file": "2608.00697v2.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx032",
+   "file": "2608.01046v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx033",
+   "file": "2608.01046v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx034",
+   "file": "2608.01046v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx035",
+   "file": "2608.01046v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx036",
+   "file": "2608.01046v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx037",
+   "file": "2608.01046v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx038",
+   "file": "2608.01046v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx039",
+   "file": "2608.01176v2.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx040",
+   "file": "2608.01176v2.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx041",
+   "file": "2608.01176v2.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx042",
+   "file": "2608.01176v2.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx043",
+   "file": "2608.01176v2.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx044",
+   "file": "2608.01322v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx045",
+   "file": "2608.01322v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx046",
+   "file": "2608.01322v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx047",
+   "file": "2608.01322v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx048",
+   "file": "2608.01322v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx049",
+   "file": "2608.01322v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx050",
+   "file": "2608.01322v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx051",
+   "file": "2608.02455v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx052",
+   "file": "2608.02455v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx053",
+   "file": "2608.02455v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx054",
+   "file": "2608.02455v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx055",
+   "file": "2608.02455v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx056",
+   "file": "2608.02455v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx057",
+   "file": "2608.02455v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx058",
+   "file": "2608.02455v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx059",
+   "file": "2608.02455v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx060",
+   "file": "2608.02455v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "arx061",
+   "file": "2608.02455v1.pdf",
+   "page": 20
+  },
+  {
+   "tag": "arx062",
+   "file": "2608.02455v1.pdf",
+   "page": 25
+  },
+  {
+   "tag": "arx063",
+   "file": "2608.02455v1.pdf",
+   "page": 32
+  },
+  {
+   "tag": "arx064",
+   "file": "2608.02483v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx065",
+   "file": "2608.02483v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx066",
+   "file": "2608.02483v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx067",
+   "file": "2608.02483v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx068",
+   "file": "2608.03783v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx069",
+   "file": "2608.03783v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx070",
+   "file": "2608.03783v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx071",
+   "file": "2608.03783v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx072",
+   "file": "2608.03783v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx073",
+   "file": "2608.03783v1.pdf",
+   "page": 20
+  },
+  {
+   "tag": "arx074",
+   "file": "2608.03783v1.pdf",
+   "page": 21
+  },
+  {
+   "tag": "arx075",
+   "file": "2608.03783v1.pdf",
+   "page": 22
+  },
+  {
+   "tag": "arx076",
+   "file": "2608.04068v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx077",
+   "file": "2608.04068v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx078",
+   "file": "2608.04068v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx079",
+   "file": "2608.04068v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx080",
+   "file": "2608.04319v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx081",
+   "file": "2608.04388v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx082",
+   "file": "2608.04546v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx083",
+   "file": "2608.04630v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx084",
+   "file": "2608.04630v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx085",
+   "file": "2608.04630v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx086",
+   "file": "2608.04630v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx087",
+   "file": "2608.04630v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx088",
+   "file": "2608.04710v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx089",
+   "file": "2608.04710v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx090",
+   "file": "2608.05133v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx091",
+   "file": "2608.05697v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx092",
+   "file": "2608.05697v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx093",
+   "file": "2608.05697v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx094",
+   "file": "2608.05697v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx095",
+   "file": "2608.05697v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx096",
+   "file": "2608.05697v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx097",
+   "file": "2608.05697v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx098",
+   "file": "2608.05697v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "arx099",
+   "file": "2608.05793v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx100",
+   "file": "2608.06036v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx101",
+   "file": "2608.06036v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx102",
+   "file": "2608.06313v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx103",
+   "file": "2608.06313v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx104",
+   "file": "2608.06783v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx105",
+   "file": "2608.06783v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx106",
+   "file": "2608.06783v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx107",
+   "file": "2608.06864v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx108",
+   "file": "2608.06864v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx109",
+   "file": "2608.06866v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx110",
+   "file": "2608.06866v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx111",
+   "file": "2608.07018v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx112",
+   "file": "2608.07043v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx113",
+   "file": "2608.07043v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx114",
+   "file": "2608.07043v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx115",
+   "file": "2608.07065v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx116",
+   "file": "2608.07065v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx117",
+   "file": "2608.07077v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx118",
+   "file": "2608.07077v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx119",
+   "file": "2608.07077v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx120",
+   "file": "2608.07092v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx121",
+   "file": "2608.07092v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx122",
+   "file": "2608.07092v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx123",
+   "file": "2608.07092v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx124",
+   "file": "2608.07092v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx125",
+   "file": "2608.07092v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx126",
+   "file": "2608.07092v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx127",
+   "file": "2608.07092v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx128",
+   "file": "2608.07106v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx129",
+   "file": "2608.07106v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx130",
+   "file": "2608.07106v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx131",
+   "file": "2608.07106v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx132",
+   "file": "2608.07106v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx133",
+   "file": "2608.07106v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx134",
+   "file": "2608.07106v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx135",
+   "file": "2608.07316v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx136",
+   "file": "2608.07316v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx137",
+   "file": "2608.07316v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx138",
+   "file": "2608.07316v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx139",
+   "file": "2608.07316v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx140",
+   "file": "2608.07316v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx141",
+   "file": "2608.07316v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx142",
+   "file": "2608.07316v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx143",
+   "file": "2608.07316v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx144",
+   "file": "2608.07316v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx145",
+   "file": "2608.07316v1.pdf",
+   "page": 23
+  },
+  {
+   "tag": "arx146",
+   "file": "2608.07316v1.pdf",
+   "page": 24
+  },
+  {
+   "tag": "arx147",
+   "file": "2608.07316v1.pdf",
+   "page": 25
+  },
+  {
+   "tag": "arx148",
+   "file": "2608.07316v1.pdf",
+   "page": 26
+  },
+  {
+   "tag": "arx149",
+   "file": "2608.07316v1.pdf",
+   "page": 27
+  },
+  {
+   "tag": "arx150",
+   "file": "2608.07316v1.pdf",
+   "page": 28
+  },
+  {
+   "tag": "arx151",
+   "file": "2608.07316v1.pdf",
+   "page": 29
+  },
+  {
+   "tag": "arx152",
+   "file": "2608.07328v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx153",
+   "file": "2608.07328v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx154",
+   "file": "2608.07359v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx155",
+   "file": "2608.07359v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx156",
+   "file": "2608.07359v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx157",
+   "file": "2608.07364v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx158",
+   "file": "2608.07364v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx159",
+   "file": "2608.07364v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx160",
+   "file": "2608.07364v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx161",
+   "file": "2608.07364v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx162",
+   "file": "2608.07367v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx163",
+   "file": "2608.07367v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx164",
+   "file": "2608.07367v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx165",
+   "file": "2608.07367v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx166",
+   "file": "2608.07367v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx167",
+   "file": "2608.07367v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx168",
+   "file": "2608.07367v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx169",
+   "file": "2608.07398v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx170",
+   "file": "2608.07398v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx171",
+   "file": "2608.07398v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx172",
+   "file": "2608.07398v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx173",
+   "file": "2608.07398v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx174",
+   "file": "2608.07398v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx175",
+   "file": "2608.07398v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx176",
+   "file": "2608.07398v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx177",
+   "file": "2608.07398v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx178",
+   "file": "2608.07398v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx179",
+   "file": "2608.07398v1.pdf",
+   "page": 23
+  },
+  {
+   "tag": "arx180",
+   "file": "2608.07398v1.pdf",
+   "page": 24
+  },
+  {
+   "tag": "arx181",
+   "file": "2608.07398v1.pdf",
+   "page": 25
+  },
+  {
+   "tag": "arx182",
+   "file": "2608.07417v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx183",
+   "file": "2608.07417v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx184",
+   "file": "2608.07417v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx185",
+   "file": "2608.07427v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx186",
+   "file": "2608.07427v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx187",
+   "file": "2608.07629v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx188",
+   "file": "2608.07629v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx189",
+   "file": "2608.07629v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx190",
+   "file": "2608.07629v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx191",
+   "file": "2608.07637v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx192",
+   "file": "2608.07637v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx193",
+   "file": "2608.07637v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx194",
+   "file": "2608.07637v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx195",
+   "file": "2608.07637v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx196",
+   "file": "2608.07637v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx197",
+   "file": "2608.07637v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx198",
+   "file": "2608.07637v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx199",
+   "file": "2608.07637v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx200",
+   "file": "2608.07637v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx201",
+   "file": "2608.07637v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx202",
+   "file": "2608.07637v1.pdf",
+   "page": 19
+  },
+  {
+   "tag": "arx203",
+   "file": "2608.07637v1.pdf",
+   "page": 20
+  },
+  {
+   "tag": "arx204",
+   "file": "2608.07642v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx205",
+   "file": "2608.07642v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx206",
+   "file": "2608.07642v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx207",
+   "file": "2608.07642v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx208",
+   "file": "2608.07642v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx209",
+   "file": "2608.07651v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx210",
+   "file": "2608.07651v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx211",
+   "file": "2608.07651v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx212",
+   "file": "2608.07651v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx213",
+   "file": "2608.07651v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx214",
+   "file": "2608.07651v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx215",
+   "file": "2608.07651v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx216",
+   "file": "2608.07651v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx217",
+   "file": "2608.07651v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx218",
+   "file": "2608.07651v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx219",
+   "file": "2608.07651v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx220",
+   "file": "2608.07651v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx221",
+   "file": "2608.07651v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx222",
+   "file": "2608.07651v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx223",
+   "file": "2608.07733v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx224",
+   "file": "2608.07733v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx225",
+   "file": "2608.07733v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx226",
+   "file": "2608.07733v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx227",
+   "file": "2608.07734v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx228",
+   "file": "2608.07734v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx229",
+   "file": "2608.07734v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx230",
+   "file": "2608.07734v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx231",
+   "file": "2608.07734v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx232",
+   "file": "2608.07734v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx233",
+   "file": "2608.07734v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx234",
+   "file": "2608.07734v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx235",
+   "file": "2608.07734v1.pdf",
+   "page": 22
+  },
+  {
+   "tag": "arx236",
+   "file": "2608.07734v1.pdf",
+   "page": 23
+  },
+  {
+   "tag": "arx237",
+   "file": "2608.07734v1.pdf",
+   "page": 24
+  },
+  {
+   "tag": "arx238",
+   "file": "2608.07750v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx239",
+   "file": "2608.07750v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx240",
+   "file": "2608.07750v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx241",
+   "file": "2608.07750v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx242",
+   "file": "2608.07750v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx243",
+   "file": "2608.07759v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx244",
+   "file": "2608.07759v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx245",
+   "file": "2608.07759v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx246",
+   "file": "2608.07759v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx247",
+   "file": "2608.07759v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx248",
+   "file": "2608.07770v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx249",
+   "file": "2608.07835v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx250",
+   "file": "2608.07835v1.pdf",
+   "page": 9
+  },
+  {
+   "tag": "arx251",
+   "file": "2608.07835v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx252",
+   "file": "2608.07857v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx253",
+   "file": "2608.07864v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx254",
+   "file": "2608.07864v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx255",
+   "file": "2608.07864v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx256",
+   "file": "2608.07864v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx257",
+   "file": "2608.07864v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx258",
+   "file": "2608.07864v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx259",
+   "file": "2608.07864v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx260",
+   "file": "2608.07864v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx261",
+   "file": "2608.07864v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx262",
+   "file": "2608.07864v1.pdf",
+   "page": 21
+  },
+  {
+   "tag": "arx263",
+   "file": "2608.07948v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx264",
+   "file": "2608.07948v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx265",
+   "file": "2608.07948v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx266",
+   "file": "2608.07948v1.pdf",
+   "page": 17
+  },
+  {
+   "tag": "arx267",
+   "file": "2608.07948v1.pdf",
+   "page": 18
+  },
+  {
+   "tag": "arx268",
+   "file": "2608.07948v1.pdf",
+   "page": 23
+  },
+  {
+   "tag": "arx269",
+   "file": "2608.07958v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx270",
+   "file": "2608.07958v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx271",
+   "file": "2608.07958v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx272",
+   "file": "2608.08021v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx273",
+   "file": "2608.08021v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx274",
+   "file": "2608.08021v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx275",
+   "file": "2608.08021v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx276",
+   "file": "2608.08021v1.pdf",
+   "page": 13
+  },
+  {
+   "tag": "arx277",
+   "file": "2608.08068v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx278",
+   "file": "2608.08068v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx279",
+   "file": "2608.08068v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx280",
+   "file": "2608.08068v1.pdf",
+   "page": 6
+  },
+  {
+   "tag": "arx281",
+   "file": "2608.08068v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx282",
+   "file": "2608.08068v1.pdf",
+   "page": 16
+  },
+  {
+   "tag": "arx283",
+   "file": "2608.08106v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx284",
+   "file": "2608.08106v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx285",
+   "file": "2608.08106v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx286",
+   "file": "2608.08106v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx287",
+   "file": "2608.08153v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx288",
+   "file": "2608.08153v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx289",
+   "file": "2608.08153v1.pdf",
+   "page": 11
+  },
+  {
+   "tag": "arx290",
+   "file": "2608.08153v1.pdf",
+   "page": 12
+  },
+  {
+   "tag": "arx291",
+   "file": "2608.08153v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx292",
+   "file": "2608.08226v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx293",
+   "file": "2608.08226v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx294",
+   "file": "2608.08226v1.pdf",
+   "page": 14
+  },
+  {
+   "tag": "arx295",
+   "file": "2608.08273v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx296",
+   "file": "2608.08273v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx297",
+   "file": "2608.08273v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx298",
+   "file": "2608.08273v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx299",
+   "file": "2608.08273v1.pdf",
+   "page": 10
+  },
+  {
+   "tag": "arx300",
+   "file": "2608.08273v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx301",
+   "file": "2608.08273v1.pdf",
+   "page": 20
+  },
+  {
+   "tag": "arx302",
+   "file": "2608.08273v1.pdf",
+   "page": 21
+  },
+  {
+   "tag": "arx303",
+   "file": "2608.08290v1.pdf",
+   "page": 3
+  },
+  {
+   "tag": "arx304",
+   "file": "2608.08290v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx305",
+   "file": "2608.08290v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx306",
+   "file": "2608.08290v1.pdf",
+   "page": 8
+  },
+  {
+   "tag": "arx307",
+   "file": "2608.08290v1.pdf",
+   "page": 15
+  },
+  {
+   "tag": "arx308",
+   "file": "2608.08290v1.pdf",
+   "page": 21
+  },
+  {
+   "tag": "arx309",
+   "file": "2608.08290v1.pdf",
+   "page": 22
+  },
+  {
+   "tag": "arx310",
+   "file": "2608.08290v1.pdf",
+   "page": 25
+  },
+  {
+   "tag": "arx311",
+   "file": "2608.08290v1.pdf",
+   "page": 26
+  },
+  {
+   "tag": "arx312",
+   "file": "2608.08307v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx313",
+   "file": "2608.08307v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx314",
+   "file": "2608.08307v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx315",
+   "file": "2608.08307v1.pdf",
+   "page": 7
+  },
+  {
+   "tag": "arx316",
+   "file": "2608.08368v1.pdf",
+   "page": 1
+  },
+  {
+   "tag": "arx317",
+   "file": "2608.08368v1.pdf",
+   "page": 2
+  },
+  {
+   "tag": "arx318",
+   "file": "2608.08368v1.pdf",
+   "page": 4
+  },
+  {
+   "tag": "arx319",
+   "file": "2608.08368v1.pdf",
+   "page": 5
+  },
+  {
+   "tag": "arx320",
+   "file": "2608.08368v1.pdf",
+   "page": 8
+  }
+ ]
+}

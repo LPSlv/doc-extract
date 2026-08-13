@@ -1,0 +1,31 @@
+tag	label	note
+n004	figure	scatter maps and CDF plots of sensing CRLB
+n012	none	algorithm pseudocode listing and prose, no graphics
+n020	figure	solder paste stencil mechanical drawing with dimensions
+n028	branding	TI logo header and footer only, revision list
+n036	figure	six input offset voltage characteristic curve plots
+n044	figure	six PSRR and output voltage frequency response plots
+n052	figure	ESD protection circuit schematic of op amp
+n060	figure	TSSOP package outline mechanical drawing with detail
+n068	figure	logic gate layout diagram for unused inputs
+n076	figure	six offset voltage histograms and curve plots
+n084	figure	six offset voltage histograms and curve plots
+n092	figure	X2QFN package outline drawing, top side views
+n100	figure	PowerPAD SOIC mechanical package drawing with details
+n108	branding	nature journal header band, pseudocode algorithm block
+n116	figure	VQFN land pattern and solder mask drawings
+n124	figure	on-sky scatter plot with proper motion vectors
+n132	figure	two space-time heatmaps with colorbars
+n140	figure	colored maze and clutter decomposition images, tables
+n148	table	seven quantitative comparison and ablation result tables
+n156	figure	four flowchart diagrams of verification system variants
+n164	figure	adjustable regulator schematic plus package information table
+n172	figure	WSON solder paste stencil drawing with dimensions
+n180	table	electrical and switching characteristics parameter tables
+n188	none	reference list only, plain text
+n196	none	reference list and publisher note, plain text
+n204	none	plain prose page of an old journal article
+n212	none	two columns of bibliography references
+n220	figure	bone marrow micrograph and skull X-ray photograph
+n228	table	miRNA log2FC and p-value data table
+n236	none	prose two-column text plus figure caption, no image

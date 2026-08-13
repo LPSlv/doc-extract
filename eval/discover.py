@@ -89,6 +89,41 @@ def pmc(target=220):
     write_tsv("pmc", rows)
 
 
+def pmc_holdout(target=250):
+    """A journal corpus DISJOINT from `pmc`, for validating a routing rule
+    out-of-sample.
+
+    `pmc` above walks the oa_pdf tree from 00/00 and stops at 220 files, which
+    means it never leaves the 00/xx prefix. This walks the 01/xx prefix
+    instead and additionally excludes, by filename, everything the `pmc` list
+    already pins - so the two sets cannot overlap even if the FTP tree is
+    re-shuffled between runs. Filenames embed the PMC id, so filename
+    disjointness is identity disjointness; fetch.py's sha256 pinning makes it
+    checkable afterwards too.
+
+    Needed because the `curves` and `whole_document` false positives measured
+    in eval/nofigure.md are half journal boilerplate, and corpus/arxiv_holdout
+    contains none of that - the same mismatch that made arxiv_holdout the
+    wrong holdout for the signature-ubiquity rule (eval/rejected-signals.md).
+    """
+    have = {l.split("\t")[0] for l in
+            (MANI / "pmc.urls.tsv").read_text().splitlines() if l.strip()}
+    rows = []
+    for lo in range(256):
+        d = f"01/{lo:02x}"
+        try:
+            html = get(f"{PMC_BASE}/{d}/")
+        except Exception as e:
+            print(f"  skip {d}: {e}"); continue
+        for fn in re.findall(r'href="([^"/]+\.pdf)"', html):
+            if fn not in have:
+                rows.append((fn, f"{PMC_BASE}/{d}/{fn}"))
+        print(f"  {d}: total {len(rows)}")
+        if len(rows) >= target:
+            write_tsv("pmc_holdout", rows[:target]); return
+    write_tsv("pmc_holdout", rows)
+
+
 # --------------------------------------------------------------------- bills
 def bills(target=230):
     """House bills of the 118th Congress, 1st session, 'ih' (introduced)
@@ -198,8 +233,10 @@ def datasheets():
 
 if __name__ == "__main__":
     which = sys.argv[1:] or ["all"]
-    fns = {"arxiv": arxiv, "pmc": pmc, "bills": bills,
-           "olmocr": olmocr, "datasheets": datasheets}
-    for w in (fns if "all" in which else which):
+    fns = {"arxiv": arxiv, "pmc": pmc, "pmc_holdout": pmc_holdout,
+           "bills": bills, "olmocr": olmocr, "datasheets": datasheets}
+    # "all" regenerates the pinned design corpora only; a holdout is fetched
+    # deliberately, once, when a rule needs validating.
+    for w in ([k for k in fns if k != "pmc_holdout"] if "all" in which else which):
         print(f"== {w}")
         fns[w]()

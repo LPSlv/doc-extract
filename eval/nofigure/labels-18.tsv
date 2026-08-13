@@ -1,0 +1,31 @@
+tag	label	note
+n002	figure	three-panel Halpha spectrum, residuals and polarisation fraction plots
+n010	figure	histogram and pixel-AP line chart plus results table
+n018	figure	X2SON5 package outline mechanical drawing with dimension table
+n026	branding	TI logo and ESD warning icon only
+n034	branding	TI logo header, equations and prose only
+n042	figure	land pattern and solder mask detail drawings
+n050	figure	solder paste stencil aperture drawing
+n058	branding	TI logo header, prose only
+n066	branding	TI logo, ESD icon, revision history text
+n074	figure	three application curve plots of voltage and resistance
+n082	figure	CDIP land pattern example drawing
+n090	figure	SOIC land pattern and solder mask detail drawings
+n098	branding	TI logo header, equations and bullet text
+n106	branding	journal masthead banner, CC badge, abstract box
+n114	branding	TI logo header, prose only
+n122	none	plain two-column prose with one inline equation
+n130	figure	wave interaction diagram in x-t plane
+n138	figure	ILC control framework block diagram
+n146	table	two ablation results tables with metric columns
+n154	none	plain two-column prose, keywords and references format
+n162	figure	detailed op-amp transistor-level schematic
+n170	figure	reel and tape dimension drawings plus quadrant diagram
+n178	figure	noise measurement circuit and two gain-vs-frequency plots
+n186	figure	photograph of cup and cable tie, hyperparameter tables
+n194	none	reference list and publisher note only
+n202	figure	metabolism schematic, heatmap, micrographs and bar charts
+n210	figure	violin plots, heatmaps and scatter plots
+n218	none	prose, statements and numbered reference list
+n226	none	scanned page of plain two-column prose
+n234	table	boxed abbreviations list beside two-column prose

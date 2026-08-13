@@ -1,0 +1,29 @@
+tag	label	note
+pmc002	none	two-column prose, methods and results text only
+pmc006	none	two-column prose, methods and results text
+pmc010	branding	prose plus rounded keywords box, publisher furniture only
+pmc014	none	two-column results prose with coloured figure citations
+pmc018	none	references, acknowledgements, licence boilerplate text
+pmc022	none	discussion and conclusion prose, Springer wordmark footer
+pmc026	none	two-column reference list, Springer wordmark footer
+pmc030	none	conclusion and numbered reference list only
+pmc034	none	two-column introduction prose, no graphics
+pmc038	none	two-column reference list only
+pmc042	none	discussion and methods prose, no graphics
+pmc046	none	two-column reference list only
+pmc050	none	introduction and methods prose, no graphics
+pmc054	none	conclusions, acknowledgements and reference list
+pmc058	none	two-column numbered reference list only
+pmc062	none	acknowledgements and notes/references list
+pmc066	none	introduction and methods prose, no graphics
+pmc070	none	two-column results prose citing figures elsewhere
+pmc074	branding	prose plus small DOI badge in footer
+pmc078	branding	discussion, conclusion, abbreviations, DOI badge footer
+pmc082	none	title, author list, abstract and prose
+pmc086	none	two-column reference list only
+pmc090	none	two-column discussion prose, no graphics
+pmc094	none	acknowledgements and two-column reference list
+pmc098	none	two-column reference list only
+pmc102	branding	reference list under coloured journal masthead banner
+pmc106	none	two-column discussion prose, no graphics
+pmc110	none	two-column methods prose, no graphics

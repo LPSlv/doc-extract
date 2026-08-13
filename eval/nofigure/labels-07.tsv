@@ -1,0 +1,31 @@
+tag	label	note
+n007	figure	boxed example panel with red-highlighted failure text, Figure 11
+n015	figure	box plots and Sankey failure-flow diagrams
+n023	branding	prose only, TI logo and header rule
+n031	figure	mechanical package outline drawing with dimensions
+n039	branding	revision history list, TI logo and rules
+n047	figure	brickwall current-limit plot, Figure 6-3
+n055	figure	land pattern and solder mask detail drawings
+n063	branding	table of contents and revision history, TI logo
+n071	figure	two typical delay vs Vcc line charts
+n079	branding	revision history list, TI logo and rules
+n087	branding	table of contents, TI logo and rules
+n095	figure	solder paste stencil land pattern drawing
+n103	figure	DSBGA stencil solder paste drawing
+n111	branding	journal masthead, ORCID icon, Creative Commons badge
+n119	branding	prose only, TI logo and header rule
+n127	figure	line width distribution histograms, Fig 8
+n135	none	two-column prose, no graphics
+n143	none	single reference entry, otherwise blank
+n151	none	reference list only
+n159	branding	table of contents and revision history, TI logo
+n167	figure	four thermal resistance and power dissipation graphs
+n175	figure	tape and reel diagrams plus dimension tables
+n183	figure	grid of robot manipulation photographs, Fig 6
+n191	table	Table 3 of nominal characteristics with p values
+n199	table	abbreviations list, acknowledgements and references
+n207	figure	photographic plate of colony culture dishes
+n215	figure	SEM TEM SAED micrographs, XRD and Raman spectra
+n223	none	title, authors, abstract prose only
+n231	table	Table 1 bamboo species listing plus conclusion prose
+n239	figure	chest CT scans and hematoxylin eosin micrograph

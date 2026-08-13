@@ -1,0 +1,31 @@
+tag	label	note
+n001	figure	two stacked plots, growth rate and extinction rate curves
+n009	figure	video frame grids comparing routing strategies, plus ablation table
+n017	figure	SOT886 package outline drawing with dimensions
+n025	figure	CD4053B functional block diagram with pin numbers
+n033	figure	six characteristic curves and two spectrum analyzer screenshots
+n041	figure	land pattern and solder mask detail drawings
+n049	figure	SOIC-16 mechanical package drawing with dimensions
+n057	figure	SOT-23 solder paste stencil drawing
+n065	branding	plain prose only, TI logo header and footer
+n073	figure	ceramic dual flatpack mechanical drawing
+n081	figure	TSSOP-14 package outline drawing with lead detail
+n089	figure	adjustable regulator circuit schematic, Figure 6-5
+n097	branding	table of contents and revision history, TI logo
+n105	figure	FNO and U-Net information flow architecture diagram
+n113	figure	six typical characteristic plots and histograms
+n121	none	paper title page, abstract and prose columns
+n129	none	equations and prose, no graphics
+n137	none	two-column reference list only
+n145	figure	DynoDINO framework pipeline diagram, Figure 1
+n153	figure	line chart of training dynamics plus performance table
+n161	table	thermal metrics and AC electrical characteristics tables
+n169	table	packaging information orderable part number table
+n177	table	LM4562 electrical characteristics parameter table
+n185	figure	grid of robot manipulation camera photographs
+n193	figure	immunohistochemical staining micrographs plus two small tables
+n201	none	methods prose, two columns, no graphics
+n209	table	primer sequence table under methods prose
+n217	figure	bar chart and horizontal bar chart plus results table
+n225	figure	gene dependency diagrams of yeast cell cycle
+n233	figure	3D electroanatomic map and intraoperative surgical photograph

@@ -1,0 +1,29 @@
+tag	label	note
+pmc002	none	two-column prose, methods and results text only
+pmc006	none	two-column prose, methods and results text only
+pmc010	branding	prose plus rounded keywords box, publisher furniture only
+pmc014	none	two-column results prose, no graphics
+pmc018	none	acknowledgements, competing interests, licence boilerplate
+pmc022	branding	prose plus Springer knight logo in footer
+pmc026	branding	reference list plus Springer knight logo
+pmc030	none	conclusion and numbered reference list
+pmc034	none	two-column introduction prose only
+pmc038	none	two-column alphabetical reference list
+pmc042	none	discussion and materials and methods prose
+pmc046	none	two-column reference list only
+pmc050	none	introduction and methods prose, coloured headings
+pmc054	none	conflicts, acknowledgements, reference list
+pmc058	none	two-column numbered reference list
+pmc062	none	conflicts, acknowledgements, notes and references
+pmc066	none	introduction and materials and methods prose
+pmc070	none	two-column results prose, figure callouts only
+pmc074	none	single-column introduction and methods prose
+pmc078	none	discussion, conclusion, abbreviations prose
+pmc082	none	article title, authors, abstract, footnotes
+pmc086	none	two-column reference list, half page blank
+pmc090	none	two-column discussion prose and conclusion
+pmc094	none	acknowledgements and two-column reference list
+pmc098	none	two-column reference list only
+pmc102	branding	references under coloured journal masthead banner
+pmc106	none	two-column discussion prose only
+pmc110	none	two-column methods prose, no graphics

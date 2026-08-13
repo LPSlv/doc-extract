@@ -1,0 +1,31 @@
+tag	label	note
+n003	figure	multi-survey light curve plots, optical and WISE magnitudes
+n011	figure	paper title page with navigation semantic map diagram
+n019	figure	VSSOP package outline mechanical drawing with dimensions
+n027	figure	I2C read timing diagram, SCL and SDA waveforms
+n035	figure	six propagation delay versus input overdrive curves
+n043	figure	six source/sink current characteristic curves
+n051	figure	QFN exposed thermal pad mechanical drawing, bottom view
+n059	figure	SOIC solder paste stencil drawing with pad dimensions
+n067	figure	SOIC-20 solder paste stencil drawing
+n075	figure	six op-amp typical characteristic curves
+n083	figure	TSSOP package outline drawing with detail view
+n091	figure	X2QFN solder paste stencil drawing
+n099	figure	two UVLO circuit schematics plus equations
+n107	figure	clinical hypertension treatment algorithm flowchart with icons
+n115	figure	I2C frame bit diagram and control register bit map
+n123	figure	eight-panel sky position and proper motion plots
+n131	figure	two space-time evolution colour maps plus small table
+n139	table	boxed line-numbered algorithm pseudocode listing
+n147	none	reference list only
+n155	figure	rendered hand image grid plus ablation table
+n163	figure	SOIC-8 package outline drawing with dimensions
+n171	figure	tube dimension drawing plus packaging materials table
+n179	figure	two Butterworth filter circuit schematics
+n187	none	two-column prose, no graphics
+n195	none	two-column prose discussion, no graphics
+n203	none	plain prose page, no graphics
+n211	none	reference list only
+n219	figure	bar chart of compound concentrations with error bars
+n227	figure	panel of brain photomicrographs with arrows
+n235	none	prose with inline equations only

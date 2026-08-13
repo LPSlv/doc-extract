@@ -1,0 +1,31 @@
+tag	label	note
+arx007	branding	prose with equations, footer rule only
+arx021	none	prose with numbered display equations
+arx026	none	two-column reference list only
+arx040	none	two-column prose, related work
+arx056	none	numbered reference list only
+arx061	none	appendix prose with display equations
+arx070	none	two-column prose on spectrum policy
+arx074	none	two-column IEEE reference list
+arx091	none	prose, introduction and related work
+arx106	branding	reference list under blue header rule
+arx123	none	prose with three display equations
+arx138	none	prose methods text, no graphics
+arx150	none	numbered reference list only
+arx158	none	two-column prose, related work
+arx166	none	two-column reference list only
+arx180	none	reference list only
+arx188	none	two-column prose with numbered contributions
+arx194	none	prose describing campaign construction
+arx208	none	two-column reference list, partly blank
+arx215	none	plain prose results narrative
+arx228	none	prose, related work section
+arx232	none	proof text and section heading
+arx260	none	numbered reference list only
+arx272	branding	title page, rules above and below title
+arx276	none	reference list only
+arx281	none	numbered reference list only
+arx289	branding	reference list below thin page rule
+arx308	branding	prose paragraphs under running-head rule
+arx314	none	two-column prose with many display equations
+arx320	none	conclusion prose plus two-column references

@@ -1,0 +1,29 @@
+tag	label	note
+pmc004	none	two-column numbered reference list only
+pmc008	none	two-column numbered reference list only
+pmc012	none	prose, abbreviation glossary, supplementary-material box
+pmc016	none	two-column prose, methods text only
+pmc020	branding	two-column prose, Springer logo in footer
+pmc024	branding	alphabetical reference list, Springer logo
+pmc028	branding	alphabetical reference list, Springer logo
+pmc032	none	end matter and numbered reference list
+pmc036	none	discussion prose, acknowledgments, references
+pmc040	none	two-column numbered reference list, header rules
+pmc044	none	two-column prose, discussion and acknowledgment
+pmc048	none	two-column discussion prose only
+pmc052	none	two-column numbered reference list only
+pmc056	none	two-column prose, materials and methods
+pmc060	none	two-column chemistry methods prose, NMR data
+pmc064	none	two-column numbered reference list only
+pmc068	none	two-column methods prose only
+pmc072	none	acknowledgements, funding, numbered reference list
+pmc076	none	single-column methods prose only
+pmc080	branding	prose, KJR journal logo top right
+pmc084	none	two-column numbered reference list only
+pmc088	none	two-column introduction and methods prose
+pmc092	none	two-column methods prose with footnote
+pmc096	none	two-column introduction and methods prose
+pmc100	none	acknowledgments and numbered reference list
+pmc104	branding	methods prose, Dovepress logos header and footer
+pmc108	none	two-column numbered reference list only
+pmc112	none	back matter and alphabetical reference list

@@ -1,0 +1,204 @@
+tag	corpus	file	page	label	agree	note
+pmc001	pmc_holdout	10.1177_18632521221129368.PMC9723872.pdf	2	none	3/3	two-column prose, methods section, no graphics
+pmc002	pmc_holdout	10.1177_18632521221129368.PMC9723872.pdf	3	none	3/3	two-column prose, methods and results text only
+pmc003	pmc_holdout	10.1177_18632521221129368.PMC9723872.pdf	8	none	3/3	conclusion, acknowledgements and numbered reference list
+pmc004	pmc_holdout	10.1177_18632521221129368.PMC9723872.pdf	9	none	3/3	two-column reference list only
+pmc005	pmc_holdout	10.1177_27550834231197316.PMC10540568.pdf	2	none	3/3	two-column prose, introduction and methods
+pmc006	pmc_holdout	10.1177_27550834231197316.PMC10540568.pdf	3	none	3/3	two-column prose, methods and results text only
+pmc007	pmc_holdout	10.1177_27550834231197316.PMC10540568.pdf	10	none	3/3	two-column discussion prose only
+pmc008	pmc_holdout	10.1177_27550834231197316.PMC10540568.pdf	12	none	3/3	two-column reference list only
+pmc009	pmc_holdout	1349-7235-56-1943.PMC5577067.pdf	6	none	3/3	reference list, licence text, copyright footer
+pmc010	pmc_holdout	40478_2025_Article_2139.PMC12542097.pdf	2	branding	3/3	keywords in rounded coloured box, otherwise plain prose
+pmc011	pmc_holdout	40478_2025_Article_2139.PMC12542097.pdf	3	none	3/3	two-column methods prose only
+pmc012	pmc_holdout	40478_2025_Article_2139.PMC12542097.pdf	9	none	3/3	prose, abbreviation list, supplementary-material box
+pmc013	pmc_holdout	40478_2025_Article_2139.PMC12542097.pdf	11	none	3/3	reference list plus publisher's note
+pmc014	pmc_holdout	42003_2025_Article_7632.PMC11805992.pdf	2	none	3/3	two-column prose with running head and footer rule
+pmc015	pmc_holdout	42003_2025_Article_7632.PMC11805992.pdf	10	none	3/3	references, acknowledgements, licence and copyright boilerplate
+pmc016	pmc_holdout	43856_2024_Article_720.PMC11739568.pdf	2	none	3/3	two-column prose, methods text only
+pmc017	pmc_holdout	43856_2024_Article_720.PMC11739568.pdf	5	none	3/3	two-column prose, results and discussion
+pmc018	pmc_holdout	43856_2024_Article_720.PMC11739568.pdf	10	none	3/3	acknowledgements, competing interests, licence boilerplate
+pmc019	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	2	branding	3/3	prose two columns plus Springer publisher logo
+pmc020	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	4	branding	3/3	prose only plus Springer logo in footer
+pmc021	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	10	branding	3/3	prose only; Springer logo in footer
+pmc022	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	11	branding	2/3	prose plus Springer logo in footer
+pmc023	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	13	branding	3/3	licence text and references, Springer logo footer
+pmc024	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	14	branding	3/3	reference list plus Springer logo in footer
+pmc025	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	15	branding	3/3	reference list; Springer logo in footer
+pmc026	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	16	branding	2/3	two-column reference list plus Springer logo
+pmc027	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	17	branding	3/3	two-column reference list, Springer logo footer
+pmc028	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	18	branding	3/3	reference list plus Springer logo in footer
+pmc029	pmc_holdout	726_2026_Article_3502.PMC12979271.pdf	19	branding	3/3	reference list end; Springer logo in footer
+pmc030	pmc_holdout	IJABMR-9-236.PMC6822317.pdf	5	none	3/3	conclusion text and numbered reference list
+pmc031	pmc_holdout	IJCCM-18-513.PMC4134625.pdf	2	none	3/3	two-column methods and results prose
+pmc032	pmc_holdout	IJNM-39-393.PMC11884354.pdf	3	none	3/3	conflicts statement and reference list
+pmc033	pmc_holdout	INZ2-12-446.PMC5725670.pdf	1	none	3/3	title, authors, abstract, introduction start
+pmc034	pmc_holdout	INZ2-12-446.PMC5725670.pdf	2	none	3/3	two-column prose, introduction and methods heading
+pmc035	pmc_holdout	INZ2-12-446.PMC5725670.pdf	3	none	3/3	methods prose with copyright footer text
+pmc036	pmc_holdout	INZ2-12-446.PMC5725670.pdf	8	none	3/3	prose, acknowledgments, references
+pmc037	pmc_holdout	INZ2-12-446.PMC5725670.pdf	9	none	3/3	two-column reference list only
+pmc038	pmc_holdout	INZ2-12-446.PMC5725670.pdf	10	none	3/3	two-column alphabetical reference list
+pmc039	pmc_holdout	INZ2-12-446.PMC5725670.pdf	11	branding	3/3	references plus rounded "Cite this article as" box
+pmc040	pmc_holdout	JAH3-13-e031484.PMC11179790.pdf	9	none	3/3	two-column reference list, header rules only
+pmc041	pmc_holdout	JGP_201511456.PMC4621752.pdf	1	branding	2/3	title page and abstract; vertical journal masthead
+pmc042	pmc_holdout	JGP_201511456.PMC4621752.pdf	2	none	3/3	two-column prose, discussion and methods text
+pmc043	pmc_holdout	JGP_201511456.PMC4621752.pdf	11	none	3/3	two-column discussion prose only
+pmc044	pmc_holdout	JGP_201511456.PMC4621752.pdf	12	none	3/3	two-column prose and acknowledgment paragraph
+pmc045	pmc_holdout	JGP_201511456.PMC4621752.pdf	13	none	3/3	acknowledgements and reference list
+pmc046	pmc_holdout	JGP_201511456.PMC4621752.pdf	14	none	3/3	two-column reference list only
+pmc047	pmc_holdout	JISPCD-6-359.PMC4981939.pdf	2	none	3/3	methods and results prose, coloured headings
+pmc048	pmc_holdout	JISPCD-6-359.PMC4981939.pdf	6	none	3/3	two-column discussion prose only
+pmc049	pmc_holdout	JISPCD-6-359.PMC4981939.pdf	7	none	3/3	conclusions, disclosures, reference list
+pmc050	pmc_holdout	JOVR-12-30.PMC5340061.pdf	2	none	3/3	two-column prose, introduction and methods
+pmc051	pmc_holdout	JOVR-12-30.PMC5340061.pdf	3	none	3/3	methods and results prose only
+pmc052	pmc_holdout	JOVR-12-30.PMC5340061.pdf	9	none	3/3	two-column reference list only
+pmc053	pmc_holdout	RA-008-C8RA07166G.PMC9086543.pdf	7	none	3/3	two-column reference list only
+pmc054	pmc_holdout	RA-009-C9RA08068F.PMC9076674.pdf	6	none	3/3	acknowledgements and two-column reference list
+pmc055	pmc_holdout	RA-009-C9RA08068F.PMC9076674.pdf	7	none	3/3	two-column numbered reference list
+pmc056	pmc_holdout	RA-010-C9RA05895H.PMC9049140.pdf	2	none	3/3	prose, methods text, no graphics
+pmc057	pmc_holdout	RA-010-C9RA05895H.PMC9049140.pdf	12	none	3/3	discussion, conclusions, references
+pmc058	pmc_holdout	RA-010-C9RA05895H.PMC9049140.pdf	13	none	3/3	two-column numbered reference list
+pmc059	pmc_holdout	RA-010-C9RA05895H.PMC9049140.pdf	14	none	3/3	two-column numbered reference list
+pmc060	pmc_holdout	RA-010-D0RA09635K.PMC9058379.pdf	5	none	3/3	chemistry methods prose, no structures shown
+pmc061	pmc_holdout	RA-010-D0RA09635K.PMC9058379.pdf	6	none	3/3	chemical characterisation text and conclusions
+pmc062	pmc_holdout	RA-010-D0RA09635K.PMC9058379.pdf	7	none	3/3	acknowledgements and two-column notes/references
+pmc063	pmc_holdout	RA-013-D3RA00077J.PMC9997075.pdf	2	none	3/3	introduction and methodology prose only
+pmc064	pmc_holdout	RA-013-D3RA00077J.PMC9997075.pdf	8	none	3/3	two-column reference list only
+pmc065	pmc_holdout	cm9-139-1736.PMC13236295.pdf	3	none	3/3	funding, references, how-to-cite box
+pmc066	pmc_holdout	gkag175.PMC12956332.pdf	2	none	3/3	two-column prose, introduction and methods text
+pmc067	pmc_holdout	gkag175.PMC12956332.pdf	3	none	3/3	two-column methods prose only
+pmc068	pmc_holdout	gkag175.PMC12956332.pdf	4	none	3/3	methods prose, no images
+pmc069	pmc_holdout	gkag175.PMC12956332.pdf	5	none	3/3	methods and results prose only
+pmc070	pmc_holdout	gkag175.PMC12956332.pdf	7	none	3/3	two-column results prose, no graphics
+pmc071	pmc_holdout	gkag175.PMC12956332.pdf	12	none	3/3	results and discussion prose only
+pmc072	pmc_holdout	gkag175.PMC12956332.pdf	15	none	3/3	acknowledgements, funding, reference list
+pmc073	pmc_holdout	gkag175.PMC12956332.pdf	16	none	3/3	reference list and licence footer
+pmc074	pmc_holdout	ijn-20-5161.PMC12036690.pdf	3	none	2/3	single-column prose, materials and methods text
+pmc075	pmc_holdout	ijn-20-5161.PMC12036690.pdf	4	none	3/3	single-column methods prose only
+pmc076	pmc_holdout	ijn-20-5161.PMC12036690.pdf	5	none	3/3	methods prose, single-column, no images
+pmc077	pmc_holdout	ijn-20-5161.PMC12036690.pdf	6	none	3/3	methods prose, single column
+pmc078	pmc_holdout	ijn-20-5161.PMC12036690.pdf	17	none	2/3	discussion, conclusion, abbreviations prose
+pmc079	pmc_holdout	ijn-20-5161.PMC12036690.pdf	19	none	3/3	single-column numbered reference list
+pmc080	pmc_holdout	kjr-19-358.PMC5840066.pdf	2	branding	3/3	prose only plus KJR journal logo
+pmc081	pmc_holdout	kjr-19-358.PMC5840066.pdf	8	branding	3/3	reference list; KJR journal logo top right
+pmc082	pmc_holdout	main.PMC10164889.pdf	1	none	3/3	article title page, abstract, keywords, footnotes
+pmc083	pmc_holdout	main.PMC10248251.pdf	4	none	3/3	discussion, declarations and reference list
+pmc084	pmc_holdout	main.PMC10248251.pdf	5	none	3/3	two-column reference list only
+pmc085	pmc_holdout	main.PMC10519841.pdf	2	none	3/3	prose, methods, no graphics
+pmc086	pmc_holdout	main.PMC10519841.pdf	10	none	3/3	two-column reference list, half page blank
+pmc087	pmc_holdout	main.PMC12337683.pdf	3	none	3/3	discussion, declarations and reference list
+pmc088	pmc_holdout	main.PMC12666721.pdf	2	none	3/3	introduction and methods prose only
+pmc089	pmc_holdout	main.PMC12666721.pdf	11	none	3/3	declarations and reference list
+pmc090	pmc_holdout	main.PMC6565895.pdf	5	none	3/3	two-column discussion prose and conclusion heading
+pmc091	pmc_holdout	main.PMC6974892.pdf	2	none	3/3	two-column introduction and methods prose
+pmc092	pmc_holdout	main.PMC6974892.pdf	3	none	3/3	methods prose with footnote, no graphics
+pmc093	pmc_holdout	main.PMC6974892.pdf	8	none	3/3	discussion and conclusions prose
+pmc094	pmc_holdout	main.PMC6974892.pdf	9	none	3/3	acknowledgements and dense two-column reference list
+pmc095	pmc_holdout	main.PMC6974892.pdf	10	none	3/3	two-column reference list only
+pmc096	pmc_holdout	main.PMC8324949.pdf	2	none	3/3	introduction and methods prose only
+pmc097	pmc_holdout	main.PMC8324949.pdf	5	none	3/3	discussion, conclusions, start of references
+pmc098	pmc_holdout	main.PMC8324949.pdf	6	none	3/3	two-column reference list only
+pmc099	pmc_holdout	main.PMC8498686.pdf	2	none	3/3	methods and results prose only
+pmc100	pmc_holdout	main.PMC8498686.pdf	8	none	3/3	acknowledgments and reference list
+pmc101	pmc_holdout	noz159.PMC7442340.pdf	3	branding	3/3	methods prose; coloured journal header banner
+pmc102	pmc_holdout	noz159.PMC7442340.pdf	13	branding	3/3	reference list under coloured journal masthead bar
+pmc103	pmc_holdout	ott-9-2519.PMC4854247.pdf	2	branding	3/3	introduction prose plus Dovepress masthead and logo
+pmc104	pmc_holdout	ott-9-2519.PMC4854247.pdf	3	branding	3/3	methods prose plus Dovepress logos
+pmc105	pmc_holdout	ott-9-2519.PMC4854247.pdf	4	branding	3/3	methods and results; Dovepress logos
+pmc106	pmc_holdout	wjon-13-343.PMC9822678.pdf	5	none	3/3	two-column discussion prose, no graphics
+pmc107	pmc_holdout	wjon-13-343.PMC9822678.pdf	6	none	3/3	acknowledgements, declarations and reference list
+pmc108	pmc_holdout	wjon-13-343.PMC9822678.pdf	7	none	3/3	two-column reference list only
+pmc109	pmc_holdout	zr-46-3-634.PMC12361896.pdf	2	none	3/3	introduction and methods prose
+pmc110	pmc_holdout	zr-46-3-634.PMC12361896.pdf	3	none	3/3	two-column methods prose, no graphics
+pmc111	pmc_holdout	zr-46-3-634.PMC12361896.pdf	11	none	3/3	discussion prose and data availability statement
+pmc112	pmc_holdout	zr-46-3-634.PMC12361896.pdf	12	none	3/3	author contributions and reference list
+pmc113	pmc_holdout	zr-46-3-634.PMC12361896.pdf	13	none	3/3	two-column reference list only
+arx003	arxiv_holdout	2607.28903v1.pdf	5	none	3/3	numbered display equations and explanatory prose only
+arx006	arxiv_holdout	2607.28903v1.pdf	13	none	3/3	prose with numbered display equations only
+arx007	arxiv_holdout	2607.28903v1.pdf	15	branding	2/3	prose with equations, footer rule only
+arx012	arxiv_holdout	2608.00271v1.pdf	9	none	3/3	prose methods section, no graphics
+arx016	arxiv_holdout	2608.00271v1.pdf	19	branding	3/3	prose plus a ruled text callout box, no graphics
+arx021	arxiv_holdout	2608.00271v1.pdf	44	none	3/3	prose with numbered display equations
+arx024	arxiv_holdout	2608.00675v1.pdf	2	none	3/3	two-column prose, related work
+arx025	arxiv_holdout	2608.00675v1.pdf	8	none	3/3	end of discussion, acknowledgments, two-column references
+arx026	arxiv_holdout	2608.00675v1.pdf	9	none	3/3	two-column reference list only
+arx028	arxiv_holdout	2608.00675v1.pdf	11	none	3/3	appendix prose with one inline equation
+arx036	arxiv_holdout	2608.01046v1.pdf	14	none	3/3	discussion and conclusion prose with bullet list
+arx040	arxiv_holdout	2608.01176v2.pdf	2	none	3/3	two-column prose, related work
+arx051	arxiv_holdout	2608.02455v1.pdf	2	none	3/3	prose with bulleted contributions, inline math
+arx053	arxiv_holdout	2608.02455v1.pdf	12	none	3/3	related-work prose and conclusion section
+arx056	arxiv_holdout	2608.02455v1.pdf	15	none	3/3	numbered reference list only
+arx057	arxiv_holdout	2608.02455v1.pdf	16	none	3/3	numbered reference list only
+arx058	arxiv_holdout	2608.02455v1.pdf	17	none	3/3	numbered reference list only
+arx061	arxiv_holdout	2608.02455v1.pdf	20	none	3/3	appendix prose with display equations
+arx063	arxiv_holdout	2608.02455v1.pdf	32	none	3/3	prose bullets describing baselines, inline formulas
+arx066	arxiv_holdout	2608.02483v1.pdf	11	none	3/3	numbered reference list only
+arx070	arxiv_holdout	2608.03783v1.pdf	5	none	3/3	two-column prose on spectrum policy
+arx071	arxiv_holdout	2608.03783v1.pdf	14	none	3/3	two-column prose survey text
+arx073	arxiv_holdout	2608.03783v1.pdf	20	none	3/3	conclusion prose and two-column references
+arx074	arxiv_holdout	2608.03783v1.pdf	21	none	3/3	two-column IEEE reference list
+arx080	arxiv_holdout	2608.04319v1.pdf	4	none	3/3	acknowledgement and two-column reference list
+arx089	arxiv_holdout	2608.04710v1.pdf	14	none	3/3	two-column numbered reference list only
+arx091	arxiv_holdout	2608.05697v1.pdf	2	none	3/3	prose, introduction and related work
+arx096	arxiv_holdout	2608.05697v1.pdf	16	none	3/3	numbered reference list only
+arx103	arxiv_holdout	2608.06313v1.pdf	6	none	3/3	numbered reference list only
+arx106	arxiv_holdout	2608.06783v1.pdf	12	branding	3/3	reference list under blue header rule
+arx117	arxiv_holdout	2608.07077v1.pdf	1	none	3/3	title, authors, abstract, prose introduction
+arx119	arxiv_holdout	2608.07077v1.pdf	7	none	3/3	two-column reference list only
+arx123	arxiv_holdout	2608.07092v1.pdf	4	none	3/3	prose with three display equations
+arx126	arxiv_holdout	2608.07092v1.pdf	12	none	3/3	numbered reference list only
+arx134	arxiv_holdout	2608.07106v1.pdf	15	none	3/3	two-column numbered reference list only
+arx138	arxiv_holdout	2608.07316v1.pdf	4	none	3/3	prose methods text, no graphics
+arx139	arxiv_holdout	2608.07316v1.pdf	6	none	3/3	prose bullets and paragraphs, no graphics
+arx143	arxiv_holdout	2608.07316v1.pdf	11	none	3/3	methods prose, no graphics
+arx150	arxiv_holdout	2608.07316v1.pdf	28	none	3/3	numbered reference list only
+arx151	arxiv_holdout	2608.07316v1.pdf	29	none	3/3	short reference list, mostly blank page
+arx153	arxiv_holdout	2608.07328v1.pdf	8	none	3/3	two-column numbered reference list only
+arx158	arxiv_holdout	2608.07364v1.pdf	2	none	3/3	two-column prose, related work
+arx159	arxiv_holdout	2608.07364v1.pdf	4	none	3/3	two-column prose describing phases
+arx160	arxiv_holdout	2608.07364v1.pdf	8	none	3/3	discussion, conclusion, acknowledgments, references
+arx166	arxiv_holdout	2608.07367v1.pdf	12	none	3/3	two-column reference list only
+arx169	arxiv_holdout	2608.07398v1.pdf	1	none	3/3	title, authors, abstract, keywords, prose
+arx173	arxiv_holdout	2608.07398v1.pdf	6	none	3/3	prose with numbered constraint equations only
+arx180	arxiv_holdout	2608.07398v1.pdf	24	none	3/3	reference list only
+arx183	arxiv_holdout	2608.07417v1.pdf	9	none	3/3	acknowledgments and two-column reference list
+arx187	arxiv_holdout	2608.07629v1.pdf	1	none	3/3	title, authors, abstract, introduction text
+arx188	arxiv_holdout	2608.07629v1.pdf	2	none	3/3	two-column prose with numbered contributions
+arx189	arxiv_holdout	2608.07629v1.pdf	7	none	3/3	prose limitations, conclusion, references
+arx190	arxiv_holdout	2608.07629v1.pdf	8	none	3/3	two-column reference list only
+arx194	arxiv_holdout	2608.07637v1.pdf	5	none	3/3	prose describing campaign construction
+arx203	arxiv_holdout	2608.07637v1.pdf	20	none	3/3	numbered reference list only
+arx205	arxiv_holdout	2608.07642v1.pdf	2	none	3/3	introduction and related-work prose, numbered list
+arx208	arxiv_holdout	2608.07642v1.pdf	12	none	3/3	two-column reference list, partly blank
+arx209	arxiv_holdout	2608.07651v1.pdf	2	none	3/3	structured abstract prose and keywords
+arx213	arxiv_holdout	2608.07651v1.pdf	6	none	3/3	methods and results prose only
+arx215	arxiv_holdout	2608.07651v1.pdf	8	none	3/3	plain prose results narrative
+arx216	arxiv_holdout	2608.07651v1.pdf	9	none	3/3	prose results and discussion, no graphics
+arx221	arxiv_holdout	2608.07651v1.pdf	14	none	3/3	limitations and conclusion prose only
+arx228	arxiv_holdout	2608.07734v1.pdf	4	none	3/3	prose, related work section
+arx229	arxiv_holdout	2608.07734v1.pdf	5	none	3/3	prose related work and problem formulation
+arx230	arxiv_holdout	2608.07734v1.pdf	7	none	3/3	definitions and prose, no graphics
+arx232	arxiv_holdout	2608.07734v1.pdf	13	none	3/3	proof text and section heading
+arx247	arxiv_holdout	2608.07759v1.pdf	12	none	3/3	two-column numbered reference list
+arx251	arxiv_holdout	2608.07835v1.pdf	10	none	3/3	supplementary prose, two columns, no graphics
+arx260	arxiv_holdout	2608.07864v1.pdf	17	none	3/3	numbered reference list only
+arx261	arxiv_holdout	2608.07864v1.pdf	18	none	3/3	short numbered reference list, mostly blank
+arx266	arxiv_holdout	2608.07948v1.pdf	17	none	3/3	numbered reference list only
+arx272	arxiv_holdout	2608.08021v1.pdf	1	branding	3/3	title page, rules above and below title
+arx273	arxiv_holdout	2608.08021v1.pdf	3	none	3/3	prose contributions and related work
+arx274	arxiv_holdout	2608.08021v1.pdf	11	none	3/3	reference list only
+arx276	arxiv_holdout	2608.08021v1.pdf	13	none	3/3	reference list only
+arx277	arxiv_holdout	2608.08068v1.pdf	2	none	3/3	prose introduction and contributions
+arx280	arxiv_holdout	2608.08068v1.pdf	6	none	3/3	method prose with inline equations
+arx281	arxiv_holdout	2608.08068v1.pdf	15	none	3/3	numbered reference list only
+arx286	arxiv_holdout	2608.08106v1.pdf	12	none	3/3	discussion prose plus two-column reference list
+arx288	arxiv_holdout	2608.08153v1.pdf	10	none	3/3	conclusion paragraph and reference list
+arx289	arxiv_holdout	2608.08153v1.pdf	11	branding	2/3	reference list below thin page rule
+arx298	arxiv_holdout	2608.08273v1.pdf	8	none	3/3	prose implementation details and experimental setup
+arx303	arxiv_holdout	2608.08290v1.pdf	3	none	3/3	introduction prose with contribution bullets
+arx308	arxiv_holdout	2608.08290v1.pdf	21	branding	2/3	prose paragraphs under running-head rule
+arx312	arxiv_holdout	2608.08307v1.pdf	1	none	3/3	title, authors, abstract, two-column introduction
+arx313	arxiv_holdout	2608.08307v1.pdf	2	none	3/3	related work and methodology prose with equations
+arx314	arxiv_holdout	2608.08307v1.pdf	4	none	3/3	two-column prose with many display equations
+arx315	arxiv_holdout	2608.08307v1.pdf	7	none	3/3	alphabetical reference list, two columns
+arx317	arxiv_holdout	2608.08368v1.pdf	2	none	3/3	related work and method prose only
+arx320	arxiv_holdout	2608.08368v1.pdf	8	none	3/3	conclusion prose plus two-column references

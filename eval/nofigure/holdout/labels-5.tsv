@@ -1,0 +1,30 @@
+tag	label	note
+pmc001	none	two-column prose, running head only
+pmc005	none	two-column prose, methods text only
+pmc009	none	reference list, licence text, copyright line
+pmc013	none	two-column reference list, publisher's note
+pmc017	none	two-column prose, results and discussion
+pmc021	branding	prose text plus Springer logo footer
+pmc025	branding	reference list plus Springer logo footer
+pmc029	branding	references, publisher's note, Springer logo
+pmc033	none	article title page, abstract, keywords, copyright
+pmc037	none	two-column reference list only
+pmc041	branding	title, abstract, prose, vertical journal masthead
+pmc045	none	acknowledgements and two-column reference list
+pmc049	none	conclusions, disclosures, numbered reference list
+pmc053	none	two-column numbered reference list only
+pmc057	none	conclusions, ethics statement, reference list
+pmc061	none	experimental prose, NMR data, conclusions
+pmc065	none	funding, short reference list, citation box
+pmc069	none	two-column results prose only
+pmc073	none	reference list plus licence boilerplate footer
+pmc077	none	single-column methods prose only
+pmc081	branding	reference list plus KJR journal logo
+pmc085	none	two-column prose, methods subsections
+pmc089	none	declarations and two-column reference list
+pmc093	none	two-column discussion prose only
+pmc097	none	discussion, conclusions, declarations, references
+pmc101	branding	methods prose with coloured header banner
+pmc105	branding	methods prose with Dovepress logo header/footer
+pmc109	none	two-column prose, introduction and methods
+pmc113	none	two-column reference list only

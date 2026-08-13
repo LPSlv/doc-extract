@@ -1,0 +1,31 @@
+tag	label	note
+arx003	none	numbered display equations and prose, no graphics
+arx012	none	single-column prose, methods description only
+arx024	none	two-column prose and bulleted contributions
+arx028	none	appendix prose, one inline display equation
+arx051	none	prose with bulleted contributions list
+arx057	none	numbered reference list only
+arx063	none	prose with bulleted baseline descriptions and inline formulas
+arx071	none	two-column prose survey text
+arx080	none	acknowledgement and two-column reference list
+arx096	none	numbered reference list only
+arx117	none	title, abstract, two-column prose, arXiv side stamp
+arx126	none	numbered reference list only
+arx139	none	prose with two bullet items
+arx151	none	short reference list, rest of page blank
+arx159	none	two-column prose describing phases
+arx169	none	title page, abstract, keywords, prose
+arx183	none	acknowledgments and two-column reference list
+arx189	none	prose, numbered limitations, start of references
+arx203	none	numbered reference list with DOI links
+arx209	none	structured abstract prose and keywords
+arx216	none	prose results and discussion text
+arx229	none	prose, related work and problem formulation
+arx247	none	two-column numbered reference list
+arx261	none	short numbered reference list, page mostly blank
+arx273	none	prose with bulleted contributions and related work
+arx277	none	prose with one numbered contribution item
+arx286	none	prose discussion and two-column reference list
+arx298	none	prose implementation and experiment description
+arx312	none	title page, abstract, two-column prose intro
+arx315	none	two-column reference list only
