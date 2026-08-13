@@ -1,0 +1,46 @@
+[
+ {"id": "h62", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Aperture is drawn wider than tall and the horizontal callout reads 8X (1.4); 0.45 is the short side, 0.65 the pitch, 4.4 the column span, so C is the only defensible option.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h63", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "R2 is printed as 1.24kOhm in Figure 8-5; the positional description only disambiguates it from Figure 8-6's R2 (19.5kOhm) on the same page.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h64", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Curve crosses the 100 mA gridline just above 3.12 V (3.24 at 0 mA, 3.04 at 150 mA), so the other options are far off; reading a datasheet curve at a stated current is the figure's purpose.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h65", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The (1.48) dimension runs between the left and right pad-column centrelines; 0.67/0.3 are pad size, 0.5 the row pitch, (1) the vertical span.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h66", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The left (NSMD, PREFERRED) detail is annotated 0.05 MAX AROUND and the right (SMD) one 0.05 MIN AROUND; matching annotation to detail is exactly what the panel exists to convey.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h67", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "In-plot legend lists C VKA = 10 V (A = Vref, B = 5 V, D = 15 V), a direct legend lookup a reader of a stability plot would actually make.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h68", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The red 2.5 RC trace sits at about 30% where it crosses the 2.5 V gridline (40% occurs near 3.0 V), a normal read of an application curve.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h69", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Pre-pulse supply-current baseline sits just above 0.75 mA/Ch at roughly 0.85; 0.4 is the transient plateau and 0.1 the shutdown level, so D is uniquely right.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h70", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Exactly two triangles (gain stage plus output buffer) lie between the input pair and OUT; the count is the diagram's architectural point, not arbitrary trivia.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false}
+]

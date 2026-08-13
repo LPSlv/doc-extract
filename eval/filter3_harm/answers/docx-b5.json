@@ -1,0 +1,73 @@
+[
+ {"id": "h50", "choice": "A", "grounded": true,
+  "source": "description.md",
+  "quote": "All three series rise from the youngest bands to a single clear\npeak at the **26-30** band and then fall monotonically to essentially zero at the\noldest bands. HA+HB is the uppermost series throughout",
+  "reasoning": "The description names 26-30 as the single peak band for all series, including HA+HB (also tabulated at ~1.00, the largest value).",
+  "note": ""},
+
+ {"id": "h51", "choice": "A", "grounded": true,
+  "source": "description.md",
+  "quote": "Right vertical arrow, $X_t^{\\omega} \\to \\rho_t$, labelled \"Law and **E**\" on its\n  right (bold **E** = expectation).",
+  "reasoning": "The description transcribes the right-hand vertical arrow and its label directly.",
+  "note": "The Markdown text layer does not carry the diagram's arrow labels; only the description does."},
+
+ {"id": "h52", "choice": "A", "grounded": true,
+  "source": "description.md",
+  "quote": "$\\Gamma^{(1,0)}$ — just left of / above the node, labelling the interface piece at\n  the junction itself.",
+  "reasoning": "Γ^(1,0) is the piece at the node, and the quoted index convention says j=0 denotes the part of the node boundary R^(0)_ε, whereas j≠0 denotes a side of a thin rectangle.",
+  "note": ""},
+
+ {"id": "h53", "choice": "D", "grounded": false,
+  "source": "both",
+  "quote": "",
+  "reasoning": "Neither file states the leftmost panel's blue z=5 value at the CDIM (solid) line; I inferred ~2 because the caption calls CDIM a 'marginal detection' of Hα×HeII (so above the S/N<1 shaded band but far below 10), and Table I gives CDIM Ω_survey = 31 deg^2 while the description reads blue z=5 ≈ 5 at 300 deg^2 in panel 4, which scales down to roughly 1.5-2.",
+  "note": "Description and text agree; the specific number is an inference, not a quotable reading."},
+
+ {"id": "h54", "choice": "B", "grounded": true,
+  "source": "description.md",
+  "quote": "In-plot annotation, lower right: \"**Internal reference enabled, Gain = 1**\". Same knee shape: ≈0.57 mA at code 0, rising sharply over roughly the first 3000 codes to ≈0.64 mA, then flat at ≈0.65 mA across the remaining codes (all read from axis).",
+  "reasoning": "Figure 70 is the internal-reference/gain=1 version, and code 32768 is mid-range where the curve is flat at ≈0.65 mA.",
+  "note": "The Markdown confirms Figure 70 is the 'Internal VREF' Power-Supply Current vs Digital Input Code plot but carries no readable curve values."},
+
+ {"id": "h55", "choice": "B", "grounded": true,
+  "source": "both",
+  "quote": "|HDC1080DMBR|WSON|DMB|6|3000|335.0|335.0|32.0|",
+  "reasoning": "The table column order is Length/Width/Height, so Height (the H callout on the box drawing) is 32.0 mm; 335.0 are the length and width.",
+  "note": "Markdown line 846 of h55.md and the description's table agree exactly."},
+
+ {"id": "h56", "choice": "C", "grounded": true,
+  "source": "description.md",
+  "quote": "Below R1 is a junction dot. From this junction a wire runs left and up to the\n  **ADJUST** pin — so ADJUST taps the R1/R2 divider node.",
+  "reasoning": "The description traces the ADJUST wire to the junction between R1 and R2.",
+  "note": ""},
+
+ {"id": "h57", "choice": "B", "grounded": true,
+  "source": "description.md",
+  "quote": "| **(4.4)** | Horizontal dimension across the bottom, from the left column's centreline to the right column's centreline — span between the two rows of apertures |",
+  "reasoning": "Only the (4.4) callout measures column centreline to column centreline; 1.4/0.45 are aperture size and 0.65 is pitch.",
+  "note": "The Markdown extraction of the DGK0008A solder-paste frame contains '(4.4) SOLDER PASTE EXAMPLE SCALE: 15X 4214862/A' but does not say what the dimension spans; the description supplies that."},
+
+ {"id": "h58", "choice": "B", "grounded": true,
+  "source": "description.md",
+  "quote": "part-way along it is a **diagonal slash tick with the numeral \"2\" above it**\n   (bus-width marker: two identical channels)",
+  "reasoning": "The TIN-to-TOUT path is annotated with '2', i.e. two driver channels.",
+  "note": ""},
+
+ {"id": "h59", "choice": "C", "grounded": true,
+  "source": "description.md",
+  "quote": "≈80% at 2.8 V, and\n**100% at about 3.0 V**, after which it leaves the plot — no black data is drawn for\ncontrol voltages above ≈3.0 V.",
+  "reasoning": "The description reads the black 1 RC curve hitting 100% duty cycle at about 3.0 V.",
+  "note": ""},
+
+ {"id": "h60", "choice": "B", "grounded": true,
+  "source": "both",
+  "quote": "Callout with an arrow pointing down-left to the left end of the traces, at about\nV$_{CM}$ = −18 V: \"**V$_{CM}$ = −18.1 V**\".",
+  "reasoning": "Figure 12's only marked common-mode transition is the −18.1 V callout at the left end of the five traces.",
+  "note": "The Markdown for page 14 independently carries 'V CM = -18.1 V' inside the Figure 12 block, confirming the description."},
+
+ {"id": "h61", "choice": "C", "grounded": false,
+  "source": "description.md",
+  "quote": "",
+  "reasoning": "The description gives no reading at 1 MHz; I derived ~6 VPP from two stated anchors — the ±15 V curve is flat at 30 VPP to ≈200 kHz (a 1/f slew-limited roll-off then gives 30 x 0.2 = 6 VPP at 1 MHz) and all curves decay together to ≈0.3 VPP at ≈20 MHz (0.3 x 20 = 6 VPP at 1 MHz).",
+  "note": "Consistent derivation from both anchors, but it assumes the 1/f slew-rate-limited slope rather than quoting a stated value, so not marked grounded."}
+]

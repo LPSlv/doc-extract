@@ -1,0 +1,61 @@
+[
+ {"id": "h50", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Peak of the diamond HA+HB trace is plainly at 26-30 (~0.98); a natural read of an age-distribution figure.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h51", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The right vertical arrow X_t^omega -> rho_t is labelled 'Law and E'; the other options are the other three arrows' labels.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h52", "answer_ok": true, "answer_note": "",
+  "fair": false, "reason": "Stem names the node R^(0)_eps, which mirrors the 0 second index of the correct option Gamma^(1,0); combined with the stated Omega^(1) context the answer is derivable from the notation alone without the picture.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": true},
+
+ {"id": "h53", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Blue solid curve crosses the solid CDIM line at ~1.8, so 'about 2' is the only close option; this is the headline number of the panel.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h54", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Figure 70 is uniquely identified by its printed 'Internal reference enabled, Gain = 1' note and sits at ~0.66 mA across midscale.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h55", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "H maps to the Height (mm) column = 32.0 for HDC1080DMBR; a plausible packaging/logistics lookup, with 335.0 as the length/width foil.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h56", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "ADJUST clearly runs to the R1/R2 tap; the divider topology is exactly what this application circuit exists to show.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h57", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "(4.4) is the dimension spanning the two aperture-column centrelines; 1.4/0.45/0.65 are the aperture size and pitch callouts.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h58", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The bus slash on the TIN/TOUT path is annotated 2, matching the dual-driver part; straightforward read.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h59", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The black 1 RC curve terminates at ~98% at 3.0 V while the red 2.5 RC curve runs to 4.4 V; comparing the two traces is the point of the plot.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h60", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The annotated vertical line at VCM = -18.1 V where the traces turn up is the negative common-mode limit; only mild risk that -18.1 is guessable as the sole non-round option.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h61", "answer_ok": true, "answer_note": "Measured ~6.7 VPP at 1 MHz (the +/-15 V trace runs under the +/-5 V trace there); 'about 6' is still the only close option.",
+  "fair": true, "reason": "Max undistorted swing at a given frequency is the standard use of this curve and the read is unambiguous against the other options.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false}
+]

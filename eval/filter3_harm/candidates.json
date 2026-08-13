@@ -1,0 +1,1323 @@
+{
+ "n_pages": 70,
+ "n_candidates": 69,
+ "dropped": [
+  {
+   "id": "h33",
+   "why": "withdrawn: author contamination, self-reported. The image-first author's own status note reads: \"asked for ball A13 (VBUS) deliberately, since the visible part of Table 5.1 stops at A12, so the answer must come from the ball map\". That is the authorship bias this eval exists to control, admitted in writing: the question was selected BECAUSE the page's text could not answer it. Recorded rather than deleted, as eval/figqa.md records v25."
+  }
+ ],
+ "candidates": [
+  {
+   "id": "h01",
+   "q": "In the diagram of Figure 1a, the points on the real line are labelled s1, s2 = s4, t4, t2, s3, t3, t1 from left to right. Which two of the labelled endpoints are drawn as one and the same point?",
+   "options_raw": [
+    "s2 and s4",
+    "s3 and t2",
+    "t4 and t2",
+    "s1 and s3"
+   ],
+   "kind": "printed",
+   "fact": "The second tick under the horizontal line in Figure 1a (top-left panel) carries the single label 's2 = s4', while every other dot carries one label.",
+   "why_arbitrary": "Which pair of interval endpoints happens to coincide is a choice made for this particular example diagram, not something fixed by the definitions.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/arxiv/2607.29423v1.pdf p8",
+   "branch": "curves",
+   "src_tag": "f007"
+  },
+  {
+   "id": "h02",
+   "q": "In the right-hand panel of Figure 1 (the EF21-SignMuon 2x2 instance), roughly what value has f(X_t) reached by iteration 60?",
+   "options_raw": [
+    "About 6",
+    "About 2",
+    "About 4",
+    "About 20"
+   ],
+   "kind": "geometry",
+   "fact": "The red diamond-marked EF21-SignMuon trace in the third panel of Figure 1 climbs to just past the '6' tick on that panel's vertical axis at the right edge (iteration 60).",
+   "why_arbitrary": "The numerical height reached in 60 iterations depends on the constructed instance and step size, and could have been any value.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/arxiv/2607.29674v1.pdf p4",
+   "branch": "curves",
+   "src_tag": "f012"
+  },
+  {
+   "id": "h03",
+   "q": "In the SOT108-1 (SO14) package outline of Fig. 14, what maximum value is tabulated for the body length D in millimetres?",
+   "options_raw": [
+    "8.75",
+    "8.55",
+    "6.2",
+    "4.0"
+   ],
+   "kind": "printed",
+   "fact": "The dimension table inside the Fig. 14 outline drawing lists, in the D column, max 8.75 and min 8.55 mm.",
+   "why_arbitrary": "The body length limits are specific to this package outline version and are not deducible from the package family name.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/nexperia_74HC_HCT14.pdf p11",
+   "branch": "curves",
+   "src_tag": "f024"
+  },
+  {
+   "id": "h04",
+   "q": "In Fig. 8 (the SOT108-1 package outline drawing), across which features of the package is the dimension labeled HE measured?",
+   "options_raw": [
+    "Across the outer extremities of the formed leads on the two lead-bearing sides (overall width including leads)",
+    "Across the two sides of the plastic body only, excluding the leads",
+    "Across the two ends of the package body in the long direction, spanning all 14 lead positions",
+    "From the seating plane up to the top surface of the package body"
+   ],
+   "kind": "geometry",
+   "fact": "In the end view at the upper right of the drawing, the HE arrow spans the full width from the outer edge of the left gull-wing lead foot to the outer edge of the right one, while the arrow labelled E directly above it stops at the plastic body sides.",
+   "why_arbitrary": "Nothing in the letter HE says whether it includes the leads or only the body; only the extent of the drawn arrow relative to the body outline settles it.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/nexperia_74HC_HCT74.pdf p13",
+   "branch": "curves",
+   "src_tag": "f027"
+  },
+  {
+   "id": "h05",
+   "q": "In Figure 56 (the transient-response plot at the bottom of the page), roughly how large is the positive overshoot of the red 'Standard Input Diode Structure' trace, in mV, after its initial spike?",
+   "options_raw": [
+    "About 30 mV",
+    "About 10 mV",
+    "About 60 mV",
+    "About 100 mV"
+   ],
+   "kind": "geometry",
+   "fact": "In Figure 56 the red curve rises to a broad hump peaking a little below the 40 mV gridline (between the 20 and 40 mV ticks) at roughly 18 us, well above the dashed +-10 mV settling band.",
+   "why_arbitrary": "The size of the overshoot is a measured property of this particular circuit and could have been any amplitude.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_opa192.pdf p24",
+   "branch": "curves",
+   "src_tag": "f103"
+  },
+  {
+   "id": "h06",
+   "q": "In the 'Equivalent Input and Output Schematic Diagrams' block diagram at the bottom of the page, what are the four pin names shown down the left-hand edge of the block, from top to bottom?",
+   "options_raw": [
+    "D, Rs, NC, R",
+    "D, R, NC, Rs",
+    "D, Rs, R, NC",
+    "R, Rs, NC, D"
+   ],
+   "kind": "geometry",
+   "fact": "The left edge of the schematic block carries, top to bottom, the pin labels D, Rs, NC and R, with VCC and VREF entering the top and GND leaving the bottom.",
+   "why_arbitrary": "Which pins are brought out on which side of the diagram, and where the no-connect sits in the order, is specific to this device's pinout.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_sn65hvd230.pdf p1",
+   "branch": "curves",
+   "src_tag": "f116"
+  },
+  {
+   "id": "h07",
+   "q": "In Figure 8-1, to which rail is the clamping diode that conducts the positive input clamp current (+IIK) at the logic input connected?",
+   "options_raw": [
+    "VCC",
+    "GND",
+    "The Output terminal",
+    "The Logic block's internal node"
+   ],
+   "kind": "geometry",
+   "fact": "In the schematic the diode labelled +IIK sits in the upper-left quadrant with its cathode on the horizontal wire that runs to the VCC terminal at the top of the dashed Device box; the -IIK diode below it goes to the GND wire.",
+   "why_arbitrary": "The label +IIK alone does not say which rail the diode returns to; only tracing the drawn wire up to VCC rather than down to GND resolves it.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_sn74hc126.pdf p11",
+   "branch": "curves",
+   "src_tag": "f125"
+  },
+  {
+   "id": "h08",
+   "q": "In the solder paste stencil design drawing for PW0014A, what are the length and width of each of the 14 stencil apertures?",
+   "options_raw": [
+    "1.5 mm by 0.45 mm",
+    "1.5 mm by 0.65 mm",
+    "0.65 mm by 0.45 mm",
+    "5.8 mm by 1.5 mm"
+   ],
+   "kind": "printed",
+   "fact": "The callout 14X (1.5) at the top of the aperture array dimensions the horizontal extent of one aperture and 14X (0.45) on the left dimensions its vertical extent; 12X (0.65) below is the pitch, not an aperture size.",
+   "why_arbitrary": "Which of the three loose numbers on the drawing belongs to the aperture rather than the pitch or the span is fixed only by where each dimension's arrows land.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_sn74hc132.pdf p39",
+   "branch": "curves",
+   "src_tag": "f127"
+  },
+  {
+   "id": "h09",
+   "q": "In the LAND PATTERN EXAMPLE at the top of this NS0016A drawing, what dimension is called out between the centrelines of the two columns of pads?",
+   "options_raw": [
+    "7",
+    "1.85",
+    "1.27",
+    "0.6"
+   ],
+   "kind": "printed",
+   "fact": "The horizontal dimension line beneath the land pattern, running between the two pad-column centrelines, is annotated (7).",
+   "why_arbitrary": "The row-to-row span of a recommended land pattern is a layout choice recorded in this drawing, not implied by the package name.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_sn74hc174.pdf p18",
+   "branch": "curves",
+   "src_tag": "f136"
+  },
+  {
+   "id": "h10",
+   "q": "In the land pattern example for PW0016A, what is the center-to-center pitch between adjacent pads?",
+   "options_raw": [
+    "0.65 mm",
+    "0.45 mm",
+    "1.5 mm",
+    "5.8 mm"
+   ],
+   "kind": "printed",
+   "fact": "The callout 14X (0.65) on the left of the land pattern spans from one pad centerline to the next, giving the pad-to-pad pitch; 16X (0.45) and 16X (1.5) are the pad width and length, and (5.8) is the row-to-row span.",
+   "why_arbitrary": "Four separate parenthesised numbers appear on the same drawing and only the placement of the 0.65 dimension between two pad centerlines identifies it as the pitch.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_sn74hc174.pdf p28",
+   "branch": "curves",
+   "src_tag": "f137"
+  },
+  {
+   "id": "h11",
+   "q": "In the land pattern example for the X2SON package DPW0005A, what is the diameter of the via shown in the center thermal pad?",
+   "options_raw": [
+    "0.1 mm",
+    "0.05 mm",
+    "0.21 mm",
+    "0.25 mm"
+   ],
+   "kind": "printed",
+   "fact": "The leader pointing at the small circle in the middle diamond-shaped pad is annotated (\u00d8 0.1) VIA, near the top center of the drawing.",
+   "why_arbitrary": "The drawing also carries 0.05 MIN, (0.21) and (\u25a1 0.25) callouts in the same neighbourhood, so only following the leader line to the circle picks out the via diameter.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_sn74lvc1g07.pdf p40",
+   "branch": "curves",
+   "src_tag": "f158"
+  },
+  {
+   "id": "h12",
+   "q": "In Figure 4-6 (the TL072M U package, 10-pin CFP top view), which pin number is VCC+?",
+   "options_raw": [
+    "9",
+    "10",
+    "8",
+    "5"
+   ],
+   "kind": "printed",
+   "fact": "On the right-hand side of the Figure 4-6 pinout, the lead numbered 9 is labelled VCC+, between NC on pin 10 and 2OUT on pin 8.",
+   "why_arbitrary": "The assignment of supply to a given pin of this 10-pin flat package is a device-specific pinout, not a convention.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_tl074.pdf p6",
+   "branch": "curves",
+   "src_tag": "f170"
+  },
+  {
+   "id": "h13",
+   "q": "In the TAPE AND REEL BOX DIMENSIONS drawing at the top of the page, which of the labeled edges (W, L, or H) is the one whose value is 35.0 mm for the SOT-23 (DBV) TL431 devices listed?",
+   "options_raw": [
+    "H, the short vertical edge dimensioned on the right-hand side wall of the box",
+    "W, the long lower edge running down to the left of the box",
+    "L, the long lower edge running down to the right of the box",
+    "W, the short vertical edge dimensioned on the right-hand side wall of the box"
+   ],
+   "kind": "geometry",
+   "fact": "The isometric box pictogram carries W on the lower-left base edge, L on the lower-right base edge and H on the short vertical dimension at the right side wall; the table row for TL431ACDBVR (SOT-23, DBV) lists Height 35.0 mm against Length 210.0 and Width 185.0.",
+   "why_arbitrary": "Which of the three drawn edges bears which letter is a property of this particular pictogram, not something derivable from the table alone.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_tl431.pdf p55",
+   "branch": "curves",
+   "src_tag": "f179"
+  },
+  {
+   "id": "h14",
+   "q": "In the LAND PATTERN EXAMPLE of this PW0014A drawing, what value is given by the horizontal 14X callout across the top of the pattern (the length of each pad)?",
+   "options_raw": [
+    "1.5",
+    "0.45",
+    "0.65",
+    "5.8"
+   ],
+   "kind": "printed",
+   "fact": "The topmost dimension in the land pattern reads '14X (1.5)', spanning the horizontal extent of one pad; '14X (0.45)' below it gives the pad width and '12X (0.65)' the pitch.",
+   "why_arbitrary": "The recommended pad length is a specific layout recommendation in this drawing and could have been another value.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_tlv9002.pdf p78",
+   "branch": "curves",
+   "src_tag": "f194"
+  },
+  {
+   "id": "h15",
+   "q": "In the land pattern example for the X2QFN package RUC0014A, what are the two dimensions of each of the 14 signal pads?",
+   "options_raw": [
+    "0.6 mm by 0.2 mm",
+    "0.4 mm by 0.2 mm",
+    "0.6 mm by 0.4 mm",
+    "1.8 mm by 0.2 mm"
+   ],
+   "kind": "printed",
+   "fact": "At the upper left of the land pattern, 14X (0.6) dimensions the long side of one pad and 14X (0.2) its short side; 8X (0.4) and 2X (0.4) are pitches and (1.8), (1.6) are overall spans.",
+   "why_arbitrary": "Several 0.4 and 1.8 callouts sit on the same drawing, so only the arrow extents distinguish the pad's own two dimensions from the pitches and spans.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_tlv9062.pdf p80",
+   "branch": "curves",
+   "src_tag": "f199"
+  },
+  {
+   "id": "h16",
+   "q": "In the TAPE AND REEL BOX DIMENSIONS drawing at the top of the page, which labeled edge (W, L, or H) corresponds to the 45.0 mm figure listed for TPA3116D2DADR?",
+   "options_raw": [
+    "H, the short vertical edge dimensioned on the right-hand side wall of the box",
+    "L, the long lower edge running down to the right of the box",
+    "W, the long lower edge running down to the left of the box",
+    "L, the short vertical edge dimensioned on the right-hand side wall of the box"
+   ],
+   "kind": "geometry",
+   "fact": "The box pictogram labels the short vertical dimension at the right side wall H, the lower-left base edge W and the lower-right base edge L; the TPA3116D2DADR row lists Length 356.0, Width 356.0 and Height 45.0 mm.",
+   "why_arbitrary": "Because Length and Width are both 356.0 for this device, only reading which drawn edge carries the H label ties 45.0 mm to a specific edge of the picture.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/datasheets/ti_tpa3116d2.pdf p36",
+   "branch": "curves",
+   "src_tag": "f202"
+  },
+  {
+   "id": "h17",
+   "q": "In the left panel of Figure 3 (Attention Runtime, forward plus backward pass), which method's curve lies lowest at sequence length 8192?",
+   "options_raw": [
+    "Block-Sparse FlashAttention",
+    "FlashAttention",
+    "Linformer Attention",
+    "Megatron Attention"
+   ],
+   "kind": "geometry",
+   "fact": "At the right edge of the left panel (8192) the green dashed trace sits below both the brown Linformer curve and the black dotted FlashAttention curve; the legend under the panels assigns green dashed to Block-Sparse FlashAttention.",
+   "why_arbitrary": "The relative ordering of measured runtimes at a given sequence length is an empirical result of this benchmark.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/papers/ai_flashattention.pdf p9",
+   "branch": "curves",
+   "src_tag": "f224"
+  },
+  {
+   "id": "h18",
+   "q": "In Fig. 1 (the patient flow diagram), how many patients allocated to SDBP-B actually received the assigned bowel preparation?",
+   "options_raw": [
+    "63",
+    "60",
+    "58",
+    "71"
+   ],
+   "kind": "geometry",
+   "fact": "Following the right-hand branch of the flow diagram, the box 'Allocated to SDBP-B (n = 71)' leads down to 'Received assigned bowel prep (n = 63)', which in turn leads to 'Had BBPS score (n = 60)'.",
+   "why_arbitrary": "Three arms each show a received-prep count (63, 60, 63) and a BBPS count (56, 58, 60), so only following the arrows down from the SDBP-B box picks the right number.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/pmc/10-1055-a-0650-3908.PMC6175603.pdf p3",
+   "branch": "diagonals",
+   "src_tag": "f233"
+  },
+  {
+   "id": "h19",
+   "q": "In the SOT1202 (XSON6) outline of Fig. 16, what nominal value in millimetres is tabulated for e, the spacing between the two rows of terminals?",
+   "options_raw": [
+    "0.55",
+    "0.35",
+    "0.30",
+    "0.15"
+   ],
+   "kind": "printed",
+   "fact": "The dimension table inside the Fig. 16 drawing gives e a nominal value of 0.55 mm, with e1 (the within-row pitch) nominal 0.35 mm.",
+   "why_arbitrary": "The row-to-row terminal spacing of this leadless package is a specific mechanical value defined by this outline drawing.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/tds/nexperia_74LVC1G14.pdf p14",
+   "branch": "curves",
+   "src_tag": "f237"
+  },
+  {
+   "id": "h20",
+   "q": "In the land pattern example for PW0024A, what is the length of each of the 24 pads?",
+   "options_raw": [
+    "1.5 mm",
+    "0.45 mm",
+    "0.65 mm",
+    "5.8 mm"
+   ],
+   "kind": "printed",
+   "fact": "The callout 24X (1.5) at the top of the pad array spans the horizontal (long) extent of one pad; 24X (0.45) on the left is the pad width and 22X (0.65) the pitch.",
+   "why_arbitrary": "The drawing carries 1.5, 0.45, 0.65 and 5.8 as bare parenthesised numbers, and only the direction and extent of each dimension arrow says which one is the pad length.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "blindspot",
+   "source_page": "corpus/tds/ti_tca9548a.pdf p37",
+   "branch": "curves",
+   "src_tag": "f241"
+  },
+  {
+   "id": "h21",
+   "q": "In Figure 12 (the normalized transient thermal impedance plot for the AOW14N50, at the top of the page), what value of R(thetaJC) is stated in the annotation block inside the plot?",
+   "options_raw": [
+    "0.45 degC/W",
+    "4.5 degC/W",
+    "0.045 degC/W",
+    "0.5 degC/W"
+   ],
+   "kind": "printed",
+   "fact": "The text block at the upper left inside Figure 12 reads 'R(thetaJC)=0.45 degC/W', whereas the equivalent block in Figure 13 below reads 4.5 degC/W.",
+   "why_arbitrary": "The junction-to-case thermal resistance is a measured device parameter that differs between the two package variants on this same page.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/aos_AOW14N50.pdf p5",
+   "branch": "curves",
+   "src_tag": "d001"
+  },
+  {
+   "id": "h22",
+   "q": "In the upper typical application schematic (IMON 3rd Order Thermal Compensation Application), between which pins of the AOZ23655QI is the thermistor network containing RNTC(T) connected?",
+   "options_raw": [
+    "Between the IMON pin and analog ground (the AGND net)",
+    "Between the ISEN_P and ISEN_N pins",
+    "Between the LL pin and analog ground",
+    "Between the IMON pin and the LL pin"
+   ],
+   "kind": "geometry",
+   "fact": "In the upper schematic the IMON pin runs left to a node with C5, then down through RS into the RC / RS1+RNTC(T) ladder, whose bottom node ends in an analog-ground symbol; the LL pin has its own separate C6/RLL branch, and RNTC(T) only appears in the ISEN network in the lower (2nd order) schematic.",
+   "why_arbitrary": "The same device is drawn twice on this page with RNTC(T) in a different place each time, so only tracing the wires of the upper schematic determines where the thermistor network hangs.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/aos_AOZ23655QI.pdf p2",
+   "branch": "curves",
+   "src_tag": "d004"
+  },
+  {
+   "id": "h23",
+   "q": "In Figure 2-3, between which two points on the CHIP_EN waveform is the interval tRST measured?",
+   "options_raw": [
+    "From where the falling CHIP_EN crosses VIL_nRST to where the rising CHIP_EN crosses VIL_nRST again",
+    "From where CHIP_EN first begins to fall from its high level to where it returns to its full high level",
+    "From where the power rails reach 2.8 V to where CHIP_EN first crosses VIL_nRST",
+    "Between the two points where CHIP_EN crosses the 2.8 V level"
+   ],
+   "kind": "geometry",
+   "fact": "The tRST arrow at the top right of the timing diagram is bounded by two dashed verticals that drop onto the CHIP_EN trace exactly where it crosses the VIL_nRST dashed horizontal on the way down and on the way back up.",
+   "why_arbitrary": "CHIP_EN's dip has several candidate landmarks (start of fall, flat bottom, full recovery) and only the drawn dashed verticals show which pair the arrow spans.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/espressif_esp32-h2_datasheet_en.pdf p21",
+   "branch": "curves",
+   "src_tag": "d006"
+  },
+  {
+   "id": "h24",
+   "q": "In Figure 11 (the 4-point linearization transfer function at the bottom of the page), what name is given to the slope of the rising segment that runs from CLAMPLOW up to point A?",
+   "options_raw": [
+    "LNR_S0",
+    "LNR_A_S",
+    "LNR_B_S",
+    "LNR_D_S"
+   ],
+   "kind": "printed",
+   "fact": "In Figure 11 the curved arrow on the first rising segment, left of point A, is annotated 'Slope LNR_S0'; the arrow just after A is annotated 'Slope LNR_A_S'.",
+   "why_arbitrary": "The naming of the initial segment's slope parameter is this device's register nomenclature and could have been named otherwise.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/melexis_mlx90421.pdf p29",
+   "branch": "curves",
+   "src_tag": "d018"
+  },
+  {
+   "id": "h25",
+   "q": "In Figure 36 (SMP-3 angle detection), how is the magnet's N-S pole axis oriented relative to the sensor package at the position labelled \"~90 Deg.\", compared with the one labelled \"~0 Deg.\"?",
+   "options_raw": [
+    "Rotated a quarter turn: at ~90 Deg. the N-S axis is vertical with N on top and S below, whereas at ~0 Deg. it is horizontal with S on the left and N on the right",
+    "Rotated a quarter turn the other way: at ~90 Deg. the N-S axis is vertical with S on top and N below",
+    "Unchanged: the N-S axis is horizontal in both, with S on the left and N on the right",
+    "Flipped in the plane: the N-S axis stays horizontal but N moves to the left and S to the right"
+   ],
+   "kind": "geometry",
+   "fact": "The four package drawings inside the boxed figure each carry a two-tone magnet disc; the ~0 Deg. one (top left) is split left/right with S left and N right, while the ~90 Deg. one (top right) is split top/bottom with N above and S below.",
+   "why_arbitrary": "Nothing fixes which pole a vendor draws upward at its own nominal 90 degree position - the figure's own footnote says there is no absolute reference for the angular information.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/melexis_mlx90421.pdf p57",
+   "branch": "curves",
+   "src_tag": "d021"
+  },
+  {
+   "id": "h26",
+   "q": "In Figure 41 (SMP-4 marking), which marking field does the six-character \"CCCCCC\" string on the package correspond to?",
+   "options_raw": [
+    "Capacitor Configuration",
+    "Assembly Lot Number",
+    "Year (YY) and Week (WW) date code",
+    "Application Code"
+   ],
+   "kind": "printed",
+   "fact": "In the \"Bottom\" marking breakdown on the right of Figure 41, the boxed CCCCCC field has an arrow pointing to the printed label \"Capacitor Configuration\" (bottom-most row of that group).",
+   "why_arbitrary": "The letter C is used here as an arbitrary placeholder character; only the vendor's own callout says which field it stands for.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/melexis_mlx90422.pdf p63",
+   "branch": "curves",
+   "src_tag": "d029"
+  },
+  {
+   "id": "h27",
+   "q": "In Fig. 12 (package outline SOT360-1, TSSOP20), what is the maximum overall package height A in millimetres?",
+   "options_raw": [
+    "1.1 mm",
+    "0.95 mm",
+    "0.25 mm",
+    "0.15 mm"
+   ],
+   "kind": "printed",
+   "fact": "The DIMENSIONS table inside the Fig. 12 outline frame lists \"A max.\" in its second column, with the value 1.1 in the mm row.",
+   "why_arbitrary": "The overall height limit is a package-specific number set by this outline version, not deducible from the TSSOP name or lead count.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/nexperia_74HC_HCT373.pdf p12",
+   "branch": "curves",
+   "src_tag": "d034"
+  },
+  {
+   "id": "h28",
+   "q": "In Fig 9 (gate-source threshold voltage versus junction temperature), what is the typical VGS(th) at the coldest plotted junction temperature, Tj = -60 degC?",
+   "options_raw": [
+    "about 0.83 V",
+    "about 0.53 V",
+    "about 0.68 V",
+    "about 0.95 V"
+   ],
+   "kind": "geometry",
+   "fact": "The dashed 'typ' trace in the upper-left plot (Fig 9) starts at the left edge of the axes (Tj = -60 degC) at a height just above the 0.8 V tick, while the solid 'min' trace starts just above 0.5 V.",
+   "why_arbitrary": "The threshold voltage of this particular low-threshold TrenchMOS part at -60 degC is a measured device characteristic, not anything fixed by convention.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/nexperia_PMV30UN.pdf p7",
+   "branch": "diagonals",
+   "src_tag": "d040"
+  },
+  {
+   "id": "h29",
+   "q": "In Fig 4 (transient thermal impedance from junction to mounting base versus pulse duration), what is the approximate Zth(j-mb) value on the single-shot curve at a pulse duration tp of 1 ms?",
+   "options_raw": [
+    "About 1.8 K/W",
+    "About 0.7 K/W",
+    "About 3 K/W",
+    "About 0.3 K/W"
+   ],
+   "kind": "geometry",
+   "fact": "On the log-log plot, following the lowest (single shot) trace to the 10^-3 s gridline puts it just under the 2 K/W line, roughly two thirds of the way from 1 to 2 in the 1-to-10 decade.",
+   "why_arbitrary": "The transient curve shape is measured device data; nothing about a 22 mOhm MOSFET fixes where its single-shot curve sits at 1 ms.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/nexperia_PSMN022-30PL.pdf p5",
+   "branch": "diagonals",
+   "src_tag": "d041"
+  },
+  {
+   "id": "h30",
+   "q": "In Figure 2 (simple output device load line), where does the droop load line put the output voltage at maximum output current IOUT,MAX relative to the nominal level VOUT,NOM?",
+   "options_raw": [
+    "Below VOUT,NOM, down at the VOUT,FL level",
+    "Above VOUT,NOM, up at the VOUT,NL level",
+    "Exactly on VOUT,NOM, where it meets the nominal load line",
+    "Above VOUT,NOM, roughly midway between VOUT,NOM and VOUT,NL"
+   ],
+   "kind": "geometry",
+   "fact": "The magenta droop load line in Figure 2 (right column) slopes down from VOUT,NL at IOUT,NL, crosses the dashed red nominal line at IOUT,MID, and reaches the VOUT,FL dashed level at the IOUT,MAX tick.",
+   "why_arbitrary": "A load line could equally have been drawn flat or rising; the direction and endpoints are this vendor's chosen droop illustration.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/renesas_isl6558-datasheet.pdf p8",
+   "branch": "curves",
+   "src_tag": "d046"
+  },
+  {
+   "id": "h31",
+   "q": "In Figure 4 (Application Example 2, the 0V to 10V output configuration), which ZSC31050 pin drives the gate of the external JFET supply regulator?",
+   "options_raw": [
+    "VGATE (pin 3)",
+    "VDDA (pin 1)",
+    "IN3 (pin 2)",
+    "VDD (pin 8)"
+   ],
+   "kind": "geometry",
+   "fact": "In the Figure 4 schematic (top right of the page), the trace from the pin-3 VGATE terminal runs right and then up to the gate of the JFET symbol sitting in the VSUPP rail above the IC.",
+   "why_arbitrary": "Which numbered pin of this particular part carries the regulator gate drive is a pinout choice; only following the drawn wire settles it.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/renesas_zsc31050-datasheet.pdf p22",
+   "branch": "curves",
+   "src_tag": "d050"
+  },
+  {
+   "id": "h32",
+   "q": "In Figure 16 (the flash execute-in-place subsystem block diagram), which block does the AHB: AUX (Streaming DMA) port connect directly to?",
+   "options_raw": [
+    "Streaming FIFO",
+    "Cache Bank 1, 8 kB 2-way",
+    "AHB Arbiter",
+    "QSPI Memory Interface"
+   ],
+   "kind": "geometry",
+   "fact": "In the diagram the yellow 'AHB: AUX (Streaming DMA)' box has a single arrow running down to the blue 'Streaming FIFO' box immediately beneath it, which in turn connects to the AHB Arbiter.",
+   "why_arbitrary": "Which internal block the auxiliary streaming port attaches to is a design choice of this particular XIP subsystem.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/rpi_rp2350-datasheet.pdf p342",
+   "branch": "diagonals",
+   "src_tag": "d060"
+  },
+  {
+   "id": "h34",
+   "q": "In Figure 3.2 (EFR32MG24 Memory Map - Core Peripherals and Code Space), what address range is assigned to the FLASH_USERDATA region?",
+   "options_raw": [
+    "0x0fe00000 to 0x0fe00400",
+    "0x0fe08000 to 0x0fe08400",
+    "0x0fe08400 to 0x0fe08a00",
+    "0x08000000 to 0x08180000"
+   ],
+   "kind": "printed",
+   "fact": "In the lower expanded block on the right of Figure 3.2, the band labelled FLASH_USERDATA is bounded by the address labels 0x0fe00400 at its top edge and 0x0fe00000 at its bottom edge.",
+   "why_arbitrary": "The user-data page base and size are this SoC family's memory-map allocation; no convention fixes them.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/silabs_efr32mg24-datasheet.pdf p20",
+   "branch": "diagonals",
+   "src_tag": "d081"
+  },
+  {
+   "id": "h35",
+   "q": "In Figure 9-12 (cumulative reactive energy % error versus current), which phase-angle trace sits highest at 100 A?",
+   "options_raw": [
+    "30 deg",
+    "60 deg",
+    "-30 deg",
+    "-60 deg"
+   ],
+   "kind": "geometry",
+   "fact": "At the right-hand edge of the plot (100 A) the black trace, keyed to 30 deg in the legend at the top right, is the topmost of the four at roughly +0.05%, while the grey -30 deg trace is the lowest at about -0.04%.",
+   "why_arbitrary": "The ordering of the four phase-angle error curves at full current is measured behaviour of this ADC, not a general rule.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_ads131m04.pdf p90",
+   "branch": "curves",
+   "src_tag": "d090"
+  },
+  {
+   "id": "h36",
+   "q": "In Figure 6-10 (Four-Channel PAM Multiplex System Diagram), which device's outputs connect directly to the control pins that switch the four-channel CD4066B analog switches?",
+   "options_raw": [
+    "The CD4001B, whose outputs 3, 4, 10 and 11 run to CD4066B control pins 13, 5, 6 and 12",
+    "The CD4018B counter, whose Q1-bar and Q2-bar outputs run straight to the CD4066B control pins",
+    "The 1/3 CD4049B inverters, whose outputs run straight to the CD4066B control pins",
+    "The separate 1/4 CD4066B stage, whose pin 2 output runs to the four control pins"
+   ],
+   "kind": "geometry",
+   "fact": "In the left-hand half of Figure 6-10, four wires leave the CD4001B block at pins 3, 4, 10 and 11 and land on the circled control pins 13, 5, 6 and 12 above the four-channel CD4066B block; the CD4018B and CD4049B outputs terminate on CD4001B inputs instead.",
+   "why_arbitrary": "The decoding could have been done in the counter or with different gate types; only tracing the drawn wires shows which package's outputs reach the switch control pins.",
+   "stem_edit": "Replaced \"which device supplies the sequential channel-select signals that switch\" with \"which device's outputs connect directly to the control pins that switch\", because the page shows a chain (CD4018B counter -> CD4049B inverters -> CD4001B gates -> CD4066B) in which more than one device could be called the source of the sequence.",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_cd4066b.pdf p13",
+   "branch": "curves",
+   "src_tag": "d091"
+  },
+  {
+   "id": "h37",
+   "q": "In Figure 8-11 (independent PWM high-side and low-side drivers), which supply rail is shown feeding the high-side (HS) gate-driver amplifier inside the gate driver block?",
+   "options_raw": [
+    "VCP",
+    "VGLS",
+    "VDRAIN",
+    "VM"
+   ],
+   "kind": "geometry",
+   "fact": "Inside the 'Gate Driver' box of the top figure the triangle marked HS has VCP labelled on its supply connection above it, while the LS triangle below it is fed from VGLS.",
+   "why_arbitrary": "The names of the two internal driver supplies in this device (a charge pump rail and a gate-low regulator rail) are specific to this part's block diagram.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_drv8323.pdf p34",
+   "branch": "curves",
+   "src_tag": "d094"
+  },
+  {
+   "id": "h38",
+   "q": "For the device listed under the tape-and-reel box drawing, what is the nominal box length (the dimension marked L on the drawing)?",
+   "options_raw": [
+    "366.0 mm",
+    "364.0 mm",
+    "50.0 mm",
+    "336.0 mm"
+   ],
+   "kind": "printed",
+   "fact": "The table directly beneath the box drawing gives Length 366.0 mm, Width 364.0 mm and Height 50.0 mm for INA238AIDGSR, and L labels the long horizontal edge of the box in the drawing.",
+   "why_arbitrary": "The shipping box dimensions for this package and quantity are a packaging fact, and length and width differ by only 2 mm.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_ina238.pdf p42",
+   "branch": "curves",
+   "src_tag": "d106"
+  },
+  {
+   "id": "h39",
+   "q": "In the LAND PATTERN EXAMPLE for DDA0008B, what is the centre-to-centre spacing between adjacent signal pads along one side?",
+   "options_raw": [
+    "1.27 mm",
+    "1.55 mm",
+    "1.3 mm",
+    "0.6 mm"
+   ],
+   "kind": "printed",
+   "fact": "The dimension '6X (1.27)' at the left of the land pattern spans between adjacent pads on the left column; '8X (1.55)' and '8X (0.6)' are the pad length and width, and '(1.3) TYP' locates the vias.",
+   "why_arbitrary": "The pad pitch of this recommended land pattern is a numeric layout value that has to be read off the drawing.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_lmr33630.pdf p58",
+   "branch": "curves",
+   "src_tag": "d111"
+  },
+  {
+   "id": "h40",
+   "q": "In Figure 24 (LMT01 typical accuracy when using the first-order Equation 1, 92 typical units at VP - VN = 2.15 V), roughly what is the largest temperature accuracy error shown at a junction temperature of 150\u00b0C?",
+   "options_raw": [
+    "About 1.4\u00b0C",
+    "About 1.9\u00b0C",
+    "About 0.3\u00b0C",
+    "About 3.0\u00b0C"
+   ],
+   "kind": "geometry",
+   "fact": "At the right-hand 150 tick of Figure 24 (lower-left panel of the page) the bundle of unit traces spans roughly 1.0 to 1.4 on the Temperature Accuracy axis, the topmost trace reaching just under the 1.5 gridline.",
+   "why_arbitrary": "The spread of 92 measured parts at the hot end is empirical characterisation data, not something the equation or the axis limits imply.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_lmt01.pdf p15",
+   "branch": "curves",
+   "src_tag": "d112"
+  },
+  {
+   "id": "h41",
+   "q": "In Figure 8-5 (noise performance of the OPAx189 and OPA211 in unity-gain buffer configuration), at what source resistance RS do the OPAx189 and OPA211 total-noise curves cross?",
+   "options_raw": [
+    "3.6 k\u03a9",
+    "1 k\u03a9",
+    "10 k\u03a9",
+    "360 \u03a9"
+   ],
+   "kind": "printed",
+   "fact": "In Figure 8-5 the red OPAx189 and blue OPA211 curves meet on the dotted vertical line just right of the 1k tick, which is annotated \"RS = 3.6 k\u03a9\" at the bottom right of the plot.",
+   "why_arbitrary": "The crossover depends on the two amplifiers' measured voltage- and current-noise densities, so it is device-specific rather than a round decade value.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_opa189.pdf p26",
+   "branch": "curves",
+   "src_tag": "d117"
+  },
+  {
+   "id": "h42",
+   "q": "In the front-page translation diagram labelled \"Switching Thresholds for 1.8-V to 3.3-V Translation\", what input switching thresholds VIH and VIL are shown for the LV1Txx logic?",
+   "options_raw": [
+    "VIH min = 1.36 V and VIL min = 0.8 V",
+    "VIH = 0.99 V and VIL = 0.55 V",
+    "VIH = 2.0 V and VIL = 0.8 V",
+    "VOH min = 2.4 V and VOL max = 0.4 V"
+   ],
+   "kind": "printed",
+   "fact": "The waveform pair captioned \"Switching Thresholds for 1.8-V to 3.3-V Translation\" at the bottom of the page carries the labels \"VIH min = 1.36V\" and \"VIL min = 0.8V\" against its left-hand (input) waveform.",
+   "why_arbitrary": "The reduced input thresholds are this part's design values; the 0.99 V / 0.55 V pair printed above the Vcc = 1.8 V block shows a different operating point on the same page.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_sn74lv1t34.pdf p1",
+   "branch": "curves",
+   "src_tag": "d124"
+  },
+  {
+   "id": "h43",
+   "q": "In Figure 34 (high-value resistor in parallel with LED), what resistor value is shown across the LED?",
+   "options_raw": [
+    "100 k",
+    "10 k",
+    "1 M",
+    "100"
+   ],
+   "kind": "printed",
+   "fact": "The resistor drawn to the right of the LED in the schematic at the bottom of the page is annotated '100 k', connected between VCC and the LEDx pin node.",
+   "why_arbitrary": "The particular value recommended for the bleed resistor is a design choice printed on the schematic.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_tca9534.pdf p25",
+   "branch": "curves",
+   "src_tag": "d129"
+  },
+  {
+   "id": "h44",
+   "q": "In the LAND PATTERN EXAMPLE for DSK0010A, how many vias are drawn inside the central thermal land (pad 11)?",
+   "options_raw": [
+    "4",
+    "2",
+    "5",
+    "6"
+   ],
+   "kind": "geometry",
+   "fact": "The central rounded rectangle labelled 11 contains four crosshair via symbols - one near the top, two side by side on the horizontal centreline, and one near the bottom - each called out as (0.2) VIA TYP.",
+   "why_arbitrary": "The number and arrangement of recommended thermal vias is specific to this land pattern drawing.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_tps61093.pdf p26",
+   "branch": "curves",
+   "src_tag": "d136"
+  },
+  {
+   "id": "h45",
+   "q": "In Figure 12 (efficiency versus input voltage, TPS63020, VOUT = 2.5 V, power save enabled), the IOUT = 10 mA trace drops into a deep notch near VIN = 2.5 V; what efficiency does it reach at the bottom of that notch?",
+   "options_raw": [
+    "about 57%",
+    "about 64%",
+    "about 73%",
+    "about 84%"
+   ],
+   "kind": "geometry",
+   "fact": "In the bottom-left plot the blue 10 mA curve falls to its lowest point between the 2.4 V and 2.6 V ticks, bottoming just below the 60% gridline; its earlier partial dip stops near 64% and its right-hand end at 5.4 V is near 73%.",
+   "why_arbitrary": "The depth of the buck-boost transition notch at light load is measured converter behaviour unique to this device and operating point.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/ti_tps63020.pdf p18",
+   "branch": "curves",
+   "src_tag": "d138"
+  },
+  {
+   "id": "h46",
+   "q": "In Fig. 12 (tape and reel packing for SMD-8), what is the nominal vertical dimension of a tape pocket, dimensioned at the left-hand side of the tape drawing?",
+   "options_raw": [
+    "10.21 mm",
+    "10.41 mm",
+    "12.00 mm",
+    "16.00 mm"
+   ],
+   "kind": "printed",
+   "fact": "The vertical dimension arrow on the left of the carrier-tape view reads 10.21 +/- 0.1, while 10.41 +/- 0.1 is the horizontal pocket dimension at the bottom right, 12.00 is the pocket pitch and 16.00 is the tape width.",
+   "why_arbitrary": "The pocket dimensions of this carrier tape are set by the package outline and differ from the similar-looking orthogonal dimension by 0.2 mm.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/vishay_sfh6345.pdf p8",
+   "branch": "curves",
+   "src_tag": "d140"
+  },
+  {
+   "id": "h47",
+   "q": "In Fig. 11 (the lead-free infrared reflow solder profile), what maximum cooling ramp-down rate is annotated?",
+   "options_raw": [
+    "6 degC/s",
+    "3 degC/s",
+    "4 degC/s",
+    "10 degC/s"
+   ],
+   "kind": "printed",
+   "fact": "The annotation on the falling edge of the profile reads 'Max. ramp down 6 degC/s', while the rising edge is annotated 'Max. ramp up 3 degC/s'.",
+   "why_arbitrary": "The permitted cooling rate here is twice the permitted heating rate, an asymmetry stated only by this profile's annotations.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/datasheet_holdout/vishay_vsma1094750.pdf p7",
+   "branch": "curves",
+   "src_tag": "d144"
+  },
+  {
+   "id": "h48",
+   "q": "In the enrolment/allocation flow chart (Figure 1), how many students in the Intervention Group (free glasses) reached the Analysis stage, and at how many schools?",
+   "options_raw": [
+    "476 students at 15 schools",
+    "515 students at 15 schools",
+    "434 students at 16 schools",
+    "480 students at 16 schools"
+   ],
+   "kind": "printed",
+   "fact": "The bottom-left box of the flow chart reads 'Analysed: 476 students (52.3%) at 15 schools', below the Intervention Group box that reads 515 students at 15 schools.",
+   "why_arbitrary": "The number of analysed students and schools in one arm of a particular trial is a study-specific count that no convention fixes.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/pmc/bmjophth-2020-000572.PMC7528428.pdf p3",
+   "branch": "curves",
+   "src_tag": "d149"
+  },
+  {
+   "id": "h49",
+   "q": "In Fig. 1 (flow chart for inclusion), how many subjects were removed at the step that excludes female factor VIII or factor IX disorder patients?",
+   "options_raw": [
+    "53",
+    "360",
+    "155",
+    "1041"
+   ],
+   "kind": "printed",
+   "fact": "The side box near the bottom of Fig. 1 reads \"Exclude factor VIII or factor IX disorder female patients n=53\", between the n=1041 box above it and the n=988 male-patient box below.",
+   "why_arbitrary": "The count of excluded female registrants is a result of this Taiwanese registry cohort, knowable only from the printed flow chart.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/pmc/ymj-54-71.PMC3521284.pdf p3",
+   "branch": "diagonals",
+   "src_tag": "d155"
+  },
+  {
+   "id": "h50",
+   "q": "In Fig. 4 (age-distribution prevalence per 100000 males on December 31, 2007), which age band shows the highest combined HA+HB prevalence?",
+   "options_raw": [
+    "26-30",
+    "21-25",
+    "31-35",
+    "41-45"
+   ],
+   "kind": "geometry",
+   "fact": "In the line chart at the top of the page, the diamond-marked HA+HB trace peaks at the 26-30 tick (about 0.97), above its neighbours at 21-25 (about 0.88) and 31-35 (about 0.75).",
+   "why_arbitrary": "Where a measured prevalence curve peaks across age bands is an empirical feature of this Taiwanese registry data, not something fixed by convention.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "holdout_T4",
+   "source_page": "corpus/pmc/ymj-54-71.PMC3521284.pdf p9",
+   "branch": "diagonals",
+   "src_tag": "d156"
+  },
+  {
+   "id": "h51",
+   "q": "In the commutative diagram in section 12.3, what label is attached to the right-hand vertical arrow running from X_t^omega down to rho_t?",
+   "options_raw": [
+    "Law and E",
+    "Law",
+    "P*_{0,t}",
+    "(Phi_{0,t})_#"
+   ],
+   "kind": "printed",
+   "fact": "The diagram's right vertical arrow is annotated 'Law and E' while the left vertical arrow (X_0 to rho_0) is annotated only 'Law'; both labels sit beside the arrows in the middle of the page.",
+   "why_arbitrary": "Whether the author marked the right leg as taking the law alone or the law together with the expectation is a choice made in this diagram, not a standard notation.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/arxiv/2607.28578v1.pdf p32",
+   "branch": "curves",
+   "src_tag": "f002"
+  },
+  {
+   "id": "h52",
+   "q": "In Figure 2 (parts of the interface between Omega^(1)_eps and the thin fracture R_eps), which of the three labeled interface curves is the one lying on the boundary of the node R^(0)_eps rather than on a thin rectangle?",
+   "options_raw": [
+    "\u0393^(1,0)_\u03b5",
+    "\u0393^(1,1)_\u03b5",
+    "\u0393^(1,2)_\u03b5",
+    "\u0393^(2,0)_\u03b5"
+   ],
+   "kind": "geometry",
+   "fact": "In the figure above the caption, the leader arrow from the middle label Gamma^(1,0)_eps points at the small bulge where the three thin strips meet (the node), while Gamma^(1,1)_eps points at the horizontal strip's upper edge and Gamma^(1,2)_eps at the upper-right strip.",
+   "why_arbitrary": "Which of the three labels sits on the node rather than on a rectangle side is set by this paper's own index bookkeeping and by where the arrows land in this drawing.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/arxiv/2607.29605v1.pdf p6",
+   "branch": "curves",
+   "src_tag": "f010"
+  },
+  {
+   "id": "h53",
+   "q": "In the leftmost panel of FIG. 14 (cumulative S/N versus instrument noise sensitivity sigma_noise), what cumulative S/N does the H\u03b1\u00d7HeII cross-correlation curve at z = 5 reach at the solid vertical line marking the current CDIM configuration?",
+   "options_raw": [
+    "About 2",
+    "About 10",
+    "About 0.7",
+    "About 0.3"
+   ],
+   "kind": "geometry",
+   "fact": "In the leftmost panel, the solid blue (H\u03b1\u00d7HeII, z = 5) curve crosses the solid black vertical line at just above 2 on the logarithmic S/N axis, in the white region above the shaded S/N < 1 band.",
+   "why_arbitrary": "The predicted S/N at the CDIM sensitivity comes from this paper's fiducial model and instrument specifications, so it can only be read off the plotted curve.",
+   "stem_edit": "Added 'solid' before 'vertical line': the panel carries three vertical lines and the CDIM/SPHEREx/CDIM+ text labels sit in the second panel, so the caption's 'CDIM is solid' is the identifier.",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/arxiv/2607.28713v1.pdf p24",
+   "branch": "diagonals",
+   "src_tag": "f014"
+  },
+  {
+   "id": "h54",
+   "q": "In the Power-Supply Current vs Digital Input Code plot taken with the internal reference enabled and gain = 1, what is the power-supply current at a digital input code of 32768?",
+   "options_raw": [
+    "About 0.65 mA",
+    "About 0.55 mA",
+    "About 0.90 mA",
+    "About 0.25 mA"
+   ],
+   "kind": "geometry",
+   "fact": "Figure 70 (middle-right panel, annotated 'Internal reference enabled, Gain = 1') shows the trace flat just above the 0.6 gridline at the 32768 tick, roughly 0.65 mA.",
+   "why_arbitrary": "The plateau current of this particular DAC with its internal reference on is a measured device characteristic, not a value implied by the axis scale.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_dac8562.pdf p24",
+   "branch": "curves",
+   "src_tag": "f050"
+  },
+  {
+   "id": "h55",
+   "q": "In the TAPE AND REEL BOX DIMENSIONS drawing and its accompanying dimension table, what nominal value is given for the box height H of the HDC1080DMBR?",
+   "options_raw": [
+    "32.0 mm",
+    "335.0 mm",
+    "35.0 mm",
+    "30.0 mm"
+   ],
+   "kind": "printed",
+   "fact": "The table under the box drawing lists Length 335.0, Width 335.0 and Height 32.0 mm for HDC1080DMBR, with H marked on the vertical edge of the drawn box.",
+   "why_arbitrary": "The shipping box height for this particular device/quantity is a packaging choice specific to this part, not derivable from any standard.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_hdc1080.pdf p24",
+   "branch": "curves",
+   "src_tag": "f053"
+  },
+  {
+   "id": "h56",
+   "q": "In Figure 8-10 (1.25V to 20V regulator with minimum program current), where is the ADJUST terminal of the LM317 connected?",
+   "options_raw": [
+    "To the node between R1 and R2",
+    "To the OUTPUT terminal, above R1",
+    "To ground, below R2",
+    "To the INPUT terminal, together with VI"
+   ],
+   "kind": "geometry",
+   "fact": "In Figure 8-10 the wire leaving ADJUST runs down and right to the junction dot between R1 (1.2 k) and R2 (20 k); R1's top goes to OUTPUT/VO and R2's bottom goes to ground.",
+   "why_arbitrary": "Which of the two divider nodes the adjust pin taps is a circuit-design choice drawn in this specific schematic, and reversing it would give a different circuit.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_lm317.pdf p19",
+   "branch": "curves",
+   "src_tag": "f067"
+  },
+  {
+   "id": "h57",
+   "q": "In the SOLDER PASTE EXAMPLE drawing for DGK0008A, what is the printed centre-to-centre distance between the left and right columns of stencil apertures?",
+   "options_raw": [
+    "4.4",
+    "1.4",
+    "0.65",
+    "0.45"
+   ],
+   "kind": "printed",
+   "fact": "The long horizontal dimension line beneath the aperture pattern is labelled (4.4); the other callouts on the drawing are 8X (1.4), 8X (0.45) and 6X (0.65).",
+   "why_arbitrary": "The column span of the stencil pattern is a dimension particular to this package's footprint, not a standard value.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_lmv321.pdf p51",
+   "branch": "curves",
+   "src_tag": "f085"
+  },
+  {
+   "id": "h58",
+   "q": "In the Functional Block Diagram of Section 7.2, how many driver channels are shown in the TIN-to-TOUT path (the number annotated on that path)?",
+   "options_raw": [
+    "2",
+    "1",
+    "4",
+    "5"
+   ],
+   "kind": "printed",
+   "fact": "In the block diagram under 7.2, the slash marks on both the TIN input and the TOUT RS232 output of the TX driver triangle carry the numeral 2.",
+   "why_arbitrary": "The channel count is a property of this specific MAX232 part rather than a generic block-diagram convention; the same page also shows 4 (capacitors) and 5 (the 5V supply).",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_max232.pdf p9",
+   "branch": "curves",
+   "src_tag": "f090"
+  },
+  {
+   "id": "h59",
+   "q": "In Figure 7-2 (Pulse-Width-Modulation vs Control Voltage), at roughly what control voltage does the black 'Clock period = 1 RC' curve reach about 100% output duty cycle?",
+   "options_raw": [
+    "About 3.0 V",
+    "About 4.4 V",
+    "About 2.0 V",
+    "About 3.5 V"
+   ],
+   "kind": "geometry",
+   "fact": "The black trace climbs steeply and terminates at the top of the plot near the 3.0 V gridline, whereas the red 2.5 RC trace only reaches about 93% at the right edge near 4.4 V.",
+   "why_arbitrary": "Where the duty cycle saturates depends on this device's measured PWM transfer curve at the stated conditions, which nothing but the plot fixes.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_ne556.pdf p11",
+   "branch": "curves",
+   "src_tag": "f097"
+  },
+  {
+   "id": "h60",
+   "q": "In Figure 12 (Offset Voltage vs Common-Mode Voltage), at what common-mode voltage do the five typical units show the marked step in VOS?",
+   "options_raw": [
+    "-18.1 V",
+    "-15 V",
+    "-20 V",
+    "+18.1 V"
+   ],
+   "kind": "printed",
+   "fact": "In the bottom-right panel (Figure 12), the annotation 'VCM = -18.1 V' with its leader arrow sits at the left-hand vertical line where the five traces break, just right of the -20 V axis end.",
+   "why_arbitrary": "The exact common-mode voltage at which this amplifier's input stage transitions is a measured device number, not a round axis value.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_opa192.pdf p14",
+   "branch": "curves",
+   "src_tag": "f101"
+  },
+  {
+   "id": "h61",
+   "q": "In Figure 45 (Maximum Output Voltage vs Frequency), what peak-to-peak output voltage does the VS = \u00b115 V curve deliver at 1 MHz?",
+   "options_raw": [
+    "About 6 VPP",
+    "About 10 VPP",
+    "About 15 VPP",
+    "About 30 VPP"
+   ],
+   "kind": "geometry",
+   "fact": "In the middle-left panel (Figure 45), the blue VS = \u00b115 V trace has rolled off from its 30 VPP plateau, merged with the \u00b15 V trace near 10 VPP, and sits at roughly 6 VPP where the curve crosses the 1M frequency tick.",
+   "why_arbitrary": "The slew-rate-limited output amplitude at 1 MHz follows from this amplifier's measured slew rate, so only the plotted curve gives it.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_opa192.pdf p20",
+   "branch": "curves",
+   "src_tag": "f102"
+  },
+  {
+   "id": "h62",
+   "q": "In the EXAMPLE STENCIL DESIGN / SOLDER PASTE EXAMPLE drawing for the DGK0008A VSSOP package, what is the long-side dimension of each of the eight solder-paste apertures?",
+   "options_raw": [
+    "1.4 mm",
+    "0.45 mm",
+    "0.65 mm",
+    "4.4 mm"
+   ],
+   "kind": "printed",
+   "fact": "The callout '8X (1.4)' at the top of the drawing spans the horizontal (long) extent of an aperture, while '8X (0.45)' at the left spans its short vertical extent.",
+   "why_arbitrary": "The aperture length for this package's stencil is a specific recommended value; 0.65 (pin pitch) and 4.4 (span across the two rows) are the neighbouring callouts.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_opa2333.pdf p48",
+   "branch": "curves",
+   "src_tag": "f105"
+  },
+  {
+   "id": "h63",
+   "q": "In Figure 8-5 (the second-order Butterworth 500-kHz low-pass filter), what value is printed for R2, the resistor between the R1/C1 node and the inverting input?",
+   "options_raw": [
+    "1.24 k\u03a9",
+    "549 \u03a9",
+    "19.5 k\u03a9",
+    "1.8 k\u03a9"
+   ],
+   "kind": "printed",
+   "fact": "In the upper schematic R1 and R3 are both labelled 549 \u03a9 while R2, the series resistor feeding the inverting input, is labelled 1.24 k\u03a9; 1.8 k\u03a9 and 19.5 k\u03a9 appear only in the Sallen-Key schematic below.",
+   "why_arbitrary": "The component values chosen to realise this particular Butterworth response are design choices unique to this example circuit.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_opa365.pdf p16",
+   "branch": "curves",
+   "src_tag": "f108"
+  },
+  {
+   "id": "h64",
+   "q": "In Figure 5-31 (D1, D2 Primary-Side Output Switch Voltage Swing vs Current at VCC = 3.3 V), what is the VD1/VD2 voltage swing at a switching current of 100 mA?",
+   "options_raw": [
+    "About 3.12 V",
+    "About 3.24 V",
+    "About 3.05 V",
+    "About 4.87 V"
+   ],
+   "kind": "geometry",
+   "fact": "In the left plot (Figure 5-31), the falling trace sits just above the 3.10 gridline where it crosses the 100 mA gridline, about one fifth of the way up to 3.20.",
+   "why_arbitrary": "The switch voltage drop versus current is measured silicon behaviour, so the value only exists on this curve.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_sn6501.pdf p11",
+   "branch": "curves",
+   "src_tag": "f113"
+  },
+  {
+   "id": "h65",
+   "q": "In the LAND PATTERN EXAMPLE for DRL0005A, what is the printed centre-to-centre distance between the left and right columns of pads?",
+   "options_raw": [
+    "1.48",
+    "1",
+    "0.67",
+    "0.5"
+   ],
+   "kind": "printed",
+   "fact": "The horizontal dimension line under the land pattern is labelled (1.48); the vertical dimension at the right is (1), the pad length callout is 5X (0.67) and the row pitch is 2X (0.5).",
+   "why_arbitrary": "The recommended pad-column spacing is specific to this SOT package's footprint and could have been drawn at any other value.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_sn74lvc1g08.pdf p33",
+   "branch": "curves",
+   "src_tag": "f159"
+  },
+  {
+   "id": "h66",
+   "q": "In the SOLDERMASK DETAILS panel at the bottom of the DRL0005A board-layout drawing, what clearance annotation is given for the detail labelled NON SOLDER MASK DEFINED (PREFERRED)?",
+   "options_raw": [
+    "0.05 MAX AROUND",
+    "0.05 MIN AROUND",
+    "0.05 TYP AROUND",
+    "(R0.05) TYP"
+   ],
+   "kind": "printed",
+   "fact": "The left-hand soldermask detail, captioned NON SOLDER MASK DEFINED (PREFERRED), carries the callout '0.05 MAX AROUND'; the right-hand SOLDER MASK DEFINED detail carries '0.05 MIN AROUND'.",
+   "why_arbitrary": "Which of the two details gets the MAX and which the MIN clearance is a drawing-specific assignment that reverses between the two cases.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_sn74lvc1g14.pdf p25",
+   "branch": "curves",
+   "src_tag": "f163"
+  },
+  {
+   "id": "h67",
+   "q": "In Figure 6-16 (stability boundary conditions), which cathode-to-anode voltage condition does curve C represent?",
+   "options_raw": [
+    "VKA = 10 V",
+    "VKA = 5 V",
+    "VKA = 15 V",
+    "VKA = Vref"
+   ],
+   "kind": "printed",
+   "fact": "The legend block inside the top-left of Figure 6-16 lists A VKA = Vref, B VKA = 5 V, C VKA = 10 V, D VKA = 15 V, and the curves are lettered A-D on the plot.",
+   "why_arbitrary": "The assignment of letters to bias conditions is an arbitrary labelling choice made for this figure.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_tl431.pdf p17",
+   "branch": "curves",
+   "src_tag": "f178"
+  },
+  {
+   "id": "h68",
+   "q": "In Figure 7-4 (Pulse-Width-Modulation vs Control Voltage), what output duty cycle does the 'Clock period = 2.5 RC' curve give at a control voltage of 2.5 V?",
+   "options_raw": [
+    "About 30%",
+    "About 20%",
+    "About 40%",
+    "About 75%"
+   ],
+   "kind": "geometry",
+   "fact": "In Figure 7-4, the red 'Clock period = 2.5 RC' curve passes through roughly 30% duty cycle at the 2.5 V tick, while the black 1 RC curve is near 75% there.",
+   "why_arbitrary": "The nonlinear RC-charging transfer curve is specific to this timer and clock-period ratio, so the duty cycle at 2.5 V cannot be inferred from the axes.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_tlc555.pdf p20",
+   "branch": "curves",
+   "src_tag": "f182"
+  },
+  {
+   "id": "h69",
+   "q": "In Figure 32 (Shutdown Supply Current and Output Voltage vs Time, VDD = 15 V), what is the supply current per channel before the shutdown pulse is applied?",
+   "options_raw": [
+    "About 0.85 mA/Ch",
+    "About 0.4 mA/Ch",
+    "About 0.25 mA/Ch",
+    "About 0.1 mA/Ch"
+   ],
+   "kind": "geometry",
+   "fact": "In the bottom trace of the left figure (Figure 32), the supply current sits flat a little above the 0.75 gridline for t < 0, then drops to about 0.4 and settles near 0.1 mA/Ch during shutdown.",
+   "why_arbitrary": "The quiescent supply current per channel at VDD = 15 V is a measured device value, not one of the labelled gridlines.",
+   "stem_edit": "",
+   "mode": "caption_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_tlv2372.pdf p21",
+   "branch": "curves",
+   "src_tag": "f186"
+  },
+  {
+   "id": "h70",
+   "q": "In the TLV27x functional block diagram, how many triangular amplifier symbols are drawn in the signal path between the input transistor pair and the OUT pin?",
+   "options_raw": [
+    "Two",
+    "One",
+    "Three",
+    "Four"
+   ],
+   "kind": "geometry",
+   "fact": "The diagram shows a large triangle fed from the drain nodes of the input MOSFET pair, driving a second smaller triangle whose apex goes to the OUT terminal on the right.",
+   "why_arbitrary": "How many gain/buffer stages the manufacturer chose to depict for this amplifier is a design detail of this part, not a fixed convention.",
+   "stem_edit": "",
+   "mode": "image_first",
+   "stratum": "insample_T4",
+   "source_page": "corpus/datasheets/ti_tlv271.pdf p16",
+   "branch": "curves",
+   "src_tag": "f190"
+  }
+ ]
+}

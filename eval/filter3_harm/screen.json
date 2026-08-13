@@ -1,0 +1,692 @@
+[
+ {
+  "id": "h01",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": false,
+  "reason": "The stem lists the labels as 's1, s2 = s4, t4, ...', printing the answer (s2 = s4) verbatim before the options.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": true
+ },
+ {
+  "id": "h02",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The right panel's y-axis tops out at 6 and the heavy red EF21-SignMuon trace ends just above 6 at iteration 60; magnitude of the divergence is the panel's whole point.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h03",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "D max = 8.75 mm is read straight off the dimension table in the outline drawing; distractors are the D min, E max and HE max cells, so only one option defends.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h04",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The HE arrow in the end view plainly spans lead tip to lead tip, wider than the E body dimension; which extent a callout spans is a normal thing to need from a package outline.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h05",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The red trace's broad hump peaks near +30 mV between 15 and 20 us, well clear of the 60 and 100 mV alternatives; the overshoot versus the +/-10 mV settling band is what the figure is arguing.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h06",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": false,
+  "reason": "Every option contains the same four names, so the only thing tested is their top-to-bottom drawing order - a layout accident, not a fact the equivalent-schematic figure exists to convey.",
+  "relevance": "low",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h07",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The +IIK diode at the input is drawn from the input node up to the VCC rail; tracing that connection is exactly what the clamp-diode figure is for.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h08",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Callouts read 14X (1.5) along the aperture length and 14X (0.45) across its width; aperture size is the point of a stencil drawing.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h09",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The (7) dimension line runs between the two column centrelines; the distractors are the pad length, pad width and pitch, so the answer is unique.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h10",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "14X (0.65) is the pad-to-pad pitch callout; pitch is the first number anyone takes off a land pattern.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h11",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The leader to the centre pad reads (diameter 0.1) VIA; via size is a real layout parameter and no other option appears as a diameter.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h12",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "VCC+ sits on the second row of the right side, pin 9 - a plain pinout read (also duplicated in Table 4-4 on the same page, which weakens it as a figure-only probe but not its fairness).",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h13",
+  "answer_ok": true,
+  "answer_note": "Drawing labels H as the short vertical dimension on the right-hand side wall; table gives SOT-23/DBV Length 210.0, Width 185.0, Height 35.0, so 35.0 can only be H.",
+  "fair": true,
+  "reason": "Straightforward read of the box drawing's W/L/H labels, which is exactly what the drawing exists to convey next to the table; wording is wordy but unambiguous.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h14",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Pad length is a primary value a board designer reads off a land pattern; the 14X (1.5) horizontal callout is plainly placed above the pads.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h15",
+  "answer_ok": true,
+  "answer_note": "14X (0.6) horizontal and 14X (0.2) vertical give 0.6 x 0.2 mm; distractors 1.8 and 0.4 are the overall span and the 8X/2X pitches.",
+  "fair": true,
+  "reason": "Signal pad size is the core value of a land pattern drawing and both callouts are directly labelled 14X.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h16",
+  "answer_ok": true,
+  "answer_note": "TPA3116D2DADR row is 356.0 / 356.0 / 45.0, so 45.0 is uniquely the Height, and H is drawn as the short vertical edge on the right-hand side wall.",
+  "fair": true,
+  "reason": "Same straightforward W/L/H label-to-edge read as h13; the drawing is there precisely to disambiguate the table's columns.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h17",
+  "answer_ok": true,
+  "answer_note": "At the right-hand edge (8192) the green dashed Block-Sparse FlashAttention trace sits below the brown Linformer trace; FlashAttention (dotted) is near 10^2 and Megatron stops at 2048.",
+  "fair": true,
+  "reason": "Comparing traces at a stated sequence length is the whole point of the runtime panel and the paper's headline claim.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h18",
+  "answer_ok": true,
+  "answer_note": "Right-hand branch: Allocated to SDBP-B (n=71) -> Received assigned bowel prep (n=63). 60 and 58 belong to the SDBP column, 71 is the allocation.",
+  "fair": true,
+  "reason": "Per-arm retention is exactly what a CONSORT flow diagram is read for; the distractors are the real numbers from the neighbouring columns, so it tests column tracking rather than trickery.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h19",
+  "answer_ok": true,
+  "answer_note": "Dimensions table inside Fig. 16 lists e nom = 0.55 (0.35 is e1, 0.15 is b nom, 0.30 is L nom).",
+  "fair": true,
+  "reason": "Terminal row spacing is a standard value an engineer looks up in a package outline; the table is part of the figure and the row is directly labelled e.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h20",
+  "answer_ok": true,
+  "answer_note": "24X (1.5) is the horizontal pad dimension (the long side); 24X (0.45) is the pad width and 22X (0.65) the pitch. Slightly less explicit than h14 since 'length' is not tied to the horizontal callout, but 1.5 is the only defensible reading of pad length.",
+  "fair": true,
+  "reason": "Pad length is a natural land-pattern lookup and the callout is clearly attached to the pad row.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h21",
+  "answer_ok": true,
+  "answer_note": "Figure 12 (AOW14N50, top plot) annotation block reads R(thetaJC)=0.45 degC/W; 4.5 degC/W belongs to Figure 13 (AOWF14N50) below.",
+  "fair": true,
+  "reason": "Junction-to-case thermal resistance is a headline spec, and the stem pins down which of the two plots without hinting at the value.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h22",
+  "answer_ok": true,
+  "answer_note": "In the upper schematic the IMON node runs through Rs into the Rc || (Rs1 + RNTC(T)) network, whose bottom node ties to the analog-ground symbol. The ISEN_P/ISEN_N thermistor placement is the lower (2nd order) schematic.",
+  "fair": true,
+  "reason": "Where the NTC network hangs is the entire point of the thermal-compensation application drawing, and it is a plain trace of two connections.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h23",
+  "answer_ok": true,
+  "answer_note": "Verified by zoom: both tRST dashed verticals land exactly on the CHIP_EN crossings of the VIL_nRST horizontal, falling then rising.",
+  "fair": true,
+  "reason": "Which two points a timing parameter spans is the reason the timing diagram exists; the arrow and dashed guides make it a direct read.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h24",
+  "answer_ok": true,
+  "answer_note": "'Slope LNR_S0' is annotated on the segment from the CLAMPLOW knee up to point A; LNR_A_S labels the A-to-B segment.",
+  "fair": true,
+  "reason": "Naming the slope parameter of each segment is exactly what this parameter-definition figure is for, and the label sits on the segment named in the stem.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h25",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Central point of the figure: at ~0 Deg the magnet is S-left/N-right, at ~90 Deg it is N-top/S-bottom; verified on the page.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h26",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The marking legend maps CCCCCC to 'Capacitor Configuration'; decoding the package marking is exactly what the figure exists for.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h27",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "A max = 1.1 mm in the dimension table; distractors are the A1/A2/A3 values, so it is a real read of the right cell.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h28",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Typ (dashed) curve starts at ~0.83 V at Tj = -60 degC (min curve is ~0.53 V, the C distractor); straightforward curve read.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h29",
+  "answer_ok": true,
+  "answer_note": "Pixel-calibrated read gives ~1.65-1.7 K/W at tp = 1 ms (calibration checked against the 3.1 K/W saturation value); 1.8 is by far the nearest option and the others are far off, so the stated answer stands.",
+  "fair": true,
+  "reason": "Reading Zth off the single-shot curve at a given pulse width is the whole purpose of this chart.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h30",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The droop load line runs from VOUT,NL at IOUT,NL down to VOUT,FL at IOUT,MAX; this is the message of the figure.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h31",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": false,
+  "reason": "Verified correct (pin 3 routes up to the JFET gate), but the pin is literally named VGATE, so the option can be picked from the pin name alone without ever seeing the schematic - it will not discriminate the no-context reader.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": true
+ },
+ {
+  "id": "h32",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "AHB: AUX (Streaming DMA) has a single arrow down to Streaming FIFO; following a connection in a block diagram is the natural question here.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h34",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "FLASH_USERDATA is bracketed by 0x0fe00000 and 0x0fe00400 in the expanded flash map; looking up a region's address range is a standard use of a memory map.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h35",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "At 100 A the black 30 deg trace is the topmost (verified by pixel colour: black, then red 60, then blue -60, then grey -30); comparing phase-angle traces is a genuine read, though the traces are close and the question is only a mild performance question.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h36",
+  "answer_ok": true,
+  "answer_note": "Pin mapping in the option is exact: CD4001B 3->13, 4->5, 10->6, 11->12.",
+  "fair": true,
+  "reason": "How the decoded control signals reach the analog switches is the core of this system diagram; the distractors are all real blocks on the page that feed something else.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h37",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "VCP stems into the top of the HS amplifier while VGLS feeds LS; which rail powers the high-side driver is a real design fact from this block diagram.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h38",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Drawing marks L/W/H and the table under it gives Length 366.0 for the single listed device; distractors are the width and height from the same row, so the reader must map L to the right column.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h39",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Pad pitch is the headline number of a land pattern; the 6X (1.27) dimension spans two adjacent pad centrelines and the distractors (1.55 pad length, 0.6 pad width, 1.3 via spacing) are all genuine other callouts.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h40",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The worst-case error at the hot end of the range is exactly what this accuracy plot exists to show; the topmost trace reaches ~1.35-1.4 degC at 150 degC and no other option is close.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h41",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The crossover source impedance is the whole point of the figure; it is marked with a dotted line and the annotation RS = 3.6 kOhm right at the intersection.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h42",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Input thresholds are the core spec of a level shifter; the named sub-diagram shows VIH min = 1.36V / VIL min = 0.8V on the input waveform, with the other options belonging to the 5V and 1.8V blocks or the output side.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h43",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The parallel resistor value is the one component value the application figure conveys; only 100 k is labelled in the schematic.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h44",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Four via symbols are drawn inside pad 11, and note 5 flags the drawn vias as the recommended layout, so the count is a real layout fact rather than arbitrary trivia.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h45",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The buck-boost efficiency dip is the notable feature of this curve; the 10 mA trace bottoms at ~56.5% near 2.5 V, and the stem's 'near 2.5 V' cleanly separates it from the shallower ~64% dip at 2.2 V.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h46",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The 10.21 +/- 0.1 dimension on the left spans the top and bottom of a pocket; the location hint disambiguates without revealing the value, and the distractors are the tape width, pocket pitch and pocket horizontal size.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h47",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The profile annotates 'Max. ramp down 6 degC/s' explicitly; ramp-down limit is a standard value assemblers pull from a reflow profile, and the 3 degC/s distractor is the ramp-up rate.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h48",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Final analysed N per arm is the primary thing a CONSORT flow chart is read for; the analysed boxes are unlabelled by arm, so the branch must be followed from the Intervention allocation box to reach 476 at 15 schools.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h49",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The exclusion box reads 'Exclude factor VIII or factor IX disorder female patients n=53', consistent with 1041 - 988; exclusion counts are the substance of an inclusion flow chart and the distractors are the neighbouring box counts.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h50",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Peak of the diamond HA+HB trace is plainly at 26-30 (~0.98); a natural read of an age-distribution figure.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h51",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The right vertical arrow X_t^omega -> rho_t is labelled 'Law and E'; the other options are the other three arrows' labels.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h52",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": false,
+  "reason": "Stem names the node R^(0)_eps, which mirrors the 0 second index of the correct option Gamma^(1,0); combined with the stated Omega^(1) context the answer is derivable from the notation alone without the picture.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": true
+ },
+ {
+  "id": "h53",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Blue solid curve crosses the solid CDIM line at ~1.8, so 'about 2' is the only close option; this is the headline number of the panel.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h54",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Figure 70 is uniquely identified by its printed 'Internal reference enabled, Gain = 1' note and sits at ~0.66 mA across midscale.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h55",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "H maps to the Height (mm) column = 32.0 for HDC1080DMBR; a plausible packaging/logistics lookup, with 335.0 as the length/width foil.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h56",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "ADJUST clearly runs to the R1/R2 tap; the divider topology is exactly what this application circuit exists to show.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h57",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "(4.4) is the dimension spanning the two aperture-column centrelines; 1.4/0.45/0.65 are the aperture size and pitch callouts.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h58",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The bus slash on the TIN/TOUT path is annotated 2, matching the dual-driver part; straightforward read.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h59",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The black 1 RC curve terminates at ~98% at 3.0 V while the red 2.5 RC curve runs to 4.4 V; comparing the two traces is the point of the plot.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h60",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The annotated vertical line at VCM = -18.1 V where the traces turn up is the negative common-mode limit; only mild risk that -18.1 is guessable as the sole non-round option.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h61",
+  "answer_ok": true,
+  "answer_note": "Measured ~6.7 VPP at 1 MHz (the +/-15 V trace runs under the +/-5 V trace there); 'about 6' is still the only close option.",
+  "fair": true,
+  "reason": "Max undistorted swing at a given frequency is the standard use of this curve and the read is unambiguous against the other options.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h62",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Aperture is drawn wider than tall and the horizontal callout reads 8X (1.4); 0.45 is the short side, 0.65 the pitch, 4.4 the column span, so C is the only defensible option.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h63",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "R2 is printed as 1.24kOhm in Figure 8-5; the positional description only disambiguates it from Figure 8-6's R2 (19.5kOhm) on the same page.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h64",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Curve crosses the 100 mA gridline just above 3.12 V (3.24 at 0 mA, 3.04 at 150 mA), so the other options are far off; reading a datasheet curve at a stated current is the figure's purpose.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h65",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The (1.48) dimension runs between the left and right pad-column centrelines; 0.67/0.3 are pad size, 0.5 the row pitch, (1) the vertical span.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h66",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The left (NSMD, PREFERRED) detail is annotated 0.05 MAX AROUND and the right (SMD) one 0.05 MIN AROUND; matching annotation to detail is exactly what the panel exists to convey.",
+  "relevance": "medium",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h67",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "In-plot legend lists C VKA = 10 V (A = Vref, B = 5 V, D = 15 V), a direct legend lookup a reader of a stability plot would actually make.",
+  "relevance": "high",
+  "kind": "printed",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h68",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "The red 2.5 RC trace sits at about 30% where it crosses the 2.5 V gridline (40% occurs near 3.0 V), a normal read of an application curve.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h69",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Pre-pulse supply-current baseline sits just above 0.75 mA/Ch at roughly 0.85; 0.4 is the transient plateau and 0.1 the shutdown level, so D is uniquely right.",
+  "relevance": "high",
+  "kind": "geometry",
+  "gives_itself_away": false
+ },
+ {
+  "id": "h70",
+  "answer_ok": true,
+  "answer_note": "",
+  "fair": true,
+  "reason": "Exactly two triangles (gain stage plus output buffer) lie between the input pair and OUT; the count is the diagram's architectural point, not arbitrary trivia.",
+  "relevance": "medium",
+  "kind": "geometry",
+  "gives_itself_away": false
+ }
+]

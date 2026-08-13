@@ -1,0 +1,61 @@
+[
+ {"id": "h13", "answer_ok": true, "answer_note": "Drawing labels H as the short vertical dimension on the right-hand side wall; table gives SOT-23/DBV Length 210.0, Width 185.0, Height 35.0, so 35.0 can only be H.",
+  "fair": true, "reason": "Straightforward read of the box drawing's W/L/H labels, which is exactly what the drawing exists to convey next to the table; wording is wordy but unambiguous.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h14", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Pad length is a primary value a board designer reads off a land pattern; the 14X (1.5) horizontal callout is plainly placed above the pads.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h15", "answer_ok": true, "answer_note": "14X (0.6) horizontal and 14X (0.2) vertical give 0.6 x 0.2 mm; distractors 1.8 and 0.4 are the overall span and the 8X/2X pitches.",
+  "fair": true, "reason": "Signal pad size is the core value of a land pattern drawing and both callouts are directly labelled 14X.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h16", "answer_ok": true, "answer_note": "TPA3116D2DADR row is 356.0 / 356.0 / 45.0, so 45.0 is uniquely the Height, and H is drawn as the short vertical edge on the right-hand side wall.",
+  "fair": true, "reason": "Same straightforward W/L/H label-to-edge read as h13; the drawing is there precisely to disambiguate the table's columns.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h17", "answer_ok": true, "answer_note": "At the right-hand edge (8192) the green dashed Block-Sparse FlashAttention trace sits below the brown Linformer trace; FlashAttention (dotted) is near 10^2 and Megatron stops at 2048.",
+  "fair": true, "reason": "Comparing traces at a stated sequence length is the whole point of the runtime panel and the paper's headline claim.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h18", "answer_ok": true, "answer_note": "Right-hand branch: Allocated to SDBP-B (n=71) -> Received assigned bowel prep (n=63). 60 and 58 belong to the SDBP column, 71 is the allocation.",
+  "fair": true, "reason": "Per-arm retention is exactly what a CONSORT flow diagram is read for; the distractors are the real numbers from the neighbouring columns, so it tests column tracking rather than trickery.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h19", "answer_ok": true, "answer_note": "Dimensions table inside Fig. 16 lists e nom = 0.55 (0.35 is e1, 0.15 is b nom, 0.30 is L nom).",
+  "fair": true, "reason": "Terminal row spacing is a standard value an engineer looks up in a package outline; the table is part of the figure and the row is directly labelled e.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h20", "answer_ok": true, "answer_note": "24X (1.5) is the horizontal pad dimension (the long side); 24X (0.45) is the pad width and 22X (0.65) the pitch. Slightly less explicit than h14 since 'length' is not tied to the horizontal callout, but 1.5 is the only defensible reading of pad length.",
+  "fair": true, "reason": "Pad length is a natural land-pattern lookup and the callout is clearly attached to the pad row.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h21", "answer_ok": true, "answer_note": "Figure 12 (AOW14N50, top plot) annotation block reads R(thetaJC)=0.45 degC/W; 4.5 degC/W belongs to Figure 13 (AOWF14N50) below.",
+  "fair": true, "reason": "Junction-to-case thermal resistance is a headline spec, and the stem pins down which of the two plots without hinting at the value.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h22", "answer_ok": true, "answer_note": "In the upper schematic the IMON node runs through Rs into the Rc || (Rs1 + RNTC(T)) network, whose bottom node ties to the analog-ground symbol. The ISEN_P/ISEN_N thermistor placement is the lower (2nd order) schematic.",
+  "fair": true, "reason": "Where the NTC network hangs is the entire point of the thermal-compensation application drawing, and it is a plain trace of two connections.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h23", "answer_ok": true, "answer_note": "Verified by zoom: both tRST dashed verticals land exactly on the CHIP_EN crossings of the VIL_nRST horizontal, falling then rising.",
+  "fair": true, "reason": "Which two points a timing parameter spans is the reason the timing diagram exists; the arrow and dashed guides make it a direct read.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h24", "answer_ok": true, "answer_note": "'Slope LNR_S0' is annotated on the segment from the CLAMPLOW knee up to point A; LNR_A_S labels the A-to-B segment.",
+  "fair": true, "reason": "Naming the slope parameter of each segment is exactly what this parameter-definition figure is for, and the label sits on the segment named in the stem.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false}
+]

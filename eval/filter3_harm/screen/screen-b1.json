@@ -1,0 +1,61 @@
+[
+ {"id": "h01", "answer_ok": true, "answer_note": "",
+  "fair": false, "reason": "The stem lists the labels as 's1, s2 = s4, t4, ...', printing the answer (s2 = s4) verbatim before the options.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": true},
+
+ {"id": "h02", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The right panel's y-axis tops out at 6 and the heavy red EF21-SignMuon trace ends just above 6 at iteration 60; magnitude of the divergence is the panel's whole point.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h03", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "D max = 8.75 mm is read straight off the dimension table in the outline drawing; distractors are the D min, E max and HE max cells, so only one option defends.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h04", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The HE arrow in the end view plainly spans lead tip to lead tip, wider than the E body dimension; which extent a callout spans is a normal thing to need from a package outline.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h05", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The red trace's broad hump peaks near +30 mV between 15 and 20 us, well clear of the 60 and 100 mV alternatives; the overshoot versus the +/-10 mV settling band is what the figure is arguing.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h06", "answer_ok": true, "answer_note": "",
+  "fair": false, "reason": "Every option contains the same four names, so the only thing tested is their top-to-bottom drawing order - a layout accident, not a fact the equivalent-schematic figure exists to convey.",
+  "relevance": "low", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h07", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The +IIK diode at the input is drawn from the input node up to the VCC rail; tracing that connection is exactly what the clamp-diode figure is for.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h08", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Callouts read 14X (1.5) along the aperture length and 14X (0.45) across its width; aperture size is the point of a stencil drawing.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h09", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The (7) dimension line runs between the two column centrelines; the distractors are the pad length, pad width and pitch, so the answer is unique.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h10", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "14X (0.65) is the pad-to-pad pitch callout; pitch is the first number anyone takes off a land pattern.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h11", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The leader to the centre pad reads (diameter 0.1) VIA; via size is a real layout parameter and no other option appears as a diameter.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h12", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "VCC+ sits on the second row of the right side, pin 9 - a plain pinout read (also duplicated in Table 4-4 on the same page, which weakens it as a figure-only probe but not its fairness).",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false}
+]

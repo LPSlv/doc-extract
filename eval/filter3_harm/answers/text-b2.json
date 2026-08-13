@@ -1,0 +1,61 @@
+[
+ {"id": "h13", "choice": "A", "grounded": true,
+  "quote": "||Device Package Type|Package Drawing|Pins||SPQ|Length (mm) Width (mm) Height (mm)|\n|TL431ACDBVR|SOT-23||DBV 5||3000|210.0 185.0 35.0|",
+  "reasoning": "The three numbers map to Length 210.0 / Width 185.0 / Height 35.0, so 35.0 is the Height, i.e. the H edge; H is named in only one option.",
+  "note": "Header row of the box-dimension table (line 2052) also carries the figure labels W, L, H."},
+
+ {"id": "h14", "choice": "D", "grounded": false,
+  "quote": "||1 14X (0.45)|14X (1.5)||SYMM (R0.05) TYP 14|",
+  "reasoning": "Both pad dimensions survive as 14X callouts (0.45 and 1.5) but the flattened text gives no orientation, so which one is the horizontal top callout is inferred, not read.",
+  "note": "Chose 1.5 as the pad's long (length) axis by convention; the stencil copy at line 2405 lists 14X (1.5) on the top line, a weak hint only."},
+
+ {"id": "h15", "choice": "D", "grounded": true,
+  "quote": "14X (0.6) 14X (0.2)",
+  "reasoning": "In the RUC0014A land pattern example the only 14X callouts are (0.6) and (0.2), so each of the 14 signal pads is 0.6 mm by 0.2 mm.",
+  "note": "The 8X (0.4) and 2X (0.4) callouts belong to the thermal/centre features, not the 14 signal pads."},
+
+ {"id": "h16", "choice": "D", "grounded": true,
+  "quote": "|TPA3116D2DADR|HTSSOP|DAD|32|2000|356.0|356.0|45.0|",
+  "reasoning": "45.0 sits under the Height (mm) column of the TAPE AND REEL BOX DIMENSIONS table, so it is the H edge; H appears in only one option.",
+  "note": "Figure labels extracted just above as \"***Width (mm)*** H\" / \"W L\"."},
+
+ {"id": "h17", "choice": "B", "grounded": true,
+  "quote": "On the other hand, block-sparse FlashAttention is faster than all implementations of exact, sparse, and approximate attention that we know of, across all sequence lengths.",
+  "reasoning": "The prose describing Figure 3 (left) states block-sparse FlashAttention is fastest at every sequence length, so its curve is lowest at 8192.",
+  "note": "The figure's own extracted text is only axis/legend fragments with no data values."},
+
+ {"id": "h18", "choice": "B", "grounded": true,
+  "quote": "||Received assigned bowel prep (n = 63)|Received assigned bowel prep (n = 60)|Received assigned bowel prep (n = 63)|",
+  "reasoning": "The flow-diagram row aligns column-for-column with the allocation row (CBP 71 / SDBP 70 / SDBP-B 71), so the SDBP-B column received n = 63.",
+  "note": "Body text corroborates: 63/63 cecal intubation in the SDBP-B arm and Table 2 header SDBP-B (n = 63)."},
+
+ {"id": "h19", "choice": "C", "grounded": true,
+  "quote": "|Unit A(1)|A1 b D E||e|e1|L||L1|||\n|max 0.35 mm nom min|0.04 0.20 1.05 1.05 0.15 1.00 1.00 0.12 0.95 0.95||0.55|0.35|0.35 0.30 0.27||0.40 0.35 0.32|||",
+  "reasoning": "The dimension table cells align one-to-one: the e column holds the single nominal value 0.55 (e1 holds 0.35).",
+  "note": "This is the SOT1202 table immediately above the Fig. 16 caption."},
+
+ {"id": "h20", "choice": "B", "grounded": false,
+  "quote": "|1|24X (1.5)|SYMM (R0.05) TYP|\n|24X (0.45)||24|",
+  "reasoning": "The two 24X pad callouts are 1.5 and 0.45, but the extraction does not say which is the pad length and which the width.",
+  "note": "Chose 1.5 as the long axis of the pad; 22X (0.65) is the pitch and (5.8) the overall span."},
+
+ {"id": "h21", "choice": "C", "grounded": true,
+  "quote": "D=Ton/T In descending order TJ,PK=TC+PDM.Zq JC.Rq JCD=0.5, 0.3, 0.1, 0.05, 0.02, 0.01, single pulse 1 Rq JC=0.45°C/W",
+  "reasoning": "This annotation block sits with the Figure 12 (AOW14N50) plot and reads RthetaJC = 0.45 degC/W; the 4.5 degC/W value belongs to Figure 13 (AOWF14N50).",
+  "note": ""},
+
+ {"id": "h22", "choice": "A", "grounded": false,
+  "quote": "OUTPUT 5V VCC LX 1.8V, 18A RSN CSN R3 C1 100kΩ 4.7µF AGND ISEN_P C3 POWER GOOD PGOOD 800µF ISEN_N EN/PFM RCSN RGND IMON C5 R SPGND LL C6 RLL RS1 RC POWER GROUND RNTC(T) ANALOG GROUND",
+  "reasoning": "The schematic is flattened to an unordered token soup; RNTC(T) appears near IMON/RS1/RC and ANALOG GROUND but no connectivity is recoverable from the text.",
+  "note": "Guess based on the caption saying this variant compensates the IMON function only (the 2nd-order variant puts the NTC in the ISEN sense network instead)."},
+
+ {"id": "h23", "choice": "A", "grounded": true,
+  "quote": "Time reserved for CHIP_EN to stay below V*IL*_*nRST*to reset the t *RST*50 chip (see Table 5-3)",
+  "reasoning": "Table 2-9 defines tRST as the time CHIP_EN stays below VIL_nRST, i.e. between the falling and rising crossings of that threshold.",
+  "note": ""},
+
+ {"id": "h24", "choice": "A", "grounded": true,
+  "quote": "|LNRS0|21|4-pts-Slope coefficient before reference point A|-|16|",
+  "reasoning": "The parameter table defines LNR_S0 as the slope coefficient before reference point A, which is the segment rising from CLAMPLOW to A.",
+  "note": "Figure 11's mangled text also places LNR_S0 adjacent to CLAMPLOW, with LNR_A_S/LNR_B_S/etc. labelling the later segments."}
+]

@@ -1,0 +1,61 @@
+[
+ {"id": "h38", "choice": "A", "grounded": true,
+  "quote": "|Device|Package Type|Package Drawing|Pins|SPQ|Length (mm)|Width (mm)|Height (mm)|\n|---|---|---|---|---|---|---|---|\n|INA238AIDGSR|VSSOP|DGS|10|2500|366.0|364.0|50.0|",
+  "reasoning": "The TAPE AND REEL BOX DIMENSIONS table survived as a real table with headers, and the drawing legend just above it ('W L' / 'Width (mm) H') confirms L is the Length column: 366.0 mm.",
+  "note": "364.0 is the box width and 50.0 the height, both on the same row."},
+
+ {"id": "h39", "choice": "D", "grounded": true,
+  "quote": "|6X (1.27)||||||||||NOTE 9||",
+  "reasoning": "In the DDA0008B LAND PATTERN EXAMPLE the only pitch callout is 6X (1.27) (six inter-pad gaps: three per side for 8 pads), matching the package outline's '6X 1.27' lead pitch; (1.55) and (0.6) are pad length and width.",
+  "note": "Package outline on the preceding page also carries '6X 1.27' as the lead pitch."},
+
+ {"id": "h40", "choice": "A", "grounded": false,
+  "quote": "",
+  "reasoning": "Only the axis tick sequence for Figure 24 survived (-1.0 through 3.0 on y, -50 to 150 on x); no curve values are recoverable, so the 150 degC error is a guess anchored on the axis maximum.",
+  "note": "Extraction at lines 630-644 interleaves the Figure 24 and Figure 25 axis labels; the caption text confirms only that the error is flat over 25-80 degC."},
+
+ {"id": "h41", "choice": "D", "grounded": true,
+  "quote": "NOTE: R S= 3.6 kΩ is indicated in Figure 8-5. This is the source impedance above which OPAx189 is a lower noise option than the",
+  "reasoning": "The figure note states explicitly that RS = 3.6 kΩ is the source impedance marked in Figure 8-5 where the OPAx189 becomes the lower-noise part, i.e. the crossing point of the two total-noise curves.",
+  "note": "Note continues on the next line with 'OPA211.'"},
+
+ {"id": "h42", "choice": "C", "grounded": true,
+  "quote": "##### VOH min = 2.4V\n\nVIH min = 1.36V VOL max = 0.4V VIL min = 0.8V\n\n##### Switching Thresholds for 1.8-V to 3.3-V Translation",
+  "reasoning": "The four callouts immediately preceding that caption are the diagram's labels; VIH/VIL (the input thresholds asked for) are 1.36 V and 0.8 V, while 2.4 V/0.4 V are the output levels VOH/VOL.",
+  "note": "The 2.0/0.8 V and 0.99/0.55 V pairs belong to the separate Vcc = 5.0 V and Vcc = 1.8 V sketches higher on the page."},
+
+ {"id": "h43", "choice": "B", "grounded": true,
+  "quote": "**LED 100 k** **VCC**\n\n**LEDx**\n\n**Figure 34. High-Value Resistor in Parallel with LED**",
+  "reasoning": "The only resistor value inside the Figure 34 schematic fragment is 100 k, sitting on the same line as the LED symbol label directly above the caption.",
+  "note": ""},
+
+ {"id": "h44", "choice": "D", "grounded": false,
+  "quote": "",
+  "reasoning": "The board-layout extraction gives '( 0.2) VIA TYP' with no multiplier and only loose dimensions ((0.75), (0.35)); the via count is purely graphical and cannot be recovered.",
+  "note": "Note 5 says 'recommended via locations are shown' but never states how many; guess of 4 assumes (0.75) and (0.35) are the x/y pitches of a 2x2 grid on the 2.0 x 1.2 mm thermal pad."},
+
+ {"id": "h45", "choice": "B", "grounded": false,
+  "quote": "",
+  "reasoning": "Only the axis scaffolding for Figure 12 survived (0-100% y ticks, 1.8-5.4 V x ticks) plus the legend entries; no trace data, so the notch depth is a guess.",
+  "note": "Figure 12's axis text at lines 646-649 is shared with Figure 13 in the same flattened block."},
+
+ {"id": "h46", "choice": "D", "grounded": false,
+  "quote": "16.00 ± 0.1\n10.21 ± 0.1 CL X X",
+  "reasoning": "Fig. 12 yields both 10.21 and 10.41 with no label saying which is the vertical pocket dimension; 10.21 is only inferred to be the left-side dimension because it extracts alongside the tape width 16.00, while 10.41 groups with the bottom-edge 12.00 pitch and SECTION Y-Y dims.",
+  "note": "Reading-order inference only, so not treated as grounded; the parallel Fig. 13 (option 9) shows the same slot pattern with 10.31 and 10.20."},
+
+ {"id": "h47", "choice": "B", "grounded": true,
+  "quote": "|240 °C 217 °C Max. ramp up 3 °C/s|245 °C Max. 30 s Max. 120 s Max. 100 s Max. ramp down 6 °C/s Max. 2 cycles allowed|",
+  "reasoning": "The annotation block for Fig. 11 states 'Max. ramp down 6 °C/s' (3 °C/s being the ramp-up limit).",
+  "note": "Caption on line 265 confirms this block belongs to Fig. 11, the lead-free IR reflow profile."},
+
+ {"id": "h48", "choice": "A", "grounded": true,
+  "quote": "leaving 476 students (52.3%) at 15 schools allocated to intervention group and 434 chil-dren (47.7%) at 16 schools allocated to control group (figure 1). Therefore, 910 students underwent analysis.",
+  "reasoning": "The figure's own Analysis boxes extract with the school counts swapped across columns, but the Results text and Table 1 header ('Intervention group (n=476* at 15 schools)') both pin the intervention arm to 476 students at 15 schools.",
+  "note": "Figure 1 line reads 'Analysed: 434 students (47.7%) Analysed: 476 students (52.3%) at 16 schools at 15 schools' — column-interleaved, hence the cross-check."},
+
+ {"id": "h49", "choice": "A", "grounded": true,
+  "quote": "Exclude factor VIII or factor IX disorder female patients n=53",
+  "reasoning": "That flow-chart box states the exclusion directly, and the arithmetic checks: 1041 registration files minus 53 females leaves the 988 males carried to the next box.",
+  "note": "1041 and 360 are the neighbouring boxes in the same chart."}
+]

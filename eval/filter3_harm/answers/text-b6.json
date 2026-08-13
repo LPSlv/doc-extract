@@ -1,0 +1,46 @@
+[
+ {"id": "h62", "choice": "C", "grounded": true,
+  "quote": "||8X (1.4)|SYMM (R0.05) TYP|\n|1 8X (0.45)||8|\n|||SYMM|\n|6X (0.65)|||",
+  "reasoning": "The stencil block for DGK0008A carries only two 8X aperture dimensions, 1.4 and 0.45; with a 6X (0.65) lead pitch the 0.45 must be the across-pitch (short) side, so 1.4 is the long side.",
+  "note": ""},
+
+ {"id": "h63", "choice": "D", "grounded": true,
+  "quote": "V+ R1R2 549 Ω 1.24k Ω VIN **OPA365** VOUT C1 1nF V −",
+  "reasoning": "Labels and values appear in reading order (R1→0549 Ω, R2→1.24 kΩ), and the pairing is confirmed by the stated design: with R3=549, C1=1nF, C2=150pF, R2=1.24k gives f0≈498 kHz and Q≈0.70 (Butterworth), while the swap gives ≈750 kHz.",
+  "note": "Value assignment relies on left-to-right pairing plus an MFB transfer-function check using the other component values printed in the same figure."},
+
+ {"id": "h64", "choice": "D", "grounded": false,
+  "quote": "",
+  "reasoning": "Only flattened axis ticks survive (3.00–3.30 V and 0/50/100/150/200 mA); no curve data point is recoverable, so 3.12 V is an interpolation guess.",
+  "note": "Extraction yields '3.303.253.203.153.103.00' and the 5 V companion plot's ticks run together; nothing ties a current to a swing."},
+
+ {"id": "h65", "choice": "A", "grounded": true,
+  "quote": "||1 5X (0.3) 2X (0.5)|5X (0.67)|SYMM||5 SYMM (1)||\n|3||||4||\n|(R0.05) TYP|||||||\n|0.05 MAX AROUND|||(1.48) LAND PATTERN EXAMPLE SCALE:30X|0.05 MIN AROUND|||",
+  "reasoning": "The per-pad dimensions are tagged 5X (0.3 wide, 0.67 long) and the in-column pitch is 2X (0.5); (1.48) is the only pattern-wide dimension, and it cannot be an outer-edge span because 1.48 minus two 0.67 pads would put the pads inside each other on a 1.1–1.3 mm wide body.",
+  "note": ""},
+
+ {"id": "h66", "choice": "C", "grounded": true,
+  "quote": "|0.05 MAX AROUND|||(1.48) LAND PATTERN EXAMPLE SCALE:30X|0.05 MIN AROUND|||\n|SOLDER MASK OPENING|NON SOLDER MASK DEFINED (PREFERRED)|METAL||METAL UNDER SOLDER MASK SOLDERMASK DETAILS|SOLDER MASK DEFINED|SOLDER MASK OPENING 4220753/E 11/2024|",
+  "reasoning": "Column alignment in the pseudo-table puts '0.05 MAX AROUND' over the left detail labelled NON SOLDER MASK DEFINED (PREFERRED) and '0.05 MIN AROUND' over the right SOLDER MASK DEFINED detail.",
+  "note": ""},
+
+ {"id": "h67", "choice": "A", "grounded": true,
+  "quote": "A VKA= Vref T A= 25°C B VKA= 5 V C VKA= 10 V D VKA= 15 Vf",
+  "reasoning": "The figure legend survives extraction intact and pairs curve C with VKA = 10 V.",
+  "note": ""},
+
+ {"id": "h68", "choice": "C", "grounded": false,
+  "quote": "",
+  "reasoning": "Only the two curve titles and the axis ticks extracted; the ~30% value comes from the monostable relation t = RC·ln(VDD/(VDD−VCONT)) = 0.69 RC over a 2.5 RC clock, not from the Markdown.",
+  "note": "Extracted text is '100 Clock period = 1 RC Clock period = 2.5 RC 80' plus x ticks 0.5–4.5; no plotted values."},
+
+ {"id": "h69", "choice": "D", "grounded": false,
+  "quote": "",
+  "reasoning": "The figure yields only y-axis ticks (1 / 0.75 / 0.5 / 0.25 / 0 / −0.25 mA/Ch); 0.85 is chosen because the spec table lists 750 µA typ / 900 µA max per channel at VDD = 15 V, which is inference from elsewhere in the document, not the plot.",
+  "note": ""},
+
+ {"id": "h70", "choice": "B", "grounded": false,
+  "quote": "",
+  "reasoning": "Section 8.2 extracts as bare net names (V DD, Bias, OUT, IN+, IN±, GND) with no schematic symbols, so the number of triangles is unrecoverable; 'Two' is a guess.",
+  "note": ""}
+]

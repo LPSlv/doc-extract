@@ -1,0 +1,110 @@
+[
+ {
+  "id": "h25",
+  "choice": "B",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "| top-left | ~ 0 Deg.* | vertical split | S on the left half (light), N on the right half (dark); both letters rotated 90\u00b0 |\n| top-right | ~ 90 Deg.* | horizontal split | N on the top half (dark), S on the bottom half (light); letters upright |",
+  "reasoning": "The two cells are described explicitly: 0 Deg. is S-left/N-right (horizontal axis), 90 Deg. is N-top/S-bottom (vertical axis) \u2014 a quarter turn with N on top.",
+  "note": ""
+ },
+ {
+  "id": "h26",
+  "choice": "C",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "- `CCCCCC` \u2192 Capacitor Configuration",
+  "reasoning": "The marking key on the right of Figure 41 maps the CCCCCC field directly to Capacitor Configuration.",
+  "note": ""
+ },
+ {
+  "id": "h27",
+  "choice": "A",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "| UNIT | A max. | A\u2081 | A\u2082 | A\u2083 | b_p | c | D\u207d\u00b9\u207e | E\u207d\u00b2\u207e | e | H_E | L | L_p | Q | v | w | y | Z\u207d\u00b9\u207e | \u03b8 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| mm | 1.1 | 0.15 / 0.05 | 0.95 / 0.80 | 0.25 | 0.30 / 0.19 | 0.2 / 0.1 | 6.6 / 6.4 | 4.5 / 4.3 | 0.65 | 6.6 / 6.2 | 1 | 0.75 / 0.50 | 0.4 / 0.3 | 0.2 | 0.13 | 0.1 | 0.5 / 0.2 | 8\u00b0 / 0\u00b0 |",
+  "reasoning": "The dimension table's 'A max.' column reads 1.1 mm; 0.15/0.25/0.95 are A1, A3 and A2 respectively.",
+  "note": "The Markdown corroborates it but is badly scrambled: it shows 'UNIT mAax.' ... 'mm 1.1' with the remaining max/min pairs interleaved character-by-character."
+ },
+ {
+  "id": "h28",
+  "choice": "D",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "~0.84 V at \u221260 \u00b0C (read from axis), ~0.70 V at ~+30 \u00b0C, ends ~0.40 V at",
+  "reasoning": "The typ curve starts at ~0.84 V at the \u221260 \u00b0C end, which matches 'about 0.83 V' and no other option (0.53 V is the min curve there).",
+  "note": ""
+ },
+ {
+  "id": "h29",
+  "choice": "A",
+  "grounded": false,
+  "source": "description.md",
+  "quote": "",
+  "reasoning": "The description only pins the single-shot curve at t_p = 10^-6 s (~0.08 K/W) and the 3.1 K/W plateau it reaches by ~2x10^-2 s; extrapolating a ~0.5 log-log slope back from the knee gives ~0.7 K/W at 1 ms, but that is inference, not a stated value.",
+  "note": "Neither file states the Zth value at 1 ms; the Markdown for this page is only the scattered axis/label fragments of the plot."
+ },
+ {
+  "id": "h30",
+  "choice": "A",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "and ends at (I_OUT,MAX, V_OUT,FL) at the",
+  "reasoning": "The droop load line terminates at V_OUT,FL when current is I_OUT,MAX, i.e. below V_OUT,NOM at the full-load level.",
+  "note": ""
+ },
+ {
+  "id": "h31",
+  "choice": "A",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "- Supply enters at V_SUPP, \"+7V to +48V\". A JFET (depletion-FET symbol with gate arrow) sits in the top rail between V_SUPP and the regulated node labelled \"VDDA = 5V\"; its gate is driven from VGATE (pin 3).",
+  "reasoning": "Figure 4's JFET gate is stated to be driven from VGATE, pin 3.",
+  "note": ""
+ },
+ {
+  "id": "h32",
+  "choice": "C",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "- \"AHB: AUX (Streaming DMA)\" \u2190 \"Streaming FIFO\" \u2014 single arrow pointing up, from the FIFO to the AUX port.",
+  "reasoning": "The connection list gives the AUX port exactly one edge, and it goes to the Streaming FIFO.",
+  "note": ""
+ },
+ {
+  "id": "h34",
+  "choice": "B",
+  "grounded": true,
+  "source": "both",
+  "quote": "| FLASH_USERDATA | 0x0fe00400 | 0x0fe00000 |",
+  "reasoning": "The Callout 2 (Flash detail) table gives FLASH_USERDATA top 0x0fe00400 and bottom 0x0fe00000, i.e. the range 0x0fe00000-0x0fe00400; text.md line 759 repeats it verbatim as \"0x0fe00400 FLASH_USERDATA 0x0fe00000\".",
+  "note": "[re-run: the first pass ran against an empty description directory]"
+ },
+ {
+  "id": "h35",
+  "choice": "D",
+  "grounded": true,
+  "source": "both",
+  "quote": "| 100 | +0.05 | +0.02 | -0.045 | -0.01 |",
+  "reasoning": "At 100 A the 30 deg (black) trace is the largest value (+0.05 %), above 60 deg (+0.02), -60 deg (-0.01) and -30 deg (-0.045); Table 9-5 in text.md confirms 100.00 A -> 30 deg = 0.054, the highest of the four columns.",
+  "note": "Description also states the 30 deg trace \"rises monotonically to the highest value at 100 A\". [re-run: the first pass ran against an empty description directory]"
+ },
+ {
+  "id": "h36",
+  "choice": "C",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "Control inputs entering the top/left of the block: pins (12), (6), (5), (13) \u2014 driven by the four CD4001B outputs (11), (10), (4), (3).",
+  "reasoning": "The quad CD4066B control pins are driven by the CD4001B NOR outputs, and the pairing maps outputs 3,4,10,11 to control pins 13,5,6,12 exactly as option C states; the CD4049B inverters instead feed the CD4001B gate inputs.",
+  "note": "text.md for this page is OCR-garbled schematic fragments and does not settle the connections. [re-run: the first pass ran against an empty description directory]"
+ },
+ {
+  "id": "h37",
+  "choice": "A",
+  "grounded": true,
+  "source": "description.md",
+  "quote": "The upper buffer is labelled `HS` and sits under the\nsupply label `VCP`;",
+  "reasoning": "The HS gate-driver amplifier is drawn under the VCP supply label (VGLS feeds the LS buffer, VM and VDRAIN are external/pin nets).",
+  "note": ""
+ }
+]

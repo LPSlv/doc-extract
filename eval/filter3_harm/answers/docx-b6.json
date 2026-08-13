@@ -1,0 +1,55 @@
+[
+ {"id": "h62", "choice": "C", "grounded": true,
+  "source": "both",
+  "quote": "\"8X (1.4)\" — horizontal dimension across the width of the top-left aperture, applied 8 times (aperture length).",
+  "reasoning": "The 8X callout for the long (horizontal) side of each of the eight apertures is 1.4 mm; the Markdown for the stencil sheet echoes \"8X (1.4)\" alongside \"8X (0.45)\" (short side) and \"(4.4)\" (column span).",
+  "note": ""},
+
+ {"id": "h63", "choice": "D", "grounded": true,
+  "source": "both",
+  "quote": "From node A, **R₂ 1.24kΩ** → node B, which is the inverting (−) input of the OPA365.",
+  "reasoning": "R2 sits between the R1/C1 node and the inverting input and is printed 1.24 kΩ; the Markdown line \"V+ R1R2 549 Ω 1.24k Ω VIN **OPA365** VOUT C1 1nF\" for Figure 8-5 agrees.",
+  "note": ""},
+
+ {"id": "h64", "choice": "D", "grounded": true,
+  "source": "description.md",
+  "quote": "≈3.12 V at 100 mA",
+  "reasoning": "The description reads the VCC = 3.3 V curve of Figure 5-31 directly at 100 mA; the Markdown carries only the caption, no data points.",
+  "note": ""},
+
+ {"id": "h65", "choice": "A", "grounded": true,
+  "source": "both",
+  "quote": "\"(1.48)\" — horizontal dimension below the pattern, between the vertical centre marks of the left and right columns.",
+  "reasoning": "That is exactly the left-column-to-right-column centre distance; the Markdown row \"(1.48) LAND PATTERN EXAMPLE SCALE:30X\" for drawing 4220753/E confirms it (0.67 is pad length, 0.5 pitch, 1 the right-column span).",
+  "note": ""},
+
+ {"id": "h66", "choice": "C", "grounded": true,
+  "source": "both",
+  "quote": "A dimension callout at the upper left, \"0.05 MAX AROUND\", with an arrowed gap dimension pointing at the clearance between the metal edge and the mask edge.",
+  "reasoning": "The NSMD (preferred) detail carries 0.05 MAX AROUND while the solder-mask-defined detail carries 0.05 MIN AROUND; the Markdown pairs the same two strings in that order on the DRL0005A soldermask-details row.",
+  "note": ""},
+
+ {"id": "h67", "choice": "A", "grounded": true,
+  "source": "both",
+  "quote": "C V<sub>KA</sub> = 10 V",
+  "reasoning": "The in-plot legend of Figure 6-16 assigns 10 V to curve C; the Markdown legend string \"A VKA= Vref T A= 25°C B VKA= 5 V C VKA= 10 V D VKA= 15 Vf\" matches.",
+  "note": ""},
+
+ {"id": "h68", "choice": "C", "grounded": true,
+  "source": "description.md",
+  "quote": "Red, clock period = 2.5 RC: ~5% at 0.5 V; ~10% at 1.0 V; ~17% at 1.5 V; ~25% at 2.0 V; ~34% at 2.5 V",
+  "reasoning": "The description reads the 2.5 RC (red) trace at 2.5 V as about 34%, nearest to the 30% option; the Markdown holds only axis tick text for Figure 7-4.",
+  "note": "The read value (~34%) falls between options C (30%) and D (40%) rather than on one of them; I took the nearer. Confidence in C is moderate, not exact."},
+
+ {"id": "h69", "choice": "D", "grounded": true,
+  "source": "description.md",
+  "quote": "Flat at ~0.8 mA/Ch (read from axis) from the left edge to t = 0; drops abruptly at t = 0 to ~0.5 mA/Ch",
+  "reasoning": "Before the shutdown pulse (t < 0) the Figure 32 supply-current trace sits at ~0.8 mA/Ch, matching only the ~0.85 mA/Ch option; the Markdown gives only axis labels for Figures 32/33.",
+  "note": ""},
+
+ {"id": "h70", "choice": "B", "grounded": true,
+  "source": "description.md",
+  "quote": "The signal is taken from the differential pair's right-hand drain/load node and runs right into a triangle (gain stage / amplifier symbol), whose output feeds a second triangle (output buffer stage), whose output runs right to the \"OUT\" pin.",
+  "reasoning": "Exactly two triangular symbols lie between the input pair and OUT; the Markdown extraction of the block diagram contains only the pin labels and \"Bias\".",
+  "note": ""}
+]

@@ -1,0 +1,181 @@
+[
+ {"id": "h25",
+  "q": "In Figure 36 (SMP-3 angle detection), how is the magnet's N-S pole axis oriented relative to the sensor package at the position labelled \"~90 Deg.\", compared with the one labelled \"~0 Deg.\"?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "Rotated a quarter turn: at ~90 Deg. the N-S axis is vertical with N on top and S below, whereas at ~0 Deg. it is horizontal with S on the left and N on the right",
+    "Rotated a quarter turn the other way: at ~90 Deg. the N-S axis is vertical with S on top and N below",
+    "Unchanged: the N-S axis is horizontal in both, with S on the left and N on the right",
+    "Flipped in the plane: the N-S axis stays horizontal but N moves to the left and S to the right"
+  ],
+  "kind": "geometry",
+  "fact": "The four package drawings inside the boxed figure each carry a two-tone magnet disc; the ~0 Deg. one (top left) is split left/right with S left and N right, while the ~90 Deg. one (top right) is split top/bottom with N above and S below.",
+  "why_arbitrary": "Nothing fixes which pole a vendor draws upward at its own nominal 90 degree position - the figure's own footnote says there is no absolute reference for the angular information.",
+  "note": ""},
+
+ {"id": "h26",
+  "q": "In Figure 41 (SMP-4 marking), which marking field does the six-character \"CCCCCC\" string on the package correspond to?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "Capacitor Configuration",
+    "Assembly Lot Number",
+    "Year (YY) and Week (WW) date code",
+    "Application Code"
+  ],
+  "kind": "printed",
+  "fact": "In the \"Bottom\" marking breakdown on the right of Figure 41, the boxed CCCCCC field has an arrow pointing to the printed label \"Capacitor Configuration\" (bottom-most row of that group).",
+  "why_arbitrary": "The letter C is used here as an arbitrary placeholder character; only the vendor's own callout says which field it stands for.",
+  "note": ""},
+
+ {"id": "h27",
+  "q": "In Fig. 12 (package outline SOT360-1, TSSOP20), what is the maximum overall package height A in millimetres?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "1.1 mm",
+    "0.95 mm",
+    "0.25 mm",
+    "0.15 mm"
+  ],
+  "kind": "printed",
+  "fact": "The DIMENSIONS table inside the Fig. 12 outline frame lists \"A max.\" in its second column, with the value 1.1 in the mm row.",
+  "why_arbitrary": "The overall height limit is a package-specific number set by this outline version, not deducible from the TSSOP name or lead count.",
+  "note": ""},
+
+ {"id": "h29",
+  "q": "In Fig 4 (transient thermal impedance from junction to mounting base versus pulse duration), what is the approximate Zth(j-mb) value on the single-shot curve at a pulse duration tp of 1 ms?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "About 1.8 K/W",
+    "About 0.7 K/W",
+    "About 3 K/W",
+    "About 0.3 K/W"
+  ],
+  "kind": "geometry",
+  "fact": "On the log-log plot, following the lowest (single shot) trace to the 10^-3 s gridline puts it just under the 2 K/W line, roughly two thirds of the way from 1 to 2 in the 1-to-10 decade.",
+  "why_arbitrary": "The transient curve shape is measured device data; nothing about a 22 mOhm MOSFET fixes where its single-shot curve sits at 1 ms.",
+  "note": ""},
+
+ {"id": "h30",
+  "q": "In Figure 2 (simple output device load line), where does the droop load line put the output voltage at maximum output current IOUT,MAX relative to the nominal level VOUT,NOM?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "Below VOUT,NOM, down at the VOUT,FL level",
+    "Above VOUT,NOM, up at the VOUT,NL level",
+    "Exactly on VOUT,NOM, where it meets the nominal load line",
+    "Above VOUT,NOM, roughly midway between VOUT,NOM and VOUT,NL"
+  ],
+  "kind": "geometry",
+  "fact": "The magenta droop load line in Figure 2 (right column) slopes down from VOUT,NL at IOUT,NL, crosses the dashed red nominal line at IOUT,MID, and reaches the VOUT,FL dashed level at the IOUT,MAX tick.",
+  "why_arbitrary": "A load line could equally have been drawn flat or rising; the direction and endpoints are this vendor's chosen droop illustration.",
+  "note": ""},
+
+ {"id": "h31",
+  "q": "In Figure 4 (Application Example 2, the 0V to 10V output configuration), which ZSC31050 pin drives the gate of the external JFET supply regulator?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "VGATE (pin 3)",
+    "VDDA (pin 1)",
+    "IN3 (pin 2)",
+    "VDD (pin 8)"
+  ],
+  "kind": "geometry",
+  "fact": "In the Figure 4 schematic (top right of the page), the trace from the pin-3 VGATE terminal runs right and then up to the gate of the JFET symbol sitting in the VSUPP rail above the IC.",
+  "why_arbitrary": "Which numbered pin of this particular part carries the regulator gate drive is a pinout choice; only following the drawn wire settles it.",
+  "note": ""},
+
+ {"id": "h34",
+  "q": "In Figure 3.2 (EFR32MG24 Memory Map - Core Peripherals and Code Space), what address range is assigned to the FLASH_USERDATA region?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "0x0fe00000 to 0x0fe00400",
+    "0x0fe08000 to 0x0fe08400",
+    "0x0fe08400 to 0x0fe08a00",
+    "0x08000000 to 0x08180000"
+  ],
+  "kind": "printed",
+  "fact": "In the lower expanded block on the right of Figure 3.2, the band labelled FLASH_USERDATA is bounded by the address labels 0x0fe00400 at its top edge and 0x0fe00000 at its bottom edge.",
+  "why_arbitrary": "The user-data page base and size are this SoC family's memory-map allocation; no convention fixes them.",
+  "note": ""},
+
+ {"id": "h36",
+  "q": "In Figure 6-10 (Four-Channel PAM Multiplex System Diagram), which device's outputs connect directly to the control pins that switch the four-channel CD4066B analog switches?",
+  "stem_edit": "Replaced \"which device supplies the sequential channel-select signals that switch\" with \"which device's outputs connect directly to the control pins that switch\", because the page shows a chain (CD4018B counter -> CD4049B inverters -> CD4001B gates -> CD4066B) in which more than one device could be called the source of the sequence.",
+  "answerable": true,
+  "options_raw": [
+    "The CD4001B, whose outputs 3, 4, 10 and 11 run to CD4066B control pins 13, 5, 6 and 12",
+    "The CD4018B counter, whose Q1-bar and Q2-bar outputs run straight to the CD4066B control pins",
+    "The 1/3 CD4049B inverters, whose outputs run straight to the CD4066B control pins",
+    "The separate 1/4 CD4066B stage, whose pin 2 output runs to the four control pins"
+  ],
+  "kind": "geometry",
+  "fact": "In the left-hand half of Figure 6-10, four wires leave the CD4001B block at pins 3, 4, 10 and 11 and land on the circled control pins 13, 5, 6 and 12 above the four-channel CD4066B block; the CD4018B and CD4049B outputs terminate on CD4001B inputs instead.",
+  "why_arbitrary": "The decoding could have been done in the counter or with different gate types; only tracing the drawn wires shows which package's outputs reach the switch control pins.",
+  "note": ""},
+
+ {"id": "h40",
+  "q": "In Figure 24 (LMT01 typical accuracy when using the first-order Equation 1, 92 typical units at VP - VN = 2.15 V), roughly what is the largest temperature accuracy error shown at a junction temperature of 150°C?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "About 1.4°C",
+    "About 1.9°C",
+    "About 0.3°C",
+    "About 3.0°C"
+  ],
+  "kind": "geometry",
+  "fact": "At the right-hand 150 tick of Figure 24 (lower-left panel of the page) the bundle of unit traces spans roughly 1.0 to 1.4 on the Temperature Accuracy axis, the topmost trace reaching just under the 1.5 gridline.",
+  "why_arbitrary": "The spread of 92 measured parts at the hot end is empirical characterisation data, not something the equation or the axis limits imply.",
+  "note": ""},
+
+ {"id": "h41",
+  "q": "In Figure 8-5 (noise performance of the OPAx189 and OPA211 in unity-gain buffer configuration), at what source resistance RS do the OPAx189 and OPA211 total-noise curves cross?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "3.6 kΩ",
+    "1 kΩ",
+    "10 kΩ",
+    "360 Ω"
+  ],
+  "kind": "printed",
+  "fact": "In Figure 8-5 the red OPAx189 and blue OPA211 curves meet on the dotted vertical line just right of the 1k tick, which is annotated \"RS = 3.6 kΩ\" at the bottom right of the plot.",
+  "why_arbitrary": "The crossover depends on the two amplifiers' measured voltage- and current-noise densities, so it is device-specific rather than a round decade value.",
+  "note": ""},
+
+ {"id": "h42",
+  "q": "In the front-page translation diagram labelled \"Switching Thresholds for 1.8-V to 3.3-V Translation\", what input switching thresholds VIH and VIL are shown for the LV1Txx logic?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "VIH min = 1.36 V and VIL min = 0.8 V",
+    "VIH = 0.99 V and VIL = 0.55 V",
+    "VIH = 2.0 V and VIL = 0.8 V",
+    "VOH min = 2.4 V and VOL max = 0.4 V"
+  ],
+  "kind": "printed",
+  "fact": "The waveform pair captioned \"Switching Thresholds for 1.8-V to 3.3-V Translation\" at the bottom of the page carries the labels \"VIH min = 1.36V\" and \"VIL min = 0.8V\" against its left-hand (input) waveform.",
+  "why_arbitrary": "The reduced input thresholds are this part's design values; the 0.99 V / 0.55 V pair printed above the Vcc = 1.8 V block shows a different operating point on the same page.",
+  "note": ""},
+
+ {"id": "h49",
+  "q": "In Fig. 1 (flow chart for inclusion), how many subjects were removed at the step that excludes female factor VIII or factor IX disorder patients?",
+  "stem_edit": "",
+  "answerable": true,
+  "options_raw": [
+    "53",
+    "360",
+    "155",
+    "1041"
+  ],
+  "kind": "printed",
+  "fact": "The side box near the bottom of Fig. 1 reads \"Exclude factor VIII or factor IX disorder female patients n=53\", between the n=1041 box above it and the n=988 male-patient box below.",
+  "why_arbitrary": "The count of excluded female registrants is a result of this Taiwanese registry cohort, knowable only from the printed flow chart.",
+  "note": ""}
+]

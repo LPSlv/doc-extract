@@ -1,0 +1,73 @@
+[
+ {"id": "h01", "choice": "A", "grounded": true,
+  "source": "description.md",
+  "quote": "Their labels, left to right: `s₁`, `s₂ = s₄`, `t₄`, `t₂`, `s₃`, `t₃`, `t₁`.",
+  "reasoning": "The second dot carries the single label `s₂ = s₄`, i.e. s2 and s4 are the same point; the description also lists the arc \"from `s₂ = s₄` to `t₄`\".",
+  "note": ""},
+
+ {"id": "h02", "choice": "C", "grounded": true,
+  "source": "description.md",
+  "quote": "EF21-SignMuon (heavy red, diamond markers) is a visible saw-tooth / period-two zig-zag whose envelope rises roughly linearly from 0 to ≈ +6.1 at iteration 58 (read from axis).",
+  "reasoning": "The right panel is the EF21-SignMuon 2x2 instance with y-axis f(X_t); its value at the end of the run (~iteration 58-60) is about 6.",
+  "note": ""},
+
+ {"id": "h03", "choice": "B", "grounded": true,
+  "source": "both",
+  "quote": "| mm | max | 1.75 | 0.25 | | | 0.51 | 0.25 | 8.75 | 4.0 | | 6.2 | | 1.27 | 0.2 | 0.25 | 0.1 | 8° |",
+  "reasoning": "In the mm 'max' row the column under D⁽¹⁾ reads 8.75; the Markdown table row confirms the same run '0.51 0.25 8.75 ... 8.55' (8.55 is the min).",
+  "note": "Markdown line 490 of h03.md carries the same figures, corroborating the description."},
+
+ {"id": "h04", "choice": "D", "grounded": true,
+  "source": "description.md",
+  "quote": "**View 2 — end elevation (top right).** The package seen from the narrow end. Body width dimension `E` across the top; datum box `A` to its right. ... Overall lead span `H_E` is dimensioned below the part.",
+  "reasoning": "H_E is dimensioned in the end-on view as the overall lead span, i.e. across the outer extremities of the formed leads on the two lead-bearing sides; the long-direction body dimension is D and the body-only width is E.",
+  "note": "The Markdown retains only the bare label 'HE' with no geometry, so the description carries this."},
+
+ {"id": "h05", "choice": "D", "grounded": true,
+  "source": "description.md",
+  "quote": "overshoots to a peak of ≈ +29 mV at t ≈ 18–19 µs (read from axis)",
+  "reasoning": "The red 'Standard Input Diode Structure' trace's positive peak after the initial spike/undershoot is about +29 mV, i.e. roughly 30 mV.",
+  "note": ""},
+
+ {"id": "h06", "choice": "B", "grounded": true,
+  "source": "both",
+  "quote": "**Pins entering the boundary on the left edge, top to bottom:** `D`, `R_S`, `NC`, `R`.",
+  "reasoning": "That is exactly option B; the Markdown's own reading order of the figure text ('V CC D Thermal Shutdown' / 'V CC R S SLOPE CONTROL and MODE LOGIC NC' / 'R' / 'GND') gives the same top-to-bottom sequence D, Rs, NC, R.",
+  "note": ""},
+
+ {"id": "h07", "choice": "D", "grounded": true,
+  "source": "both",
+  "quote": "Upper-left diode, from the Input node up to the V_CC rail, labelled \"**+I_IK**\" with an upward arrow beside it.",
+  "reasoning": "+IIK is the input clamp diode tied to the VCC rail; the Markdown's figure text ordering 'Device VCC / +IIK +IOK / Input Logic Output / -IIK -IOK / GND' places +IIK on the VCC side and -IIK on the GND side.",
+  "note": ""},
+
+ {"id": "h08", "choice": "C", "grounded": true,
+  "source": "both",
+  "quote": "`14X (1.5)` — aperture length, dimensioned horizontally across one aperture at the top left; applies to all 14.",
+  "reasoning": "Length 1.5 mm and width 0.45 mm ('14X (0.45)'); 0.65 is the pitch and 5.8 the column spacing. The Markdown stencil block for PW0014A prints the same '14X (1.5)' and '14X (0.45)'.",
+  "note": ""},
+
+ {"id": "h09", "choice": "D", "grounded": true,
+  "source": "both",
+  "quote": "`(7)` — horizontal distance between the two column centrelines, dimensioned across the bottom.",
+  "reasoning": "The centreline-to-centreline callout is (7); 1.85/0.6 are land length/width and 1.27 is the pitch. Markdown line 669 of h09.md shows '(7) LAND PATTERN EXAMPLE SCALE:7X' for NS0016A.",
+  "note": ""},
+
+ {"id": "h10", "choice": "C", "grounded": true,
+  "source": "both",
+  "quote": "`14X (0.65)` — land pitch, dimensioned vertically at the left between two adjacent lands (14 spaces for the 8-per-side rows).",
+  "reasoning": "The pitch callout in the PW0016A land pattern is 0.65 mm; the Markdown's PW0016A board-layout block prints '14X (0.65)' alongside '16X (1.5)' and '16X (0.45)'.",
+  "note": ""},
+
+ {"id": "h11", "choice": "C", "grounded": true,
+  "source": "both",
+  "quote": "`(⌀ 0.1) VIA` — leader to the circle at the centre of pad 3, giving the via drill/finished diameter.",
+  "reasoning": "The via callout is diameter 0.1 mm; the Markdown DPW0005A board-layout block carries '(0.78) (0.1) SYMM' on the row immediately above the cell reading 'VIA'.",
+  "note": ""},
+
+ {"id": "h12", "choice": "A", "grounded": true,
+  "source": "both",
+  "quote": "| 9 | VCC+ |",
+  "reasoning": "In the Figure 4-6 right-side pin list VCC+ sits at pin 9; the Markdown's Table 4-4 Pin Functions: TL072M row '|VCC+|9|—|Power supply|' agrees.",
+  "note": ""}
+]

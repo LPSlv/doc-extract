@@ -1,0 +1,1175 @@
+{
+ "h01": {
+  "options": [
+   "s2 and s4",
+   "s1 and s3",
+   "s3 and t2",
+   "t4 and t2"
+  ],
+  "answer": "s2 and s4",
+  "key": "A",
+  "alt_options": [
+   "s1 and s3",
+   "s3 and t2",
+   "t4 and t2",
+   "s2 and s4"
+  ],
+  "alt_key": "D"
+ },
+ "h02": {
+  "options": [
+   "About 2",
+   "About 20",
+   "About 6",
+   "About 4"
+  ],
+  "answer": "About 6",
+  "key": "C",
+  "alt_options": [
+   "About 20",
+   "About 6",
+   "About 4",
+   "About 2"
+  ],
+  "alt_key": "B"
+ },
+ "h03": {
+  "options": [
+   "6.2",
+   "8.75",
+   "4.0",
+   "8.55"
+  ],
+  "answer": "8.75",
+  "key": "B",
+  "alt_options": [
+   "8.75",
+   "4.0",
+   "8.55",
+   "6.2"
+  ],
+  "alt_key": "A"
+ },
+ "h04": {
+  "options": [
+   "From the seating plane up to the top surface of the package body",
+   "Across the two ends of the package body in the long direction, spanning all 14 lead positions",
+   "Across the two sides of the plastic body only, excluding the leads",
+   "Across the outer extremities of the formed leads on the two lead-bearing sides (overall width including leads)"
+  ],
+  "answer": "Across the outer extremities of the formed leads on the two lead-bearing sides (overall width including leads)",
+  "key": "D",
+  "alt_options": [
+   "Across the two ends of the package body in the long direction, spanning all 14 lead positions",
+   "Across the two sides of the plastic body only, excluding the leads",
+   "Across the outer extremities of the formed leads on the two lead-bearing sides (overall width including leads)",
+   "From the seating plane up to the top surface of the package body"
+  ],
+  "alt_key": "C"
+ },
+ "h05": {
+  "options": [
+   "About 60 mV",
+   "About 10 mV",
+   "About 100 mV",
+   "About 30 mV"
+  ],
+  "answer": "About 30 mV",
+  "key": "D",
+  "alt_options": [
+   "About 10 mV",
+   "About 100 mV",
+   "About 30 mV",
+   "About 60 mV"
+  ],
+  "alt_key": "C"
+ },
+ "h06": {
+  "options": [
+   "D, R, NC, Rs",
+   "D, Rs, NC, R",
+   "D, Rs, R, NC",
+   "R, Rs, NC, D"
+  ],
+  "answer": "D, Rs, NC, R",
+  "key": "B",
+  "alt_options": [
+   "D, Rs, NC, R",
+   "D, Rs, R, NC",
+   "R, Rs, NC, D",
+   "D, R, NC, Rs"
+  ],
+  "alt_key": "A"
+ },
+ "h07": {
+  "options": [
+   "The Logic block's internal node",
+   "The Output terminal",
+   "GND",
+   "VCC"
+  ],
+  "answer": "VCC",
+  "key": "D",
+  "alt_options": [
+   "The Output terminal",
+   "GND",
+   "VCC",
+   "The Logic block's internal node"
+  ],
+  "alt_key": "C"
+ },
+ "h08": {
+  "options": [
+   "5.8 mm by 1.5 mm",
+   "0.65 mm by 0.45 mm",
+   "1.5 mm by 0.45 mm",
+   "1.5 mm by 0.65 mm"
+  ],
+  "answer": "1.5 mm by 0.45 mm",
+  "key": "C",
+  "alt_options": [
+   "0.65 mm by 0.45 mm",
+   "1.5 mm by 0.45 mm",
+   "1.5 mm by 0.65 mm",
+   "5.8 mm by 1.5 mm"
+  ],
+  "alt_key": "B"
+ },
+ "h09": {
+  "options": [
+   "0.6",
+   "1.85",
+   "1.27",
+   "7"
+  ],
+  "answer": "7",
+  "key": "D",
+  "alt_options": [
+   "1.85",
+   "1.27",
+   "7",
+   "0.6"
+  ],
+  "alt_key": "C"
+ },
+ "h10": {
+  "options": [
+   "0.45 mm",
+   "5.8 mm",
+   "0.65 mm",
+   "1.5 mm"
+  ],
+  "answer": "0.65 mm",
+  "key": "C",
+  "alt_options": [
+   "5.8 mm",
+   "0.65 mm",
+   "1.5 mm",
+   "0.45 mm"
+  ],
+  "alt_key": "B"
+ },
+ "h11": {
+  "options": [
+   "0.25 mm",
+   "0.21 mm",
+   "0.1 mm",
+   "0.05 mm"
+  ],
+  "answer": "0.1 mm",
+  "key": "C",
+  "alt_options": [
+   "0.21 mm",
+   "0.1 mm",
+   "0.05 mm",
+   "0.25 mm"
+  ],
+  "alt_key": "B"
+ },
+ "h12": {
+  "options": [
+   "9",
+   "5",
+   "8",
+   "10"
+  ],
+  "answer": "9",
+  "key": "A",
+  "alt_options": [
+   "5",
+   "8",
+   "10",
+   "9"
+  ],
+  "alt_key": "D"
+ },
+ "h13": {
+  "options": [
+   "H, the short vertical edge dimensioned on the right-hand side wall of the box",
+   "W, the short vertical edge dimensioned on the right-hand side wall of the box",
+   "W, the long lower edge running down to the left of the box",
+   "L, the long lower edge running down to the right of the box"
+  ],
+  "answer": "H, the short vertical edge dimensioned on the right-hand side wall of the box",
+  "key": "A",
+  "alt_options": [
+   "W, the short vertical edge dimensioned on the right-hand side wall of the box",
+   "W, the long lower edge running down to the left of the box",
+   "L, the long lower edge running down to the right of the box",
+   "H, the short vertical edge dimensioned on the right-hand side wall of the box"
+  ],
+  "alt_key": "D"
+ },
+ "h14": {
+  "options": [
+   "0.45",
+   "5.8",
+   "0.65",
+   "1.5"
+  ],
+  "answer": "1.5",
+  "key": "D",
+  "alt_options": [
+   "5.8",
+   "0.65",
+   "1.5",
+   "0.45"
+  ],
+  "alt_key": "C"
+ },
+ "h15": {
+  "options": [
+   "1.8 mm by 0.2 mm",
+   "0.6 mm by 0.4 mm",
+   "0.4 mm by 0.2 mm",
+   "0.6 mm by 0.2 mm"
+  ],
+  "answer": "0.6 mm by 0.2 mm",
+  "key": "D",
+  "alt_options": [
+   "0.6 mm by 0.4 mm",
+   "0.4 mm by 0.2 mm",
+   "0.6 mm by 0.2 mm",
+   "1.8 mm by 0.2 mm"
+  ],
+  "alt_key": "C"
+ },
+ "h16": {
+  "options": [
+   "W, the long lower edge running down to the left of the box",
+   "L, the long lower edge running down to the right of the box",
+   "L, the short vertical edge dimensioned on the right-hand side wall of the box",
+   "H, the short vertical edge dimensioned on the right-hand side wall of the box"
+  ],
+  "answer": "H, the short vertical edge dimensioned on the right-hand side wall of the box",
+  "key": "D",
+  "alt_options": [
+   "L, the long lower edge running down to the right of the box",
+   "L, the short vertical edge dimensioned on the right-hand side wall of the box",
+   "H, the short vertical edge dimensioned on the right-hand side wall of the box",
+   "W, the long lower edge running down to the left of the box"
+  ],
+  "alt_key": "C"
+ },
+ "h17": {
+  "options": [
+   "FlashAttention",
+   "Block-Sparse FlashAttention",
+   "Megatron Attention",
+   "Linformer Attention"
+  ],
+  "answer": "Block-Sparse FlashAttention",
+  "key": "B",
+  "alt_options": [
+   "Block-Sparse FlashAttention",
+   "Megatron Attention",
+   "Linformer Attention",
+   "FlashAttention"
+  ],
+  "alt_key": "A"
+ },
+ "h18": {
+  "options": [
+   "60",
+   "63",
+   "71",
+   "58"
+  ],
+  "answer": "63",
+  "key": "B",
+  "alt_options": [
+   "63",
+   "71",
+   "58",
+   "60"
+  ],
+  "alt_key": "A"
+ },
+ "h19": {
+  "options": [
+   "0.30",
+   "0.35",
+   "0.55",
+   "0.15"
+  ],
+  "answer": "0.55",
+  "key": "C",
+  "alt_options": [
+   "0.35",
+   "0.55",
+   "0.15",
+   "0.30"
+  ],
+  "alt_key": "B"
+ },
+ "h20": {
+  "options": [
+   "0.45 mm",
+   "1.5 mm",
+   "5.8 mm",
+   "0.65 mm"
+  ],
+  "answer": "1.5 mm",
+  "key": "B",
+  "alt_options": [
+   "1.5 mm",
+   "5.8 mm",
+   "0.65 mm",
+   "0.45 mm"
+  ],
+  "alt_key": "A"
+ },
+ "h21": {
+  "options": [
+   "4.5 degC/W",
+   "0.5 degC/W",
+   "0.45 degC/W",
+   "0.045 degC/W"
+  ],
+  "answer": "0.45 degC/W",
+  "key": "C",
+  "alt_options": [
+   "0.5 degC/W",
+   "0.45 degC/W",
+   "0.045 degC/W",
+   "4.5 degC/W"
+  ],
+  "alt_key": "B"
+ },
+ "h22": {
+  "options": [
+   "Between the IMON pin and analog ground (the AGND net)",
+   "Between the IMON pin and the LL pin",
+   "Between the ISEN_P and ISEN_N pins",
+   "Between the LL pin and analog ground"
+  ],
+  "answer": "Between the IMON pin and analog ground (the AGND net)",
+  "key": "A",
+  "alt_options": [
+   "Between the IMON pin and the LL pin",
+   "Between the ISEN_P and ISEN_N pins",
+   "Between the LL pin and analog ground",
+   "Between the IMON pin and analog ground (the AGND net)"
+  ],
+  "alt_key": "D"
+ },
+ "h23": {
+  "options": [
+   "From where the falling CHIP_EN crosses VIL_nRST to where the rising CHIP_EN crosses VIL_nRST again",
+   "From where the power rails reach 2.8 V to where CHIP_EN first crosses VIL_nRST",
+   "From where CHIP_EN first begins to fall from its high level to where it returns to its full high level",
+   "Between the two points where CHIP_EN crosses the 2.8 V level"
+  ],
+  "answer": "From where the falling CHIP_EN crosses VIL_nRST to where the rising CHIP_EN crosses VIL_nRST again",
+  "key": "A",
+  "alt_options": [
+   "From where the power rails reach 2.8 V to where CHIP_EN first crosses VIL_nRST",
+   "From where CHIP_EN first begins to fall from its high level to where it returns to its full high level",
+   "Between the two points where CHIP_EN crosses the 2.8 V level",
+   "From where the falling CHIP_EN crosses VIL_nRST to where the rising CHIP_EN crosses VIL_nRST again"
+  ],
+  "alt_key": "D"
+ },
+ "h24": {
+  "options": [
+   "LNR_S0",
+   "LNR_D_S",
+   "LNR_B_S",
+   "LNR_A_S"
+  ],
+  "answer": "LNR_S0",
+  "key": "A",
+  "alt_options": [
+   "LNR_D_S",
+   "LNR_B_S",
+   "LNR_A_S",
+   "LNR_S0"
+  ],
+  "alt_key": "D"
+ },
+ "h25": {
+  "options": [
+   "Unchanged: the N-S axis is horizontal in both, with S on the left and N on the right",
+   "Rotated a quarter turn: at ~90 Deg. the N-S axis is vertical with N on top and S below, whereas at ~0 Deg. it is horizontal with S on the left and N on the right",
+   "Flipped in the plane: the N-S axis stays horizontal but N moves to the left and S to the right",
+   "Rotated a quarter turn the other way: at ~90 Deg. the N-S axis is vertical with S on top and N below"
+  ],
+  "answer": "Rotated a quarter turn: at ~90 Deg. the N-S axis is vertical with N on top and S below, whereas at ~0 Deg. it is horizontal with S on the left and N on the right",
+  "key": "B",
+  "alt_options": [
+   "Rotated a quarter turn: at ~90 Deg. the N-S axis is vertical with N on top and S below, whereas at ~0 Deg. it is horizontal with S on the left and N on the right",
+   "Flipped in the plane: the N-S axis stays horizontal but N moves to the left and S to the right",
+   "Rotated a quarter turn the other way: at ~90 Deg. the N-S axis is vertical with S on top and N below",
+   "Unchanged: the N-S axis is horizontal in both, with S on the left and N on the right"
+  ],
+  "alt_key": "A"
+ },
+ "h26": {
+  "options": [
+   "Assembly Lot Number",
+   "Year (YY) and Week (WW) date code",
+   "Capacitor Configuration",
+   "Application Code"
+  ],
+  "answer": "Capacitor Configuration",
+  "key": "C",
+  "alt_options": [
+   "Year (YY) and Week (WW) date code",
+   "Capacitor Configuration",
+   "Application Code",
+   "Assembly Lot Number"
+  ],
+  "alt_key": "B"
+ },
+ "h27": {
+  "options": [
+   "1.1 mm",
+   "0.15 mm",
+   "0.25 mm",
+   "0.95 mm"
+  ],
+  "answer": "1.1 mm",
+  "key": "A",
+  "alt_options": [
+   "0.15 mm",
+   "0.25 mm",
+   "0.95 mm",
+   "1.1 mm"
+  ],
+  "alt_key": "D"
+ },
+ "h28": {
+  "options": [
+   "about 0.95 V",
+   "about 0.68 V",
+   "about 0.53 V",
+   "about 0.83 V"
+  ],
+  "answer": "about 0.83 V",
+  "key": "D",
+  "alt_options": [
+   "about 0.68 V",
+   "about 0.53 V",
+   "about 0.83 V",
+   "about 0.95 V"
+  ],
+  "alt_key": "C"
+ },
+ "h29": {
+  "options": [
+   "About 0.7 K/W",
+   "About 0.3 K/W",
+   "About 1.8 K/W",
+   "About 3 K/W"
+  ],
+  "answer": "About 1.8 K/W",
+  "key": "C",
+  "alt_options": [
+   "About 0.3 K/W",
+   "About 1.8 K/W",
+   "About 3 K/W",
+   "About 0.7 K/W"
+  ],
+  "alt_key": "B"
+ },
+ "h30": {
+  "options": [
+   "Below VOUT,NOM, down at the VOUT,FL level",
+   "Exactly on VOUT,NOM, where it meets the nominal load line",
+   "Above VOUT,NOM, up at the VOUT,NL level",
+   "Above VOUT,NOM, roughly midway between VOUT,NOM and VOUT,NL"
+  ],
+  "answer": "Below VOUT,NOM, down at the VOUT,FL level",
+  "key": "A",
+  "alt_options": [
+   "Exactly on VOUT,NOM, where it meets the nominal load line",
+   "Above VOUT,NOM, up at the VOUT,NL level",
+   "Above VOUT,NOM, roughly midway between VOUT,NOM and VOUT,NL",
+   "Below VOUT,NOM, down at the VOUT,FL level"
+  ],
+  "alt_key": "D"
+ },
+ "h31": {
+  "options": [
+   "VGATE (pin 3)",
+   "VDDA (pin 1)",
+   "IN3 (pin 2)",
+   "VDD (pin 8)"
+  ],
+  "answer": "VGATE (pin 3)",
+  "key": "A",
+  "alt_options": [
+   "VDDA (pin 1)",
+   "IN3 (pin 2)",
+   "VDD (pin 8)",
+   "VGATE (pin 3)"
+  ],
+  "alt_key": "D"
+ },
+ "h32": {
+  "options": [
+   "AHB Arbiter",
+   "Cache Bank 1, 8 kB 2-way",
+   "Streaming FIFO",
+   "QSPI Memory Interface"
+  ],
+  "answer": "Streaming FIFO",
+  "key": "C",
+  "alt_options": [
+   "Cache Bank 1, 8 kB 2-way",
+   "Streaming FIFO",
+   "QSPI Memory Interface",
+   "AHB Arbiter"
+  ],
+  "alt_key": "B"
+ },
+ "h34": {
+  "options": [
+   "0x0fe08000 to 0x0fe08400",
+   "0x0fe00000 to 0x0fe00400",
+   "0x08000000 to 0x08180000",
+   "0x0fe08400 to 0x0fe08a00"
+  ],
+  "answer": "0x0fe00000 to 0x0fe00400",
+  "key": "B",
+  "alt_options": [
+   "0x0fe00000 to 0x0fe00400",
+   "0x08000000 to 0x08180000",
+   "0x0fe08400 to 0x0fe08a00",
+   "0x0fe08000 to 0x0fe08400"
+  ],
+  "alt_key": "A"
+ },
+ "h35": {
+  "options": [
+   "-30 deg",
+   "-60 deg",
+   "60 deg",
+   "30 deg"
+  ],
+  "answer": "30 deg",
+  "key": "D",
+  "alt_options": [
+   "-60 deg",
+   "60 deg",
+   "30 deg",
+   "-30 deg"
+  ],
+  "alt_key": "C"
+ },
+ "h36": {
+  "options": [
+   "The 1/3 CD4049B inverters, whose outputs run straight to the CD4066B control pins",
+   "The separate 1/4 CD4066B stage, whose pin 2 output runs to the four control pins",
+   "The CD4001B, whose outputs 3, 4, 10 and 11 run to CD4066B control pins 13, 5, 6 and 12",
+   "The CD4018B counter, whose Q1-bar and Q2-bar outputs run straight to the CD4066B control pins"
+  ],
+  "answer": "The CD4001B, whose outputs 3, 4, 10 and 11 run to CD4066B control pins 13, 5, 6 and 12",
+  "key": "C",
+  "alt_options": [
+   "The separate 1/4 CD4066B stage, whose pin 2 output runs to the four control pins",
+   "The CD4001B, whose outputs 3, 4, 10 and 11 run to CD4066B control pins 13, 5, 6 and 12",
+   "The CD4018B counter, whose Q1-bar and Q2-bar outputs run straight to the CD4066B control pins",
+   "The 1/3 CD4049B inverters, whose outputs run straight to the CD4066B control pins"
+  ],
+  "alt_key": "B"
+ },
+ "h37": {
+  "options": [
+   "VCP",
+   "VM",
+   "VDRAIN",
+   "VGLS"
+  ],
+  "answer": "VCP",
+  "key": "A",
+  "alt_options": [
+   "VM",
+   "VDRAIN",
+   "VGLS",
+   "VCP"
+  ],
+  "alt_key": "D"
+ },
+ "h38": {
+  "options": [
+   "366.0 mm",
+   "336.0 mm",
+   "364.0 mm",
+   "50.0 mm"
+  ],
+  "answer": "366.0 mm",
+  "key": "A",
+  "alt_options": [
+   "336.0 mm",
+   "364.0 mm",
+   "50.0 mm",
+   "366.0 mm"
+  ],
+  "alt_key": "D"
+ },
+ "h39": {
+  "options": [
+   "1.55 mm",
+   "0.6 mm",
+   "1.3 mm",
+   "1.27 mm"
+  ],
+  "answer": "1.27 mm",
+  "key": "D",
+  "alt_options": [
+   "0.6 mm",
+   "1.3 mm",
+   "1.27 mm",
+   "1.55 mm"
+  ],
+  "alt_key": "C"
+ },
+ "h40": {
+  "options": [
+   "About 3.0\u00b0C",
+   "About 1.4\u00b0C",
+   "About 0.3\u00b0C",
+   "About 1.9\u00b0C"
+  ],
+  "answer": "About 1.4\u00b0C",
+  "key": "B",
+  "alt_options": [
+   "About 1.4\u00b0C",
+   "About 0.3\u00b0C",
+   "About 1.9\u00b0C",
+   "About 3.0\u00b0C"
+  ],
+  "alt_key": "A"
+ },
+ "h41": {
+  "options": [
+   "1 k\u03a9",
+   "10 k\u03a9",
+   "360 \u03a9",
+   "3.6 k\u03a9"
+  ],
+  "answer": "3.6 k\u03a9",
+  "key": "D",
+  "alt_options": [
+   "10 k\u03a9",
+   "360 \u03a9",
+   "3.6 k\u03a9",
+   "1 k\u03a9"
+  ],
+  "alt_key": "C"
+ },
+ "h42": {
+  "options": [
+   "VIH = 2.0 V and VIL = 0.8 V",
+   "VIH = 0.99 V and VIL = 0.55 V",
+   "VIH min = 1.36 V and VIL min = 0.8 V",
+   "VOH min = 2.4 V and VOL max = 0.4 V"
+  ],
+  "answer": "VIH min = 1.36 V and VIL min = 0.8 V",
+  "key": "C",
+  "alt_options": [
+   "VIH = 0.99 V and VIL = 0.55 V",
+   "VIH min = 1.36 V and VIL min = 0.8 V",
+   "VOH min = 2.4 V and VOL max = 0.4 V",
+   "VIH = 2.0 V and VIL = 0.8 V"
+  ],
+  "alt_key": "B"
+ },
+ "h43": {
+  "options": [
+   "10 k",
+   "100 k",
+   "100",
+   "1 M"
+  ],
+  "answer": "100 k",
+  "key": "B",
+  "alt_options": [
+   "100 k",
+   "100",
+   "1 M",
+   "10 k"
+  ],
+  "alt_key": "A"
+ },
+ "h44": {
+  "options": [
+   "5",
+   "2",
+   "6",
+   "4"
+  ],
+  "answer": "4",
+  "key": "D",
+  "alt_options": [
+   "2",
+   "6",
+   "4",
+   "5"
+  ],
+  "alt_key": "C"
+ },
+ "h45": {
+  "options": [
+   "about 64%",
+   "about 57%",
+   "about 73%",
+   "about 84%"
+  ],
+  "answer": "about 57%",
+  "key": "B",
+  "alt_options": [
+   "about 57%",
+   "about 73%",
+   "about 84%",
+   "about 64%"
+  ],
+  "alt_key": "A"
+ },
+ "h46": {
+  "options": [
+   "12.00 mm",
+   "10.41 mm",
+   "16.00 mm",
+   "10.21 mm"
+  ],
+  "answer": "10.21 mm",
+  "key": "D",
+  "alt_options": [
+   "10.41 mm",
+   "16.00 mm",
+   "10.21 mm",
+   "12.00 mm"
+  ],
+  "alt_key": "C"
+ },
+ "h47": {
+  "options": [
+   "4 degC/s",
+   "6 degC/s",
+   "10 degC/s",
+   "3 degC/s"
+  ],
+  "answer": "6 degC/s",
+  "key": "B",
+  "alt_options": [
+   "6 degC/s",
+   "10 degC/s",
+   "3 degC/s",
+   "4 degC/s"
+  ],
+  "alt_key": "A"
+ },
+ "h48": {
+  "options": [
+   "476 students at 15 schools",
+   "515 students at 15 schools",
+   "434 students at 16 schools",
+   "480 students at 16 schools"
+  ],
+  "answer": "476 students at 15 schools",
+  "key": "A",
+  "alt_options": [
+   "515 students at 15 schools",
+   "434 students at 16 schools",
+   "480 students at 16 schools",
+   "476 students at 15 schools"
+  ],
+  "alt_key": "D"
+ },
+ "h49": {
+  "options": [
+   "53",
+   "1041",
+   "155",
+   "360"
+  ],
+  "answer": "53",
+  "key": "A",
+  "alt_options": [
+   "1041",
+   "155",
+   "360",
+   "53"
+  ],
+  "alt_key": "D"
+ },
+ "h50": {
+  "options": [
+   "26-30",
+   "31-35",
+   "41-45",
+   "21-25"
+  ],
+  "answer": "26-30",
+  "key": "A",
+  "alt_options": [
+   "31-35",
+   "41-45",
+   "21-25",
+   "26-30"
+  ],
+  "alt_key": "D"
+ },
+ "h51": {
+  "options": [
+   "Law and E",
+   "Law",
+   "(Phi_{0,t})_#",
+   "P*_{0,t}"
+  ],
+  "answer": "Law and E",
+  "key": "A",
+  "alt_options": [
+   "Law",
+   "(Phi_{0,t})_#",
+   "P*_{0,t}",
+   "Law and E"
+  ],
+  "alt_key": "D"
+ },
+ "h52": {
+  "options": [
+   "\u0393^(1,0)_\u03b5",
+   "\u0393^(1,2)_\u03b5",
+   "\u0393^(2,0)_\u03b5",
+   "\u0393^(1,1)_\u03b5"
+  ],
+  "answer": "\u0393^(1,0)_\u03b5",
+  "key": "A",
+  "alt_options": [
+   "\u0393^(1,2)_\u03b5",
+   "\u0393^(2,0)_\u03b5",
+   "\u0393^(1,1)_\u03b5",
+   "\u0393^(1,0)_\u03b5"
+  ],
+  "alt_key": "D"
+ },
+ "h53": {
+  "options": [
+   "About 10",
+   "About 0.3",
+   "About 0.7",
+   "About 2"
+  ],
+  "answer": "About 2",
+  "key": "D",
+  "alt_options": [
+   "About 0.3",
+   "About 0.7",
+   "About 2",
+   "About 10"
+  ],
+  "alt_key": "C"
+ },
+ "h54": {
+  "options": [
+   "About 0.90 mA",
+   "About 0.65 mA",
+   "About 0.25 mA",
+   "About 0.55 mA"
+  ],
+  "answer": "About 0.65 mA",
+  "key": "B",
+  "alt_options": [
+   "About 0.65 mA",
+   "About 0.25 mA",
+   "About 0.55 mA",
+   "About 0.90 mA"
+  ],
+  "alt_key": "A"
+ },
+ "h55": {
+  "options": [
+   "35.0 mm",
+   "32.0 mm",
+   "335.0 mm",
+   "30.0 mm"
+  ],
+  "answer": "32.0 mm",
+  "key": "B",
+  "alt_options": [
+   "32.0 mm",
+   "335.0 mm",
+   "30.0 mm",
+   "35.0 mm"
+  ],
+  "alt_key": "A"
+ },
+ "h56": {
+  "options": [
+   "To ground, below R2",
+   "To the OUTPUT terminal, above R1",
+   "To the node between R1 and R2",
+   "To the INPUT terminal, together with VI"
+  ],
+  "answer": "To the node between R1 and R2",
+  "key": "C",
+  "alt_options": [
+   "To the OUTPUT terminal, above R1",
+   "To the node between R1 and R2",
+   "To the INPUT terminal, together with VI",
+   "To ground, below R2"
+  ],
+  "alt_key": "B"
+ },
+ "h57": {
+  "options": [
+   "0.65",
+   "4.4",
+   "1.4",
+   "0.45"
+  ],
+  "answer": "4.4",
+  "key": "B",
+  "alt_options": [
+   "4.4",
+   "1.4",
+   "0.45",
+   "0.65"
+  ],
+  "alt_key": "A"
+ },
+ "h58": {
+  "options": [
+   "1",
+   "2",
+   "5",
+   "4"
+  ],
+  "answer": "2",
+  "key": "B",
+  "alt_options": [
+   "2",
+   "5",
+   "4",
+   "1"
+  ],
+  "alt_key": "A"
+ },
+ "h59": {
+  "options": [
+   "About 2.0 V",
+   "About 3.5 V",
+   "About 3.0 V",
+   "About 4.4 V"
+  ],
+  "answer": "About 3.0 V",
+  "key": "C",
+  "alt_options": [
+   "About 3.5 V",
+   "About 3.0 V",
+   "About 4.4 V",
+   "About 2.0 V"
+  ],
+  "alt_key": "B"
+ },
+ "h60": {
+  "options": [
+   "-20 V",
+   "-18.1 V",
+   "-15 V",
+   "+18.1 V"
+  ],
+  "answer": "-18.1 V",
+  "key": "B",
+  "alt_options": [
+   "-18.1 V",
+   "-15 V",
+   "+18.1 V",
+   "-20 V"
+  ],
+  "alt_key": "A"
+ },
+ "h61": {
+  "options": [
+   "About 30 VPP",
+   "About 15 VPP",
+   "About 6 VPP",
+   "About 10 VPP"
+  ],
+  "answer": "About 6 VPP",
+  "key": "C",
+  "alt_options": [
+   "About 15 VPP",
+   "About 6 VPP",
+   "About 10 VPP",
+   "About 30 VPP"
+  ],
+  "alt_key": "B"
+ },
+ "h62": {
+  "options": [
+   "0.45 mm",
+   "4.4 mm",
+   "1.4 mm",
+   "0.65 mm"
+  ],
+  "answer": "1.4 mm",
+  "key": "C",
+  "alt_options": [
+   "4.4 mm",
+   "1.4 mm",
+   "0.65 mm",
+   "0.45 mm"
+  ],
+  "alt_key": "B"
+ },
+ "h63": {
+  "options": [
+   "1.8 k\u03a9",
+   "19.5 k\u03a9",
+   "549 \u03a9",
+   "1.24 k\u03a9"
+  ],
+  "answer": "1.24 k\u03a9",
+  "key": "D",
+  "alt_options": [
+   "19.5 k\u03a9",
+   "549 \u03a9",
+   "1.24 k\u03a9",
+   "1.8 k\u03a9"
+  ],
+  "alt_key": "C"
+ },
+ "h64": {
+  "options": [
+   "About 4.87 V",
+   "About 3.05 V",
+   "About 3.24 V",
+   "About 3.12 V"
+  ],
+  "answer": "About 3.12 V",
+  "key": "D",
+  "alt_options": [
+   "About 3.05 V",
+   "About 3.24 V",
+   "About 3.12 V",
+   "About 4.87 V"
+  ],
+  "alt_key": "C"
+ },
+ "h65": {
+  "options": [
+   "1.48",
+   "0.67",
+   "0.5",
+   "1"
+  ],
+  "answer": "1.48",
+  "key": "A",
+  "alt_options": [
+   "0.67",
+   "0.5",
+   "1",
+   "1.48"
+  ],
+  "alt_key": "D"
+ },
+ "h66": {
+  "options": [
+   "(R0.05) TYP",
+   "0.05 MIN AROUND",
+   "0.05 MAX AROUND",
+   "0.05 TYP AROUND"
+  ],
+  "answer": "0.05 MAX AROUND",
+  "key": "C",
+  "alt_options": [
+   "0.05 MIN AROUND",
+   "0.05 MAX AROUND",
+   "0.05 TYP AROUND",
+   "(R0.05) TYP"
+  ],
+  "alt_key": "B"
+ },
+ "h67": {
+  "options": [
+   "VKA = 10 V",
+   "VKA = 15 V",
+   "VKA = 5 V",
+   "VKA = Vref"
+  ],
+  "answer": "VKA = 10 V",
+  "key": "A",
+  "alt_options": [
+   "VKA = 15 V",
+   "VKA = 5 V",
+   "VKA = Vref",
+   "VKA = 10 V"
+  ],
+  "alt_key": "D"
+ },
+ "h68": {
+  "options": [
+   "About 75%",
+   "About 20%",
+   "About 30%",
+   "About 40%"
+  ],
+  "answer": "About 30%",
+  "key": "C",
+  "alt_options": [
+   "About 20%",
+   "About 30%",
+   "About 40%",
+   "About 75%"
+  ],
+  "alt_key": "B"
+ },
+ "h69": {
+  "options": [
+   "About 0.1 mA/Ch",
+   "About 0.4 mA/Ch",
+   "About 0.25 mA/Ch",
+   "About 0.85 mA/Ch"
+  ],
+  "answer": "About 0.85 mA/Ch",
+  "key": "D",
+  "alt_options": [
+   "About 0.4 mA/Ch",
+   "About 0.25 mA/Ch",
+   "About 0.85 mA/Ch",
+   "About 0.1 mA/Ch"
+  ],
+  "alt_key": "C"
+ },
+ "h70": {
+  "options": [
+   "One",
+   "Two",
+   "Four",
+   "Three"
+  ],
+  "answer": "Two",
+  "key": "B",
+  "alt_options": [
+   "Two",
+   "Four",
+   "Three",
+   "One"
+  ],
+  "alt_key": "A"
+ }
+}

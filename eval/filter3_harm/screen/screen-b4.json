@@ -1,0 +1,61 @@
+[
+ {"id": "h38", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Drawing marks L/W/H and the table under it gives Length 366.0 for the single listed device; distractors are the width and height from the same row, so the reader must map L to the right column.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h39", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Pad pitch is the headline number of a land pattern; the 6X (1.27) dimension spans two adjacent pad centrelines and the distractors (1.55 pad length, 0.6 pad width, 1.3 via spacing) are all genuine other callouts.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h40", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The worst-case error at the hot end of the range is exactly what this accuracy plot exists to show; the topmost trace reaches ~1.35-1.4 degC at 150 degC and no other option is close.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h41", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The crossover source impedance is the whole point of the figure; it is marked with a dotted line and the annotation RS = 3.6 kOhm right at the intersection.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h42", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Input thresholds are the core spec of a level shifter; the named sub-diagram shows VIH min = 1.36V / VIL min = 0.8V on the input waveform, with the other options belonging to the 5V and 1.8V blocks or the output side.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h43", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The parallel resistor value is the one component value the application figure conveys; only 100 k is labelled in the schematic.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h44", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Four via symbols are drawn inside pad 11, and note 5 flags the drawn vias as the recommended layout, so the count is a real layout fact rather than arbitrary trivia.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h45", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The buck-boost efficiency dip is the notable feature of this curve; the 10 mA trace bottoms at ~56.5% near 2.5 V, and the stem's 'near 2.5 V' cleanly separates it from the shallower ~64% dip at 2.2 V.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h46", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The 10.21 +/- 0.1 dimension on the left spans the top and bottom of a pocket; the location hint disambiguates without revealing the value, and the distractors are the tape width, pocket pitch and pocket horizontal size.",
+  "relevance": "medium", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h47", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The profile annotates 'Max. ramp down 6 degC/s' explicitly; ramp-down limit is a standard value assemblers pull from a reflow profile, and the 3 degC/s distractor is the ramp-up rate.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h48", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Final analysed N per arm is the primary thing a CONSORT flow chart is read for; the analysed boxes are unlabelled by arm, so the branch must be followed from the Intervention allocation box to reach 476 at 15 schools.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h49", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The exclusion box reads 'Exclude factor VIII or factor IX disorder female patients n=53', consistent with 1041 - 988; exclusion counts are the substance of an inclusion flow chart and the distractors are the neighbouring box counts.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false}
+]

@@ -404,6 +404,62 @@ def load_arm(prefix):
     return got
 
 
+def verify():
+    """Check the arms actually read what they were given.
+
+    The text arm is graded on `grounded`, and `grounded` is the arm's own
+    claim. This audits it mechanically: every quote a grounded text answer
+    rests on must really occur in that question's markdown. A quote that does
+    not occur is either a paraphrase (weak evidence) or a fabrication (a
+    grounded credit the arm did not earn) -- and, if it turned out to be a
+    string only visible on the page, it would be leakage.
+
+    Also checks the docx arm's description-sourced quotes against the
+    description file, and reports how much of each arm's material actually
+    exists.
+    """
+    def norm(s):
+        return " ".join((s or "").split()).lower()
+
+    problems = []
+    for prefix, files in (("text", lambda i: [OUT / "mat_text" / f"{i}.md"]),
+                          ("docx", lambda i: [OUT / "mat_text" / f"{i}.md",
+                                              OUT / "mat_docx" / i / "description.md"])):
+        arm = load_arm(prefix)
+        n = ok = para = 0
+        for i, r in sorted(arm.items()):
+            if not r.get("grounded"):
+                continue
+            q = norm(r.get("quote"))
+            if not q:
+                problems.append((prefix, i, "grounded with no quote"))
+                continue
+            n += 1
+            hay = " ".join(norm(p.read_text()) for p in files(i) if p.exists())
+            if q in hay:
+                ok += 1
+                continue
+            # a quote assembled from several places, or lightly reflowed:
+            # accept if every run of >=5 words occurs somewhere in the material
+            words = q.split()
+            runs = [" ".join(words[k:k + 5]) for k in range(0, max(1, len(words) - 4))]
+            hit = sum(1 for run in runs if run in hay)
+            if runs and hit / len(runs) >= 0.5:
+                para += 1
+            else:
+                problems.append((prefix, i, f"quote not in material ({hit}/{len(runs)} runs): "
+                                            f"{(r.get('quote') or '')[:90]!r}"))
+        print(f"{prefix:6s} grounded answers {n:3d}   verbatim {ok:3d}   "
+              f"reflowed/assembled {para:3d}   unverified {n - ok - para:3d}")
+    print()
+    if problems:
+        print("UNVERIFIED GROUNDING CLAIMS — each one is a grounded credit the arm may not have earned:")
+        for p in problems:
+            print("  ", *p)
+    else:
+        print("every grounded claim traces to the arm's own material")
+
+
 def score(as_json=False):
     sel = {r["qid"]: r for r in json.loads((OUT / "selection.json").read_text())["rows"]}
     cands = {c["id"]: c for c in json.loads((OUT / "candidates.json").read_text())["candidates"]}
@@ -466,7 +522,13 @@ def score(as_json=False):
         r = {"id": i, "stratum": sel[i]["stratum"], "mode": sel[i]["mode"],
              "corpus": sel[i]["corpus"], "vendor": sel[i]["vendor"],
              "name": sel[i]["name"], "page": sel[i]["page"], "branch": sel[i]["branch"],
-             "key": perm[i]["key"], "kind": c.get("kind", ""),
+             "key": perm[i]["key"],
+             # the screener's classification, not the author's: the author had
+             # a stake in the answer and the screener did not. They disagree on
+             # 5 of 69, always author-`printed` vs screener-`geometry`.
+             "kind": screen.get(i, {}).get("kind") or c.get("kind", ""),
+             "kind_author": c.get("kind", ""),
+             "relevance": screen.get(i, {}).get("relevance", ""),
              "fair": fair, "fair_reason": screen.get(i, {}).get("reason", ""),
              "optical": correct("optical", i),
              "optical_grounded": bool(arms["optical"].get(i, {}).get("grounded")),
@@ -512,7 +574,32 @@ def score(as_json=False):
               f"LOST_g {lostg:>3} ({lostg/n:5.1%}, {glo:.0%}-{ghi:.0%})  "
               f"fix recovers {rec:>3} ({rec/n:5.1%}, {rlo:.0%}-{rhi:.0%})")
 
-    print("harm on ADMITTED questions (all on pages a labeller called `figure`)")
+    # TWO DENOMINATORS, and the difference between them is a finding, not a
+    # technicality.
+    #
+    #   `sound`    every question the page itself settles. A question the
+    #              closed-book arm can also answer is a question the reader
+    #              does NOT lose when the page is suppressed -- zero harm --
+    #              so for a HARM measurement it belongs in the denominator.
+    #              This is the product-relevant rate: the arms are the same
+    #              model that reads documents in production, so its priors are
+    #              the user's priors.
+    #   `admitted` additionally drops the convention-reachable ones, mirroring
+    #              figqa's gate. This isolates what the PAGE uniquely carries
+    #              and is the contamination-free number, at a smaller n.
+    sound = [r for r in rows if r["optical"] and r["fair"] is not False]
+    print("harm over ALL sound questions — convention-reachable ones count as "
+          "no-harm, because the reader answers them anyway")
+    print("-" * 150)
+    block("ALL sound", sound)
+    for st in ("insample_T4", "holdout_T4", "blindspot"):
+        block(f"  {st}", [r for r in sound if r["stratum"] == st])
+    for k in sorted({r["kind"] for r in sound if r["kind"]}):
+        block(f"  kind {k}", [r for r in sound if r["kind"] == k])
+    for m in sorted({r["mode"] for r in sound}):
+        block(f"  authored {m}", [r for r in sound if r["mode"] == m])
+    print()
+    print("harm on ADMITTED questions (page-only facts: convention cannot reach them)")
     print("-" * 150)
     block("ALL", adm)
     for st in ("insample_T4", "holdout_T4", "blindspot"):
@@ -529,8 +616,10 @@ def score(as_json=False):
           f"{sum(1 for r in adm if r['closed'])}/{len(adm)} on admitted "
           f"(forced <all>, since admission requires failing both orderings)")
 
-    hdr = ["id", "stratum", "mode", "corpus", "vendor", "name", "page", "branch", "kind",
-           "key", "fair", "optical", "optical_grounded", "closed", "closed2", "convention",
+    hdr = ["id", "stratum", "mode", "corpus", "vendor", "name", "page", "branch",
+           "kind", "kind_author", "relevance",
+           "key", "fair", "fair_reason", "optical", "optical_grounded",
+           "closed", "closed2", "convention",
            "admitted", "text", "text_grounded", "docx", "docx_grounded"]
     with open(OUT / "scored.tsv", "w") as fh:
         w = csv.DictWriter(fh, fieldnames=hdr, delimiter="\t", extrasaction="ignore")
@@ -545,5 +634,5 @@ def score(as_json=False):
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "score"
     {"select": select, "artifacts": artifacts, "modes": modes, "merge": merge,
-     "perm": perm, "ask": ask,
+     "perm": perm, "ask": ask, "verify": verify,
      "score": lambda: score("--json" in sys.argv)}[cmd]()

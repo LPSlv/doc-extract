@@ -232,6 +232,36 @@ What is left from it:
   21, 19% (8–40)**, almost all publisher front matter. And the gate does not help
   `SCALE_GUARD`: **10 documents newly stop to ask**, all TI, all one direction.
 
+  **Harm was then measured, and it is far below exposure — see
+  [`eval/filter3_harm.md`](../eval/filter3_harm.md).** 65 screened questions on
+  65 discarded pages, four arms. The optical control answers 65/65. **The status
+  quo — the page suppressed, as it ships today — answers 61/65 (94%).** The fix
+  answers 64/65, so it recovers **3 of the 4 lost answers**, 4.6% (95% 2–13).
+  Grounding is where the real loss sits: the status quo can *quote the line* for
+  only 41/65 against the fix's 62/65, **32.3% (22–44)**.
+
+  The mechanism is the predicted one, and it is why this population is the
+  cheapest loss in the router: **`printed` facts — legends, axis labels,
+  callouts — are 0 of 30 lost**, because a vector figure's own text survives
+  into `doc.md` regardless of routing. All four outright losses are `geometry`
+  (4 of 35): readings taken off a plotted curve. What filter 3 discards is
+  *shape*, not *words*.
+
+  So against the 4,065-page blind spot the full branch-gated fix buys roughly
+  **154 recovered answers for +60% image tokens** — one per 25 pages rendered —
+  and the rationed rule buys about **22 answers, or ~137 recovered citations**.
+  **Priced in harm rather than exposure, the case for spending is an order of
+  magnitude weaker than the 65.6% figure suggests**, and the rationed rule's
+  honest justification is citation recovery, not answer recovery.
+
+  Two caveats that cut the other way and are in the writeup: **closed-book
+  scores 72%**, so multiple choice flatters the status quo and 4.6% is a floor
+  while 32.3% is closer to a ceiling — free text would sit nearer the ceiling.
+  And the authoring-bias control ran *opposite* to the fear: questions written
+  from the page's text first were ungrounded 45% of the time against 28% for
+  questions written from the image, because looking at a figure draws you toward
+  its printed labels.
+
   **Not applied.** The gated patch and its test still need writing —
   `eval/filter3_patch.py --narrow` is the exact source that was measured. It
   would be the first cost increase this repo has accepted (+2.3% of prompt

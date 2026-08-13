@@ -1,0 +1,73 @@
+[
+ {"id": "h38", "choice": "A", "grounded": true,
+  "source": "both",
+  "quote": "`L` — dimension arrow along the lower-right edge, box length.\n\nNo numeric values are printed on the drawing itself; the letters key into the\ntable below it.",
+  "reasoning": "L is the box length, and the accompanying table for INA238AIDGSR gives Length (mm) 366.0 (confirmed in the Markdown table row |INA238AIDGSR|VSSOP|DGS|10|2500|366.0|364.0|50.0|).",
+  "note": "364.0 is the Width and 50.0 the Height, so the distractors come from the same table row."},
+
+ {"id": "h39", "choice": "D", "grounded": true,
+  "source": "both",
+  "quote": "`6X (1.27)` — pad pitch (six spaces of 1.27).",
+  "reasoning": "Pad pitch is the centre-to-centre spacing of adjacent pads; the Markdown DDA0008B land-pattern block also carries `6X (1.27)`.",
+  "note": "1.55 and 0.6 are pad length/width, 1.3 is via-to-via spacing."},
+
+ {"id": "h40", "choice": "B", "grounded": true,
+  "source": "description.md",
+  "quote": "it rises\n  again to roughly +0.9 to +1.4 °C at 150 °C (all read from axis). No trace\n  crosses below 0 °C and none reaches 2.0 °C.",
+  "reasoning": "The top of the band at 150 °C is ~1.4 °C, and the description explicitly rules out 2.0 °C or above.",
+  "note": ""},
+
+ {"id": "h41", "choice": "D", "grounded": true,
+  "source": "both",
+  "quote": "A vertical dotted line is drawn at about 3.6 kΩ, labelled `R_S = 3.6 kΩ` with\n  a leader; this is the crossing point of the OPAx189 and OPA211 curves.",
+  "reasoning": "States the crossing point directly; the Markdown note confirms \"R S= 3.6 kΩ is indicated in Figure 8-5. This is the source impedance above which OPAx189 is a lower noise option than the OPA211.\"",
+  "note": ""},
+
+ {"id": "h42", "choice": "C", "grounded": true,
+  "source": "both",
+  "quote": "Left waveform (input side): a trapezoidal pulse with sloping edges. A dashed\n  level on the rising edge is labelled `VIH min = 1.36V`; a dashed level on the\n  falling edge is labelled `VIL min = 0.8V`.",
+  "reasoning": "The input-side waveform of the centre (1.8-V to 3.3-V) chain carries exactly VIH min = 1.36 V / VIL min = 0.8 V; Markdown line 60 reads \"VIH min = 1.36V VOL max = 0.4V VIL min = 0.8V\".",
+  "note": "Options A and B are the input thresholds of the two other (5.0 V and 1.8 V Vcc) chains on the same drawing; D is the output side."},
+
+ {"id": "h43", "choice": "B", "grounded": true,
+  "source": "both",
+  "quote": "A resistor, drawn as a zigzag, labelled `100 k`, connected from the same\n    supply rail down to the same LEDx node.",
+  "reasoning": "The only value on the Figure 34 schematic is 100 k; Markdown shows \"**LED 100 k** **VCC**\" immediately above the Figure 34 caption.",
+  "note": ""},
+
+ {"id": "h44", "choice": "D", "grounded": true,
+  "source": "description.md",
+  "quote": "Between the\ncolumns is a large blue-outlined central thermal land numbered `11`, containing\nfour vias (circles with cross-hairs) arranged at the top, centre-left,\ncentre-right and bottom.",
+  "reasoning": "Explicitly counts four vias inside pad 11.",
+  "note": "The Markdown for the DSK0010A land pattern contains only \"(⌀0.2) VIA TYP\" and no via count, so the description alone carries it."},
+
+ {"id": "h45", "choice": "B", "grounded": true,
+  "source": "description.md",
+  "quote": "Blue (10 mA): ~84 % at 1.8 V, ~85–86 % to ~2.1 V, then a sharp notch — down to\n  ~63 % at ~2.25 V, back up to ~78 % at ~2.35 V, down to a minimum ~57 % at\n  ~2.6 V — then a steep climb to ~90 % at 2.9 V",
+  "reasoning": "The bottom of the notch on the 10 mA trace is the ~57 % minimum at ~2.6 V, the point nearest 2.5 V.",
+  "note": "The notch has two dips (~63 % at 2.25 V, which matches option A). I take the deepest point, ~57 %, as \"the bottom of that notch\"; if the question meant the first dip the answer would be A."},
+
+ {"id": "h46", "choice": "D", "grounded": true,
+  "source": "both",
+  "quote": "`10.21 ± 0.1` — left side, vertical, pocket length.",
+  "reasoning": "Matches the question's \"vertical dimension of a tape pocket, dimensioned at the left-hand side\"; Markdown line 436 also reads \"10.21 ± 0.1 CL X X\".",
+  "note": "10.41 is the bottom-right pocket dimension and 16.00 the overall tape width."},
+
+ {"id": "h47", "choice": "B", "grounded": true,
+  "source": "both",
+  "quote": "`Max. ramp down 6 °C/s` (on the cool-down)",
+  "reasoning": "Directly annotated on Fig. 11; Markdown line 259 contains \"Max. ramp down 6 °C/s\".",
+  "note": "3 °C/s is the max ramp-up on the same chart."},
+
+ {"id": "h48", "choice": "A", "grounded": true,
+  "source": "both",
+  "quote": "Left: `Analysed: 476 students (52.3%) at 15 schools`",
+  "reasoning": "The left arm is the Intervention (free glasses) group; the Markdown Results text confirms \"leaving 476 students (52.3%) at 15 schools allocated to intervention group\".",
+  "note": "515 at 15 schools is the allocation count before loss to follow-up; 434 at 16 schools is the control arm."},
+
+ {"id": "h49", "choice": "A", "grounded": true,
+  "source": "both",
+  "quote": "after box 4: \"Exclude factor VIII or factor IX disorder female patients — n=53\"",
+  "reasoning": "That exclusion box carries n=53 (1041 − 53 = 988 males); Markdown line 79 reads \"Exclude factor VIII or factor IX disorder female patients n=53\".",
+  "note": "1041 is the box the exclusion leaves from, 360 is the previous exclusion, 155 is the Haemophilia B male count."}
+]

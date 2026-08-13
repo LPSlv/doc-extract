@@ -1,0 +1,61 @@
+[
+ {"id": "h50", "choice": "A", "grounded": false,
+  "quote": "",
+  "reasoning": "Only the x-axis band labels (0-5 ... >90) and the y-axis ticks (0.00-1.20) survive extraction; no bar heights or per-band values are present, so the peak band cannot be read. Guessed from the reported mean/median patient age (29.7/28.2 years).",
+  "note": "Fig. 4 arrives as a bare pseudo-table of age labels plus a detached column of axis ticks."},
+
+ {"id": "h51", "choice": "A", "grounded": true,
+  "quote": "The relation can be placed in the diagram Φ*ω*<u>0,t</u> *X₀ Xtω*\n\nLaw Law andE\n\n*ρ₀∗ρt* P0*,t*",
+  "reasoning": "The two vertical arrows are labelled in reading order 'Law' (left, X_0 -> rho_0) and 'Law and E' (right, X_t^omega -> rho_t); the extra expectation is exactly what (12.7) P*_{s,t}mu = E(Phi^omega_{s,t})_# mu requires, while P*_{0,t} labels the bottom arrow and (Phi_{0,t})_# the diagonal.",
+  "note": ""},
+
+ {"id": "h52", "choice": "A", "grounded": true,
+  "quote": "where the first index*i*in Γ*ε*indicates the connection to*∂*Ω*ε*, and the second index*j*indicates the\n\n(*j*)\nside of the corresponding rectangle*Rε*if*j̸*= 0, or the corresponding part of the boundary of the node\n\n(0)\n*Rε*if*j*= 0.",
+  "reasoning": "The index convention says the second index j = 0 means the piece lying on the boundary of the node R^(0)_eps, and the three curves labelled in Figure 2 are Γ^(1,1), Γ^(1,2), Γ^(1,0).",
+  "note": "Figure 2's own labels also survive: 'Ω(1)ε (1,2)Γε' and 'Γ(1,1)ε Γ(1,0)ε'."},
+
+ {"id": "h53", "choice": "D", "grounded": false,
+  "quote": "",
+  "reasoning": "The panel's curves are not in the text; only the axis decade labels (10^-21..10^-15, S/N 10^-2..10^3) survive. Chose 'about 2' because the caption and Appendix C call the CDIM point a 'marginal detection' of the cross power at z~5, which argues against 10 and against sub-unity values.",
+  "note": "Supporting but non-determining text: 'the current configuration would, at best, enable a marginal detection of the cross power at z~5'; Table I gives CDIM sigma_noise = 10^-19 versus the quoted 3x10^-20 detection threshold."},
+
+ {"id": "h54", "choice": "B", "grounded": false,
+  "quote": "",
+  "reasoning": "The page-24 figure is Figure 70 ('Internal reference enabled, Gain = 1', AVDD = 2.7 V) but only its y-axis ticks (1.3 down to 0.4) and x tick string survive; no curve values. Guessed from the electrical table typical 0.73 mA for AVDD = 2.7-3.6 V with internal reference on, which sits between options B and A and is nearer B at the low end of that supply range.",
+  "note": "Extraction for Figure 70: '1.3 1.2 ... 0.6 Power-Supply Current (mA) 0.5 Internal reference enabled, Gain = 1 0.4 0 8192...65536 Digital Input Code'. Option C (0.25 mA) is below the plotted axis and is excluded."},
+
+ {"id": "h55", "choice": "B", "grounded": true,
+  "quote": "|HDC1080DMBR|WSON|DMB|6|3000|335.0|335.0|32.0|",
+  "reasoning": "The TAPE AND REEL BOX DIMENSIONS table columns are Length / Width / Height (mm), so H = 32.0 mm; 335.0 is the length and width.",
+  "note": ""},
+
+ {"id": "h56", "choice": "C", "grounded": true,
+  "quote": "Because the value of VREF is constant, the value of R1 determines the amount of current that flows through R1 and R2. The size of R2 determines the IR drop from ADJUSTMENT to GND.",
+  "reasoning": "R2 sits between the ADJUST node and ground while R1 carries the same current from OUTPUT (VOUT = VREF(1+R2/R1)), so ADJUST is the junction of R1 and R2; the drawing fragment 'OUTPUT R1 1.2 k V ADJUST' / 'R2 20 k' repeats this.",
+  "note": ""},
+
+ {"id": "h57", "choice": "B", "grounded": true,
+  "quote": "||8X (1.4)|SYMM (R0.05) TYP|\n|1 8X (0.45)||8|\n|||SYMM|\n|6X (0.65)|||\n|4||5 (4.4) SOLDER PASTE EXAMPLE SCALE: 15X 4214862/A 04/2023|",
+  "reasoning": "In the DGK0008A stencil drawing the multiplied callouts are per-aperture (8X 1.4 length, 8X 0.45 width) or per-pitch (6X 0.65), leaving (4.4) as the single across-package dimension between the two aperture columns.",
+  "note": ""},
+
+ {"id": "h58", "choice": "B", "grounded": true,
+  "quote": "The MAX232 device is a dual driver/receiver ... Two drivers interface standard logic level to RS232 levels.",
+  "reasoning": "The block diagram fragments show the driver path as 'TIN TX 22 TOUT' / 'POWER 22 2 TOUT TX RX', i.e. a '2' annotated on the TIN-to-TOUT path, matching the stated two drivers.",
+  "note": ""},
+
+ {"id": "h59", "choice": "C", "grounded": false,
+  "quote": "",
+  "reasoning": "Only the axis ticks (0.5-4.5 V, 0-100%) and the two curve legends survive; no curve data. Chose ~3.0 V because for the 555 monostable the pulse width is RC*ln(Vcc/(Vcc-Vctl)), so duty reaches 100% for a 1-RC clock period at Vctl = 5*(1-1/e) = 3.16 V.",
+  "note": "Extraction: '100 Clock period = 1 RC Clock period = 2.5 RC 80 ... Output Duty Cycle (%) 20 | 0.5 1.0 ... 4.5 Control Voltage (V)'; the derivation uses the RC formula, not the document."},
+
+ {"id": "h60", "choice": "B", "grounded": false,
+  "quote": "",
+  "reasoning": "The only annotation extracted inside Figure 12 is 'V CM = -18.1 V', which is likely the callout on the step, but the flattened text gives no link between that label and any feature of the traces, and the companion Figures 13/14 use the same +/-18.1 V and +/-2.35 V labels merely as common-mode range endpoints.",
+  "note": "Figure 12 extraction: '50 5 Typical Units Shown / V) ( 0 OS V V CM = -18.1 V ± 25 ± 50 ± 20 ± 15 ± 10 ± 5 0 5 10 15 20 / V CM (V)'. The spec table puts the P-to-N channel transition at (V+)-3 V to (V+)-1.5 V, i.e. near +15 to +16.5 V for VS = ±18 V, which no option matches, so the reading is uncertain."},
+
+ {"id": "h61", "choice": "C", "grounded": false,
+  "quote": "",
+  "reasoning": "The curve values are not extracted (only axis ticks 0-30 VPP, 10k-10M Hz and the three VS legends). The page note 'Maximum output voltage without slew-rate induced distortion' plus the specified SR = 20 V/us give VPP = SR/(pi*f) = 6.4 V at 1 MHz, hence 'about 6 VPP'.",
+  "note": "Supporting text: 'SR Slew rate G = 1, 10-V step 20 V/us' and Figure 45's footnote; the sinusoidal slew formula itself is not in the document."}
+]

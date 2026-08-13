@@ -1,0 +1,61 @@
+[
+ {"id": "h25", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Central point of the figure: at ~0 Deg the magnet is S-left/N-right, at ~90 Deg it is N-top/S-bottom; verified on the page.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h26", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The marking legend maps CCCCCC to 'Capacitor Configuration'; decoding the package marking is exactly what the figure exists for.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h27", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "A max = 1.1 mm in the dimension table; distractors are the A1/A2/A3 values, so it is a real read of the right cell.",
+  "relevance": "high", "kind": "printed",
+  "gives_itself_away": false},
+
+ {"id": "h28", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "Typ (dashed) curve starts at ~0.83 V at Tj = -60 degC (min curve is ~0.53 V, the C distractor); straightforward curve read.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h29", "answer_ok": true, "answer_note": "Pixel-calibrated read gives ~1.65-1.7 K/W at tp = 1 ms (calibration checked against the 3.1 K/W saturation value); 1.8 is by far the nearest option and the others are far off, so the stated answer stands.",
+  "fair": true, "reason": "Reading Zth off the single-shot curve at a given pulse width is the whole purpose of this chart.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h30", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "The droop load line runs from VOUT,NL at IOUT,NL down to VOUT,FL at IOUT,MAX; this is the message of the figure.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h31", "answer_ok": true, "answer_note": "",
+  "fair": false, "reason": "Verified correct (pin 3 routes up to the JFET gate), but the pin is literally named VGATE, so the option can be picked from the pin name alone without ever seeing the schematic - it will not discriminate the no-context reader.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": true},
+
+ {"id": "h32", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "AHB: AUX (Streaming DMA) has a single arrow down to Streaming FIFO; following a connection in a block diagram is the natural question here.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h34", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "FLASH_USERDATA is bracketed by 0x0fe00000 and 0x0fe00400 in the expanded flash map; looking up a region's address range is a standard use of a memory map.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h35", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "At 100 A the black 30 deg trace is the topmost (verified by pixel colour: black, then red 60, then blue -60, then grey -30); comparing phase-angle traces is a genuine read, though the traces are close and the question is only a mild performance question.",
+  "relevance": "medium", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h36", "answer_ok": true, "answer_note": "Pin mapping in the option is exact: CD4001B 3->13, 4->5, 10->6, 11->12.",
+  "fair": true, "reason": "How the decoded control signals reach the analog switches is the core of this system diagram; the distractors are all real blocks on the page that feed something else.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false},
+
+ {"id": "h37", "answer_ok": true, "answer_note": "",
+  "fair": true, "reason": "VCP stems into the top of the HS amplifier while VGLS feeds LS; which rail powers the high-side driver is a real design fact from this block diagram.",
+  "relevance": "high", "kind": "geometry",
+  "gives_itself_away": false}
+]
