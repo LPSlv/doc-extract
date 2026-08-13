@@ -310,6 +310,14 @@ part-marking and test-circuit pages whose captions read *Figure A* and defeat a
 keep-gate whose regex wants a digit. Full working in
 [`eval/curves-holdout.md`](curves-holdout.md).
 
+And it is expensive. Timed corpus-wide against a warm harvest in one process,
+the test costs **62.4 s against 385.4 s of harvest — 16.2%, or 212 ms per
+document**, with a p90 of 32 ms per tested page and a tail reaching 608 ms where
+the early exit cannot help and the cluster walk turns quadratic. Soft-mask
+suppression was rejected at the top of this file for **~40 ms per document**
+against a 0.013% token change. This is five times that overhead, in the routing
+hot path, for a rule that loses one real figure in five.
+
 Two of the three original objections were fixed by building the holdout. The
 third was not, and it reproduced on real documents: **2 of the 17 in-sample
 drops carried rasters, and on the holdout 35 of 222 do** — dropping the page

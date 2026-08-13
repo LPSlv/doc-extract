@@ -120,7 +120,10 @@ with the in-sample ones at all.
   on this corpus, against 45% there.
 - **222 drops over 91 documents** — the same file. This is the set of `curves`
   page renders the rule removes *after* `cost_guard`, i.e. calls that really
-  would have been made.
+  would have been made. The bare predicate fires more often than that — on
+  **466 of the 3,511 pages** that reach it (`eval/curves_cost.py`) — but the
+  rest sit in documents `cost_guard` collapses, where the page is rendered
+  anyway and nothing is saved.
 - **the precision** — `eval/curves_holdout/labels.tsv`, merged by
   `eval/curves_score.py` from 12 per-labeller TSVs, every column read by name,
   with the merge refusing to proceed unless every tag carries exactly three
@@ -293,13 +296,16 @@ two sides were not independent.
   failure `eval/tds-corpus.md` recorded for the top-band rule: *perfect on 382
   hand-checked items, then dropped a real arXiv figure.*
 - **It cascades.** 46 rasters returned, four documents made worse.
-- And it is not free. The test re-walks `get_cdrawings()` on every `curves`
-  page and then clusters its stroke rects: measured page by page on
-  `corpus/datasheets/ti_tlv9061.pdf` (100 pages, ~40 `curves` firings) it adds
-  **4.9 s to a 5.3 s harvest**, a median of ~60 ms and a worst case of 190 ms
-  per tested page. That is a defensible price for removing a vision call and
-  an indefensible one for removing a figure; `eval/curves_cost.py` prices it
-  over the whole holdout.
+- **And it is not free.** `eval/curves_cost.py` times `vendor_curves()` on its
+  own, against a warm harvest, in one process with no ordering to bias it:
+  over the 295 documents it runs on **3,511 `curves` pages and costs 62.4 s
+  against 385.4 s of harvest — 16.2%, or 212 ms per document**. Per tested page
+  the median is 4.7 ms and the p90 32 ms, but the tail reaches **608 ms**: the
+  cluster test re-walks `get_cdrawings()` and is quadratic, and the early exit
+  only saves the pages that are obviously charts. For scale, soft-mask
+  suppression was rejected in `eval/rejected-signals.md` for **~40 ms per
+  document**. This is five times that, in the routing hot path, to lose
+  figures.
 
 The honest conclusion is the one `eval/nofigure.md` already reached and this
 corpus now supports out-of-sample: **a vendor logo is separable from a small
