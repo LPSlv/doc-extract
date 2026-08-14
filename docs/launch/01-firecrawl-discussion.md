@@ -1,14 +1,28 @@
 # Draft 1 — Firecrawl GitHub Discussions
 
-**Status: POSTED 2026-08-14** —
-https://github.com/firecrawl/firecrawl/discussions/4307 (Show and tell, #4307).
+**Status: POSTED 2026-08-14, then WITHDRAWN the same day at the author's
+request.** Thread: https://github.com/firecrawl/firecrawl/discussions/4307 —
+now titled "Withdrawn by author", body replaced with a one-line withdrawal
+notice, closed as outdated.
 
-Posted as written below, with two changes made immediately beforehand: the
-opendataloader comparison table was cut (it existed only in a design note and
-nothing regenerates it — `00-claims.md` C-15), and the `extract_pages_markdown`
-observation was re-run at the pinned 0.2.6 on the day of posting rather than
-quoted from the day before. It reproduced exactly: 1 of 30, 8 of 30, 20 of 624,
-`[0, 0, 801, 759]` against 7,559.
+**It could not be hard-deleted.** GitHub allows only repo maintainers to delete
+a discussion; `deleteDiscussion` returns `FORBIDDEN` for the author of a
+discussion in somebody else's repository (`viewerCanDelete: false`,
+`viewerCanUpdate: true`). So the removal is an edit, not a deletion, and
+**GitHub keeps public edit history** — the original text is still reachable by
+anyone who opens the edit history on that discussion. Full removal needs a
+Firecrawl maintainer.
+
+It was up for a matter of minutes with **zero comments and zero reactions** at
+the time of withdrawal.
+
+The text below is the version that was posted, kept as the record. It is not
+scheduled to be posted anywhere. It went out as written, with two changes made
+immediately beforehand: the opendataloader comparison table was cut (it existed
+only in a design note and nothing regenerates it — `00-claims.md` C-15), and the
+`extract_pages_markdown` observation was re-run at the pinned 0.2.6 on the day
+of posting rather than quoted from the day before. It reproduced exactly: 1 of
+30, 8 of 30, 20 of 624, `[0, 0, 801, 759]` against 7,559.
 
 **Venue:** `https://github.com/firecrawl/firecrawl/discussions`, category
 **Show and tell**. Checked 2026-08-13: that Discussions board exists and is

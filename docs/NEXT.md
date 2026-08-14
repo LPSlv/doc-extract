@@ -2,8 +2,8 @@
 
 State at the end of the **2026-08-14** session. Everything below is pushed, CI
 green, **146 tests**, `eval/gate.py` **16/16** byte-identical (8 documents ×
-2 description placements), and the launch is **one venue live of four** —
-[firecrawl#4307](https://github.com/firecrawl/firecrawl/discussions/4307).
+2 description placements), and **nothing is publicly posted** — one venue went up
+on 2026-08-14 and was withdrawn the same day.
 
 This header said "2026-08-12, 93 tests, 7/7" until the moment it was rewritten,
 which is the same rot the cost bullet below documents. If you finish a session
@@ -299,18 +299,28 @@ What is left from it:
   measures determinism, not reliability — and the same caveat applies to
   `eval/strokegrid`'s holdout, where it is not currently stated.
 
-## The launch — one of four venues is live
+## The launch — posted to one venue, then withdrawn
 
-**Posted 2026-08-14: [firecrawl/firecrawl discussion
-#4307](https://github.com/firecrawl/firecrawl/discussions/4307)**, Show and tell,
-under LPSlv's GitHub identity. It was first by design — smallest audience, and it
-carries the launch set's only claim about somebody else's code, so an error would
-surface cheaply. Draft, with the diff between draft and posted text, at
-[`01-firecrawl-discussion.md`](launch/01-firecrawl-discussion.md).
+**Nothing is live.** [firecrawl/firecrawl
+#4307](https://github.com/firecrawl/firecrawl/discussions/4307) was posted to Show
+and tell on 2026-08-14 and withdrawn the same day at the author's request, after a
+matter of minutes, with zero comments and zero reactions. It is now titled
+"Withdrawn by author", its body is a one-line withdrawal notice, and it is closed
+as outdated.
 
-**Still unposted, and each needs its own yes:** Show HN, r/LocalLLaMA, the X
-thread. They go out under LPSlv's social identities, from a logged-in browser
-session, which is why none of them can be done unattended.
+**It could not be hard-deleted, and that is worth knowing before posting to
+anyone else's repository.** GitHub lets only repo maintainers delete a
+discussion — for the author of a discussion in somebody else's repo,
+`viewerCanDelete` is `false` and `deleteDiscussion` returns `FORBIDDEN`. Editing
+is all that is available, and **GitHub keeps public edit history**, so the
+original text remains reachable to anyone who opens it. Full removal would need a
+Firecrawl maintainer. A discussion on somebody else's repo is effectively
+one-way; treat posting there as unrecallable.
+
+**Unposted, and each needs its own yes:** Show HN, r/LocalLLaMA, the X thread.
+They go out under LPSlv's social identities, from a logged-in browser session,
+which is why none of them can be done unattended. The drafts are current against
+`87570d6` either way.
 
 The three pre-conditions are settled:
 
