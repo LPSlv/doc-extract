@@ -2,12 +2,15 @@
 
 **Status: DRAFT. Not posted.**
 
-**Format:** 13 posts. Every post is under 280 characters as counted below.
-X counts any URL as 23 characters regardless of its real length; post 13 is
+**Format:** 18 posts. Every post is under 280 characters as counted below.
+X counts any URL as 23 characters regardless of its real length; post 18 is
 under the limit either way, so no post depends on that concession.
 
-Attach `docs/img/filter-cascade.png` to post 8 and `docs/img/benchmark.png` to
-post 9 if images are wanted. Neither is required for the text to make sense.
+Attach `docs/img/filter-cascade.png` to post 13 and `docs/img/benchmark.png` to
+post 14 if images are wanted. Neither is required for the text to make sense.
+
+Posts 8–11 are the strongest material here and the thread can be cut to eight by
+keeping 1, 2, 6, 8, 10, 13, 14, 18 if 18 reads as too long.
 
 ---
 
@@ -92,9 +95,72 @@ table. That's the danger.
 
 **7/**
 
-Running tally, two sessions:
+The cure is a holdout built before you trust the number — and it has to be the
+right kind of holdout.
 
-3 defects found in the tool.
+A rule read 17/17 in-sample. That corpus was 75% one vendor.
+
+So: 295 datasheets, 11 vendors, none over 19%.
+
+80%. 24 real figures lost. 98% on TI, 66% on everyone else.
+
+---
+
+**8/**
+
+The largest loss here was never a routing rule. It was a filter.
+
+Parse a pipe table anywhere on a page → skip the page. 8,295 pages. 4,065 with
+no image at all, so nothing about them was routed OR counted.
+
+A suppressed call leaves no artifact to audit.
+
+---
+
+**9/**
+
+Every eval I had samples the routed set. So all of them were blind to this by
+construction.
+
+65.6% of 250 blind-labelled skipped pages carry a real figure.
+
+Pages the filter discards: figures at 70%.
+Pages the router pays for: 73%.
+
+The only difference is whether a table parsed.
+
+---
+
+**10/**
+
+Then I measured harm instead of exposure.
+
+65 questions on those pages. Optical control 65/65. Pipeline as it ships, 61/65.
+
+The fix recovers 3 answers. Not what 65.6% implies.
+
+A vector figure's own text survives extraction: 0 of 30 printed-label questions
+lost.
+
+---
+
+**11/**
+
+What it discards is shape, not words. All 4 real losses were readings taken off a
+plotted curve.
+
+Every benefit here was measured in a proxy. Every cost in exact tokens.
+
+That asymmetry always favours doing nothing. Fixing it costs +64% image tokens.
+Unfixed, and written up.
+
+---
+
+**12/**
+
+Running tally, three sessions:
+
+4 defects found in the tool.
 6 found in the code that measures the tool.
 
 An answer key with the right option at C 14 times in 30. A scorer reading the
@@ -104,7 +170,7 @@ None caught by tests.
 
 ---
 
-**8/**
+**13/**
 
 OK, what it is.
 
@@ -118,21 +184,21 @@ provably lost.
 
 ---
 
-**9/**
+**14/**
 
 2,342 PDFs. 20,375 pages. 12 corpora chosen to be unlike each other.
 
 read every page: 48.9M input tokens
 text only (blind): 13.6M
-routed: 20.1M
+routed: 19.9M
 
-2.4x cheaper than looking at everything, at 0.33 vision calls per page.
+2.5x cheaper than looking at everything, at 0.32 vision calls per page.
 
 No OCR API. No per-page bill. Nothing uploaded.
 
 ---
 
-**10/**
+**15/**
 
 Per corpus it runs 7.0x down to 0.9x.
 
@@ -143,7 +209,7 @@ That row stays in the table, in sort position. Not a footnote.
 
 ---
 
-**11/**
+**16/**
 
 Does the description carry the figure? No public benchmark scores this, so I
 built one. 40 questions, admitted only if the page answers it and both blind
@@ -153,11 +219,11 @@ Discount it: 3 of the 4 arms are forced by the gate. Only one measures anything.
 
 ---
 
-**12/**
+**17/**
 
 And where it doesn't work.
 
-On Word/Excel/PowerPoint the routing saves 1.9% of vision tokens. Not 2.4x.
+On Word/Excel/PowerPoint the routing saves 1.9% of vision tokens. Not 2.5x.
 
 There's no page render to avoid, so the only lever is filtering embedded
 images, and most of those are content.
@@ -166,12 +232,13 @@ That's in the README's heading, not its footnotes.
 
 ---
 
-**13/**
+**18/**
 
-MIT. No API key. Uses whatever vision your agent already has.
+MIT. No API key. Uses the vision your agent already runs.
 
 github.com/LPSlv/doc-extract
 
-If you have a boilerplate-heavy PDF corpus — vendor datasheets, journal
-back-issues — I want one. Half my routing waste has no working rule and no
-holdout to test one on.
+The one I couldn't crack: a table continued across pages repeats its geometry,
+same as a template. Containment and consecutiveness both dead.
+
+Three holdout corpora in the repo if you want a go.

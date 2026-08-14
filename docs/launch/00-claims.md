@@ -5,7 +5,9 @@ Every factual claim that appears in `01-firecrawl-discussion.md`,
 line it came from, so the set can be checked in one pass without re-deriving
 anything.
 
-Compiled 2026-08-13 against the repo at commit `97869f7`.
+Compiled 2026-08-13 against the repo at commit `97869f7`. **Re-verified
+2026-08-14 against `87570d6`; see the addendum at the bottom — four published
+figures had moved, and the drafts now carry the newer ones.**
 
 **Verdicts used:**
 
@@ -23,9 +25,11 @@ only places the drafts knowingly diverge from what the repo says about itself:
    page-level statistic instead. `eval/figqa.md:43` and `eval/figqa_text.py:11`
    both carry the unreproduced figure and are **not** corrected by this work
    (the brief was drafts only, no edits to existing files).
-2. **C-05** — vision calls per page is **0.33**, not the 0.34 the README and
-   `docs/NEXT.md` state. The 0.34 appears to be stale by one `boxed_text`
-   release. The drafts say 0.33.
+2. **C-05** — vision calls per page. Superseded twice; see the addendum. The
+   drafts now say **0.32** (6,525 ÷ 20,375), the README's generated blocks agree,
+   and the one place the README disagreed — the section *heading* at line 198,
+   which still said 2.4× — has been corrected. This entry stays as written
+   because the number going stale twice in two days is the point.
 3. **C-15** — the opendataloader scores for `extract_pages_markdown` (0.860 /
    0.903 / 0.772) exist only in a design spec. No artifact in the repo backs
    them. The Firecrawl draft prints them with that caveat attached in the body.
@@ -235,3 +239,70 @@ posted, published or sent anywhere.
 - C-57, C-58, C-60, C-61: read `docs/benchmarks/results/office.json`.
 - C-67, C-68, C-73: read-only web fetches of the three GitHub repos and the
   Firecrawl discussions index.
+
+---
+
+## Addendum — re-verified 2026-08-14 at `87570d6`, before posting
+
+The drafts were written at `687818a`. `textonly_page` shipped after that and all
+twelve results JSONs were re-run, so the cost figures moved. Nothing was posted
+in the interim, which is the only reason this is a correction to a draft rather
+than a correction to a public claim.
+
+**Cost figures, re-derived by running `uv run eval/readme_tables.py` (read-only)
+and diffing against the README's marker blocks — they regenerate
+byte-identically:**
+
+| # | was in the drafts | is now | note |
+|---|---|---|---|
+| C-04 | routed 20.1M | **19.9M** | after `textonly_page` |
+| C-05 | 0.33 calls/page | **0.32** | 6,525 ÷ 20,375 = 0.3202 |
+| C-06 | 2.4× cheaper | **2.5×** | 48.9M ÷ 19.9M |
+| C-57 | Office 1.9% "against 2.4× on PDFs" | against **2.5×** | the 1.9% itself is unchanged |
+
+C-01, C-02, C-03, C-08, C-09 are unchanged. Per corpus the range is still 7.0×
+(`bills`) down to 0.9× (`olmocr_long_tiny_text`), and that row is still last.
+
+**One stale figure was found in the README while checking this and fixed:**
+`README.md:198`, the *heading* of the cost section, still read "costs 2.4× less"
+while the generated table three lines below it read 2.5×. Same class as the
+0.34 → 0.33 → 0.32 rot `docs/NEXT.md:22-30` documents: hand-carried prose
+outside a marker block, in this instance the most visible line in the section.
+
+**The defect tally moved, in the direction that matters:** three sessions, **four**
+defects in the skill and six in the measurement code, not three and six
+(`docs/NEXT.md:333-341`). The fourth is filter 3, and the reason it went uncounted
+is worth the space the drafts now give it — a filter that suppresses a call
+produces no artifact, and every eval here samples the routed set.
+
+**Material that landed after the drafts and is now in them:**
+
+| claim | drafts | source |
+|---|---|---|
+| `textonly_page` shipped: 203 blind drops over two after-the-fact holdouts, 0 real items, Wilson 97–100 | 2, 3 | `eval/nofigure.md`; `docs/NEXT.md:126-137` |
+| the `curves` rule died on a purpose-built holdout: 295 datasheets, 11 vendors, none above 19%, 80% precision (Wilson 72–86), 24 real figures lost, 98% TI / 66% others, plus a cascade of 46 returning rasters | 2, 3, 4 | `eval/curves-holdout.md`; `docs/NEXT.md:139-146` |
+| filter 3 skips 8,295 pages, 4,065 with no raster; 65.6% of 250 blind labels carry a figure (60–71); discarded `curves` pages 70% vs paid-for 73% | 2, 3, 4 | `eval/filter3.md`; `docs/NEXT.md:195-201` |
+| harm, not exposure: 65 questions, optical 65/65, status quo 61/65, fix 64/65 → 4.6% of answers (2–13); grounding 41/65 vs 62/65 → 32.3% (22–44); `printed` facts 0 of 30 lost, all four losses `geometry` | 2, 3, 4 | `eval/filter3_harm.md`; `docs/NEXT.md:242-258` |
+| full fix costs +3,911 calls and +64% routed image tokens, taking 2.5× to ≈2.05× | 2, 3 | `eval/filter3.md:13-14,262`; `docs/NEXT.md:379` (the corrected denominator — 2.25× → 1.85× is the five-corpus figure, not the headline) |
+| closed-book scores 72% on that question set, so 4.6% is a floor and 32.3% nearer a ceiling | 2, 3 | `eval/filter3_harm.md`; `docs/NEXT.md:259-262` |
+| three holdout corpora exist, each fetched after the rule it tested, each verified disjoint by content hash | 2, 3, 4 | `docs/NEXT.md:51-56` |
+| the 42% is the branch as measured *before* `boxed_text`; over 188 labelled firings the rule cuts 52 and costs 3 | 3 | `eval/strokegrid.md`; `docs/NEXT.md:71-83` |
+
+**Stale asks removed.** Drafts 2, 3 and 4 all closed by asking for a
+boilerplate-heavy holdout corpus. That corpus now exists — it is
+`corpus/datasheet_holdout`, and it killed the rule it was built for. The asks now
+point at the two failure modes that are genuinely open: vendor boilerplate, where
+recurrence rather than lattice shape is the only lever anyone has proposed, and
+tables continued across pages, where both obvious discriminators were measured
+and both failed.
+
+**Re-run today, unchanged, because it is the one claim in the set about somebody
+else's code:** at pdf-inspector 0.2.6 over the 30 documents in
+`eval/figqa/candidates.json` — 1 of 30 all-empty, 8 of 30 with at least one empty
+page, 20 of 624 pages (3.2%), `process_pdf` empty on 0 of 30, `main.PMC9937890.pdf`
+4 of 4 pages empty against 18,398 characters, and `irlz44n_infineon.pdf` giving
+`[0, 0, 801, 759]` against 7,559. Every figure in draft 1 reproduces exactly.
+
+**Verification state at `87570d6`:** 146 tests pass, `eval/gate.py` 16/16
+byte-identical over 8 documents × 2 description placements, `tests/check_sync.py`
+in sync, both README marker blocks regenerate byte-identically.

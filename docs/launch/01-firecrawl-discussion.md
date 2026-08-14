@@ -79,9 +79,15 @@ the repo publishes the evals that failed, and there are a lot of them.
   notes as "6 wasted calls removed, 100% precision, no new constant" sat there
   as a recommendation for two sessions. All six cuts were pages 2–7 of a single
   file.
-- **Six defects were found in the measurement code**, against three in the
+- **Six defects were found in the measurement code**, against four in the
   skill itself. Every one flattered or distorted a published number, and none
-  was caught by tests.
+  was caught by tests. The fourth skill defect is the largest content loss in
+  the thing and nobody was looking for it: a filter that skips a page when a
+  pipe table parsed anywhere on it, which suppresses 8,295 pages and leaves no
+  artifact behind to audit, so every eval here was blind to it by construction.
+  Measured in harm rather than exposure it costs 4.6% of answers and 32% of
+  groundable citations on a 65-question set, and the write-up says why it is
+  cheaper to leave than to fix.
 
 Full write-ups: [`eval/strokegrid.md`](https://github.com/LPSlv/doc-extract/blob/main/eval/strokegrid.md),
 [`eval/rejected-signals.md`](https://github.com/LPSlv/doc-extract/blob/main/eval/rejected-signals.md),

@@ -38,6 +38,12 @@ The branch's second stated purpose — plots — is 10 firings in 170. Whatever
 that branch is worth, it is worth it as a table-catcher, and the README says so
 instead of quoting the 58% hit rate.
 
+That 42% is the branch as measured, before I did anything about it. One rule since
+shipped against it, and over all 188 labelled firings it cuts 52 and costs 3 real
+items — so the residual waste is lower than the headline, and the three items it
+destroyed are all the same failure mode, named in the README rather than left for
+a user to trip over.
+
 **Twelve signals were measured to fix the branding false positives. One
 shipped.** The two best candidates were flawless on the 382-item set they were
 fitted to and then lost real content on corpora they had not seen. One was a
@@ -49,12 +55,39 @@ a grid-collapse threshold. The general result is that a masthead is separable
 from a chart only by reading it, and reading it is exactly the call being
 avoided.
 
-**Six of the nine defects I found were in the measurement code, not the tool.**
+**Six of the ten defects I found were in the measurement code, not the tool.**
 An answer key with the correct option at C fourteen times in thirty. A scorer
 reading the wrong column, reporting 0% precision on a set that was unanimously
 clean. A harness that withheld a whole page render from the arm under test and
 then counted its absence against the router — that one cost me a published
 22/23 that I had already written up as 20/23 and blamed on routing.
+
+**The fourth defect in the tool is the one nobody was looking for, and it is the
+largest content loss here.** If the text extractor parses a pipe table anywhere
+on a page, the page is skipped entirely — 8,295 pages, 4,065 of them with no
+image on them at all, so nothing about them is routed *or counted*. A filter that
+suppresses a call leaves no artifact to audit, and every eval in the repo samples
+the routed set, so all of them were blind to it by construction. 65.6% of 250
+blind-labelled skipped pages carry a real figure (95% CI 60–71). The comparison
+that makes it a defect rather than a trade-off: the pages this filter discards
+carry figures at 70%, and the pages the router pays for carry them at 73%. The
+only difference between them is whether a table got parsed somewhere on the page.
+
+Then I priced it in **harm instead of exposure**, which is the methodological
+mistake underneath every routing number in this repo: 65 screened questions on 65
+of those discarded pages, four arms. Optical control 65/65. The pipeline as it
+ships, 61/65. So the fix recovers 3 of the 4 answers it loses — 4.6% (95% 2–13),
+nothing like what 65.6% implies. The mechanism is the interesting part: a vector
+figure's own text survives into the markdown regardless of routing, so **0 of 30
+questions about printed labels, legends and axes were lost**, and all four real
+losses were readings taken off a plotted curve. What the filter throws away is
+shape, not words. Grounding is where the loss actually sits — 41 of 65 pages can
+quote the line against the fix's 62 — so the honest case for spending is citation
+recovery, not answer recovery. It costs +3,911 vision calls and +64% of routed
+image tokens, taking 2.5x to about 2.05x, and it is therefore unfixed and written
+up rather than quietly omitted. Two caveats in the writeup cut the other way:
+closed-book scores 72% on that question set, so multiple choice flatters the
+status quo, and 4.6% is a floor while 32.3% is nearer a ceiling.
 
 ---
 
@@ -95,9 +128,9 @@ classes:
 |---|--:|
 | read every page optically | 48.9M |
 | text only (blind) | 13.6M |
-| **routed** | **20.1M** |
+| **routed** | **19.9M** |
 
-2.4x cheaper than reading everything, at 0.33 vision calls per page. Per corpus
+2.5x cheaper than reading everything, at 0.32 vision calls per page. Per corpus
 it ranges from 7.0x (US bills — almost no figures, and the GPO seal is filtered
 as a cross-document emblem) down to **0.9x on 62 single-page documents, where it
 loses.** That row stays in the table in sort position rather than in a footnote.
@@ -134,20 +167,32 @@ uv run eval/gate.py example/           # byte-identity, real pipeline
 ```
 
 **Pinning is uneven and it is documented as uneven.** The six olmOCR corpora
-and the arXiv holdout are sha256-pinned per file, so those reproduce exactly.
-`arxiv`, `bills`, `datasheets` and `pmc` ship URLs without hashes, and `papers`
-has no manifest at all — re-fetching those may not give you byte-identical
-inputs.
+and the three holdout corpora are sha256-pinned per file, so those reproduce
+exactly. `arxiv`, `bills`, `datasheets` and `pmc` ship URLs without hashes, and
+`papers` has no manifest at all — re-fetching those may not give you
+byte-identical inputs.
 
-The one routing rule I shipped this month was validated the way I think these
-things should be: 348 arXiv papers fetched *after* the rule was designed,
-sha256-pinned, disjoint from the design corpus by content hash, every drop
-labelled blind by three independent labellers who saw the PNG and nothing else —
-not the rule, not the hypothesis, not which answer would be convenient. 17
-effective drops, 17 correct, and the write-up leads with the one failure mode it
-has (a booktabs table continued across pages looks exactly like a template) plus
-the fact that the 18th drop was found by diffing the implementation against the
-analysis script, not by the script.
+Two routing rules shipped, both validated the way I think these things should be:
+a corpus fetched *after* the rule was designed, sha256-pinned, verified disjoint
+from the design set by content hash, and every drop labelled blind by three
+independent labellers who saw the PNG and nothing else — not the rule, not the
+hypothesis, not which answer would be convenient. 348 arXiv papers for the first
+(17 effective drops, 17 correct) and 250 journal PDFs plus those papers for the
+second (203 drops, 0 real items, Wilson 97–100). The write-up for the first leads
+with its one failure mode — a booktabs table continued across pages is
+indistinguishable from a repeated template — and with the fact that the 18th drop
+was found by diffing the shipped implementation against the analysis script, not
+by the script.
+
+**The third corpus exists because it killed a rule, and that is the more useful
+result.** The biggest saving available was a rule to stop the busiest branch
+firing on vendor boilerplate; in-sample it read 17 of 17. The corpus it was
+fitted to is 75% Texas Instruments, so I fetched 295 datasheets across eleven
+vendors with none above 19%. It scored 80% (95% Wilson 72–86) and lost 24 real
+figures — 98% on TI, 66% on every other vendor. It also cascaded: 46 previously
+subsumed rasters came back and four documents finished *more* expensive than
+before. A holdout of the wrong kind is not a holdout, and precision is usually
+not the axis that decides.
 
 ## Does the description actually carry the figure?
 
@@ -168,7 +213,7 @@ On scanned pages, where the extractor returns zero characters, it goes 0% →
 ## Where it does not help
 
 Office documents. The routing saves **1.9%** of vision tokens across a
-236-document corpus, against 2.4x on PDFs, and the README says that in the
+236-document corpus, against 2.5x on PDFs, and the README says that in the
 heading rather than the footnotes. There is no page render to avoid, so the only
 lever is filtering embedded images, and most embedded images in a real deck are
 content. A slide deck costs roughly one vision call per slide. Spreadsheet
@@ -177,8 +222,12 @@ as exact numbers at zero vision cost, 19 of 20 recovered across 35 workbooks.
 
 MIT. https://github.com/LPSlv/doc-extract
 
-If anyone has a boilerplate-heavy holdout corpus — vendor datasheets or journal
-PDFs, a few hundred files — I would like one. Half the routing waste is Würth
-title blocks and Nexperia legal pages, there is no working rule for it, and I
-could not find a corpus to validate a candidate against without fitting it on
-the set I would then score it on.
+What I would most like back: a discriminator for the two failure modes I could
+not solve. Vendor boilerplate — Würth title blocks, Nexperia legal pages — is
+half the routing waste and is a real multi-column grid, so lattice shape cannot
+see it; recurrence across documents is the only lever I can think of, and the one
+rule I built for it died on its holdout. And a table continued across pages
+repeats its geometry, which is exactly what a template does; frame containment
+and page-consecutiveness were both measured and both dead, the second with its
+premise backwards. The three holdout corpora are in the repo, so a candidate can
+be scored on something it was not fitted to.

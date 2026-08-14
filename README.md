@@ -195,7 +195,7 @@ Pages render at the resolution their *own smallest text* needs rather than a
 flat dpi, measured from the 5th-percentile font on each page. That alone cut
 image tokens 54% with identical content capture.
 
-## Reading 20,375 pages costs 2.4× less than looking at them
+## Reading 20,375 pages costs 2.5× less than looking at them
 
 Twelve corpora, chosen to be unlike each other: electronics datasheets, arXiv and
 PMC papers, US legislation, and six olmOCR-bench page classes. Each has a URL
