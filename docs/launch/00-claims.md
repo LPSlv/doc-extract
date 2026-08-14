@@ -32,7 +32,11 @@ only places the drafts knowingly diverge from what the repo says about itself:
    because the number going stale twice in two days is the point.
 3. **C-15** — the opendataloader scores for `extract_pages_markdown` (0.860 /
    0.903 / 0.772) exist only in a design spec. No artifact in the repo backs
-   them. The Firecrawl draft prints them with that caveat attached in the body.
+   them. **Settled 2026-08-14: cut.** The draft now states that the comparison
+   was made and that the numbers are not being printed because nothing
+   regenerates them, and offers to re-run it properly. `docs/NEXT.md:322-325`
+   already judged cutting the safer call; a repo whose pitch is published
+   negative results should not lead with a figure it cannot reproduce.
 
 ---
 
@@ -111,9 +115,10 @@ procedure for the *shipped* engine only, and its gate minima (`:18-22`) are the
 Re-running would need the external opendataloader-bench corpus and was out of
 scope here.
 
-The draft prints the table and then says plainly that the raw output was not
-kept and the decimals should be read as a note-to-self. It explicitly declines
-to use observation C-14 as evidence for it.
+**Settled 2026-08-14: the table is cut.** The draft now says the comparison was
+made, says the numbers are not being printed because nothing in the repo
+regenerates them, and offers to re-run it properly and post the artifact. It
+still explicitly declines to use observation C-14 as evidence for it.
 
 ## C. Negative results — routing
 

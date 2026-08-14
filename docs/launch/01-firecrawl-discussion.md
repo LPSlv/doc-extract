@@ -1,6 +1,14 @@
 # Draft 1 — Firecrawl GitHub Discussions
 
-**Status: DRAFT. Not posted. Posting requires an explicit yes from LPSlv.**
+**Status: POSTED 2026-08-14** —
+https://github.com/firecrawl/firecrawl/discussions/4307 (Show and tell, #4307).
+
+Posted as written below, with two changes made immediately beforehand: the
+opendataloader comparison table was cut (it existed only in a design note and
+nothing regenerates it — `00-claims.md` C-15), and the `extract_pages_markdown`
+observation was re-run at the pinned 0.2.6 on the day of posting rather than
+quoted from the day before. It reproduced exactly: 1 of 30, 8 of 30, 20 of 624,
+`[0, 0, 801, 759]` against 7,559.
 
 **Venue:** `https://github.com/firecrawl/firecrawl/discussions`, category
 **Show and tell**. Checked 2026-08-13: that Discussions board exists and is
@@ -101,7 +109,7 @@ wrong, in which case tell me and I will correct the docs on my side. Both
 observations are on **pdf-inspector 0.2.6**, Python bindings.
 
 **1. `extract_pages_markdown` returns empty markdown for pages that
-`process_pdf` clearly extracts.** Re-measured on 2026-08-13 across the 30
+`process_pdf` clearly extracts.** Re-measured on 2026-08-14 across the 30
 documents in our figure-QA candidate set (arXiv, PMC, TI/Diodes datasheets;
 `eval/figqa/candidates.json`):
 
@@ -128,23 +136,19 @@ Pages 1 and 2 are where that datasheet's parameter tables live. This one has
 been stable for us across sessions, so it is probably the best starting point if
 anyone wants to look.
 
-**2. Joined `extract_pages_markdown` output scored lower than
-`process_pdf().markdown` on opendataloader-bench**, when we chose between the
-two during design:
+**2. A second observation I am deliberately *not* going to give you numbers
+for.** When choosing between the two APIs during design I recorded that joined
+`extract_pages_markdown` output scored lower than `process_pdf().markdown`
+through opendataloader-bench's evaluator, on all three of overall, reading order
+and tables. I still have the three-decimal table in a design note.
 
-| API | Overall | Reading order | Tables |
-|---|--:|--:|--:|
-| `extract_pages_markdown`, pages joined | 0.860 | 0.903 | 0.772 |
-| `process_pdf().markdown` | **0.875** | **0.915** | **0.814** |
-
-**Caveat, stated up front:** unlike everything else in this post, I cannot
-re-run that one today. It comes from a design-time comparison recorded in
-`docs/superpowers/specs/2026-08-03-doc-extract-skill-design.md`; the raw
-evaluator output was not kept, and the repo has no artifact backing it. Treat
-the exact decimals as a note-to-self rather than a published measurement. The
-gap is consistent with observation 1 — dropped pages would depress reading
-order and tables first — but consistency is not evidence, and I am not going to
-present it as such.
+I am not printing it, because I cannot re-run it: the raw evaluator output was
+not kept and nothing in the repo regenerates those numbers. A repo whose whole
+pitch is publishing the evals that failed should not lead with a figure it cannot
+reproduce. The direction is at least consistent with observation 1 — dropped
+pages would depress reading order and tables first — but consistency is not
+evidence and I am not presenting it as such. If it would be useful, I will re-run
+the comparison properly and post the artifact.
 
 Net effect on our side: `process_pdf().markdown` is the authoritative text path,
 and `extract_pages_markdown` is used only for a per-page table cross-check,

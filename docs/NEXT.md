@@ -1,8 +1,9 @@
 # Where this was left
 
-State at the end of the **2026-08-13** session. Everything below is pushed, CI
+State at the end of the **2026-08-14** session. Everything below is pushed, CI
 green, **146 tests**, `eval/gate.py` **16/16** byte-identical (8 documents ×
-2 description placements).
+2 description placements), and the launch is **one venue live of four** —
+[firecrawl#4307](https://github.com/firecrawl/firecrawl/discussions/4307).
 
 This header said "2026-08-12, 93 tests, 7/7" until the moment it was rewritten,
 which is the same rot the cost bullet below documents. If you finish a session
@@ -298,35 +299,55 @@ What is left from it:
   measures determinism, not reliability — and the same caveat applies to
   `eval/strokegrid`'s holdout, where it is not currently stated.
 
-## Not done, and waiting on a human
+## The launch — one of four venues is live
 
-**The launch.** Drafts are written and committed at
-[`docs/launch/`](launch/) — Firecrawl Discussions, Show HN, r/LocalLLaMA, an X
-thread, and `00-claims.md`, which sources all 73 factual claims to a `file:line`
-so the set can be audited in one pass. They lead with the measurement failures,
-not the multiplier: every tool in this space claims a multiplier and almost none
-publishes the eval that didn't work.
+**Posted 2026-08-14: [firecrawl/firecrawl discussion
+#4307](https://github.com/firecrawl/firecrawl/discussions/4307)**, Show and tell,
+under LPSlv's GitHub identity. It was first by design — smallest audience, and it
+carries the launch set's only claim about somebody else's code, so an error would
+surface cheaply. Draft, with the diff between draft and posted text, at
+[`01-firecrawl-discussion.md`](launch/01-firecrawl-discussion.md).
 
-**Nothing has been posted anywhere, and posting needs an explicit yes** — it
-goes out under LPSlv's GitHub and social identities.
+**Still unposted, and each needs its own yes:** Show HN, r/LocalLLaMA, the X
+thread. They go out under LPSlv's social identities, from a logged-in browser
+session, which is why none of them can be done unattended.
 
-Three things to settle before it does:
+The three pre-conditions are settled:
 
-- **The `extract_pages_markdown` claim that justified posting to Firecrawl first
-  was ours, and it was wrong.** `eval/figqa.md` said the per-page API returns
-  nothing on 3 of 30 documents; re-running both APIs gives **1**. The drafts now
-  lead with a named repro (`irlz44n_infineon.pdf`, pages 1–2 return 0 chars
-  against 7,559 from `process_pdf`) instead of the aggregate. The strategy
-  worked exactly as intended — the error surfaced at the cheapest possible
-  audience, which was us.
-- **The opendataloader comparison scores exist only in a design spec.** No
-  evaluator output, no results JSON, nothing regenerates them. They are printed
-  with that caveat stated. A repo whose pitch is published negative results
-  probably should not lead with a number it cannot reproduce; cutting them is
-  the safer call.
-- **The cost figures move whenever routing does**, and did twice on 2026-08-13.
-  Re-check every number in `00-claims.md` against
-  `docs/benchmarks/results/*.json` immediately before posting.
+- ~~**The `extract_pages_markdown` claim that justified posting to Firecrawl
+  first was ours, and it was wrong.**~~ Settled. `eval/figqa.md` said the
+  per-page API returns nothing on 3 of 30 documents; re-running both APIs gives
+  **1**. The post leads with a named repro (`irlz44n_infineon.pdf`, pages 1–2
+  return 0 chars against 7,559 from `process_pdf`) instead of the aggregate, and
+  the whole observation was re-run at the pinned 0.2.6 on the morning it went
+  out: 1 of 30, 8 of 30, 20 of 624, reproduced exactly. The staging strategy
+  worked as intended — the error surfaced at the cheapest possible audience,
+  which was us. **`eval/figqa.md:43` and `eval/figqa_text.py:11` still carry the
+  unreproduced 3, and should be corrected.**
+- ~~**The opendataloader comparison scores exist only in a design spec.**~~
+  **Cut before posting.** The published text says the comparison was made, says
+  the numbers are not being printed because nothing in the repo regenerates
+  them, and offers to re-run it properly and post the artifact. A repo whose
+  pitch is published negative results should not lead with a figure it cannot
+  reproduce.
+- ~~**The cost figures move whenever routing does.**~~ They moved a third time,
+  and the drafts were stale for a day before anyone noticed: `textonly_page`
+  shipped after they were written, so 20.1M / 2.4× / 0.33 became **19.9M / 2.5×
+  / 0.32**. Found by re-running `eval/readme_tables.py` against the drafts rather
+  than trusting them. **The same pass found `README.md:198` — the section
+  *heading* — still reading "costs 2.4× less" three lines above a generated table
+  saying 2.5×.** Re-check `00-claims.md` against
+  `docs/benchmarks/results/*.json` immediately before each remaining post; the
+  addendum at the bottom of that file is the template.
+
+What the remaining drafts gained on 2026-08-14, since it is stronger than what it
+replaced: filter 3 as the fourth skill defect and the largest content loss here,
+priced in harm (4.6% of answers, 32% of citations) rather than exposure (65.6%);
+the `curves` rule dying on a purpose-built vendor-diverse holdout at 80%
+precision and 24 real figures lost; `textonly_page`'s 203 blind drops with zero
+real items. All three closing asks used to request a boilerplate-heavy holdout
+corpus — that corpus now exists and killed the rule it was built for, so the asks
+point at the two failure modes that are actually open.
 
 ## A caution for whoever picks this up
 
